@@ -1,5 +1,28 @@
 # FloRA verification checkpoint — 2026-10-03
 
+## Latest owner reset — stop the local repair loop
+
+The owner's October 3 recalibration supersedes the pending-run/local-patch next
+steps below. Do not select a patch or diagnostic solely from that stale handoff.
+Continue from the restored [architecture decision](LATENCY_ARCHITECTURE_RECALIBRATION_2026-10-01.md):
+specify the narrow native invocation and H/C live-authority boundaries, then make
+the corresponding scoped composition change. Preserve the current experiment
+goal and Alice semantics; do not build the full platform or either external model.
+
+Scoped run 37141011069 is complete: collection succeeds, fixture fails, observation
+is healthy. All 117 after/116 before pinned sources and the actual artifact archive
+verify. Its 2,237 samples include 989 current-H metadata, 636 initial C barrier,
+315 frame initialization, 260 actual assembly and 4 initial full authentication.
+Matrix totals match, with zero sampling errors/truncations/discards/caps.
+See the [numeric review](evidence/2026-10-03_78041807_native_stack_scopes_review.json)
+and [source validation](evidence/2026-10-03_78041807_native_stack_scopes_validation.json).
+These localize work but do not justify another row-batching hotfix or a speedup.
+
+The FBM index now links **123 validated procedure traces**. This reset performs
+only evidence/context work; serving source is unchanged at `4b88946f`. The full
+ordinary failures and separate restart exit 139 remain. No job is pending for
+this step. Earlier handoff snapshots below are retained as history.
+
 ## Latest: completed sample result and bounded scope attribution — October 3
 
 [Run 37139200958](https://github.com/NIne-WIngEd/FloRA/actions/runs/37139200958)
