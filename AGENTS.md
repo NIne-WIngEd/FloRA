@@ -6,15 +6,16 @@ precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
 Latest continuation: `docs/VERIFICATION_CHECKPOINT_2026-10-03.md`. Both full
-`4b88946f` workflows failed;978 component cases each, physical PR50/2/1 and
-push49/2/2, plus separate Temporal restart exit139. Sampling run37139200958 is
-complete: fixture failed, healthy2236 samples,117 after/116 before source blobs
-verified. Marginal storage-facing samples need fixed H/C caller attribution.
-The next bounded step is one scope-matrix diagnostic:48 observer checks pass,
-eight scopes/50 actual targets, clear read-only review. Runtime4b88946f and
-workflow stay unchanged. Publish/dispatch once, then stop if only its result
-remains. Recover exact artifact/source hashes before selecting a serving repair.
-Further origin tuning stays deferred. FBM121 procedure traces validate.
+`4b88946f` workflows failed; 978 component cases each, physical PR 50/2/1 and
+push 49/2/2, plus separate Temporal restart exit 139. First sampling run
+37139200958 is complete: failed fixture, healthy 2,236 samples, 117 after/116
+before source blobs verified. Scoped run 37141011069 is pending at source
+`78041807593eae4973fb6733dd24a940477b7e57`: 48 observer checks pass; eight fixed
+scopes and 50 actual targets; clear read-only review. Runtime `4b88946f` and
+workflow remain unchanged. Stop while only this result remains. Recover its
+actual archive/source hashes and matrix totals/coverage before choosing the
+serving repair. Further origin tuning stays deferred. FBM has 122 validated
+procedure traces; no training or learned result is claimed.
 
 FloRA is a narrow prototype for the frozen causal personal-judgment experiment.
 It does not require the full Alice/Fable memory, mission, experience or consumer

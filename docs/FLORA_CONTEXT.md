@@ -26,10 +26,17 @@ Serving runtime is still `4b88946f`, with no personality/MFM or broader platform
 The [scope contracts](evidence/2026-10-03_native_stack_scope_contracts.json)
 retain RED and the initial controlled-CLI failures, their harness correction,
 **48 passing observer checks**, actual 50-target/eight-scope inventory and clear
-read-only review. Publish verified source and dispatch once; use the result to
-choose a change tied to the measured stage. No speedup is claimed.
+read-only review. [Scoped run 37141011069](https://github.com/NIne-WIngEd/FloRA/actions/runs/37141011069)
+was manually dispatched once at `78041807593eae4973fb6733dd24a940477b7e57`,
+tree `81d07c7c593c25a39886feea1440b7869374cbb8`; it is in progress at capture.
+The [scope publication receipt](evidence/2026-10-03_native_stack_scope_publication.json)
+verifies 12 changes/10 shared docs/two diagnostic/eight unchanged runtime blobs.
+Only this external result remains for the step. Stop until it is ready; then
+recover the actual archive and source hashes, check sampler health/coverage and
+that the scope matrix sums to owned samples, and choose a repair tied to the
+measured stage. No speedup is claimed.
 
-The [FBM index](fbm-seeds/README.md) now links **121 validated procedure traces**.
+The [FBM index](fbm-seeds/README.md) now links **122 validated procedure traces**.
 Earlier pending notices below describe saved snapshots and are superseded here.
 
 ## Latest completed gates and dispatched diagnostic — October 3
