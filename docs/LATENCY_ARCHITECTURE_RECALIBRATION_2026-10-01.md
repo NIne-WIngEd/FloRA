@@ -1,5 +1,98 @@
 # FloRA latency architecture recalibration
 
+## Owner reset — 2026-10-03; controls the next continuation
+
+The owner stopped the unprofitable trial-and-error sequence. Further local proof
+tuning, row-batching patches and diagnostic extensions are suspended as the
+default next work. No serving change or new job was made in this reset.
+
+The process drift is concrete: the October 1 decision below already required an
+architectural change and an explicit lookup/integrity/authorization protocol.
+Later continuation returned to helper repairs and increasingly detailed probes.
+Those probes answered local questions, but did not establish the correct narrow
+request path or advance a demonstrated native causal judgment. They cannot become
+an indefinite prerequisite program. The next step is the boundary design already
+called for here, not the next easiest hotspot.
+
+### What the last completed run establishes
+
+[Scoped run 37141011069](https://github.com/NIne-WIngEd/FloRA/actions/runs/37141011069)
+collected successfully; **the fixture failed** and qualification remains false.
+[Exact validation](evidence/2026-10-03_78041807_native_stack_scopes_validation.json)
+verifies the actual archive and all 117 after/116 before FloRA/Alice source blobs.
+The [artifact](evidence/2026-10-03_78041807_native_stack_scopes.json) has 2,237
+owned samples. Its scope matrix sums exactly to that total. The sampler stopped,
+with zero observer errors, truncations, discarded samples or capped coverage.
+
+| Nearest fixed scope | Samples |
+| --- | ---: |
+| Current-history metadata | 989 |
+| Initial context barrier | 636 |
+| Shared context-frame initialization | 315 |
+| Actual context assembly | 260 |
+| Other context preparation | 31 |
+| Initial full-history authentication | 4 |
+| Unscoped owned work | 2 |
+
+Current-history metadata includes 472 deepest SQL-execute, 260 registry-fetch and
+75 Kurrent-read samples. Registry-fetch includes untargeted descendants. These
+are approximate wall samples, not CPU/call counts or predicted savings. They
+support inspecting the repeated current-H path; they do not qualify the proposed
+local batching patch. The [review](evidence/2026-10-03_78041807_native_stack_scopes_review.json)
+preserves that limit and the owner's override.
+
+### Concrete scope reset
+
+FloRA's required behavior remains: correction/outcome changes a relevant later
+native judgment for the right reason; unrelated judgments stay stable; comparator,
+same-evidence ablation and held-out attribution remain credible. Qualified
+personality and MFM outputs come from their existing external workstreams.
+
+| Responsibility | Necessary FloRA slice | Boundary for the redesign |
+| --- | --- | --- |
+| Experience and originals | Scoped original/correction/outcome IDs, exact evidence locators, durable provenance | Record evidence and outcomes; full replay/authentication/recovery are explicit operations. |
+| Claims and personal state | Accepted versioned state, evidence relationships, current heads, correction/supersession | Serve current materialized state and selected dependencies; MFM proposals still require deterministic authority. |
+| Context and native invocation | A finite selected plan, authorized actual evidence, consumed-source attribution, qualified external producer | Define one owned invocation protocol with named protected accesses and fresh authority observations. |
+| Experiment governance | Exact BEFORE/AFTER history, full-H evaluation rights, manifests, separate C judgment rights/caps, fair arms | Map H evaluation admission and C data use explicitly; do not rebuild the full-H protocol implicitly inside each low-level predicate. |
+| Outcome feedback | Decision-to-result/correction-to-evidence-to-state lineage | Test the causal link; add mission/node IDs only if the case needs them. No full mission scheduler is required. |
+
+This is not permission to omit H consent, source integrity, current withdrawals,
+AFTER exclusion, independent producer/recovery attribution or the terminal fence.
+The boundary specification must state each live fact, its observer, protected
+access and rejection point. If a check moves, show where its obligation remains
+enforced before private use and before result acceptance. No positive permission
+or qualification answer carries across protected boundaries. Keep the selected
+physical adapters for surfaces actually exercised; add no replacement database.
+
+Alice's original Memory Architecture v4.1 §3.2 says ordinary serving uses current
+materialization and historical reconstruction stays explicit and bounded. Its
+Performance Standard §§4–7 prefers bounded selected plans, hydration and freshness.
+The reviewed comic connects prior relevant lessons to later decisions. These
+requirements describe the causal entity's interactions; they do not require the
+prototype to finish every Alice plane. Original pins remain in the source map
+and audit below; existing Graphify/Graphiti research remains applicable by role.
+
+### Next engineering deliverable
+
+Specify the selected native invocation protocol against the actual code:
+experiment entry → current selected Claim/state and evidence → qualified external
+personal judgment → independently attributed result → correction/outcome update.
+For every transition, name required H/C rights, exact immutable dependencies,
+live heads, callbacks, private reads and final observations. Then replace the
+responsible composition as one scoped design change and verify the affected
+correctness/race cases plus a complete selected-engine BEFORE/AFTER invocation.
+
+Do not launch more diagnostic jobs by default. A further probe needs a concrete
+remaining design question that existing source/evidence cannot settle. Do not
+repeat the unchanged full component suite merely to obtain another receipt.
+Construction, ordinary response and passive recovery must be reported as their
+actual scopes; the 10,000/60,000 ms response and 60-minute CI limits and old failed
+results stay unchanged. No new timing definition retroactively passes a failure.
+
+The process reset and latest source recovery are captured in FBM record 123.
+Earlier notices below are historical. Runtime remains `4b88946f`; no learned,
+latency or release qualification is claimed.
+
 Date: 2026-10-01 UTC
 Status: source-grounded direction; implementation and performance qualification pending
 

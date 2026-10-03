@@ -5,17 +5,16 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Latest continuation: `docs/VERIFICATION_CHECKPOINT_2026-10-03.md`. Both full
-`4b88946f` workflows failed; 978 component cases each, physical PR 50/2/1 and
-push 49/2/2, plus separate Temporal restart exit 139. First sampling run
-37139200958 is complete: failed fixture, healthy 2,236 samples, 117 after/116
-before source blobs verified. Scoped run 37141011069 is pending at source
-`78041807593eae4973fb6733dd24a940477b7e57`: 48 observer checks pass; eight fixed
-scopes and 50 actual targets; clear read-only review. Runtime `4b88946f` and
-workflow remain unchanged. Stop while only this result remains. Recover its
-actual archive/source hashes and matrix totals/coverage before choosing the
-serving repair. Further origin tuning stays deferred. FBM has 122 validated
-procedure traces; no training or learned result is claimed.
+Latest continuation: the owner stopped the unprofitable local repair/diagnostic
+loop on October 3. Read the owner-reset section in
+`docs/LATENCY_ARCHITECTURE_RECALIBRATION_2026-10-01.md` before selecting work.
+Define the narrow native invocation and its H/C current-authority boundaries;
+do not resume the old handoff's next hotspot, batching patch or probe by default.
+Scoped run 37141011069 is complete: failed fixture, healthy 2,237 samples,
+117 after/116 before source blobs and actual archive verified. It localizes
+current-history verification but establishes no end-to-end repair. Runtime
+`4b88946f` remains unchanged; full ordinary failures and Temporal exit 139 remain.
+No job is pending for this step. FBM has 123 validated procedure traces.
 
 FloRA is a narrow prototype for the frozen causal personal-judgment experiment.
 It does not require the full Alice/Fable memory, mission, experience or consumer

@@ -12,7 +12,7 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-03
 
-The corpus now contains **122 validated procedure traces**. This count describes
+The corpus now contains **123 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
@@ -28,6 +28,7 @@ New material construction, failure and recovery steps continue to be captured he
 | [Completed owned-stack sampling](2026-10-03_completed_owned_stack_sampling.jsonl) | Verify the actual artifact archive and117/116 source blobs; preserve failed fixture and healthy sampling. |
 | [Bounded scope attribution](2026-10-03_bounded_owned_stack_scope_attribution.jsonl) | Attribute physical samples to fixed H/C callers before choosing the serving repair. |
 | [Published scope sampling and one dispatch](2026-10-03_published_owned_stack_scope_and_dispatch.jsonl) | Bind reviewed exact source to the pending H/C scope diagnostic. |
+| [Source recovery and owner architecture reset](2026-10-03_source_recovery_and_owner_architecture_reset.jsonl) | Recover the completed scope result and stop local trial/diagnostic drift; restore the narrow invocation-boundary design. |
 | [Failed diagnostic and partial CI](2026-10-03_source_verified_binding_diagnostic.jsonl) | Verify loaded source, preserve failed response/process outcomes and avoid misleading timing comparisons. |
 
 The latest result and unfinished gates are in the
