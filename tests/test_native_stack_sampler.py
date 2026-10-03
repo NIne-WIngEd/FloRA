@@ -25,6 +25,12 @@ def owned():
 def leaf():
     pass
 
+def scope_outer():
+    pass
+
+def scope_inner():
+    pass
+
 def frame(code, parent=None, **extra):
     return SimpleNamespace(f_code=code, f_back=parent, **extra)
 
@@ -33,6 +39,50 @@ class NativeStackSamplerTest(unittest.TestCase):
         self.assertIsNotNone(diagnostic.StackSampler, 'fixed-tag native stack sampler is missing')
         return diagnostic.StackSampler({owned.__code__: SimpleNamespace(tag='owned'),
             leaf.__code__: SimpleNamespace(tag='leaf')}, owned_work_code=owned.__code__, **kwargs)
+
+    def test_scoped_deepest_samples_use_nearest_exact_owned_scope_once(self):
+        sampler = self.sampler(scopes={scope_outer.__code__: 'outer', scope_inner.__code__: 'inner'})
+        stack = frame(leaf.__code__, frame(scope_inner.__code__, frame(scope_inner.__code__,
+            frame(scope_outer.__code__, frame(owned.__code__)))))
+        sampler.record_snapshot(1, stack, 1)
+        row = sampler.summary()['workers'][0]
+        self.assertEqual(row['scoped_deepest_fixed_tag_samples'], {'inner': {'leaf': 1}})
+        self.assertEqual(row['deepest_fixed_tag_samples'], {'leaf': 1})
+        self.assertEqual(row['samples'], 1)
+
+    def test_scope_clone_and_scope_above_owned_work_stay_unscoped(self):
+        sampler = self.sampler(scopes={scope_outer.__code__: 'outer'})
+        sampler.record_snapshot(1, frame(leaf.__code__, frame(scope_outer.__code__.replace(),
+            frame(owned.__code__))), 1)
+        sampler.record_snapshot(1, frame(leaf.__code__, frame(owned.__code__,
+            frame(scope_outer.__code__))), 2)
+        self.assertEqual(sampler.summary()['workers'][0]['scoped_deepest_fixed_tag_samples'],
+            {'unscoped_owned_stack': {'leaf': 2}})
+
+    def test_scope_summary_is_detached_and_does_not_retain_private_frames(self):
+        sampler = self.sampler(scopes={scope_inner.__code__: 'inner'})
+        class Payload:
+            pass
+        payload = Payload(); weak = ref(payload)
+        stack = frame(leaf.__code__, frame(scope_inner.__code__, frame(owned.__code__)),
+            f_locals={'private': payload, 'text': 'PRIVATE_SCOPE_SENTINEL'})
+        sampler.record_snapshot(1, stack, 1)
+        del payload, stack
+        gc.collect()
+        self.assertIsNone(weak())
+        report = sampler.summary()
+        report['workers'][0]['scoped_deepest_fixed_tag_samples']['inner']['leaf'] = 100
+        self.assertEqual(sampler.summary()['workers'][0]['scoped_deepest_fixed_tag_samples'],
+            {'inner': {'leaf': 1}})
+        self.assertNotIn('PRIVATE_SCOPE_SENTINEL', json.dumps(report))
+
+    def test_scope_inventory_is_bounded_and_native_codes_only(self):
+        for scopes in ({object(): 'invalid'}, {leaf.__code__: object()},
+                       {leaf.__code__: 'private text with spaces'},
+                       {owned.__code__.replace(co_name=str(i)): 'scope'+str(i) for i in range(9)}):
+            with self.subTest(scopes_count=len(scopes)):
+                with self.assertRaises(ValueError):
+                    self.sampler(scopes=scopes)
 
     def test_only_exact_owned_ancestor_is_classified_and_recursive_tags_count_once(self):
         sampler = self.sampler()
@@ -171,6 +221,7 @@ class Case(unittest.TestCase):
         if sys.argv[4]=='fail': self.fail('PRIVATE_FIXTURE_FAILURE_SENTINEL')
 d.native.original_case=lambda:(types.SimpleNamespace(),Case())
 d.native.native_targets=lambda module:({owned.__code__:types.SimpleNamespace(tag='owned')},owned.__code__)
+d.native_scopes=lambda:{owned.__code__:'controlled.owned'}
 d.source_hashes=lambda:{'controlled_source':'a'*64}
 raise SystemExit(d.main(['--output',sys.argv[2]]))
 '''

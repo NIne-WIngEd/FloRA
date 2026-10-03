@@ -29,7 +29,7 @@ _SPEC.loader.exec_module(native)
 class StackSampler:
     """Finite numeric rows; code identities classify observation, never authority."""
 
-    def __init__(self, targets, *, owned_work_code, interval_seconds=0.05,
+    def __init__(self, targets, *, owned_work_code, scopes=None, interval_seconds=0.05,
                  cap_seconds=180, maximum_workers=32, maximum_stack_depth=256,
                  frame_provider=sys._current_frames, clock=time.monotonic):
         if (not math.isfinite(cap_seconds) or not 0 < cap_seconds <= 180
@@ -37,10 +37,18 @@ class StackSampler:
                 or type(maximum_workers) is not int or not 1 <= maximum_workers <= 32
                 or type(maximum_stack_depth) is not int or not 1 <= maximum_stack_depth <= 256):
             raise ValueError('bounded positive observation limits required')
-        if type(owned_work_code) is not CodeType or any(type(c) is not CodeType for c in targets):
+        scopes = {} if scopes is None else scopes
+        if (type(owned_work_code) is not CodeType or len(targets) > 96
+                or any(type(c) is not CodeType for c in targets)):
             raise ValueError('fixed original code objects required')
-        self._codes = tuple(targets) + (owned_work_code,)
+        if (type(scopes) is not dict or len(scopes) > 8
+                or any(type(c) is not CodeType or type(label) is not str
+                    or re.fullmatch('[a-z][a-z0-9_.]{0,63}', label) is None
+                    for c, label in scopes.items())):
+            raise ValueError('at most eight fixed original code scopes required')
+        self._codes = tuple(targets) + tuple(scopes) + (owned_work_code,)
         self._targets = {id(c): target.tag for c, target in targets.items()}
+        self._scopes = {id(c): label for c, label in scopes.items()}
         self._owned_code_id = id(owned_work_code)
         self._frames, self._clock = frame_provider, clock
         self.interval_seconds, self.cap_seconds = interval_seconds, cap_seconds
@@ -85,12 +93,14 @@ class StackSampler:
         with self._lock:
             if self._closed:
                 return
-            current, tags, owned = frame, [], False
+            current, tags, owned, scope = frame, [], False, None
             try:
                 for _ in range(self.maximum_stack_depth):
                     if current is None:
                         break
                     code_id = id(current.f_code)
+                    if not owned and scope is None:
+                        scope = self._scopes.get(code_id)
                     owned = owned or code_id == self._owned_code_id
                     tag = self._targets.get(code_id)
                     if tag is not None and tag not in tags:
@@ -109,7 +119,8 @@ class StackSampler:
                         return
                     row = dict(first_sample_monotonic=now, last_sample_monotonic=now,
                                samples=0, observation_window_capped=False,
-                               inclusive_fixed_tag_samples={}, deepest_fixed_tag_samples={})
+                               inclusive_fixed_tag_samples={}, deepest_fixed_tag_samples={},
+                               scoped_deepest_fixed_tag_samples={})
                     self._workers[thread_id] = row
                 if now - row['first_sample_monotonic'] >= self.cap_seconds:
                     row['observation_window_capped'] = True
@@ -121,6 +132,9 @@ class StackSampler:
                     values[tag] = values.get(tag, 0) + 1
                 deepest = tags[0] if tags else 'unmapped_owned_stack'
                 values = row['deepest_fixed_tag_samples']
+                values[deepest] = values.get(deepest, 0) + 1
+                values = row['scoped_deepest_fixed_tag_samples'].setdefault(
+                    scope if scope is not None else 'unscoped_owned_stack', {})
                 values[deepest] = values.get(deepest, 0) + 1
                 self.sampled_owned_stacks += 1
                 self.first_owned_sample.set()
@@ -161,7 +175,9 @@ class StackSampler:
                 observer_errors=self.observer_errors,
                 sampler_stopped=self._thread is None or not self._thread.is_alive(),
                 workers=[dict(row, inclusive_fixed_tag_samples=dict(row['inclusive_fixed_tag_samples']),
-                              deepest_fixed_tag_samples=dict(row['deepest_fixed_tag_samples']))
+                              deepest_fixed_tag_samples=dict(row['deepest_fixed_tag_samples']),
+                              scoped_deepest_fixed_tag_samples={scope: dict(values)
+                                  for scope, values in row['scoped_deepest_fixed_tag_samples'].items()})
                          for row in self._workers.values()])
 
 
@@ -169,6 +185,27 @@ def source_hashes():
     values = native.source_hashes()
     values['native_stack_sampling_script'] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
     return values
+
+
+def native_scopes():
+    """Eight fixed code ancestors distinguish repeated H work from C assembly.
+
+    The nearest scope below original owned work receives one deepest-tag count.
+    No ordered stack/path, source identifier, query or payload is retained.
+    """
+    from flora.selected import comparison_custody, context_guard, native_reads, selected_authority_frame
+    history = comparison_custody.SelectedRunEvidencePolicy
+    return {
+        history.authorize_history.__code__: 'history.authenticate',
+        history.authorize_history_metadata.__code__: 'history.current_metadata',
+        context_guard.prepare_current_context.__code__: 'context.prepare',
+        context_guard.assemble_context.__code__: 'context.assemble',
+        native._nested_code(context_guard.prepare_current_context, 'initial_barrier'): 'context.initial_barrier',
+        context_guard.PreparedCurrentContext.metadata_current.__code__: 'context.current_barrier',
+        selected_authority_frame.SharedSelectedAuthorityFrame.__init__.__code__: 'context.shared_frame',
+        native._nested_code(native_reads.SelectedNativeReadServices._install_phase_source_gate,
+            'phase_now'): 'phase.current_history',
+    }
 
 
 def main(argv=None):
@@ -190,7 +227,7 @@ def main(argv=None):
             module, case = native.original_case()
             targets, marker = native.native_targets(module)
             before = source_hashes()
-            sampler = StackSampler(targets, owned_work_code=marker,
+            sampler = StackSampler(targets, owned_work_code=marker, scopes=native_scopes(),
                 cap_seconds=args.cap_seconds, interval_seconds=args.interval_seconds)
             with sampler:
                 unittest.TestSuite((case,)).run(result)
@@ -223,7 +260,7 @@ def main(argv=None):
         if status == 'passed' and observation_status == 'observer_error':
             status = 'observer_error'
         head = os.environ.get('GITHUB_SHA', '')
-        receipt = dict(schema_version=1, fixture_id=native.FIXTURE_ID,
+        receipt = dict(schema_version=2, fixture_id=native.FIXTURE_ID,
             diagnostic_status=status, fixture_status=fixture_status,
             observation_status=observation_status, qualification=False, learned_behavior_run=False,
             response_budget_ms=native.PROTOCOL_RESPONSE_BUDGET_MS,
@@ -238,6 +275,8 @@ def main(argv=None):
                     'Fixed-interval wall samples are biased by GIL scheduling, native calls and thread activity.',
                     'Snapshots can be stale before inspection; no CPU, exact durations or call counts are inferred.',
                     'Deepest fixed tag includes untargeted descendants; inclusive tags overlap and cannot be summed.',
+                    'Scoped deepest counts use the nearest fixed code ancestor inside owned work; they sum to samples, not durations.',
+                    'At most eight scopes plus unscoped and 96 target tags bound each numeric matrix; no stack paths are saved.',
                     'Parent/setup attribution is unobserved; polling itself adds unmeasured diagnostic overhead.',
                     'No call/trace hooks, delegates or response/CI deadlines are changed.',
                     'Only fixed labels, numeric aggregates and source digests are saved; frames/locals/payloads are transient.',
