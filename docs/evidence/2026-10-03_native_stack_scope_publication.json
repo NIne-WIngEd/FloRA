@@ -1,0 +1,83 @@
+{
+  "operation": "publish_reviewed_scoped_original_code_sampling_and_dispatch_once",
+  "dev_publication": {
+    "branch": "codex/flora-shared-source-caps",
+    "sha": "78041807593eae4973fb6733dd24a940477b7e57",
+    "tree": "81d07c7c593c25a39886feea1440b7869374cbb8",
+    "parent": "94fab4bc5592c4b01fa4bcd1a83093ff32aba463",
+    "file_count": 12
+  },
+  "context_publication": {
+    "branch": "codex/flora-context",
+    "sha": "5d284d95d29d13ef732ad883e2f7756046547e22",
+    "tree": "5c8ab38d0334421ca9f9644d160e0514a534de13",
+    "parent": "0dd1193d9dffeb5b6fe395cc53733ce86cd652b0",
+    "file_count": 10
+  },
+  "dispatch": {
+    "conclusion": "",
+    "createdAt": "2026-10-03T17:34:32Z",
+    "event": "workflow_dispatch",
+    "headSha": "78041807593eae4973fb6733dd24a940477b7e57",
+    "id": 37141011069,
+    "jobs": [
+      {
+        "conclusion": "",
+        "id": 111255274363,
+        "name": "diagnostic-native",
+        "status": "in_progress"
+      }
+    ],
+    "status": "in_progress",
+    "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37141011069",
+    "attempts": 1,
+    "inputs": {
+      "observer": "stack-samples"
+    },
+    "command_exit_code": 0,
+    "before_utc": "2026-10-03 17:34:29 UTC"
+  },
+  "runtime_source": "4b88946f404d7359943b5edb2504a2f0c2e96320",
+  "qualification": false,
+  "learned_behavior_run": false,
+  "recorded_at_utc": "2026-10-03T17:36:08.227918Z",
+  "result": "pending",
+  "publication_verification": {
+    "changed_files": 12,
+    "matching_context_documents": 10,
+    "diagnostic_source_hashes": 2,
+    "unchanged_runtime_and_aggregate_blobs": 8,
+    "serving_changes": 0,
+    "workflow_unchanged": true,
+    "checkout_clean_before_dispatch": true
+  },
+  "source_sha256": {
+    "scripts/profile_selected_native_stacks.py": "3a35438d8a8ed28c647ecbcd6aa2567b1e6c0b16b8def34bbdfb32e3fc2d2c9e",
+    "tests/test_native_stack_sampler.py": "1919eddfc66a694d641fe157d8bf5a47ef8cd51aaeb6a3f55c2a344ff3ff4341"
+  },
+  "unchanged_runtime_and_aggregate_sha256": {
+    "src/flora/selected/selected_phase_authority.py": "6589bce9051bcc410282b5aba7fc3259bc0ef57105aeb98966e0fa50aaa9542a",
+    "src/flora/selected/selected_authority_frame.py": "599d996805c8c197a3bdd102df3fc5fb6d8500f12a613c81565c903ec76947d6",
+    "tests/test_shared_context_bindings.py": "07c9b08ec27b745a74292226ce92fd694a213d05e21e69cc6a976820391bbea2",
+    "tests/test_selected_phase_authority.py": "fba8e8b69d9b05e858a0fbcf3d9ff8ad9769225149425e50acbad4d567b55e11",
+    "tests/test_shared_phase_authority.py": "f473f346e8bc5686d03da12bae4fc253a10feef05c9ee766978c2e02552d69b4",
+    "tests/test_shared_authority_frame.py": "6adaae62780b1fabda5e9e39c041d8849797206f4433822c807de57683300552",
+    "scripts/profile_selected_native_boundaries.py": "56e3000009353d1ca96e89a39a15a87bb5110ea757281cad49256cdf33ba31fe",
+    "tests/test_native_boundary_profiler.py": "131f3488c0164e771a8f2d24a33a2198695499f0c23efd69bd72765f7394797e"
+  },
+  "budgets": {
+    "maximum_scopes": 8,
+    "maximum_targets": 96,
+    "maximum_worker_rows": 32,
+    "maximum_stack_depth": 256,
+    "interval_seconds": 0.05,
+    "worker_cap_seconds": 180,
+    "response_budget_ms": 60000,
+    "ci_timeout_minutes": 60
+  },
+  "limits": [
+    "One manually dispatched scoped diagnostic; no additional serving or workflow change.",
+    "Earlier completed fixture failure remains in its exact artifact/receipt.",
+    "Stop once only the pending run remains; validate actual source, matrix totals and coverage before choosing a repair."
+  ]
+}
