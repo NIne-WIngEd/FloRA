@@ -1,5 +1,13 @@
 # FloRA continuation context
 
+## Current: narrow owned judgment composition — October 3
+
+The owner approved continuing FloRA within its prototype scope. [The minimal invocation contract](MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md) maps current state/evidence, H/C rights, external judgment, explicit recovery and linked outcome/successor boundaries. The first composition slice reuses the invocation's actual prepared context for delivery, removing a second context assembly. Exact cited originals are still read/authenticated; live rights and owner proofs are not cached. The original runtime policy owner remains current across callbacks.
+
+[The construction receipt](evidence/2026-10-03_minimal_judgment_composition.json) preserves three RED results, **27/27 final Linux runtime/domain checks**, and the fresh review's two corrected regressions. Standalone supplied-context delivery still reconstructs; external producer and independent recovery semantics remain. The mixed broader local check was stopped after its loaded serving source became obsolete; it is incomplete. Ordinary selected-engine verification is pending publication. No latency, learned or release qualification follows.
+
+Full-H reconstruction inside phase predicates and passive result recovery remain unchanged. This foreground composition does not by itself fix the sampled native recovery latency. Continue from actual physical results and the named boundary contract; do not select another hotspot patch or build the full Alice platform. Personality and MFM remain external. The FBM corpus now has **124 validated procedure traces**, with this construction/failure/review lesson in record124. Prior reset and failure snapshots below remain historical.
+
 ## Latest owner reset — stop the local repair loop
 
 The owner's October 3 recalibration supersedes the pending-run/local-patch next
