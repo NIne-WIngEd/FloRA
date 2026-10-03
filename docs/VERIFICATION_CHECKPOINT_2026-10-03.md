@@ -1,5 +1,5 @@
 # FloRA verification checkpoint — 2026-10-03
-## Latest completed gates and next diagnostic — October 3
+## Latest completed gates and dispatched diagnostic — October 3
 
 Both `4b88946f` ordinary workflows have completed with failure. The
 [full 26-job receipt](evidence/2026-10-03_4b88946f_completed_ci_receipts.json)
@@ -20,7 +20,7 @@ measures original-code operations without profile/trace hooks: median seal
 Call counts are gathered separately, and no IO counters change. This local
 fixture does not establish cloud cost or an end-to-end saving.
 
-**Next: one optional original-code stack-sample diagnostic, with runtime unchanged.**
+**One optional original-code stack-sample diagnostic is now running; runtime is unchanged.**
 Sample fixed-tag owned-reader stacks every 50 ms, retaining numeric counts and
 source hashes. There are no call hooks, delegate replacements, raw stack/locals
 records or worker interruption. Thread windows remain bounded at 180 s; response
@@ -38,9 +38,22 @@ proof representation work is justified or the next design should target physical
 reads/reconstruction and H×C preparation. Origin-seal materialization remains
 deferred; no new memory/mission platform or personality/MFM implementation is added.
 
-The [FBM index](fbm-seeds/README.md) now links **118 validated procedure traces**.
-The sampler's source-pinned publication/dispatch is the next step; its physical
-result is unobserved. Older partial/pending snapshots below are superseded here.
+[Run 37139200958](https://github.com/NIne-WIngEd/FloRA/actions/runs/37139200958),
+job `111249936520`, was manually dispatched **once** with `observer=stack-samples`
+against `83009137a5f795a6b3d6cf56f3a5261656fa1fd3`, tree
+`782b38a5bc91774aecb8f7661107bee71745cf8b`. It is in progress at this receipt.
+The [publication receipt](evidence/2026-10-03_native_stack_sampler_publication.json)
+verifies 15 changed published files, 12 shared context documents, three diagnostic
+blobs and eight unchanged runtime/aggregate blobs. Serving source still matches
+`4b88946f`; qualification and learned behavior remain false. The workflow's
+tested CRLF and published LF digests are retained with verified equivalence.
+
+The [FBM index](fbm-seeds/README.md) now links **119 validated procedure traces**.
+Only the external diagnostic result remains for this step. Stop until it is ready;
+then recover the final artifact, verify exact FloRA/Alice source hashes and inspect
+sampler health/coverage before choosing another runtime change. The restart
+exit139 remains a separate unresolved process failure. Older partial/pending
+snapshots below are historical and superseded here.
 
 ## Current result: published repair, failed response observation, partial ordinary CI
 
