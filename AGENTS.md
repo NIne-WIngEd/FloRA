@@ -8,10 +8,12 @@ before treating a pending or historical receipt as current.
 Latest continuation: `docs/VERIFICATION_CHECKPOINT_2026-10-03.md`. Both full
 `4b88946f` workflows are recovered: 978 components each; physical PR50/2/1,
 push49/2/2, plus separate Temporal restart process exit139. No response result
-is qualified. The next bounded step is one 50ms original-owned-stack diagnostic,
-with runtime and existing aggregate observer unchanged. Further origin-seal
-tuning stays deferred until that sampling discriminates remaining work.
-The FBM index links 118 validated procedure traces; no FBM training is claimed.
+is qualified. One 50ms original-owned-stack diagnostic is running: run37139200958,
+source83009137a5f795a6b3d6cf56f3a5261656fa1fd3. Serving runtime4b88946f and the
+existing aggregate observer remain unchanged. Stop while only this result is
+pending. Recover its final artifact/source hashes and sampler health/coverage
+before choosing the next repair; further origin-seal tuning stays deferred.
+The FBM index links 119 validated procedure traces; no FBM training is claimed.
 
 FloRA is a narrow prototype for the frozen causal personal-judgment experiment.
 It does not require the full Alice/Fable memory, mission, experience or consumer

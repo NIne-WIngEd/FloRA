@@ -12,7 +12,7 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-03
 
-The corpus now contains **118 validated procedure traces**. This count describes
+The corpus now contains **119 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
@@ -24,6 +24,7 @@ New material construction, failure and recovery steps continue to be captured he
 | [Published source and dispatch](2026-10-03_published_binding_walk_and_physical_dispatch.jsonl) | Bind the reviewed runtime to exact blobs and once-dispatched gates. |
 | [Completed current CI](2026-10-03_completed_binding_ci_recovery.jsonl) | Verify all 26 jobs and retain the separate failed restart process. |
 | [Unobserved cost and stack sampling](2026-10-03_unobserved_cost_and_owned_stack_sampler.jsonl) | Discriminate observer bias before another runtime change. |
+| [Published sampling and one dispatch](2026-10-03_published_stack_sampler_and_dispatch.jsonl) | Verify exact published source, retain line-ending provenance and bind the pending diagnostic. |
 | [Failed diagnostic and partial CI](2026-10-03_source_verified_binding_diagnostic.jsonl) | Verify loaded source, preserve failed response/process outcomes and avoid misleading timing comparisons. |
 
 The latest result and unfinished gates are in the
