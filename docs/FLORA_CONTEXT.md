@@ -1,4 +1,37 @@
 # FloRA continuation context
+
+## Latest: completed sample result and bounded scope attribution — October 3
+
+[Run 37139200958](https://github.com/NIne-WIngEd/FloRA/actions/runs/37139200958)
+finished. Collection succeeded; **the fixture failed**, with qualification false.
+The [exact validation](evidence/2026-10-03_83009137_native_stack_samples_validation.json)
+verifies the actual archive digest and all **117 after / 116 before** source blobs
+at FloRA `83009137` and Alice `4f287a` (61/56 after).
+The [numeric artifact](evidence/2026-10-03_83009137_native_stack_samples.json)
+has **2,236 owned samples** from one observed thread across 120.424647 s between
+first and last samples, with zero errors, truncations, discards or capped coverage;
+the sampler stopped. This is approximate wall residency, not CPU/call counts.
+
+Deepest fixed tags include **639 psycopg execute**, **347 registry fetch** and
+**153 Kurrent stream** samples. Registry fetch includes untargeted descendants;
+its entire count cannot be called I/O. The [review](evidence/2026-10-03_83009137_native_stack_samples_review.json)
+defers further origin-seal tuning. Marginal counts cannot assign physical reads
+to full H authentication, current H guards or C preparation/barriers.
+
+The next bounded step is one optional nearest-original-code-scope/deepest-tag
+matrix in the existing sampler. Eight fixed scopes distinguish those H/C stages;
+each sample contributes once. No ordered stacks, locals or private payloads are
+retained. Ownership, observation/response/CI limits and workflow remain unchanged.
+Serving runtime is still `4b88946f`, with no personality/MFM or broader platform work.
+The [scope contracts](evidence/2026-10-03_native_stack_scope_contracts.json)
+retain RED and the initial controlled-CLI failures, their harness correction,
+**48 passing observer checks**, actual 50-target/eight-scope inventory and clear
+read-only review. Publish verified source and dispatch once; use the result to
+choose a change tied to the measured stage. No speedup is claimed.
+
+The [FBM index](fbm-seeds/README.md) now links **121 validated procedure traces**.
+Earlier pending notices below describe saved snapshots and are superseded here.
+
 ## Latest completed gates and dispatched diagnostic — October 3
 
 Both `4b88946f` ordinary workflows have completed with failure. The
