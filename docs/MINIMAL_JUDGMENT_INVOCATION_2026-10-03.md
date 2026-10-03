@@ -67,3 +67,8 @@ independently recovered output. Existing relevant tests must stay passing.
 [Exact receipt](evidence/2026-10-03_minimal_judgment_composition.json) records **27/27 final Linux component cases**, zero errors/failures/skips, and a fresh clear review. Review reproduced two introduced edges before their corrections: owner-proof withdrawal at the delivery clock, and replacement of the original runtime policy during qualification. Full delivery revalidation and a pure original-policy identity guard now reject both. The external authority callback still executes freshly. Source reads, standalone reconstruction and recovery remain explicit.
 
 A mixed broader local check was stopped because serving edits invalidated its loaded source identity; it has no final pass total. Physical BEFORE/AFTER and response qualification remain pending at publication. No new diagnostic, model training, GPU job or mission infrastructure was added. The unchanged H/recovery path remains a separate unresolved cost.
+
+## Published physical gates
+
+Published serving source `bf494970` and context snapshot `877162da` are [verified against actual Git blobs](evidence/2026-10-03_minimal_judgment_publication.json). [Push37151333895](https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895) and [PR37151335920](https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920) are in progress at capture. They are the existing standard physical/contract gates, automatically triggered once; no new diagnostic was dispatched. Only external results remain. Stop here, then recover exact completed receipts and actual timings before choosing the next bounded change. Context-branch serving files remain historical.
+
