@@ -9,8 +9,9 @@ Latest continuation: the owner-approved minimal invocation composition uses one
 actual current preparation for delivery/judgment. Read
 `docs/MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md` and the current checkpoint.
 27 final Linux runtime/domain checks pass; fresh review corrected owner-proof
-timing and original-policy replacement. Selected-engine qualification is pending
-publication. Full H/phase and passive recovery algorithms are unchanged and
+timing and original-policy replacement. Serving sourcebf494970 is verified.
+Ordinary push37151333895/PR37151335920 gates are in progress. Stop when only
+those external results remain; do not poll idle or invent more prerequisites. Full H/phase and passive recovery algorithms are unchanged and
 remain unresolved latency costs. Do not claim this change fixes those costs.
 The owner reset still prohibits default hotspot patches/diagnostic loops or full
 Alice infrastructure. FBM has124 validated procedure traces.
