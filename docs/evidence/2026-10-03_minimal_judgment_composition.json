@@ -1,0 +1,80 @@
+{
+  "schema": "flora-minimal-judgment-composition-v1",
+  "timestamp_utc": "2026-10-03T20:18:47.138272Z",
+  "base_commit": "9705aec761821a12c896b3dfbc5a71d2fd56ca93",
+  "prior_serving_commit": "4b88946f404d7359943b5edb2504a2f0c2e96320",
+  "alice_runtime_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+  "source_sha256": {
+    "src/flora/selected/context.py": "8ed0fd875d9239a3aaa6c0a18061a336a3514fef4b7a9fd46cb3f88df9c75ed5",
+    "src/flora/selected/experiment_runtime.py": "e18c95757e2566600432e7aeaee1dd72ab22aad08b8ecee597a4c3a96f484c95",
+    "tests/test_selected_experiment_runtime.py": "fcc7a025e7d88b70f28ad9713b22f6f8576bda8604f72ac38b3403f5988f7a97"
+  },
+  "change": "One actual current-context preparation feeds delivery and external judgment; standalone supplied-context delivery reconstructs. Full owner proof/current authority guard follows clock/revision callbacks and precedes delivery append. Original runtime policy identity remains live through preparation, private access, producer and acceptance.",
+  "retained": [
+    "exact source/control/approval authentication",
+    "live H/C rights and independent caps",
+    "current Claim/state heads",
+    "joint terminal metadata/physical fences",
+    "qualified external producer and independent execution/result attribution",
+    "explicit recovery and decision/outcome/successor links"
+  ],
+  "red": [
+    {
+      "case": "one_owned_context",
+      "cases": 2,
+      "failures": 1,
+      "seconds": 7.684,
+      "observation": "Two assemblies rather than one; withdrawal after preparation already refused."
+    },
+    {
+      "case": "owner_proof_clock_withdrawal",
+      "cases": 1,
+      "failures": 1,
+      "seconds": 1.294,
+      "observation": "7 rather than 6 canonical events: delivery appended before later owner denial."
+    },
+    {
+      "case": "runtime_policy_owner_replacement",
+      "cases": 1,
+      "failures": 1,
+      "seconds": 1.75,
+      "observation": "Expected PermissionError was not raised after qualification replaced runtime policy."
+    }
+  ],
+  "final_components": {
+    "modules": [
+      "test_selected_experiment_runtime",
+      "test_runtime_context_domain"
+    ],
+    "cases": 27,
+    "seconds": 12.572,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "exit_code": 0,
+    "environment": "Linux ARM64 Python3.12.15 Docker",
+    "image_sha256": "bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+    "source_bytes": "UTF-8 LF, exact published-candidate bytes; final rerun after checkout CRLF normalization."
+  },
+  "fresh_review": {
+    "result": "clear after two reproduced and corrected important defects",
+    "independent_regressions": 4,
+    "seconds": 4.542,
+    "scope": "bounded current preparation/delivery composition, not latency or model qualification"
+  },
+  "intermediate_evidence": [
+    "Windows23/25 and Linux26 passes preceded final policy guard; not final source qualification.",
+    "Mixed eight-module Linux run was stopped after serving edits invalidated its loaded-source identity. Exit1, no final summary; incomplete and unqualified. No passed total inferred from progress dots.",
+    "27/27 in9.712s tested CRLF checkout bytes; final LF exact-source run27/27 in12.572s. Semantic implementation unchanged by normalization."
+  ],
+  "selected_engine_verification": "pending publication and ordinary CI at exact source",
+  "response_budgets_ms": {
+    "standalone": 10000,
+    "native": 60000
+  },
+  "ci_budget_minutes": 60,
+  "latency_qualified": false,
+  "learned_qualified": false,
+  "release_qualified": false,
+  "remaining": "Whole-H reconstruction inside phase predicates and passive recovery are unchanged. This serving composition cannot by itself repair the sampled native recovery latency. Required complete selected-engine BEFORE/AFTER remains pending; preserve older failures and Temporal exit139."
+}

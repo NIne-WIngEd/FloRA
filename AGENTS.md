@@ -5,16 +5,15 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Latest continuation: the owner stopped the unprofitable local repair/diagnostic
-loop on October 3. Read the owner-reset section in
-`docs/LATENCY_ARCHITECTURE_RECALIBRATION_2026-10-01.md` before selecting work.
-Define the narrow native invocation and its H/C current-authority boundaries;
-do not resume the old handoff's next hotspot, batching patch or probe by default.
-Scoped run 37141011069 is complete: failed fixture, healthy 2,237 samples,
-117 after/116 before source blobs and actual archive verified. It localizes
-current-history verification but establishes no end-to-end repair. Runtime
-`4b88946f` remains unchanged; full ordinary failures and Temporal exit 139 remain.
-No job is pending for this step. FBM has 123 validated procedure traces.
+Latest continuation: the owner-approved minimal invocation composition uses one
+actual current preparation for delivery/judgment. Read
+`docs/MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md` and the current checkpoint.
+27 final Linux runtime/domain checks pass; fresh review corrected owner-proof
+timing and original-policy replacement. Selected-engine qualification is pending
+publication. Full H/phase and passive recovery algorithms are unchanged and
+remain unresolved latency costs. Do not claim this change fixes those costs.
+The owner reset still prohibits default hotspot patches/diagnostic loops or full
+Alice infrastructure. FBM has124 validated procedure traces.
 
 FloRA is a narrow prototype for the frozen causal personal-judgment experiment.
 It does not require the full Alice/Fable memory, mission, experience or consumer
