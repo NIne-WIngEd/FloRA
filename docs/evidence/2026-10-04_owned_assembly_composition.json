@@ -75,7 +75,7 @@
       "Final 115 relevant components passed at unchanged candidate hashes; physical/latency qualification remains pending."
     ]
   },
-  "physical_verification": "pending ordinary push37166532406 and PR37166535045 at published source20c612fe",
+  "physical_verification": "Previous20c612fe runs never reached tests; restored ordinary push37174845109/PR37174847735 pending atc70b9a4e with unchanged serving source.",
   "qualified": false,
   "learned_behavior_run": false,
   "response_budgets_ms": {
@@ -109,5 +109,7 @@
     ],
     "dispatch": "Existing push and pull_request workflows triggered automatically, once each; no diagnostic dispatched.",
     "actual_pr_checkout": "Not yet recovered; the listed head is source identity, not a claim about the synthetic merge checkout."
-  }
+  },
+  "completed_ci_receipt": "docs/evidence/2026-10-03_20c612fe_completed_ci_receipts.json",
+  "ci_access_repair_receipt": "docs/evidence/2026-10-03_private_alice_ci_access_restoration.json"
 }

@@ -104,3 +104,42 @@ complete paper reviews. Selected primary release notes, paper method sections
 and original source files were fetched. Graphify/Graphiti source pins were
 rechecked from the existing research record. Private fetches and source copies
 remain scratch artifacts. No reported paper speedup is transferred to FloRA.
+
+## Refreshed Alice frontier-watch — October 3 local
+
+The owner's requested branch review fetched original
+`research/frontier-watch@bd04f9c6147ab27178508f3bd45e50cffaeca19f`, advancing
+froma0e6d805. Targeted current-impact remainsf813268f; canonical main remains
+8ea804aa. Alice's runtime API remains4f287a. The frontier branch is a research
+intake, not an adopted production contract. Its execution guardrail classifies
+findings by actual applicability and rejects automatic architecture changes.
+
+The original [October2 intake](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/bd04f9c6147ab27178508f3bd45e50cffaeca19f/docs/research/FRONTIER_WATCH_INTAKE_2026-10-02.md)
+and [October3 outcome intake](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/bd04f9c6147ab27178508f3bd45e50cffaeca19f/docs/research/FRONTIER_WATCH_INTAKE_2026-10-03_VERIFIED_MISSION_STATE_AND_OUTCOME_GATED_LEARNING.md)
+were read before judging the FloRA slice.
+
+- [MemFit](https://arxiv.org/pdf/2610.00872), methods3.2–3.3, keeps exact episodes
+  retrievable behind provenance-linked summaries and separates index construction
+  from answering. This corroborates source-native bounded reads. Its no-delete
+  policy cannot transfer to FloRA's deletion/withdrawal contract, and its selected
+  retrieval constants and QA gains are not FloRA qualification.
+- [StructAgent](https://arxiv.org/html/2607.11388v1), section3.1 and appendixC,
+  lets actors propose progress while verification-backed decisions commit or
+  invalidate it. Its boundary verification uses current task state and grounded
+  postconditions. This supports compact linked state and independent outcome
+  authority; it does not justify installing a new multi-model mission harness.
+- The intake's LongHorizon-Harness and RSIAgent findings were reviewed as branch
+  research, not independently re-qualified here. The relevant rule is to retain
+  failed/unverified Experience while separating verified-success promotion.
+- FOCUS, LatentHarness and retrieval-layer continual learning are future
+  compression/scheduling/evaluation challengers. No such model or full workspace
+  implementation is introduced into this prototype.
+
+FloRA's actual `decision_outcome` explicitly records supplied judgment/source
+lineage without certifying truth or native attention. `outcome_revision` only
+registers an externally proposed candidate; activation is separate. Its
+evaluation protocol says a logged link does not prove advice was followed or
+caused an outcome. Preserve these limits when plugging in external producers;
+add independent observed-outcome evidence for the causal claim when that run is
+exercised. The current CI access failure calls for credential repair, not a new
+memory design. Serving code and all existing authority boundaries are unchanged.

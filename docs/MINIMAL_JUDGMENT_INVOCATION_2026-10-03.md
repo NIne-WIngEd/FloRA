@@ -127,9 +127,12 @@ state-registry replacement. The exact published source is
 with all three source/test files matching reviewed and tested bytes. Ordinary
 [push37166532406](https://github.com/NIne-WIngEd/FloRA/actions/runs/37166532406)
 and [PR37166535045](https://github.com/NIne-WIngEd/FloRA/actions/runs/37166535045)
-triggered automatically and are pending. The actual PR merge checkout has not
-yet been recovered. Correctness does not establish response latency or learned behavior.
-FBM now has **127 validated procedure traces**, including the query-path research.
+completed before test execution at the private Alice checkout. The actual PR
+merge checkout d4f693050fb187bb446f450aad8c9531ff5e9199 has the exact20c612fe
+source tree; all26 FloRA checkouts match, and no Alice checkout succeeded.
+The read-only access repair atc70b9a4e now has separate running ordinary gates.
+Correctness does not establish response latency or learned behavior.
+FBM now has **130 validated procedure traces**, including the query-path research.
 Ordinary gates are now dispatched. Stop when only
 external results remain; preserve those results before another serving change.
 

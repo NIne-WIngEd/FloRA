@@ -1,5 +1,31 @@
 # FloRA continuation context
 
+### Current continuation — private CI restored; full gates running
+
+The20c612fe ordinary [PR37166535045](https://github.com/NIne-WIngEd/FloRA/actions/runs/37166535045)
+and [push37166532406](https://github.com/NIne-WIngEd/FloRA/actions/runs/37166532406)
+are completed checkout failures. [The receipt](evidence/2026-10-03_20c612fe_completed_ci_receipts.json)
+verifies all26 FloRA source trees and records zero tests executed: private Alice
+was unavailable to the default repository-scoped CI token. All53 physical cases
+per run are unexecuted/incomplete; this adds no latency or runtime-failure evidence.
+
+After explicit owner approval, [c70b9a4e](https://github.com/NIne-WIngEd/FloRA/commit/c70b9a4e3115f7f808ccda2e5bf075649065d35f)
+adds the dedicated read-only deploy key input and disables credential persistence
+for the two ordinary dependency checkouts. Alice remains pinned to4f287a. The
+three reviewed serving/test hashes are unchanged; optional diagnostics are unchanged.
+[Restoration evidence](evidence/2026-10-03_private_alice_ci_access_restoration.json)
+records successful private checkouts in all26 new jobs. Ordinary
+[push37174845109](https://github.com/NIne-WIngEd/FloRA/actions/runs/37174845109)
+and [PR37174847735](https://github.com/NIne-WIngEd/FloRA/actions/runs/37174847735)
+are running. Recover their actual final source checkouts and summaries before
+another serving change. Draft PR1 stays draft; no performance or learned pass follows.
+
+Alice frontier-watch was refreshed tobd04f9c6; the relevant original intake and
+primary method checks are appended to [query research](QUERY_PATH_RESEARCH_2026-10-03.md).
+Keep summaries as source indexes and outcome assertions separate from independently
+verified success. These findings require no full mission platform or new model here.
+FBM now has130 validated procedure seeds. Stop when only the external results remain.
+
 ### Query-path research — October 3 local / October 4 UTC
 
 [The primary-source comparison](QUERY_PATH_RESEARCH_2026-10-03.md) distinguishes
@@ -29,9 +55,12 @@ state-registry replacement. The exact published source is
 with all three source/test files matching reviewed and tested bytes. Ordinary
 [push37166532406](https://github.com/NIne-WIngEd/FloRA/actions/runs/37166532406)
 and [PR37166535045](https://github.com/NIne-WIngEd/FloRA/actions/runs/37166535045)
-triggered automatically and are pending. The actual PR merge checkout has not
-yet been recovered. Correctness does not establish response latency or learned behavior.
-FBM now has **127 validated procedure traces**, including the query-path research.
+completed before test execution at the private Alice checkout. The actual PR
+merge checkout d4f693050fb187bb446f450aad8c9531ff5e9199 has the exact20c612fe
+source tree; all26 FloRA checkouts match, and no Alice checkout succeeded.
+The read-only access repair atc70b9a4e now has separate running ordinary gates.
+Correctness does not establish response latency or learned behavior.
+FBM now has **130 validated procedure traces**, including the query-path research.
 Ordinary gates are now dispatched. Stop when only
 external results remain; preserve those results before another serving change.
 
