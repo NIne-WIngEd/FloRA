@@ -20,12 +20,12 @@ diagnostic by default. Review which work is immutable, which is current sampled
 metadata and which is fresh permission at every protected boundary. Native and
 baseline ownership must be independently testable; preserve inclusive budgets,
 withdrawal, independent result proof and final physical/current-row fences.
-The replacement operation protocol is not implemented or qualified.
+The complete replacement operation protocol remains unqualified; the bounded prepared-material candidate below is implemented and under review.
 
 Alice frontier-watch is now3bea3318; its October4 intake and MemCodex primary
 method were reviewed. No production engine/model selection changes. See
 [query research](QUERY_PATH_RESEARCH_2026-10-03.md) and the operation assessment.
-FBM now contains135 procedure seeds. No learned result or model weights follow.
+FBM now contains136 procedure seeds. No learned result or model weights follow.
 No new serving change, blind rerun or diagnostic was dispatched by this audit.
 
 The later actual-consumer audit stopped the proposed session-owner patch before
@@ -41,9 +41,15 @@ These fictional-adapter counts do not qualify physical latency or anchored right
 The reviewed next construction privately hands one actual preparation to
 independent lineage in capture, cold constructor and fresh observed-binding.
 Lineage's guard precedes owner metadata even in nested revalidation/update reads;
-handles expire and custom paths remain original. One coherent implementation is
-in progress; no test/result or physical gain claimed. Pinned finite-frame support
-and remaining preparation cost stay unresolved; no new physical job is launched.
+handles expire and custom paths remain original. The uncommitted candidate is
+implemented;75 distinct progressive Windows component cases pass. Five modules
+and two router cases require Linux because of the existing fcntl import. A fresh
+source review and source-bound local Linux checks are running. The
+[candidate receipt](evidence/2026-10-04_actual_phase_prepared_material_candidate.json)
+retains both repaired regressions, exact hashes and unfinished gates. Observed
+binding and anchored integration remain unexecuted. Pinned finite-frame support,
+remaining preparation cost and physical latency stay unresolved. No new physical
+CI/model job is launched; this is not a final-source full-suite pass.
 
 ## Retained earlier checkpoints
 

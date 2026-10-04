@@ -1,0 +1,109 @@
+{
+  "schema": "flora-actual-phase-prepared-material-candidate-v1",
+  "recorded_at_utc": "2026-10-04T20:47:22.510337Z",
+  "status": "implemented_uncommitted_review_and_linux_verification_pending",
+  "serving_baseline_commit": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
+  "local_docs_base_commit": "9950de577083e5a64d46976c12dd7f53db663d86",
+  "candidate_source_sha256": {
+    "src/flora/selected/_phase_preparation.py": "ca6e975869528f431c9dad06b7c18844b6753a9a10cc735839f909d9ed13fea4",
+    "src/flora/selected/context_guard.py": "73f59092d6dc6ee8983e47c34658efaa709f79ac52ab998703f931d01cc24408",
+    "src/flora/selected/judgment_lineage.py": "69d05ebf2813cc69ac8351c3a17288d0cd6a87e9ede147277ebfcaf407d738f1",
+    "src/flora/selected/phase_routes.py": "ac10133a2618eef18d7c7e2c6d77679f9052f3be123017e8187a36263a3261eb",
+    "src/flora/selected/phase_snapshots.py": "8974b5604991b896433082ca8b4ad93f4dafac9c321d504872c960f07b5a7473",
+    "tests/test_phase_snapshots.py": "d0d1db1cffe63eaf4ac6ba55e0577062cc165772c856deb9797d229a614f4423",
+    "tests/integration/test_selected_experiment_preregistration.py": "c161b526c5279e9af15f930d6fc6a00df62a4f3200a82ba2eeaf6103ecd76f23"
+  },
+  "scope": "One-operation material reuse in actual capture, cold route construction and fresh observed binding; no full Alice platform or model construction.",
+  "consumer_mapping": {
+    "issuer": "Exact actual operation owner prepares its own native context; no caller-supplied preparation admission.",
+    "consumer": "Known actual native/qualified lineage borrows exact material through private issuance, runtime/consumer/history/phase/plan/thread identity and expiry.",
+    "barrier": "Independent lineage H/controller guard precedes original owner metadata; nested owner/episode and producer qualification reads use the composite.",
+    "post_base": "Qualified update exclusion and preregistered capture slot callbacks finish through composite revalidation.",
+    "compatibility": "Custom/unsupported preparation retains original fresh construction; unrelated standalone calls retain their independent path."
+  },
+  "component_evidence": {
+    "kind": "progressive candidate runs with affected regressions rerun after each correction; not one final-source full-suite pass",
+    "distinct_passed": 75,
+    "modules": {
+      "test_phase_snapshots": 35,
+      "test_current_context_guard": 29,
+      "test_selected_judgment_lineage": 11
+    },
+    "red": {
+      "cases": 2,
+      "seconds": 238.558,
+      "capture_assemblies": "5 != 1",
+      "cold_constructor_assemblies": "2 != 1",
+      "context_and_producer_proofs": "original exact context and eight/two producer snapshot assertions passed before the assembly assertion"
+    },
+    "green_material_counts": {
+      "actual_capture": 1,
+      "cold_constructor": 1,
+      "capture_independent_lineage_checkpoints": 4,
+      "capture_producer_snapshot_proofs": 8,
+      "constructor_producer_snapshot_proofs": 2,
+      "custom_preparation_capture_assemblies": 5
+    },
+    "observed_binding": "Connected to the actual path; assembly1 assertion in the existing physical integration test remains unexecuted.",
+    "discriminating_protection": [
+      "Independent lineage-only H withdrawal during durable owner-proof ciphertext access refuses before AES-GCM, while owner C allows.",
+      "Qualified final-source withdrawal refuses through full composite revalidation.",
+      "Private holder forgery/copy/mutation/cross-thread/expiry refusal.",
+      "Signed AFTER-ablation exclusion, final dispatch refusal, quarantine-before-AEAD and orphan repair/withdrawal protections."
+    ],
+    "repairs": [
+      {
+        "failure": "Opaque nonlocal callback counter rejected by closure-content seal (1 error,76.184s).",
+        "repair": "Allow opaque callback state to evolve; retain identity/code/cell identity and seal native owner/controller closures.",
+        "verification": "Affected capture/holder/nested withdrawal/custom fallback cases pass4/4,563.167s; later issuer refinement separate."
+      },
+      {
+        "failure": "Broad phase run23 pass/1 fail: preinstalled slow custody metadata callback rejected before original head-moved fence.",
+        "repair": "Seal exact issuer entry implementation globally and actual readers/callbacks per operation.",
+        "verification": "Affected orphan-head and holder cases pass2/2,222.969s; remainder10 pass/2 Windows import blocks,1130.933s."
+      }
+    ],
+    "windows_import_block": {
+      "cause": "Existing Unix fcntl dependency in native_worker; no shim or serving portability patch added.",
+      "modules": [
+        "test_native_reads",
+        "test_shared_authority_frame",
+        "test_experiment_preregistration",
+        "test_preregistration_current_guard",
+        "test_preregistration_metadata_frame"
+      ],
+      "phase_router_cases": 2
+    },
+    "compile_and_scoped_diff_check": "pass as reported by implementer",
+    "source_hashes_verified_by_root": true
+  },
+  "pending": {
+    "fresh_source_review": "read-only scoped review dispatched",
+    "linux_components": {
+      "status": "dispatched_running",
+      "groups": 6,
+      "container_id": "f9571db2d55914d74513d8d3dcea21fbd135b67c0c01afc5256f05f24c56c8e9",
+      "image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+      "platform": "Linux arm64 / Python3.12.15",
+      "alice_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+      "source": "read-only candidate/Alice mounts; complete runtime/test source manifest recorded before and after",
+      "network": "disabled",
+      "physical_engines_run": false,
+      "deadline_seconds": 3600
+    },
+    "physical_integration": "not dispatched; actual anchored heads, both arms, observed binding and post-slot withdrawal remain required"
+  },
+  "unresolved": [
+    "Finite pinned historical/current-authority observation mapping.",
+    "Repeated work in open preparation, which already assembles once.",
+    "Actual physical native worker-thread cost distribution.",
+    "CPU cost of new pure identity/material seals, which is not a measured latency improvement."
+  ],
+  "budgets": {
+    "baseline_ms": 10000,
+    "native_ms": 60000,
+    "ci_minutes": 60,
+    "independent_proof_and_required_writes": "remain inclusive"
+  },
+  "qualification": "No physical latency, learned judgment, full-suite pass or model qualification; personality/MFM remain external."
+}
