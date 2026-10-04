@@ -33,7 +33,7 @@
   },
   "final_components": {
     "status": "running",
-    "planned_cases": 117,
+    "planned_cases": 115,
     "modules": [
       "test_shared_authority_frame",
       "test_shared_context_bindings",
@@ -44,7 +44,8 @@
       "test_runtime_context_domain"
     ],
     "environment": "Linux ARM64 Python3.12.15 Docker",
-    "image_sha256": "bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2"
+    "image_sha256": "bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+    "inventory_method": "Exact unittest loader count:23+5+8+23+29+19+8=115; replaces the earlier arithmetic estimate117."
   },
   "fresh_review": {
     "result": "clear scoped review",
@@ -64,7 +65,7 @@
     ],
     "limits": [
       "duplicate broad reviewer suite stopped with superseded assertion bytes; no completed total claimed",
-      "final117 cases and physical/latency qualification remain pending"
+      "final115 cases and physical/latency qualification remain pending"
     ]
   },
   "physical_verification": "not dispatched for this candidate",

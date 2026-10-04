@@ -119,7 +119,7 @@ success or failure. Prepared authority services remain original.
 The corrected RED records22,425 nested SQL calls in pure assembly full-H work.
 The first three-case verification removed that work and retained withdrawal
 before decryption; two expiry assertions failed only on error wording despite
-denial. The corrected final **117-case relevant suite is running**. A fresh
+denial. The corrected final **115-case relevant suite is running**. A fresh
 review is clear; two independent owner-callback races refuse unselected-H
 withdrawal and original state-registry replacement. No physical gate has been
 dispatched for this candidate and no performance/learned claim follows.
