@@ -143,3 +143,25 @@ caused an outcome. Preserve these limits when plugging in external producers;
 add independent observed-outcome evidence for the causal claim when that run is
 exercised. The current CI access failure calls for credential repair, not a new
 memory design. Serving code and all existing authority boundaries are unchanged.
+
+## October4 completed runs and new frontier delta
+
+The [c70 completed receipts](evidence/2026-10-04_c70b9a4e_completed_ci_receipts.json)
+show no demonstrated latency improvement. Baseline response failure and native
+prepare timeout are distinct. Two existing automatic comparator diagnostics each
+count189 combined H/disclosure checks,44403 SQL executions and4105 Kurrent reads
+over the entire instrumented fixture. All14 loaded source hashes matchc70 Git
+blobs. No new diagnostic was dispatched. These counts support application-level
+amplification, without establishing engine query latency or current native thread
+cost. The next step is the [whole-operation protection mapping](MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md).
+
+Actual frontier-watch3bea3318904ec2881d3f981d46a5b8d5bca91ba7 adds the
+[October4 evolvable-memory intake](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/3bea3318904ec2881d3f981d46a5b8d5bca91ba7/docs/research/FRONTIER_WATCH_INTAKE_2026-10-04_EVOLVABLE_MEMORY_PROGRAMS.md).
+Original [MemCodex sections2.1–2.2](https://arxiv.org/html/2609.39765) were inspected:
+bounded read routing keeps exact source links, while candidate programs remain
+behind fixed runtime constraints and attributable acceptance checks. The useful
+analogy is source-linked current serving with explicit boundaries; no layered
+program-evolution system is required here. Append-only retention and benchmark
+speed do not qualify FloRA withdrawal or predict this repair's latency. VerMem
+is a future learned memory-policy training idea; it creates no model task here.
+Alice main8ea804aa and runtime API4f287a remain unchanged.

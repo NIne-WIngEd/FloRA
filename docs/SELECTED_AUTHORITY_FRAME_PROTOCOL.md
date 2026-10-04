@@ -1,5 +1,35 @@
 # Selected authority frame protocol
 
+### Current continuation — completed full gates; architecture reassessment
+
+Atc70b9a4e, both ordinary runs37174847735/37174845109 are completed failures.
+All26 logged checkout trees match and Alice4f287a succeeds. Each run passes1003
+component cases in81 modules. Physical PR:50 pass/2 fail/1 incomplete; push:49/2/2.
+The general-memory baseline exceeds10000ms (PR25533/40906ms, push28211/43398ms).
+The native recovery fixture times out during prepare (PR60074/60114ms,
+push60053/60100ms), before worker execution. These are different fixture arms,
+not native quality or a paired model speed comparison. No candidate latency gain
+is demonstrated. Current source identities and14 diagnostic source checks are in
+[the completed receipt](evidence/2026-10-04_c70b9a4e_completed_ci_receipts.json).
+
+The [whole-operation assessment and replacement protection mapping](MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md)
+controls the next construction. Current frames still coexist with independent
+whole-H guards; comparator recording likewise amplifies combined authority
+checks. Do not resume function-local proof/cache patches or dispatch another
+diagnostic by default. Review which work is immutable, which is current sampled
+metadata and which is fresh permission at every protected boundary. Native and
+baseline ownership must be independently testable; preserve inclusive budgets,
+withdrawal, independent result proof and final physical/current-row fences.
+The replacement operation protocol is not implemented or qualified.
+
+Alice frontier-watch is now3bea3318; its October4 intake and MemCodex primary
+method were reviewed. No production engine/model selection changes. See
+[query research](QUERY_PATH_RESEARCH_2026-10-03.md) and the operation assessment.
+FBM now contains132 procedure seeds. No learned result or model weights follow.
+No new serving change, blind rerun or diagnostic was dispatched by this audit.
+
+## Retained earlier checkpoints
+
 ### Owned assembly candidate — local verification passed
 
 [The construction receipt](evidence/2026-10-04_owned_assembly_composition.json)
