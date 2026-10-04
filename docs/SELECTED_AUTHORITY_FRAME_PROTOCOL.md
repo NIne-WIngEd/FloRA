@@ -1,9 +1,9 @@
 # Selected authority frame protocol
 
-### Owned assembly candidate — verification running
+### Owned assembly candidate — local verification passed
 
 [The construction receipt](evidence/2026-10-04_owned_assembly_composition.json)
-pins the **unpublished local candidate**: selected assembly now uses the existing
+pins the **published reviewed candidate**: selected assembly now uses the existing
 H/C metadata frame with real guarded object/owner reads, fresh nomination/grant
 fences and final physical/joint current-row observation. All views expire on
 success or failure. Prepared authority services remain original.
@@ -11,12 +11,19 @@ success or failure. Prepared authority services remain original.
 The corrected RED records22,425 nested SQL calls in pure assembly full-H work.
 The first three-case verification removed that work and retained withdrawal
 before decryption; two expiry assertions failed only on error wording despite
-denial. The corrected final **115-case relevant suite is running**. A fresh
-review is clear; two independent owner-callback races refuse unselected-H
-withdrawal and original state-registry replacement. No physical gate has been
-dispatched for this candidate and no performance/learned claim follows.
-FBM now has **126 validated procedure traces**. Stop when only these results
-remain, then recover the actual final summary before publication or another change.
+denial. The corrected final **115 relevant cases passed in 901.715s**, exit0,
+at unchanged candidate source hashes. A fresh scoped review is clear; two
+independent owner-callback races refuse unselected-H withdrawal and original
+state-registry replacement. The exact published source is
+[`20c612fe`](https://github.com/NIne-WIngEd/FloRA/commit/20c612fe3613bdcdf326bd2649bb612b0857df97),
+with all three source/test files matching reviewed and tested bytes. Ordinary
+[push37166532406](https://github.com/NIne-WIngEd/FloRA/actions/runs/37166532406)
+and [PR37166535045](https://github.com/NIne-WIngEd/FloRA/actions/runs/37166535045)
+triggered automatically and are pending. The actual PR merge checkout has not
+yet been recovered. Correctness does not establish response latency or learned behavior.
+FBM now has **127 validated procedure traces**, including the query-path research.
+Ordinary gates are now dispatched. Stop when only
+external results remain; preserve those results before another serving change.
 
 ## Completed minimal-composition gates — October 4 UTC
 

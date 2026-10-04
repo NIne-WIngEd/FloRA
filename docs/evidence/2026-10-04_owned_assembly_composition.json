@@ -32,7 +32,7 @@
     "observation": "Nested reconstruction removed and H withdrawal still refused; expiry assertions expected a particular error message, but owner seal denied access with another PermissionError. Corrected assertion to denial and extended to state fetch; not a serving repair."
   },
   "final_components": {
-    "status": "running",
+    "status": "passed",
     "planned_cases": 115,
     "modules": [
       "test_shared_authority_frame",
@@ -45,7 +45,14 @@
     ],
     "environment": "Linux ARM64 Python3.12.15 Docker",
     "image_sha256": "bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
-    "inventory_method": "Exact unittest loader count:23+5+8+23+29+19+8=115; replaces the earlier arithmetic estimate117."
+    "inventory_method": "Exact unittest loader count:23+5+8+23+29+19+8=115; replaces the earlier arithmetic estimate117.",
+    "completed_cases": 115,
+    "seconds": 901.715,
+    "process_exit_code": 0,
+    "final_status": "OK",
+    "failures": 0,
+    "source_hashes_unchanged": true,
+    "log_sha256": "cecfff4320a66f1233def4ac75a2049f819f261a0438887b5ad82800707a755c"
   },
   "fresh_review": {
     "result": "clear scoped review",
@@ -64,11 +71,11 @@
       }
     ],
     "limits": [
-      "duplicate broad reviewer suite stopped with superseded assertion bytes; no completed total claimed",
-      "final115 cases and physical/latency qualification remain pending"
+      "Duplicate broad reviewer suite stopped with superseded assertion bytes; no completed total claimed.",
+      "Final 115 relevant components passed at unchanged candidate hashes; physical/latency qualification remains pending."
     ]
   },
-  "physical_verification": "not dispatched for this candidate",
+  "physical_verification": "pending ordinary push37166532406 and PR37166535045 at published source20c612fe",
   "qualified": false,
   "learned_behavior_run": false,
   "response_budgets_ms": {
@@ -80,5 +87,27 @@
     "No model, engine, cap, diagnostic or full memory/mission platform added.",
     "Historical recovery and standalone comparator algorithms unchanged; no response improvement or qualification claimed.",
     "Initial RED fixture mistake and intermediate expiry error-wording failures remain preserved."
-  ]
+  ],
+  "updated_timestamp_utc": "2026-10-04T00:56:08.640685Z",
+  "publication": {
+    "timestamp_utc": "2026-10-04T00:59:15.577025Z",
+    "source_commit": "20c612fe3613bdcdf326bd2649bb612b0857df97",
+    "source_tree": "dd9423df1695321f7586daeb7e33e56d1e8025e3",
+    "published_source_bytes_match_reviewed_and_tested_candidate": true,
+    "draft_pr": "https://github.com/NIne-WIngEd/FloRA/pull/1",
+    "ordinary_runs": [
+      {
+        "event": "push",
+        "run_id": 37166532406,
+        "status_at_snapshot": "in_progress"
+      },
+      {
+        "event": "pull_request",
+        "run_id": 37166535045,
+        "status_at_snapshot": "queued"
+      }
+    ],
+    "dispatch": "Existing push and pull_request workflows triggered automatically, once each; no diagnostic dispatched.",
+    "actual_pr_checkout": "Not yet recovered; the listed head is source identity, not a claim about the synthetic merge checkout."
+  }
 }

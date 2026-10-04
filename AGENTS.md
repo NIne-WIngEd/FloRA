@@ -11,10 +11,11 @@ push49/2/2, with native timeouts during prepare and standalone response failures
 Read docs/evidence/2026-10-03_bf494970_completed_ci_receipts.json and the current
 checkpoint; do not treat older pending notices as live state.
 The next owned-assembly composition in docs/MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md
-is under construction/review. It preserves fresh H/C and owner/private fences,
+passed115 local cases in901.715s at unchanged reviewed source hashes and is published at20c612fe. Ordinary push37166532406/PR37166535045 gates are pending. It preserves fresh H/C and owner/private fences,
 uses existing metadata views only within assembly and expires them on every exit.
 No latency result or learned qualification is claimed. Historical recovery and
-standalone comparator costs remain unresolved. FBM now has126 procedure traces.
+standalone comparator costs remain unresolved. FBM now has127 procedure traces.
+Read docs/QUERY_PATH_RESEARCH_2026-10-03.md before treating SQL syntax or disabled automatic preparation as a latency cause.
 The owner reset prohibits default hotspot/diagnostic loops and full Alice infra.
 
 FloRA is a narrow prototype for the frozen causal personal-judgment experiment.
