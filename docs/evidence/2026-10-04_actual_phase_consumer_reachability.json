@@ -566,11 +566,11 @@
     "Alice materialized-current and explicit historical-recovery placement remains controlling.",
     "Graphiti at pinned4f62cfe7 exposes exact edge and separate valid/invalid/created/expired time filters. This supports explicit historical selection as a distinct concern, not reuse of present permissions or replacement of Claim authority."
   ],
-  "next_construction_decision": "Review and verify the actual-consumer candidate; no new physical run until this source is accepted.",
+  "next_construction_decision": "Repair the single bounded actual owner-map/admission boundary after reproduced compatibility failure and read-only missing-controller finding; keep active verification source unchanged.",
   "actual_consumer_construction": {
     "dispatched_at_utc": "2026-10-04T19:17:19.716535Z",
     "docs_base_commit": "9950de577083e5a64d46976c12dd7f53db663d86",
-    "status": "implemented_candidate_review_and_linux_pending",
+    "status": "review_rejected_candidate_owner_map_correction_in_isolated_source_copy",
     "source_backed_decision_sha256": "b1678511d91f4c77916ec61248b194824154a97c9ac695c645cdf9a308ca56b8",
     "issuers": [
       "actual live phase capture",

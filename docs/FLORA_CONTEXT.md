@@ -81,6 +81,15 @@ independent proof checkpoints retained. The
 preserves repaired opaque/custody callback regressions and exact source hashes.
 Fresh review and Linux checks for the existing fcntl-dependent cases are running.
 Observed binding and anchored physical integration still require execution.
+
+Fresh review rejects the candidate before source publication. Linux native reads
+report15 passes/6 actual capture errors: a supported opaque verifier is rejected
+by broad object-internal scanning. The same shallow discovery omits custody's
+artifact policies and nested proof custody readers. One finite semantic owner-map
+and admission correction is building in an isolated source copy; the active Linux
+candidate stays unchanged. Read the candidate receipt for both findings. No
+corrected pass, physical gain or final-source full-suite result is claimed.
+
 This targets duplicate construction, not a complete pinned finite frame or all
 remaining preparation cost. Existing inclusive timing stays unchanged.
 Only source-bound local Linux component verification is dispatched; source
@@ -124,7 +133,7 @@ not a FloRA platform prerequisite. Graphify's old graph is navigation only.
 
 ## FBM and retained evidence
 
-There are136 schema-valid [procedure seeds](fbm-seeds/README.md). Capture material
+There are137 schema-valid [procedure seeds](fbm-seeds/README.md). Capture material
 construction/failure/repair methods here and validate the existing format. Seeds
 are not personal memory, admitted supervised examples, builder weights or transfer.
 
