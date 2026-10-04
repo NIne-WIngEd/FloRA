@@ -86,6 +86,15 @@ lower assembly count alone cannot qualify physical latency. Existing inclusive
 timing remains unchanged while an optional owner clarification is pending.
 No new engine, GPU work, full Alice platform or blind full-suite retry follows.
 
+Fresh review rejects the candidate before source publication. Linux native reads
+report15 passes/6 actual capture errors: a supported opaque verifier is rejected
+by broad object-internal scanning. The same shallow discovery omits custody's
+artifact policies and nested proof custody readers. One finite semantic owner-map
+and admission correction is building in an isolated source copy; the active Linux
+candidate stays unchanged. Read the candidate receipt for both findings. No
+corrected pass, physical gain or final-source full-suite result is claimed.
+
+
 ## October 4: completed physical failure and whole-operation reassessment
 
 **Status:** architectural assessment; the replacement operation protocol below

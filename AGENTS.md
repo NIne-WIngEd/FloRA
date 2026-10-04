@@ -20,13 +20,19 @@ docs/evidence/2026-10-04_actual_phase_consumer_reachability.json. The replacemen
 boundary protocol is not implemented/qualified. Design live capture, explicit
 restore and actual frozen-phase preparation before another serving change.
 Do not return to helper/cache patches, blind retries or diagnostics as the default next step.
-Alice frontier-watch is3bea3318; main/API pins are unchanged. FBM has136 seeds.
+Alice frontier-watch is3bea3318; main/API pins are unchanged. FBM has137 seeds.
 The actual capture/constructor/observed-binding candidate is implemented,
 uncommitted and awaiting fresh review/Linux verification.75 distinct progressive
 Windows cases pass;5 fcntl-dependent modules and2 router cases are being checked
 in the existing local Linux image. Read the candidate receipt at
 docs/evidence/2026-10-04_actual_phase_prepared_material_candidate.json.
 Observed binding/anchored integration and physical latency remain unverified.
+Fresh review rejects the candidate's broad/shallow reader discovery. Linux native
+reads15 pass/6 capture errors on the existing opaque verifier. Custody artifact
+policies and nested proof custody bindings are also omitted. One finite owner-map
+correction is building in an isolated source copy; active Linux source is frozen.
+Do not publish the runtime or repeat a whole run before its mapping is repaired
+and verified. No correction result is claimed.
 It retains lineage's independent guard in all nested reads and the last update
 callbacks. Private handles expire; current rights and historical pins remain live.
 No new serving job was launched by this audit. The consolidated FLORA_CONTEXT

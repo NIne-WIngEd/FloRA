@@ -25,7 +25,7 @@ The complete replacement operation protocol remains unqualified; the bounded pre
 Alice frontier-watch is now3bea3318; its October4 intake and MemCodex primary
 method were reviewed. No production engine/model selection changes. See
 [query research](QUERY_PATH_RESEARCH_2026-10-03.md) and the operation assessment.
-FBM now contains136 procedure seeds. No learned result or model weights follow.
+FBM now contains137 procedure seeds. No learned result or model weights follow.
 No new serving change, blind rerun or diagnostic was dispatched by this audit.
 
 The later actual-consumer audit stopped the proposed session-owner patch before
@@ -50,6 +50,15 @@ retains both repaired regressions, exact hashes and unfinished gates. Observed
 binding and anchored integration remain unexecuted. Pinned finite-frame support,
 remaining preparation cost and physical latency stay unresolved. No new physical
 CI/model job is launched; this is not a final-source full-suite pass.
+
+Fresh review rejects the candidate before source publication. Linux native reads
+report15 passes/6 actual capture errors: a supported opaque verifier is rejected
+by broad object-internal scanning. The same shallow discovery omits custody's
+artifact policies and nested proof custody readers. One finite semantic owner-map
+and admission correction is building in an isolated source copy; the active Linux
+candidate stays unchanged. Read the candidate receipt for both findings. No
+corrected pass, physical gain or final-source full-suite result is claimed.
+
 
 ## Retained earlier checkpoints
 

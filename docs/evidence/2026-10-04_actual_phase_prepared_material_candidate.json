@@ -1,7 +1,7 @@
 {
   "schema": "flora-actual-phase-prepared-material-candidate-v1",
   "recorded_at_utc": "2026-10-04T20:47:22.510337Z",
-  "status": "implemented_uncommitted_review_and_linux_verification_pending",
+  "status": "review_rejected_candidate_owner_map_correction_in_isolated_source_copy",
   "serving_baseline_commit": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
   "local_docs_base_commit": "9950de577083e5a64d46976c12dd7f53db663d86",
   "candidate_source_sha256": {
@@ -78,7 +78,7 @@
     "source_hashes_verified_by_root": true
   },
   "pending": {
-    "fresh_source_review": "read-only scoped review dispatched",
+    "fresh_source_review": "completed: corrections required; future corrected source needs review",
     "linux_components": {
       "status": "dispatched_running",
       "groups": 6,
@@ -89,7 +89,16 @@
       "source": "read-only candidate/Alice mounts; complete runtime/test source manifest recorded before and after",
       "network": "disabled",
       "physical_engines_run": false,
-      "deadline_seconds": 3600
+      "deadline_seconds": 3600,
+      "first_completed_group": {
+        "module": "test_native_reads",
+        "tests": 21,
+        "passed": 15,
+        "errors": 6,
+        "unittest_seconds": 32.582,
+        "status": "failed"
+      },
+      "remaining_groups": "still running at review capture; original seven-file source stays frozen"
     },
     "physical_integration": "not dispatched; actual anchored heads, both arms, observed binding and post-slot withdrawal remain required"
   },
@@ -105,5 +114,48 @@
     "ci_minutes": 60,
     "independent_proof_and_required_writes": "remain inclusive"
   },
-  "qualification": "No physical latency, learned judgment, full-suite pass or model qualification; personality/MFM remain external."
+  "qualification": "No physical latency, learned judgment, full-suite pass or model qualification; personality/MFM remain external.",
+  "review": {
+    "recorded_at_utc": "2026-10-04T20:56:42.476684Z",
+    "read_only": true,
+    "all_seven_candidate_hashes_verified": true,
+    "verdict": "corrections required before source publication",
+    "findings": [
+      {
+        "priority": 1,
+        "path": "src/flora/selected/_phase_preparation.py",
+        "line": 95,
+        "problem": "Existing native-read capture retains an opaque SimpleNamespace verifier; broad discovery sends it to a shared reader helper that rejects its dictionary descriptor.",
+        "evidence": "Actual test_native_reads21 cases/32.582s:15 pass,6 capture errors; ordinary phase setup replaces the verifier with a durable one and misses this compatibility path.",
+        "ruling": "Map bounded owner eligibility before preparation, support known opaque ports safely or retain original fresh construction. Do not widen shared source_closure globally."
+      },
+      {
+        "priority": 2,
+        "path": "src/flora/selected/_phase_preparation.py",
+        "line": 149,
+        "problem": "Shallow discovery omits custody artifact_permissions/artifact_source_policy and nested durable proof custody connection/methods, despite those owners performing subsequent authorization/proof reads.",
+        "evidence": "Static original accesses in phase_snapshots._sources_now477\u2013484 and personal_artifact_custody.DurableOwnerProofLookup.get566/573; no mutation test result claimed yet.",
+        "ruling": "Map finite known custody/policy/proof/reference/object-wrapper ownership edges and required ports, then test changed-controller refusal before protected effects; avoid arbitrary recursion."
+      }
+    ],
+    "shared_cause": "Internal object scanning is too broad for compatibility and too shallow for semantic ownership.",
+    "declined_to_judge": [
+      "physical acceptance",
+      "latency",
+      "learned behavior",
+      "complete pinned terminal-fence coverage",
+      "full-suite readiness"
+    ]
+  },
+  "correction": {
+    "status": "one coherent bounded owner-map/admission repair dispatched; no corrected result yet",
+    "isolation": "186 runtime/test files hash-verified into a separate local repair copy; active verification source unchanged",
+    "required_checks": [
+      "Untouched existing opaque-verifier actual capture compatibility.",
+      "Custody artifact permission/source policy mutation refusal.",
+      "Nested durable owner-proof custody connection/method mutation refusal.",
+      "Applicable private holder expiry, legitimate opaque callback state, nested H withdrawal and custom fresh fallback."
+    ],
+    "application_gate": "After original Linux completion, review corrected source and apply only exact verified delta to unchanged candidate; no blind whole-run retry."
+  }
 }
