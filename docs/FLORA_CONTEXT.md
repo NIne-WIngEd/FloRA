@@ -16,7 +16,7 @@ Alice's full memory/mission/workspace/lifecycle platform as a FloRA prerequisite
 
 ## Actual source and completed results
 
-Development branch: `codex/flora-shared-source-caps`. At audit, docs head64e8564;
+Development branch: `codex/flora-shared-source-caps`. At follow-up, docs headf6b43386;
 tested workflow/runtime sourcec70b9a4e, tree6027d46dd4ad45e89c98d9db42de8b5fae512486.
 The owned assembly implementation originated at20c612fe; its serving/test hashes
 are unchanged atc70. Draft [PR1](https://github.com/NIne-WIngEd/FloRA/pull/1) remains
@@ -46,30 +46,33 @@ All14 loaded source hashes match tested Git blobs. Instrumented aggregate timing
 is not one response and inclusive values overlap. Native coroutine cancellation
 does not establish its current physical worker-thread cost distribution.
 
-## Next construction boundary
+## Next construction boundary — actual causal consumers
 
-Read [the whole-operation assessment](MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md)
-first. It supersedes choosing another easiest hotspot. It maps current material,
-exact evidence, live H/C rights, external judgment, independent acceptance,
-linked correction/outcome and explicit archive recovery to one operation owner.
-A single scoped native-preparation construction is dispatched after fresh review.
-It is not implemented or qualified at this checkpoint. Review the actual
-protection mapping before a corrective serving change; retain every check whose
-obligation cannot be mapped. Do not drop arbitrary callbacks or cache allows.
+The proposed native session-owner construction was stopped before source/tests
+changed. [The source-bound reachability audit](evidence/2026-10-04_actual_phase_consumer_reachability.json)
+shows it would benefit the supplied current-head fixture, while real archive
+routes create a different runtime and prepare context before the resolver returns.
+Anchored BEFORE/final judgment also owns preparation directly. No RED/GREEN or
+speedup is claimed. Read the corrected [minimal operation design](MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md).
 
-Build the native current-preparation operation first; baseline acceptance and
-recording are independently testable with their own disclosure purposes. Pure
-native metadata composition should not recursively enter whole-history
-verification while its operation already owns the exact boundary sample.
-Every protected read/dispatch/acceptance still needs fresh rights, current heads,
-callback handling and joint terminal physical/current-row fences. Independent
-current-result proof and required writes remain inside measured response time.
-Historical restore is explicit. No universal cross-arm policy framework is needed.
+Actual live capture, explicit frozen-phase restore and fresh phase use are the
+three required consumers. Pinned historical Claim/state semantics cannot be
+enabled by changing a domain flag or widening exact-class checks. Preserve actual
+historical occurrence/version/activation proof, current quarantine/removal and
+source rights, BEFORE exclusion, and independent probe/final/slot/archive checks.
+Authenticate exact material at explicit restore; use bounded current observations
+at each protected boundary with exact sample equality and joint terminal fences.
+Independent output proof and required writes remain in the response budget.
 
-Acceptance is the actual selected-engine invocation within existing limits,
-with failures retained and arm labels correct. Controlled call reductions are
-mechanism evidence only. After a viable path, proceed directly to the supplied
-causal model experiment rather than another qualification prerequisite program.
+One local actual-class observation completed: five operations preserve the
+frozen context;27 unchanged source identities match baseline after LF normalization.
+Cold route:20456 SQL calls/1 restore; open preparation:15560/0; fresh prepared
+metadata:253/0. First capture setup assembles context5 times; it is not a response.
+These fictional-adapter counts establish structural amplification, not physical
+latency or anchored authority. A scoped phase-ownership design decision is pending.
+No new Docker, CI/model run or serving patch is dispatched. Correct the actual operation before
+another optimization; do not grow a full Alice platform or a generic cross-arm
+policy framework. Once viable, resume the externally supplied causal experiment.
 
 ## Invariants and available resources
 
@@ -107,7 +110,7 @@ not a FloRA platform prerequisite. Graphify's old graph is navigation only.
 
 ## FBM and retained evidence
 
-There are132 schema-valid [procedure seeds](fbm-seeds/README.md). Capture material
+There are134 schema-valid [procedure seeds](fbm-seeds/README.md). Capture material
 construction/failure/repair methods here and validate the existing format. Seeds
 are not personal memory, admitted supervised examples, builder weights or transfer.
 

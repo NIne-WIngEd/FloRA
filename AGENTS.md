@@ -13,10 +13,14 @@ under60000ms. These are different fixture arms, not learned judgments or a fair
 cross-arm latency comparison. No candidate latency gain is demonstrated.
 Read docs/evidence/2026-10-04_c70b9a4e_completed_ci_receipts.json and the current
 whole-operation reassessment in docs/MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md.
-The replacement boundary protocol is not implemented/qualified. Review the
-complete protection mapping before another serving change. Do not return to
-helper/cache patches, blind retries or diagnostics as the default next step.
-Alice frontier-watch is3bea3318; main/API pins are unchanged. FBM has132 seeds.
+The proposed session-owner construction was stopped: it reaches only the supplied
+current-head fixture, while real phase routes create pinned readers and prepare
+context before resolver return. Read the actual-consumer follow-up and
+docs/evidence/2026-10-04_actual_phase_consumer_reachability.json. The replacement
+boundary protocol is not implemented/qualified. Design live capture, explicit
+restore and actual frozen-phase preparation before another serving change.
+Do not return to helper/cache patches, blind retries or diagnostics as the default next step.
+Alice frontier-watch is3bea3318; main/API pins are unchanged. FBM has134 seeds.
 No new serving job was launched by this audit. The consolidated FLORA_CONTEXT
 keeps current state plus evidence pointers; former chronology remains in Git.
 
