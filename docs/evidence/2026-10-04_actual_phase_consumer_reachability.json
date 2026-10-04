@@ -566,5 +566,37 @@
     "Alice materialized-current and explicit historical-recovery placement remains controlling.",
     "Graphiti at pinned4f62cfe7 exposes exact edge and separate valid/invalid/created/expired time filters. This supports explicit historical selection as a distinct concern, not reuse of present permissions or replacement of Claim authority."
   ],
-  "next_construction_decision": "Scoped source-backed phase-ownership design re-review pending; no serving patch or physical job dispatched."
+  "next_construction_decision": "Source-backed actual-owner prepared-material handoff selected; one coherent construction dispatched, verification pending.",
+  "actual_consumer_construction": {
+    "dispatched_at_utc": "2026-10-04T19:17:19.716535Z",
+    "docs_base_commit": "9950de577083e5a64d46976c12dd7f53db663d86",
+    "status": "in_progress_no_result_or_qualification_claimed",
+    "source_backed_decision_sha256": "b1678511d91f4c77916ec61248b194824154a97c9ac695c645cdf9a308ca56b8",
+    "issuers": [
+      "actual live phase capture",
+      "cold SelectedPhaseRoute construction",
+      "fresh route observed_binding"
+    ],
+    "material": "one actually prepared native context per owning operation; exact issuer/runtime/phase/history/content binding and expiry",
+    "consumer": "known actual independent context lineage, with lineage guard before original prepared metadata at every private boundary",
+    "revalidation": "existing owner/episode algorithm uses composite barrier for verifier and nested reads; qualified update wrapper finishes after its last source/exclusion callback",
+    "preserved": [
+      "all lineage proof checkpoints",
+      "opaque/custom original path",
+      "historical occurrence/version/activation/role checks",
+      "fresh H/C rights and caps",
+      "source/ciphertext/plaintext and existing terminal fences",
+      "inclusive proof and writes",
+      "external personality/MFM"
+    ],
+    "not_addressed": [
+      "open preparation already assembles once",
+      "its88 observed initial barriers",
+      "missing finite pinned observation mapping",
+      "physical native read-thread distribution",
+      "physical response budget or learned qualification"
+    ],
+    "physical_run_dispatch": "none",
+    "timing_ruling": "existing inclusive timing unchanged while optional owner clarification is pending"
+  }
 }

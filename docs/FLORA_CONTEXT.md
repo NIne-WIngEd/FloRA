@@ -69,7 +69,14 @@ frozen context;27 unchanged source identities match baseline after LF normalizat
 Cold route:20456 SQL calls/1 restore; open preparation:15560/0; fresh prepared
 metadata:253/0. First capture setup assembles context5 times; it is not a response.
 These fictional-adapter counts establish structural amplification, not physical
-latency or anchored authority. A scoped phase-ownership design decision is pending.
+latency or anchored authority. The source-backed next construction is a privately issued prepared-material
+handoff across actual capture, cold constructor and fresh observed binding.
+Independent lineage runs its guard before original owner metadata, including
+nested owner/episode reads and the qualified update wrapper's last callbacks.
+Handles expire at operation return/failure; custom standalone paths stay original.
+One coherent implementation is in progress; its tests/results are pending.
+This targets duplicate construction, not a complete pinned finite frame or all
+remaining preparation cost. Existing inclusive timing stays unchanged.
 No new Docker, CI/model run or serving patch is dispatched. Correct the actual operation before
 another optimization; do not grow a full Alice platform or a generic cross-arm
 policy framework. Once viable, resume the externally supplied causal experiment.
@@ -110,7 +117,7 @@ not a FloRA platform prerequisite. Graphify's old graph is navigation only.
 
 ## FBM and retained evidence
 
-There are134 schema-valid [procedure seeds](fbm-seeds/README.md). Capture material
+There are135 schema-valid [procedure seeds](fbm-seeds/README.md). Capture material
 construction/failure/repair methods here and validate the existing format. Seeds
 are not personal memory, admitted supervised examples, builder weights or transfer.
 
