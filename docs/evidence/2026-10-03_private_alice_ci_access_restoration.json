@@ -74,5 +74,14 @@
     "Ordinary gates triggered automatically once per event; no optional diagnostic or paid job launched.",
     "Existing115 local source-bound cases remain valid for unchanged serving code; no new physical latency result claimed.",
     "Private key contents and public key material are absent from public receipts."
-  ]
+  ],
+  "completed_full_ci_followup": {
+    "source": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
+    "receipt": "docs/evidence/2026-10-04_c70b9a4e_completed_ci_receipts.json",
+    "status": "completed_failure",
+    "dependency_access_restored": true,
+    "latency_improvement_demonstrated": false,
+    "qualification": false,
+    "limitation": "Earlier pending snapshots are retained; completed arm-specific failures are authoritative for this source."
+  }
 }

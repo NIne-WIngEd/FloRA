@@ -1,5 +1,196 @@
 # FloRA minimal current judgment invocation
 
+## October 4: completed physical failure and whole-operation reassessment
+
+**Status:** architectural assessment; the replacement operation protocol below
+is not implemented or performance-qualified. It supersedes the next-helper-fix
+sequence, while retaining the existing causal objective and authority obligations.
+
+The [source-bound completed receipt](evidence/2026-10-04_c70b9a4e_completed_ci_receipts.json)
+recovers all26 jobs atc70b9a4e and Alice4f287a. The PR merge8b3be83a has the same
+6027d46d tree as the push. Each run passes1003 component cases in81 modules.
+PR physical cases:50 passed,2 failed,1 incomplete; push:49,2,2. Private dependency
+access works. Cancelled history jobs remain incomplete; their timing is around
+the configured hour, but no explicit timeout cause is logged.
+
+The failed response arms must be named correctly:
+
+| Exercised arm | PR BEFORE / AFTER | Push BEFORE / AFTER | Meaning |
+| --- | --- | --- | --- |
+| General model with memory |25533 /40906ms|28211 /43398ms|Budget exceeded against10000ms; this is baseline latency, not native FloRA latency.|
+| Native comparison fixture |60074 /60114ms|60053 /60100ms|Timeout against60000ms during preparation, before worker execution.|
+
+These are infrastructure fixtures with supplied producers, not a causal model
+comparison. They use different fixture budgets and cannot establish a cross-arm
+speed or quality ranking. The native fixture precomputes judgments and then
+exercises passive recovery; its failure does not show personality inference is
+slow. The final experiment still needs equal/comparable preregistered budgets,
+qualified external models, actual interventions and the complete control arms.
+
+### What the error means for FloRA
+
+The goal remains the right one: relevant correction/outcome influence, irrelevant
+stability, a serious memory baseline, same-evidence ablation and isolated builder
+transfer. Current evidence does not answer that question. Correct components are
+necessary but their rising count is not progress on learned judgment by itself.
+
+The owned assembly change has **no demonstrated physical latency improvement**.
+Its controlled removal of22425 nested SQL calls and115 local correctness passes
+remain valid in their scope. The new full failures disallow promoting those
+results to a response improvement. The baseline recorder was not changed by that
+candidate, so its unchanged failure is not a test of native context assembly.
+
+The larger mismatch is placement and composition of work. The middle layer
+already has current claims/state and exact source identities, but wraps them in
+multiple controllers that independently re-enter complete history/authority
+verification. Source code shows:
+
+- `native_reads._phase_session` authenticates initial history and installs phase
+  gates. `phase_now` and `fixture_guard` still call whole held-history metadata
+  authorization. `prepare_context` also invokes that guard around `_context`.
+- `context_guard.prepare_current_context` opens joint H/C frames, then invokes
+  the independent phase callback before and during frame finalization. Assembly
+  now uses sampled metadata, but the outer native phase checks are still present.
+- `SelectedComparatorRecorder.record` defines a combined H/disclosure `current`
+  guard and passes it to `_authority_fenced_copy`. That copy wraps objects and
+  canonical log reads/appends; decision source authorization calls it again.
+  The selected H domain is already enabled in the comparator fixture. This is
+  not an overlooked domain flag or an excuse to skip H verification.
+
+Both completed runs already contain an automatic comparator diagnostic. Each
+entire diagnostic fixture makes189 combined H/disclosure verification calls,
+44403 SQL executions and4105 Kurrent stream reads. All14 loaded source hashes
+matchc70 Git blobs. Those are instrumented whole-fixture counts, including setup,
+denials and recording; overlapping inclusive timings must not be summed or
+treated as response latency. They support repeated application work, not a claim
+that SQL syntax is inherently unsuitable. Native cancellation exposes only the
+waiting coroutine; the current read-thread cost distribution remains unresolved.
+
+The supported architecture diagnosis is amplification under nested guards.
+The exact remaining native cost and a successful repair are not yet established.
+Another function-local cache, cap, engine switch or full suite retry cannot be
+justified merely by this failure. No new diagnostic or serving patch is dispatched
+by this assessment.
+
+### Narrow replacement: one owner per protected operation
+
+Keep the existing selected stores and Alice logical contracts. Implement the
+small experimental loop, with explicit responsibilities within existing modules.
+This is a boundary redesign, not a new mission or memory platform.
+
+| Responsibility | Required material / authority | Boundary |
+| --- | --- | --- |
+| Phase entry / explicit restore | Independently issued case, phase, arm, question, immutable history and exact manifest/physical source bindings. | Authenticate original bytes at an explicit owned entry/restore; never infer truth or evaluation access from manifest membership. |
+| Current selection | Governed Claim versions/current heads, active personal state, exact relevant evidence and approved state provenance. | Use current material and finite source nominations. Graph/vector/summary outputs remain navigation, not truth. |
+| Private read | Fresh H evaluation rights plus C personal-judgment rights, with independently issued caps and purpose rows. | Check before access, after a callback/backend return and before decrypt/plaintext release. No successful answer survives a protected boundary. |
+| External judgment | Exact prepared input, current producer artifact/role/qualification and live dispatch permission. | Deliver the owned current material; verify actual independent execution/output. Personality/MFM remain external. |
+| Acceptance / recording | H evaluation, any provider disclosure purpose, current final-run authority, exact output/input/usage and consumed evidence. | Preserve pre/post callback and physical/current-row terminal fences. Independent result verification and required writes stay inside the existing measured budget. |
+| Correction / outcome | Decision-linked observation, original evidence, externally proposed update and independent Gate/owner admission. | Accepted successor changes the next relevant current state; observations do not authorize themselves. Mission/node IDs are carried only when a case uses them. |
+
+The operation owner must distinguish three things: immutable authenticated
+material, one boundary's sampled metadata, and present permission. Only the first
+can outlive a boundary. Sampled readers expire; fresh H/C purposes and current
+heads must be observed again. Same-connection/thread ownership and passive
+read-only restrictions remain unchanged. Historical archive recovery is explicit;
+verification of the actual current worker result remains necessary foreground
+acceptance work and cannot be moved outside the response clock.
+
+Pure native metadata composition should consume the current boundary's original
+sample and perform binding checks, rather than recursively start another complete
+history verifier. This is eligible only when the controller is privately issued
+and its actual implementation/owner binding is verified. An arbitrary guard,
+owner verifier, backend, codec or producer callback cannot be silently dropped.
+Every callback that can change authority invalidates the boundary observation;
+the owner then obtains fresh H/C/current-state observations before protected use.
+The final joint current-row fence runs after the last external callback and exact
+physical re-observation, so a late withdrawal of an earlier source still refuses.
+
+No positive permission cache, deletion watermark shortcut, new SQL database,
+all-history prompt, fabricated model output or proof-by-summary is part of this
+design. Caps and10000ms/60000ms/60minute limits remain unchanged. All original
+failure receipts and independent recovery cases remain; diagnostic timing cannot
+be substituted for unobserved latency.
+
+### Fresh review and construction rulings
+
+The fresh scoped review confirms source/arm attribution and the repeated H
+composition mechanism. It does not certify latency. Two mappings now explicitly
+control construction:
+
+1. The actual `_phase_session` owner must privately issue any replacement H
+   contribution and join it to the frame’s identical actual origin. The existing
+   phase descriptors alone do not authorize replacing the outer guard. Retain
+   current final-run authority, controller identity, `route.custody.authorize`
+   and every unknown/custom or unmapped archive callback. Do not identify an
+   eligible handoff by arbitrary closure shape or a caller-supplied tag.
+2. Across byte/owner callbacks, preserve exact assembly-baseline equality or
+   expire and replace every affected sampled view. A fresh inner permission
+   check alone does not validate old outer metadata. Retain final physical and
+   all-current-row re-observation.
+
+One coherent native current-preparation construction is dispatched under these
+rulings. It is not implemented/verified at this checkpoint, and no new physical
+run is dispatched. The comparator remains a separate later operation.
+
+### Construction decision and discriminating checks
+
+Before implementing another serving change, review this protection mapping
+against the actual source. In particular, distinguish necessary protected object
+boundaries from duplicate verification caused by a metadata helper or controller
+wrapper. If a required boundary cannot be mapped to the joint physical/current
+authority fence, retain its existing check rather than weakening the contract.
+
+The first implementation deliverable should be the native current-preparation
+operation in `native_reads.py`, `experiment_runtime.py`, `context_guard.py` and
+the existing private phase/frame modules. A later independently testable change
+can apply the same ownership principle to comparator acceptance/recording in
+`comparator_memory.py` and `comparison_custody.py`; their purposes and producers
+are distinct, so they must not share an allow token or personal-state authority.
+Do not create a generic cross-arm policy framework merely to share code.
+
+Discriminating regression: exact output/consumption stays identical while a pure
+metadata composition cannot trigger full H reconstruction outside the operation's
+named fresh boundary. Count the real protected boundaries separately; do not set
+an arbitrary low query threshold and teach the implementation to satisfy it.
+Required refusals include unselected H withdrawal during an owner/backend callback,
+selected C withdrawal before decrypt, current Claim/state replacement, changed
+controller/read owner, AFTER evidence entering BEFORE, changed producer artifact,
+and withdrawal during output proof/recording. Keep opaque/custom guard behavior.
+
+Physical acceptance remains the actual selected-engine invocation under existing
+budgets, with each arm attributed separately. A lower controlled count is mechanism
+evidence only. If one understood change again passes local checks but fails the
+whole operation, keep that result and reassess the operation rather than chain
+another helper fix. Once viable, return directly to the externally supplied
+causal experiment; do not finish unused Alice surfaces as prerequisites.
+
+### Source and research fit
+
+Alice [Memory Performance and Reliability Standard sections4–6](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/8ea804aa25c3d1c5f46e9be5810d072ed0fadb4b/docs/MEMORY_PERFORMANCE_AND_RELIABILITY_STANDARD.md)
+prefers materialized current state, batch hydration and bounded plans; historical
+replay/full verification are explicit placement choices. The [Alice/comic mapping](ALICE_INFRASTRUCTURE_MAP.md)
+preserves Experience → evidence → governed Claim/state → judgment → linked
+decision/outcome → proposed successor. This is the entity connection FloRA needs,
+without completing the whole Mission Graph/Workspace/lifecycle product.
+
+The [pinned query research](QUERY_PATH_RESEARCH_2026-10-03.md) remains applicable:
+XTDB2.1 SQL and XTQL share the engine pipeline; changing query language does not
+remove application reconstruction. Graphify exact derived-work identity and
+Graphiti shared/deduplicated retrieval support bounded reusable material, not
+permission reuse. MemFit's separate write-time derived indexes support the same
+placement distinction; its retention rules do not replace FloRA withdrawal.
+
+The actual frontier branch advanced to3bea3318904ec2881d3f981d46a5b8d5bca91ba7.
+Its new [October4 intake](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/3bea3318904ec2881d3f981d46a5b8d5bca91ba7/docs/research/FRONTIER_WATCH_INTAKE_2026-10-04_EVOLVABLE_MEMORY_PROGRAMS.md)
+was read, then the original [MemCodex sections2.1–2.2](https://arxiv.org/html/2609.39765)
+were checked. Fixed runtime constraints, independently attributable changes and
+source-routing are useful analogies. Its layered program evolution, append-only
+retention and benchmark latency are not adopted as FloRA capabilities or proof of
+this repair. VerMem concerns future learned memory-control credit; no model or
+training task is moved into FloRA. Alice main and runtime API pins stay unchanged.
+
+## Earlier authorized composition and retained construction history
+
 Status: authorized implementation slice; performance and learned qualification pending.
 
 This implements the owner's October 3 scope reset. FloRA consumes qualified
