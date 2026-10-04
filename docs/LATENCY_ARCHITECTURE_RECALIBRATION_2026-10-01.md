@@ -1,5 +1,47 @@
 # FloRA latency architecture recalibration
 
+### Owned assembly candidate — verification running
+
+[The construction receipt](evidence/2026-10-04_owned_assembly_composition.json)
+pins the **unpublished local candidate**: selected assembly now uses the existing
+H/C metadata frame with real guarded object/owner reads, fresh nomination/grant
+fences and final physical/joint current-row observation. All views expire on
+success or failure. Prepared authority services remain original.
+
+The corrected RED records22,425 nested SQL calls in pure assembly full-H work.
+The first three-case verification removed that work and retained withdrawal
+before decryption; two expiry assertions failed only on error wording despite
+denial. The corrected final **117-case relevant suite is running**. A fresh
+review is clear; two independent owner-callback races refuse unselected-H
+withdrawal and original state-registry replacement. No physical gate has been
+dispatched for this candidate and no performance/learned claim follows.
+FBM now has **126 validated procedure traces**. Stop when only these results
+remain, then recover the actual final summary before publication or another change.
+
+## Completed minimal-composition gates — October 4 UTC
+
+Both ordinary workflows at serving source `bf494970` are complete and failed.
+[Exact completed receipts](evidence/2026-10-03_bf494970_completed_ci_receipts.json)
+verify all 26 checkout trees against the tested source and Alice contract `4f287a`.
+Each passes **1,000 component cases in 81 modules**. PR physical results are
+**50 passed / 2 failed / 1 incomplete**; push results are **49 / 2 / 2**.
+Both core/restart gates pass this time; that does not explain the earlier exit139.
+
+PR standalone BEFORE/AFTER responses are **24,696 / 39,570 ms**; push responses
+are **22,848 / 36,424 ms**, above 10,000 ms. Native BEFORE/AFTER time out at
+**60,079 / 60,153 ms** (PR) and **60,079 / 60,093 ms** (push), during **prepare**,
+before native judgment. Cancelled history/retained cases remain incomplete;
+the logs do not establish a 60-minute-limit cancellation reason.
+No response, learned or release qualification follows. Earlier dispatch snapshots
+remain historical. No blind retry or manual diagnostic was launched.
+
+The next bounded composition is assembly against the existing invocation-owned
+H/C metadata frame, with fresh joint authority checks around every private access
+and the final physical/metadata fence. Current assembly returns to original gated
+readers and repeats full-H reconstruction within pure metadata predicates. This
+step changes no model, engine, cap, budget, historical recovery or outcome semantics.
+Construction and verification are pending; do not infer a performance improvement.
+
 ## Current: narrow owned judgment composition — October 3
 
 Published serving source `bf494970` and context snapshot `877162da` are [verified against actual Git blobs](evidence/2026-10-03_minimal_judgment_publication.json). [Push37151333895](https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895) and [PR37151335920](https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920) are in progress at capture. They are the existing standard physical/contract gates, automatically triggered once; no new diagnostic was dispatched. Only external results remain. Stop here, then recover exact completed receipts and actual timings before choosing the next bounded change. Context-branch serving files remain historical.

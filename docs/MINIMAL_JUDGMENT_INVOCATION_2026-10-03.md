@@ -72,3 +72,57 @@ A mixed broader local check was stopped because serving edits invalidated its lo
 
 Published serving source `bf494970` and context snapshot `877162da` are [verified against actual Git blobs](evidence/2026-10-03_minimal_judgment_publication.json). [Push37151333895](https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895) and [PR37151335920](https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920) are in progress at capture. They are the existing standard physical/contract gates, automatically triggered once; no new diagnostic was dispatched. Only external results remain. Stop here, then recover exact completed receipts and actual timings before choosing the next bounded change. Context-branch serving files remain historical.
 
+
+## Next bounded composition: owned assembly metadata
+
+This continues the approved invocation boundary design. The completed receipt
+above shows native preparation still times out; the October3 sampler previously
+located repeated current-H work. `prepare_current_context` already owns finite
+current nominations and fresh shared frames, yet `assemble_context` receives
+the original gated services. Every pure C predicate then reconstructs H again.
+
+Alice Memory Architecture v4.1 section3.2 requires current materialization and
+explicit bounded reconstruction. The existing Graphify/Graphiti primary source
+findings in [the research record](LATENCY_RESEARCH_2026-10-02.md) were rechecked:
+reuse exact derived input inside the operation, never authority. Their caches and
+retrieval rankings are not authorization mechanisms or evidence of FloRA speed.
+
+Use the existing shared frame's native metadata views during assembly only.
+Every original/owner-proof object access retains `initial_barrier`, creating a
+fresh independent H/C observation before/after ciphertext and plaintext access.
+Nomination equality includes C grants, Claim/state generations and raw metadata.
+The assembly frame then reobserves manifest/physical targets and performs its
+joint terminal H/C/Claim/state SQL fence. Close its views on both success and
+failure; the returned prepared object retains original services, never that frame.
+Legacy/unissued/custom paths keep their existing assembly semantics.
+
+- [x] Reproduce nested H reconstruction during pure assembly and escaped views;
+  retain withdrawal-before-decryption behavior in the same preparation operation.
+- [x] Compose assembly with its owned metadata views and discard them on all exits.
+- [ ] Check H/C withdrawal, source/head mutation, owner callbacks, caps, BEFORE
+  exclusion and later prepared-object freshness; obtain a fresh scoped review.
+- [ ] Publish exact source and run ordinary selected-engine gates once. A physical
+  latency pass is required before claiming this composition meets the budget.
+
+This is a preparation composition change, not a new history cache or memory
+platform. The standalone comparator and explicit passive recovery remain separate
+unresolved costs; neither is claimed fixed by this change.
+
+### Owned assembly candidate — verification running
+
+[The construction receipt](evidence/2026-10-04_owned_assembly_composition.json)
+pins the **unpublished local candidate**: selected assembly now uses the existing
+H/C metadata frame with real guarded object/owner reads, fresh nomination/grant
+fences and final physical/joint current-row observation. All views expire on
+success or failure. Prepared authority services remain original.
+
+The corrected RED records22,425 nested SQL calls in pure assembly full-H work.
+The first three-case verification removed that work and retained withdrawal
+before decryption; two expiry assertions failed only on error wording despite
+denial. The corrected final **117-case relevant suite is running**. A fresh
+review is clear; two independent owner-callback races refuse unselected-H
+withdrawal and original state-registry replacement. No physical gate has been
+dispatched for this candidate and no performance/learned claim follows.
+FBM now has **126 validated procedure traces**. Stop when only these results
+remain, then recover the actual final summary before publication or another change.
+

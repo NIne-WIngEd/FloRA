@@ -5,16 +5,17 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Latest continuation: the owner-approved minimal invocation composition uses one
-actual current preparation for delivery/judgment. Read
-`docs/MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md` and the current checkpoint.
-27 final Linux runtime/domain checks pass; fresh review corrected owner-proof
-timing and original-policy replacement. Serving sourcebf494970 is verified.
-Ordinary push37151333895/PR37151335920 gates are in progress. Stop when only
-those external results remain; do not poll idle or invent more prerequisites. Full H/phase and passive recovery algorithms are unchanged and
-remain unresolved latency costs. Do not claim this change fixes those costs.
-The owner reset still prohibits default hotspot patches/diagnostic loops or full
-Alice infrastructure. FBM has124 validated procedure traces.
+Latest continuation: bf494970 ordinary push37151333895/PR37151335920 gates
+are completed with failure. Each passes1000 component cases; physical PR50/2/1,
+push49/2/2, with native timeouts during prepare and standalone response failures.
+Read docs/evidence/2026-10-03_bf494970_completed_ci_receipts.json and the current
+checkpoint; do not treat older pending notices as live state.
+The next owned-assembly composition in docs/MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md
+is under construction/review. It preserves fresh H/C and owner/private fences,
+uses existing metadata views only within assembly and expires them on every exit.
+No latency result or learned qualification is claimed. Historical recovery and
+standalone comparator costs remain unresolved. FBM now has126 procedure traces.
+The owner reset prohibits default hotspot/diagnostic loops and full Alice infra.
 
 FloRA is a narrow prototype for the frozen causal personal-judgment experiment.
 It does not require the full Alice/Fable memory, mission, experience or consumer

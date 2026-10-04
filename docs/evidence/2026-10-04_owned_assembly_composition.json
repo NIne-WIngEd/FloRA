@@ -1,0 +1,83 @@
+{
+  "schema": "flora-owned-assembly-composition-v1",
+  "timestamp_utc": "2026-10-04T00:36:05.644644Z",
+  "base_commit": "d94097cca4a9881b10e2f537d4ad20fddb34aa88",
+  "previous_serving_commit": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+  "alice_runtime_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+  "source_sha256": {
+    "src/flora/selected/context_guard.py": "e5e3665edfb3b3faa156d67cb4cfe748436828fc6a90cf02c2ae6c4d52759e67",
+    "src/flora/selected/selected_authority_frame.py": "3d5b8b91a8fc3987f686df5563fb62b31ba234bf61974b0932e8ec1ff6d3dbfd",
+    "tests/test_shared_authority_frame.py": "9b346a330a0616f16b7e6fe5254e4fd8fa4bf5dae03424b36ba6c39d0d6b92dc"
+  },
+  "change": "Assemble selected Claim/state plaintext against the existing owned H/C metadata frame; actual object/owner proof access keeps fresh initial_barrier; finish joint physical/current-row fence then discard all exits. Prepared object retains originals. Closed sampled state fetch checks binding.",
+  "red": [
+    {
+      "cases": 3,
+      "seconds": 99.832,
+      "failures": 3,
+      "observation": "Initial path/expiry checks failed; first path failure was an incorrect fixture subject label and is not evidence of history duplication. Assembly H ciphertext withdrawal already refused."
+    },
+    {
+      "cases": 1,
+      "seconds": 47.52,
+      "failures": 1,
+      "observation": "After fixture label correction,22425 SQL calls nested under pure assembly full-H reconstruction, outside initial_barrier. Count is controlled work attribution, not an end-to-end speed measurement."
+    }
+  ],
+  "intermediate_green": {
+    "cases": 3,
+    "seconds": 82.336,
+    "failures": 2,
+    "errors": 0,
+    "observation": "Nested reconstruction removed and H withdrawal still refused; expiry assertions expected a particular error message, but owner seal denied access with another PermissionError. Corrected assertion to denial and extended to state fetch; not a serving repair."
+  },
+  "final_components": {
+    "status": "running",
+    "planned_cases": 117,
+    "modules": [
+      "test_shared_authority_frame",
+      "test_shared_context_bindings",
+      "test_shared_phase_authority",
+      "test_selected_context",
+      "test_current_context_guard",
+      "test_selected_experiment_runtime",
+      "test_runtime_context_domain"
+    ],
+    "environment": "Linux ARM64 Python3.12.15 Docker",
+    "image_sha256": "bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2"
+  },
+  "fresh_review": {
+    "result": "clear scoped review",
+    "reviewed_source_sha256": {
+      "src/flora/selected/context_guard.py": "e5e3665edfb3b3faa156d67cb4cfe748436828fc6a90cf02c2ae6c4d52759e67",
+      "src/flora/selected/selected_authority_frame.py": "3d5b8b91a8fc3987f686df5563fb62b31ba234bf61974b0932e8ec1ff6d3dbfd"
+    },
+    "independent_probes": [
+      {
+        "case": "unselected_H_evaluation_withdrawal_after_valid_owner_verification",
+        "result": "PermissionError after first callback"
+      },
+      {
+        "case": "original_state_registry_replaced_after_valid_owner_verification",
+        "result": "PermissionError after first callback"
+      }
+    ],
+    "limits": [
+      "duplicate broad reviewer suite stopped with superseded assertion bytes; no completed total claimed",
+      "final117 cases and physical/latency qualification remain pending"
+    ]
+  },
+  "physical_verification": "not dispatched for this candidate",
+  "qualified": false,
+  "learned_behavior_run": false,
+  "response_budgets_ms": {
+    "standalone": 10000,
+    "native": 60000
+  },
+  "limits": [
+    "No successful permission answer survives a protected private-read boundary. Metadata is invocation-local and compared to exact nominations by new joint observations.",
+    "No model, engine, cap, diagnostic or full memory/mission platform added.",
+    "Historical recovery and standalone comparator algorithms unchanged; no response improvement or qualification claimed.",
+    "Initial RED fixture mistake and intermediate expiry error-wording failures remain preserved."
+  ]
+}
