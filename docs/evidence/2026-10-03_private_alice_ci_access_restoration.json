@@ -1,0 +1,78 @@
+{
+  "schema": "flora-private-dependency-ci-restoration-v1",
+  "observed_at_utc": "2026-10-04T03:48:35.592429Z",
+  "failed_predecessor_source": "20c612fe3613bdcdf326bd2649bb612b0857df97",
+  "failed_predecessor_runs": [
+    37166535045,
+    37166532406
+  ],
+  "predecessor_tests_executed": 0,
+  "predecessor_physical_incomplete_per_run": 53,
+  "restored_workflow_source": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
+  "restored_workflow_tree": "6027d46dd4ad45e89c98d9db42de8b5fae512486",
+  "changed_files": [
+    ".github/workflows/flora.yml"
+  ],
+  "changed_checkout_count": 2,
+  "required_alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+  "owner_authorized_private_dependency_read_access": true,
+  "credential": {
+    "type": "dedicated repository deploy key",
+    "read_only_verified": true,
+    "target_repository": "NIne-WIngEd/A.L.I.C.E",
+    "actions_secret_repository": "NIne-WIngEd/FloRA",
+    "secret_name": "ALICE_CONTRACTS_READ_KEY",
+    "local_private_key_file_deleted": true,
+    "existing_user_credential_copied": false
+  },
+  "workflow_credential_persistence": false,
+  "static_verification": {
+    "exact_original_plus_two_checkout_inputs": true,
+    "whitespace_check_passed_after_LF_normalization": true,
+    "optional_diagnostic_workflows_unchanged": true,
+    "serving_source_hashes_unchanged": true,
+    "host_yaml_parser_not_available_no_parser_pass_claimed": true
+  },
+  "serving_source_sha256": {
+    "src/flora/selected/context_guard.py": "e5e3665edfb3b3faa156d67cb4cfe748436828fc6a90cf02c2ae6c4d52759e67",
+    "src/flora/selected/selected_authority_frame.py": "3d5b8b91a8fc3987f686df5563fb62b31ba234bf61974b0932e8ec1ff6d3dbfd",
+    "tests/test_shared_authority_frame.py": "9b346a330a0616f16b7e6fe5254e4fd8fa4bf5dae03424b36ba6c39d0d6b92dc"
+  },
+  "new_runs": [
+    {
+      "run_id": 37174847735,
+      "event": "pull_request",
+      "status_at_snapshot": "in_progress",
+      "head_source": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
+      "successful_dependency_checkouts": 13,
+      "job_count": 13,
+      "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37174847735"
+    },
+    {
+      "run_id": 37174845109,
+      "event": "push",
+      "status_at_snapshot": "in_progress",
+      "head_source": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
+      "successful_dependency_checkouts": 13,
+      "job_count": 13,
+      "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37174845109"
+    }
+  ],
+  "successful_private_checkouts_observed": 26,
+  "current_metadata_sha256": "16bf31331ec4fdfa2abaffce81e91716702fb28c6bd262147c11e20504746f45",
+  "docker_availability": {
+    "status": "running",
+    "architecture": "aarch64",
+    "cpus": 10,
+    "memory_bytes": 8099348480,
+    "verification_workload_launched": false
+  },
+  "qualification": false,
+  "learned_behavior_run": false,
+  "limits": [
+    "All26 private checkouts passed the observed action step; exact logged checkout hashes await completed recovery.",
+    "Ordinary gates triggered automatically once per event; no optional diagnostic or paid job launched.",
+    "Existing115 local source-bound cases remain valid for unchanged serving code; no new physical latency result claimed.",
+    "Private key contents and public key material are absent from public receipts."
+  ]
+}

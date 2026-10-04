@@ -12,12 +12,15 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-03
 
-The corpus now contains **127 validated procedure traces**. This count describes
+The corpus now contains **130 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
 | Record | Observable operation |
 | --- | --- |
+| [Private CI access restoration](2026-10-03_private_ci_read_access_restoration.jsonl) | Restore authorized read-only pinned dependency checkout;26 new checkout steps succeed, full gates pending. |
+| [Frontier branch applicability](2026-10-03_frontier_branch_applicability.jsonl) | Read current Alice intakes and primary methods; preserve source-index and independent outcome boundaries within FloRA scope. |
+| [Completed private dependency failure](2026-10-03_completed_private_dependency_failure.jsonl) | Recover26 exact source trees and retain zero tests executed in completed checkout-failure runs. |
 | [Query interface research](2026-10-04_query_interface_research.jsonl) | Inspect pinned XTDB caches and SQL/XTQL execution; separate derived-work patterns from authority and transport hypotheses. |
 | [Owned assembly metadata](2026-10-04_owned_assembly_metadata_composition.jsonl) | Compose current assembly with existing H/C views, fresh private fences and expiry; 115 final cases pass at unchanged source; scoped review clear, physical qualification pending. |
 | [Completed invocation gates](2026-10-04_completed_minimal_composition_gates.jsonl) | Recover1000 passing components per run; retain response failures/incomplete cases and locate native prepare. |

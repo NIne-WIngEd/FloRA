@@ -5,18 +5,19 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Latest continuation: bf494970 ordinary push37151333895/PR37151335920 gates
-are completed with failure. Each passes1000 component cases; physical PR50/2/1,
-push49/2/2, with native timeouts during prepare and standalone response failures.
-Read docs/evidence/2026-10-03_bf494970_completed_ci_receipts.json and the current
-checkpoint; do not treat older pending notices as live state.
-The next owned-assembly composition in docs/MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md
-passed115 local cases in901.715s at unchanged reviewed source hashes and is published at20c612fe. Ordinary push37166532406/PR37166535045 gates are pending. It preserves fresh H/C and owner/private fences,
-uses existing metadata views only within assembly and expires them on every exit.
-No latency result or learned qualification is claimed. Historical recovery and
-standalone comparator costs remain unresolved. FBM now has127 procedure traces.
-Read docs/QUERY_PATH_RESEARCH_2026-10-03.md before treating SQL syntax or disabled automatic preparation as a latency cause.
-The owner reset prohibits default hotspot/diagnostic loops and full Alice infra.
+Latest continuation:20c612fe full push37166532406/PR37166535045 failed
+before tests: private Alice checkout was denied. All26 FloRA checkout trees match;
+zero cases executed, and all53 physical cases per run remain incomplete. This
+does not update latency evidence. Read the completed20c612fe receipt.
+Owner-approved read-only dependency access is restored atc70b9a4e. All26 new
+private checkout steps succeed. Ordinary push37174845109/PR37174847735 are
+running; recover actual logged source identities and final summaries when done.
+The owned-assembly serving hashes are unchanged from the115-case local pass.
+No latency or learned qualification follows. Docker is available again, but no
+duplicate local verification workload was launched. FBM now has130 procedure seeds.
+Read docs/QUERY_PATH_RESEARCH_2026-10-03.md, including the refreshed Alice
+frontier-watch@bd04f9c6 applicability note. Alice main/API pins remain unchanged.
+The owner reset prohibits blind hotspot/diagnostic loops and full Alice infra.
 
 FloRA is a narrow prototype for the frozen causal personal-judgment experiment.
 It does not require the full Alice/Fable memory, mission, experience or consumer
