@@ -12,12 +12,13 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-03
 
-The corpus now contains **135 validated procedure traces**. This count describes
+The corpus now contains **136 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
 | Record | Observable operation |
 | --- | --- |
+| [Actual phase connected construction](2026-10-04_actual_phase_connected_construction.jsonl) | Actual consumer handoff, retained two repaired regressions and75 progressive component passes; review/Linux/physical gates pending. |
 | [Actual-owner prepared-material contract](2026-10-04_actual_owner_prepared_material_contract.jsonl) | Source-backed real-consumer protection mapping and one construction dispatch; implementation/results pending. |
 | [Actual phase boundary observation](2026-10-04_actual_phase_boundary_observation.jsonl) | One read-only actual-class observation separates cold restoration, repeated open preparation and current checks; physical/anchored limits retained. |
 | [Actual phase consumer reachability](2026-10-04_actual_phase_consumer_reachability.jsonl) | Reject a fixture-only owner patch before source edits; trace actual live capture, pinned restore and anchored judgment. |

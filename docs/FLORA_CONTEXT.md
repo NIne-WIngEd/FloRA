@@ -74,10 +74,17 @@ handoff across actual capture, cold constructor and fresh observed binding.
 Independent lineage runs its guard before original owner metadata, including
 nested owner/episode reads and the qualified update wrapper's last callbacks.
 Handles expire at operation return/failure; custom standalone paths stay original.
-One coherent implementation is in progress; its tests/results are pending.
+The uncommitted implementation is complete.75 distinct progressive Windows
+component cases pass, with capture5→1 and cold constructor2→1 assemblies and all
+independent proof checkpoints retained. The
+[candidate receipt](evidence/2026-10-04_actual_phase_prepared_material_candidate.json)
+preserves repaired opaque/custody callback regressions and exact source hashes.
+Fresh review and Linux checks for the existing fcntl-dependent cases are running.
+Observed binding and anchored physical integration still require execution.
 This targets duplicate construction, not a complete pinned finite frame or all
 remaining preparation cost. Existing inclusive timing stays unchanged.
-No new Docker, CI/model run or serving patch is dispatched. Correct the actual operation before
+Only source-bound local Linux component verification is dispatched; source
+publication and physical CI/model runs are pending. Review the actual operation before
 another optimization; do not grow a full Alice platform or a generic cross-arm
 policy framework. Once viable, resume the externally supplied causal experiment.
 
@@ -117,7 +124,7 @@ not a FloRA platform prerequisite. Graphify's old graph is navigation only.
 
 ## FBM and retained evidence
 
-There are135 schema-valid [procedure seeds](fbm-seeds/README.md). Capture material
+There are136 schema-valid [procedure seeds](fbm-seeds/README.md). Capture material
 construction/failure/repair methods here and validate the existing format. Seeds
 are not personal memory, admitted supervised examples, builder weights or transfer.
 
@@ -138,4 +145,4 @@ are not personal memory, admitted supervised examples, builder weights or transf
 The former rolling context's full chronology remains in
 [Git at64e8564](https://github.com/NIne-WIngEd/FloRA/blob/64e8564a70c9f7b447f42642101ac5fc01840668/docs/FLORA_CONTEXT.md).
 This consolidated context removes repeated stale dispatch prose; original
-receipts and seed snapshots are retained. No new serving job was launched.
+receipts and seed snapshots are retained. No new physical serving/model job was launched; the local Linux component check is running.

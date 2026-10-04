@@ -559,18 +559,18 @@
     "physical_limit": "No XTDB/Kurrent transport, selected terminal fence, response-budget result or model judgment is exercised.",
     "inference": "Structural amplification exists in actual phase contracts even when no snapshot is restored. Moving cold archive restoration alone is insufficient. The current native physical read-thread cost and a qualified repair remain unresolved."
   },
-  "red_green": "not run; no serving implementation exists",
+  "red_green": "Original read-only audit ran no implementation tests; later candidate evidence is in the linked actual-consumer construction receipt.",
   "physical_run_dispatch": "none",
   "qualification": "no physical latency improvement or learned result",
   "research_fit": [
     "Alice materialized-current and explicit historical-recovery placement remains controlling.",
     "Graphiti at pinned4f62cfe7 exposes exact edge and separate valid/invalid/created/expired time filters. This supports explicit historical selection as a distinct concern, not reuse of present permissions or replacement of Claim authority."
   ],
-  "next_construction_decision": "Source-backed actual-owner prepared-material handoff selected; one coherent construction dispatched, verification pending.",
+  "next_construction_decision": "Review and verify the actual-consumer candidate; no new physical run until this source is accepted.",
   "actual_consumer_construction": {
     "dispatched_at_utc": "2026-10-04T19:17:19.716535Z",
     "docs_base_commit": "9950de577083e5a64d46976c12dd7f53db663d86",
-    "status": "in_progress_no_result_or_qualification_claimed",
+    "status": "implemented_candidate_review_and_linux_pending",
     "source_backed_decision_sha256": "b1678511d91f4c77916ec61248b194824154a97c9ac695c645cdf9a308ca56b8",
     "issuers": [
       "actual live phase capture",
@@ -597,6 +597,7 @@
       "physical response budget or learned qualification"
     ],
     "physical_run_dispatch": "none",
-    "timing_ruling": "existing inclusive timing unchanged while optional owner clarification is pending"
+    "timing_ruling": "existing inclusive timing unchanged while optional owner clarification is pending",
+    "candidate_receipt": "FloRA:docs/evidence/2026-10-04_actual_phase_prepared_material_candidate.json"
   }
 }

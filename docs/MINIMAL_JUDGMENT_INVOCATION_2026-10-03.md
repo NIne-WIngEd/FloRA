@@ -4,8 +4,9 @@
 
 **Status:** the session-owner construction was stopped before serving/test edits.
 The [source-bound reachability receipt](evidence/2026-10-04_actual_phase_consumer_reachability.json)
-supersedes the dispatch and file choice below. No RED/GREEN, physical run or
-performance qualification is claimed. Existing failed results remain unchanged.
+supersedes the session-only dispatch and file choice below. Its original audit
+claimed no implementation result; the later candidate section separates component
+evidence from pending physical and performance qualification. Existing failed results remain unchanged.
 
 The actual routes differ from the supplied latency fixture:
 
@@ -69,10 +70,17 @@ pure binding/content checks follow the terminal observation. Unknown/custom
 paths keep their original fresh preparation. Handles expire on return/failure
 and cannot pass into a later probe, final judgment or recovery operation.
 
-One coherent construction is dispatched; no implementation/test result or
-qualification is claimed. Exact private issue, forged/copy/expiry refusal,
-lineage-only H withdrawal and preserved historical/current semantics are required
-regressions. This targets duplicate assemblies5/2/2, not open preparation's88
+The coherent candidate is implemented and remains uncommitted. The
+[source-bound construction receipt](evidence/2026-10-04_actual_phase_prepared_material_candidate.json)
+records75 distinct progressive Windows component passes, including exact capture
+and constructor assembly1, independent proof counts, nested H-only withdrawal,
+forged/expired holders and retained custom preparation. Two compatibility
+regressions were reproduced and corrected: opaque callback state and a
+preinstalled custody callback. Fresh source review and Linux checks for five
+fcntl-dependent modules/two router cases are running. Observed-binding assembly1
+and actual preregistered post-slot withdrawal are connected in the physical
+integration fixture but remain unexecuted. No final-source full-suite, physical
+performance or learned qualification follows. This targets duplicate assemblies5/2/2, not open preparation's88
 barriers, historical-pin work or the missing complete finite pinned frame. A
 lower assembly count alone cannot qualify physical latency. Existing inclusive
 timing remains unchanged while an optional owner clarification is pending.
