@@ -939,8 +939,25 @@ def prepare_current_context(*, plan: ContextPlan, claims, state, log, objects, r
         initial_barrier()
     guarded = _AuthorizedRuntimeReads(objects, initial_barrier)
     verifier = approval_verifier_factory(initial_barrier)
-    context = assemble_context(plan=plan, claims=claims, state=state, log=log, objects=guarded,
-        references=references, policy=policy, approval_verifier=verifier)
+    assembly_frame = _shared_metadata_frame(claims=claims, state=state, log=log,
+        policy=policy, binding_guard=initial_bindings)
+    if assembly_frame is None:
+        context = assemble_context(plan=plan, claims=claims, state=state, log=log, objects=guarded,
+            references=references, policy=policy, approval_verifier=verifier)
+    else:
+        try:
+            phase()
+            assembly_frame.observe_nominations(baseline_material)
+            assembly_claims, assembly_state, assembly_log, assembly_policy = assembly_frame.metadata_view()
+            # Only metadata belongs to this assembly. Every private access still
+            # uses initial_barrier's new H/C observation, including exact grant
+            # and nomination equality. The prepared object keeps real services.
+            context = assemble_context(plan=plan, claims=assembly_claims, state=assembly_state,
+                log=assembly_log, objects=guarded, references=references,
+                policy=assembly_policy, approval_verifier=verifier)
+            assembly_frame.finish(authority_guard=phase)
+        finally:
+            assembly_frame.discard()
     from .selected_context import SelectedContextLogView
     if type(log) is SelectedContextLogView:
         assembled_context, assembled_snapshot = context, _native_context_snapshot(context)

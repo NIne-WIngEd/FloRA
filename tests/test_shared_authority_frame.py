@@ -7,6 +7,7 @@ response latency or learned-judgment evidence.
 from copy import copy, deepcopy
 from dataclasses import replace
 from types import SimpleNamespace
+import sys
 import unittest
 from unittest.mock import patch
 
@@ -104,6 +105,61 @@ class SharedAuthorityFrameTest(unittest.TestCase):
         claims, state, log, policy = frame.metadata_view()
         prepared._verify_authorities(claims=claims, state=state, log=log, policy=policy)
         return frame
+
+    def test_private_assembly_uses_the_owned_metadata_frame_without_nested_history_reconstruction(self):
+        nested = 0
+        def observe(statement, parameters):
+            nonlocal nested
+            frame, names = sys._getframe(), set()
+            while frame is not None:
+                names.add(frame.f_code.co_name)
+                frame = frame.f_back
+            if ("assemble_context" in names and "verify_selected_history_metadata" in names
+                    and "initial_barrier" not in names):
+                nested += 1
+        self.sql_hook = observe
+        prepared = self.prepare()
+        self.assertEqual({item.kind for item in prepared.context.items}, {"claim", "state:owner"})
+        self.assertEqual(prepared.context.items[0].content, b"fictional source one")
+        self.assertEqual(nested, 0, "pure assembly predicates reconstructed whole H outside a private-read barrier")
+
+    def test_assembly_frame_views_are_discarded_after_success_or_failure(self):
+        actual = context_guard.assemble_context
+        for fail in (False, True):
+            with self.subTest(fail=fail):
+                views = []
+                def assemble(**kwargs):
+                    views.append((kwargs["policy"], kwargs["state"]))
+                    if fail:
+                        raise RuntimeError("assembly refused")
+                    return actual(**kwargs)
+                with patch.object(context_guard, "assemble_context", new=assemble):
+                    if fail:
+                        with self.assertRaisesRegex(RuntimeError, "assembly refused"):
+                            self.prepare()
+                    else:
+                        self.prepare()
+                self.assertEqual(len(views), 1)
+                policy, state = views[0]
+                with self.assertRaises(PermissionError):
+                    policy.allow_event(self.f.source_one.event_id, "personal_judgment")
+                with self.assertRaises(PermissionError):
+                    state._fetch(_ACTIVE, state._head_id(**self.f.identity()))
+
+    def test_assembly_ciphertext_withdrawal_is_checked_before_decryption(self):
+        change = self._head_replacement(self.f.source_two.event_id, evaluation=True)
+        reads = []
+        actual = self.f.objects.backend.get_object
+        def read(bucket, key):
+            reads.append(key)
+            result = actual(bucket, key)
+            change()
+            return result
+        with patch.object(self.f.objects.backend, "get_object", new=read), \
+             patch("flora.selected.object_store.AESGCM", side_effect=AssertionError("decryption after withdrawal")):
+            with self.assertRaises(PermissionError):
+                self.prepare()
+        self.assertEqual(reads, [self.f.source_one.payload_reference])
 
     def test_metadata_boundary_has_one_joint_terminal_and_two_physical_observations(self):
         prepared = self.prepare(plan=replace(self.plan, state_routes=()))

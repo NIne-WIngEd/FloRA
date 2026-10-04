@@ -508,6 +508,11 @@ class SharedSelectedAuthorityFrame:
                 return self.sample.local_claims._fetch_record(*args, **kwargs)
             return original_claim_reader(*args, **kwargs)
         claims._fetch_record = claim_read
+        original_state_reader = state._fetch
+        def state_read(*args, **kwargs):
+            self.binding()
+            return original_state_reader(*args, **kwargs)
+        state._fetch = state_read
         def replay():
             self.binding()
             return list(self.context_events)
@@ -573,6 +578,10 @@ class SharedSelectedAuthorityFrame:
             # A refused callback may already have changed fields; closing must
             # still discard the frame without dereferencing those replacements.
             object.__getattribute__(self, "__dict__")["_closed"] = True
+
+    def discard(self):
+        """Expire metadata views on every exit, without another authority callback."""
+        object.__getattribute__(self, "__dict__")["_closed"] = True
 
 
 def create_shared_selected_frame(*, log, policy, claims, state, binding_guard):
