@@ -1,0 +1,1660 @@
+{
+  "observed_at_utc": "2026-10-04T00:18:37.619427Z",
+  "scope": "Completed source-bound bf494970 ordinary PR/push CI; preserve earlier partial receipt",
+  "runtime_source": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+  "runtime_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+  "commits": {
+    "2382083f77dfff7a9b6fced5a4904cf2dc055df8": {
+      "sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+      "tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+      "parents": [
+        "885be57abb582510d27a98177facd2a358c11387",
+        "bf49497011c0edacc49b5c749c21ac4d1539716b"
+      ]
+    },
+    "bf49497011c0edacc49b5c749c21ac4d1539716b": {
+      "sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+      "tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+      "parents": [
+        "9705aec761821a12c896b3dfbc5a71d2fd56ca93"
+      ]
+    }
+  },
+  "runs": [
+    {
+      "run_id": 37151335920,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "failure",
+      "head_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+      "runtime_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+      "updated_at_utc": "2026-10-03T21:23:22Z",
+      "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920",
+      "component_tests": 1000,
+      "component_modules": 81,
+      "physical_cases": {
+        "planned": 53,
+        "passed": 50,
+        "failed": 2,
+        "incomplete": 1
+      },
+      "additional_process_failures": [],
+      "jobs": [
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695124,
+          "name": "contracts",
+          "conclusion": "success",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 8,
+              "seconds": 0.017
+            },
+            {
+              "tests": 13,
+              "seconds": 2.592
+            },
+            {
+              "tests": 3,
+              "seconds": 0.91
+            },
+            {
+              "tests": 18,
+              "seconds": 2.645
+            },
+            {
+              "tests": 13,
+              "seconds": 0.702
+            },
+            {
+              "tests": 15,
+              "seconds": 3.735
+            },
+            {
+              "tests": 10,
+              "seconds": 0.318
+            },
+            {
+              "tests": 6,
+              "seconds": 1.624
+            },
+            {
+              "tests": 6,
+              "seconds": 0.845
+            },
+            {
+              "tests": 19,
+              "seconds": 0.101
+            },
+            {
+              "tests": 6,
+              "seconds": 1.53
+            },
+            {
+              "tests": 14,
+              "seconds": 0.216
+            },
+            {
+              "tests": 16,
+              "seconds": 0.638
+            },
+            {
+              "tests": 29,
+              "seconds": 10.014
+            },
+            {
+              "tests": 4,
+              "seconds": 0.109
+            },
+            {
+              "tests": 2,
+              "seconds": 0.003
+            },
+            {
+              "tests": 21,
+              "seconds": 1.492
+            },
+            {
+              "tests": 38,
+              "seconds": 0.174
+            },
+            {
+              "tests": 20,
+              "seconds": 4.793
+            },
+            {
+              "tests": 27,
+              "seconds": 1.433
+            },
+            {
+              "tests": 23,
+              "seconds": 28.402
+            },
+            {
+              "tests": 3,
+              "seconds": 0.021
+            },
+            {
+              "tests": 8,
+              "seconds": 1.087
+            },
+            {
+              "tests": 6,
+              "seconds": 0.979
+            },
+            {
+              "tests": 11,
+              "seconds": 0.323
+            },
+            {
+              "tests": 24,
+              "seconds": 3.762
+            },
+            {
+              "tests": 4,
+              "seconds": 2.673
+            },
+            {
+              "tests": 25,
+              "seconds": 2.096
+            },
+            {
+              "tests": 10,
+              "seconds": 34.244
+            },
+            {
+              "tests": 32,
+              "seconds": 1.587
+            },
+            {
+              "tests": 2,
+              "seconds": 2.304
+            },
+            {
+              "tests": 11,
+              "seconds": 10.62
+            },
+            {
+              "tests": 11,
+              "seconds": 0.277
+            },
+            {
+              "tests": 21,
+              "seconds": 60.765
+            },
+            {
+              "tests": 16,
+              "seconds": 0.288
+            },
+            {
+              "tests": 13,
+              "seconds": 1.024
+            },
+            {
+              "tests": 12,
+              "seconds": 0.762
+            },
+            {
+              "tests": 13,
+              "seconds": 0.222
+            },
+            {
+              "tests": 2,
+              "seconds": 0.013
+            },
+            {
+              "tests": 11,
+              "seconds": 0.257
+            },
+            {
+              "tests": 4,
+              "seconds": 1.321
+            },
+            {
+              "tests": 31,
+              "seconds": 735.735
+            },
+            {
+              "tests": 14,
+              "seconds": 1.43
+            },
+            {
+              "tests": 1,
+              "seconds": 0.001
+            },
+            {
+              "tests": 7,
+              "seconds": 0.878
+            },
+            {
+              "tests": 6,
+              "seconds": 74.121
+            },
+            {
+              "tests": 14,
+              "seconds": 0.179
+            },
+            {
+              "tests": 8,
+              "seconds": 75.441
+            },
+            {
+              "tests": 6,
+              "seconds": 0.716
+            },
+            {
+              "tests": 4,
+              "seconds": 0.134
+            },
+            {
+              "tests": 8,
+              "seconds": 0.678
+            },
+            {
+              "tests": 7,
+              "seconds": 1.091
+            },
+            {
+              "tests": 12,
+              "seconds": 1.117
+            },
+            {
+              "tests": 23,
+              "seconds": 69.423
+            },
+            {
+              "tests": 11,
+              "seconds": 6.178
+            },
+            {
+              "tests": 3,
+              "seconds": 0.005
+            },
+            {
+              "tests": 19,
+              "seconds": 9.754
+            },
+            {
+              "tests": 7,
+              "seconds": 1.856
+            },
+            {
+              "tests": 12,
+              "seconds": 1.265
+            },
+            {
+              "tests": 3,
+              "seconds": 0.002
+            },
+            {
+              "tests": 1,
+              "seconds": 0.004
+            },
+            {
+              "tests": 5,
+              "seconds": 0.141
+            },
+            {
+              "tests": 5,
+              "seconds": 0.018
+            },
+            {
+              "tests": 7,
+              "seconds": 0.106
+            },
+            {
+              "tests": 1,
+              "seconds": 0.075
+            },
+            {
+              "tests": 19,
+              "seconds": 1.736
+            },
+            {
+              "tests": 24,
+              "seconds": 2.384
+            },
+            {
+              "tests": 5,
+              "seconds": 2.105
+            },
+            {
+              "tests": 11,
+              "seconds": 45.853
+            },
+            {
+              "tests": 2,
+              "seconds": 0.008
+            },
+            {
+              "tests": 25,
+              "seconds": 3.241
+            },
+            {
+              "tests": 31,
+              "seconds": 2.914
+            },
+            {
+              "tests": 15,
+              "seconds": 0.132
+            },
+            {
+              "tests": 7,
+              "seconds": 0.016
+            },
+            {
+              "tests": 20,
+              "seconds": 846.372
+            },
+            {
+              "tests": 5,
+              "seconds": 0.004
+            },
+            {
+              "tests": 8,
+              "seconds": 65.291
+            },
+            {
+              "tests": 21,
+              "seconds": 1.77
+            },
+            {
+              "tests": 29,
+              "seconds": 1.299
+            },
+            {
+              "tests": 1,
+              "seconds": 2.576
+            },
+            {
+              "tests": 12,
+              "seconds": 0.057
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "4046ba9595ca15666c3705fa6550cedd49cdf64a50703710be3b37f7022bf07a",
+          "unittest_final_statuses": [
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695124",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695334,
+          "name": "integration-native-comparison",
+          "conclusion": "failure",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 204.249
+            }
+          ],
+          "final_failure_counts": [
+            "failures=1"
+          ],
+          "failed_test_names": [
+            "test_actual_phase_context_execution_parent_and_private_run_custody"
+          ],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [
+            {
+              "phase": "before",
+              "status": "timeout",
+              "elapsed_ms": 60079
+            },
+            {
+              "phase": "after",
+              "status": "timeout",
+              "elapsed_ms": 60153
+            }
+          ],
+          "log_sha256": "3c5ddbfc63215a62c78315380705ed8b3cee57f9edf2f816f26bcc66d17e7e0f",
+          "unittest_final_statuses": [
+            "FAILED (failures=1)"
+          ],
+          "process_exit_codes": [
+            1
+          ],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695334",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true,
+          "failed_native_stage": "prepare"
+        },
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695457,
+          "name": "integration-transport",
+          "conclusion": "failure",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 2,
+              "seconds": 180.45
+            }
+          ],
+          "final_failure_counts": [
+            "failures=1"
+          ],
+          "failed_test_names": [
+            "test_phase_isolated_hybrid_memory_and_separately_authorized_signed_exchange"
+          ],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [
+            {
+              "phase": "before",
+              "status": "budget_exceeded",
+              "elapsed_ms": 24696
+            },
+            {
+              "phase": "after",
+              "status": "budget_exceeded",
+              "elapsed_ms": 39570
+            }
+          ],
+          "log_sha256": "09a22c07b257a98fb789f68175e69c7a277acbd8ad4b6b7b07cb4e1ffedff05c",
+          "unittest_final_statuses": [
+            "FAILED (failures=1)"
+          ],
+          "process_exit_codes": [
+            1,
+            1
+          ],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695457",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695488,
+          "name": "integration-native-pilot-withdrawal",
+          "conclusion": "success",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 92.796
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "5d2f1c383d247aa472ed61a0e57a857a1e4a301f08f34d8c2e55580fbf522528",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695488",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695495,
+          "name": "integration-native-pilot-outcome-audit",
+          "conclusion": "success",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 1516.666
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "c03ecb0d8da51446776e859e180019739a6e93033e0c9a28e23ec598f591fe49",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695495",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695503,
+          "name": "integration-native-pilot-before-tail",
+          "conclusion": "success",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 1496.593
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "d3e63b2e634e34595584c9658824009c25d0ac7a90cf3daf533e6444fa4d8ee1",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695503",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695521,
+          "name": "integration-history",
+          "conclusion": "cancelled",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [
+            "test_registered_sources_to_blocked_control_stages_on_actual_selected_engines"
+          ],
+          "response_attempts": [],
+          "log_sha256": "0045ec6554598b22ea4d66a99d1112c10a1fa3d997da42e35591f057507609e8",
+          "unittest_final_statuses": [],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695521",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695538,
+          "name": "integration-lineage",
+          "conclusion": "success",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 2,
+              "seconds": 1935.39
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "2dc46a5ab366cdbafa89f0864100e66a87320c490d5f18456bc33d172e269599",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695538",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695547,
+          "name": "integration-history-routes-native",
+          "conclusion": "success",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 2521.141
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "2271983651d5a6673a63ede162e22181fbd801ee675166c7674410d4f4a3b665",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695547",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695550,
+          "name": "integration-history-routes-retained",
+          "conclusion": "success",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 3379.562
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "3226712f9727c7efd1dcc7de2cc0810405cb4796a6b1885b948959a20907c449",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695550",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695561,
+          "name": "integration-core",
+          "conclusion": "success",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 38,
+              "seconds": 889.617
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "f36fc27f94faaaacb06ca22f044ba1a12394c3992af191aaf28f13327c12b0e2",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695561",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695567,
+          "name": "integration-readers",
+          "conclusion": "success",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 2,
+              "seconds": 91.141
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "02e4aaff30aae608ef2952b2768e1759872e255e6d95c0929ab8a65eba4902f2",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695567",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151335920,
+          "job_id": 111285695581,
+          "name": "integration-native-pilot-typed-phase",
+          "conclusion": "success",
+          "checkout_sha": "2382083f77dfff7a9b6fced5a4904cf2dc055df8",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 3318.456
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "0d599808af8490b01f3153458879d74aa3a29608e9cf4f0bea137df7617b3818",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920/job/111285695581",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        }
+      ]
+    },
+    {
+      "run_id": 37151333895,
+      "event": "push",
+      "status": "completed",
+      "conclusion": "failure",
+      "head_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+      "runtime_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+      "updated_at_utc": "2026-10-03T21:23:22Z",
+      "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895",
+      "component_tests": 1000,
+      "component_modules": 81,
+      "physical_cases": {
+        "planned": 53,
+        "passed": 49,
+        "failed": 2,
+        "incomplete": 2
+      },
+      "additional_process_failures": [],
+      "jobs": [
+        {
+          "run_id": 37151333895,
+          "job_id": 111285688825,
+          "name": "contracts",
+          "conclusion": "success",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 8,
+              "seconds": 0.013
+            },
+            {
+              "tests": 13,
+              "seconds": 4.279
+            },
+            {
+              "tests": 3,
+              "seconds": 0.979
+            },
+            {
+              "tests": 18,
+              "seconds": 2.187
+            },
+            {
+              "tests": 13,
+              "seconds": 0.579
+            },
+            {
+              "tests": 15,
+              "seconds": 3.346
+            },
+            {
+              "tests": 10,
+              "seconds": 0.315
+            },
+            {
+              "tests": 6,
+              "seconds": 1.145
+            },
+            {
+              "tests": 6,
+              "seconds": 0.813
+            },
+            {
+              "tests": 19,
+              "seconds": 0.073
+            },
+            {
+              "tests": 6,
+              "seconds": 1.812
+            },
+            {
+              "tests": 14,
+              "seconds": 0.176
+            },
+            {
+              "tests": 16,
+              "seconds": 0.577
+            },
+            {
+              "tests": 29,
+              "seconds": 7.813
+            },
+            {
+              "tests": 4,
+              "seconds": 0.074
+            },
+            {
+              "tests": 2,
+              "seconds": 0.002
+            },
+            {
+              "tests": 21,
+              "seconds": 1.089
+            },
+            {
+              "tests": 38,
+              "seconds": 0.114
+            },
+            {
+              "tests": 20,
+              "seconds": 3.453
+            },
+            {
+              "tests": 27,
+              "seconds": 1.327
+            },
+            {
+              "tests": 23,
+              "seconds": 20.346
+            },
+            {
+              "tests": 3,
+              "seconds": 0.016
+            },
+            {
+              "tests": 8,
+              "seconds": 0.914
+            },
+            {
+              "tests": 6,
+              "seconds": 0.876
+            },
+            {
+              "tests": 11,
+              "seconds": 0.392
+            },
+            {
+              "tests": 24,
+              "seconds": 4.345
+            },
+            {
+              "tests": 4,
+              "seconds": 2.338
+            },
+            {
+              "tests": 25,
+              "seconds": 2.761
+            },
+            {
+              "tests": 10,
+              "seconds": 23.839
+            },
+            {
+              "tests": 32,
+              "seconds": 1.171
+            },
+            {
+              "tests": 2,
+              "seconds": 1.735
+            },
+            {
+              "tests": 11,
+              "seconds": 8.04
+            },
+            {
+              "tests": 11,
+              "seconds": 0.262
+            },
+            {
+              "tests": 21,
+              "seconds": 39.908
+            },
+            {
+              "tests": 16,
+              "seconds": 0.217
+            },
+            {
+              "tests": 13,
+              "seconds": 0.859
+            },
+            {
+              "tests": 12,
+              "seconds": 0.74
+            },
+            {
+              "tests": 13,
+              "seconds": 0.172
+            },
+            {
+              "tests": 2,
+              "seconds": 0.01
+            },
+            {
+              "tests": 11,
+              "seconds": 0.991
+            },
+            {
+              "tests": 4,
+              "seconds": 1.116
+            },
+            {
+              "tests": 31,
+              "seconds": 477.44
+            },
+            {
+              "tests": 14,
+              "seconds": 1.138
+            },
+            {
+              "tests": 1,
+              "seconds": 0.001
+            },
+            {
+              "tests": 7,
+              "seconds": 0.622
+            },
+            {
+              "tests": 6,
+              "seconds": 50.541
+            },
+            {
+              "tests": 14,
+              "seconds": 0.138
+            },
+            {
+              "tests": 8,
+              "seconds": 51.422
+            },
+            {
+              "tests": 6,
+              "seconds": 0.585
+            },
+            {
+              "tests": 4,
+              "seconds": 0.119
+            },
+            {
+              "tests": 8,
+              "seconds": 1.614
+            },
+            {
+              "tests": 7,
+              "seconds": 0.776
+            },
+            {
+              "tests": 12,
+              "seconds": 0.816
+            },
+            {
+              "tests": 23,
+              "seconds": 48.049
+            },
+            {
+              "tests": 11,
+              "seconds": 5.281
+            },
+            {
+              "tests": 3,
+              "seconds": 0.003
+            },
+            {
+              "tests": 19,
+              "seconds": 7.236
+            },
+            {
+              "tests": 7,
+              "seconds": 1.757
+            },
+            {
+              "tests": 12,
+              "seconds": 1.508
+            },
+            {
+              "tests": 3,
+              "seconds": 0.001
+            },
+            {
+              "tests": 1,
+              "seconds": 0.113
+            },
+            {
+              "tests": 5,
+              "seconds": 0.131
+            },
+            {
+              "tests": 5,
+              "seconds": 0.015
+            },
+            {
+              "tests": 7,
+              "seconds": 0.082
+            },
+            {
+              "tests": 1,
+              "seconds": 0.097
+            },
+            {
+              "tests": 19,
+              "seconds": 2.511
+            },
+            {
+              "tests": 24,
+              "seconds": 2.759
+            },
+            {
+              "tests": 5,
+              "seconds": 1.547
+            },
+            {
+              "tests": 11,
+              "seconds": 31.293
+            },
+            {
+              "tests": 2,
+              "seconds": 0.016
+            },
+            {
+              "tests": 25,
+              "seconds": 3.124
+            },
+            {
+              "tests": 31,
+              "seconds": 5.516
+            },
+            {
+              "tests": 15,
+              "seconds": 0.142
+            },
+            {
+              "tests": 7,
+              "seconds": 0.111
+            },
+            {
+              "tests": 20,
+              "seconds": 630.631
+            },
+            {
+              "tests": 5,
+              "seconds": 0.003
+            },
+            {
+              "tests": 8,
+              "seconds": 48.563
+            },
+            {
+              "tests": 21,
+              "seconds": 1.654
+            },
+            {
+              "tests": 29,
+              "seconds": 1.872
+            },
+            {
+              "tests": 1,
+              "seconds": 2.296
+            },
+            {
+              "tests": 12,
+              "seconds": 0.048
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "784de59d1a1d6c894ad23db7217b5ec6da0e4787442695656549e5e317dc7220",
+          "unittest_final_statuses": [
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK",
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285688825",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151333895,
+          "job_id": 111285688996,
+          "name": "integration-transport",
+          "conclusion": "failure",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 2,
+              "seconds": 161.109
+            }
+          ],
+          "final_failure_counts": [
+            "failures=1"
+          ],
+          "failed_test_names": [
+            "test_phase_isolated_hybrid_memory_and_separately_authorized_signed_exchange"
+          ],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [
+            {
+              "phase": "before",
+              "status": "budget_exceeded",
+              "elapsed_ms": 22848
+            },
+            {
+              "phase": "after",
+              "status": "budget_exceeded",
+              "elapsed_ms": 36424
+            }
+          ],
+          "log_sha256": "3d53d25682d75992a0b27b7066b563d0514a68db4b99735fc9a0cd6317f2da8c",
+          "unittest_final_statuses": [
+            "FAILED (failures=1)"
+          ],
+          "process_exit_codes": [
+            1,
+            1
+          ],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285688996",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151333895,
+          "job_id": 111285689032,
+          "name": "integration-native-pilot-before-tail",
+          "conclusion": "success",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 2121.145
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "c7105235b4f3c8d4ace08d52f9217980bd6efbd8ceb791d4f8c4b790cad4e7e7",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285689032",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151333895,
+          "job_id": 111285689043,
+          "name": "integration-history-routes-native",
+          "conclusion": "success",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 1350.644
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "ca4d294e77af8fc2d2226a22ccddf54394e10886d26a176cc1192badd0aa2740",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285689043",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151333895,
+          "job_id": 111285689059,
+          "name": "integration-native-pilot-typed-phase",
+          "conclusion": "success",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 2437.383
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "c0bfff0d6f88e0e93956068dad3dc3524442262754dfcba5775d11a797285425",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285689059",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151333895,
+          "job_id": 111285689073,
+          "name": "integration-history",
+          "conclusion": "cancelled",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [
+            "test_registered_sources_to_blocked_control_stages_on_actual_selected_engines"
+          ],
+          "response_attempts": [],
+          "log_sha256": "1df271011385dbc2a674a3e4546c6d4e85da2b1ea7e42d4308d30a8b78b62bf3",
+          "unittest_final_statuses": [],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285689073",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151333895,
+          "job_id": 111285689091,
+          "name": "integration-readers",
+          "conclusion": "success",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 2,
+              "seconds": 66.573
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "ed14f5fa8c36ca94b3e846f45f3354d80170a03d51ec70871ef0a26798cad7ae",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285689091",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151333895,
+          "job_id": 111285689095,
+          "name": "integration-native-pilot-withdrawal",
+          "conclusion": "success",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 68.24
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "68dc25dc29e61398eea947f74b726d80ae948fbf5d57ec74b6bd951f814891c7",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285689095",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151333895,
+          "job_id": 111285689099,
+          "name": "integration-native-comparison",
+          "conclusion": "failure",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 171.539
+            }
+          ],
+          "final_failure_counts": [
+            "failures=1"
+          ],
+          "failed_test_names": [
+            "test_actual_phase_context_execution_parent_and_private_run_custody"
+          ],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [
+            {
+              "phase": "before",
+              "status": "timeout",
+              "elapsed_ms": 60079
+            },
+            {
+              "phase": "after",
+              "status": "timeout",
+              "elapsed_ms": 60093
+            }
+          ],
+          "log_sha256": "4f8592e08b4fdf3711a877534e166ad966c0dd7bb0831709f0c3e602644433f7",
+          "unittest_final_statuses": [
+            "FAILED (failures=1)"
+          ],
+          "process_exit_codes": [
+            1
+          ],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285689099",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true,
+          "failed_native_stage": "prepare"
+        },
+        {
+          "run_id": 37151333895,
+          "job_id": 111285689117,
+          "name": "integration-native-pilot-outcome-audit",
+          "conclusion": "success",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 1,
+              "seconds": 1108.845
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "19c954e6a0c0e039e60b48937bb9e6fe06cc28bfc2c417e9867642857dfe16c9",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285689117",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151333895,
+          "job_id": 111285689120,
+          "name": "integration-core",
+          "conclusion": "success",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 38,
+              "seconds": 897.1
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "099b0a72c8c77de431eb2c688f156550317882bc2e21d21ddb0803a03d418e1a",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285689120",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151333895,
+          "job_id": 111285689123,
+          "name": "integration-history-routes-retained",
+          "conclusion": "cancelled",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "d966c67640d8218fcb5050be518a4384a7701777e25d651bb358974449242e15",
+          "unittest_final_statuses": [],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285689123",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        },
+        {
+          "run_id": 37151333895,
+          "job_id": 111285689134,
+          "name": "integration-lineage",
+          "conclusion": "success",
+          "checkout_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+          "alice_contract_sha": "4f287a488bc908bd04f99255ee01b794bacba50b",
+          "final_summaries": [
+            {
+              "tests": 2,
+              "seconds": 1045.658
+            }
+          ],
+          "final_failure_counts": [],
+          "failed_test_names": [],
+          "completed_cases_without_final_summary": [],
+          "response_attempts": [],
+          "log_sha256": "a8862a6cb277a35304b879d46fadf20f92e22a4946eb303e54afd722b1350779",
+          "unittest_final_statuses": [
+            "OK"
+          ],
+          "process_exit_codes": [],
+          "sixty_minute_limit_log_observed": false,
+          "resource_warning_count": 0,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895/job/111285689134",
+          "checkout_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+          "checkout_tree_matches_runtime": true
+        }
+      ]
+    }
+  ],
+  "qualification": false,
+  "learned_behavior_run": false,
+  "limits": [
+    "All 26 logged checkouts have the exact runtime tree and pinned Alice contracts.",
+    "Completed cases in cancelled jobs are retained; unfinished cases are incomplete.",
+    "Process failures, if observed, remain separate from unittest cases.",
+    "Original failures and warning counts are retained; no blind rerun, cleanup, latency or learned qualification.",
+    "Raw job logs remain private scratch; numeric receipts and source identities are public.",
+    "Both native attempts stop during context preparation, before inference. This receipt does not locate worker CPU work or establish a speedup."
+  ]
+}

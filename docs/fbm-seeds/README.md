@@ -12,12 +12,15 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-03
 
-The corpus now contains **124 validated procedure traces**. This count describes
+The corpus now contains **127 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
 | Record | Observable operation |
 | --- | --- |
+| [Query interface research](2026-10-04_query_interface_research.jsonl) | Inspect pinned XTDB caches and SQL/XTQL execution; separate derived-work patterns from authority and transport hypotheses. |
+| [Owned assembly metadata](2026-10-04_owned_assembly_metadata_composition.jsonl) | Compose current assembly with existing H/C views, fresh private fences and expiry; 115 final cases pass at unchanged source; scoped review clear, physical qualification pending. |
+| [Completed invocation gates](2026-10-04_completed_minimal_composition_gates.jsonl) | Recover1000 passing components per run; retain response failures/incomplete cases and locate native prepare. |
 | [Minimal owned judgment composition](2026-10-03_minimal_owned_judgment_composition.jsonl) | Reuse actual prepared material for delivery; retain live rights, correct two reproduced callback edges, and preserve pending physical qualification. |
 | [Completed older CI recovery](2026-10-03_completed_contract_cost_ci_recovery.jsonl) | Recover exact run checkouts and retain component/physical failures. |
 | [Single fresh binding walk](2026-10-03_single_fresh_context_binding_walk.jsonl) | Remove measured duplicate traversal while retaining fresh own checks. |
