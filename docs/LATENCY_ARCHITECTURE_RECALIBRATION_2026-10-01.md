@@ -25,8 +25,20 @@ The replacement operation protocol is not implemented or qualified.
 Alice frontier-watch is now3bea3318; its October4 intake and MemCodex primary
 method were reviewed. No production engine/model selection changes. See
 [query research](QUERY_PATH_RESEARCH_2026-10-03.md) and the operation assessment.
-FBM now contains132 procedure seeds. No learned result or model weights follow.
+FBM now contains134 procedure seeds. No learned result or model weights follow.
 No new serving change, blind rerun or diagnostic was dispatched by this audit.
+
+The later actual-consumer audit stopped the proposed session-owner patch before
+source/test edits: it would optimize only the supplied current fixture. Real
+phase routes prepare pinned historical context before resolver return and cannot
+use the exact-class current frame. Live capture, explicit restore and actual
+phase judgment need one supported preparation mapping; a domain-flag/type change
+is insufficient. See [the reachability receipt](evidence/2026-10-04_actual_phase_consumer_reachability.json).
+One local observation preserves exact frozen context across five operations;
+27 unchanged source identities match baseline after LF normalization. Cold route
+uses20456 SQL calls/1 restore, open preparation15560/0 and prepared metadata253/0.
+These fictional-adapter counts do not qualify physical latency or anchored rights.
+A scoped phase-ownership design decision is pending; no new physical job is launched.
 
 ## Retained earlier checkpoints
 

@@ -165,3 +165,27 @@ program-evolution system is required here. Append-only retention and benchmark
 speed do not qualify FloRA withdrawal or predict this repair's latency. VerMem
 is a future learned memory-policy training idea; it creates no model task here.
 Alice main8ea804aa and runtime API4f287a remain unchanged.
+
+## Actual phase consumer and temporal research follow-up
+
+[The source reachability audit](evidence/2026-10-04_actual_phase_consumer_reachability.json)
+rejects the session-only owner proposal. The real pinned archive runtime does
+not use the current-context frame; first capture and anchored judgment must be
+part of the serving design. Do not extrapolate a supplied recovery fixture's
+query-count improvement to that chronology.
+
+The pinned [Graphiti SearchFilters implementation](https://github.com/getzep/graphiti/blob/4f62cfe7a2d519e55bfdf2dc4a2fd06649dc00b3/graphiti_core/search/search_filters.py)
+was read directly: exact edge IDs and separate valid/invalid/created/expired
+time filters make historical selection explicit. This is an implementation
+analogy for distinguishing a frozen phase view from present state. It supplies
+neither FloRA Claim truth authority nor current withdrawal/evaluation permission.
+Retain historical occurrence proof and freshly resolve current use rights;
+adopting Graphiti's graph or its filters is not the proposed repair.
+
+The one actual-class local observation preserves exact frozen context and27
+source identities. It separates cold restore (20456 SQL calls) from open
+preparation (15560 calls, zero restores) and current prepared metadata (253).
+The counts support repeated phase preparation, including historical pin checks,
+without measuring XTDB execution or anchored authority. This changes the next
+construction decision: an archive-placement change alone cannot address all
+open-use work. The physical budget and all current permission fences remain.

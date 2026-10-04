@@ -1,5 +1,69 @@
 # FloRA minimal current judgment invocation
 
+## October4 follow-up: the proposed owner missed the real consumer
+
+**Status:** the session-owner construction was stopped before serving/test edits.
+The [source-bound reachability receipt](evidence/2026-10-04_actual_phase_consumer_reachability.json)
+supersedes the dispatch and file choice below. No RED/GREEN, physical run or
+performance qualification is claimed. Existing failed results remain unchanged.
+
+The actual routes differ from the supplied latency fixture:
+
+| Operation | Actual owner / material | Consequence |
+| --- | --- | --- |
+| First live phase capture | `XTDBPhaseSnapshotCustody.capture` uses the live runtime at `phase_snapshots.py:602`. | Current preparation must be connected here as well as to judgment. |
+| Explicit archive open | `SelectedPhaseRoute` restores the snapshot, clones pinned Claim/state services and prepares context at `phase_routes.py:447`. | This work precedes the native session resolver's return; a later handoff cannot own it. |
+| Anchored BEFORE / final judgment | `PreregisteredBeforeProbeRuntime` / `FinalizedPhaseJudgmentRuntime` call the runtime's own preparation. | Keep independent probe, final-evaluation, slot, source and archive owners. |
+| Supplied timed native fixture | Its read hook opts into selected-current context; judgments are precomputed before passive recovery. | A session-only optimization could improve this fixture while missing actual causal execution. |
+
+`SelectedPhaseRoute` does not propagate selected-current configuration. Its
+pinned Claim/state readers also cannot enter the existing frame, which requires
+exact current services (`selected_context.py:249–250`,
+`selected_authority_frame.py:352–355`). A domain
+flag alone would therefore reject required historical readers. Widening type
+checks would not supply their missing historical-occurrence/current-authority
+mapping. The session descriptors are installed on the original runtime, while
+the actual archive runtime is constructed separately.
+
+This is a consumer reachability and operation-design gap, not evidence that
+personality inference or SQL syntax is slow. FloRA's goal remains sound; the
+present infrastructure tests cannot demonstrate it. The next construction must
+join live capture and actual frozen-phase preparation to a small, owned read
+operation. Explicit restoration authenticates exact historical material; fresh
+use checks current source/H/C rights, Claim quarantine, state removal and all
+probe/final/slot obligations. Later approved heads may coexist with a frozen
+BEFORE view; withdrawal must never resurrect it. Preserve exact sample equality
+after callbacks and terminal physical/current-row fences. Acceptance proof and
+required writes remain inside the measured response.
+
+The single bounded actual-class observation completed with five operations
+passing exact frozen context checks and27 unchanged source identities:
+
+| Local scope | SQL calls | Snapshot restores | Context assemblies |
+| --- | ---: | ---: | ---: |
+| Initial capture setup |193342|0|5|
+| Cold route construction |20456|1|2|
+| Open context assembly |7417|0|1|
+| Open preparation |15560|0|1|
+| Prepared metadata check |253|0|0|
+| Prepared byte/owner revalidation |1012|0|0|
+
+Capture includes four independent lineage proofs, each currently preparing
+context again. Open preparation includes88 fresh initial private barriers.
+Cold constructor includes1694 pinned Claim checks, each querying historical
+occurrence; prepared metadata includes24. Setup is separate from later responses.
+SQL counts are calls to the fixture's outer connection; nested counts overlap.
+The observer replaced no callbacks or serving code and ran once. Fictional SQL,
+history authority and producers cannot qualify physical latency, anchored H/final/
+slot authority or selected terminal fences. The source-bound receipt retains
+these limits. Removing only cold archive restoration misses open-use work.
+
+A scoped design decision now compares an actually issued prepared-material
+handoff with finite pinned-phase observation. It must reach real capture/route/
+probe/final consumers and retain independently fresh authority and exact material
+equality; a lower assembly count alone cannot certify the whole operation.
+No new engine, GPU work, full Alice platform or blind full-suite retry follows.
+
 ## October 4: completed physical failure and whole-operation reassessment
 
 **Status:** architectural assessment; the replacement operation protocol below
@@ -140,10 +204,11 @@ boundaries from duplicate verification caused by a metadata helper or controller
 wrapper. If a required boundary cannot be mapped to the joint physical/current
 authority fence, retain its existing check rather than weakening the contract.
 
-The first implementation deliverable should be the native current-preparation
-operation in `native_reads.py`, `experiment_runtime.py`, `context_guard.py` and
-the existing private phase/frame modules. A later independently testable change
-can apply the same ownership principle to comparator acceptance/recording in
+The original proposal selected native current preparation in `native_reads.py`,
+`experiment_runtime.py`, `context_guard.py` and private phase/frame modules.
+The later consumer audit above rejects that session-only file choice: actual
+live capture and pinned phase routing must be part of the operation design.
+A later independently testable change can apply the same ownership principle to comparator acceptance/recording in
 `comparator_memory.py` and `comparison_custody.py`; their purposes and producers
 are distinct, so they must not share an allow token or personal-state authority.
 Do not create a generic cross-arm policy framework merely to share code.

@@ -12,12 +12,14 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-03
 
-The corpus now contains **132 validated procedure traces**. This count describes
+The corpus now contains **134 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
 | Record | Observable operation |
 | --- | --- |
+| [Actual phase boundary observation](2026-10-04_actual_phase_boundary_observation.jsonl) | One read-only actual-class observation separates cold restoration, repeated open preparation and current checks; physical/anchored limits retained. |
+| [Actual phase consumer reachability](2026-10-04_actual_phase_consumer_reachability.jsonl) | Reject a fixture-only owner patch before source edits; trace actual live capture, pinned restore and anchored judgment. |
 | [Completed owned assembly physical failure](2026-10-04_completed_owned_assembly_physical_failure.jsonl) | Recover completed1003-case component results, physical failures and correctly attributed baseline/native timings. |
 | [Whole-operation reassessment](2026-10-04_whole_operation_architecture_reassessment.jsonl) | Trace guard amplification, review current Alice/frontier originals and map the prototype protection boundaries; replacement not implemented. |
 | [Private CI access restoration](2026-10-03_private_ci_read_access_restoration.jsonl) | Restore authorized read-only pinned dependency checkout;26 new checkout steps succeed, full gates pending. |
