@@ -25,7 +25,7 @@ The replacement operation protocol is not implemented or qualified.
 Alice frontier-watch is now3bea3318; its October4 intake and MemCodex primary
 method were reviewed. No production engine/model selection changes. See
 [query research](QUERY_PATH_RESEARCH_2026-10-03.md) and the operation assessment.
-FBM now contains134 procedure seeds. No learned result or model weights follow.
+FBM now contains135 procedure seeds. No learned result or model weights follow.
 No new serving change, blind rerun or diagnostic was dispatched by this audit.
 
 The later actual-consumer audit stopped the proposed session-owner patch before
@@ -38,7 +38,12 @@ One local observation preserves exact frozen context across five operations;
 27 unchanged source identities match baseline after LF normalization. Cold route
 uses20456 SQL calls/1 restore, open preparation15560/0 and prepared metadata253/0.
 These fictional-adapter counts do not qualify physical latency or anchored rights.
-A scoped phase-ownership design decision is pending; no new physical job is launched.
+The reviewed next construction privately hands one actual preparation to
+independent lineage in capture, cold constructor and fresh observed-binding.
+Lineage's guard precedes owner metadata even in nested revalidation/update reads;
+handles expire and custom paths remain original. One coherent implementation is
+in progress; no test/result or physical gain claimed. Pinned finite-frame support
+and remaining preparation cost stay unresolved; no new physical job is launched.
 
 ## Retained earlier checkpoints
 

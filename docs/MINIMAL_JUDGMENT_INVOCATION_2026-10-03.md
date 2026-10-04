@@ -58,10 +58,24 @@ history authority and producers cannot qualify physical latency, anchored H/fina
 slot authority or selected terminal fences. The source-bound receipt retains
 these limits. Removing only cold archive restoration misses open-use work.
 
-A scoped design decision now compares an actually issued prepared-material
-handoff with finite pinned-phase observation. It must reach real capture/route/
-probe/final consumers and retain independently fresh authority and exact material
-equality; a lower assembly count alone cannot certify the whole operation.
+The source-backed decision selects one privately issued prepared-material
+handoff through actual live capture, cold route construction and fresh open-route
+observation. Each operation prepares once; independent lineage still executes
+all existing proof checkpoints. Its private use view runs lineage's independent
+guard before original owner metadata at every protected boundary. Full owner/
+episode revalidation uses that composite in nested verifier/backend reads, and
+the qualified update wrapper finishes through it after its last callback. Only
+pure binding/content checks follow the terminal observation. Unknown/custom
+paths keep their original fresh preparation. Handles expire on return/failure
+and cannot pass into a later probe, final judgment or recovery operation.
+
+One coherent construction is dispatched; no implementation/test result or
+qualification is claimed. Exact private issue, forged/copy/expiry refusal,
+lineage-only H withdrawal and preserved historical/current semantics are required
+regressions. This targets duplicate assemblies5/2/2, not open preparation's88
+barriers, historical-pin work or the missing complete finite pinned frame. A
+lower assembly count alone cannot qualify physical latency. Existing inclusive
+timing remains unchanged while an optional owner clarification is pending.
 No new engine, GPU work, full Alice platform or blind full-suite retry follows.
 
 ## October 4: completed physical failure and whole-operation reassessment
