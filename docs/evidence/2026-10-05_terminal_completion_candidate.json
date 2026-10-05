@@ -151,5 +151,6 @@
   },
   "preservation": "Previous failed, incomplete and rejected receipts remain historical. This pending diagnostic is not a new successful regression suite or a published runtime correction.",
   "initial_status_at_capture": "unpublished_unverified_candidate; same_source_control_and_basis_diagnostic_running; no_behavior_result_yet",
-  "current_observer_diagnosis": "docs/evidence/2026-10-05_terminal_copy_observer_diagnosis.json"
+  "current_observer_diagnosis": "docs/evidence/2026-10-05_terminal_copy_observer_diagnosis.json",
+  "followup": "docs/evidence/2026-10-05_finite_lineage_basis_diagnosis.json"
 }

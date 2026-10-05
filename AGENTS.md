@@ -5,26 +5,17 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Current — October5: use the standalone mandatory `diagonosis` skill
-for any failure needing diagnosis, including this agent; validate the test before architecture repair.
-Both bfff869e full runs completed failures. Each passes1038 component cases/82
-modules; physical PR50 pass/3 fail/0 incomplete, push49/3/1. All26 original log
-hashes and tested FloRA/Alice pins are verified. The history intervention reaches
-post-slot H denial, then Claim-read entry; later private effects are not proved.
-The comparable actual-v2 capture control and passive fallback observation are
-recovered. Keep budgets, independent live H/C, external model
-ownership and the narrow prototype scope. No latency gain or learning is claimed.
-The actual-v2 control passed; recovered negative logs reproduce the fallback
-terminal gap (no issued use). Preserve the original runner's parser failure.
-A local four-file terminal correction is built but unverified: fresh original
-prepared checks follow wrapper callbacks, with nested original publication.
-Review found mutable fallback prepared ports. The first control completed capture
-but its observer missed custody's copied consumer; the mutation case did not run.
-Preserve that failed receipt. A corrected observer-only control/mutation retry is
-running in `flora-copy-observer-basis-diagnostic-20261005`, with all four runtime
-files unchanged. Recover its source-bound receipt before further correction or
-source publication. FBM now has149 validated procedure seeds. Read
-`docs/evidence/2026-10-05_bfff_completed_run_diagnosis.json` and current context.
+Current — October5: standalone `diagonosis` is mandatory for every agent,
+including the main agent, on every failure needing diagnosis. Corrected copy
+observer control and matched denial-only pass; metadata replacement/H denial
+reaches the first Claim-entry sentinel before its original reader. The supported
+five-file finite binding correction is local and unqualified. Recover
+`flora-finite-basis-final-verification-20261005`: sixteen frozen cases, no product
+budget change. Validate any failure before more correction. Direct mutation
+during actual AFTER-ablation proof I/O remains uncovered; BEFORE/full is not that
+branch. Published runtime stays bfff869e. No physical latency or learning gain;
+external personality/MFM and narrow prototype scope remain. FBM has150 validated
+procedure seeds. Read `docs/evidence/2026-10-05_finite_lineage_basis_diagnosis.json`.
 
 Previous: reviewed origin correction0b790365 is published atbfff869e5193cbccdb1b466c445076376e81f589.
 Linux completes92 corrected cases without skips: real signed-H control/mutation

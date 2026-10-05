@@ -1,6 +1,30 @@
 # FloRA continuation context
 
-## Current continuation — faulty observer corrected; same-runtime retry pending
+## Current continuation — finite prepared bindings; verification pending
+
+The corrected capture control passes. On identical source, final H denial alone
+closes before Claim entry; replacing the fallback metadata port defeats that
+check. The original reader is not executed by the strict negative observer.
+These component results establish a finite dependency defect, not a latency cause.
+
+The local five-file correction captures existing prepared reader bindings before
+callbacks, pins and forwards the exact completion record, guards nested metadata,
+and requires the original call still be executing. No admission widening, new
+registry, full Alice platform, or personality/MFM construction.
+
+Nine new boundary cases and seven affected existing cases are frozen offline in
+`flora-finite-basis-final-verification-20261005` (414 source hashes, 4800-second
+verification execution cap; all product limits unchanged). Recover its receipt
+and validate any failed test before more repair. A prior verification attempt is
+preserved as interrupted for case05 protocol alignment, with no completed cases.
+AFTER-ablation metadata substitution during proof I/O remains a direct-injection
+coverage gap; BEFORE/full does not exercise that branch.
+
+Published runtime remains bfff869e; the candidate, physical pipeline, latency and
+learning remain unqualified. FBM has150 validated procedure seeds. Read the
+[finite basis diagnosis](evidence/2026-10-05_finite_lineage_basis_diagnosis.json).
+
+## Previous continuation — faulty observer corrected; same-runtime retry pending
 
 The first candidate control completed capture and snapshot assertions, then
 failed because its observer required the original consumer. Custody deliberately
