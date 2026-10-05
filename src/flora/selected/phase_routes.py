@@ -283,18 +283,29 @@ class _QualifiedUpdateProof:
     """Actual anchored context plus the arm's independently verified update."""
     def context_lineage(self, **kwargs):
         self._phase_source_gate()
-        actual = super().context_lineage(**kwargs)
-        self._phase_source_gate()
-        from ._phase_preparation import _current_lineage_use, _finish_lineage_use
-        use = _current_lineage_use(self)
-        verified = verify_update_policy(runtime=self.runtime,
-            snapshot_record=self._phase_record, receipt=self._phase_update_receipt,
-            authority_guard=self._phase_source_gate if use is None else use.metadata_current)
-        if verified != self._phase_record["verified_update_exclusion"]:
-            raise PermissionError("actual producer update-exclusion authority changed")
-        self._phase_source_gate()
-        _finish_lineage_use(self)
-        return actual
+        lineage_completion = []
+        try:
+            actual = super().context_lineage(**kwargs)
+            from ._phase_preparation import (_lineage_completion_record,
+                _lineage_metadata_barrier, _finish_lineage_use)
+            lineage_record = _lineage_completion_record(self, lineage_completion)
+            lineage_check = lineage_record[1]
+            metadata_current = _lineage_metadata_barrier(self, lineage_record)
+            self._phase_source_gate()
+            def update_guard():
+                metadata_current()
+                self._phase_source_gate()
+                metadata_current()
+            verified = verify_update_policy(runtime=self.runtime,
+                snapshot_record=self._phase_record, receipt=self._phase_update_receipt,
+                authority_guard=update_guard)
+            if verified != self._phase_record["verified_update_exclusion"]:
+                raise PermissionError("actual producer update-exclusion authority changed")
+            self._phase_source_gate()
+            _finish_lineage_use(self, lineage_completion, lineage_check, lineage_record)
+            return actual
+        finally:
+            lineage_completion.clear()
 
 
 class _QualifiedCapturePhaseLineage(_QualifiedUpdateProof, PreregisteredPhaseCaptureLineageVerifier):
@@ -771,4 +782,5 @@ _PHASE_NATIVE_ORIGINS = tuple((owner, name, function, function.__code__)
         (None, "derive_preregistered_ablation_runtime", derive_preregistered_ablation_runtime),
         (SelectedPhaseRoute, "guard_live", SelectedPhaseRoute.guard_live),
         (SelectedPhaseRoute, "check_live", SelectedPhaseRoute.check_live),
+        (_QualifiedUpdateProof, "context_lineage", _QualifiedUpdateProof.context_lineage),
     ))

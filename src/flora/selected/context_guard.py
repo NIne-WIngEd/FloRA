@@ -704,9 +704,14 @@ class PreparedCurrentContext:
         _revalidate_prepared(self)
 
 
-def _revalidate_prepared(self, phase_use=None):
-    """Shared owner/episode algorithm; only an issued use can add a barrier."""
-    if phase_use is None:
+def _revalidate_prepared(self, phase_use=None, *, fallback_completion=None):
+    """Shared owner/episode algorithm with exact native phase-use barriers."""
+    if fallback_completion is not None:
+        if phase_use is not None:
+            raise PermissionError("prepared revalidation cannot mix issued and fallback uses")
+        from ._phase_preparation import _validated_completion_barrier
+        metadata_current = _validated_completion_barrier(self, fallback_completion)
+    elif phase_use is None:
         metadata_current = self.metadata_current
     else:
         from ._phase_preparation import _validated_phase_barrier

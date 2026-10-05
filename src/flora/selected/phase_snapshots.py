@@ -115,12 +115,18 @@ class PreregisteredPhaseCaptureLineageVerifier:
         history = kwargs["history"]
         self.preregistration.authorize_slot_use(snapshot_id=self.snapshot_id, case_id=kwargs["case_id"],
             phase=kwargs["phase"], arm=self.arm, history=history, plan=kwargs["context"].plan)
-        actual = NativeJudgmentLineageVerifier.context_lineage(self, **kwargs)
-        self.preregistration.authorize_slot_use(snapshot_id=self.snapshot_id, case_id=kwargs["case_id"],
-            phase=kwargs["phase"], arm=self.arm, history=history, plan=kwargs["context"].plan)
-        from ._phase_preparation import _finish_lineage_use
-        _finish_lineage_use(self)
-        return actual
+        lineage_completion = []
+        try:
+            actual = NativeJudgmentLineageVerifier.context_lineage(self, **kwargs)
+            from ._phase_preparation import _lineage_completion_record, _finish_lineage_use
+            lineage_record = _lineage_completion_record(self, lineage_completion)
+            lineage_check = lineage_record[1]
+            self.preregistration.authorize_slot_use(snapshot_id=self.snapshot_id, case_id=kwargs["case_id"],
+                phase=kwargs["phase"], arm=self.arm, history=history, plan=kwargs["context"].plan)
+            _finish_lineage_use(self, lineage_completion, lineage_check, lineage_record)
+            return actual
+        finally:
+            lineage_completion.clear()
 
     def authorize_context(self, **kwargs):
         raise PermissionError("preregistration capture cannot authorize native evaluation")
@@ -866,4 +872,5 @@ _PHASE_NATIVE_ORIGINS = tuple((owner, name, function, function.__code__)
     for owner, name, function in (
         (XTDBPhaseSnapshotCustody, "capture", XTDBPhaseSnapshotCustody.capture),
         (XTDBPhaseSnapshotCustody, "authorize", XTDBPhaseSnapshotCustody.authorize),
+        (PreregisteredPhaseCaptureLineageVerifier, "context_lineage", PreregisteredPhaseCaptureLineageVerifier.context_lineage),
     ))

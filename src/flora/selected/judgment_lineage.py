@@ -301,9 +301,13 @@ class NativeJudgmentLineageVerifier:
         borrowed = prepared is not None
         if prepared is None:
             prepared = runtime._prepare_current_context(context.plan, authority_guard=guard)
+        from ._phase_preparation import (_capture_lineage_completion, _lineage_metadata_barrier,
+            _lineage_authority_barrier, _revalidate_lineage_completion, _retain_lineage_completion)
+        lineage_record = _capture_lineage_completion(self, prepared)
+        lineage_metadata = _lineage_metadata_barrier(self, lineage_record)
         if prepared.context.receipt_record() != expected:
             raise ValueError("native context content/value/current authority differs from prepared input")
-        objects = _AuthorizedRuntimeReads(runtime.objects, prepared.metadata_current)
+        objects = _AuthorizedRuntimeReads(runtime.objects, lineage_metadata)
         approval_verifier = runtime._guarded_state_verifier(objects)
         claims, states, internal, accepted_episodes = {}, {}, {}, {}
         source_roots = set()
@@ -418,7 +422,8 @@ class NativeJudgmentLineageVerifier:
             originals[event_id] = OriginalEvidenceBinding(event_id, event.event_sha256, event.content_digest,
                 source.registration_sha256, source.evidence.role, source.evidence.parent_refs)
             pending.extend(source.evidence.parent_refs)
-        lineage_barrier = prepared.metadata_current if borrowed else guard
+        lineage_barrier = (lineage_metadata if borrowed
+            else _lineage_authority_barrier(self, lineage_record, guard))
         artifacts = tuple(runtime._resolve(role, authority_guard=lineage_barrier)[1]
                           for role in ("memory_formation", "personality_judgment"))
         item_hashes = tuple((item["kind"], item["record_id"], item["version_id"], item["content_sha256"],
@@ -450,7 +455,7 @@ class NativeJudgmentLineageVerifier:
             lineage_barrier()
         # Phase verification may involve slow producer I/O. Current context,
         # original registration/permission and artifact generation are fresh.
-        prepared.revalidate()
+        _revalidate_lineage_completion(self, lineage_record)
         if history.digest() != history_digest:
             raise ValueError("phase history/current context changed during artifact verification")
         for original in originals.values():
@@ -461,6 +466,7 @@ class NativeJudgmentLineageVerifier:
         if tuple(runtime._resolve(artifact.role, authority_guard=lineage_barrier)[1] for artifact in artifacts) != artifacts:
             raise ValueError("artifact role changed during phase snapshot verification")
         lineage_barrier()
+        _retain_lineage_completion(self, prepared, lineage_record)
         return JudgmentContextLineage(**{**vars(lineage), "phase_snapshots": tuple(snapshots)})
 
     def authorize_context(self, *, case_id: str, phase: str, history: Any,
@@ -517,3 +523,9 @@ class NativeJudgmentLineageVerifier:
         if arm != "flora_full":
             raise PermissionError("native ablation requires the actual arm-specific selected phase route")
         return self.verify_native_result_details(request, result).qualified_output
+
+
+# Definition-time origin for private wrapper completion. A later replacement
+# cannot redefine the native preparation publisher when its module is loaded.
+_PHASE_NATIVE_ORIGINS = ((NativeJudgmentLineageVerifier, "context_lineage",
+    NativeJudgmentLineageVerifier.context_lineage, NativeJudgmentLineageVerifier.context_lineage.__code__),)

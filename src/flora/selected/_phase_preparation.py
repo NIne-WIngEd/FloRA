@@ -45,6 +45,11 @@ _RUNTIME_METHODS = {name: getattr(FloRAExperimentRuntime, name) for name in
                     ("_prepare_current_context", "_context", "_resolve", "_guarded_state_verifier")}
 _LINEAGE_METHODS = {cls: {name: getattr(cls, name) for name in
                     ("context_lineage", "_claim", "_phase_request")} for cls in _CONSUMERS}
+_COMPLETION_ORIGINS = (
+    ("judgment_lineage", "NativeJudgmentLineageVerifier", NativeJudgmentLineageVerifier.context_lineage),
+    ("phase_snapshots", "PreregisteredPhaseCaptureLineageVerifier", PreregisteredPhaseCaptureLineageVerifier.context_lineage),
+    ("phase_routes", "_QualifiedUpdateProof", _QualifiedPhaseLineage.context_lineage),
+)
 _HISTORY_LAYOUTS = {cls: tuple(cls.__dataclass_fields__) for cls in
     (HistorySnapshot, SourceMaterial, ExperienceEvent, ProductHostScope, ProvenanceReference,
      CapturedClaimAuthority, CapturedStateAuthority, CapturedSourceAuthority, CapturedEpisodeAuthority, StateRoute)}
@@ -614,17 +619,199 @@ def _current_lineage_use(consumer):
     return next(reversed(operation.views.values()))[0] if operation.views else None
 
 
-def _finish_lineage_use(consumer):
-    use = _current_lineage_use(consumer)
-    if use is not None:
-        use.revalidate()
+def _capture_lineage_completion(consumer, prepared):
+    """Pin the existing preparation's finite ports before producer callbacks."""
+    _contracts()
+    caller = sys._getframe(1)
+    if (caller.f_code is not _COMPLETION_ORIGINS[0][2].__code__
+            or caller.f_locals.get("self") is not consumer or caller.f_locals.get("prepared") is not prepared):
+        raise PermissionError("lineage completion lacks its original native preparation")
+    if type(prepared) not in (PreparedCurrentContext, _LineageUse):
+        raise PermissionError("lineage completion lost its native prepared owner")
+    check = prepared.revalidate
+    _completion_check(check)
+    readers = (_port_readers(prepared, next(names.split() for role, names, _ in _OWNER_ROLES
+        if role == "prepared")) if type(prepared) is PreparedCurrentContext else ())
+    record = (get_ident(), check, readers)
+    _verify_lineage_record(record)
+    return record
+
+
+def _retain_lineage_completion(consumer, prepared, record):
+    caller = sys._getframe(1)
+    if caller.f_code is not _COMPLETION_ORIGINS[0][2].__code__:
+        raise PermissionError("lineage completion lacks its original native call")
+    _completion_frame(consumer, record, caller)
+    if record[1].__self__ is not prepared:
+        raise PermissionError("lineage completion changed its prepared owner")
+    _publish_lineage_completion(consumer, record, caller.f_back)
+
+
+def _publish_lineage_completion(consumer, record, frame):
+    # Each wrapper forwards its verified original check only after its own
+    # callbacks close. The outer collector remains empty until that return;
+    # an inner callback cannot pre-install a foreign outer preparation.
+    if frame is not None and any(frame.f_code is method.__code__ for _, _, method in _COMPLETION_ORIGINS[1:]):
+        completion = frame.f_locals.get("lineage_completion")
+        if frame.f_locals.get("self") is not consumer or type(completion) is not list or completion:
+            raise PermissionError("lineage completion crosses its exact wrapper call")
+        completion.append(record)
+
+
+def _completion_check(check):
+    if type(check) is not MethodType:
+        raise PermissionError("lineage completion is not an original bound method")
+    owner = check.__self__
+    expected = (PreparedCurrentContext.revalidate if type(owner) is PreparedCurrentContext
+                else _LineageUse.revalidate if type(owner) is _LineageUse else None)
+    if expected is None or check.__func__ is not expected:
+        raise PermissionError("lineage completion is not the original prepared revalidation")
+
+
+def _verify_lineage_record(record):
+    if type(record) is not tuple or len(record) != 3 or type(record[0]) is not int:
+        raise PermissionError("lineage completion record is not native call material")
+    thread, check, readers = record
+    if thread != get_ident() or type(readers) is not tuple:
+        raise PermissionError("lineage completion crosses its synchronous owner thread")
+    _completion_check(check)
+    owner = check.__self__
+    if type(owner) is _LineageUse:
+        if readers:
+            raise PermissionError("issued lineage completion has a foreign prepared basis")
+        owner._check()
+        return
+    names = next(names.split() for role, names, _ in _OWNER_ROLES if role == "prepared")
+    names = tuple(dict.fromkeys((*names, "__getattribute__", "__getattr__")))
+    if len(readers) != len(names):
+        raise PermissionError("lineage completion lost its finite prepared basis")
+    for reader, name in zip(readers, names):
+        if (type(reader) is not _ReaderBinding or reader.owner is not owner
+                or type(reader.name) is not str or reader.name != name):
+            raise PermissionError("lineage completion has a foreign prepared reader")
+        reader.verify()
+
+
+def _checked_lineage_completion(consumer, completion, caller):
+    _contracts()
+    if (not any(caller.f_code is method.__code__ for _, _, method in _COMPLETION_ORIGINS[1:])
+            or caller.f_locals.get("self") is not consumer
+            or caller.f_locals.get("lineage_completion") is not completion
+            or type(completion) is not list or len(completion) != 1):
+        raise PermissionError("lineage completion is outside its exact wrapper call")
+    record = completion[0]
+    _verify_lineage_record(record)
+    return record
+
+
+def _lineage_completion_record(consumer, completion):
+    """Pin this exact record before the wrapper's callbacks run."""
+    return _checked_lineage_completion(consumer, completion, sys._getframe(1))
+
+
+def _completion_frame(consumer, record, caller):
+    _contracts()
+    _verify_lineage_record(record)
+    active = sys._getframe(1)
+    while active is not None and active is not caller:
+        active = active.f_back
+    if active is None:
+        raise PermissionError("lineage completion is outside its synchronous call lifetime")
+    if caller.f_code is _COMPLETION_ORIGINS[0][2].__code__:
+        if (caller.f_locals.get("self") is not consumer
+                or caller.f_locals.get("lineage_record") is not record
+                or caller.f_locals.get("prepared") is not record[1].__self__):
+            raise PermissionError("lineage completion changed its native per-call preparation")
+        return
+    if caller.f_code is _finish_lineage_use.__code__:
+        if (caller.f_locals.get("consumer") is not consumer
+                or caller.f_locals.get("record") is not record
+                or caller.f_locals.get("check") is not record[1]
+                or caller.f_locals.get("completion") is not caller.f_back.f_locals.get("lineage_completion")):
+            raise PermissionError("lineage completion changed its finishing call")
+        caller = caller.f_back
+    completion = caller.f_locals.get("lineage_completion")
+    if (_checked_lineage_completion(consumer, completion, caller) is not record
+            or caller.f_locals.get("lineage_record") is not record
+            or caller.f_locals.get("lineage_check") is not record[1]):
+        raise PermissionError("lineage completion replaced its original per-call basis")
+
+
+def _completion_metadata_barrier(consumer, record, caller):
+    _completion_frame(consumer, record, caller)
+    metadata_current = record[1].__self__.metadata_current
+    def barrier():
+        _completion_frame(consumer, record, caller)
+        metadata_current()
+        _completion_frame(consumer, record, caller)
+    return barrier
+
+
+def _lineage_metadata_barrier(consumer, record):
+    return _completion_metadata_barrier(consumer, record, sys._getframe(1))
+
+
+def _lineage_authority_barrier(consumer, record, guard):
+    caller = sys._getframe(1)
+    _completion_frame(consumer, record, caller)
+    if (caller.f_code is not _COMPLETION_ORIGINS[0][2].__code__
+            or caller.f_locals.get("guard") is not guard):
+        raise PermissionError("lineage authority barrier lacks its native guard")
+    def barrier():
+        _completion_frame(consumer, record, caller)
+        guard()
+        _completion_frame(consumer, record, caller)
+    return barrier
+
+
+def _revalidate_lineage_completion(consumer, record):
+    caller = sys._getframe(1)
+    _completion_frame(consumer, record, caller)
+    owner = record[1].__self__
+    if type(owner) is _LineageUse:
+        record[1]()
+    else:
+        _revalidate_prepared(owner, fallback_completion=record)
+    _completion_frame(consumer, record, caller)
+
+
+def _validated_completion_barrier(prepared, record):
+    algorithm = sys._getframe(1)
+    origin = algorithm.f_back
+    if (algorithm.f_code is not _revalidate_prepared.__code__
+            or algorithm.f_locals.get("self") is not prepared
+            or algorithm.f_locals.get("fallback_completion") is not record
+            or algorithm.f_locals.get("phase_use") is not None
+            or origin.f_code is not _revalidate_lineage_completion.__code__
+            or origin.f_locals.get("record") is not record
+            or type(prepared) is not PreparedCurrentContext):
+        raise PermissionError("fallback completion lacks its original revalidation call")
+    _verify_lineage_record(record)
+    if record[1].__self__ is not prepared:
+        raise PermissionError("fallback completion crosses its exact prepared owner")
+    return _completion_metadata_barrier(origin.f_locals.get("consumer"), record, origin.f_back)
+
+
+def _finish_lineage_use(consumer, completion, check, record):
+    caller = sys._getframe(1)
+    _completion_frame(consumer, record, caller)
+    if caller.f_locals.get("lineage_completion") is not completion or check is not record[1]:
+        raise PermissionError("lineage completion changed its finishing arguments")
+    _revalidate_lineage_completion(consumer, record)
+    _completion_frame(consumer, record, caller)
+    _publish_lineage_completion(consumer, record, caller.f_back)
 
 
 def _contracts():
     _require_shared_context_contracts()
     if (_OWNER_ROLES is not _SEALED_OWNER_ROLES or _CALLBACK_FACTORIES is not _SEALED_CALLBACK_FACTORIES
-            or _BOUND_CALLBACK_OWNERS is not _SEALED_BOUND_CALLBACK_OWNERS):
+            or _BOUND_CALLBACK_OWNERS is not _SEALED_BOUND_CALLBACK_OWNERS
+            or _COMPLETION_ORIGINS is not _SEALED_COMPLETION_ORIGINS):
         raise PermissionError("phase owner mapping changed")
+    for module_name, class_name, function in _COMPLETION_ORIGINS:
+        origin = _native_origin(sys.modules[__package__ + "." + module_name], class_name, "context_lineage")
+        if origin is None or origin[1] is not function:
+            raise PermissionError("lineage completion lost its definition-time origin")
     for cls, name, function in _ENTRY_POINTS:
         if vars(cls).get(name) is not function:
             raise PermissionError("phase preparation issuer implementation changed")
@@ -643,6 +830,7 @@ def _contracts():
 _SEALED_OWNER_ROLES = _OWNER_ROLES
 _SEALED_CALLBACK_FACTORIES = _CALLBACK_FACTORIES
 _SEALED_BOUND_CALLBACK_OWNERS = _BOUND_CALLBACK_OWNERS
+_SEALED_COMPLETION_ORIGINS = _COMPLETION_ORIGINS
 _SHAPES = tuple((cls, tuple(vars(cls).items())) for cls in
     (_PhasePreparation, _LineageUse, _NamespaceBinding, _ReaderBinding, PreparedCurrentContext, *_HISTORY_LAYOUTS, *_CONSUMERS))
 _CODES = tuple((function, function.__code__) for _, shape in _SHAPES for _, value in shape
