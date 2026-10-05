@@ -5,7 +5,15 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Current recovery: the original candidate Linux check completed82 cases,
+Latest recovery: callback correction84309e22 passes10 Windows cases, but fresh
+review rejects dynamically admitted factory/body and arbitrary bound methods.
+Both registered-H attempts stop before mutation because stand-in permissions
+are incompatible with the real history fence. Source remains unaccepted. A
+separate187-file origin/grant correction is dispatched; require unmutated real-H
+control and original factory identity/fallback before source publication.
+No Linux component group followed those refusals. FBM now has141 seeds.
+
+Earlier recovery: the original candidate Linux check completed82 cases,
 76 pass/6 known opaque-verifier capture errors; all411 source hashes are unchanged.
 A finite owner-map/admission correction is built only in an isolated source copy.
 Only2 files change;184 remain identical. Five final-source Windows cases and63
