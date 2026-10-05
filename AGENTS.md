@@ -14,7 +14,8 @@ post-slot H denial, then Claim-read entry; later private effects are not proved.
 Establish a comparable actual-v2 capture control and observe issued/fallback
 before choosing a correction. Keep budgets, independent live H/C, external model
 ownership and the narrow prototype scope. No latency gain or learning is claimed.
-FBM now has145 validated procedure seeds. Read
+The actual-v2 control/denial diagnostic is running; recover its receipt before
+repair. FBM now has146 validated procedure seeds. Read
 `docs/evidence/2026-10-05_bfff_completed_run_diagnosis.json` and current context.
 
 Previous: reviewed origin correction0b790365 is published atbfff869e5193cbccdb1b466c445076376e81f589.
