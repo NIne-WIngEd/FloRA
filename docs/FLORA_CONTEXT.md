@@ -1,6 +1,35 @@
 # FloRA continuation context
 
-## Current continuation — temporal fixture corrected; identical-runtime verification pending
+## Current continuation —18 component passes; connected physical pipeline next
+
+The fixture-corrected continuation completed all15 fresh cases in2045.425s.
+All414 mounted sources, runner and15 logs match. Three unchanged prior passes
+are retained by AST/source/log checks:18 unique component cases total. The reached
+metadata replacement plus H denial now refuses before the next Claim-read entry
+on custody's actual copy. Qualified callbacks, nested record identity, early
+mutation, expiry, issued/fallback controls and historical occurrence also pass.
+
+Publish only the exact frozen five runtime files and one test in source commit
+`24a72db58f530619143322c29e36ecbec0b052a5`; all189 FloRA frozen files match. Workflows and
+product budgets are unchanged. The occupied checkout contains unrelated edits;
+preserve them. Independent reviews found no blocking issue. Original failed
+receipts and the observer/temporal fixture diagnosis chain remain intact.
+
+Resume ordinary full component/physical CI on the development branch. Recover
+the exact new run/source/Alice pin before interpreting results. Check connected
+history restoration, current permission refusal, native comparison and stage/query
+timings. Any new failure starts with mandatory standalone `diagonosis`, including
+the main agent. Stop when only that run result remains; do not launch another
+component campaign or relax product limits.
+
+Component fixtures do not establish the physical pipeline, real temporal ordering,
+latency or learning. Direct AFTER-ablation proof-I/O metadata substitution remains
+uncovered; its existing proof/live-denial case passed. Personality/MFM remain
+external and FloRA remains a narrow causal prototype. FBM has152 schema-validated
+procedure seeds, not trained weights or admitted learning cases. Read the
+[completed result](evidence/2026-10-05_completed_terminal_component_verification.json).
+
+## Previous continuation — temporal fixture corrected; identical-runtime verification pending
 
 The final finite-basis run completed3 passes, then case04 failed during route
 setup: the admission-only cursor omitted a requested temporal column. The

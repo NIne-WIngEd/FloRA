@@ -248,5 +248,11 @@
     "No physical pipeline, latency improvement, learned behavior, or release qualification.",
     "Personality/MFM remain external; no full Alice memory/mission platform."
   ],
-  "next_action": "Recover the source-bound fixture-corrected result once. Validate the first failure/test before further repair. If all affected checks pass, return to the connected selected-engine causal pipeline and measure remaining stage/query latency under unchanged product limits."
+  "next_action": "Recover the source-bound fixture-corrected result once. Validate the first failure/test before further repair. If all affected checks pass, return to the connected selected-engine causal pipeline and measure remaining stage/query latency under unchanged product limits.",
+  "followup": "docs/evidence/2026-10-05_completed_terminal_component_verification.json",
+  "completed_verification_summary": {
+    "status": "15fresh+3carried component passes; physical pipeline next",
+    "receipt_sha256": "77ba777bdbc1fd963ebead05cb37398b02770f5aac34e50db40bf5960ad2ad61",
+    "runtime_changed_since_prior_candidate": false
+  }
 }
