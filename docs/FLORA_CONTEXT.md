@@ -1,5 +1,24 @@
 # FloRA continuation context
 
+## Latest continuation — original callbacks and real-H control
+
+The origin correction is built in an isolated188-file copy. Scoped source review
+has no actionable findings. Fourteen progressive component cases pass, including
+six on final source; this is not a14-case final suite or physical result.
+Linux now checks real signed H and an unchanged capture before mutation, then
+relevant native/phase/preregistration components. Its first launch omitted
+file-relative fixture dependencies and failed import; a corrected112-file test
+bundle runs against unchanged source. Prior-source H now passes unchanged
+authentication/capture but fails the targeted owner-replacement refusal
+(1 failure/262.875s). Corrected-source and later component results are pending.
+
+Both earlier physical history logs end after original-input registration,
+before the first capture-published milestone. Verified c70 source shows this
+boundary includes capture, metadata/grants and historical observation/publication;
+it does not isolate one helper's cost. Return to that complete connected pipeline
+once this correctness change qualifies. No serving source is applied; full Alice
+infrastructure and personality/MFM development remain outside this workflow.
+
 ## Latest recovery — native factory origin and real history authority
 
 The isolated native-callback repair completed10/10 Windows component cases,
@@ -200,7 +219,7 @@ not a FloRA platform prerequisite. Graphify's old graph is navigation only.
 
 ## FBM and retained evidence
 
-There are141 schema-valid [procedure seeds](fbm-seeds/README.md). Capture material
+There are142 schema-valid [procedure seeds](fbm-seeds/README.md). Capture material
 construction/failure/repair methods here and validate the existing format. Seeds
 are not personal memory, admitted supervised examples, builder weights or transfer.
 

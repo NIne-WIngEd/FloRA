@@ -471,12 +471,111 @@
     "scope_exclusion": "Full Alice mission/workspace/product lifecycle is not a prototype prerequisite."
   },
   "factory_origin_correction": {
-    "status": "dispatched_to_separate_verified_copy",
+    "status": "built_isolated_source_review_clear; native_H_and_relevant_Linux_components_pending",
     "base_mapper_sha256": "84309e228a66915acbd74a292cd6ace89ad307609614feab07464b22b2c70093",
     "copied_python_files": 187,
     "scope": "Preserve genuine native factory+code and known bound-method origin; fix registered-H fixture with actual live selected grants. No source publication or full pipeline claim.",
     "primary_runtime_source": "https://docs.python.org/3.12/reference/datamodel.html#user-defined-functions",
     "source_mechanism": "Function code is writable; closure cells retain mutable references; bound methods expose original function/owner. Match preserved native identity/code rather than a currently installed implementation or owner class alone.",
-    "application_gate": "Final source-bound checks and fresh scoped source review; retain current independent H/C checks and unknown/custom original fallback."
+    "application_gate": "Final source-bound checks and fresh scoped source review; retain current independent H/C checks and unknown/custom original fallback.",
+    "candidate_source_sha256": {
+      "src/flora/selected/_phase_preparation.py": "0b7903651d61d461c0f9d063b3e9b5f59c9762c604648d9bb2b6dab2541880d4",
+      "src/flora/selected/context_guard.py": "73f59092d6dc6ee8983e47c34658efaa709f79ac52ab998703f931d01cc24408",
+      "src/flora/selected/judgment_lineage.py": "69d05ebf2813cc69ac8351c3a17288d0cd6a87e9ede147277ebfcaf407d738f1",
+      "src/flora/selected/phase_routes.py": "dc09f86287f4094f7445f11139a3077eb50aaa6df3694a935c590d06f46d7044",
+      "src/flora/selected/phase_snapshots.py": "1094d96e2ee298773d35cb66ccd27eb0d3ca397cdf175a38542a2ef1097974f9",
+      "tests/test_phase_snapshots.py": "d13487cbec0830cc52768d932c4ee77b3a1b04189865eb407a29f37d4aecb646",
+      "tests/integration/test_selected_experiment_preregistration.py": "c161b526c5279e9af15f930d6fc6a00df62a4f3200a82ba2eeaf6103ecd76f23",
+      "tests/test_phase_callback_owners.py": "46584e6fc38a6d1ab8639db967076918db7c4f863cf8ed42b3a40b37ae1b2e91",
+      "src/flora/selected/comparison_custody.py": "cf9ed22682150730534e6f93c461c942fa33d461db2e97a8e32f149850fe24be",
+      "src/flora/selected/experiment_preregistration.py": "33fc1353629fc21f92d25ba295eea798a4710d7772c1141cffa65e0ae822df5e",
+      "src/flora/selected/personal_artifact_custody.py": "ca1c81d80aec0bedfa554e48f878f09347c92501b541743cb3dbd1df407e1b76",
+      "tests/phase_callback_permissions.py": "a97d2db7ae4f41e659e66bac6492e1d3c040751a7f2373377cec646458809eae"
+    },
+    "source_delta": {
+      "changed": 8,
+      "added": 1,
+      "unchanged": 179,
+      "current_python_files": 188
+    },
+    "red": {
+      "tests": 2,
+      "failures": 2,
+      "seconds": 9.267,
+      "log": "origin-red.log",
+      "before_runtime_edits": true
+    },
+    "progressive_passes": 14,
+    "final_source_subset": {
+      "tests": [
+        "test_phase_snapshots.PhaseDefaultVerifierTest.test_changed_native_bound_code_keeps_fresh_construction",
+        "test_phase_snapshots.PhaseSnapshotTest.test_actual_capture_prepares_once_preserving_four_independent_proofs",
+        "test_phase_snapshots.PhaseSnapshotTest.test_actual_cold_constructor_prepares_once_preserving_phase_proofs",
+        "test_phase_snapshots.PhaseSnapshotTest.test_actual_operation_rejects_forgery_mutation_cross_thread_and_expiry",
+        "test_phase_snapshots.PhaseSnapshotTest.test_lineage_only_withdrawal_in_nested_owner_ciphertext_blocks_decrypt",
+        "test_phase_snapshots.PhaseSnapshotTest.test_qualified_final_source_callback_is_followed_by_lineage_revalidation"
+      ],
+      "seconds": 307.461,
+      "skips": 0,
+      "all_188_hashes_unchanged": true
+    },
+    "review": {
+      "status": "no_actionable_findings",
+      "source_only": true,
+      "D_files_verified": 188,
+      "C_files_verified": 187,
+      "operational_qualification": false
+    },
+    "linux": {
+      "status": "running",
+      "container_id": "0e1bd9ebdf3319ac4f86e227b0cfe59c05c8dc45a4f352821d46ee931d1ccd73",
+      "image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+      "controller": "run_factory_origin_linux_20261004.py",
+      "network": "disabled",
+      "fixture_files_verified": 112,
+      "sequence": [
+        "prior_B_registered_H_control_and_mutation",
+        "corrected_D_registered_H_control_and_mutation",
+        "corrected_D_native_reads_phase_snapshots_experiment_preregistration"
+      ],
+      "conditions": "Each fixture must first authenticate real H and complete unmutated actual capture. Prior source must reproduce targeted mutation failure; corrected source must pass before later components.",
+      "deadline_seconds": 3600,
+      "physical_engines_run": false,
+      "prior_registered_H": {
+        "status": "genuine_target_reproduced",
+        "tests": 1,
+        "failures": 1,
+        "seconds": 262.875,
+        "unmutated_history_authentication_and_capture_passed": true,
+        "reason": "PermissionError not raised for original H owner replacement",
+        "corrected_D_result": "pending"
+      }
+    },
+    "preserved_launch_failure": {
+      "path": "factory-origin-linux-verification-20261004",
+      "cause": "Three-file overlay omitted file-relative test dependencies; import failed before any behavioral case.",
+      "runtime_changed": false,
+      "repaired_packaging_only": true
+    }
+  },
+  "complete_pipeline_boundary_recovery": {
+    "tested_commit": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
+    "verified_jobs": [
+      {
+        "job_id": 111355236682,
+        "log_sha256": "bd1ffc63dc03c0d5fb28230e18b00025395ccdf44617b82350d5d23019143119",
+        "last_completed_milestone": "original-inputs-registered",
+        "elapsed_seconds": 73.761
+      },
+      {
+        "job_id": 111355229466,
+        "log_sha256": "8f0a28e8c8baab4c13d3cd9161b0370637a64b74b365b7b52dce35b8c4196466",
+        "last_completed_milestone": "original-inputs-registered",
+        "elapsed_seconds": 98.238
+      }
+    ],
+    "next_logged_boundary": "first before-full capture-published",
+    "source_sequence": "Historical bindings -> live archive.capture -> archive metadata -> explicit enrolled grants -> store.publish_capture (historical observation) -> control grants -> capture-published milestone.",
+    "ruling": "No completion milestone occurred before cancellation. The log boundary spans capture/observation/publication and does not isolate one helper latency; do not claim an exact capture cost or whole pipeline acceptance."
   }
 }

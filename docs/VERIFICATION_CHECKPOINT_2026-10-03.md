@@ -1,5 +1,24 @@
 # FloRA verification checkpoint — 2026-10-03
 
+## Latest continuation — original callbacks and real-H control
+
+The origin correction is built in an isolated188-file copy. Scoped source review
+has no actionable findings. Fourteen progressive component cases pass, including
+six on final source; this is not a14-case final suite or physical result.
+Linux now checks real signed H and an unchanged capture before mutation, then
+relevant native/phase/preregistration components. Its first launch omitted
+file-relative fixture dependencies and failed import; a corrected112-file test
+bundle runs against unchanged source. Prior-source H now passes unchanged
+authentication/capture but fails the targeted owner-replacement refusal
+(1 failure/262.875s). Corrected-source and later component results are pending.
+
+Both earlier physical history logs end after original-input registration,
+before the first capture-published milestone. Verified c70 source shows this
+boundary includes capture, metadata/grants and historical observation/publication;
+it does not isolate one helper's cost. Return to that complete connected pipeline
+once this correctness change qualifies. No serving source is applied; full Alice
+infrastructure and personality/MFM development remain outside this workflow.
+
 ## Latest recovery — native factory origin and real history authority
 
 The isolated native-callback repair completed10/10 Windows component cases,
@@ -92,7 +111,7 @@ The complete replacement operation protocol remains unqualified; the bounded pre
 Alice frontier-watch is now3bea3318; its October4 intake and MemCodex primary
 method were reviewed. No production engine/model selection changes. See
 [query research](QUERY_PATH_RESEARCH_2026-10-03.md) and the operation assessment.
-FBM now contains141 procedure seeds. No learned result or model weights follow.
+FBM now contains142 procedure seeds. No learned result or model weights follow.
 No new serving change, blind rerun or diagnostic was dispatched by this audit.
 
 The later actual-consumer audit stopped the proposed session-owner patch before
