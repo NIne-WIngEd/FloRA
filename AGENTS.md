@@ -6,16 +6,16 @@ precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
 Current — October5: mandatory standalone `diagonosis` applies to every agent,
-including the main agent. Final finite-basis verification:3passes then case04
-fixture setup KeyError `_valid_to`, before qualified intervention. Sources/logs
-verified. Correct only the qualified helper to use existing coherent PhaseSQL;
-do not add production row defaults. Recover identical-runtime
-`flora-temporal-fixture-final-recovery-20261005`:15 affected/unrun cases; unchanged
-01–03 passes retained by AST. Runtime source unchanged and still unqualified;
-published baseline bfff869e. No product limit change, physical latency or learning
-gain. Direct AFTER-ablation metadata substitution remains uncovered. Keep external
-personality/MFM and narrow FloRA scope. FBM151 validated procedure seeds. Read
-`docs/evidence/2026-10-05_temporal_restoration_fixture_diagnosis.json`.
+including root. Completed15 fresh +3 unchanged carried passes:18 unique component
+cases;414 mounted sources and18 logs verified. Exact source commit
+`24a72db58f530619143322c29e36ecbec0b052a5` contains only five runtime files and one test.
+Resume ordinary connected physical CI with unchanged budgets; recover exact
+run/source/Alice pins and inspect reached claims/timings. Preserve unrelated dirty
+checkout work and all original failures. No more component campaign while only
+CI is pending. No pipeline/latency/learning qualification yet. Direct AFTER proof
+metadata substitution remains uncovered. Personality/MFM external; narrow FloRA
+scope. FBM152 schema-valid procedure seeds. Read
+`docs/evidence/2026-10-05_completed_terminal_component_verification.json`.
 
 Previous: reviewed origin correction0b790365 is published atbfff869e5193cbccdb1b466c445076376e81f589.
 Linux completes92 corrected cases without skips: real signed-H control/mutation
