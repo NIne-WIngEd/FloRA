@@ -12,12 +12,14 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-05
 
-The corpus now contains **146 validated procedure traces**. This count describes
+The corpus now contains **148 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
 | Record | Observable operation |
 | --- | --- |
+| [Terminal correction and basis discrimination](2026-10-05_terminal_completion_candidate.jsonl) | Freeze four unverified runtime changes and a strict saved-metadata-port test; dispatch only the same-source control/basis diagnostic before another correction, with broader regressions and physical pipeline pending. |
+| [Completed v2 diagnostic and observation recovery](2026-10-05_completed_v2_terminal_diagnostic.jsonl) | Recover a viable actual-v2 fallback control and reached terminal-denial failure from unchanged logs; preserve the runner's parser-failure verdict separately and proceed to exact terminal revalidation on issued/fallback paths. |
 | [Actual-v2 control/denial diagnostic](2026-10-05_v2_control_terminal_discrimination.jsonl) | Build a comparable registered capture control and passive branch probe; frozen offline Linux result pending. |
 | [Completed run and purpose-first diagnosis](2026-10-05_completed_run_purpose_first_diagnosis.jsonl) | Recover all26 source/pin-bound original logs and completed physical failures; distinguish reached Claim-read entry from downstream effects, preserve the missing connected comparison, and require a discriminating diagnostic before a coherent correction. |
 | [Test purpose and connected comparison audit](2026-10-04_test_purpose_connected_comparison_audit.jsonl) | Check positive/negative controls and actual equal-evidence oracles; identify missing same-case six-attempt physical coordinator connection and repeated fixture discovery, while preserving the running source. |

@@ -1,6 +1,63 @@
 # FloRA continuation context
 
-## Current continuation — completed runs; diagnose the reached boundary
+## Current continuation — terminal correction candidate; basis diagnostic pending
+
+Four local runtime files now carry an unverified terminal correction: preserved
+definition-time origins, per-call wrapper state, the same prepared metadata for
+qualified update, and cleanup in `finally`. Native lineage publishes only to its
+immediate wrapper; after its own final callbacks that wrapper revalidates, then
+forwards the same check to the empty outer wrapper before return. This candidate
+is not published or qualified.
+
+A source review still identifies a possible fallback bypass: prepared revalidation
+reads mutable `metadata_current`. Only a same-source capture control and case06
+metadata-port mutation plus H-denial diagnostic are running, offline with a20-minute
+cap. The planned six new/seven existing regressions have not run as a suite.
+All four runtime hashes and the new test match the frozen launch; no result yet.
+
+If the probe establishes that bypass, bind the existing finite prepared named
+ports at terminal completion and qualified nested metadata barriers. Do not add
+a recursive discovery graph or registry. Then run meaningful regressions and
+the connected selected-engine pipeline. Keep all previous failures and live
+independent H/C rights; all product budgets remain unchanged. Research informs
+fresh authorization independently of reusable historical material, without
+adopting another platform or claiming speed. Personality/MFM remain external.
+FBM has148 validated procedure seeds. See the
+[candidate and diagnostic receipt](evidence/2026-10-05_terminal_completion_candidate.json).
+
+## Previous continuation — actual-v2 fallback terminal gap reproduced
+
+The source-bound actual-v2 diagnostic completes on unchanged bfff/Alice source:
+the comparable unchanged control passes1 case/296.167s and completes capture,
+intent and metadata checks. At its final callback ACTIVE is absent and issued
+use count is0. The fresh denial variant reaches that same callback on the same
+fallback path, then its first Claim-entry observer raises before the original
+read (1 failed case/92.676s). This supports a terminal revalidation gap after
+the v2 wrapper's final callback; it does not establish later private effects.
+
+The original runner reports `negative_not_validated` because its line-only JSON
+parser misses observations prefixed by the unittest case name. Both observations
+are present in the unchanged original logs. Preserve the runner receipt and
+failure; the recovered scoped verdict is recorded separately. All414 frozen
+Python source hashes match before/after and the host. This is a contract fixture
+with callback metadata-H denial, not a real signed permission-row revocation,
+physical latency result, learned result or complete-pipeline pass.
+
+Next: retain the exact per-call prepared terminal revalidation through the known
+wrapper's final callbacks on both issued and fallback paths, then verify the
+coherent correction with viable controls and reached denial before the next
+protected operation. Preserve independent live H/C authority and all budgets.
+The missing same-case six-attempt comparison remains required afterward.
+Personality/MFM remain external. FBM has147 validated procedure seeds. See the
+[completed diagnostic](evidence/2026-10-05_v2_terminal_control_diagnostic.json).
+
+The assistant now has five Alice role skills plus standalone `diagonosis`, six
+active shared skills. The FloRA-specific skill was moved recoverably outside
+the active set. Global instructions require the standalone diagnosis method in
+every chat, including the main agent; this is configuration, not behavioral
+skill qualification or proof that other active chats have reloaded it.
+
+## Previous continuation — completed runs; diagnose the reached boundary
 
 At `bfff869e5193cbccdb1b466c445076376e81f589`, both ordinary runs are
 completed failures. Each passes1038 component cases in82 modules without skips.
