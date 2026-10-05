@@ -12,12 +12,13 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-03
 
-The corpus now contains **143 validated procedure traces**. This count describes
+The corpus now contains **144 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
 | Record | Observable operation |
 | --- | --- |
+| [Test purpose and connected comparison audit](2026-10-04_test_purpose_connected_comparison_audit.jsonl) | Check positive/negative controls and actual equal-evidence oracles; identify missing same-case six-attempt physical coordinator connection and repeated fixture discovery, while preserving the running source. |
 | [Reviewed phase correction and pipeline continuation](2026-10-04_reviewed_phase_correction_rejoin_pipeline.jsonl) | Genuine prior-source failure,92 corrected Linux passes with711 unchanged source records; apply exact reviewed correction and resume ordinary full pipeline, with physical and learned results pending. |
 | [Original factory and real history control](2026-10-04_original_factory_and_real_history_control.jsonl) | Original-function/code admission, signed real-H control, clear source review and conditional Linux verification; complete physical phase boundary remains pending. |
 | [Native factory origin and history fixture plane](2026-10-04_native_factory_origin_and_history_fixture_plane.jsonl) | Recover10 component passes but retain origin admission rejection and incompatible real-H fixture refusals; dispatch isolated original-factory/live-policy correction. |

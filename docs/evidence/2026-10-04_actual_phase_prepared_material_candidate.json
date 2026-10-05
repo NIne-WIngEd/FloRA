@@ -1,7 +1,7 @@
 {
   "schema": "flora-actual-phase-prepared-material-candidate-v1",
-  "recorded_at_utc": "2026-10-05T04:18:41.796280Z",
-  "status": "reviewed_corrected_component_source_applied; full_physical_pipeline_pending",
+  "recorded_at_utc": "2026-10-05T04:33:37.025490Z",
+  "status": "reviewed_corrected_source_published; ordinary_full_CI_running; connected_three_arm_case_not_yet_verified",
   "serving_baseline_commit": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
   "local_docs_base_commit": "9950de577083e5a64d46976c12dd7f53db663d86",
   "candidate_source_sha256": {
@@ -105,9 +105,134 @@
       },
       "remaining_groups": "All original groups completed; other76 cases pass, no skip/incomplete. Correction verification separately recorded."
     },
-    "physical_integration": "Resume ordinary full source CI after publication; complete two-stage history, actual anchored heads, both response arms, observed binding and post-slot withdrawal remain required.",
+    "physical_integration": {
+      "status": "in_progress_snapshot",
+      "source_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
+      "source_tree": "671942fc74e86bec94e0f8609190f0cbe062bbd3",
+      "runs": [
+        {
+          "event": "pull_request",
+          "run_id": 37263029377,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37263029377"
+        },
+        {
+          "event": "push",
+          "run_id": 37263026076,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37263026076"
+        }
+      ],
+      "automatic_existing_diagnostic": 37263026064,
+      "limits_unchanged": true,
+      "acceptance": "Completed source-qualified selected-stack gates required; separate four-route and blocked-coordinator passes do not prove the connected six-attempt case.",
+      "completed_partial_failures": {
+        "status": "partial_not_complete_full_run",
+        "actual_PR_checkout_commit": "39babda0ec51c63a3efc6270a1340d2934efb747",
+        "actual_PR_checkout_tree": "671942fc74e86bec94e0f8609190f0cbe062bbd3",
+        "actual_push_checkout_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
+        "alice_pin_checked_in_all_four_logs": "4f287a488bc908bd04f99255ee01b794bacba50b",
+        "groups": [
+          {
+            "run_id": 37263029377,
+            "job_id": 111614019643,
+            "shard": "native-comparison",
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "unittest_seconds": 200.775,
+            "log_sha256": "801449ce7bdb8dc0ccadbc196e28fe986b639f2872c68a7a57c66635a8fc913f",
+            "attempts": [
+              {
+                "phase": "before",
+                "status": "timeout",
+                "elapsed_ms": 60091
+              },
+              {
+                "phase": "after",
+                "status": "timeout",
+                "elapsed_ms": 60165
+              }
+            ],
+            "failure_class": "native_prepare_timeout_before_worker_execution",
+            "response_budget_ms": 60000
+          },
+          {
+            "run_id": 37263029377,
+            "job_id": 111614019704,
+            "shard": "transport",
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "unittest_seconds": 158.579,
+            "log_sha256": "b267410991be0544acc46eef4942803250b0567c6b0d62efaac60f431b9b2d0c",
+            "attempts": [
+              {
+                "elapsed_ms": 22395,
+                "phase": "before",
+                "status": "budget_exceeded"
+              },
+              {
+                "elapsed_ms": 35784,
+                "phase": "after",
+                "status": "budget_exceeded"
+              }
+            ],
+            "failure_class": "baseline_response_budget_exceeded",
+            "response_budget_ms": 10000
+          },
+          {
+            "run_id": 37263026076,
+            "job_id": 111614010307,
+            "shard": "native-comparison",
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "unittest_seconds": 161.431,
+            "log_sha256": "cf8d363b2f6c67618359339abaff59d18c502b19189bcb53454edc6011449459",
+            "attempts": [
+              {
+                "phase": "before",
+                "status": "timeout",
+                "elapsed_ms": 60045
+              },
+              {
+                "phase": "after",
+                "status": "timeout",
+                "elapsed_ms": 60097
+              }
+            ],
+            "failure_class": "native_prepare_timeout_before_worker_execution",
+            "response_budget_ms": 60000
+          },
+          {
+            "run_id": 37263026076,
+            "job_id": 111614010371,
+            "shard": "transport",
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "unittest_seconds": 201.737,
+            "log_sha256": "109202d6ccb990da7cd3c1b2f99a648a3195f50393476fae49e5bdd38318f4e0",
+            "attempts": [
+              {
+                "elapsed_ms": 29967,
+                "phase": "before",
+                "status": "budget_exceeded"
+              },
+              {
+                "elapsed_ms": 45636,
+                "phase": "after",
+                "status": "budget_exceeded"
+              }
+            ],
+            "failure_class": "baseline_response_budget_exceeded",
+            "response_budget_ms": 10000
+          }
+        ],
+        "interpretation": "Known physical response failures persist; D component correction is not a demonstrated latency improvement. Native timeout trace is in owned read preparation and does not localize the worker-thread SQL cost. These are different fixture arms, not a fair model speed comparison. Remaining whole-history result is pending; no new run, budget relaxation or runtime patch follows this partial receipt."
+      }
+    },
     "current_linux_components": "completed92_pass_no_skips_on_exact_final_D",
-    "source_publication": "prepared_reviewed12_file_source; ordinary_CI_push_next"
+    "source_publication": "completed_bfff869e5193cbccdb1b466c445076376e81f589"
   },
   "unresolved": [
     "Finite pinned historical/current-authority observation mapping.",
@@ -608,10 +733,18 @@
       "repaired_packaging_only": true
     },
     "application": {
-      "status": "applied_to_development_copy",
+      "status": "published_source_verified",
       "paths": 12,
       "all_applied_hashes_match_reviewed_candidate": true,
-      "source_commit": "publication_pending"
+      "source_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
+      "source_tree": "671942fc74e86bec94e0f8609190f0cbe062bbd3",
+      "published_source_identity": {
+        "exact_selected_source_files": 12,
+        "full_source_files": 188,
+        "unchanged_files_with_CRLF_only_difference": 157,
+        "all_file_content_matches_after_line_ending_normalization": true,
+        "workflow_unchanged": true
+      }
     }
   },
   "complete_pipeline_boundary_recovery": {
@@ -642,5 +775,29 @@
     "src/flora/selected/phase_snapshots.py": "8974b5604991b896433082ca8b4ad93f4dafac9c321d504872c960f07b5a7473",
     "tests/test_phase_snapshots.py": "d0d1db1cffe63eaf4ac6ba55e0577062cc165772c856deb9797d229a614f4423",
     "tests/integration/test_selected_experiment_preregistration.py": "c161b526c5279e9af15f930d6fc6a00df62a4f3200a82ba2eeaf6103ecd76f23"
+  },
+  "test_design_audit": {
+    "status": "source_and_read_only_discovery_audited",
+    "goal": "docs/EXPERIMENT_GOAL.md",
+    "design_and_failure_interpretation": "docs/EXPERIMENT_COORDINATOR.md#october4-test-purpose-audit-and-next-connected-case",
+    "known_positive_negative_control": "Registered-H unchanged authentication/capture succeeds before original-owner mutation; mutation must fire and no later callback/SQL/ciphertext effect may occur. Prior source genuinely fails target, corrected source passes.",
+    "same_evidence_controls": [
+      "Finalizer compares actual captured context digests, not labels.",
+      "Paired runner gives full and ablation the same selected context; separate contract test asserts equal digests and six attempts."
+    ],
+    "physical_coverage_gap": "Two-stage physical test runs four native routes. Physical coordinator test supplies no adapters and asserts preflight_blocked. Their separate success cannot establish the same registered case executing all six attempts.",
+    "next_bounded_case": "Use the actual two-stage final authority and existing concrete native/general-memory adapter interfaces in RegisteredExperimentCoordinator, with enrolled provider ledger, owned readers, exact independent grants, six persisted attempts and passive recovery. Fictional producers qualify contracts only.",
+    "discovery": {
+      "module": "tests/test_phase_callback_owners.py",
+      "cases": 19,
+      "new_target_cases": 1,
+      "imported_base_cases": 9,
+      "inherited_base_cases": 9,
+      "behavioral_cases_executed_by_audit": 0,
+      "fix": "Isolate one new regression in next test change; preserve current running source and exact control/mutation assertions."
+    },
+    "learned_result": false,
+    "whole_pipeline_acceptance": false,
+    "new_performance_or_permission_shortcut": false
   }
 }
