@@ -1,6 +1,37 @@
 # FloRA continuation context
 
-## Current continuation — reviewed correction applied; resume full pipeline
+## Current continuation — completed runs; diagnose the reached boundary
+
+At `bfff869e5193cbccdb1b466c445076376e81f589`, both ordinary runs are
+completed failures. Each passes1038 component cases in82 modules without skips.
+Physical PR37263029377:50 passed/3 failed/0 incomplete, of53; push37263026076:
+49/3/1. All26 original log hashes and logged FloRA/Alice pins are verified;
+Alice remains `4f287a488bc908bd04f99255ee01b794bacba50b`. The PR checkout
+`39babda0ec51c63a3efc6270a1340d2934efb747` has the published source tree.
+
+Both history cases reach the injected post-slot held-history withdrawal and then
+attempt the next Claim-read entry before refusal. That is a concrete scoped
+observation, not proof of later SQL, decryption, inference or append. The failure
+occurs before the first BEFORE capture-published milestone; AFTER/update/final
+and four-route execution in this case remain unexecuted. The passing physical
+coordinator case still checks blocked preflight, not a six-attempt comparison.
+Push retained-history routing is cancelled with no completed case.
+
+The other failures persist: baseline PR22395/35784ms and push29967/45636ms exceed
+10000ms; native preparation PR60091/60165ms and push60045/60097ms times out under
+60000ms before worker execution. These fixtures do not establish learning or a
+fair cross-arm speed comparison. No latency gain or full-build acceptance follows.
+
+Apply the approved shared diagnosis method: check the test's scoped oracle and
+control, trace the actual capture branch and final-slot/revalidation/Claim-entry
+sequence with a bounded diagnostic, then choose a coherent correction only after
+its cause is understood. Issued/fallback attribution is unresolved. Preserve
+live independent H/C rights, the budgets, and the narrow FloRA scope; personality
+and MFM remain external. FBM has145 validated procedure seeds. See the
+[completed run diagnosis](evidence/2026-10-05_bfff_completed_run_diagnosis.json).
+The connected three-arm case remains required once this boundary is resolved.
+
+## Previous continuation — reviewed correction applied; resume full pipeline
 
 The exact reviewed correction is published at `bfff869e5193cbccdb1b466c445076376e81f589`. The source-bound
 Linux run completed92 corrected checks without skips: real signed-H control and

@@ -1,17 +1,18 @@
 # FloRA
 
-**Current scope — 2026-10-04:** FloRA is a narrow prototype, not the complete
+**Current scope — 2026-10-05:** FloRA is a narrow prototype, not the complete
 Alice/Fable memory, experience or mission platform. Build only what its selected
 experiment needs, preserving Alice's contracts and chosen engines for those
 parts. Start a continuation with [the context record](docs/FLORA_CONTEXT.md)
 and [Alice's infrastructure map](docs/ALICE_INFRASTRUCTURE_MAP.md).
 The [current checkpoint](docs/VERIFICATION_CHECKPOINT_2026-10-03.md) records
-completed c70 runs:1003 component cases pass in each; physical PR50/53 and
-push49/53 pass, with response failures and incomplete history cases retained.
+completed bfff runs:1038 component cases pass in each; physical PR50/53 and
+push49/53 pass. Three failures remain in each: callback authority closure and
+two response-budget tests; push also has one incomplete retained-history case.
 The complete prototype is **not ready apart from the two models**, and this is
 more than latency debugging. Major evidence/state/judgment/outcome/comparison
-interfaces exist, while the actual frozen-phase operation and native callback
-ownership still need correction and complete synthetic pipeline acceptance.
+interfaces exist; final-callback authority closure needs a valid same-path control
+and causal diagnosis, followed by complete connected synthetic pipeline acceptance.
 The [build-readiness map](docs/FLORA_CONTEXT.md) separates implemented plumbing,
 connected physical synthetic tests, unfinished integration, and model-dependent
 evidence. Full-product inventory below is not a prototype completion checklist.

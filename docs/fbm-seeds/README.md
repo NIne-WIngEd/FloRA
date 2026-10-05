@@ -10,14 +10,15 @@ Run `python docs/fbm-seeds/validate_traces.py` from the repository root to check
 
 The schema's linked-case boundary also requires concrete eligible inputs, permission roles, a choice set, an independently checkable target or unresolved state, authority and outcome records, and source/generator split lineage before a procedure seed becomes a supervised or evaluable FBM example. Those linked cases and the actual builder remain separate work. The [readiness audit](../EXPERIMENT_READINESS_AUDIT.md) records the seed-field repair and the remaining experiment boundary.
 
-## Latest construction records — 2026-10-03
+## Latest construction records — 2026-10-05
 
-The corpus now contains **144 validated procedure traces**. This count describes
+The corpus now contains **145 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
 | Record | Observable operation |
 | --- | --- |
+| [Completed run and purpose-first diagnosis](2026-10-05_completed_run_purpose_first_diagnosis.jsonl) | Recover all26 source/pin-bound original logs and completed physical failures; distinguish reached Claim-read entry from downstream effects, preserve the missing connected comparison, and require a discriminating diagnostic before a coherent correction. |
 | [Test purpose and connected comparison audit](2026-10-04_test_purpose_connected_comparison_audit.jsonl) | Check positive/negative controls and actual equal-evidence oracles; identify missing same-case six-attempt physical coordinator connection and repeated fixture discovery, while preserving the running source. |
 | [Reviewed phase correction and pipeline continuation](2026-10-04_reviewed_phase_correction_rejoin_pipeline.jsonl) | Genuine prior-source failure,92 corrected Linux passes with711 unchanged source records; apply exact reviewed correction and resume ordinary full pipeline, with physical and learned results pending. |
 | [Original factory and real history control](2026-10-04_original_factory_and_real_history_control.jsonl) | Original-function/code admission, signed real-H control, clear source review and conditional Linux verification; complete physical phase boundary remains pending. |
