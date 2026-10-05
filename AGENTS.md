@@ -5,7 +5,16 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Latest recovery: callback correction84309e22 passes10 Windows cases, but fresh
+Current: isolated origin correction0b790365 source review is clear.188-file
+manifest matches;14 progressive cases include6 final-source cases. Real-H
+control/mutation then relevant components now run on Linux with a complete112
+fixture-file bundle. Initial incomplete bundle failed import, not behavior.
+Apply/publish source only after exact correctness checks. Full physical pipeline
+last completed original-input registration; next logged boundary covers capture,
+grants, observation and publication. Rejoin that pipeline; no full Alice platform.
+FBM has142 procedure seeds.
+
+Earlier recovery: callback correction84309e22 passes10 Windows cases, but fresh
 review rejects dynamically admitted factory/body and arbitrary bound methods.
 Both registered-H attempts stop before mutation because stand-in permissions
 are incompatible with the real history fence. Source remains unaccepted. A
