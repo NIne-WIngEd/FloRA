@@ -26,8 +26,11 @@ Fresh correction review accepts the namespace and earlier policy/proof repairs
 but rejects one remaining class: native copied callbacks still retain original
 lineage/history owners outside the map. Reproduce and close that known factory
 ownership contract before source publication or the complete pipeline gate.
-The previous corrected source stays frozen for its ongoing phase checks; a
-separate isolated repair is dispatched. No new repaired result is claimed.
+The previous corrected source completed all63 Linux cases with no skips; all411
+source hashes match before/after and the frozen host copy. It remains unaccepted.
+A new proof-port regression reproduces the retained-owner gap. Registered-H
+reproduction stopped at a correctly refused heldout-training fixture choice,
+before its target behavior. Correct that fixture; a separate factory repair continues.
 
 ## Latest continuation — October4 corrected owner map
 
@@ -40,8 +43,8 @@ private owner mapper and phase tests differ, while184 other files match.
 The corrected finite service/port graph preserves independently live authority,
 known opaque callback state and original fallback for unsupported representations.
 Five final-source Windows cases pass;11 distinct progressive cases are separate
-evidence. Corrected Linux native reads pass21/21. Fresh correction review and the
-complete Linux phase module are running. Source is not applied or published;
+evidence. Corrected Linux native reads21/21 and phase snapshots42/42 pass. Fresh
+review still rejects native retained-owner callbacks. Source is not applied or published;
 anchored observed binding, physical latency and learned behavior remain pending.
 Read the [candidate and correction receipt](evidence/2026-10-04_actual_phase_prepared_material_candidate.json).
 No new physical CI/model job, full Alice platform or producer training is added.
@@ -72,7 +75,7 @@ The complete replacement operation protocol remains unqualified; the bounded pre
 Alice frontier-watch is now3bea3318; its October4 intake and MemCodex primary
 method were reviewed. No production engine/model selection changes. See
 [query research](QUERY_PATH_RESEARCH_2026-10-03.md) and the operation assessment.
-FBM now contains139 procedure seeds. No learned result or model weights follow.
+FBM now contains140 procedure seeds. No learned result or model weights follow.
 No new serving change, blind rerun or diagnostic was dispatched by this audit.
 
 The later actual-consumer audit stopped the proposed session-owner patch before

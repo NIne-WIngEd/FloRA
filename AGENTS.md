@@ -8,15 +8,16 @@ before treating a pending or historical receipt as current.
 Current recovery: the original candidate Linux check completed82 cases,
 76 pass/6 known opaque-verifier capture errors; all411 source hashes are unchanged.
 A finite owner-map/admission correction is built only in an isolated source copy.
-Only2 files change;184 remain identical. Five final-source Windows cases and21
-Linux native-reader cases pass. Fresh correction review and the full Linux phase
-module are pending. Do not apply/publish serving source before their result.
+Only2 files change;184 remain identical. Five final-source Windows cases and63
+Linux component cases pass, without skips; all411 source hashes stay unchanged.
+Fresh review still rejects retained native callback owners. Do not publish that source.
 The candidate receipt contains both original rejection and corrected identities.
-No physical latency or learned result is established. FBM now has139 seeds.
+No physical latency or learned result is established. FBM now has140 seeds.
 Latest correction review still rejects native callbacks retaining original
 lineage/history controllers outside the finite map. A separate isolated factory
-ownership repair is dispatched while the prior corrected Linux phase run keeps
-unchanged source. Full prototype build is not ready apart from the models;
+ownership repair is dispatched; the prior corrected Linux phase run is complete
+on unchanged source. A proof-port RED reproduces the gap. Registered-H reproduction
+stopped before its target at a correctly refused heldout-training fixture choice. Full prototype build is not ready apart from the models;
 complete current-source synthetic pipeline acceptance remains required. Read the
 new build-readiness section in FLORA_CONTEXT; avoid module-count readiness claims.
 

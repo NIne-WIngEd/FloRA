@@ -148,7 +148,7 @@
     ]
   },
   "correction": {
-    "status": "built_isolated_not_applied; fresh review and complete Linux phase module pending",
+    "status": "completed_components_not_accepted; native retained-callback owner finding remains",
     "isolation": "186 runtime/test files hash-verified into a separate local repair copy; active verification source unchanged",
     "required_checks": [
       "Untouched existing opaque-verifier actual capture compatibility.",
@@ -190,35 +190,64 @@
       "ruling": "Not a final-source11-case suite; prior receipts and source limits retained."
     },
     "linux": {
-      "status": "running_partial",
+      "status": "passed",
       "container_id": "ebc9c7bb925c20320bb2567eb0baf9e1c0dc76a380af725a9ebdb5b2b4a5f36c",
       "groups": [
         "test_native_reads",
         "test_phase_snapshots"
       ],
-      "completed_group": {
-        "names": [
-          "test_native_reads"
-        ],
-        "command": [
-          "/usr/local/bin/python",
-          "-m",
-          "unittest",
-          "test_native_reads",
-          "-v"
-        ],
-        "exit_code": 0,
-        "status": "passed",
-        "tests": 21,
-        "unittest_seconds": 77.363,
-        "process_seconds": 83.388,
-        "log": "group-1.log"
-      },
       "source": "read-only isolated correction plus pinned Alice4f287a; source manifests before/after",
       "controller_sha256": "d15f64dfc5ab51078aa695c1c5f21449537ece75b4086280062d5c360ada9e2b",
       "network": "disabled",
       "deadline_seconds": 3600,
-      "physical_engines_run": false
+      "physical_engines_run": false,
+      "cases": 63,
+      "passed": 63,
+      "skipped": 0,
+      "completed_groups": [
+        {
+          "names": [
+            "test_native_reads"
+          ],
+          "command": [
+            "/usr/local/bin/python",
+            "-m",
+            "unittest",
+            "test_native_reads",
+            "-v"
+          ],
+          "exit_code": 0,
+          "status": "passed",
+          "tests": 21,
+          "unittest_seconds": 77.363,
+          "process_seconds": 83.388,
+          "log": "group-1.log"
+        },
+        {
+          "names": [
+            "test_phase_snapshots"
+          ],
+          "command": [
+            "/usr/local/bin/python",
+            "-m",
+            "unittest",
+            "test_phase_snapshots",
+            "-v"
+          ],
+          "exit_code": 0,
+          "status": "passed",
+          "tests": 42,
+          "unittest_seconds": 792.385,
+          "process_seconds": 795.836,
+          "log": "group-2.log"
+        }
+      ],
+      "all_groups_completed": true,
+      "source_files_verified": 411,
+      "sources_unchanged": true,
+      "current_host_source_hashes_match": true,
+      "completed_at_utc": "2026-10-05T00:22:41Z",
+      "total_seconds": 889.568
     },
     "fresh_review": {
       "status": "completed_not_accepted_one_P2_no_new_P1",
@@ -327,7 +356,7 @@
   },
   "native_callback_correction": {
     "status": "dispatched_to_separate_isolated_copy; no corrected result yet",
-    "base_source": "bed117ff/ddcb765 finite-owner candidate, currently frozen for Linux verification",
+    "base_source": "bed117ff/ddcb765 finite-owner candidate; complete63-case Linux components pass, source remains frozen",
     "snapshot_files_verified": 186,
     "scope": "Audit the known actual native controller-retaining callback factories once; reproduce original proof-port and original history-anchor mutation, then retain/map exact owners or remove their original-owner dereferences.",
     "primary_runtime_source": "https://docs.python.org/3.12/library/copy.html",
@@ -337,7 +366,27 @@
       "arbitrary callback-state recursion",
       "new Alice platform",
       "personality/MFM training"
-    ]
+    ],
+    "initial_red": {
+      "port": "original lineage.phase_receipt_for replacement during actual capture",
+      "cases": 1,
+      "failures": 1,
+      "seconds": 21.27,
+      "evidence": "Expected PermissionError was not raised; isolated pre-repair source",
+      "physical_engines_run": false
+    },
+    "registered_history_red": {
+      "status": "fixture_setup_error_before_target_behavior; not ownership reproduction",
+      "test": "test_phase_callback_owners.PreregisteredCallbackOwnerTest.test_original_history_anchor_replacement_refuses_before_effects",
+      "test_module_sha256": "d95826a75a368f2c3cd6b728f40291ca8ab7a98643effc9b8ddb9b1551fddb28",
+      "network": "disabled",
+      "physical_engines_run": false,
+      "cases": 1,
+      "errors": 1,
+      "seconds": 0.721,
+      "cause": "register_recipe correctly refused an eligible training choice for heldout material; fixture must declare the evaluation role before the ownership diagnostic can execute.",
+      "sources_unchanged": true
+    }
   },
   "prototype_build_state": {
     "full_build_ready_except_personality_mfm": false,
