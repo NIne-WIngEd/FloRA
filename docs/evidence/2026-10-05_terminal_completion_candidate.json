@@ -1,0 +1,153 @@
+{
+  "schema": "flora-terminal-completion-candidate-handoff-v1",
+  "recorded_at_utc": "2026-10-05T14:46:29.210428Z",
+  "status": "unpublished_unverified_candidate; same_source_control_and_basis_diagnostic_running; no_behavior_result_yet",
+  "purpose": "Close current-authority checks after final known lineage-wrapper callbacks, independently of optimization admission, so the bounded causal experiment can execute without bypassing its held-history/selected-context guarantees.",
+  "source": {
+    "baseline_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
+    "baseline_tree": "671942fc74e86bec94e0f8609190f0cbe062bbd3",
+    "Alice_contract_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+    "runtime_files": [
+      {
+        "path": "src/flora/selected/_phase_preparation.py",
+        "baseline_sha256": "0b7903651d61d461c0f9d063b3e9b5f59c9762c604648d9bb2b6dab2541880d4",
+        "candidate_sha256": "5af43d29eee078679c0c061182fc52275ce85be8d28016351278883439427d56"
+      },
+      {
+        "path": "src/flora/selected/judgment_lineage.py",
+        "baseline_sha256": "69d05ebf2813cc69ac8351c3a17288d0cd6a87e9ede147277ebfcaf407d738f1",
+        "candidate_sha256": "e87aba4671417ba241962999cbf35c7af8a063deff98ce6497c92a1298c1299c"
+      },
+      {
+        "path": "src/flora/selected/phase_snapshots.py",
+        "baseline_sha256": "1094d96e2ee298773d35cb66ccd27eb0d3ca397cdf175a38542a2ef1097974f9",
+        "candidate_sha256": "14d95629f6d855cbd6196b8a3a241ae1eef1f9f7eae386f15e674d5ea75b5f49"
+      },
+      {
+        "path": "src/flora/selected/phase_routes.py",
+        "baseline_sha256": "dc09f86287f4094f7445f11139a3077eb50aaa6df3694a935c590d06f46d7044",
+        "candidate_sha256": "b0c20dd2312ee18c36424703ba6549d5cfe9cec4e901173314042087e03bff0c"
+      }
+    ],
+    "new_test_file": {
+      "path": "tests/test_phase_terminal_completion.py",
+      "baseline_sha256": null,
+      "candidate_sha256": "0136e18c158badfa2afe820ef17514948b2205e4945c57ca6c5931ca73284e52"
+    },
+    "host_source_test_hashes_match_frozen_candidate_after_LF_normalization": true,
+    "manifest_sha256": "760ebcadd827d5cb693b9344dd55c364f48277c1ba6009fe26eaae4f8d164d04",
+    "runner_sha256": "56c2353d39daf59e5ac082ce2bb9587699c92fd349b2df2e873d44a051f77919",
+    "frozen_Python_source_files": 414,
+    "source_manifest_verified_by_runner_at_start": true,
+    "post_run_source_verification": "pending",
+    "runtime_publication": false
+  },
+  "previous_bound_evidence": {
+    "receipt": "docs/evidence/2026-10-05_v2_terminal_control_diagnostic.json",
+    "runtime_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
+    "actual_v2_unchanged_control": {
+      "cases": 1,
+      "status": "passed",
+      "seconds": 296.167,
+      "ACTIVE_present": false,
+      "issued_use_count": 0
+    },
+    "actual_v2_callback_H_denial": {
+      "cases": 1,
+      "status": "failed",
+      "seconds": 92.676,
+      "ACTIVE_present": false,
+      "issued_use_count": 0,
+      "Claim_entries_after_callback": 1,
+      "failure_scope": "First Claim-entry observer raises before the original read."
+    },
+    "original_runner_verdict": "negative_not_validated",
+    "recovered_verdict": "fallback_terminal_gap_reproduced_on_actual_v2_contract_fixture",
+    "observer_recovery": "JSON objects are present after unittest prefixes; preserve the original empty-observations receipt and recover its bounded observation separately."
+  },
+  "candidate_design": [
+    "Preserve definition-time native origins rather than trust replacement factories or writable function code.",
+    "Keep the exact per-call prepared revalidation through known wrappers and clear their per-call state in finally.",
+    "Native lineage publishes only to the immediate wrapper. That wrapper runs its own final callbacks, revalidates, and forwards the same check to an empty outer wrapper before returning.",
+    "Qualified update uses the same prepared metadata barriers; current H/C remains fresh and independent."
+  ],
+  "source_review_remaining_concern": {
+    "status": "hypothesis_pending_discriminating_result",
+    "mechanism": "Fallback PreparedCurrentContext.revalidate dynamically invokes mutable instance metadata_current. A final-slot callback might replace this saved basis and deny H, allowing later protected continuation.",
+    "decision": "Do not apply another corrective implementation before the same-source viable control and strict mutation/denial probe distinguish that explanation."
+  },
+  "diagnostic": {
+    "container_name": "flora-fallback-basis-diagnostic-20261005",
+    "container_id": "14a3e9b8788b30612d4bae1d7dbd9ceee20e62ad445dac10e4dabf9f76b03c15",
+    "image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+    "network": "none",
+    "platform": "Linux arm64 / Python3.12.15",
+    "deadline_seconds": 1200,
+    "started_at_utc": "2026-10-05T14:41:11Z",
+    "status_at_capture": "running",
+    "completed_groups_at_capture": 0,
+    "dispatched_tests": [
+      "test_01_unchanged_actual_v2_capture_control",
+      "test_06_saved_fallback_metadata_port_mutation_cannot_bypass_history_denial"
+    ],
+    "control_first": true,
+    "negative_only_after_valid_control": true,
+    "discriminating_oracle": "The unchanged candidate must complete actual-v2 capture. The strict negative must reach metadata-port replacement and H denial on the fallback path; a first Claim-entry observer distinguishes bypass before the original read.",
+    "interpretation": {
+      "control_fails": "Repair independently established setup or candidate defect before attributing the negative.",
+      "mutation_reached_then_Claim_entry": "Supported saved fallback-basis gap; preserve target failure and repair the finite prepared basis.",
+      "denial_closes": "Do not assume the proposed bypass; revisit the hypothesis and retain the bounded passing observation."
+    },
+    "planned_new_regression_cases": [
+      "test_01_unchanged_actual_v2_capture_control",
+      "test_02_final_slot_history_denial_closes_before_claim_entry",
+      "test_03_standalone_final_slot_context_withdrawal_refuses_lineage",
+      "test_04_qualified_last_source_callback_denial_refuses_lineage",
+      "test_05_inner_callback_cannot_publish_foreign_outer_completion",
+      "test_06_saved_fallback_metadata_port_mutation_cannot_bypass_history_denial"
+    ],
+    "planned_existing_regression_cases": [
+      "test_untouched_simple_namespace_verifier_uses_actual_capture",
+      "test_simple_namespace_keeps_opaque_state_but_seals_approval_port",
+      "test_unsupported_mapped_representation_falls_back_before_preparation",
+      "test_replaced_native_callback_factory_keeps_fresh_construction",
+      "test_unknown_bound_function_on_native_owner_keeps_fresh_construction",
+      "test_actual_operation_rejects_forgery_mutation_cross_thread_and_expiry",
+      "test_signed_fixture_update_exclusion_binds_actual_after_ablation_and_rechecks_denial"
+    ],
+    "broader_regression_suite_run": false,
+    "physical_pipeline_run_for_candidate": false
+  },
+  "conditional_coherent_next_step": "If the basis gap is reproduced, use the existing finite prepared named-port bindings at completion and qualified nested metadata barriers. Add no recursive discovery graph or registry. Then verify meaningful issued/fallback, H/C, final-callback, nested-publication and lifetime regressions before returning to the connected selected-engine causal pipeline.",
+  "research_basis": [
+    {
+      "url": "https://openfga.dev/docs/interacting/consistency",
+      "mechanism": "Higher consistency queries the database rather than serving cached authorization answers.",
+      "applicability": "Keep current authority independently fresh while reusing selected historical material.",
+      "limits": "A consistency principle, not proof of FloRA behavior, an adopted engine, or a latency prediction."
+    },
+    {
+      "url": "https://www.usenix.org/conference/atc19/presentation/pang",
+      "mechanism": "Zanzibar authorization respects causal ordering amid ACL and object-content changes.",
+      "applicability": "Historical content and current access rights must retain their distinct causal roles.",
+      "limits": "No transfer of the full authorization platform, scale numbers or latency claims to FloRA."
+    }
+  ],
+  "constraints": {
+    "baseline_response_budget_ms": 10000,
+    "native_response_budget_ms": 60000,
+    "CI_limit_minutes": 60,
+    "live_independent_H_C": true,
+    "personality_and_MFM_external": true,
+    "full_Alice_platform_required": false
+  },
+  "qualification": {
+    "candidate_component_pass": false,
+    "candidate_physical_pass": false,
+    "real_signed_permission_row_revocation_tested": false,
+    "latency_gain": false,
+    "learned_result": false,
+    "complete_synthetic_pipeline_accepted": false
+  },
+  "preservation": "Previous failed, incomplete and rejected receipts remain historical. This pending diagnostic is not a new successful regression suite or a published runtime correction."
+}
