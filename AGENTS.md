@@ -5,7 +5,22 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Latest continuation: bothc70b9a4e full runs37174847735/37174845109 are
+Current recovery: the original candidate Linux check completed82 cases,
+76 pass/6 known opaque-verifier capture errors; all411 source hashes are unchanged.
+A finite owner-map/admission correction is built only in an isolated source copy.
+Only2 files change;184 remain identical. Five final-source Windows cases and21
+Linux native-reader cases pass. Fresh correction review and the full Linux phase
+module are pending. Do not apply/publish serving source before their result.
+The candidate receipt contains both original rejection and corrected identities.
+No physical latency or learned result is established. FBM now has139 seeds.
+Latest correction review still rejects native callbacks retaining original
+lineage/history controllers outside the finite map. A separate isolated factory
+ownership repair is dispatched while the prior corrected Linux phase run keeps
+unchanged source. Full prototype build is not ready apart from the models;
+complete current-source synthetic pipeline acceptance remains required. Read the
+new build-readiness section in FLORA_CONTEXT; avoid module-count readiness claims.
+
+Earlier continuation: bothc70b9a4e full runs37174847735/37174845109 are
 completed failures after successful pinned Alice checkout. Each1003 component
 cases pass; physical PR50/2/1, push49/2/2 (pass/fail/incomplete). The general-memory
 baseline exceeds10000ms; the native recovery fixture times out during prepare
@@ -20,7 +35,7 @@ docs/evidence/2026-10-04_actual_phase_consumer_reachability.json. The replacemen
 boundary protocol is not implemented/qualified. Design live capture, explicit
 restore and actual frozen-phase preparation before another serving change.
 Do not return to helper/cache patches, blind retries or diagnostics as the default next step.
-Alice frontier-watch is3bea3318; main/API pins are unchanged. FBM has137 seeds.
+Alice frontier-watch is3bea3318; main/API pins are unchanged. FBM had137 seeds at that snapshot.
 The actual capture/constructor/observed-binding candidate is implemented,
 uncommitted and awaiting fresh review/Linux verification.75 distinct progressive
 Windows cases pass;5 fcntl-dependent modules and2 router cases are being checked
