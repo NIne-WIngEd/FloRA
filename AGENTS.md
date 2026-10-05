@@ -5,14 +5,27 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Current: isolated origin correction0b790365 source review is clear.188-file
-manifest matches;14 progressive cases include6 final-source cases. Real-H
-control/mutation then relevant components now run on Linux with a complete112
-fixture-file bundle. Initial incomplete bundle failed import, not behavior.
-Apply/publish source only after exact correctness checks. Full physical pipeline
-last completed original-input registration; next logged boundary covers capture,
-grants, observation and publication. Rejoin that pipeline; no full Alice platform.
-FBM has142 procedure seeds.
+Current: reviewed origin correction0b790365 is published atbfff869e5193cbccdb1b466c445076376e81f589.
+Linux completes92 corrected cases without skips: real signed-H control/mutation
+1 pass/172.029s and relevant native/phase/preregistration components91/886.964s.
+The prior source genuinely fails the target mutation after a passing control.
+All711 mounted source hashes match before/after and the host; all12 applied files
+match the reviewed188-file candidate. Ordinary full CI PR37263029377 and
+push37263026076 are running; recover their actual results next. The physical
+pipeline, latency and learned result remain unqualified.
+Four completed partial jobs retain known failures: baseline over10000ms and native
+prepare timeout under60000ms in both runs. No gain is demonstrated; remaining
+whole-history results are pending. Do not blindly retry or patch from this snapshot.
+Its last verified history boundary covers capture, grants, observation and
+publication after original-input registration. No full Alice platform or external
+personality/MFM model work. FBM has144 procedure seeds.
+Read the test-purpose audit in docs/EXPERIMENT_COORDINATOR.md. The physical
+two-stage case executes four native routes; the physical coordinator test stops
+at missing-adapter preflight. Separate passes do not establish their connected
+six-attempt comparison. Build that bounded test using existing concrete ports,
+with positive controls, exact evidence, failure denominators and passive recovery.
+The new H module discovers18 repeated fixture cases plus1 new regression; isolate
+the new regression in the next test change while keeping current CI source frozen.
 
 Earlier recovery: callback correction84309e22 passes10 Windows cases, but fresh
 review rejects dynamically admitted factory/body and arbitrary bound methods.

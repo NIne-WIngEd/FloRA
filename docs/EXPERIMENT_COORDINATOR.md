@@ -52,3 +52,52 @@ Missing dependencies produce blocked preflight; there is no default general mode
 Local tests use fictional selected row/log ports and real local encryption. They verify denied plaintext access, withdrawal during actual ciphertext fetch, final preappend checks, exact physical controller identity, source-role mapping, owned metadata reads, missing ports, cancellation and immutable interrupted recovery. One explicitly marked mechanical fixture retains six unavailable attempts and proves no behavioral result.
 
 `tests/integration/test_selected_experiment_coordinator.py` prepares actual XTDB/Kurrent/encrypted-object registration, signed owner grants, blocked preflight and private recovery. Its physical CI result remains separate from model qualification or experiment success. No learned model, consumer latency measurement, independently accepted Part 1 result or FBM transfer result is produced by this work.
+
+### October4 test-purpose audit and next connected case
+
+The frozen goal requires relevant correction/outcome change, irrelevant stability,
+a serious general-model-with-memory comparison, same-evidence attribution and
+isolated builder transfer. The current physical cases cover subsets of that
+infrastructure. A green suite is not a completed behavioral experiment.
+
+The two-stage preregistration test performs actual BEFORE sealing, changed Claim,
+state and artifact heads, qualified AFTER capture and four native routes. Its
+fictional signed producer proves the interfaces and chronology, not a learned
+update. Finalization rejects unequal captured context digests across full FloRA
+and ablation. The paired runner's separate contract test independently asserts
+equal actual context digests and all six attempts. The physical coordinator case
+supplies no adapters and asserts blocked preflight; it does not execute that
+same two-stage case through the three-arm runner. Do not combine these separate
+passes into a claim that this complete connection has been verified.
+
+The next bounded integration case should retain one actual registered two-stage
+history and its final authority, then supply the existing two NativeArmAdapter
+ports and GeneralMemoryArmAdapter to RegisteredExperimentCoordinator. Use actual
+owned selected readers, process/codec/meter contracts, the enrolled provider-attempt
+ledger and explicit independently scoped grants. Supplied fictional outputs must
+remain labeled transport/contract fixtures; no general-purpose fake judge or
+permission bypass may replace these ports.
+
+| Check | Independent observable assertion | Meaning of a failure |
+| --- | --- | --- |
+| Setup/control | Exact sources and signed purposes authenticate; unchanged operation succeeds before an adversarial callback | Setup refusal is not the target regression |
+| Chronology | BEFORE uses original immutable heads; update follows its seal/gate; AFTER full uses changed heads and ablation retains original judgment checkpoint | Frozen phase or treatment routing defect |
+| Comparison | Same original history and task per phase; byte/content-equivalent selected context for full/ablation; baseline selects from equal authorized originals | Unequal evidence invalidates attribution |
+| Execution | Two phases × three arms produce six persisted attempts, including refused, unavailable, invalid and timed-out outcomes | Omitted attempt invalidates denominators |
+| Recovery | Exact attempt identities and payloads recover without inference, new provider dispatch or replayed writes | Passive recovery or idempotency defect |
+| Withdrawal/tampering | Passing authorized control first; exact mutation point is reached; independently revoke H or C; no later forbidden private read/dispatch/append | Concrete authority-boundary defect; do not infer it from setup alone |
+| Qualification | Fixture results remain contract evidence; behavioral scoring waits for qualified external producers, pilot/frozen cohort and blind assessment | A fixture pass cannot establish learning or baseline superiority |
+
+Every negative variant must use a fresh declared case/run identity; it must not
+retry an already completed inference under the same frozen identity. Keep source,
+cohort and ancestry separation, current independent H/C checks, exact final binding
+and all frozen response/deadline budgets. Relevant, irrelevant and outcome quality,
+baseline competence, uncertainty and builder transfer require their own actual
+producer/evaluation evidence; this first connected case must not impersonate them.
+
+A source/read-only Linux discovery audit also found the new callback-owner module
+collects19 cases: its one new H regression plus nine imported and nine inherited
+fixture tests already covered in phase snapshots. This is repeated suite work,
+not19 new coverage cases or a runtime latency diagnosis. Keep the current CI source
+frozen; isolate the single new regression in the next test change without modifying
+its successful control, mutation trigger or protected-effect assertions.
