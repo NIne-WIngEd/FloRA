@@ -1,0 +1,273 @@
+{
+  "schema": "flora-finite-lineage-basis-diagnosis-v1",
+  "recorded_at_utc": "2026-10-05T15:24:23.358547Z",
+  "status": "supported_finite_correction; component_verification_pending",
+  "mandatory_method": "C:/Users/rayns/.codex/skills/diagonosis/SKILL.md applies to every agent including the main agent",
+  "claim": "Held evidence for FloRA causal comparison must retain live independent H/C before protected continuation; this is a component custody claim, not latency or learning.",
+  "valid_evidence": {
+    "control": {
+      "label": "actual_v2_control",
+      "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_01_unchanged_actual_v2_capture_control",
+      "status": "passed",
+      "exit_code": 0,
+      "cases": 1,
+      "seconds": 319.651,
+      "process_seconds": 324.015,
+      "log": "actual_v2_control.log",
+      "log_sha256": "986f21c55483c10421a0a48b8f8af3543a2075cf447bb7d8a4c6ab3135cdb249",
+      "observations": [
+        {
+          "active_preparation": false,
+          "callback_reached": true,
+          "capture_copy_observed": true,
+          "claim_read_entries_after_callback": 2471,
+          "consumer_is_original": false,
+          "consumer_provenance": "actual_custody_capture_copy",
+          "custody_history_authority_exact": true,
+          "evidence_kind": "contract_fixture",
+          "exact_consumer": null,
+          "exact_slot": true,
+          "issued_use_count": 0,
+          "native_preparation": null,
+          "schema": "flora-phase-terminal-completion-v1",
+          "shared_history_anchor_and_permissions": true,
+          "shared_preregistration": true,
+          "shared_runtime": true,
+          "variant": "unchanged-capture"
+        }
+      ]
+    },
+    "mutation": {
+      "label": "fallback_basis_mutation",
+      "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_06_saved_fallback_metadata_port_mutation_cannot_bypass_history_denial",
+      "status": "failed",
+      "exit_code": 1,
+      "cases": 1,
+      "seconds": 97.895,
+      "process_seconds": 101.775,
+      "log": "fallback_basis_mutation.log",
+      "log_sha256": "8119c1b890f7920d50af90d7a1410643030f1d2b2fccea244811d44f4246fd7e",
+      "observations": [
+        {
+          "active_preparation": false,
+          "callback_reached": true,
+          "capture_copy_observed": true,
+          "claim_read_entries_after_callback": 1,
+          "consumer_is_original": false,
+          "consumer_provenance": "actual_custody_capture_copy",
+          "custody_history_authority_exact": true,
+          "evidence_kind": "contract_fixture",
+          "exact_consumer": null,
+          "exact_slot": true,
+          "issued_use_count": 0,
+          "metadata_port_mutation_reached": true,
+          "native_preparation": null,
+          "schema": "flora-phase-terminal-completion-v1",
+          "shared_history_anchor_and_permissions": true,
+          "shared_preregistration": true,
+          "shared_runtime": true,
+          "variant": "fallback-metadata-port-denial"
+        }
+      ]
+    },
+    "matched_denial_only": {
+      "label": "matched_denial_only",
+      "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_02_final_slot_history_denial_closes_before_claim_entry",
+      "status": "passed",
+      "exit_code": 0,
+      "cases": 1,
+      "seconds": 99.448,
+      "process_seconds": 103.281,
+      "log": "matched_denial_only.log",
+      "log_sha256": "ebf7530c96bb2cf4bcf6fce546855de3499fa3d6e2cfa0e97dff54989981932f",
+      "observations": [
+        {
+          "active_preparation": false,
+          "callback_reached": true,
+          "capture_copy_observed": true,
+          "claim_read_entries_after_callback": 0,
+          "consumer_is_original": false,
+          "consumer_provenance": "actual_custody_capture_copy",
+          "custody_history_authority_exact": true,
+          "evidence_kind": "contract_fixture",
+          "exact_consumer": null,
+          "exact_slot": true,
+          "issued_use_count": 0,
+          "native_preparation": null,
+          "schema": "flora-phase-terminal-completion-v1",
+          "shared_history_anchor_and_permissions": true,
+          "shared_preregistration": true,
+          "shared_runtime": true,
+          "variant": "terminal-history-denial"
+        }
+      ]
+    },
+    "sources_unchanged": true,
+    "mounted_sources": 414,
+    "completed_diagnostic_receipt_sha256": "165916e03ffb2e22924fd4efb790d75789010c4e73318871609cd4e6153768da",
+    "matched_denial_receipt_sha256": "4c17fe58704e24067a76f4989a790f5a23777df2b09852116d2480eeb5bbc6b2",
+    "conclusion": "Unchanged capture passes. H denial alone closes before Claim entry. Replacing fallback metadata_current plus H denial reaches the first Claim-entry observer, which raises before the original reader."
+  },
+  "responsible_path": "Original bound revalidate was pinned, but its fallback shared algorithm dynamically resolved mutable metadata_current and its authority dependencies.",
+  "purpose": "Preserve the selected Claim/state/artifact lineage for the minimal causal experiment while present permissions remain independent. No full mission/memory platform is needed.",
+  "correction": [
+    "Capture existing finite prepared named-port readers immediately after preparation, before producer callbacks; retain thread, original bound check and readers in one synchronous immutable record.",
+    "Pin record identity before wrapper callbacks; verify finite bindings before/after original metadata and lightweight fallback authority guards; forward the same record only into an empty immediate outer collector.",
+    "Use an origin-validated private fallback_completion barrier in the shared owner/episode algorithm. Public revalidate and issued phase_use branch retain their interfaces; arbitrary metadata callbacks are not admitted.",
+    "Require the retained native/wrapper frame still be an ancestor on the current thread; wrapper finally cleanup and existing issued lifetime remain."
+  ],
+  "scope": {
+    "changed_files": [
+      {
+        "path": "src/flora/selected/_phase_preparation.py",
+        "previous_candidate_sha256": "5af43d29eee078679c0c061182fc52275ce85be8d28016351278883439427d56",
+        "candidate_sha256": "2b03562bf9528bae49776e232a2f359e6376aca0f4b241742dcb174709ca31db"
+      },
+      {
+        "path": "src/flora/selected/context_guard.py",
+        "previous_candidate_sha256": "73f59092d6dc6ee8983e47c34658efaa709f79ac52ab998703f931d01cc24408",
+        "candidate_sha256": "259036dfb654f840fa874838460e023c7d6e4bbb0c750918303e65b14c51603e"
+      },
+      {
+        "path": "src/flora/selected/judgment_lineage.py",
+        "previous_candidate_sha256": "e87aba4671417ba241962999cbf35c7af8a063deff98ce6497c92a1298c1299c",
+        "candidate_sha256": "04de657e4a2f98abadce80a9330a29fb4d1572bd1c67a5b206f093bc216e5a09"
+      },
+      {
+        "path": "src/flora/selected/phase_snapshots.py",
+        "previous_candidate_sha256": "14d95629f6d855cbd6196b8a3a241ae1eef1f9f7eae386f15e674d5ea75b5f49",
+        "candidate_sha256": "87103b4390931d0d50524de1693cde2e27ebdc3d54333ab78e931ef46081a079"
+      },
+      {
+        "path": "src/flora/selected/phase_routes.py",
+        "previous_candidate_sha256": "b0c20dd2312ee18c36424703ba6549d5cfe9cec4e901173314042087e03bff0c",
+        "candidate_sha256": "ad6e858dc51b242c0b9a9f20d198a1662194b3652e1391cc54451672f8ba01b3"
+      },
+      {
+        "path": "tests/test_phase_terminal_completion.py",
+        "previous_candidate_sha256": "2f43310de22c5a4035d6e028e3d36edc551a12debfeed91fde8b1baf5350d9fa",
+        "candidate_sha256": "a9624426a58dd0beb42a0eb01751312a18af3ca1a2499a115b004f1f18584cb4"
+      }
+    ],
+    "runtime_files": 5,
+    "admission_widened": false,
+    "new_registry": false,
+    "full_Alice_platform": false,
+    "personality_and_MFM": "external",
+    "product_budgets_unchanged": true
+  },
+  "research": [
+    {
+      "source": "https://www.usenix.org/conference/atc19/presentation/pang",
+      "mechanism": "Authorization follows causal changes to permissions and content.",
+      "transfer_limit": "Fresh authority principle only; no Zanzibar adoption or performance extrapolation."
+    },
+    {
+      "source": "https://openfga.dev/docs/interacting/consistency",
+      "mechanism": "Cached answers may omit immediate permission changes; explicit higher consistency bypasses caches.",
+      "transfer_limit": "No permission-answer cache is introduced. This mutable local-port defect is not evidence of an OpenFGA or SQL cache problem."
+    },
+    {
+      "source": "FloRA:src/flora/selected/source_closure.py",
+      "mechanism": "Existing frozen _ReaderBinding seals exact finite port identities and code without capturing permission answers.",
+      "transfer_limit": "Reuse existing mechanism, not recursive owner discovery."
+    }
+  ],
+  "test_validity": {
+    "original_faulty_copy_observer_preserved": true,
+    "superseded_attempt": "work/phase-terminal-finite-basis-20261005/supersession.json",
+    "superseded_reason": "Interrupted before any completed case to align case05 foreign-record intervention with the new three-field protocol. Runtime unchanged; case09 final observers were already correct.",
+    "current_case05": "Real independent original preparation, original bound check, and valid finite reader tuple; nonempty foreign outer publication must be refused.",
+    "current_case09": "SQL/ciphertext observers remain installed across successful control and saved-barrier expiry probe, preventing an observer change from explaining refusal."
+  },
+  "verification": {
+    "name": "flora-finite-basis-final-verification-20261005",
+    "container_id": "60c3a0171185050f89138280a2e4c451c933825c41241ccb8eaec27b945cff5c",
+    "image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+    "network": "none",
+    "deadline_seconds": 4800,
+    "source_files": 414,
+    "planned_cases": 16,
+    "manifest_sha256": "bdb1bbd1b45f50dc87a73adc9e3d3a4b77b820772ee07bfb08c4439f505454e2",
+    "product_budgets_unchanged": true,
+    "planned_tests": [
+      [
+        "actual_v2_control",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_01_unchanged_actual_v2_capture_control"
+      ],
+      [
+        "original_terminal_H_denial",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_02_final_slot_history_denial_closes_before_claim_entry"
+      ],
+      [
+        "independent_C_denial",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_03_standalone_final_slot_context_withdrawal_refuses_lineage"
+      ],
+      [
+        "qualified_final_H_denial",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_04_qualified_last_source_callback_denial_refuses_lineage"
+      ],
+      [
+        "nested_publication_tampering",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_05_inner_callback_cannot_publish_foreign_outer_completion"
+      ],
+      [
+        "fallback_metadata_port_mutation",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_06_saved_fallback_metadata_port_mutation_cannot_bypass_history_denial"
+      ],
+      [
+        "07_early_phase_receipt_cannot_bless_changed_fallback_metadata_port",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_07_early_phase_receipt_cannot_bless_changed_fallback_metadata_port"
+      ],
+      [
+        "08_inner_collector_cannot_replace_pinned_record_with_same_check",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_08_inner_collector_cannot_replace_pinned_record_with_same_check"
+      ],
+      [
+        "09_saved_native_barriers_expire_when_original_call_returns",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_09_saved_native_barriers_expire_when_original_call_returns"
+      ],
+      [
+        "issued_original_control",
+        "test_phase_snapshots.PhaseDefaultVerifierTest.test_untouched_simple_namespace_verifier_uses_actual_capture"
+      ],
+      [
+        "issued_live_port_and_one_assembly",
+        "test_phase_snapshots.PhaseDefaultVerifierTest.test_simple_namespace_keeps_opaque_state_but_seals_approval_port"
+      ],
+      [
+        "unsupported_fallback_control",
+        "test_phase_snapshots.PhaseDefaultVerifierTest.test_unsupported_mapped_representation_falls_back_before_preparation"
+      ],
+      [
+        "replaced_factory_fallback",
+        "test_phase_snapshots.PhaseDefaultVerifierTest.test_replaced_native_callback_factory_keeps_fresh_construction"
+      ],
+      [
+        "unknown_bound_fallback",
+        "test_phase_snapshots.PhaseDefaultVerifierTest.test_unknown_bound_function_on_native_owner_keeps_fresh_construction"
+      ],
+      [
+        "issued_lifetime_boundaries",
+        "test_phase_snapshots.PhaseSnapshotTest.test_actual_operation_rejects_forgery_mutation_cross_thread_and_expiry"
+      ],
+      [
+        "existing_after_ablation_proof",
+        "test_phase_snapshots.PhaseSnapshotTest.test_signed_fixture_update_exclusion_binds_actual_after_ablation_and_rechecks_denial"
+      ]
+    ],
+    "status": "pending",
+    "local_result_area": "work/phase-terminal-finite-basis-final-tests-20261005/results",
+    "runner_sha256": "cae360e45910b7129d5f9302b6f6f768a0dacf4002f9293c003ecac3db076dd1",
+    "execution_cap_explanation": "4800 seconds for nine new boundaries plus seven existing affected cases; the unused smaller template was not a product acceptance limit.",
+    "source_post_run_verification": "pending"
+  },
+  "limits": [
+    "Negative diagnostic stopped before original Claim read; no later SQL/ciphertext/decrypt/inference/append outcome is established by that failure.",
+    "Metadata callback denial is not real signed permission-row revocation.",
+    "BEFORE/full returns from update-policy verification without nested proof I/O; no such coverage is claimed.",
+    "Metadata substitution during real AFTER-ablation proof I/O remains a direct-injection coverage gap; existing AFTER live-denial proof check is included.",
+    "Local candidate source is unpublished and unqualified. No physical pipeline, latency improvement, or learning result."
+  ],
+  "next_action": "Recover the frozen verification once. Validate any failed test before further architecture changes. If all relevant checks pass, return to the connected selected-engine causal pipeline under unchanged product limits; diagnose latency using measured stage/query evidence and applicable project/frontier research."
+}
