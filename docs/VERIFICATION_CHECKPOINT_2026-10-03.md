@@ -1,6 +1,31 @@
 # FloRA verification checkpoint — 2026-10-03
 
-## Current continuation — finite prepared bindings; verification pending
+## Current continuation — temporal fixture corrected; identical-runtime verification pending
+
+The final finite-basis run completed3 passes, then case04 failed during route
+setup: the admission-only cursor omitted a requested temporal column. The
+qualified callback/control/intervention never ran. All414 source and4 log hashes
+are verified. This is a composed fixture defect, not a qualified runtime verdict.
+
+Only `_qualified_before` and a module import change: reuse existing `PhaseSQL`,
+rebind shared canonical controllers and prior custody, and assert history row
+shape plus captured projection occurrence before restoration. XTDB2.1.0 upstream
+confirms nullable projected ends differ from missing fields; no runtime default
+or architecture change is made. Synthetic history does not qualify real time.
+
+The identical-runtime continuation `flora-temporal-fixture-final-recovery-20261005`
+runs15 affected/unrun cases (original metadata replacement first, then qualified
+restoration and two existing history checks); unchanged completed01–03 are
+retained after AST comparison. Same offline image/414 hashes/4800-second
+verification cap; all product limits unchanged. Recover its receipt next.
+
+The five-file candidate remains local/unqualified; published runtime is bfff869e.
+Physical pipeline, latency and learning remain unproved. Direct AFTER-ablation
+metadata-substitution proof-I/O coverage remains open. Personality/MFM are
+external; preserve FloRA's narrow scope. FBM has151 validated procedure seeds.
+Read the [temporal fixture diagnosis](evidence/2026-10-05_temporal_restoration_fixture_diagnosis.json).
+
+## Previous continuation — finite prepared bindings; verification pending
 
 The corrected capture control passes. On identical source, final H denial alone
 closes before Claim entry; replacing the fallback metadata port defeats that

@@ -5,17 +5,17 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Current — October5: standalone `diagonosis` is mandatory for every agent,
-including the main agent, on every failure needing diagnosis. Corrected copy
-observer control and matched denial-only pass; metadata replacement/H denial
-reaches the first Claim-entry sentinel before its original reader. The supported
-five-file finite binding correction is local and unqualified. Recover
-`flora-finite-basis-final-verification-20261005`: sixteen frozen cases, no product
-budget change. Validate any failure before more correction. Direct mutation
-during actual AFTER-ablation proof I/O remains uncovered; BEFORE/full is not that
-branch. Published runtime stays bfff869e. No physical latency or learning gain;
-external personality/MFM and narrow prototype scope remain. FBM has150 validated
-procedure seeds. Read `docs/evidence/2026-10-05_finite_lineage_basis_diagnosis.json`.
+Current — October5: mandatory standalone `diagonosis` applies to every agent,
+including the main agent. Final finite-basis verification:3passes then case04
+fixture setup KeyError `_valid_to`, before qualified intervention. Sources/logs
+verified. Correct only the qualified helper to use existing coherent PhaseSQL;
+do not add production row defaults. Recover identical-runtime
+`flora-temporal-fixture-final-recovery-20261005`:15 affected/unrun cases; unchanged
+01–03 passes retained by AST. Runtime source unchanged and still unqualified;
+published baseline bfff869e. No product limit change, physical latency or learning
+gain. Direct AFTER-ablation metadata substitution remains uncovered. Keep external
+personality/MFM and narrow FloRA scope. FBM151 validated procedure seeds. Read
+`docs/evidence/2026-10-05_temporal_restoration_fixture_diagnosis.json`.
 
 Previous: reviewed origin correction0b790365 is published atbfff869e5193cbccdb1b466c445076376e81f589.
 Linux completes92 corrected cases without skips: real signed-H control/mutation
