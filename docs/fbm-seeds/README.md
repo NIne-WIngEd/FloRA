@@ -12,7 +12,7 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-05
 
-The corpus now contains **150 validated procedure traces**. This count describes
+The corpus now contains **151 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
@@ -64,3 +64,5 @@ remain linked snapshots; new outcomes do not rewrite an earlier failure or pendi
 - [Capture-copy observer diagnosis](2026-10-05_terminal_copy_observer_diagnosis.jsonl): preserve the false control verdict and retry only the observer on identical runtime source.
 
 - [Finite lineage basis diagnosis](2026-10-05_finite_lineage_basis_diagnosis.jsonl): validate matched controls, reuse finite prepared bindings, preserve lifetime and proof-coverage limits.
+
+- [Temporal restoration fixture diagnosis](2026-10-05_temporal_restoration_fixture_diagnosis.jsonl): validate setup and pinned row contracts, reuse coherent fixtures, retain unaffected evidence.

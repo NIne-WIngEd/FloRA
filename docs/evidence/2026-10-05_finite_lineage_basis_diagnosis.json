@@ -269,5 +269,11 @@
     "Metadata substitution during real AFTER-ablation proof I/O remains a direct-injection coverage gap; existing AFTER live-denial proof check is included.",
     "Local candidate source is unpublished and unqualified. No physical pipeline, latency improvement, or learning result."
   ],
-  "next_action": "Recover the frozen verification once. Validate any failed test before further architecture changes. If all relevant checks pass, return to the connected selected-engine causal pipeline under unchanged product limits; diagnose latency using measured stage/query evidence and applicable project/frontier research."
+  "next_action": "Recover the frozen verification once. Validate any failed test before further architecture changes. If all relevant checks pass, return to the connected selected-engine causal pipeline under unchanged product limits; diagnose latency using measured stage/query evidence and applicable project/frontier research.",
+  "followup": "docs/evidence/2026-10-05_temporal_restoration_fixture_diagnosis.json",
+  "completed_verification_summary": {
+    "status": "3pass; qualified setup error; remaining unrun",
+    "original_receipt_sha256": "13611990acc16a18f7b3b6f2538ab9bee4e5536b258df134d926944f1406cbb4",
+    "runtime_changed": false
+  }
 }

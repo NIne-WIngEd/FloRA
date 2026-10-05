@@ -1,0 +1,252 @@
+{
+  "schema": "flora-temporal-restoration-fixture-diagnosis-v1",
+  "recorded_at_utc": "2026-10-05T15:59:48.314417Z",
+  "status": "fixture_contract_corrected; verification_pending",
+  "mandatory_method": "diagonosis eight steps, including the main agent",
+  "evidence_validation": {
+    "source_files": 414,
+    "all_source_hashes_match": true,
+    "all_four_log_hashes_match": true,
+    "runner_hash_matches": true,
+    "original_receipt_sha256": "13611990acc16a18f7b3b6f2538ab9bee4e5536b258df134d926944f1406cbb4",
+    "original_manifest_sha256": "bdb1bbd1b45f50dc87a73adc9e3d3a4b77b820772ee07bfb08c4439f505454e2",
+    "completed_groups": [
+      {
+        "label": "actual_v2_control",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_01_unchanged_actual_v2_capture_control",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 297.38,
+        "process_seconds": 301.627,
+        "log": "actual_v2_control.log",
+        "log_sha256": "fa26083d1aa13295c2820d6e5a05af5de1dfcb24351e00fdf4eeebfc80023b81",
+        "observations": [
+          {
+            "active_preparation": false,
+            "callback_reached": true,
+            "capture_copy_observed": true,
+            "claim_read_entries_after_callback": 2471,
+            "consumer_is_original": false,
+            "consumer_provenance": "actual_custody_capture_copy",
+            "custody_history_authority_exact": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "exact_slot": true,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "schema": "flora-phase-terminal-completion-v1",
+            "shared_history_anchor_and_permissions": true,
+            "shared_preregistration": true,
+            "shared_runtime": true,
+            "variant": "unchanged-capture"
+          }
+        ]
+      },
+      {
+        "label": "original_terminal_H_denial",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_02_final_slot_history_denial_closes_before_claim_entry",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 94.023,
+        "process_seconds": 98.079,
+        "log": "original_terminal_H_denial.log",
+        "log_sha256": "bd8dfd8c901216beda042b8813e3ab1154b23a2fd54f13f3b0dd28d1cb3f1d7f",
+        "observations": [
+          {
+            "active_preparation": false,
+            "callback_reached": true,
+            "capture_copy_observed": true,
+            "claim_read_entries_after_callback": 0,
+            "consumer_is_original": false,
+            "consumer_provenance": "actual_custody_capture_copy",
+            "custody_history_authority_exact": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "exact_slot": true,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "schema": "flora-phase-terminal-completion-v1",
+            "shared_history_anchor_and_permissions": true,
+            "shared_preregistration": true,
+            "shared_runtime": true,
+            "variant": "terminal-history-denial"
+          }
+        ]
+      },
+      {
+        "label": "independent_C_denial",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_03_standalone_final_slot_context_withdrawal_refuses_lineage",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 60.575,
+        "process_seconds": 64.616,
+        "log": "independent_C_denial.log",
+        "log_sha256": "6f6c763543c0f356a7e6749956621923e6663d3029c5a8b20650ea8217fbe48e",
+        "observations": [
+          {
+            "active_preparation": false,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "schema": "flora-phase-terminal-completion-v1",
+            "variant": "standalone-context-control"
+          },
+          {
+            "active_preparation": false,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "schema": "flora-phase-terminal-completion-v1",
+            "variant": "standalone-context-denial"
+          }
+        ]
+      },
+      {
+        "label": "qualified_final_H_denial",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_04_qualified_last_source_callback_denial_refuses_lineage",
+        "status": "failed",
+        "exit_code": 1,
+        "cases": 1,
+        "seconds": 288.705,
+        "process_seconds": 292.692,
+        "log": "qualified_final_H_denial.log",
+        "log_sha256": "f3496722c6216ee904a437242c94f87d31e10f137a2b3e096798467cb093534a",
+        "observations": []
+      }
+    ],
+    "total_seconds": 758.561,
+    "failure_stage": "Case04 _qualified_before -> capture_route -> phase preparation -> PinnedClaimAuthority._check_claim -> current_history. No qualified intervention observation or denial assertion ran."
+  },
+  "claim": "Qualified phase reuse must retain an actual historical occurrence of the captured Claim and independent current H/C. This setup failure cannot judge the qualified terminal check.",
+  "project_meaning": "FloRA needs the bounded historical evidence view for matched BEFORE/AFTER causal comparison. Live quarantine and permissions still control use; restoring history does not rewind live authority or require the full Alice entity platform.",
+  "responsible_piece": {
+    "producer": "Composed callback fixture uses _AdmissionSQLCalls via _StateSQLCalls",
+    "consumer": "XTDBClaimAuthority.current_history requests record_json and four temporal columns over ALL valid and system time",
+    "mismatch": "Admission cursor returns inserted document dictionaries. Open-ended _valid_to and generated system columns are absent, and only latest rows are retained.",
+    "first_departure": "KeyError '_valid_to' during test setup, before the intended intervention",
+    "why_needed": "PinnedClaimAuthority proves the frozen projection occurred in canonical history while checking present availability, immutable version and evidence."
+  },
+  "research": {
+    "version": "XTDB2.1.0 from compose.integration.yml",
+    "upstream_commit": "ca78d5609dfa7393c465c1e1435a8f20fa3eb371",
+    "source": "https://github.com/xtdb/xtdb/blob/ca78d5609dfa7393c465c1e1435a8f20fa3eb371/core/src/main/kotlin/xtdb/operator/scan/BitemporalConsumer.kt#L46",
+    "mechanism": "Explicitly requested temporal vectors exist. Unbounded valid/system ends are SQL NULL, not absent projected fields.",
+    "adopted": "Reuse existing test_phase_snapshots.PhaseSQL and its coherent connection wiring.",
+    "transfer_limit": "Synthetic temporal placeholders test fixture contracts only; they do not qualify physical XTDB ordering or interval semantics."
+  },
+  "correction": {
+    "runtime_unchanged": true,
+    "production_missing_field_defaults_added": false,
+    "changed_method": "_qualified_before",
+    "extra_import": "test_phase_snapshots as phase_fixture",
+    "test_sha256": "89f352fd5bc152c71fee45f798bf2d86a0778e21ed8ce26a5a05f43e4500bc72",
+    "mechanism": "Install existing PhaseSQL before registration; rebind registry, candidates, Claim authority, gateway, state, artifacts, private controllers, runtime.private and prior custody to one connection. Assert runtime/controller identities, complete current_history row shape and captured projection occurrence before restoration.",
+    "affected_cases": [
+      "04 qualified source denial",
+      "05 foreign outer publication",
+      "08 same-check reader substitution"
+    ],
+    "completed_passes_preserved": "01 capture control,02 original H denial,03 independent C denial; their bodies and unchanged common helpers match the failed frozen source by AST."
+  },
+  "launcher_preflight": {
+    "preserved": "work/phase-terminal-temporal-fixture-20261005/preflight_failure.json",
+    "dispatched": false,
+    "cause": "Guard incorrectly compared unrelated dirty checkout files to the baseline. Candidate verification intentionally preserves frozen baseline source outside the five candidate runtime files.",
+    "correction": "Compare every copied source to the prior freeze; verify the five intended runtime files also match the working candidate. Leave unrelated dirty files untouched. All414 mounted hashes remain required."
+  },
+  "verification": {
+    "name": "flora-temporal-fixture-final-recovery-20261005",
+    "container_id": "5a65fc5d12c55240c118f5b9ca12fcd12b2f73248f5b4af766d0c1109c279fbf",
+    "image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+    "network": "none",
+    "deadline_seconds": 4800,
+    "source_files": 414,
+    "planned_cases": 15,
+    "carried_verified_cases": 3,
+    "manifest_sha256": "db6093feb37969fbf642f01d588b4c2998578f66e0e269a71c9baa55a8ecc0a5",
+    "runtime_unchanged": true,
+    "product_budgets_unchanged": true,
+    "planned_tests": [
+      [
+        "fallback_metadata_port_mutation",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_06_saved_fallback_metadata_port_mutation_cannot_bypass_history_denial"
+      ],
+      [
+        "qualified_final_H_denial",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_04_qualified_last_source_callback_denial_refuses_lineage"
+      ],
+      [
+        "nested_publication_tampering",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_05_inner_callback_cannot_publish_foreign_outer_completion"
+      ],
+      [
+        "07_early_phase_receipt_cannot_bless_changed_fallback_metadata_port",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_07_early_phase_receipt_cannot_bless_changed_fallback_metadata_port"
+      ],
+      [
+        "08_inner_collector_cannot_replace_pinned_record_with_same_check",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_08_inner_collector_cannot_replace_pinned_record_with_same_check"
+      ],
+      [
+        "09_saved_native_barriers_expire_when_original_call_returns",
+        "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_09_saved_native_barriers_expire_when_original_call_returns"
+      ],
+      [
+        "issued_original_control",
+        "test_phase_snapshots.PhaseDefaultVerifierTest.test_untouched_simple_namespace_verifier_uses_actual_capture"
+      ],
+      [
+        "issued_live_port_and_one_assembly",
+        "test_phase_snapshots.PhaseDefaultVerifierTest.test_simple_namespace_keeps_opaque_state_but_seals_approval_port"
+      ],
+      [
+        "unsupported_fallback_control",
+        "test_phase_snapshots.PhaseDefaultVerifierTest.test_unsupported_mapped_representation_falls_back_before_preparation"
+      ],
+      [
+        "replaced_factory_fallback",
+        "test_phase_snapshots.PhaseDefaultVerifierTest.test_replaced_native_callback_factory_keeps_fresh_construction"
+      ],
+      [
+        "unknown_bound_fallback",
+        "test_phase_snapshots.PhaseDefaultVerifierTest.test_unknown_bound_function_on_native_owner_keeps_fresh_construction"
+      ],
+      [
+        "issued_lifetime_boundaries",
+        "test_phase_snapshots.PhaseSnapshotTest.test_actual_operation_rejects_forgery_mutation_cross_thread_and_expiry"
+      ],
+      [
+        "existing_after_ablation_proof",
+        "test_phase_snapshots.PhaseSnapshotTest.test_signed_fixture_update_exclusion_binds_actual_after_ablation_and_rechecks_denial"
+      ],
+      [
+        "temporal_old_projection_preserved",
+        "test_phase_snapshots.PhaseSnapshotTest.test_head_replacement_uses_pinned_actual_historical_claim_projection"
+      ],
+      [
+        "invented_history_refused",
+        "test_phase_snapshots.PhaseSnapshotTest.test_cached_manifest_cannot_invent_a_historical_projection"
+      ]
+    ],
+    "status": "pending",
+    "source_post_run_verification": "pending",
+    "local_result_area": "work/phase-terminal-temporal-fixture-final-20261005/results",
+    "order": "Originally demonstrated metadata replacement first; qualified control/intervention next; remaining unrun/affected cases and two established historical-occurrence checks.",
+    "execution_cap_seconds": 4800,
+    "product_limits_unchanged": true
+  },
+  "limits": [
+    "Only three prior component cases passed; the remaining finite correction is unqualified.",
+    "No direct metadata-substitution injection during real AFTER-ablation proof I/O; BEFORE/full has no nested proof branch.",
+    "No physical pipeline, latency improvement, learned behavior, or release qualification.",
+    "Personality/MFM remain external; no full Alice memory/mission platform."
+  ],
+  "next_action": "Recover the source-bound fixture-corrected result once. Validate the first failure/test before further repair. If all affected checks pass, return to the connected selected-engine causal pipeline and measure remaining stage/query latency under unchanged product limits."
+}
