@@ -1,6 +1,48 @@
 # FloRA verification checkpoint — 2026-10-03
 
-## Current continuation — terminal correction candidate; basis diagnostic pending
+## Current continuation — faulty observer corrected; same-runtime retry pending
+
+The first candidate control completed capture and snapshot assertions, then
+failed because its observer required the original consumer. Custody deliberately
+uses a copy. Preserve the failure: the mutation case did not run, and this result
+does not establish a runtime defect.
+
+Only the test observer changed. It now binds the actual copied consumer through
+exact original wrapper/capture frames; direct-call identity and the strict Claim
+oracle remain. All four runtime files are byte-identical. The corrected control
+and metadata-port mutation/H-denial probe are running offline in
+`flora-copy-observer-basis-diagnostic-20261005` under the same20-minute cap.
+Recover the control before interpreting the negative. The candidate, broader
+regressions, physical pipeline, latency and learned result remain unqualified.
+Personality/MFM remain external; no full Alice platform is required.
+FBM has149 validated procedure seeds. See the
+[observer diagnosis and retry](evidence/2026-10-05_terminal_copy_observer_diagnosis.json).
+
+## Previous continuation — faulty copied-consumer observer; corrected retry pending
+
+The first candidate basis diagnostic stops at its control:1 failed case/335.734s,
+343.684s total, completed2026-10-05T14:46:55Z. Capture returns and snapshot checks
+pass, then the test asserts `callback_reached=false`. The metadata-port mutation
+never runs. All414 frozen source hashes remain unchanged; retain the failed
+receipt/log. This is an observer fault, not a runtime or basis-bypass verdict.
+
+Capture intentionally shallow-copies lineage and binds the copied consumer to
+its capture runtime and checked H authority. The observer incorrectly required
+the original consumer's identity. Only the test is corrected: locate the exact
+wrapper under the actual capture ancestor, whose original `lineage` and copied
+`capturing` locals bind that consumer. Standalone identity checks and the
+Claim-entry oracle stay strict; the four runtime files are byte-identical.
+
+The observer-only retry runs just corrected control01 followed by negative06,
+offline with a1200-second cap and414 frozen sources. A viable control must pass
+before interpreting the metadata-basis negative or applying a finite-port
+correction. Broader regressions and the connected physical pipeline remain
+unexecuted for this candidate. No runtime is published; no latency, real signed
+permission-row revocation or learned result follows. Personality/MFM remain
+external. FBM has149 validated procedure seeds. See the
+[observer diagnosis and pending retry](evidence/2026-10-05_terminal_copy_observer_diagnosis.json).
+
+## Previous continuation — terminal correction candidate; basis diagnostic pending
 
 Four local runtime files now carry an unverified terminal correction: preserved
 definition-time origins, per-call wrapper state, the same prepared metadata for

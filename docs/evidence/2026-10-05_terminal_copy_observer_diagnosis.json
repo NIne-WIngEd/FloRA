@@ -1,0 +1,65 @@
+{
+  "schema": "flora-copy-observer-diagnosis-v1",
+  "recorded_at_utc": "2026-10-05T15:01:05.535017Z",
+  "status": "faulty_control_observer_preserved; corrected_observer_only_retry_pending",
+  "first_attempt": {
+    "container": "flora-fallback-basis-diagnostic-20261005",
+    "verdict": "control_failed",
+    "cases": 1,
+    "case_seconds": 335.734,
+    "total_seconds": 343.684,
+    "completed_at_utc": "2026-10-05T14:46:55Z",
+    "sources_unchanged": true,
+    "source_files": 414,
+    "log_sha256": "7d7dcdfc48c38b84b0231d77010e41b3e13a8b6c155f46ada2ce457782309f45",
+    "observed": "Capture returned a v2 snapshot and passed its schema/anchor/history/phase assertions; the final callback observer stayed false.",
+    "unexecuted": "The mutation case and positive post-callback intent/metadata assertions did not execute."
+  },
+  "test_fault": {
+    "source": "phase_snapshots.py deliberately copies lineage and installs the actual capture runtime and checked history authority.",
+    "observer": "The test required wrapper self to be the supplied original consumer; it missed the actual copied consumer.",
+    "meaning": "This failed control does not establish a runtime failure or validate the metadata-basis hypothesis."
+  },
+  "correction": {
+    "only_test_changed": true,
+    "runtime_files_unchanged": 4,
+    "new_test_sha256": "2f43310de22c5a4035d6e028e3d36edc551a12debfeed91fde8b1baf5350d9fa",
+    "mechanism": "Identify the exact original wrapper and enclosing custody capture frame whose lineage is the supplied original and capturing is the reached consumer. Verify actual runtime, H, anchor and slot; observe the reached consumer.",
+    "preserved": "Strict direct identity for standalone/qualified paths, original Claim-entry oracle, independent H/C and effect assertions.",
+    "qualification": "Syntax/source provenance checked; corrected behavior remains pending."
+  },
+  "retry": {
+    "name": "flora-copy-observer-basis-diagnostic-20261005",
+    "container_id": "0c29065f11fb857ba9262da30cb4f99c9c53fa454b515ad6dab22fbb8e06fba4",
+    "image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+    "network": "none",
+    "deadline_seconds": 1200,
+    "observer_only_retry": true,
+    "source_files": 414,
+    "manifest_sha256": "53fecd5c92af871f2173bd2d5d884a13b7b823890897d2699979b01b9c7c4da4",
+    "local_result_area": "work/phase-terminal-copy-observer-20261005/results",
+    "dispatched_cases": [
+      "test_01_unchanged_actual_v2_capture_control",
+      "test_06_saved_fallback_metadata_port_mutation_cannot_bypass_history_denial"
+    ],
+    "control_first": true,
+    "original_failed_receipt_sha256": "1903601e1d41d0be7edb2cad742bfdbf4c67310de634d68695ebeefecb88c530",
+    "source_post_run_verification": "pending"
+  },
+  "research": [
+    {
+      "source": "https://docs.python.org/3.12/library/copy.html",
+      "runtime": "Python3.12.15",
+      "mechanism": "Shallow copying constructs a new object while retaining references; exact source/capture frames establish this call provenance."
+    }
+  ],
+  "next_action": "Recover the corrected control first. If it fails, validate that test before architecture diagnosis. Only after a viable control interpret the metadata-basis negative; if reproduced, preserve the existing finite prepared named-port bindings at completion and nested metadata barriers, then run meaningful regressions and the connected physical pipeline.",
+  "limits": [
+    "No architecture fix from the faulty observer",
+    "Unpublished four-file candidate remains unqualified",
+    "No physical latency or learning result",
+    "Personality/MFM remain external",
+    "No full Alice platform",
+    "All product budgets unchanged"
+  ]
+}

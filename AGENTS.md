@@ -18,10 +18,12 @@ The actual-v2 control passed; recovered negative logs reproduce the fallback
 terminal gap (no issued use). Preserve the original runner's parser failure.
 A local four-file terminal correction is built but unverified: fresh original
 prepared checks follow wrapper callbacks, with nested original publication.
-Review found mutable fallback prepared ports. The offline same-source control
-and exact metadata-port mutation/H-denial probe are running in
-`flora-fallback-basis-diagnostic-20261005`; recover its source-bound receipt
-before further correction or source publication. FBM now has148 validated procedure seeds. Read
+Review found mutable fallback prepared ports. The first control completed capture
+but its observer missed custody's copied consumer; the mutation case did not run.
+Preserve that failed receipt. A corrected observer-only control/mutation retry is
+running in `flora-copy-observer-basis-diagnostic-20261005`, with all four runtime
+files unchanged. Recover its source-bound receipt before further correction or
+source publication. FBM now has149 validated procedure seeds. Read
 `docs/evidence/2026-10-05_bfff_completed_run_diagnosis.json` and current context.
 
 Previous: reviewed origin correction0b790365 is published atbfff869e5193cbccdb1b466c445076376e81f589.
