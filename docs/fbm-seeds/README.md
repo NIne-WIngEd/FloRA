@@ -12,12 +12,14 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-03
 
-The corpus now contains **137 validated procedure traces**. This count describes
+The corpus now contains **139 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
 | Record | Observable operation |
 | --- | --- |
+| [Native callback owner review and readiness](2026-10-04_native_callback_owner_review_readiness.jsonl) | Retain copied-native-owner review gap and publish complete-pipeline readiness limits; one isolated factory repair is dispatched. |
+| [Finite owner-map correction recovery](2026-10-04_finite_owner_map_correction_recovery.jsonl) | Recover82 original Linux cases and a source-isolated two-file correction; final Windows5/5 and native Linux21/21 pass, review/full phase pending. |
 | [Actual phase owner-map review failure](2026-10-04_actual_phase_owner_map_review_failure.jsonl) | Retain six real capture errors and omitted-controller review findings; reject publication and dispatch one isolated finite mapping repair. |
 | [Actual phase connected construction](2026-10-04_actual_phase_connected_construction.jsonl) | Actual consumer handoff, retained two repaired regressions and75 progressive component passes; review/Linux/physical gates pending. |
 | [Actual-owner prepared-material contract](2026-10-04_actual_owner_prepared_material_contract.jsonl) | Source-backed real-consumer protection mapping and one construction dispatch; implementation/results pending. |

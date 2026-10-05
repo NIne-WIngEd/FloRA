@@ -1,5 +1,52 @@
 # FloRA continuation context
 
+## Build readiness excluding personality and MFM — October4
+
+The prototype is not at a model-only waiting point; latency is not its only open
+issue. Major infrastructure contracts are implemented, but the complete current
+pipeline is not yet accepted. Avoid percentages based on module counts.
+
+| Surface | Implemented state | Remaining evidence or construction |
+| --- | --- | --- |
+| Evidence, Experience, Claims and governed state | Exact sources, versions, owner approvals, correction and withdrawal paths exist; synthetic physical cases pass. | Current integrated operation must preserve their identities/rights through every callback. |
+| Context, external judgment and outcome/successor linkage | Native producer ports, delivery/decision receipts and linked outcome/proposal services exist. | Qualified external models and complete current frozen-phase operational verification; synthetic outputs do not prove learned updating. |
+| Comparison, ablation and assessment | Paired execution, failure retention, same-evidence bindings, blinded custody and metric/control interfaces exist. | A complete successful current-source pipeline and independent behavioral evaluation; no accepted Part1 result. |
+| Runtime integration/performance | Both c70 runs pass1003 components; physical PR50/53 and push49/53 pass. | Two response failures per run and incomplete history control cases; finite pinned-frame/preparation costs and native retained-owner bindings remain open. |
+| Builder transfer | Procedure corpus and isolated recipe/cohort interfaces exist. | Learned limited builder and transfer evidence after qualified Part1; seeds are not weights. |
+
+Connected synthetic scenarios on the actual selected backends verify pilot
+before/intervention transitions, outcome/withdrawal, and historical four-route
+mechanics. The complete two-stage preregistered history case did not finish.
+Thus synthetic whole-pipeline acceptance is still pending. The architecture's
+record roles and intended evidence→state→judgment→outcome loop align with the
+[Alice/comic map](ALICE_INFRASTRUCTURE_MAP.md); its complete operational behavior
+is not proven. Full mission/workspace/product infrastructure remains excluded.
+
+Fresh correction review accepts the namespace and earlier policy/proof repairs
+but rejects one remaining class: native copied callbacks still retain original
+lineage/history owners outside the map. Reproduce and close that known factory
+ownership contract before source publication or the complete pipeline gate.
+The previous corrected source stays frozen for its ongoing phase checks; a
+separate isolated repair is dispatched. No new repaired result is claimed.
+
+## Latest continuation — October4 corrected owner map
+
+The original source-bound Linux run completed82 cases:76 pass/6 actual capture
+errors, with no skip/incomplete and all411 source hashes unchanged. Those six
+errors are the retained opaque-verifier regression; fresh review also rejected
+omitted authority owners. The repair is built in an isolated copy: only the
+private owner mapper and phase tests differ, while184 other files match.
+
+The corrected finite service/port graph preserves independently live authority,
+known opaque callback state and original fallback for unsupported representations.
+Five final-source Windows cases pass;11 distinct progressive cases are separate
+evidence. Corrected Linux native reads pass21/21. Fresh correction review and the
+complete Linux phase module are running. Source is not applied or published;
+anchored observed binding, physical latency and learned behavior remain pending.
+Read the [candidate and correction receipt](evidence/2026-10-04_actual_phase_prepared_material_candidate.json).
+No new physical CI/model job, full Alice platform or producer training is added.
+Only remaining results should be waited for; do not blindly repeat full runs.
+
 ## Current objective and verdict — October 4
 
 FloRA tests whether relevant corrections/outcomes improve later native personal
@@ -133,7 +180,7 @@ not a FloRA platform prerequisite. Graphify's old graph is navigation only.
 
 ## FBM and retained evidence
 
-There are137 schema-valid [procedure seeds](fbm-seeds/README.md). Capture material
+There are139 schema-valid [procedure seeds](fbm-seeds/README.md). Capture material
 construction/failure/repair methods here and validate the existing format. Seeds
 are not personal memory, admitted supervised examples, builder weights or transfer.
 

@@ -1,19 +1,21 @@
 # FloRA
 
-**Current scope — 2026-10-02:** FloRA is a narrow prototype, not the complete
+**Current scope — 2026-10-04:** FloRA is a narrow prototype, not the complete
 Alice/Fable memory, experience or mission platform. Build only what its selected
 experiment needs, preserving Alice's contracts and chosen engines for those
 parts. Start a continuation with [the context record](docs/FLORA_CONTEXT.md)
 and [Alice's infrastructure map](docs/ALICE_INFRASTRUCTURE_MAP.md).
-The [latest completed receipt](docs/VERIFICATION_CHECKPOINT_2026-10-02.md)
-replaces the previously pending October 1 CI status. Full-product build lanes
-below are implementation inventory, not prerequisites for this prototype.
-
-The [shared source metadata collector](docs/SHARED_SOURCE_METADATA_CAPS.md)
-now preserves separate source-DAG caps while sharing overlapping sampled rows.
-Ninety targeted contracts pass locally, including custom-reader regressions.
-The shared serving frame and response-latency qualification remain pending;
-the checkpoint preserves the exact source receipt and platform limits.
+The [current checkpoint](docs/VERIFICATION_CHECKPOINT_2026-10-03.md) records
+completed c70 runs:1003 component cases pass in each; physical PR50/53 and
+push49/53 pass, with response failures and incomplete history cases retained.
+The complete prototype is **not ready apart from the two models**, and this is
+more than latency debugging. Major evidence/state/judgment/outcome/comparison
+interfaces exist, while the actual frozen-phase operation and native callback
+ownership still need correction and complete synthetic pipeline acceptance.
+The [build-readiness map](docs/FLORA_CONTEXT.md) separates implemented plumbing,
+connected physical synthetic tests, unfinished integration, and model-dependent
+evidence. Full-product inventory below is not a prototype completion checklist.
+Personality/MFM remain external; supplied producer fixtures prove no learning.
 
 An experiment for one Fable claim: after a host corrects a relevant belief or preference and a decision has an outcome, does Fable's later **native judgment** change for the right reason, while keeping its evidence trail? The experiment will compare that behavior with a strong general model plus memory, using the same available history and response budget. Then a small builder must reproduce the capability for another isolated host.
 
@@ -74,7 +76,7 @@ The [alignment and build map](docs/FloRA_ALIGNMENT.md) names the selected planes
 - `selected/owner_authorization.py` verifies host-bound Ed25519 action signatures against a separately enrolled public key for state activation and claim quarantine. The selected-backend quarantine gate exercises a real signature; secure key enrollment, custody, recovery, and owner policy remain product work.
 - Synthetic component tests and real-backend integration tests cover these boundaries. They are infrastructure evidence, not a Fable capability or behavioral result.
 
-The broader product backlog includes secure owner-key enrollment, complete conflict/deletion lineage, multi-device reconciliation, learned episode formation and graph relations, qualified semantic/vector retrieval and wider source retrieval, an adaptive Context Planner, production personal-state approval policy and learned updates, outcome quality assessment, and complete application recovery. For this prototype, the next required work is the existing fixture's shared authority frame and its unchanged correctness/latency gates. Expand a surface only for a named experiment case. Personality and MFM are built in other chats and plugged into these interfaces when qualified. See the [alignment map](docs/FloRA_ALIGNMENT.md) for the exercised boundary.
+The broader product backlog includes secure owner-key enrollment, complete conflict/deletion lineage, multi-device reconciliation, learned episode formation and graph relations, qualified semantic/vector retrieval and wider source retrieval, an adaptive Context Planner, production personal-state approval policy and learned updates, outcome quality assessment, and complete application recovery. For this prototype, close the actual frozen-phase/callback ownership boundary and validate a complete current-source synthetic causal pipeline under the unchanged budgets. Expand a surface only for a named experiment case. Personality and MFM are built in other chats and plugged into these interfaces when qualified. See the [alignment map](docs/FloRA_ALIGNMENT.md) for the exercised boundary.
 
 ## Dependencies and evidence gates
 

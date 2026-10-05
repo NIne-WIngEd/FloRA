@@ -1,7 +1,7 @@
 {
   "schema": "flora-actual-phase-prepared-material-candidate-v1",
   "recorded_at_utc": "2026-10-04T20:47:22.510337Z",
-  "status": "review_rejected_candidate_owner_map_correction_in_isolated_source_copy",
+  "status": "namespace_and_prior_owner_paths_corrected; retained_native_callback_owner_gap_review_rejected",
   "serving_baseline_commit": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
   "local_docs_base_commit": "9950de577083e5a64d46976c12dd7f53db663d86",
   "candidate_source_sha256": {
@@ -80,7 +80,7 @@
   "pending": {
     "fresh_source_review": "completed: corrections required; future corrected source needs review",
     "linux_components": {
-      "status": "dispatched_running",
+      "status": "completed_failed_original_candidate",
       "groups": 6,
       "container_id": "f9571db2d55914d74513d8d3dcea21fbd135b67c0c01afc5256f05f24c56c8e9",
       "image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
@@ -98,7 +98,7 @@
         "unittest_seconds": 32.582,
         "status": "failed"
       },
-      "remaining_groups": "still running at review capture; original seven-file source stays frozen"
+      "remaining_groups": "All original groups completed; other76 cases pass, no skip/incomplete. Correction verification separately recorded."
     },
     "physical_integration": "not dispatched; actual anchored heads, both arms, observed binding and post-slot withdrawal remain required"
   },
@@ -148,7 +148,7 @@
     ]
   },
   "correction": {
-    "status": "one coherent bounded owner-map/admission repair dispatched; no corrected result yet",
+    "status": "built_isolated_not_applied; fresh review and complete Linux phase module pending",
     "isolation": "186 runtime/test files hash-verified into a separate local repair copy; active verification source unchanged",
     "required_checks": [
       "Untouched existing opaque-verifier actual capture compatibility.",
@@ -156,6 +156,198 @@
       "Nested durable owner-proof custody connection/method mutation refusal.",
       "Applicable private holder expiry, legitimate opaque callback state, nested H withdrawal and custom fresh fallback."
     ],
-    "application_gate": "After original Linux completion, review corrected source and apply only exact verified delta to unchanged candidate; no blind whole-run retry."
+    "application_gate": "Apply only reviewed exact two-file delta after correction checks; actual FloRA source remains the original rejected candidate.",
+    "candidate_source_sha256": {
+      "src/flora/selected/_phase_preparation.py": "bed117ffbc19b0d862a59560a16a13ec28b4058f0c758b0c1a6dacbef4b4df7b",
+      "src/flora/selected/context_guard.py": "73f59092d6dc6ee8983e47c34658efaa709f79ac52ab998703f931d01cc24408",
+      "src/flora/selected/judgment_lineage.py": "69d05ebf2813cc69ac8351c3a17288d0cd6a87e9ede147277ebfcaf407d738f1",
+      "src/flora/selected/phase_routes.py": "ac10133a2618eef18d7c7e2c6d77679f9052f3be123017e8187a36263a3261eb",
+      "src/flora/selected/phase_snapshots.py": "8974b5604991b896433082ca8b4ad93f4dafac9c321d504872c960f07b5a7473",
+      "tests/test_phase_snapshots.py": "ddcb7651fe4f01cdec65f4e703863d9ef9233c521b24418c2a12d7628afe4c42",
+      "tests/integration/test_selected_experiment_preregistration.py": "c161b526c5279e9af15f930d6fc6a00df62a4f3200a82ba2eeaf6103ecd76f23"
+    },
+    "delta_files": [
+      "src/flora/selected/_phase_preparation.py",
+      "tests/test_phase_snapshots.py"
+    ],
+    "unchanged_isolated_files": 184,
+    "mechanism": "Finite named service/port ownership graph, including archive policies, proof/reference custody, native object/log wrappers and copied bound-callback owner; representation admission completes before preparation. Known opaque ports preserve live bookkeeping; unsupported representations retain original fresh construction.",
+    "source_backed_rationale": "Original accesses and reproduced dictionary-descriptor failure identify the causal map/admission defect. Reuse Alice material/authority separation and prior Graphify/Graphiti derived-work findings; none authorizes permission caching or a new platform.",
+    "red": {
+      "cases": 1,
+      "errors": 1,
+      "seconds": 5.32,
+      "cause": "Same actual default-verifier dictionary TypeError as the Linux rejection."
+    },
+    "final_windows": {
+      "cases": 5,
+      "passed": 5,
+      "seconds": 173.821,
+      "source": "exact correction manifest"
+    },
+    "progressive_windows": {
+      "distinct_passed": 11,
+      "ruling": "Not a final-source11-case suite; prior receipts and source limits retained."
+    },
+    "linux": {
+      "status": "running_partial",
+      "container_id": "ebc9c7bb925c20320bb2567eb0baf9e1c0dc76a380af725a9ebdb5b2b4a5f36c",
+      "groups": [
+        "test_native_reads",
+        "test_phase_snapshots"
+      ],
+      "completed_group": {
+        "names": [
+          "test_native_reads"
+        ],
+        "command": [
+          "/usr/local/bin/python",
+          "-m",
+          "unittest",
+          "test_native_reads",
+          "-v"
+        ],
+        "exit_code": 0,
+        "status": "passed",
+        "tests": 21,
+        "unittest_seconds": 77.363,
+        "process_seconds": 83.388,
+        "log": "group-1.log"
+      },
+      "source": "read-only isolated correction plus pinned Alice4f287a; source manifests before/after",
+      "controller_sha256": "d15f64dfc5ab51078aa695c1c5f21449537ece75b4086280062d5c360ada9e2b",
+      "network": "disabled",
+      "deadline_seconds": 3600,
+      "physical_engines_run": false
+    },
+    "fresh_review": {
+      "status": "completed_not_accepted_one_P2_no_new_P1",
+      "source_manifest_verified": true,
+      "finding": "Two actual native copied callbacks retain original controller owners outside the finite map.",
+      "paths": [
+        {
+          "path": "src/flora/selected/phase_snapshots.py",
+          "lines": [
+            605,
+            608,
+            613
+          ],
+          "mechanism": "Capture copies lineage into a consumer, but receipt_for still calls original lineage.phase_receipt_for. The original proof port can change without a mapped binding refusal."
+        },
+        {
+          "path": "src/flora/selected/experiment_preregistration.py",
+          "lines": [
+            212,
+            214,
+            217
+          ],
+          "mechanism": "bind_private_guard copies the authority, but its native check still reads original self.anchor.store._current. The copied authority map does not cover the retained original controller."
+        }
+      ],
+      "evidence_limit": "Source-supported finding; dynamic reproduction not executed by the read-only reviewer.",
+      "accepted_parts": [
+        "Supported opaque namespace binding and pre-preparation unsupported fallback.",
+        "Previously omitted archive policies and durable proof custody owners now mapped.",
+        "Existing independent H-before-owner/nested/full final callback barrier unchanged."
+      ],
+      "ruling": "Define and verify explicit ownership for the known native callback factories; no generic closure recursion or sealing of opaque permission/counter state."
+    }
+  },
+  "completed_original_linux": {
+    "candidate": "original rejected seven-file source",
+    "status": "failed",
+    "completed_at_utc": "2026-10-04T21:04:19Z",
+    "total_seconds": 1185.98,
+    "cases": 82,
+    "passed": 76,
+    "errors": 6,
+    "skipped": 0,
+    "incomplete": 0,
+    "groups": [
+      {
+        "names": [
+          "test_native_reads"
+        ],
+        "tests": 21,
+        "status": "failed",
+        "unittest_seconds": 32.582,
+        "exit_code": 1
+      },
+      {
+        "names": [
+          "test_shared_authority_frame"
+        ],
+        "tests": 23,
+        "status": "passed",
+        "unittest_seconds": 972.208,
+        "exit_code": 0
+      },
+      {
+        "names": [
+          "test_experiment_preregistration"
+        ],
+        "tests": 23,
+        "status": "passed",
+        "unittest_seconds": 35.279,
+        "exit_code": 0
+      },
+      {
+        "names": [
+          "test_preregistration_current_guard"
+        ],
+        "tests": 7,
+        "status": "passed",
+        "unittest_seconds": 2.742,
+        "exit_code": 0
+      },
+      {
+        "names": [
+          "test_preregistration_metadata_frame"
+        ],
+        "tests": 6,
+        "status": "passed",
+        "unittest_seconds": 60.899,
+        "exit_code": 0
+      },
+      {
+        "names": [
+          "test_phase_snapshots.PhaseSnapshotTest.test_router_header_binds_actual_frozen_native_configuration_but_does_not_qualify_missing_archives",
+          "test_phase_snapshots.PhaseSnapshotTest.test_router_refuses_untyped_or_cross_arm_entries_and_nonselected_eval_authority"
+        ],
+        "tests": 2,
+        "status": "passed",
+        "unittest_seconds": 31.503,
+        "exit_code": 0
+      }
+    ],
+    "source_files_before_after": 411,
+    "sources_unchanged": true,
+    "all_current_host_source_hashes_verified": true,
+    "physical_engines_run": false
+  },
+  "native_callback_correction": {
+    "status": "dispatched_to_separate_isolated_copy; no corrected result yet",
+    "base_source": "bed117ff/ddcb765 finite-owner candidate, currently frozen for Linux verification",
+    "snapshot_files_verified": 186,
+    "scope": "Audit the known actual native controller-retaining callback factories once; reproduce original proof-port and original history-anchor mutation, then retain/map exact owners or remove their original-owner dereferences.",
+    "primary_runtime_source": "https://docs.python.org/3.12/library/copy.html",
+    "source_mechanism": "Shallow copying retains member references; functions are returned unchanged even for deep copy. Copying a facade does not establish new callback ownership.",
+    "excluded": [
+      "deep-copy transport/authority",
+      "arbitrary callback-state recursion",
+      "new Alice platform",
+      "personality/MFM training"
+    ]
+  },
+  "prototype_build_state": {
+    "full_build_ready_except_personality_mfm": false,
+    "latency_is_only_remaining_problem": false,
+    "implemented": "Evidence/Experience/Claims, governed state, context/judgment ports, decision-outcome-successor linkage, paired comparison/ablation and assessment/control interfaces.",
+    "alice_alignment": "Selected logical contracts and exercised physical planes follow the original Alice/comic map; complete operational correctness remains unqualified.",
+    "synthetic_pipeline_evidence": "Connected physical pilot, correction/outcome/withdrawal and four-route history fixtures pass at c70. Complete two-stage preregistration history gate is incomplete, and response cases fail their budgets.",
+    "physical_runs": "c70 PR50/53 pass,2 fail,1 incomplete; push49/53 pass,2 fail,2 incomplete. Each1003 component cases pass. Supplied producer outputs, not learned results.",
+    "next_capability_gate": "A complete current-source synthetic causal pipeline through anchored before/update/after/final, native and ablation routes, comparison and reporting must be validated; individual component passes are insufficient.",
+    "part_two": "Limited builder transfer requires qualified Part1; procedure seeds are not a trained builder or accepted transfer result.",
+    "scope_exclusion": "Full Alice mission/workspace/product lifecycle is not a prototype prerequisite."
   }
 }
