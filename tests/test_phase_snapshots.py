@@ -1,11 +1,12 @@
 """Phase-view contracts on fictional SQL/producers; not selected-engine evidence."""
-from copy import deepcopy
+from copy import copy, deepcopy
 from dataclasses import replace
 import importlib.util
 import json
 from pathlib import Path
 import sys
 import unittest
+from unittest.mock import patch
 
 from cognitive_kernel.canonical import canonical_json_bytes, canonical_sha256
 from flora.selected.phase_snapshots import XTDBPhaseSnapshotCustody, SelectedPhaseSnapshot, plan_record, FrozenPhaseUpdatePolicy, verify_update_policy, PhaseAuthorizedObjectReads, _TABLE
@@ -23,6 +24,219 @@ def fixture(name, filename):
 
 
 _f = fixture("flora_phase_lineage_fixture", "test_selected_judgment_lineage.py")
+
+
+class PhaseDefaultVerifierTest(unittest.TestCase):
+    """Actual capture with the unactivated runtime fixture's original port."""
+
+    def setUp(self):
+        self.support = _f.SelectedJudgmentLineageTest()
+        self.support.setUp()
+        self.addCleanup(self.support.doCleanups)
+        self.f = self.support.fixture
+        self.custody = XTDBPhaseSnapshotCustody(runtime=self.f.runtime, run_id="default-verifier-run",
+            run_plan_sha256="9" * 64, clock=self.f._clock, allow_unregistered_fixture_route=True)
+
+    def capture(self, snapshot_id="default-verifier"):
+        from flora.selected import context_guard, experiment_runtime
+        with patch.object(context_guard, "assemble_context", wraps=context_guard.assemble_context) as native, \
+             patch.object(experiment_runtime, "assemble_context", wraps=experiment_runtime.assemble_context) as legacy:
+            snapshot = self.custody.capture(snapshot_id=snapshot_id, case_id="case-one", phase="after",
+                arm="flora_full", plan=self.support.plan, lineage=self.support.verifier,
+                history=self.support.histories[("case-one", "after")])
+        return snapshot, native.call_count + legacy.call_count
+
+    def test_untouched_simple_namespace_verifier_uses_actual_capture(self):
+        from types import SimpleNamespace
+        verifier = self.f.runtime.state_approval_verifier
+        self.assertIs(type(verifier), SimpleNamespace)
+        snapshot, assemblies = self.capture()
+        self.assertIs(self.f.runtime.state_approval_verifier, verifier)
+        self.assertEqual(assemblies, 1)
+        self.assertEqual(snapshot.record["states"], [])
+
+    def test_replaced_native_callback_factory_keeps_fresh_construction(self):
+        from types import FunctionType
+        from flora.selected import phase_snapshots, _phase_preparation as private
+        def replacement(self):
+            hidden_owner = self._fixture_hidden_owner
+            def metadata_gate():
+                self.run_id
+                return hidden_owner()
+            return metadata_gate
+        replacement = FunctionType(replacement.__code__, vars(phase_snapshots))
+        calls = []
+        self.custody._fixture_hidden_owner = lambda: (calls.append(True), True)[1]
+        guard = replacement(self.custody)
+        self.f.runtime.objects = PhaseAuthorizedObjectReads(self.f.objects, guard)
+        qualifier = self.f.runtime.bindings["personality_judgment"].qualification_verifier
+        qualifier.callback = lambda: self.assertIsNone(private._ACTIVE.get())
+        self.addCleanup(setattr, qualifier, "callback", None)
+        with patch.object(XTDBPhaseSnapshotCustody, "authorize", replacement):
+            _, assemblies = self.capture()
+        self.assertEqual(assemblies, 5)
+        self.assertTrue(calls)
+
+    def test_unknown_bound_function_on_native_owner_keeps_fresh_construction(self):
+        from types import MethodType
+        from flora.selected import _phase_preparation as private
+        calls = []
+        def custom(owner):
+            calls.append(owner.run_id)
+            return True
+        self.f.runtime.objects = PhaseAuthorizedObjectReads(self.f.objects, MethodType(custom, self.custody))
+        qualifier = self.f.runtime.bindings["personality_judgment"].qualification_verifier
+        qualifier.callback = lambda: self.assertIsNone(private._ACTIVE.get())
+        self.addCleanup(setattr, qualifier, "callback", None)
+        _, assemblies = self.capture()
+        self.assertEqual(assemblies, 5)
+        self.assertTrue(calls)
+
+    def test_typed_history_permission_fixture_observes_live_revoke_independent_of_context(self):
+        from phase_callback_permissions import PhaseHistoryPermissions
+        from flora.selected.phase_source_fence import OneGuardSelectedMetadata
+        grants = PhaseHistoryPermissions(self.f)
+        event_id = self.support.original_events[1].event_id
+        purpose = "phase-history-fixture"
+        grants.grant_closure(event_id, purpose)
+        source = self.f.registry.lookup(event_id)
+        self.assertTrue(grants.policy.permits(source, purpose))
+        sample = OneGuardSelectedMetadata(registry=self.f.registry, permissions=grants.policy)
+        sample.prime_sources((event_id,), purpose)
+        grants.grant(event_id, purpose, "revoke")
+        self.assertFalse(grants.policy.permits(source, purpose))
+        self.assertTrue(self.f.runtime.source_policy.permits(source, "personal_judgment"))
+        with self.assertRaises(PermissionError):
+            sample.verify_final_current_rows()
+
+    def test_changed_native_bound_code_keeps_fresh_construction(self):
+        from flora.selected.personal_artifact_custody import _SourceAuthorizedObjectReads
+        from flora.selected import _phase_preparation as private
+        self.f.runtime.objects = PhaseAuthorizedObjectReads(self.f.objects, lambda: True)
+        def custom(owner):
+            if owner.source_authorizer() is not True:
+                raise PermissionError("fixture custom source refused")
+        qualifier = self.f.runtime.bindings["personality_judgment"].qualification_verifier
+        qualifier.callback = lambda: self.assertIsNone(private._ACTIVE.get())
+        self.addCleanup(setattr, qualifier, "callback", None)
+        function = _SourceAuthorizedObjectReads._check
+        original_code = function.__code__
+        try:
+            function.__code__ = custom.__code__
+            _, assemblies = self.capture()
+        finally:
+            function.__code__ = original_code
+        self.assertEqual(assemblies, 5)
+
+    def test_original_phase_receipt_port_replacement_refuses_before_effects(self):
+        original = self.support.verifier.phase_receipt_for
+        qualifier = self.f.runtime.bindings["personality_judgment"].qualification_verifier
+        fired, effects = [], []
+        execute, get = self.f.connection.execute, self.f.objects.backend.get_object
+        def replacement(request):
+            effects.append("replacement proof callback")
+            return original(request)
+        def mutate():
+            if not fired:
+                fired.append(True)
+                self.support.verifier.phase_receipt_for = replacement
+        def sql(*args, **kwargs):
+            if fired:
+                effects.append("SQL")
+            return execute(*args, **kwargs)
+        def ciphertext(*args, **kwargs):
+            if fired:
+                effects.append("ciphertext")
+            return get(*args, **kwargs)
+        qualifier.callback = mutate
+        try:
+            with patch.object(self.f.connection, "execute", sql), patch.object(self.f.objects.backend, "get_object", ciphertext):
+                with self.assertRaises(PermissionError):
+                    self.capture()
+        finally:
+            qualifier.callback = None
+            self.support.verifier.phase_receipt_for = original
+        self.assertTrue(fired)
+        self.assertEqual(effects, [], "replacement owner was checked only after a protected effect")
+
+    def test_unsupported_mapped_representation_falls_back_before_preparation(self):
+        from flora.selected import _phase_preparation as private
+        class SlotVerifier:
+            __slots__ = ("authenticated_approval",)
+            def __init__(self):
+                self.authenticated_approval = lambda *_: False
+        self.f.runtime.state_approval_verifier = SlotVerifier()
+        qualifier = self.f.runtime.bindings["personality_judgment"].qualification_verifier
+        observed = []
+        def standalone():
+            self.assertIsNone(private._ACTIVE.get())
+            observed.append(True)
+        qualifier.callback = standalone
+        self.addCleanup(setattr, qualifier, "callback", None)
+        snapshot, assemblies = self.capture()
+        self.assertEqual(assemblies, 5)
+        self.assertEqual(snapshot.record["states"], [])
+        self.assertTrue(observed)
+
+    def test_simple_namespace_keeps_opaque_state_but_seals_approval_port(self):
+        from flora.selected import _phase_preparation as private
+        verifier = self.f.runtime.state_approval_verifier
+        verifier.calls = 0
+        qualifier = self.f.runtime.bindings["personality_judgment"].qualification_verifier
+        denied = []
+        def callback():
+            verifier.calls += 1
+            operation = private._ACTIVE.get()
+            self.assertIsNotNone(operation)
+            operation.check()  # The callback's bookkeeping is not authority material.
+            if denied:
+                return
+            use = next(reversed(operation.views.values()))[0]
+            before = len(self.f.connection.calls)
+            original = verifier.authenticated_approval
+            verifier.authenticated_approval = lambda *_: True
+            try:
+                with self.assertRaisesRegex(PermissionError, "port binding"):
+                    use.revalidate()
+                self.assertEqual(len(self.f.connection.calls), before)
+                denied.append(True)
+            finally:
+                verifier.authenticated_approval = original
+        qualifier.callback = callback
+        self.addCleanup(setattr, qualifier, "callback", None)
+        _, assemblies = self.capture()
+        self.assertEqual(assemblies, 1)
+        self.assertTrue(denied)
+        self.assertGreater(verifier.calls, 1)
+
+    def test_copied_backend_seals_original_bound_source_facade_before_reads(self):
+        from flora.selected import _phase_preparation as private
+        from flora.selected.experiment_runtime import _AuthorizedRuntimeReads
+        source_owner = PhaseAuthorizedObjectReads(self.f.objects, lambda: True)
+        self.f.runtime.objects = _AuthorizedRuntimeReads(source_owner, lambda: None)
+        qualifier = self.f.runtime.bindings["personality_judgment"].qualification_verifier
+        checked = []
+        def callback():
+            if checked:
+                return
+            operation = private._ACTIVE.get()
+            self.assertIsNotNone(operation)
+            use = next(reversed(operation.views.values()))[0]
+            before = len(self.f.connection.calls)
+            original = source_owner._phase_source_authorizer
+            source_owner._phase_source_authorizer = lambda: True
+            try:
+                with self.assertRaises(PermissionError):
+                    use.revalidate()
+                self.assertEqual(len(self.f.connection.calls), before)
+                checked.append(True)
+            finally:
+                source_owner._phase_source_authorizer = original
+        qualifier.callback = callback
+        self.addCleanup(setattr, qualifier, "callback", None)
+        _, assemblies = self.capture()
+        self.assertEqual(assemblies, 1)
+        self.assertTrue(checked)
 
 
 class PhaseSQL(_f._StateSQLCalls):
@@ -44,6 +258,270 @@ class PhaseSQL(_f._StateSQLCalls):
 
 
 class PhaseSnapshotTest(unittest.TestCase):
+    def test_qualified_final_source_callback_is_followed_by_lineage_revalidation(self):
+        from flora.selected.phase_routes import _QualifiedUpdateProof
+        fired = []
+        class IndependentHistory(_f.FrozenHistoryAuthority):
+            lineage_allowed = True
+            def authorize_history(inner, **kwargs):
+                caller = sys._getframe(1)
+                lineage_check = (caller.f_code.co_name == "guard"
+                    and caller.f_code.co_filename.endswith("judgment_lineage.py"))
+                frame = caller
+                while frame is not None:
+                    if (frame.f_code is _QualifiedUpdateProof.context_lineage.__code__
+                            and "verified" in frame.f_locals):
+                        inner.lineage_allowed = False
+                        fired.append(True)
+                        break
+                    frame = frame.f_back
+                return super().authorize_history(**kwargs) and (inner.lineage_allowed or not lineage_check)
+        authority = IndependentHistory(self.lineage_fixture.histories)
+        with self.assertRaisesRegex(PermissionError, "phase history authority changed"):
+            self.route(history_authority=authority)
+        self.assertTrue(fired)
+        self.assertTrue(self.f.permitted[0])
+
+    def _install_durable_owner_proofs(self):
+        from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
+        from flora.selected.personal_artifact_custody import DurableOwnerProofLookup
+        verifier = self.live.state_approval_verifier
+        public_key = verifier.key.public_bytes(Encoding.Raw, PublicFormat.Raw)
+        from datetime import datetime, timedelta
+        proof_time = (datetime.fromisoformat(max(event.occurred_at for event in self.live.log.replay()).replace("Z", "+00:00"))
+            + timedelta(seconds=1)).isoformat().replace("+00:00", "Z")
+        for proof in verifier.proofs.values():
+            self.f.private.record_owner_proof(proof=proof, owner_public_key=public_key,
+                log=self.live.log, objects=self.live.objects, occurred_at=proof_time,
+                expected_revision=len(self.live.log.replay()) - 1)
+        verifier.proofs = DurableOwnerProofLookup(custody=self.f.private, log=self.live.log,
+            objects=self.live.objects, owner_public_key=public_key)
+        return verifier.proofs
+
+    def test_lineage_only_withdrawal_in_nested_owner_ciphertext_blocks_decrypt(self):
+        from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+        from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
+        from flora.selected.personal_artifact_custody import DurableOwnerProofLookup
+        from flora.selected import _phase_preparation as private
+        self._install_durable_owner_proofs()
+        class IndependentHistory(_f.FrozenHistoryAuthority):
+            lineage_allowed = True
+            def authorize_history(inner, **kwargs):
+                # Model independently withdrawn H while capture's owner guard
+                # and the C source policy still permit their own operations.
+                caller = sys._getframe(1)
+                lineage_check = (caller.f_code.co_name == "guard"
+                    and caller.f_code.co_filename.endswith("judgment_lineage.py"))
+                return super().authorize_history(**kwargs) and (inner.lineage_allowed or not lineage_check)
+        authority = IndependentHistory(self.lineage_fixture.histories)
+        self.verifier.history_authority = authority
+        original_get, original_decrypt = self.f.objects.backend.get_object, AESGCM.decrypt
+        fired, released = [], []
+        def withdraw(namespace, object_id):
+            result = original_get(namespace, object_id)
+            frame = sys._getframe(1)
+            nested_owner = False
+            while frame is not None:
+                if frame.f_code.co_name == "_revalidate_prepared" and frame.f_locals.get("phase_use") is not None:
+                    nested_owner = True
+                frame = frame.f_back
+            if nested_owner and private._ACTIVE.get() is not None:
+                authority.lineage_allowed = False
+                fired.append(True)
+            return result
+        def decrypt(cipher, *args, **kwargs):
+            if fired:
+                released.append(True)
+            return original_decrypt(cipher, *args, **kwargs)
+        with patch.object(self.f.objects.backend, "get_object", withdraw), patch.object(AESGCM, "decrypt", decrypt):
+            with self.assertRaisesRegex(PermissionError, "phase history authority changed"):
+                self.custody.capture(snapshot_id="lineage-withdrawal", case_id="case-one", phase="after",
+                    arm="flora_full", plan=self.plan, lineage=self.verifier, history=self.history)
+        self.assertTrue(fired, "the actual composite owner-proof ciphertext path was not reached")
+        self.assertFalse(released, "ciphertext was decrypted after independent lineage H withdrawal")
+        self.assertTrue(self.f.permitted[0])
+        self.assertTrue(authority.authorize_history(case_id="case-one", phase="after", history=self.history))
+        self.assertFalse(private._ISSUED)
+        self.assertFalse(private._VIEWS)
+
+    def test_actual_capture_seals_archive_proof_reference_and_wrapper_owners_before_reads(self):
+        from flora.selected import _phase_preparation as private
+        lookup = self._install_durable_owner_proofs()
+        lookup.objects = PhaseAuthorizedObjectReads(self.live.objects, lambda: True)
+        qualifier = self.live.bindings["personality_judgment"].qualification_verifier
+        checked, reads = [], []
+        execute, get = self.f.connection.execute, self.f.objects.backend.get_object
+        def sql(*args, **kwargs):
+            reads.append("sql")
+            return execute(*args, **kwargs)
+        def ciphertext(*args, **kwargs):
+            reads.append("ciphertext")
+            return get(*args, **kwargs)
+        def check_mapping():
+            if checked:
+                return
+            operation = private._ACTIVE.get()
+            self.assertIsNotNone(operation, "actual capture unexpectedly used its fallback")
+            use = next(reversed(operation.views.values()))[0]
+            changes = (
+                (self.custody, "artifact_permissions", copy(self.custody.artifact_permissions)),
+                (self.custody.artifact_permissions, "permits", lambda *_: True),
+                (self.custody, "artifact_source_policy", copy(self.custody.artifact_source_policy)),
+                (self.custody.artifact_source_policy, "permissions", copy(self.custody.artifact_permissions)),
+                (self.custody.artifact_source_policy.state, "policy", copy(self.custody.artifact_permissions)),
+                (lookup, "custody", copy(lookup.custody)),
+                (lookup.custody, "connection", copy(lookup.custody.connection)),
+                (lookup.custody, "metadata", lambda *_: None),
+                (lookup.custody, "read", lambda *_: None),
+                (self.live.references, "durable", copy(self.live.references.durable)),
+                (self.live.references.durable, "custody", copy(self.live.references.durable.custody)),
+                (self.live.references.runtime_custody, "connection", copy(self.f.connection)),
+                (lookup.objects, "objects", copy(lookup.objects.objects)),
+                (lookup.objects.objects.backend, "backend", copy(self.f.objects.backend)),
+                (lookup.objects.objects, "_key", b"x" * 32),
+            )
+            for owner, name, changed in changes:
+                present, original = name in vars(owner), vars(owner).get(name)
+                before = len(reads)
+                setattr(owner, name, changed)
+                try:
+                    with self.assertRaises(PermissionError, msg=name):
+                        use.revalidate()
+                    self.assertEqual(len(reads), before, name + " reached a protected reader")
+                    checked.append(name)
+                finally:
+                    if present:
+                        setattr(owner, name, original)
+                    else:
+                        delattr(owner, name)
+        qualifier.callback = check_mapping
+        try:
+            with patch.object(self.f.connection, "execute", sql), patch.object(self.f.objects.backend, "get_object", ciphertext):
+                captured = self.custody.capture(snapshot_id="mapped-owners", case_id="case-one", phase="after",
+                    arm="flora_full", plan=self.plan, lineage=self.verifier, history=self.history)
+        finally:
+            qualifier.callback = None
+        self.assertEqual(len(checked), 15)
+        self.assertEqual(captured.record["context_receipt"], self.snapshot.record["context_receipt"])
+        self.assertFalse(private._ISSUED)
+        self.assertFalse(private._VIEWS)
+
+    def test_actual_operation_rejects_forgery_mutation_cross_thread_and_expiry(self):
+        from concurrent.futures import ThreadPoolExecutor
+        from flora.selected import _phase_preparation as private
+        retained, attempts = [], []
+        private_reads = []
+        original_get = self.f.objects.backend.get_object
+        def count_private(*args, **kwargs):
+            private_reads.append(True)
+            return original_get(*args, **kwargs)
+        qualifier = self.live.bindings["personality_judgment"].qualification_verifier
+        def inspect_operation():
+            if retained:
+                return
+            operation = private._ACTIVE.get()
+            self.assertIsNotNone(operation)
+            use = private._current_lineage_use(operation.consumer)
+            retained.extend((operation, use))
+            def denied(function):
+                before = len(private_reads)
+                with self.assertRaises(PermissionError):
+                    function()
+                self.assertEqual(len(private_reads), before)
+                attempts.append(True)
+            denied(lambda: copy(operation).check())
+            denied(lambda: copy(use).revalidate())
+            denied(lambda: private._LineageUse(operation, lambda: None).revalidate())
+            denied(lambda: private._phase_preparation(issuer=self.custody, kind="capture"))
+            denied(lambda: private._borrow_lineage(copy(operation.consumer), case_id="case-one",
+                phase="after", history=self.history, context=operation.context, guard=lambda: None))
+            denied(lambda: private._borrow_lineage(operation.consumer, case_id="case-one",
+                phase="before", history=self.history, context=operation.context, guard=lambda: None))
+            denied(lambda: private._borrow_lineage(operation.consumer, case_id="case-one",
+                phase="after", history=copy(self.history), context=operation.context, guard=lambda: None))
+            with ThreadPoolExecutor(max_workers=1) as executor:
+                denied(lambda: executor.submit(use.revalidate).result())
+            for owner, name, value in ((operation.consumer, "runtime", copy(self.live)),
+                    (operation.prepared, "authority_guard", lambda: None),
+                    (operation.prepared, "context", copy(operation.context)),
+                    (self.live.claims, "load_current", lambda *_: None),
+                    (self.custody, "capture", lambda **_: None),
+                    (use, "guard", lambda: None)):
+                present = name in vars(owner)
+                original = vars(owner).get(name)
+                setattr(owner, name, value)
+                try:
+                    denied(use.revalidate)
+                finally:
+                    if present:
+                        setattr(owner, name, original)
+                    else:
+                        delattr(owner, name)
+        qualifier.callback = inspect_operation
+        try:
+            with patch.object(self.f.objects.backend, "get_object", count_private):
+                self.custody.capture(snapshot_id="holder-regressions", case_id="case-one", phase="after",
+                    arm="flora_full", plan=self.plan, lineage=self.verifier, history=self.history)
+        finally:
+            qualifier.callback = None
+        self.assertEqual(len(attempts), 14)
+        self.assertFalse(private._ISSUED)
+        self.assertFalse(private._VIEWS)
+        for value in retained:
+            with self.assertRaises(PermissionError):
+                value.check() if value is retained[0] else value.revalidate()
+
+    def _assembly_observation(self, action):
+        from flora.selected import context_guard, experiment_runtime
+        qualifier = self.live.bindings["personality_judgment"].qualification_verifier
+        with patch.object(context_guard, "assemble_context", wraps=context_guard.assemble_context) as native, \
+             patch.object(experiment_runtime, "assemble_context", wraps=experiment_runtime.assemble_context) as legacy, \
+             patch.object(qualifier, "verify_phase_snapshot", wraps=qualifier.verify_phase_snapshot) as proofs:
+            result = action()
+            return result, native.call_count + legacy.call_count, proofs.call_count
+
+    def test_actual_capture_prepares_once_preserving_four_independent_proofs(self):
+        authority = self.verifier.history_authority
+        original, calls = authority.authorize_history, 0
+        def counted_authority(**kwargs):
+            nonlocal calls
+            calls += 1
+            return original(**kwargs)
+        # Stateful opaque callbacks remain live; their bookkeeping is not an
+        # authority-binding mutation or a stored allow result.
+        authority.authorize_history = counted_authority
+        self.addCleanup(delattr, authority, "authorize_history")
+        captured, assemblies, proofs = self._assembly_observation(lambda: self.custody.capture(
+            snapshot_id="phase-second", case_id="case-one", phase="after", arm="flora_full",
+            plan=self.plan, lineage=self.verifier, history=self.history))
+        self.assertEqual(captured.record["context_receipt"], self.snapshot.record["context_receipt"])
+        self.assertEqual(captured.record["context_lineage"], self.snapshot.record["context_lineage"])
+        self.assertEqual(proofs, 8)
+        self.assertEqual(assemblies, 1)
+        self.assertGreater(calls, 4)
+
+    def test_actual_cold_constructor_prepares_once_preserving_phase_proofs(self):
+        route, assemblies, proofs = self._assembly_observation(self.route)
+        self.assertEqual(route.snapshot.record["context_receipt"], self.snapshot.record["context_receipt"])
+        self.assertEqual(proofs, 2)
+        self.assertEqual(assemblies, 1)
+
+    def test_custom_preparation_retains_fresh_standalone_lineage_path(self):
+        original = self.live._prepare_current_context
+        preparations = []
+        def custom(plan, **kwargs):
+            preparations.append(True)
+            return original(plan, **kwargs)
+        self.live._prepare_current_context = custom
+        try:
+            captured, assemblies, proofs = self._assembly_observation(lambda: self.custody.capture(
+                snapshot_id="custom-preparation", case_id="case-one", phase="after", arm="flora_full",
+                plan=self.plan, lineage=self.verifier, history=self.history))
+        finally:
+            del self.live._prepare_current_context
+        self.assertEqual(captured.record["context_lineage"], self.snapshot.record["context_lineage"])
+        self.assertEqual((assemblies, proofs, len(preparations)), (5, 8, 4))
+
     def setUp(self):
         self.lineage_fixture = _f.SelectedJudgmentLineageTest()
         self.lineage_fixture.setUp()

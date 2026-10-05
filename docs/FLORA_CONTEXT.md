@@ -1,6 +1,23 @@
 # FloRA continuation context
 
-## Latest continuation — original callbacks and real-H control
+## Current continuation — reviewed correction applied; resume full pipeline
+
+The exact reviewed correction is now applied to the development copy. The source-bound
+Linux run completed92 corrected checks without skips: real signed-H control and
+owner replacement1/1 in172.029s, then native reads/phase snapshots/preregistration
+91/91 in886.964s. Prior source passed the unchanged authentication/capture control
+and genuinely failed the intended replacement refusal (1 failure/262.875s).
+All711 mounted source hashes match before/after and the frozen host; all12 applied
+files match the reviewed188-file candidate. Earlier rejected copies stay historical.
+
+This qualifies the bounded component correction, not the whole physical pipeline,
+response latency or learned behavior. Publish the source through the ordinary full
+CI workflow and assess the actual two-stage history case and both response arms.
+Keep the existing budgets and independently live H/C permissions. FloRA remains the
+narrow causal-judgment prototype; personality and MFM arrive from other chats.
+FBM has143 validated procedure seeds. See the [current source/result receipt](evidence/2026-10-04_actual_phase_prepared_material_candidate.json).
+
+## Previous continuation — original callbacks and real-H control
 
 The origin correction is built in an isolated188-file copy. Scoped source review
 has no actionable findings. Fourteen progressive component cases pass, including

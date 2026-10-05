@@ -701,31 +701,41 @@ class PreparedCurrentContext:
 
     def revalidate(self) -> None:
         """Recheck live owner/episode proof authority without reopening state bytes."""
-        self.metadata_current()
-        # Resolve the actual current owner verifier each time. Its private proof
-        # I/O must use the supplied metadata-only barrier to avoid recursion.
-        verifier = self.approval_verifier_factory(self.metadata_current)
-        if not callable(getattr(verifier, "authenticated_approval", None)):
-            raise TypeError("prepared state needs the current independent owner verifier")
-        events = {event.event_id: event for event in self.log.replay()}
-        for captured in self.state_authorities:
-            event = events.get(captured.approval_event_id)
-            self.metadata_current()
-            if event is None or verifier.authenticated_approval(event, json.loads(captured.approval_request)) is not True:
-                raise PermissionError("prepared owner approval is no longer authenticated")
-            self.metadata_current()
-        # Existing episode ports can inspect private candidate content and have
-        # mutable qualification/adjudication authority. Retain their full current
-        # governed proof read; a new cache-safe semantic API is not invented.
-        if self.episode_authorities:
-            from .experiment_runtime import _AuthorizedRuntimeReads
-            guarded_objects = _AuthorizedRuntimeReads(self.objects, self.metadata_current)
-            for captured in self.episode_authorities:
-                self.metadata_current()
-                self.state.episodes.read_accepted(captured.episode_id, claims=self.claims, log=self.log,
-                    objects=guarded_objects, references=self.references)
-                self.metadata_current()
-        self.metadata_current()
+        _revalidate_prepared(self)
+
+
+def _revalidate_prepared(self, phase_use=None):
+    """Shared owner/episode algorithm; only an issued use can add a barrier."""
+    if phase_use is None:
+        metadata_current = self.metadata_current
+    else:
+        from ._phase_preparation import _validated_phase_barrier
+        metadata_current = _validated_phase_barrier(self, phase_use)
+    metadata_current()
+    # Resolve the actual current owner verifier each time. Its private proof
+    # I/O must use the supplied metadata-only barrier to avoid recursion.
+    verifier = self.approval_verifier_factory(metadata_current)
+    if not callable(getattr(verifier, "authenticated_approval", None)):
+        raise TypeError("prepared state needs the current independent owner verifier")
+    events = {event.event_id: event for event in self.log.replay()}
+    for captured in self.state_authorities:
+        event = events.get(captured.approval_event_id)
+        metadata_current()
+        if event is None or verifier.authenticated_approval(event, json.loads(captured.approval_request)) is not True:
+            raise PermissionError("prepared owner approval is no longer authenticated")
+        metadata_current()
+    # Existing episode ports can inspect private candidate content and have
+    # mutable qualification/adjudication authority. Retain their full current
+    # governed proof read; a new cache-safe semantic API is not invented.
+    if self.episode_authorities:
+        from .experiment_runtime import _AuthorizedRuntimeReads
+        guarded_objects = _AuthorizedRuntimeReads(self.objects, metadata_current)
+        for captured in self.episode_authorities:
+            metadata_current()
+            self.state.episodes.read_accepted(captured.episode_id, claims=self.claims, log=self.log,
+                objects=guarded_objects, references=self.references)
+            metadata_current()
+    metadata_current()
 
 
 def _capture_context_authorities(*, context, plan, claims, state, log, policy):
@@ -1017,4 +1027,4 @@ _SHARED_PREPARED_CODES = tuple((function, function.__code__)
 _SHARED_CONTEXT_FUNCTIONS = tuple((function.__name__, function, function.__code__) for function in (
     _same_native_reader, _shared_metadata_frame, _metadata_view, _nomination_record, _capture_context_authorities,
     _binding_guard, _selected_binding_guard, _native_context_snapshot, _require_context_snapshot_contracts,
-    _context_snapshot_value, prepare_current_context, _require_shared_context_contracts))
+    _context_snapshot_value, prepare_current_context, _revalidate_prepared, _require_shared_context_contracts))

@@ -295,7 +295,12 @@ class NativeJudgmentLineageVerifier:
         if any(event.event_type in _INTERNAL_EVENT_TYPES for event in history_events.values()):
             raise ValueError("internal approvals/execution cannot become shared original user history")
         expected = context.receipt_record()
-        prepared = runtime._prepare_current_context(context.plan, authority_guard=guard)
+        from ._phase_preparation import _borrow_lineage
+        prepared = _borrow_lineage(self, case_id=case_id, phase=phase, history=history,
+            context=context, guard=guard)
+        borrowed = prepared is not None
+        if prepared is None:
+            prepared = runtime._prepare_current_context(context.plan, authority_guard=guard)
         if prepared.context.receipt_record() != expected:
             raise ValueError("native context content/value/current authority differs from prepared input")
         objects = _AuthorizedRuntimeReads(runtime.objects, prepared.metadata_current)
@@ -413,7 +418,8 @@ class NativeJudgmentLineageVerifier:
             originals[event_id] = OriginalEvidenceBinding(event_id, event.event_sha256, event.content_digest,
                 source.registration_sha256, source.evidence.role, source.evidence.parent_refs)
             pending.extend(source.evidence.parent_refs)
-        artifacts = tuple(runtime._resolve(role, authority_guard=guard)[1]
+        lineage_barrier = prepared.metadata_current if borrowed else guard
+        artifacts = tuple(runtime._resolve(role, authority_guard=lineage_barrier)[1]
                           for role in ("memory_formation", "personality_judgment"))
         item_hashes = tuple((item["kind"], item["record_id"], item["version_id"], item["content_sha256"],
                              item["claim_value_sha256"]) for item in expected["items"])
@@ -441,7 +447,7 @@ class NativeJudgmentLineageVerifier:
             # This call already authenticated the exact held original bytes.
             # After each actual producer callback, resolve fresh selected
             # metadata/consent without reopening the same immutable history.
-            guard()
+            lineage_barrier()
         # Phase verification may involve slow producer I/O. Current context,
         # original registration/permission and artifact generation are fresh.
         prepared.revalidate()
@@ -452,9 +458,9 @@ class NativeJudgmentLineageVerifier:
             if (source is None or source.registration_sha256 != original.registration_sha256
                     or runtime.context_policy.allow_event(original.event_id, "personal_judgment") is not True):
                 raise PermissionError("original source authority changed during lineage verification")
-        if tuple(runtime._resolve(artifact.role, authority_guard=guard)[1] for artifact in artifacts) != artifacts:
+        if tuple(runtime._resolve(artifact.role, authority_guard=lineage_barrier)[1] for artifact in artifacts) != artifacts:
             raise ValueError("artifact role changed during phase snapshot verification")
-        guard()
+        lineage_barrier()
         return JudgmentContextLineage(**{**vars(lineage), "phase_snapshots": tuple(snapshots)})
 
     def authorize_context(self, *, case_id: str, phase: str, history: Any,
