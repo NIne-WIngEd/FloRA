@@ -1,5 +1,22 @@
 # FloRA verification checkpoint — 2026-10-03
 
+## Latest recovery — native factory origin and real history authority
+
+The isolated native-callback repair completed10/10 Windows component cases,
+without skips, on its187-file source. Fresh review still rejects admission:
+current factory implementations and arbitrary bound methods on listed owners
+can be mistaken for original native callbacks. Preserve genuine original
+factory/function/code identities, keeping custom paths on original preparation.
+
+The audited registered-H fixture ran on both prior and corrected source but
+refused initial capture before the mutation. Its stand-in permission controller
+is incompatible with the real H metadata fence. These are fixture failures,
+not ownership RED/GREEN. No later Linux component group ran. All598 combined
+prior/candidate/Alice source hashes match before/after and the frozen host copies.
+A new187-file isolated correction uses actual selected permission grants and
+must establish an unmutated control before testing original-owner replacement.
+Physical pipeline and latency remain unqualified; no serving source is applied.
+
 ## Build readiness excluding personality and MFM — October4
 
 The prototype is not at a model-only waiting point; latency is not its only open
@@ -75,7 +92,7 @@ The complete replacement operation protocol remains unqualified; the bounded pre
 Alice frontier-watch is now3bea3318; its October4 intake and MemCodex primary
 method were reviewed. No production engine/model selection changes. See
 [query research](QUERY_PATH_RESEARCH_2026-10-03.md) and the operation assessment.
-FBM now contains140 procedure seeds. No learned result or model weights follow.
+FBM now contains141 procedure seeds. No learned result or model weights follow.
 No new serving change, blind rerun or diagnostic was dispatched by this audit.
 
 The later actual-consumer audit stopped the proposed session-owner patch before

@@ -355,7 +355,7 @@
     "physical_engines_run": false
   },
   "native_callback_correction": {
-    "status": "dispatched_to_separate_isolated_copy; no corrected result yet",
+    "status": "built_isolated_not_accepted; original factory admission and real H fixture need correction",
     "base_source": "bed117ff/ddcb765 finite-owner candidate; complete63-case Linux components pass, source remains frozen",
     "snapshot_files_verified": 186,
     "scope": "Audit the known actual native controller-retaining callback factories once; reproduce original proof-port and original history-anchor mutation, then retain/map exact owners or remove their original-owner dereferences.",
@@ -376,7 +376,7 @@
       "physical_engines_run": false
     },
     "registered_history_red": {
-      "status": "fixture_setup_error_before_target_behavior; not ownership reproduction",
+      "status": "unverified; both audited-fixture prior/corrected attempts refused before mutation",
       "test": "test_phase_callback_owners.PreregisteredCallbackOwnerTest.test_original_history_anchor_replacement_refuses_before_effects",
       "test_module_sha256": "d95826a75a368f2c3cd6b728f40291ca8ab7a98643effc9b8ddb9b1551fddb28",
       "network": "disabled",
@@ -385,7 +385,78 @@
       "errors": 1,
       "seconds": 0.721,
       "cause": "register_recipe correctly refused an eligible training choice for heldout material; fixture must declare the evaluation role before the ownership diagnostic can execute.",
-      "sources_unchanged": true
+      "sources_unchanged": true,
+      "final_test_module_sha256": "d39adcdc35b1b17984aa342724223a322fbde8a7c73449c5604ea9bde522f3bc",
+      "completed_groups": [
+        {
+          "label": "prior_registered_H",
+          "source": "/prior",
+          "tests": 1,
+          "seconds": 3.829,
+          "process_seconds": 9.421,
+          "exit_code": 1,
+          "status": "failed",
+          "log": "prior_registered_H.log"
+        },
+        {
+          "label": "corrected_registered_H",
+          "source": "/candidate",
+          "tests": 1,
+          "seconds": 3.706,
+          "process_seconds": 8.381,
+          "exit_code": 1,
+          "status": "failed",
+          "log": "corrected_registered_H.log"
+        }
+      ],
+      "source_files_before_after_current_matched": 598,
+      "target_mutation_reached": false,
+      "component_group_started": false,
+      "diagnosis": "PreregisteredHistoryAuthority -> SelectedRunEvidencePolicy -> history_fence requires XTDBFormationPermissionPolicy. Public history wrapper catches incompatible fixture TypeError and returnsFalse; archive initial capture then refuses. This is a fixture-plane mismatch, not a reproduced native ownership failure."
+    },
+    "candidate_source_sha256": {
+      "src/flora/selected/_phase_preparation.py": "84309e228a66915acbd74a292cd6ace89ad307609614feab07464b22b2c70093",
+      "src/flora/selected/context_guard.py": "73f59092d6dc6ee8983e47c34658efaa709f79ac52ab998703f931d01cc24408",
+      "src/flora/selected/judgment_lineage.py": "69d05ebf2813cc69ac8351c3a17288d0cd6a87e9ede147277ebfcaf407d738f1",
+      "src/flora/selected/phase_routes.py": "ac10133a2618eef18d7c7e2c6d77679f9052f3be123017e8187a36263a3261eb",
+      "src/flora/selected/phase_snapshots.py": "8974b5604991b896433082ca8b4ad93f4dafac9c321d504872c960f07b5a7473",
+      "tests/test_phase_snapshots.py": "817b59ba9eea12a95b39bb779376be27b816a6e3fbd5406d2637d7a34276dd8a",
+      "tests/integration/test_selected_experiment_preregistration.py": "c161b526c5279e9af15f930d6fc6a00df62a4f3200a82ba2eeaf6103ecd76f23",
+      "tests/test_phase_callback_owners.py": "d39adcdc35b1b17984aa342724223a322fbde8a7c73449c5604ea9bde522f3bc"
+    },
+    "source_delta": {
+      "changed": 2,
+      "added": 1,
+      "unchanged": 184,
+      "current_python_files": 187
+    },
+    "final_windows": {
+      "cases": 10,
+      "passed": 10,
+      "skipped": 0,
+      "seconds": 386.501
+    },
+    "fresh_review": {
+      "status": "rejected",
+      "findings": [
+        {
+          "severity": "P1",
+          "path": "src/flora/selected/_phase_preparation.py",
+          "lines": [
+            181,
+            193
+          ],
+          "cause": "Current factory/body is whitelisted at entry; replacements with extra retained controllers and arbitrary bound functions on listed owners can be admitted instead of original-fresh fallback.",
+          "required": "Preserve original native factory and explicit bound method/code identities before replacement."
+        },
+        {
+          "severity": "P2",
+          "path": "tests/test_phase_callback_owners.py",
+          "line": 41,
+          "cause": "Stand-in control permissions are incompatible with the real H metadata fence. Initial capture refuses before target mutation.",
+          "required": "Real live selected policy/grants on the same source plane, with a successful unmutated control."
+        }
+      ]
     }
   },
   "prototype_build_state": {
@@ -398,5 +469,14 @@
     "next_capability_gate": "A complete current-source synthetic causal pipeline through anchored before/update/after/final, native and ablation routes, comparison and reporting must be validated; individual component passes are insufficient.",
     "part_two": "Limited builder transfer requires qualified Part1; procedure seeds are not a trained builder or accepted transfer result.",
     "scope_exclusion": "Full Alice mission/workspace/product lifecycle is not a prototype prerequisite."
+  },
+  "factory_origin_correction": {
+    "status": "dispatched_to_separate_verified_copy",
+    "base_mapper_sha256": "84309e228a66915acbd74a292cd6ace89ad307609614feab07464b22b2c70093",
+    "copied_python_files": 187,
+    "scope": "Preserve genuine native factory+code and known bound-method origin; fix registered-H fixture with actual live selected grants. No source publication or full pipeline claim.",
+    "primary_runtime_source": "https://docs.python.org/3.12/reference/datamodel.html#user-defined-functions",
+    "source_mechanism": "Function code is writable; closure cells retain mutable references; bound methods expose original function/owner. Match preserved native identity/code rather than a currently installed implementation or owner class alone.",
+    "application_gate": "Final source-bound checks and fresh scoped source review; retain current independent H/C checks and unknown/custom original fallback."
   }
 }
