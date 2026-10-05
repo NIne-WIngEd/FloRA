@@ -1,7 +1,7 @@
 {
   "schema": "flora-actual-phase-prepared-material-candidate-v1",
   "recorded_at_utc": "2026-10-05T04:33:37.025490Z",
-  "status": "reviewed_corrected_source_published; ordinary_full_CI_running; connected_three_arm_case_not_yet_verified",
+  "status": "reviewed_corrected_source_published; ordinary_full_CI_completed_failed; boundary_diagnosis_pending; connected_three_arm_case_not_verified",
   "serving_baseline_commit": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
   "local_docs_base_commit": "9950de577083e5a64d46976c12dd7f53db663d86",
   "candidate_source_sha256": {
@@ -106,25 +106,55 @@
       "remaining_groups": "All original groups completed; other76 cases pass, no skip/incomplete. Correction verification separately recorded."
     },
     "physical_integration": {
-      "status": "in_progress_snapshot",
+      "status": "completed_failed",
       "source_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
       "source_tree": "671942fc74e86bec94e0f8609190f0cbe062bbd3",
       "runs": [
         {
           "event": "pull_request",
           "run_id": 37263029377,
-          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37263029377"
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37263029377",
+          "status": "completed",
+          "conclusion": "failure",
+          "component": {
+            "passed": 1038,
+            "modules": 82,
+            "skips": 0
+          },
+          "physical": {
+            "total_cases": 53,
+            "completed": 53,
+            "passed": 50,
+            "failed": 3,
+            "incomplete": 0
+          }
         },
         {
           "event": "push",
           "run_id": 37263026076,
-          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37263026076"
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37263026076",
+          "status": "completed",
+          "conclusion": "failure",
+          "component": {
+            "passed": 1038,
+            "modules": 82,
+            "skips": 0
+          },
+          "physical": {
+            "total_cases": 53,
+            "completed": 52,
+            "passed": 49,
+            "failed": 3,
+            "incomplete": 1
+          }
         }
       ],
-      "automatic_existing_diagnostic": 37263026064,
+      "original_logs_verified": 26,
+      "Alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+      "completed_receipt": "docs/evidence/2026-10-05_bfff_completed_run_diagnosis.json",
       "limits_unchanged": true,
-      "acceptance": "Completed source-qualified selected-stack gates required; separate four-route and blocked-coordinator passes do not prove the connected six-attempt case.",
-      "completed_partial_failures": {
+      "whole_pipeline_acceptance": false,
+      "historical_partial_failure_snapshot": {
         "status": "partial_not_complete_full_run",
         "actual_PR_checkout_commit": "39babda0ec51c63a3efc6270a1340d2934efb747",
         "actual_PR_checkout_tree": "671942fc74e86bec94e0f8609190f0cbe062bbd3",
@@ -229,7 +259,8 @@
           }
         ],
         "interpretation": "Known physical response failures persist; D component correction is not a demonstrated latency improvement. Native timeout trace is in owned read preparation and does not localize the worker-thread SQL cost. These are different fixture arms, not a fair model speed comparison. Remaining whole-history result is pending; no new run, budget relaxation or runtime patch follows this partial receipt."
-      }
+      },
+      "current_interpretation": "Both completed runs retain baseline/native response failures and a reached post-slot H denial followed by Claim-read entry. This identifies a scoped boundary observation, not downstream effects or a proven branch/cause. Push retained route remains incomplete."
     },
     "current_linux_components": "completed92_pass_no_skips_on_exact_final_D",
     "source_publication": "completed_bfff869e5193cbccdb1b466c445076376e81f589"
@@ -238,7 +269,10 @@
     "Finite pinned historical/current-authority observation mapping.",
     "Repeated work in open preparation, which already assembles once.",
     "Actual physical native worker-thread cost distribution.",
-    "CPU cost of new pure identity/material seals, which is not a measured latency improvement."
+    "CPU cost of new pure identity/material seals, which is not a measured latency improvement.",
+    "Actual preparation branch and current lineage closure after final-slot denial in the physical capture fixture.",
+    "Comparable unchanged physical-path control and exact oracle scope before causal repair.",
+    "Same-case six-attempt three-arm coordinator execution and passive recovery."
   ],
   "budgets": {
     "baseline_ms": 10000,
@@ -246,7 +280,7 @@
     "ci_minutes": 60,
     "independent_proof_and_required_writes": "remain inclusive"
   },
-  "qualification": "No physical latency, learned judgment, full-suite pass or model qualification; personality/MFM remain external.",
+  "qualification": "Each completed ordinary run passes1038 component cases/82 modules. Physical PR50/3/0 and push49/3/1 (pass/fail/incomplete), of53. No whole-suite, response-latency, learned-judgment or complete-pipeline qualification; personality/MFM remain external.",
   "review": {
     "recorded_at_utc": "2026-10-04T20:56:42.476684Z",
     "read_only": true,
@@ -266,7 +300,7 @@
         "path": "src/flora/selected/_phase_preparation.py",
         "line": 149,
         "problem": "Shallow discovery omits custody artifact_permissions/artifact_source_policy and nested durable proof custody connection/methods, despite those owners performing subsequent authorization/proof reads.",
-        "evidence": "Static original accesses in phase_snapshots._sources_now477–484 and personal_artifact_custody.DurableOwnerProofLookup.get566/573; no mutation test result claimed yet.",
+        "evidence": "Static original accesses in phase_snapshots._sources_now477\u2013484 and personal_artifact_custody.DurableOwnerProofLookup.get566/573; no mutation test result claimed yet.",
         "ruling": "Map finite known custody/policy/proof/reference/object-wrapper ownership edges and required ports, then test changed-controller refusal before protected effects; avoid arbitrary recursion."
       }
     ],
@@ -596,8 +630,8 @@
     "latency_is_only_remaining_problem": false,
     "implemented": "Evidence/Experience/Claims, governed state, context/judgment ports, decision-outcome-successor linkage, paired comparison/ablation and assessment/control interfaces.",
     "alice_alignment": "Selected logical contracts and exercised physical planes follow the original Alice/comic map; complete operational correctness remains unqualified.",
-    "synthetic_pipeline_evidence": "Connected physical pilot, correction/outcome/withdrawal and four-route history fixtures pass at c70. Complete two-stage preregistration history gate is incomplete, and response cases fail their budgets.",
-    "physical_runs": "c70 PR50/53 pass,2 fail,1 incomplete; push49/53 pass,2 fail,2 incomplete. Each1003 component cases pass. Supplied producer outputs, not learned results.",
+    "synthetic_pipeline_evidence": "Selected physical pilot, correction/outcome/withdrawal and separate native-route fixtures pass at bfff. The two-stage preregistration case fails its early injected post-slot H check before BEFORE capture publication; later update/AFTER/final/four-route portions do not execute. One same-case three-arm comparison remains unverified.",
+    "physical_runs": "bfff PR50/53 pass,3 fail,0 incomplete; push49/53 pass,3 fail,1 incomplete. Each1038 component cases in82 modules pass without skips. Supplied producer outputs, not learned results.",
     "next_capability_gate": "A complete current-source synthetic causal pipeline through anchored before/update/after/final, native and ablation routes, comparison and reporting must be validated; individual component passes are insufficient.",
     "part_two": "Limited builder transfer requires qualified Part1; procedure seeds are not a trained builder or accepted transfer result.",
     "scope_exclusion": "Full Alice mission/workspace/product lifecycle is not a prototype prerequisite."
@@ -798,6 +832,8 @@
     },
     "learned_result": false,
     "whole_pipeline_acceptance": false,
-    "new_performance_or_permission_shortcut": false
-  }
+    "new_performance_or_permission_shortcut": false,
+    "completed_run_boundary": "Both physical history runs reach the injected denial and Claim.load_current entry. Preserve that bounded observation; no SQL/decrypt/inference/append effect, signed revocation, or issued/fallback attribution follows."
+  },
+  "completion_diagnosis_recorded_at_utc": "2026-10-05T06:24:44.369222Z"
 }

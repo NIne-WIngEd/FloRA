@@ -5,7 +5,19 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Current: reviewed origin correction0b790365 is published atbfff869e5193cbccdb1b466c445076376e81f589.
+Current — October5: use the approved shared `alice-research-fbm` diagnosis guide
+for any failed test needing diagnosis; validate the test before architecture repair.
+Both bfff869e full runs completed failures. Each passes1038 component cases/82
+modules; physical PR50 pass/3 fail/0 incomplete, push49/3/1. All26 original log
+hashes and tested FloRA/Alice pins are verified. The history intervention reaches
+post-slot H denial, then Claim-read entry; later private effects are not proved.
+Establish a comparable actual-v2 capture control and observe issued/fallback
+before choosing a correction. Keep budgets, independent live H/C, external model
+ownership and the narrow prototype scope. No latency gain or learning is claimed.
+FBM now has145 validated procedure seeds. Read
+`docs/evidence/2026-10-05_bfff_completed_run_diagnosis.json` and current context.
+
+Previous: reviewed origin correction0b790365 is published atbfff869e5193cbccdb1b466c445076376e81f589.
 Linux completes92 corrected cases without skips: real signed-H control/mutation
 1 pass/172.029s and relevant native/phase/preregistration components91/886.964s.
 The prior source genuinely fails the target mutation after a passing control.
