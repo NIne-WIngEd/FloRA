@@ -27,9 +27,17 @@ control, trace the actual capture branch and final-slot/revalidation/Claim-entry
 sequence with a bounded diagnostic, then choose a coherent correction only after
 its cause is understood. Issued/fallback attribution is unresolved. Preserve
 live independent H/C rights, the budgets, and the narrow FloRA scope; personality
-and MFM remain external. FBM has145 validated procedure seeds. See the
+and MFM remain external. FBM has146 validated procedure seeds. See the
 [completed run diagnosis](evidence/2026-10-05_bfff_completed_run_diagnosis.json).
 The connected three-arm case remains required once this boundary is resolved.
+
+The bounded actual-v2 control/denial diagnostic is running in the existing
+offline Linux image on exact bfff source and pinned Alice. Its control runs first;
+the negative runs only after a valid control. Source shows the bound anchor
+history lookup is unadmitted and fallback completion lacks an issued use; the
+probe must confirm the operating branch before repair. See the
+[diagnostic dispatch](evidence/2026-10-05_v2_terminal_control_diagnostic.json).
+No runtime changes, latency improvement or learned result are claimed.
 
 ## Previous continuation — reviewed correction applied; resume full pipeline
 
