@@ -32,6 +32,8 @@ jobs:
           repository: NIne-WIngEd/A.L.I.C.E
           ref: 4f287a488bc908bd04f99255ee01b794bacba50b
           path: alice-reference
+          ssh-key: ${{ secrets.ALICE_CONTRACTS_READ_KEY }}
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
