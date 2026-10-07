@@ -619,7 +619,7 @@
         "retained_pre_review_candidate_sha256": "18852f95c03ec026362fd9309ecfde353bb452761ee66d5e6f716c10016a70d6"
       }
     },
-    "physical_run": "not_dispatched",
+    "physical_run": "dispatched_observation_artifacts_unrecovered",
     "limits": [
       "Cached3.12.15 controls do not establish exact3.12.14 or actual FloRA execution.",
       "Samples are residency only, not callcounts/exclusiveCPU/authority or learning.",
@@ -631,12 +631,25 @@
   },
   "unchanged_runtime_fixture_and_strict_runner": true,
   "diagnostic_run": {
-    "status": "ready_for_one_dispatch",
+    "status": "dispatched_observation_artifacts_unrecovered",
+    "run_id": 37668996027,
+    "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37668996027",
+    "source_commit": "2bf112a4a61ed656b379417ff065b422ac811805",
+    "source_tree": "b90e2c95dfd8f7eae10905625247301a1a4256e2",
+    "alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
     "observer": "setup-journal",
+    "case_jobs": [
+      "positive"
+    ],
     "observation_window_seconds": 300,
-    "python": "3.12.14",
+    "sampling_interval_seconds": 1,
+    "original_functional_cap_seconds": 2700,
+    "publication_receipt_sha256": "d69fbf4e52753304fa68c4c15b0020273cfd6df4f740ae5f4b1df18ad8178b71",
+    "dispatch_receipt_sha256": "5694b84aad99df703632da5e1fe68861bab4a32a1efb5ca6e9cd18f475324b5c",
     "functional_qualification": false,
-    "latency_qualification": false
+    "latency_qualification": false,
+    "duplicate_dispatch_forbidden": true,
+    "root_cause": "unestablished"
   },
   "next_action": "Recover numeric journal and validate its coverage before interpreting amplification/blocking or repairing any runtime. Rejoin connected functional FloRA, with external personality/MFM and only scenario-needed mission/result links."
 }

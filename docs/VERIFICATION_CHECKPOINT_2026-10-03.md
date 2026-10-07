@@ -2,6 +2,8 @@
 
 ## Current continuation — October7: failed observer, numeric journal prepared
 
+One setup observation run37668996027 was dispatched with observer=setup-journal on exact2bf112a4a61ed656b379417ff065b422ac811805/treeb90e2c95dfd8f7eae10905625247301a1a4256e2/Alice4f287a488bc908bd04f99255ee01b794bacba50b. [Original positive setup observation](https://github.com/NIne-WIngEd/FloRA/actions/runs/37668996027). At dispatch its journal/source artifacts and interpretation are pending. The separate300s diagnostic window and1s numeric sampler do not change the original45min functional protocol. An observation stop is incomplete evidence; even a normal completion is not functional or latency qualification. Recover this one run without redispatch.
+
 Original run37653864404 still has three incomplete2700s setup stops, with no
 functional assertion verdict. Observation37663262359 on exactd1b4983/Alice4f287
 also finished incompletely: SIGSEGV/exit139 at244.48s,425 unchanged source files.
