@@ -2,6 +2,8 @@
 
 ## Current continuation — October7: first capture progresses; admission diagnosis
 
+One setup observation run37673488169 was dispatched with observer=setup-eligibility on exact01737cace1ec66cdb129c091a73504a340dc5e8b/tree9fef613dcd4fd57b5dcd45be532abe5b4727a587/Alice4f287a488bc908bd04f99255ee01b794bacba50b. [Original positive setup observation](https://github.com/NIne-WIngEd/FloRA/actions/runs/37673488169). At dispatch its admission/source artifacts and interpretation are pending. The separate180s diagnostic window and finite original-return observer do not change the original45min functional protocol. An observation stop is incomplete evidence; even a normal completion is not functional or latency qualification. Recover this one run without redispatch.
+
 Journal37668996027 completed its planned300s stop/exit124 without SIGSEGV.
 426 exact source hashes and artifact digest verify;299 contiguous samples,
 298 owned, no truncation, maximum1.012s gap. The first BEFORE capture progresses

@@ -526,16 +526,30 @@
       "Only fixed roles, lines and Boolean metadata persisted; no authority answers.",
       "Observer deadline waits for Python events;180s external cap is mechanical containment.",
       "Offline Python3.12.15 differs from pinned physical Python3.12.14; no backend or functional qualification."
-    ]
+    ],
+    "physical_run": "dispatched_observation_artifacts_unrecovered"
   },
   "unchanged_runtime_fixture_and_strict_runner": true,
   "diagnostic_run": {
-    "status": "ready_for_one_dispatch",
+    "status": "dispatched_observation_artifacts_unrecovered",
+    "run_id": 37673488169,
+    "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37673488169",
+    "source_commit": "01737cace1ec66cdb129c091a73504a340dc5e8b",
+    "source_tree": "9fef613dcd4fd57b5dcd45be532abe5b4727a587",
+    "alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
     "observer": "setup-eligibility",
+    "case_jobs": [
+      "positive"
+    ],
     "observation_window_seconds": 180,
-    "python": "3.12.14",
+    "return_observer_maximum_records": 128,
+    "original_functional_cap_seconds": 2700,
+    "publication_receipt_sha256": "3834b6247fa925689242d860410c6ad5caa95062d9fdb1ca5ee9b48963876907",
+    "dispatch_receipt_sha256": "f89e91bbb3038aa27938fe03ce598a6875059a09c6bca479395e3f975daacae1",
     "functional_qualification": false,
-    "latency_qualification": false
+    "latency_qualification": false,
+    "duplicate_dispatch_forbidden": true,
+    "root_cause": "unestablished"
   },
   "next_action": "Recover exact first preparation refusal, assess test optimization overreach separately, make only a supported connection correction, then rejoin functional FloRA. External models remain external."
 }
