@@ -453,7 +453,7 @@
   ],
   "component_controls_status": "seven_original_controls_reached_and_passed_with_initial_selection_errors_preserved",
   "physical_run": {
-    "status": "dispatched_raw_result_unrecovered",
+    "status": "completed_contained_setup_no_functional_verdict",
     "case": "positive",
     "original_functional_cap_seconds": 2700,
     "sampler_cap_seconds": 300,
@@ -467,9 +467,85 @@
     "functional_positive_only": true,
     "selected_test_id": "test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery",
     "python": "3.12.14",
-    "alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b"
+    "alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+    "conclusion": "failure",
+    "verified_recovery": {
+      "schema": "flora-functional-recalibration-recovery-v1",
+      "run_id": 37685186902,
+      "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37685186902",
+      "source_commit": "dbf101cc1452815b6f8fb5d24dd962dff916bf97",
+      "source_tree": "ca3b33b54415117574505f9c8452cc9567b07d65",
+      "conclusion": "failure",
+      "artifact_metadata": {
+        "id": 11513211429,
+        "node_id": "MDg6QXJ0aWZhY3QxMTUxMzIxMTQyOQ==",
+        "name": "connected-functional-verification-positive",
+        "size_in_bytes": 73035,
+        "url": "https://api.github.com/repos/NIne-WIngEd/FloRA/actions/artifacts/11513211429",
+        "archive_download_url": "https://api.github.com/repos/NIne-WIngEd/FloRA/actions/artifacts/11513211429/zip",
+        "expired": false,
+        "digest": "sha256:793feccb852686a1159ce86475b5f76d7d20b452b7df64a3159dc564759f85f6",
+        "created_at": "2026-10-07T21:37:32Z",
+        "updated_at": "2026-10-07T21:37:32Z",
+        "expires_at": "2027-01-05T20:51:28Z",
+        "workflow_run": {
+          "id": 37685186902,
+          "repository_id": 1393950425,
+          "head_repository_id": 1393950425,
+          "head_branch": "codex/flora-shared-source-caps",
+          "head_sha": "dbf101cc1452815b6f8fb5d24dd962dff916bf97"
+        }
+      },
+      "artifact_sha256": "793feccb852686a1159ce86475b5f76d7d20b452b7df64a3159dc564759f85f6",
+      "log_archive_sha256": "6e5e3a9037ff12369548baab03b6030d28ba5131e565c228172c94e6be5badbf",
+      "source_files_verified": 427,
+      "source_before_after_identical": true,
+      "process": {
+        "process_exit": 124,
+        "log_write_exit": 0,
+        "effective_exit": 124,
+        "hard_process_cap_seconds": 2700,
+        "kill_grace_seconds": 30,
+        "latency_qualification": false,
+        "setup_journal_cap_seconds": 300,
+        "sampling_interval_seconds": 1,
+        "setup_journal_qualification": false,
+        "raw_strict_result_authoritative": true,
+        "shell_wall_seconds": 2700,
+        "external_cpu_wall_timing_available": true
+      },
+      "journal_records": 300,
+      "journal_sha256": "9977d849940ff8e8e46164f1395c9b37fd32f95bce05190a1efb94368418fde1",
+      "raw_result_exists": false,
+      "raw_result": null,
+      "original_log_sha256": "ba2594b3eb82aacf87cc35899d5c5885d7d33565f753c82a705d822e276348d4",
+      "files": {
+        "artifacts.json": "8a11fdbe1f2cbbc4d25b4970d6884add5fddce825cc74a670882222d626f2dd3",
+        "jobs.json": "a475d23c92fba248566f6af270facfe8c890dc0d466b5ece26432590d9a684d8",
+        "original-artifact.zip": "793feccb852686a1159ce86475b5f76d7d20b452b7df64a3159dc564759f85f6",
+        "original-logs.zip": "6e5e3a9037ff12369548baab03b6030d28ba5131e565c228172c94e6be5badbf",
+        "run.json": "49c9c85e114abfae78c471c6d37bae6f7d1a3554e1ff3432960a82d8ba29258d",
+        "artifacts/connected-functional-backend-logs.txt": "c30e1218af10e6485db0e0646a6d727493b96f2abc556a79bbac976755a6cd7a",
+        "artifacts/connected-functional-backend-ps.txt": "4ca20233f041d5c0ed4199d85b516527b44cba1f22ea0c947aeca43f6decd0ab",
+        "artifacts/connected-functional-dependencies.txt": "9c662b8a79942832b7df36a5c76cd5b7259601d38af956f2cac9aab2e1340859",
+        "artifacts/connected-functional-process.json": "675c9dd6a852fc32649445d9044ff8fb0370e391cfaa9151d3827d15adb53bc1",
+        "artifacts/connected-functional-protocol.md": "4a32774ca3a36097f94c0d316e5f5402d2a08c65c8101b9296650a91e95e76cc",
+        "artifacts/connected-functional-python.txt": "52fb5da09e34fb9e6a6358018ae48c54f7140c14edac1d09c775a03d31c915a8",
+        "artifacts/connected-functional-setup-journal.jsonl": "9977d849940ff8e8e46164f1395c9b37fd32f95bce05190a1efb94368418fde1",
+        "artifacts/connected-functional-source-after.txt": "158cdc36245e586d2b573806cc326961435cabb64df76750e878bb3e2019b6e3",
+        "artifacts/connected-functional-source-before.txt": "158cdc36245e586d2b573806cc326961435cabb64df76750e878bb3e2019b6e3",
+        "artifacts/connected-functional-source-identity.txt": "bba46a5082630fa2d64316bf6317a7b645b83dfa4364642bb0d89fdb42926d43",
+        "artifacts/connected-functional-test.log": "ba2594b3eb82aacf87cc35899d5c5885d7d33565f753c82a705d822e276348d4",
+        "artifacts/connected-functional-time.txt": "670ee2566615aa875994be36f79aa69b2a83746818ee97382247a66809bf01a3",
+        "logs/4_connected-functional-positive.txt": "392bc3772831a5485a76b7c4b8b28639dc66afc247c53566d8b1dafe69ee696f",
+        "logs/connected-functional-positive/system.txt": "38092fd95293b731c88ee3356baf6224a033392442e3c7723c970dd9a1634614"
+      },
+      "rerun_dispatched": false,
+      "functional_qualification": false,
+      "latency_qualification": false
+    }
   },
-  "next_action": "Recover and validate this exact positive raw result before further execution. If positive passes, run the complete H/C campaign; if incomplete or failed, use ordered diagnosis. No duplicate or unsupported architecture patch.",
+  "next_action": "Recover the one local cost control; design and validate measurement for unchanged original physical first capture before launch. No full campaign or runtime patch from current incomplete evidence.",
   "component_controls": {
     "original_reached_and_passed": 7,
     "first_harness": {
@@ -494,5 +570,6 @@
     "runtime": "cached ARM64 Linux CPython3.12.15",
     "exact_raw_source_manifest_sha256": "de09d12840c88e3de1e01489a6bdad897f3f7ee7e3c763424074da01e48ac5d4",
     "integration_or_latency_qualification": false
-  }
+  },
+  "evaluation_recalibration": "docs/evidence/2026-10-07_evaluation_recalibration.json"
 }
