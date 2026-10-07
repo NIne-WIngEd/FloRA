@@ -169,7 +169,7 @@ If a run cannot distinguish the explanations, do not launch it. If only its
 result remains pending, record the resume condition and end the turn.
 
 Current action: the unchanged registered cost control completed. One reviewed
-construction-localization carrier is ready for dispatch. Its only source changes
+construction-localization carrier is dispatched; result and coverage pending. Its only source changes
 are a thin wrapper around the unchanged sampler and one diagnostic workflow job;
 runtime, fixture, strict tests, permissions, engines and models remain unchanged.
 Limits:31 fixed selectors, nine300s windows,2709 samples,8MiB combined journals,
@@ -179,3 +179,5 @@ physical timeout and its missing functional verdict remain authoritative.
 Before interpreting a new result, verify all428 source identities, artifact
 digests and aggregate coverage. Retain any unknown stage; no automatic retry.
 FBM163 remains the same procedure record, updated with completed evidence.
+
+One construction-localization run[37704802657](https://github.com/NIne-WIngEd/FloRA/actions/runs/37704802657) is dispatched on exactf22953b8e776863b01518df35b342934c0ef7b73/tree5ab68ff0bee45d26dcb37852e5745741be39e2c1, Python3.12.14/Alice4f287. Source/coverage and raw result are pending. Recover this exact run without redispatch. No further action is justified until its evidence is available.
