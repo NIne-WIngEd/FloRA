@@ -12,12 +12,13 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-07
 
-The corpus now contains **159 validated procedure traces**. This count describes
+The corpus now contains **160 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
 | Record | Observable operation |
 | --- | --- |
+| [Failed observer and numeric journal](2026-10-07_setup_observer_failure_and_journal.jsonl) | Preserve incomplete signal-failed observation, trace coherent capture stack and repair only the measurement mechanism before architecture attribution. |
 | [Completed physical failure and functional priority](2026-10-07_completed_physical_and_functional_priority.jsonl) | Validate1 pass/2 budget failures, audit uncalibrated cutoffs, retain old verdicts and rejoin the owner-authorized connected functional build. |
 | [Copied-consumer observer diagnosis](2026-10-05_terminal_copy_observer_diagnosis.jsonl) | Preserve a failed control whose observer required the original consumer instead of custody's copy; correct only test ancestry binding and retry control/basis denial on unchanged runtime, with no architecture verdict yet. |
 | [Terminal correction and basis discrimination](2026-10-05_terminal_completion_candidate.jsonl) | Freeze four unverified runtime changes and a strict saved-metadata-port test; dispatch only the same-source control/basis diagnostic before another correction, with broader regressions and physical pipeline pending. |
@@ -81,3 +82,5 @@ remain linked snapshots; new outcomes do not rewrite an earlier failure or pendi
 Current October7:158 validated public procedure seeds after connected functional construction. Physical and learned results remain pending.
 
 October7 current:159 validated public methods; shared physical construction stopped before its oracles. One source-bound observation is the next diagnostic.
+
+October7 current:160 methods; one numeric-journal observation is next, not a runtime repair or qualification.
