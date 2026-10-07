@@ -1,0 +1,190 @@
+{
+  "schema": "flora-evaluation-recalibration-v1",
+  "recorded_at_utc": "2026-10-07T23:30:55.082923Z",
+  "original_run": {
+    "schema": "flora-functional-recalibration-recovery-v1",
+    "run_id": 37685186902,
+    "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37685186902",
+    "source_commit": "dbf101cc1452815b6f8fb5d24dd962dff916bf97",
+    "source_tree": "ca3b33b54415117574505f9c8452cc9567b07d65",
+    "conclusion": "failure",
+    "artifact_metadata": {
+      "id": 11513211429,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUxMzIxMTQyOQ==",
+      "name": "connected-functional-verification-positive",
+      "size_in_bytes": 73035,
+      "url": "https://api.github.com/repos/NIne-WIngEd/FloRA/actions/artifacts/11513211429",
+      "archive_download_url": "https://api.github.com/repos/NIne-WIngEd/FloRA/actions/artifacts/11513211429/zip",
+      "expired": false,
+      "digest": "sha256:793feccb852686a1159ce86475b5f76d7d20b452b7df64a3159dc564759f85f6",
+      "created_at": "2026-10-07T21:37:32Z",
+      "updated_at": "2026-10-07T21:37:32Z",
+      "expires_at": "2027-01-05T20:51:28Z",
+      "workflow_run": {
+        "id": 37685186902,
+        "repository_id": 1393950425,
+        "head_repository_id": 1393950425,
+        "head_branch": "codex/flora-shared-source-caps",
+        "head_sha": "dbf101cc1452815b6f8fb5d24dd962dff916bf97"
+      }
+    },
+    "artifact_sha256": "793feccb852686a1159ce86475b5f76d7d20b452b7df64a3159dc564759f85f6",
+    "log_archive_sha256": "6e5e3a9037ff12369548baab03b6030d28ba5131e565c228172c94e6be5badbf",
+    "source_files_verified": 427,
+    "source_before_after_identical": true,
+    "process": {
+      "process_exit": 124,
+      "log_write_exit": 0,
+      "effective_exit": 124,
+      "hard_process_cap_seconds": 2700,
+      "kill_grace_seconds": 30,
+      "latency_qualification": false,
+      "setup_journal_cap_seconds": 300,
+      "sampling_interval_seconds": 1,
+      "setup_journal_qualification": false,
+      "raw_strict_result_authoritative": true,
+      "shell_wall_seconds": 2700,
+      "external_cpu_wall_timing_available": true
+    },
+    "journal_records": 300,
+    "journal_sha256": "9977d849940ff8e8e46164f1395c9b37fd32f95bce05190a1efb94368418fde1",
+    "raw_result_exists": false,
+    "raw_result": null,
+    "original_log_sha256": "ba2594b3eb82aacf87cc35899d5c5885d7d33565f753c82a705d822e276348d4",
+    "files": {
+      "artifacts.json": "8a11fdbe1f2cbbc4d25b4970d6884add5fddce825cc74a670882222d626f2dd3",
+      "jobs.json": "a475d23c92fba248566f6af270facfe8c890dc0d466b5ece26432590d9a684d8",
+      "original-artifact.zip": "793feccb852686a1159ce86475b5f76d7d20b452b7df64a3159dc564759f85f6",
+      "original-logs.zip": "6e5e3a9037ff12369548baab03b6030d28ba5131e565c228172c94e6be5badbf",
+      "run.json": "49c9c85e114abfae78c471c6d37bae6f7d1a3554e1ff3432960a82d8ba29258d",
+      "artifacts/connected-functional-backend-logs.txt": "c30e1218af10e6485db0e0646a6d727493b96f2abc556a79bbac976755a6cd7a",
+      "artifacts/connected-functional-backend-ps.txt": "4ca20233f041d5c0ed4199d85b516527b44cba1f22ea0c947aeca43f6decd0ab",
+      "artifacts/connected-functional-dependencies.txt": "9c662b8a79942832b7df36a5c76cd5b7259601d38af956f2cac9aab2e1340859",
+      "artifacts/connected-functional-process.json": "675c9dd6a852fc32649445d9044ff8fb0370e391cfaa9151d3827d15adb53bc1",
+      "artifacts/connected-functional-protocol.md": "4a32774ca3a36097f94c0d316e5f5402d2a08c65c8101b9296650a91e95e76cc",
+      "artifacts/connected-functional-python.txt": "52fb5da09e34fb9e6a6358018ae48c54f7140c14edac1d09c775a03d31c915a8",
+      "artifacts/connected-functional-setup-journal.jsonl": "9977d849940ff8e8e46164f1395c9b37fd32f95bce05190a1efb94368418fde1",
+      "artifacts/connected-functional-source-after.txt": "158cdc36245e586d2b573806cc326961435cabb64df76750e878bb3e2019b6e3",
+      "artifacts/connected-functional-source-before.txt": "158cdc36245e586d2b573806cc326961435cabb64df76750e878bb3e2019b6e3",
+      "artifacts/connected-functional-source-identity.txt": "bba46a5082630fa2d64316bf6317a7b645b83dfa4364642bb0d89fdb42926d43",
+      "artifacts/connected-functional-test.log": "ba2594b3eb82aacf87cc35899d5c5885d7d33565f753c82a705d822e276348d4",
+      "artifacts/connected-functional-time.txt": "670ee2566615aa875994be36f79aa69b2a83746818ee97382247a66809bf01a3",
+      "logs/4_connected-functional-positive.txt": "392bc3772831a5485a76b7c4b8b28639dc66afc247c53566d8b1dafe69ee696f",
+      "logs/connected-functional-positive/system.txt": "38092fd95293b731c88ee3356baf6224a033392442e3c7723c970dd9a1634614"
+    },
+    "rerun_dispatched": false,
+    "functional_qualification": false,
+    "latency_qualification": false
+  },
+  "audit_report": "docs/EVALUATION_RECALIBRATION_2026-10-07.md",
+  "test_validity": "Accurate resource-containment status; functional assertions unreached.",
+  "four_answers": {
+    "measurement": "One synthetic preregistered three-arm/two-phase mechanical custody comparison, direct current H/C refusal and fresh-controller recovery.",
+    "required_result": "Exactly six successful persisted attempts, equal histories/context, intended artifact routing, exact canonical ancestry and passive recovery; separate signed withdrawal/no-later-effect controls.",
+    "project_meaning": "Necessary comparison scaffold only; not causal learned judgment, irrelevant stability, outcome learning, competent baseline, transfer or host benefit.",
+    "evaluation_change": "Separate construction, composition and causal gates; do not retry a full campaign without a cause-discriminating prediction and reached representative control."
+  },
+  "confirmed_architecture": [
+    "Fallback one initial plus four lineage preparations; five assemblies and eight independent phase proofs are supported.",
+    "Four live guard entries per protected object get; capture guard repeats two slot checks, two C checks and one H check.",
+    "Registered H surrounds underlying authorization with current observations; canonical/dependency work repeats.",
+    "Coordinator adds four-route qualification and preparation/execution fences."
+  ],
+  "coverage_gaps": [
+    "Both H/C cases bypass coordinator composition.",
+    "Same-process recovery does not exercise crash or interrupted reconciliation.",
+    "Raw correction exists before BEFORE; only selected-history exclusion and head-update chronology are checked.",
+    "Native judgments precomputed and relayed; provider output fictional/constant.",
+    "No relevant/irrelevant behavioral contrast, decision-linked outcome or qualified baseline/model proof."
+  ],
+  "failure_location": "First capture observed through initial fallback assembly and lineage by299s; no evidence localizes remaining2400s.",
+  "exact_physical_root_cause": "unestablished",
+  "architecture_amplification": "confirmed source structure; exclusive physical contribution unestablished",
+  "evaluation_mistake": "Removing an unreached optimization assertion did not justify a full-run retry as a timeout repair.",
+  "hypotheses_for_next_physical_diagnostic": [
+    {
+      "hypothesis": "Repeated finite current/provenance reconstruction dominates.",
+      "prediction": "Many completed backend reads/replays and reentered guard/proof boundaries, with finite stable stack depth; cost follows reconstruction counts."
+    },
+    {
+      "hypothesis": "One backend/private operation blocks or repeatedly fails.",
+      "prediction": "One entered operation remains unreturned, completed read counts cease or error evidence identifies the operation."
+    },
+    {
+      "hypothesis": "CPU-bound local verification dominates rather than backend wait.",
+      "prediction": "Backend/replay completions progress little relative to active CPU; full-action residency remains in pure verification. Samples alone do not assign exclusive CPU."
+    }
+  ],
+  "registered_cost_control": {
+    "status": "running",
+    "intent": {
+      "schema": "flora-registered-capture-cost-control-intent-v1",
+      "hard_process_cap_seconds": 2700,
+      "containment_reason": "Reuse original functional resource cap; no response-time target.",
+      "original_run": 37685186902,
+      "runtime_unchanged": true,
+      "authority_methods_unchanged": true,
+      "source_files": 190,
+      "probe_sha256": "5d04a66453b1e4a3b0c73df34a5ebddcef8d81cdaa6f3353e6f225da0cae42ee",
+      "hypotheses": [
+        "finite nested validation work is visible on current registered graph",
+        "unmodified registered controller can return on fictional ports"
+      ],
+      "limits": [
+        "Different history and fictional ports cannot attribute original physical timeout.",
+        "No physical campaign, causal model qualification or latency verdict."
+      ]
+    },
+    "result": {
+      "schema": "flora-registered-capture-cost-control-v1",
+      "stage": "registered_capture_entered",
+      "evidence_kind": "fictional_row_log_ports",
+      "probe": "existing_registered_before_then_untouched_capture",
+      "python": "3.12.15 (main, Oct  1 2026, 21:52:41) [GCC 14.2.0]",
+      "source_sha256": "Exact manifest retained in the local source-bound probe receipt; no payload or permission values recorded.",
+      "method_replacements": 0,
+      "global_profile_or_trace": false,
+      "functional_qualification": false,
+      "physical_attribution": false,
+      "latency_qualification": false,
+      "setup_outer_sql_records": 30132,
+      "history_sources": 2,
+      "declared_slots": 4,
+      "role_count": 2,
+      "setup_wall_seconds": 32.64653153999825,
+      "setup_cpu_seconds": 32.502290900000006,
+      "source_manifest_sha256": "b592cac6fe3906642e8f67d8018964144a416371cc4d2aca563dfbc4948cba59"
+    },
+    "process": null
+  },
+  "evaluation_gates": [
+    "source/evidence",
+    "registered cost control",
+    "original physical first capture",
+    "four-capture chronology",
+    "owned read",
+    "coordinator and one native/provider attempt",
+    "composed independent H/C withdrawal",
+    "full six-attempt mechanics",
+    "qualified external-model causal correction/outcome comparison",
+    "transfer and host evidence",
+    "latency calibration"
+  ],
+  "next_action": "Recover the one local cost control; design and validate measurement for unchanged original physical first capture before launch. No full campaign or runtime patch from current incomplete evidence.",
+  "runtime_changes": 0,
+  "tests_changed": 0,
+  "workflow_changes": 0,
+  "physical_runs_dispatched": 0,
+  "functional_qualification": false,
+  "causal_hypothesis_qualification": false,
+  "latency_qualification": false,
+  "research_sources": [
+    "Alice contracts4f287 and governed current-serving standard",
+    "Alice frontier-watch756bf294f6a93e9ea7dcc12dba932a556d6080e0",
+    "Alice Graphify contexta06f61eafd91d04fb7ec7c1de3ab8a9ed7071b15",
+    "https://github.com/getzep/graphiti",
+    "https://github.com/xiaowu0162/LongMemEval/blob/main/README.md",
+    "https://docs.kurrent.io/server/v24.10/features/projections/",
+    "https://peps.python.org/pep-0669/"
+  ]
+}

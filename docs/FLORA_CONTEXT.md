@@ -1,6 +1,14 @@
 # FloRA continuation context
 
-## Current continuation — October7: functional claim corrected; intrusive admission probe retired
+## Current continuation — October7: evaluation recalibrated after incomplete construction
+
+Run37685186902 is recovered:427 exact sources unchanged, exit124 at2700s, no raw functional verdict. First BEFORE capture progresses through fallback assembly and lineage by299s; the remaining2400s are unobserved. An unreached assembly-count assertion was corrected, but no timeout repair occurred. Do not redispatch the full campaign.
+
+Read [evaluation audit](EVALUATION_RECALIBRATION_2026-10-07.md) before choosing work. Separate registered construction, actual coordinator composition and causal learned judgment. Confirmed repeated reconstruction is not an established exclusive physical cause. Direct H/C and same-process recovery checks have narrower scope than coordinator/crash safety. Models remain external; supplied receipts cannot prove FloRA's hypothesis.
+
+One unchanged registered capture cost control is running; its fictional ports cannot attribute physical failure. Recover that exact control, then validate a cause-discriminating original physical first-capture measurement. No runtime/test/workflow repair, new physical run, full Alice platform or latency target is introduced. FBM163 validated public procedure records; model weights are not built here.
+
+## Historical snapshot — October7: functional claim corrected; intrusive admission probe retired
 
 One complete positive functional case run37685186902 is dispatched on exactdbf101cc1452815b6f8fb5d24dd962dff916bf97/treeca3b33b54415117574505f9c8452cc9567b07d65, Python3.12.14 and pinned Alice4f287. [Connected positive run](https://github.com/NIne-WIngEd/FloRA/actions/runs/37685186902). Raw result/source artifacts and interpretation are pending. Recover this exact run without redispatch. The original2700s process cap remains; the existing numeric journal samples only first300s and then lets the original strict test continue. No whole-pipeline, H/C campaign, learning or latency claim.
 

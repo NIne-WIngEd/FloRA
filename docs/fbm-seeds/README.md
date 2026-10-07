@@ -89,3 +89,5 @@ October7 current:159 validated public methods; shared physical construction stop
 October7 current:160 methods; one numeric-journal observation is next, not a runtime repair or qualification.
 
 October7 current:161 methods; admission discriminator pending, no functional/model/latency qualification.
+
+October7 current:163 validated procedure records. [Evaluation recalibration](2026-10-07_evaluation_recalibration.jsonl) records claim separation, representative composition and prediction-based dispatch gates; no learned FBM or completed pipeline follows.
