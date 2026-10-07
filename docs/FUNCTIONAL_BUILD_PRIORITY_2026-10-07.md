@@ -2,6 +2,10 @@
 
 ## Current continuation — October7: functional claim corrected; intrusive admission probe retired
 
+One complete positive functional case run37685186902 is dispatched on exactdbf101cc1452815b6f8fb5d24dd962dff916bf97/treeca3b33b54415117574505f9c8452cc9567b07d65, Python3.12.14 and pinned Alice4f287. [Connected positive run](https://github.com/NIne-WIngEd/FloRA/actions/runs/37685186902). Raw result/source artifacts and interpretation are pending. Recover this exact run without redispatch. The original2700s process cap remains; the existing numeric journal samples only first300s and then lets the original strict test continue. No whole-pipeline, H/C campaign, learning or latency claim.
+
+
+
 Run37673488169 reached no admission target: only observer.start, exit124 at180s,
 427 exact sources unchanged. It never reached original-inputs registration;
 no actual refusal or functional verdict follows. Original failures are retained.
