@@ -631,7 +631,7 @@
   },
   "unchanged_runtime_fixture_and_strict_runner": true,
   "diagnostic_run": {
-    "status": "dispatched_observation_artifacts_unrecovered",
+    "status": "completed_planned_window_original_test_incomplete",
     "run_id": 37668996027,
     "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37668996027",
     "source_commit": "2bf112a4a61ed656b379417ff065b422ac811805",
@@ -649,7 +649,18 @@
     "functional_qualification": false,
     "latency_qualification": false,
     "duplicate_dispatch_forbidden": true,
-    "root_cause": "unestablished"
+    "root_cause": "unestablished",
+    "conclusion": "failure",
+    "process_exit": 124,
+    "source_files_verified": 426,
+    "source_before_after_unchanged": true,
+    "samples": 299,
+    "owned_samples": 298,
+    "maximum_sample_gap_seconds": 1.0115059999999971,
+    "no_sigsegv": true,
+    "original_test_verdict": null,
+    "journal_sha256": "c90815aab0274bb2db904f90e6e5b4585b1ab5f3abb248ed11de03ecc78fcb32"
   },
-  "next_action": "Recover numeric journal and validate its coverage before interpreting amplification/blocking or repairing any runtime. Rejoin connected functional FloRA, with external personality/MFM and only scenario-needed mission/result links."
+  "next_action": "Recover numeric journal and validate its coverage before interpreting amplification/blocking or repairing any runtime. Rejoin connected functional FloRA, with external personality/MFM and only scenario-needed mission/result links.",
+  "continuation_record": "FloRA:docs/evidence/2026-10-07_phase_capture_admission_diagnosis.json"
 }

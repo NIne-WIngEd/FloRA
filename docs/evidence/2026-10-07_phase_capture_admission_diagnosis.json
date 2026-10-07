@@ -1,0 +1,541 @@
+{
+  "schema": "flora-phase-capture-admission-diagnosis-v1",
+  "recorded_at_utc": "2026-10-07T19:17:19.450997+00:00",
+  "completed_observation": {
+    "run_id": 37668996027,
+    "source_commit": "2bf112a4a61ed656b379417ff065b422ac811805",
+    "source_tree": "b90e2c95dfd8f7eae10905625247301a1a4256e2",
+    "conclusion": "failure",
+    "artifact_metadata": {
+      "id": 11505345269,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUwNTM0NTI2OQ==",
+      "name": "connected-setup-journal-observation-positive",
+      "size_in_bytes": 72393,
+      "url": "https://api.github.com/repos/NIne-WIngEd/FloRA/actions/artifacts/11505345269",
+      "archive_download_url": "https://api.github.com/repos/NIne-WIngEd/FloRA/actions/artifacts/11505345269/zip",
+      "expired": false,
+      "digest": "sha256:99f2be4c382e3edfdf0e79e832497b8133d73543292910a2aa27449057208b7e",
+      "created_at": "2026-10-07T18:49:40Z",
+      "updated_at": "2026-10-07T18:49:40Z",
+      "expires_at": "2027-01-05T18:43:22Z",
+      "workflow_run": {
+        "id": 37668996027,
+        "repository_id": 1393950425,
+        "head_repository_id": 1393950425,
+        "head_branch": "codex/flora-shared-source-caps",
+        "head_sha": "2bf112a4a61ed656b379417ff065b422ac811805"
+      }
+    },
+    "artifact_sha256": "99f2be4c382e3edfdf0e79e832497b8133d73543292910a2aa27449057208b7e",
+    "log_archive_sha256": "580c8780e5436ef83e54b57f507fd9cd47bd303dfe15faec0e18101d38705dfc",
+    "source_files_verified": 426,
+    "source_before_after_identical": true,
+    "process": {
+      "schema": "flora-connected-setup-journal-observation-process-v1",
+      "diagnostic_only": true,
+      "process_exit": 124,
+      "log_write_exit": 0,
+      "effective_exit": 124,
+      "observation_window_seconds": 300,
+      "kill_grace_seconds": 30,
+      "original_functional_cap_seconds": 2700,
+      "sampling_interval_seconds": 1,
+      "shell_wall_seconds": 300,
+      "external_cpu_wall_timing_available": true,
+      "outcome": "observation_window_stopped_original_test_incomplete",
+      "original_test_incomplete": true,
+      "functional_qualification": false,
+      "latency_qualification": false
+    },
+    "journal_sha256": "c90815aab0274bb2db904f90e6e5b4585b1ab5f3abb248ed11de03ecc78fcb32",
+    "journal_records": 300,
+    "original_result_json_exists": false
+  },
+  "journal_validation": {
+    "samples": 299,
+    "owned_samples": 298,
+    "unowned_samples": [
+      0
+    ],
+    "elapsed_first": 0.000301,
+    "elapsed_last": 299.081884,
+    "maximum_sample_gap": 1.0115059999999971,
+    "depth_truncations": 0,
+    "thread_count_caps": 0,
+    "tags": {
+      "owner.strict_main": 298,
+      "owner.build": 297,
+      "phase.capture": 208,
+      "context.assemble": 188,
+      "phase.capture_guard": 182,
+      "xtdb.driver_execute": 152,
+      "xtdb.cursor_execute": 152,
+      "phaseprep.enter": 141,
+      "slot.authorize": 78,
+      "phase.slot_capture": 77,
+      "slot.capture": 77,
+      "slot.authorize_body": 63,
+      "kurrent.replay_committed": 61,
+      "phase.personal_gate": 61,
+      "kurrent.replay": 35,
+      "slot.execute": 29,
+      "slot.bindings": 5,
+      "slot.native_readers": 3
+    },
+    "tag_lines": [
+      {
+        "tag": "owner.strict_main",
+        "line": 62,
+        "samples": 297
+      },
+      {
+        "tag": "owner.build",
+        "line": 767,
+        "samples": 210
+      },
+      {
+        "tag": "xtdb.cursor_execute",
+        "line": 113,
+        "samples": 152
+      },
+      {
+        "tag": "xtdb.driver_execute",
+        "line": 302,
+        "samples": 152
+      },
+      {
+        "tag": "phaseprep.enter",
+        "line": 432,
+        "samples": 141
+      },
+      {
+        "tag": "phase.capture",
+        "line": 621,
+        "samples": 141
+      },
+      {
+        "tag": "context.assemble",
+        "line": 210,
+        "samples": 94
+      },
+      {
+        "tag": "slot.capture",
+        "line": 249,
+        "samples": 77
+      },
+      {
+        "tag": "phase.slot_capture",
+        "line": 394,
+        "samples": 77
+      },
+      {
+        "tag": "slot.authorize",
+        "line": 847,
+        "samples": 63
+      },
+      {
+        "tag": "context.assemble",
+        "line": 279,
+        "samples": 63
+      },
+      {
+        "tag": "kurrent.replay_committed",
+        "line": 400,
+        "samples": 61
+      },
+      {
+        "tag": "phase.capture",
+        "line": 625,
+        "samples": 60
+      },
+      {
+        "tag": "phase.capture_guard",
+        "line": 572,
+        "samples": 48
+      },
+      {
+        "tag": "phase.capture_guard",
+        "line": 574,
+        "samples": 39
+      },
+      {
+        "tag": "phase.capture_guard",
+        "line": 570,
+        "samples": 38
+      },
+      {
+        "tag": "kurrent.replay",
+        "line": 455,
+        "samples": 35
+      },
+      {
+        "tag": "owner.build",
+        "line": 723,
+        "samples": 33
+      },
+      {
+        "tag": "phase.personal_gate",
+        "line": 560,
+        "samples": 31
+      },
+      {
+        "tag": "phase.capture_guard",
+        "line": 575,
+        "samples": 29
+      },
+      {
+        "tag": "phase.capture_guard",
+        "line": 571,
+        "samples": 28
+      },
+      {
+        "tag": "slot.authorize_body",
+        "line": 874,
+        "samples": 28
+      },
+      {
+        "tag": "slot.execute",
+        "line": 1296,
+        "samples": 26
+      },
+      {
+        "tag": "slot.authorize_body",
+        "line": 854,
+        "samples": 23
+      },
+      {
+        "tag": "context.assemble",
+        "line": 190,
+        "samples": 23
+      },
+      {
+        "tag": "phase.personal_gate",
+        "line": 557,
+        "samples": 18
+      },
+      {
+        "tag": "owner.build",
+        "line": 717,
+        "samples": 15
+      },
+      {
+        "tag": "slot.authorize",
+        "line": 844,
+        "samples": 15
+      },
+      {
+        "tag": "owner.build",
+        "line": 687,
+        "samples": 13
+      },
+      {
+        "tag": "phase.personal_gate",
+        "line": 563,
+        "samples": 7
+      },
+      {
+        "tag": "context.assemble",
+        "line": 234,
+        "samples": 7
+      },
+      {
+        "tag": "owner.build",
+        "line": 683,
+        "samples": 6
+      },
+      {
+        "tag": "slot.authorize_body",
+        "line": 865,
+        "samples": 6
+      },
+      {
+        "tag": "slot.authorize_body",
+        "line": 867,
+        "samples": 5
+      },
+      {
+        "tag": "phase.personal_gate",
+        "line": 555,
+        "samples": 5
+      },
+      {
+        "tag": "phase.capture",
+        "line": 567,
+        "samples": 4
+      },
+      {
+        "tag": "owner.build",
+        "line": 647,
+        "samples": 3
+      },
+      {
+        "tag": "slot.bindings",
+        "line": 1264,
+        "samples": 3
+      },
+      {
+        "tag": "slot.execute",
+        "line": 1292,
+        "samples": 3
+      },
+      {
+        "tag": "owner.build",
+        "line": 638,
+        "samples": 2
+      },
+      {
+        "tag": "owner.build",
+        "line": 660,
+        "samples": 2
+      },
+      {
+        "tag": "owner.build",
+        "line": 716,
+        "samples": 2
+      },
+      {
+        "tag": "owner.build",
+        "line": 721,
+        "samples": 2
+      },
+      {
+        "tag": "owner.build",
+        "line": 722,
+        "samples": 2
+      },
+      {
+        "tag": "phase.capture",
+        "line": 576,
+        "samples": 2
+      },
+      {
+        "tag": "slot.native_readers",
+        "line": 1415,
+        "samples": 2
+      },
+      {
+        "tag": "slot.bindings",
+        "line": 1267,
+        "samples": 2
+      },
+      {
+        "tag": "owner.strict_main",
+        "line": 52,
+        "samples": 1
+      },
+      {
+        "tag": "owner.build",
+        "line": 633,
+        "samples": 1
+      },
+      {
+        "tag": "owner.build",
+        "line": 635,
+        "samples": 1
+      },
+      {
+        "tag": "owner.build",
+        "line": 639,
+        "samples": 1
+      },
+      {
+        "tag": "owner.build",
+        "line": 642,
+        "samples": 1
+      },
+      {
+        "tag": "owner.build",
+        "line": 664,
+        "samples": 1
+      },
+      {
+        "tag": "owner.build",
+        "line": 692,
+        "samples": 1
+      },
+      {
+        "tag": "owner.build",
+        "line": 719,
+        "samples": 1
+      },
+      {
+        "tag": "phase.capture",
+        "line": 566,
+        "samples": 1
+      },
+      {
+        "tag": "context.assemble",
+        "line": 207,
+        "samples": 1
+      },
+      {
+        "tag": "slot.authorize_body",
+        "line": 868,
+        "samples": 1
+      },
+      {
+        "tag": "slot.native_readers",
+        "line": 1408,
+        "samples": 1
+      }
+    ],
+    "resolved_tags_last": [
+      "context.assemble",
+      "context.log_replay",
+      "kurrent.codec_gateway",
+      "kurrent.lookup_committed",
+      "kurrent.replay",
+      "kurrent.replay_committed",
+      "owner.build",
+      "owner.strict_main",
+      "phase.capture",
+      "phase.capture_guard",
+      "phase.personal_gate",
+      "phase.slot_capture",
+      "phaseprep.enter",
+      "phaseprep.owner_map",
+      "phaseprep.port_dictionary",
+      "slot.authorize",
+      "slot.authorize_body",
+      "slot.bindings",
+      "slot.capture",
+      "slot.execute",
+      "slot.native_readers",
+      "xtdb.bounded_execute",
+      "xtdb.cursor_execute",
+      "xtdb.driver_execute",
+      "xtdb.native_execute"
+    ]
+  },
+  "independently_reviewed": true,
+  "whole_process_accounting": {
+    "wall_seconds": 300.0,
+    "user_cpu_seconds": 210.02,
+    "system_cpu_seconds": 18.91,
+    "cpu_percent": 76,
+    "not_function_exclusive": true
+  },
+  "observed_progress": [
+    {
+      "path": "first BEFORE capture",
+      "samples": 208,
+      "first_seconds": 91.201,
+      "last_seconds": 299.082
+    },
+    {
+      "path": "phase preparation conservative runtime._context fallback",
+      "samples": 141,
+      "first_seconds": 98.235,
+      "last_seconds": 238.84
+    },
+    {
+      "path": "capture context_lineage after initial assembly",
+      "samples": 60,
+      "first_seconds": 239.841,
+      "last_seconds": 299.082
+    }
+  ],
+  "deepest_fixed_capture_tags": {
+    "xtdb_cursor": 98,
+    "kurrent_replay": 41,
+    "slot_authorization_body": 33,
+    "capture_guard": 21,
+    "native_readers": 3
+  },
+  "ordered_diagnosis": [
+    {
+      "step": 1,
+      "status": "measurement_valid_test_claim_overreach_identified",
+      "finding": "The journal is reliable for residency: raw digest and426 unchanged sources verify, 299 sequential samples with298 owned, no truncation and near1s coverage. Exit124 is planned containment, not an assertion verdict. Unconditional one_assembly requires an optimization even for supported fresh fallback; it is not part of the causal functional claim and remains unreached."
+    },
+    {
+      "step": 2,
+      "status": "complete",
+      "finding": "The experiment must verify registered current state and exact evidence reach supplied personality judgment, correction is linked, full/ablation/baseline attempts remain comparable, passive recovery is exact and fresh H/C withdrawal prevents effects. Fictional producers establish mechanics only. Reuse counts and latency cannot qualify this capability, and learned hypothesis evidence remains absent."
+    },
+    {
+      "step": 3,
+      "status": "traced",
+      "finding": "First capture enters phase preparation fallback at _enter432, performs runtime._context, then advances to capture625 context_lineage. Fallback never installs _ACTIVE, so _borrow_lineage returns None and judgment_lineage303 independently prepares context again. Live guards invoke slot/stage/evaluation absence, personal source permission and original evidence/backend proof. Alice authority semantics stay necessary."
+    },
+    {
+      "step": 4,
+      "status": "first_admission_refusal_pending",
+      "finding": "Fallback and later fresh preparation are proven; its first representation/callback refusal is not. Slot native-reader checks are only3 deepest capture samples; do not assign the entire timeout to them, SQL, or the Kurrent metaclass. One bounded original-return observer will discriminate the actual initial refusal."
+    },
+    {
+      "step": 5,
+      "status": "complete",
+      "finding": "The private preparation lifetime safely reuses material only between exact issuer and consumer while checking named port/code/closure identity and fresh permissions. Unsupported representations deliberately take fresh construction. This is prototype causal custody, not authority to build full Alice missions. Shared prepared material must never cache allow decisions or conceal current revocation."
+    },
+    {
+      "step": 6,
+      "status": "discriminator_prepared_before_architecture_change",
+      "finding": "Keep runtime and original tests unchanged for the discriminator. Observe current-thread fixed original return events, exact role enums, lines and booleans; stop after first actual owner-map return. Do not widen admission, bypass guards, remove spies as a timeout remedy, or raise2700s. Later separate the optimization-count requirement from functional causal assertions, retaining history/evidence/withdrawal checks."
+    },
+    {
+      "step": 7,
+      "status": "primary_and_project_sources_reviewed",
+      "finding": "CPython profile return events are thread-specific and can also report exception unwind; qualify only normal return instruction offsets, with overhead excluded from performance claims. Static inspection warns against descriptor execution. Alice frontier-watch756bf distinguishes retrieval relevance from admissibility and final state from sufficient execution evidence; missing evidence stays unresolved. Graphify routes to original files and is not runtime authority. No backend change."
+    },
+    {
+      "step": 8,
+      "status": "offline_reviewed_physical_pending",
+      "finding": "Controls must cover eligible/refused/nativeFalse/foreign ancestry/unwinding, bounded records, preservation of action return/errors and existing hooks. Review exact source and unchanged workflow bodies, then one180s positive diagnostic on Python3.12.14 and Alice4f287. Recover original source and first refusal before a coherent repair. Connected functional verification remains pending."
+    }
+  ],
+  "research": [
+    {
+      "url": "https://docs.python.org/3.12/library/sys.html#sys.setprofile",
+      "transfer": "Thread-specific call/return events; None may mean exception unwind; no timing qualification."
+    },
+    {
+      "url": "https://docs.python.org/3.12/library/inspect.html#inspect.getattr_static",
+      "transfer": "Avoid dynamic descriptor lookup; static representation admission is deliberately conservative."
+    },
+    {
+      "reference": "A.L.I.C.E@756bf294f6a93e9ea7dcc12dba932a556d6080e0:docs/research/FRONTIER_WATCH_INTAKE_2026-10-07_ADMISSIBILITY_EXECUTION_EVIDENCE_PERSONAL_SCALING.md",
+      "transfer": "Relevance is not admissibility; missing execution evidence remains unresolved. Research only, no new topology."
+    },
+    {
+      "reference": "A.L.I.C.E@a06f61eafd91d04fb7ec7c1de3ab8a9ed7071b15:research/graphify-context/README.md",
+      "transfer": "Graph routing aids context; verify original source and never turn inferred edges into authority."
+    }
+  ],
+  "observer_review": {
+    "schema": "flora-phase-eligibility-root-final-review-v1",
+    "approved": true,
+    "source_hashes": {
+      "scripts/observe_connected_phase_eligibility.py": "b56529a77fa36cb9a49deff89201c2178eb64f61595cefe8eb91fbfe47c7dc17",
+      ".github/workflows/native-profile.yml": "712bf0ff3a0e362c34fdfb1ad60a40fac85738b8c3d51355e53c6281825e4680"
+    },
+    "author_receipt_sha256": "d5d87941f2d8ec2ba88fc624e844354ff6cdac74a9d964521ff589ca38579329",
+    "controls_receipt_sha256": "1023d937647fb3aec9a0e2f03a5c3a684a3ec962b724190b9adf0207461c03b5",
+    "profile_controls": 17,
+    "process_controls": 4,
+    "raw_result_sidecar_controls": true,
+    "bash_syntax_steps": 53,
+    "independent_root_source_and_preserved_prefix_review": true,
+    "raw_result_preserved": true,
+    "qualification_flags": false,
+    "runtime_fixture_or_original_runner_changes": 0,
+    "normal_return_not_unwinding": true,
+    "source_identity_correction": "Each fixed selector retains its own original code; cross-selector substitution rejected.",
+    "limits": [
+      "Current-thread profile overhead before first admission is not performance evidence.",
+      "Only fixed roles, lines and Boolean metadata persisted; no authority answers.",
+      "Observer deadline waits for Python events;180s external cap is mechanical containment.",
+      "Offline Python3.12.15 differs from pinned physical Python3.12.14; no backend or functional qualification."
+    ]
+  },
+  "unchanged_runtime_fixture_and_strict_runner": true,
+  "diagnostic_run": {
+    "status": "ready_for_one_dispatch",
+    "observer": "setup-eligibility",
+    "observation_window_seconds": 180,
+    "python": "3.12.14",
+    "functional_qualification": false,
+    "latency_qualification": false
+  },
+  "next_action": "Recover exact first preparation refusal, assess test optimization overreach separately, make only a supported connection correction, then rejoin functional FloRA. External models remain external."
+}
