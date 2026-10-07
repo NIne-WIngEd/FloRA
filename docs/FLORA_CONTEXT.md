@@ -1,6 +1,37 @@
 # FloRA continuation context
 
-## Current continuation — October6: reviewed finite binding candidate;39 pass,42 pending
+## Current continuation — October7:81 components pass; original physical verification running
+
+The reviewed binding correction is published at `bd7310955817a6f4482f0f46872ec4b94332b062`:
+two runtime files, two tests and the existing optional workflow.39 phase/binding
+and42 affected frame/history cases pass without failures/errors/skips;414 frozen
+source hashes per group match. Exact published bytes match the candidate. The
+occupied checkout and index are preserved. Original failure receipts remain intact.
+
+The affected group took1050.258s despite its intended900s observation alarm.
+Its assertions/source verdict is valid; timer cause and cap enforcement remain
+unestablished. No latency inference or runtime timer patch follows. Independent
+review supports proceeding to the original physical conditions.
+
+[Run37641323381](https://github.com/NIne-WIngEd/FloRA/actions/runs/37641323381)
+was dispatched once on that exact source with `observer=contracts`. It runs the
+original transport/native-comparison shards uninstrumented against selected
+services and Alice4f287 contracts; diagnostic job is skipped. Original10s/60s
+response limits and60-minute CI budget remain unchanged. Recover final logs and
+source artifact/tree/pin before interpreting results; every failure uses mandatory
+standalone `diagonosis` in order. Do not redispatch while its result is pending.
+
+FBM156 validated procedure seeds. Physical latency/learning remain unqualified;
+retained whole-history cancellations are a separate path. Once these physical
+conditions support the path, resume the existing [coordinator plan](EXPERIMENT_COORDINATOR.md):
+one registered two-stage history through two native ports and the general-memory
+port, six persisted attempts, equal evidence, chronology, current H/C withdrawal
+and passive recovery. Separate fixture passes do not prove that connection.
+Personality/MFM remain external; FloRA stays a narrow causal prototype.
+Stop when only the required run result remains.
+Read [the completion and dispatch record](evidence/2026-10-07_binding_components_and_physical_verification.json).
+
+## Previous continuation — October6: reviewed finite binding candidate;39 pass,42 pending
 
 Native diagnostic37482623415 localizes repeated pure seal/binding CPU, not SQL wait
 as dominant observed worker cost. Original fixture still fails; its116 loaded raw

@@ -10,9 +10,9 @@ Run `python docs/fbm-seeds/validate_traces.py` from the repository root to check
 
 The schema's linked-case boundary also requires concrete eligible inputs, permission roles, a choice set, an independently checkable target or unresolved state, authority and outcome records, and source/generator split lineage before a procedure seed becomes a supervised or evaluable FBM example. Those linked cases and the actual builder remain separate work. The [readiness audit](../EXPERIMENT_READINESS_AUDIT.md) records the seed-field repair and the remaining experiment boundary.
 
-## Latest construction records — 2026-10-05
+## Latest construction records — 2026-10-07
 
-The corpus now contains **155 validated procedure traces**. This count describes
+The corpus now contains **156 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
@@ -74,3 +74,5 @@ remain linked snapshots; new outcomes do not rewrite an earlier failure or pendi
 - [Finite pure verification composition](2026-10-06_finite_pure_verification_composition.jsonl): source-bound worker evidence overturns storage speculation; share graph observations while preserving independent expectations and fresh authority.
 
 - [Finite binding pass candidate](2026-10-06_finite_binding_pass_candidate.jsonl): prove alias work before repair, preserve independent expectations and getter/meta fallback, verify callback-free graph bounds before original physical tests.
+
+- [Binding components and original physical verification](2026-10-07_binding_components_and_physical_verification.jsonl):81 exact-source functional passes, preserved observation-timer limit, five-path publication and one uninstrumented physical dispatch before reconnecting the causal workflow.
