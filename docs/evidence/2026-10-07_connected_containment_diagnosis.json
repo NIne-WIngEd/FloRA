@@ -256,7 +256,7 @@
       "Code stacks may show only a Python caller for native blocking and truncate deep repeated frames."
     ],
     "fixture_runtime_or_strict_runner_edits": 0,
-    "physical_run": "not_dispatched"
+    "physical_run": "dispatched_observation_artifacts_unrecovered"
   },
   "source_hashes": {
     "scripts/observe_connected_setup.py": "4a798b3fb4d80c6449cc450732ff37a6cc83ce06658c64a05d086c708c480d67",
@@ -268,9 +268,25 @@
     "scripts/run_connected_functional_comparison.py": "c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2"
   },
   "diagnostic_run": {
-    "status": "ready_for_one_dispatch",
+    "status": "dispatched_observation_artifacts_unrecovered",
+    "run_id": 37663262359,
+    "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37663262359",
+    "source_commit": "d1b4983616027436307fb495f6bc476eff288148",
+    "source_tree": "1adbaacf25e2b8d28453fe16d327970665b66a08",
+    "alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+    "observer": "setup-stacks",
+    "case_jobs": [
+      "positive"
+    ],
+    "observation_window_seconds": 480,
+    "traceback_interval_seconds": 120,
+    "original_functional_cap_seconds": 2700,
+    "publication_receipt_sha256": "04eeffd932a762379464dd14cd8abcf149eaab94fd57ac846b52967242540528",
+    "dispatch_receipt_sha256": "b00e26c9a4662787d6c7f9407f2d717f67243aa29e101045d737f9eb86d467fc",
     "functional_qualification": false,
-    "latency_qualification": false
+    "latency_qualification": false,
+    "duplicate_dispatch_forbidden": true,
+    "root_cause": "unestablished"
   },
   "research": [
     {
