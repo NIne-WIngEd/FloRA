@@ -128,6 +128,8 @@ Local verification uses the cached Linux image with network disabled and source 
 
 ## Current continuation — October7: shared construction containment failure
 
+One setup observation run37663262359 was dispatched with observer=setup-stacks on exactd1b4983616027436307fb495f6bc476eff288148/tree1adbaacf25e2b8d28453fe16d327970665b66a08/Alice4f287a488bc908bd04f99255ee01b794bacba50b. [Original positive setup observation](https://github.com/NIne-WIngEd/FloRA/actions/runs/37663262359). At dispatch its stack/source artifacts and interpretation are pending. The separate8min diagnostic window and120s stack timer do not change the original45min functional protocol. An observation stop is incomplete evidence; even a normal completion is not functional or latency qualification. Recover this one run without redispatch.
+
 Run37653864404 on exact5dd7414/tree7aa3fd3/Alice4f287 is complete:
 three tests started, zero completed passes/assertion verdicts, three incomplete
 cases stopped at2700s. All424 captured source files per job are unchanged and all
