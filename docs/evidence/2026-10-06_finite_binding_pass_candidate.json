@@ -1,0 +1,190 @@
+{
+  "schema": "flora-finite-binding-pass-candidate-v1",
+  "recorded_at_utc": "2026-10-07T04:09:09.219381Z",
+  "status": "reviewed_candidate;39_component_passes;42_affected_cases_pending",
+  "source_parent": "6063073a13b391b19acaacff8c5f0f082c5df7b1",
+  "alice_contract_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+  "candidate_source_sha256": {
+    "src/flora/selected/selected_phase_authority.py": "6d0e7abbc25d69620b8778cfc8610745c7bf636d9b90ecd25d61a98e0d000b65",
+    "src/flora/selected/selected_authority_frame.py": "431fb8ef19d1f9c164562493d00809dde64cdbcb3a70e34d7a00aa949f1d1d91",
+    "tests/test_selected_phase_authority.py": "a1fca5076df3ff5509d6d1fa675dc1cf90d311e56f9c4a41cf530f80d9a8ba10",
+    "tests/test_shared_context_bindings.py": "732cc7c79ae1a6dc787d4f6ae874b480f7ae014dba83d4648b9ff7b87c31ae7b",
+    ".github/workflows/native-profile.yml": "2561ee36319edc7a34b56e4ce37ff04d8d8d66ae6af8d464f95cfb9abb8e893a"
+  },
+  "candidate_published": false,
+  "raw_source_basis_sha256": "1f30692d683ffa8973a6845984c32fa69d9ac702f852fe120335e3aedc2150f0",
+  "runtime_paths": [
+    "src/flora/selected/selected_phase_authority.py",
+    "src/flora/selected/selected_authority_frame.py"
+  ],
+  "test_paths": [
+    "tests/test_selected_phase_authority.py",
+    "tests/test_shared_context_bindings.py"
+  ],
+  "workflow_paths": [
+    ".github/workflows/native-profile.yml"
+  ],
+  "original_failed_discriminators": [
+    {
+      "label": "red",
+      "tests": 1,
+      "failed": 1,
+      "passed": 0,
+      "receipt_sha256": "0adc24696f56bedd8729e489e1e647a843b7cd5f9f74b226525efe5f690ab592",
+      "log_sha256": "26e3036b5980c21d08ba6af1e18faa843bb3a80ceb236b3619684d3785662429",
+      "targets": [
+        "test_selected_phase_authority.SelectedPhaseAuthorityTest.test_inherited_pair_observes_each_actual_identity_and_function_once_per_pass"
+      ],
+      "elapsed_seconds": 9.675477619995945
+    },
+    {
+      "label": "red-frame",
+      "tests": 2,
+      "failed": 1,
+      "passed": 1,
+      "receipt_sha256": "6e9f3a9e7b0e9c07eafaff961d743e6ce4c389792e29fac4ebb3aefdab0da16e",
+      "log_sha256": "6325dae83197c0f5a223b448baf1fc8d2d53818745bbf94c38679755ac3fa70f",
+      "targets": [
+        "test_shared_context_bindings.SharedContextBindingTest.test_diamond_checks_independent_captures_and_shared_reader_once_each_fresh_walk",
+        "test_shared_context_bindings.SharedContextBindingTest.test_diamond_later_walk_rejects_shared_reader_and_later_branch_mutations"
+      ],
+      "elapsed_seconds": 6.838064640003722
+    },
+    {
+      "label": "red-purity",
+      "tests": 1,
+      "failed": 1,
+      "passed": 0,
+      "receipt_sha256": "4c2b613a75bf782045aa0f36600276db92f92981d72f9469bc8af096cccd1e6c",
+      "log_sha256": "f168588e29adac86700c33a476aea4fb026cfddca82d7f4b119c8121268f68c0",
+      "targets": [
+        "test_selected_phase_authority.SelectedPhaseAuthorityTest.test_pair_never_reuses_function_observation_across_scope_getter_mutation"
+      ],
+      "elapsed_seconds": 8.025226526995539
+    },
+    {
+      "label": "red-metaclass",
+      "tests": 1,
+      "failed": 1,
+      "passed": 0,
+      "receipt_sha256": "0b79a2275f1b39871827ab0078b566f4258cd233468442b50bec85501f06f81e",
+      "log_sha256": "adcdc8c51d510c403fdc521aeb150860d42d765fd110533fff5fe09bbcc60b08",
+      "targets": [
+        "test_shared_context_bindings.SharedContextBindingTest.test_custom_metaclass_reader_is_refused_before_class_lookup_effects"
+      ],
+      "elapsed_seconds": 7.767976491013542
+    },
+    {
+      "label": "red-ancestor",
+      "tests": 1,
+      "failed": 1,
+      "passed": 0,
+      "receipt_sha256": "a6f890c359d596d54e63ad6f6d273c0a7154a9c71e86d2857e4f8b6af01cbf54",
+      "log_sha256": "6cfb83544f614eac5dd13c8d69b0e0cb7d9c95596896949d9d34c2a5ebd5073b",
+      "targets": [
+        "test_shared_context_bindings.SharedContextBindingTest.test_changed_reader_ancestor_is_refused_before_metaclass_effects"
+      ],
+      "elapsed_seconds": 6.0999469319940545
+    }
+  ],
+  "completed": {
+    "receipt": {
+      "schema": "flora-finite-binding-graph-verification-v1",
+      "label": "green",
+      "targets": [
+        "test_selected_phase_authority",
+        "test_shared_context_bindings"
+      ],
+      "tests": 39,
+      "failures": [],
+      "errors": [],
+      "skipped": [],
+      "elapsed_seconds": 17.961162715000683,
+      "source_hashes_unchanged": true,
+      "source_files": 414,
+      "product_budgets_changed": false,
+      "fixture_kind": "Controlled transports and actual contracts; not physical latency or learned judgment"
+    },
+    "receipt_sha256": "9d84cd1d046e1a8fd880f2b52f75025483b9ef3052d833a84e9f7f591d1539af",
+    "log_sha256": "9c12aed903c5fbaebcca887a0b322564d50d4707eafa903ead4ca708337bcdd1"
+  },
+  "pending": {
+    "launch": {
+      "container_id": "fe74a597ed12c6e69ab66965b25a40b78bbabf714b83aadde544b412eb0c41d7",
+      "name": "flora-binding-graph-affected-20261006",
+      "image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+      "manifest_sha256": "285dd6a7006ec22d56f63667c5c4e348f7864d1f13d0d20d616acbe2ccaa4c65",
+      "source_files": 414,
+      "targets": [
+        "test_shared_authority_frame.SharedAuthorityFrameTest",
+        "test_selected_history_contribution.SelectedHistoryContributionTest"
+      ]
+    },
+    "planned_cases": 42,
+    "classes": [
+      "test_shared_authority_frame.SharedAuthorityFrameTest",
+      "test_selected_history_contribution.SelectedHistoryContributionTest"
+    ],
+    "manifest_sha256": "285dd6a7006ec22d56f63667c5c4e348f7864d1f13d0d20d616acbe2ccaa4c65",
+    "network": "none",
+    "observation_cap_seconds": 900
+  },
+  "diagnosis_steps": [
+    {
+      "step": 1,
+      "evidence": "Original native/baseline budget tests remain sound. New inherited-pair/shared-reader discriminators reach actual verification and fail on duplicate work (282/110 identities;2 visits). Candidate getter-mutation test reaches real issued origin and exposes stale observation after lookup callback. Meta tests reach class inspection, including post-capture ancestor replacement. Original receipts preserved; no test/setup error is counted as RED."
+    },
+    {
+      "step": 2,
+      "claim": "Deliver exact authorized evidence to external judgment ports within fixed budgets while preserving every independent binding expectation. Graph cardinality and authority controls are infrastructure checks, not learned or physical-latency evidence."
+    },
+    {
+      "step": 3,
+      "path": "Private descriptor tree verifies independently registered descriptor/gate/reader/origin seals; frame capture walk reaches aliased reader nodes. Shared function closures unfold repeated pure observations."
+    },
+    {
+      "step": 4,
+      "cause": "Measured native CPU is dominated by repeated pure seal/binding inspection. Actual cardinality discriminators confirm aliases are reobserved. Initial candidate also crossed an accepted scope getter, allowing callback mutation behind a cached observation."
+    },
+    {
+      "step": 5,
+      "responsibility": "Seals reject replacements before dereferencing them. Function code/cell/global observations must meet every capture expectation. Scope/gate lookup must be callback-free inside any shared observation pass; unknown semantics cannot be silently bypassed."
+    },
+    {
+      "step": 6,
+      "correction": "Phase tree uses fresh internal exact-object/function observations, strong references and independent expected-seal comparisons. Frame walks each exact capture/reader once per invocation. Fixed native scope/gate recognition requires ordinary lookup and actual instance fields; unsupported property/getattr/meta paths keep original live gates without a descriptor. All current MRO metaclasses are checked before pure reader inspection. No public memo, positive allow cache or callback/IO crossing."
+    },
+    {
+      "step": 7,
+      "research": "Reuse source-bound native diagnostic, current Alice bounded materialization/immutable occurrence standards, existing FBM and CPython pass-local identity/strong-reference mechanism. Graphiti derived candidate/query deduplication is mechanism inspiration only. Recognize ordinary native ports instead of reading past arbitrary getter semantics; preserve exact external authority and original fallback."
+    },
+    {
+      "step": 8,
+      "verification": "Independent source review finds no blocker.39 Linux component cases pass without errors/skips,414 source hashes unchanged. They cover independent second-registration expectations, repeated public freshness, function/reader mutations, unsupported getter/meta fallback, later port substitution and ancestor callbacks.42 affected shared-frame/history cases run separately with exact same runtime/test hashes. Original uninstrumented physical conditions remain next after that group passes."
+    }
+  ],
+  "review": {
+    "mode": "independent_read_only",
+    "blocking_findings": 0,
+    "runtime_source_sha256": {
+      "src/flora/selected/selected_phase_authority.py": "6d0e7abbc25d69620b8778cfc8610745c7bf636d9b90ecd25d61a98e0d000b65",
+      "src/flora/selected/selected_authority_frame.py": "431fb8ef19d1f9c164562493d00809dde64cdbcb3a70e34d7a00aa949f1d1d91"
+    }
+  },
+  "optional_physical_plan": "Reuse registered native-profile.yml with observer=contracts; diagnostic job disabled, original transport/native-comparison shards run uninstrumented under unchanged60m job and10s/60s response limits. Existing pinned Alice read key reused, no credential persistence. This workflow is prepared, not dispatched. New standalone workflow was kept private after official docs confirmed workflow_dispatch default-branch constraint.",
+  "research_refs": [
+    "docs/evidence/2026-10-06_native_binding_graph_diagnosis.json",
+    "https://github.com/python/cpython/blob/v3.12.10/Lib/copy.py#L109",
+    "https://github.com/getzep/graphiti/blob/4f62cfe7a2d519e55bfdf2dc4a2fd06649dc00b3/graphiti_core/search/search.py",
+    "https://docs.github.com/en/actions/how-tos/manage-workflow-runs/manually-run-a-workflow"
+  ],
+  "limits": [
+    "Only39 bounded component cases are complete;42 affected cases remain pending.",
+    "No response-latency gain, physical pipeline pass, learned judgment or release qualification.",
+    "Original full-CI1047 component/49-2-2 physical results remain historical source606 evidence.",
+    "Retained whole-history cancellations are a separate unlocalized path.",
+    "Personality/MFM external; no full Alice platform or new model/store/backend.",
+    "Connected registered two-stage three-arm/six-attempt causal comparison remains outstanding."
+  ],
+  "next_action": "Recover42-case affected receipt and exact source/log hashes. If sound and all pass, publish only the five selected candidate paths via private index based on latest development parent, preserving occupied checkout; then dispatch existing optional workflow observer=contracts once. Any failure uses mandatory diagnosis. Stop while only a required run result remains."
+}

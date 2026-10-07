@@ -5,17 +5,20 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Current — October5: mandatory standalone `diagonosis` applies to every agent,
-including root. Completed15 fresh +3 unchanged carried passes:18 unique component
-cases;414 mounted sources and18 logs verified. Exact source commit
-`24a72db58f530619143322c29e36ecbec0b052a5` contains only five runtime files and one test.
-Resume ordinary connected physical CI with unchanged budgets; recover exact
-run/source/Alice pins and inspect reached claims/timings. Preserve unrelated dirty
-checkout work and all original failures. No more component campaign while only
-CI is pending. No pipeline/latency/learning qualification yet. Direct AFTER proof
-metadata substitution remains uncovered. Personality/MFM external; narrow FloRA
-scope. FBM152 schema-valid procedure seeds. Read
-`docs/evidence/2026-10-05_completed_terminal_component_verification.json`.
+Current — October6: mandatory standalone `diagonosis` for every agent/root.
+Measured native pure binding amplification has a reviewed isolated finite graph
+candidate (work/finite-binding-pass-20261006/source):2 runtime files/2 tests plus
+existing optional native-profile workflow contracts mode.39 Linux components
+pass,414 hashes unchanged;42 affected frame/history cases pending in offline
+containerflora-binding-graph-affected-20261006 (fe74a597). Candidate unpublished.
+Recover final receipt/source/log hashes before source publication/physical dispatch.
+Preserve original getter-mutation failure; native ordinary lookup recognition
+keeps unknown getters/meta paths on original live gates. Every independent issued
+expectation remains checked; no public memo/cacheallow or callback/IO crossing.
+Source606 full CI1047 component passes; physical49/2/2 per run. Budgets unchanged.
+FBM155 validated procedure seeds. No physical speedup/learning qualification;
+narrow FloRA/external personality and MFM/connected causal experiment remain.
+Read `docs/evidence/2026-10-06_finite_binding_pass_candidate.json`.
 
 Previous: reviewed origin correction0b790365 is published atbfff869e5193cbccdb1b466c445076376e81f589.
 Linux completes92 corrected cases without skips: real signed-H control/mutation
