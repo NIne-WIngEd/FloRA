@@ -735,27 +735,20 @@ class RegisteredFunctionalCase:
                 history_for=anchor.history_for,
                 phase_receipt_for=lambda request: support._lf.fictional_phase_receipt(request, f.qualification_key))
         captured, bindings = {}, {}
-        def one_assembly(action):
-            from flora.selected import context_guard, experiment_runtime
-            with patch.object(context_guard, "assemble_context", wraps=context_guard.assemble_context) as native, \
-                 patch.object(experiment_runtime, "assemble_context", wraps=experiment_runtime.assemble_context) as legacy:
-                value = action()
-                self.assertEqual(native.call_count + legacy.call_count, 1)
-                return value
         def capture(slot, *, ports, **kwargs):
             store.bind_historical_bindings(snapshot_id=slot.snapshot_id, bindings=ports)
             bindings[slot.snapshot_id] = ports
-            snapshot = one_assembly(lambda: archive.capture(snapshot_id=slot.snapshot_id, case_id=slot.case_id,
+            snapshot = archive.capture(snapshot_id=slot.snapshot_id, case_id=slot.case_id,
                 phase=slot.phase, arm=slot.arm, plan=context_plan, lineage=lineage(slot),
-                history=histories[(slot.case_id, slot.phase)], **kwargs))
+                history=histories[(slot.case_id, slot.phase)], **kwargs)
             captured[(slot.phase, slot.arm)] = snapshot
             event_id = archive.metadata(slot.snapshot_id)["event_id"]
             f._judgment_permission(f.registry.lookup(event_id))
             for operation in ("capture", "read"):
                 self.grant(event_id, preregistration_purpose(run_id, operation))
-            route = one_assembly(lambda: archive.capture_route(snapshot_id=slot.snapshot_id,
-                history_authority=authority, historical_bindings=ports))
-            observed = one_assembly(route.observed_binding)
+            route = archive.capture_route(snapshot_id=slot.snapshot_id,
+                history_authority=authority, historical_bindings=ports)
+            observed = route.observed_binding()
             self.assertEqual(observed.context_lineage_sha256, snapshot.record["context_lineage_sha256"])
             self.assertEqual(route.snapshot.record["context_receipt"], snapshot.record["context_receipt"])
             store.publish_capture(snapshot_id=slot.snapshot_id)

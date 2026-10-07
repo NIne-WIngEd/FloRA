@@ -1,3 +1,5 @@
+Current October7 procedure count:162. Latest: purpose-correct functional continuation; retain failed admission probe as target-unreached evidence. No learned builder claim.
+
 # FloRA builder seeds
 
 FloRA captures one compact, reusable process trace per material infrastructure or experiment-design step. These rows follow A.L.I.C.E.'s [FBM trace schema v0.1](https://github.com/NIne-WIngEd/A.L.I.C.E/blob/fable-builder-model/docs/fable-builder/TRACE_SCHEMA_v0.1.md). FloRA is the source of these seeds; the builder workstream can refer to them here when it needs them.

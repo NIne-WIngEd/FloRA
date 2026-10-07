@@ -15,6 +15,10 @@ on:
           - setup-stacks
           - setup-journal
           - setup-eligibility
+      functional_positive_only:
+        description: Run the positive connected case only; full three-case verification remains separate
+        type: boolean
+        default: false
   push:
     paths:
       - scripts/profile_selected_native_boundaries.py
@@ -189,13 +193,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - case: positive
-            test-id: test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery
-          - case: history-withdrawal
-            test-id: test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects
-          - case: context-withdrawal
-            test-id: test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects
+        include: ${{ fromJSON(inputs.functional_positive_only && '[{"case":"positive","test-id":"test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery"}]' || '[{"case":"positive","test-id":"test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery"},{"case":"history-withdrawal","test-id":"test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects"},{"case":"context-withdrawal","test-id":"test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects"}]') }}
     env:
       PYTHONPATH: alice-reference/src:src:tests:tests/integration
       KURRENTDB_URI: kurrentdb://127.0.0.1:2113?tls=false
@@ -212,7 +210,15 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.12.14'
+      - name: Record exact Python runtime
+        run: |
+          python - <<'PY' > connected-functional-python.txt
+          import sys
+          print(sys.version)
+          print('version_info=' + repr(tuple(sys.version_info)))
+          print('gil_enabled=' + repr(not hasattr(sys, '_is_gil_enabled') or sys._is_gil_enabled()))
+          PY
       - name: Record exact source and declared mechanical protocol
         run: |
           git rev-parse HEAD HEAD^{tree} > connected-functional-source-identity.txt
@@ -222,6 +228,8 @@ jobs:
           cp docs/FUNCTIONAL_BUILD_PRIORITY_2026-10-07.md connected-functional-protocol.md
       - name: Install selected integration dependencies
         run: python -m pip install -e '.[backends,providers,embeddings]'
+      - name: Record selected dependency identity
+        run: python -m pip freeze --all > connected-functional-dependencies.txt
       - name: Start only this case's selected services
         run: docker compose -f compose.integration.yml up -d kurrentdb xtdb qdrant
       - name: Wait for selected services
@@ -238,14 +246,22 @@ jobs:
         run: |
           set -uo pipefail
           set +e
-          timeout --kill-after=30s 45m python -u scripts/run_connected_functional_comparison.py --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects --select-test-id '${{ matrix.test-id }}' --output connected-functional-result.json 2>&1 | tee connected-functional-test.log
+          timing_available=false
+          timing=()
+          if [ -x /usr/bin/time ]; then
+            timing_available=true
+            timing=(/usr/bin/time -f 'wall_seconds=%e\nuser_cpu_seconds=%U\nsystem_cpu_seconds=%S\ncpu_percent=%P\ncommand_exit=%x' -o connected-functional-time.txt)
+          fi
+          started_seconds=$SECONDS
+          "${timing[@]}" timeout --kill-after=30s 45m python -u scripts/observe_connected_setup_journal.py --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects --select-test-id '${{ matrix.test-id }}' --output connected-functional-result.json --journal connected-functional-setup-journal.jsonl --journal-cap-seconds 300 --journal-interval-seconds 1 2>&1 | tee connected-functional-test.log
           statuses=("${PIPESTATUS[@]}")
           process_result=${statuses[0]}
           log_result=${statuses[1]}
           result=$process_result
           if [ "$result" -eq 0 ] && [ "$log_result" -ne 0 ]; then result=$log_result; fi
+          shell_wall_seconds=$((SECONDS-started_seconds))
           set -e
-          printf '{"process_exit":%s,"log_write_exit":%s,"effective_exit":%s,"hard_process_cap_seconds":2700,"kill_grace_seconds":30,"latency_qualification":false}\n' "$process_result" "$log_result" "$result" > connected-functional-process.json
+          printf '{"process_exit":%s,"log_write_exit":%s,"effective_exit":%s,"hard_process_cap_seconds":2700,"kill_grace_seconds":30,"latency_qualification":false,"setup_journal_cap_seconds":300,"sampling_interval_seconds":1,"setup_journal_qualification":false,"raw_strict_result_authoritative":true,"shell_wall_seconds":%s,"external_cpu_wall_timing_available":%s}\n' "$process_result" "$log_result" "$result" "$shell_wall_seconds" "$timing_available" > connected-functional-process.json
           exit "$result"
       - name: Verify final source even after setup or execution failure
         if: always()
@@ -272,6 +288,10 @@ jobs:
             connected-functional-source-after.txt
             connected-functional-source-unavailable.txt
             connected-functional-protocol.md
+            connected-functional-python.txt
+            connected-functional-dependencies.txt
+            connected-functional-time.txt
+            connected-functional-setup-journal.jsonl
             connected-functional-test.log
             connected-functional-result.json
             connected-functional-process.json

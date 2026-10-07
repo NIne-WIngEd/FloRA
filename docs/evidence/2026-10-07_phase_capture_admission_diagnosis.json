@@ -531,7 +531,7 @@
   },
   "unchanged_runtime_fixture_and_strict_runner": true,
   "diagnostic_run": {
-    "status": "dispatched_observation_artifacts_unrecovered",
+    "status": "completed_target_unreached_observer_retired",
     "run_id": 37673488169,
     "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37673488169",
     "source_commit": "01737cace1ec66cdb129c091a73504a340dc5e8b",
@@ -549,7 +549,16 @@
     "functional_qualification": false,
     "latency_qualification": false,
     "duplicate_dispatch_forbidden": true,
-    "root_cause": "unestablished"
+    "root_cause": "unestablished",
+    "conclusion": "failure",
+    "process_exit": 124,
+    "source_files_verified": 427,
+    "source_before_after_unchanged": true,
+    "journal_records": 1,
+    "actual_admission_recorded": false,
+    "original_test_verdict": null,
+    "journal_sha256": "e80d2e215d81adc10b7b5e8eb09aace333e1722fb9d909c2727eb770bbcf5582"
   },
-  "next_action": "Recover exact first preparation refusal, assess test optimization overreach separately, make only a supported connection correction, then rejoin functional FloRA. External models remain external."
+  "next_action": "Recover exact first preparation refusal, assess test optimization overreach separately, make only a supported connection correction, then rejoin functional FloRA. External models remain external.",
+  "continuation_record": "FloRA:docs/evidence/2026-10-07_functional_claim_and_observer_scope.json"
 }
