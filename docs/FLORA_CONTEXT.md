@@ -1,6 +1,31 @@
 # FloRA continuation context
 
-## Current continuation — October7: functional FloRA first; original physical run failed
+## Current continuation — October7: connected functional source prepared
+
+The same actual registered BEFORE/update/AFTER case now composes two actual native
+adapters and the general-memory baseline under one coordinator. Concrete ports
+are frozen before sealing. The positive test requires six successful persisted
+attempts, equal original history/native context, old BEFORE/new AFTER full and old
+ablation checkpoints, exact linked receipts, and fresh-controller passive recovery.
+Two fresh negative cases withdraw actual current H or C after passing controls.
+The synthetic owner uses prior scoped signed intent and exact typed canonical
+proposals; missing ancestors and existing revoke remain refusals. Runtime and old
+tests are unchanged. Review failures and the corrected copy diagnosis are retained.
+
+Offline discovery, actual signed-policy component controls and strict runner
+controls pass; these do not prove physical integration. One reviewed frozen manual
+dispatch is ready: positive/history-withdrawal/context-withdrawal in three separate
+jobs. Finite bounds contain work; no latency scoring or old timing-test rewrite.
+Recover exact run source/artifacts before interpretation and do not duplicate it.
+Personality/MFM and provider outputs here are fictional transport fixtures. No
+learned causal result or full-build completion is claimed. After physical mechanics,
+connect relevant/irrelevant corrections and decision-linked outcome, then necessary
+mission/result links, qualified external models and independent assessment. Builder
+transfer stays separate; calibrated frontier-comparable latency follows function.
+FBM158 public procedure seeds. Mandatory standalone diagonosis applies to any
+failed case. Read docs/evidence/2026-10-07_connected_functional_construction.json.
+
+## Historical snapshot — October7: functional FloRA first; original physical run failed
 
 The owner explicitly prioritizes the complete narrow FloRA causal prototype before
 latency optimization. Build and verify the required memory/Experience/Claim/state,
@@ -505,7 +530,7 @@ Read the [candidate and correction receipt](evidence/2026-10-04_actual_phase_pre
 No new physical CI/model job, full Alice platform or producer training is added.
 Only remaining results should be waited for; do not blindly repeat full runs.
 
-## Current objective and verdict — October 4
+## Historical snapshot objective and verdict — October 4
 
 FloRA tests whether relevant corrections/outcomes improve later native personal
 judgment, irrelevant changes leave it stable, and the result beats a strong

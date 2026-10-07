@@ -33,9 +33,9 @@
 
 Files: create tests/registered_functional_case_fixture.py and tests/integration/test_selected_connected_functional_comparison.py. Reuse tests/integration/test_selected_experiment_preregistration.py, tests/integration/test_selected_experiment_coordinator.py, native_contract_fixture.py and existing comparator/provider fixtures. Refactor only the minimal shared fixture construction when necessary; retain existing tests' assertions/semantics and avoid imported/inherited duplicate discovery.
 
-- [ ] Read exact producer/consumer constructors and identify every frozen manifest/ID/grant before editing. Record the setup order and explicit operational protocol/reader/worker/writer containment values in the isolated work ledger.
-- [ ] Construct real bounded relay worker/codec/meter/owned selected reader/writer declarations before newspec.register. Preserve independent qualifier signatures and frozen provider task IDs; never replace hashes after sealing.
-- [ ] Reuse actual original sources, cohort/recipe registration, BEFORE seal, governed Claim/state/artifact update and AFTER finalization. Return the actual manifests, custody, final, router, evidence, histories, question, four native entries/output receipts and cohort mappings for one connected case.
+- [x] Read exact producer/consumer constructors and identify every frozen manifest/ID/grant before editing. Record the setup order and explicit operational protocol/reader/worker/writer containment values in the isolated work ledger.
+- [x] Construct real bounded relay worker/codec/meter/owned selected reader/writer declarations before newspec.register. Preserve independent qualifier signatures and frozen provider task IDs; never replace hashes after sealing.
+- [x] Reuse actual original sources, cohort/recipe registration, BEFORE seal, governed Claim/state/artifact update and AFTER finalization. Return the actual manifests, custody, final, router, evidence, histories, question, four native entries/output receipts and cohort mappings for one connected case.
 - [ ] Write the positive connected test. Build two actual NativeArmAdapters and GeneralMemoryArmAdapter with Qdrant/disclosure/recorder/independently enrolled provider-attempt ledger. Grant coordinator capture/read on actual parent closure; execute once. Observe its first result before any runtime repair.
 - [ ] Assert all six positive statuses and exact persisted case/phase/arm/invocation identities; actual full/ablation context equality, equal authorized original history, chronological treatment/checkpoint routing and required decision/output links. Keep all failed statuses in the denominator if the test fails.
 - [ ] Use a later authorized recovery with inference/provider dispatch disabled. Assert exact bytes/identities, no new execution and no duplicate canonical writes.
@@ -45,3 +45,36 @@ Files: create tests/registered_functional_case_fixture.py and tests/integration/
 ## Following tasks
 
 Once the positive connection works, run the relevant-correction, irrelevant-correction and decision-linked-outcome scenarios through it. Register outcome revisions as candidates with separate approval; add mission/result links only when required by the scenario. Plug in separately qualified models and independent assessment before claiming credible causal support. Builder transfer remains a distinct required result. Latency calibration and optimization follow this functional build.
+
+Source composition and offline controls are complete. Tests for tasks4–7 are
+prepared; their execution and physical assertions remain pending. Inspect the
+source-bound evidence record before treating checkboxes as a physical result.
+
+## Next same-case scenario handoff
+
+After the first physical result, extend this harness for caregiving relevant
+correction and coffee irrelevant correction using the existing pilot source
+semantics and actual form_experience/admit_proposal/activate_personal_state/judge
+ports. A constant next_state or checkpoint swap does not establish relevance.
+Relevant career judgment must use changed caregiving evidence; the coffee change
+must leave career reasoning stable. Assess reasons independently when qualified
+external models are available.
+
+For outcome, use decision_outcome.record_outcome_observation and
+outcome_revision.register_outcome_revision through governed candidate and separate
+activation before AFTER. Preserve the actual BEFORE decision and independent
+observation as distinct parents of the internal audit; keep internal audit/decision
+out of the common original-history baseline. Candidate registration alone cannot
+move active state.
+
+Preregistration.register requires actual BEFORE and AFTER original history/cohort
+entries upfront. Native pilot later-ingestion and its strict control-tail methods
+are not directly compatible with the registered coordinator. Predeclared fictional
+originals can test staged mechanics, honestly labeled. A newly arriving original
+requires an explicit staged source-binding contract before live-observation claims;
+do not blind-call the pilot transition or bypass the seal.
+
+No FloRA mission/result writer-reader runtime is established. Add scoped Alice
+Mission/ResultCapsule contracts and required evidence handoffs only if the chosen
+scenario exercises a persistent goal. Episode mission IDs alone confer no authority.
+This is a continuation gap, not a prerequisite to the first mechanics run.

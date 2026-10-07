@@ -1,0 +1,411 @@
+{
+  "schema": "flora-connected-functional-construction-v1",
+  "recorded_at_utc": "2026-10-07T16:36:34.300658Z",
+  "runtime_basis": "bd7310955817a6f4482f0f46872ec4b94332b062",
+  "development_parent": "5ee4b828232c087566ecfa65d558b54b19069946",
+  "alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+  "source_hashes": {
+    "tests/registered_functional_case_fixture.py": "438281164ad79f9b26ad6157c925a40b7f492db2b8a44f338ea2ef51267cfffe",
+    "tests/integration/test_selected_connected_functional_comparison.py": "156754dccc7a3eb6b7c20d590bd87c49b6bdb1e5dbda6778b54038802ecfa7ae",
+    "scripts/run_connected_functional_comparison.py": "c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2",
+    ".github/workflows/native-profile.yml": "bdd766ea909eaa64fbc39738d7d6251148d593bb4ebe0759277de8dd18420602"
+  },
+  "frozen_manifest_sha256": "775905dee23bbce07fa58416afa17989698f2bd4ab1510a3fdbf36d2bd34a286",
+  "original_snapshot_files_unchanged": 719,
+  "selected_source_files_match_published_parent": 202,
+  "runtime_or_original_test_changes": 0,
+  "scope": "Actual registered same-case two-stage three-arm mechanics; supplied fictional producer/provider results, external personality/MFM.",
+  "required_physical_oracles": [
+    "six successful persisted attempts",
+    "equal authorized original history and native selected context",
+    "BEFORE old checkpoint; AFTER full new checkpoint and ablation old",
+    "exact decision/output/context parent links",
+    "fresh-controller exact passive recovery without dispatch/writes",
+    "reached independent current H/C refusal before later effects"
+  ],
+  "owner_handoff": "Prior scoped signed synthetic owner intent. Typed exact canonical proposals trigger signed selected-policy actions for coordinator capture/read only. Missing ancestors and prior revoke refuse.",
+  "verification": {
+    "fixture_review": {
+      "schema": "flora-connected-functional-source-review-v1",
+      "approved": true,
+      "reviewer": "alice_architecture",
+      "review_scope": "Read-only review of the second frozen fixture/test source, limited to repaired preflight typing and H/C refusal attribution against the unchanged runtime writers and gates.",
+      "source_commit": "bd7310955817a6f4482f0f46872ec4b94332b062",
+      "alice_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+      "freeze_revision": 2,
+      "frozen_manifest_sha256": "775905dee23bbce07fa58416afa17989698f2bd4ab1510a3fdbf36d2bd34a286",
+      "source_hashes": {
+        "tests/registered_functional_case_fixture.py": "438281164ad79f9b26ad6157c925a40b7f492db2b8a44f338ea2ef51267cfffe",
+        "tests/integration/test_selected_connected_functional_comparison.py": "156754dccc7a3eb6b7c20d590bd87c49b6bdb1e5dbda6778b54038802ecfa7ae"
+      },
+      "findings": [],
+      "accepted_source_contracts": [
+        "Running requires the exact signed approved coordinator_preflight target for the current intent/run, including frozen readiness artifact identity, payload digest, metadata, canonical event, registration and ordered parents; a granted context/output cannot substitute.",
+        "The broker preserves actual source-specific signed owner actions, current parent permissions and refusal to reverse existing deny/revoke actions. Its intent only covers this fictional registered run's coordinator capture/read purposes.",
+        "Provider receipt/context/output/exchange matching and run closure remain as reviewed in the first freeze: actual issued capture verification and ordered context sources, exact recorded verdicts and writer-derived parent sets.",
+        "H/C tests verify the unchanged execution-shaped request before and after withdrawal, exact current allow-to-revoke lineage and target refusal. Arbitrary ValueError and unrelated PermissionError cannot supply a withdrawal verdict.",
+        "C permits consumer False or ArmStopped(refused) only with a separately reached actual owned-read current-phase gate rejecting personal_judgment source use; the exact original-history authority is independently checked live.",
+        "Fresh passive recovery and BEFORE/update/AFTER checkpoint/context assertions remain unchanged. Runtime authority, cancellation, task deadlines, immutable dispatch and custody writers are not replaced by these test edits."
+      ],
+      "prior_rejections_retained": true,
+      "prior_rejections": {
+        "directory": "work/connected-functional-build-20261007/prior-freeze-1",
+        "review_record": "work/connected-functional-build-20261007/prior-freeze-1/review-rejection.txt",
+        "manifest_sha256": "e03474634d47778bd91b73bbe3ae7ff458dc438c3f49cbe5f95842cafc89bdcc",
+        "source_hashes": {
+          "tests/registered_functional_case_fixture.py": "43f484e92d55954e0e8521b945cddf58710a1892d1084b9a447313d1fee7b5cd",
+          "tests/integration/test_selected_connected_functional_comparison.py": "fd2718f1bbe48916866970413709ffda4fd91c0563330b6a65840a3c114812c2"
+        },
+        "resolved_blockers": [
+          "A merely granted source could substitute for a typed coordinator preflight parent.",
+          "Unrelated structural errors or unattributed generic refusal could satisfy H/C withdrawal assertions."
+        ]
+      },
+      "supporting_records_inspected": [
+        "work/connected-functional-build-20261007/offline-preflight-typing-verification.json",
+        "work/connected-functional-build-20261007/offline-withdrawal-oracle-verification.json"
+      ],
+      "limits": {
+        "physical_pending": true,
+        "fictional_outputs": true,
+        "reviewer_launched_tests_or_jobs": false,
+        "source_review_is_not_physical_gate_evidence": true,
+        "offline_predicates_are_not_actual_engine_evidence": true,
+        "learning_or_hypothesis_support": false,
+        "baseline_quality_or_model_readiness": false,
+        "calibrated_latency_acceptance": false,
+        "full_alice_platform_required": false
+      }
+    },
+    "workflow_runner_review": {
+      "schema": "flora-connected-functional-workflow-final-review-v1",
+      "review_date": "2026-10-07",
+      "approved": true,
+      "approval_scope": "workflow_and_strict_runner_only",
+      "workflow_sha256": "bdd766ea909eaa64fbc39738d7d6251148d593bb4ebe0759277de8dd18420602",
+      "runner_sha256": "c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2",
+      "observed_test_sha256": "fd2718f1bbe48916866970413709ffda4fd91c0563330b6a65840a3c114812c2",
+      "test_approved": false,
+      "test_approval_status": "pending_parent_final_source_review_and_repairs",
+      "base_workflow_sha256": "2561ee36319edc7a34b56e4ce37ff04d8d8d66ae6af8d464f95cfb9abb8e893a",
+      "original_contract_block_unchanged": true,
+      "original_contract_block_comparison": "Exact content comparison after trimming trailing block whitespace only.",
+      "checks": {
+        "yaml_parser": "PyYAML BaseLoader in existing cached flora-frame-contracts-arm64:20261002 image",
+        "yaml_syntax_passed": true,
+        "yaml_structure_passed": true,
+        "bash_syntax_steps_passed": 8,
+        "offline_container_network": "none",
+        "offline_container_root_filesystem": "read-only",
+        "offline_review_mount": "read-only",
+        "functional_mode_choice_and_job_gates_passed": true,
+        "diagnostic_and_original_contract_jobs_excluded_from_functional_mode": true,
+        "independent_matrix_jobs": 3,
+        "exact_test_ids_match_observed_source_ast": true,
+        "job_timeout_minutes": 60,
+        "hard_process_cap_seconds": 2700,
+        "kill_grace_seconds": 30,
+        "alice_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+        "alice_read_key": "ALICE_CONTRACTS_READ_KEY",
+        "alice_persist_credentials": false,
+        "selected_services": [
+          "kurrentdb",
+          "xtdb",
+          "qdrant"
+        ],
+        "source_before_after_includes_executed_scripts": true,
+        "final_source_verification_runs_always": true,
+        "source_identity_protocol_test_process_and_backend_artifact_paths_present": true,
+        "both_pipeline_statuses_preserved": true,
+        "strict_runner_integrity_control_receipt_reviewed": true,
+        "strict_runner_integrity_control_count": 7,
+        "strict_runner_entrypoint_control_receipt_reviewed": true,
+        "strict_runner_entrypoint_control_count": 5,
+        "skip_expected_failure_empty_duplicate_foreign_and_unknown_selection_false_green_refused": true,
+        "original_import_and_runner_errors_preserved": true
+      },
+      "findings": [],
+      "diagnostic_history": [
+        {
+          "original_check_exit": 1,
+          "original_error": "AssertionError in first offline structural checker",
+          "validated_cause": "The checker expected pipeline_results, whereas reviewed workflow correctly captures PIPESTATUS in statuses. The checker also used an incorrect identity artifact filename.",
+          "workflow_or_runner_changed": false,
+          "corrected_checker_exit": 0
+        }
+      ],
+      "limits": [
+        "Source and offline harness review only; no FloRA physical case or backing services executed.",
+        "YAML and Bash parsing plus structural assertions do not establish GitHub Actions remote execution success.",
+        "Final test and fixture acceptance remain pending; the observed test hash is an identity record, not approval.",
+        "No latency or learned model qualification is claimed."
+      ],
+      "physical_execution_pending": true,
+      "workflow_dispatched": false
+    },
+    "offline_collection": {
+      "schema": "flora-offline-connected-discovery-v1",
+      "syntax": "passed",
+      "import": "passed",
+      "count": 3,
+      "exact_ids": [
+        "test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects",
+        "test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects",
+        "test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery"
+      ],
+      "physical_setup_started": false
+    },
+    "owner_controls": {
+      "schema": "flora-offline-scoped-owner-broker-v1",
+      "owner_policy": "actual signed apply/permits",
+      "exact_delegated_control_allowed": true,
+      "prior_revoke_not_regranted": true,
+      "missing_parent_not_minted": true,
+      "undeclared_source_no_new_action": true,
+      "owner_withdrawal_no_new_action": true,
+      "bad_typed_context_proposal_no_new_action": true,
+      "exact_fenced_writer_copy_recognized": true,
+      "unrelated_read_connection_excluded": true,
+      "bad_provider_exchange_parent_predicate_no_new_action": true,
+      "bad_run_parent_predicate_no_new_action": true,
+      "provider_run_predicate_scope": "isolated supplied shape rows; no captured provider task or physical run",
+      "stage_scope_verification": {
+        "schema": "flora-owner-preflight-typing-v1",
+        "valid_preflight_running_allowed": true,
+        "context_preflight_substitution_refused": true,
+        "new_signed_actions": 0,
+        "physical_execution": false,
+        "sql_scope": "existing shape-only contract ports",
+        "wrong_readiness_suffix_refused": true,
+        "wrong_readiness_payload_refused": true
+      },
+      "signed_decisions": [
+        {
+          "event_id": "experience-a17c1349b8a4b93acc7f2c08916ea1d8",
+          "registration_sha256": "fa8ce7da574a24291e07240af8eb9aa4f2058c213759a1bf075161af592a26d7",
+          "purpose": "experiment_coordinator_capture:c567ebd4e75495275c61bee63dc77acb59991376f386ac985f0e6a4fd20329fe",
+          "action_id": "permission-5",
+          "action_sha256": "f6b475d75720ee0162e57bf86532bac81e4d687f1a9a4620138b517b9e2a0d66",
+          "intent_sha256": "f482c1f86ff5be42ec27cf3fa02f22797fb2b1640f67393f158a3b7b7777fa21"
+        },
+        {
+          "event_id": "experience-a17c1349b8a4b93acc7f2c08916ea1d8",
+          "registration_sha256": "fa8ce7da574a24291e07240af8eb9aa4f2058c213759a1bf075161af592a26d7",
+          "purpose": "experiment_coordinator_read:c567ebd4e75495275c61bee63dc77acb59991376f386ac985f0e6a4fd20329fe",
+          "action_id": "permission-6",
+          "action_sha256": "f9fd865a95683843304be9e4ff75c25fd729c1e59d4007c5d78d7b25f5a7bdc7",
+          "intent_sha256": "f482c1f86ff5be42ec27cf3fa02f22797fb2b1640f67393f158a3b7b7777fa21"
+        },
+        {
+          "event_id": "experience-e03697220e5163b43930e0b412a4e376",
+          "registration_sha256": "5906e0001bbf673b8c6bb9f5e1f57e30541714813e863ec1805b63d39d21b567",
+          "purpose": "experiment_coordinator_capture:c567ebd4e75495275c61bee63dc77acb59991376f386ac985f0e6a4fd20329fe",
+          "action_id": "permission-14",
+          "action_sha256": "9759b5f02c25c542ff0dc82c0652742bf344a56142387c452a189b7922b13ae8",
+          "intent_sha256": "f482c1f86ff5be42ec27cf3fa02f22797fb2b1640f67393f158a3b7b7777fa21"
+        },
+        {
+          "event_id": "experience-e03697220e5163b43930e0b412a4e376",
+          "registration_sha256": "5906e0001bbf673b8c6bb9f5e1f57e30541714813e863ec1805b63d39d21b567",
+          "purpose": "experiment_coordinator_read:c567ebd4e75495275c61bee63dc77acb59991376f386ac985f0e6a4fd20329fe",
+          "action_id": "permission-15",
+          "action_sha256": "7d92d9103ec8eda3a08c873831f5ebc56526aa5eabbaed019dc4a83957d0c047",
+          "intent_sha256": "f482c1f86ff5be42ec27cf3fa02f22797fb2b1640f67393f158a3b7b7777fa21"
+        },
+        {
+          "event_id": "experience-85b074adecbc633fe3fd3974a16822e3",
+          "registration_sha256": "50e7620bebb4e1242063731b3f04e030b0694a71771453d87e9a8c81964cc9b4",
+          "purpose": "experiment_coordinator_capture:c567ebd4e75495275c61bee63dc77acb59991376f386ac985f0e6a4fd20329fe",
+          "action_id": "permission-16",
+          "action_sha256": "db2d1e85633d48f8ee438d9eba330e832f63a67eff9b87f6e143ba89f3016781",
+          "intent_sha256": "f482c1f86ff5be42ec27cf3fa02f22797fb2b1640f67393f158a3b7b7777fa21"
+        },
+        {
+          "event_id": "experience-85b074adecbc633fe3fd3974a16822e3",
+          "registration_sha256": "50e7620bebb4e1242063731b3f04e030b0694a71771453d87e9a8c81964cc9b4",
+          "purpose": "experiment_coordinator_read:c567ebd4e75495275c61bee63dc77acb59991376f386ac985f0e6a4fd20329fe",
+          "action_id": "permission-17",
+          "action_sha256": "f4954c5fa35961c04580bc58f7e87050060be8e6b0949dfc12a42f53dad37826",
+          "intent_sha256": "f482c1f86ff5be42ec27cf3fa02f22797fb2b1640f67393f158a3b7b7777fa21"
+        },
+        {
+          "event_id": "experience-36a7f697fa9032cab582675196f514ce",
+          "registration_sha256": "74e1b8ef59c76fa1b4cfdcaabccfda1a10bffebdbb16b29fb53e78fd03625616",
+          "purpose": "experiment_coordinator_capture:c567ebd4e75495275c61bee63dc77acb59991376f386ac985f0e6a4fd20329fe",
+          "action_id": "permission-18",
+          "action_sha256": "42dd82f843f844365cc5e3d6a2ec3f417efca995f6a55f90b321c02761ee8e61",
+          "intent_sha256": "f482c1f86ff5be42ec27cf3fa02f22797fb2b1640f67393f158a3b7b7777fa21"
+        },
+        {
+          "event_id": "experience-36a7f697fa9032cab582675196f514ce",
+          "registration_sha256": "74e1b8ef59c76fa1b4cfdcaabccfda1a10bffebdbb16b29fb53e78fd03625616",
+          "purpose": "experiment_coordinator_read:c567ebd4e75495275c61bee63dc77acb59991376f386ac985f0e6a4fd20329fe",
+          "action_id": "permission-19",
+          "action_sha256": "acf20e66eef5bf6354fc991cf51e47fc65433fd408a0bed2f0d02aea2d0842ac",
+          "intent_sha256": "f482c1f86ff5be42ec27cf3fa02f22797fb2b1640f67393f158a3b7b7777fa21"
+        }
+      ],
+      "physical_engines_exercised": false,
+      "inference_exercised": false,
+      "sql_port": "existing shape-only contract fixture"
+    },
+    "runner_verdict_controls": {
+      "schema": "flora-functional-runner-integrity-controls-v1",
+      "runner_sha256": "c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2",
+      "controls": {
+        "positive": {
+          "tests_run": 1,
+          "skipped": 0,
+          "expected_failures": 0,
+          "qualified": true
+        },
+        "all_skipped": {
+          "tests_run": 1,
+          "skipped": 1,
+          "expected_failures": 0,
+          "qualified": false
+        },
+        "expected_failure": {
+          "tests_run": 1,
+          "skipped": 0,
+          "expected_failures": 1,
+          "qualified": false
+        },
+        "empty": {
+          "refused": true
+        },
+        "duplicate": {
+          "refused": true
+        },
+        "foreign_identity": {
+          "refused": true
+        },
+        "unexpected_inherited_case": {
+          "refused": true
+        }
+      },
+      "physical_FloRA_executed": false,
+      "services_started": false
+    },
+    "runner_entrypoint_controls": {
+      "schema": "flora-focused-runner-entrypoint-controls-v1",
+      "controls": [
+        {
+          "control": "positive",
+          "expected_exit": 0,
+          "actual_exit": 0,
+          "qualified": true,
+          "original_error_preserved": false,
+          "result_sha256": "3cd059b2eadc910280867de23151df4803899bcf782b903718868dcbe9588c29"
+        },
+        {
+          "control": "skip",
+          "expected_exit": 1,
+          "actual_exit": 1,
+          "qualified": false,
+          "original_error_preserved": false,
+          "result_sha256": "76e58ff209c26b6076e5a84e01a29fc64d680f2059419918a2156d067d5378de"
+        },
+        {
+          "control": "expected_failure",
+          "expected_exit": 1,
+          "actual_exit": 1,
+          "qualified": false,
+          "original_error_preserved": false,
+          "result_sha256": "a4d68513754ff4ad01147078c7a843d47d3d83e569adc14f5d79c067e492f2a9"
+        },
+        {
+          "control": "unknown_selection",
+          "expected_exit": 1,
+          "actual_exit": 1,
+          "qualified": false,
+          "original_error_preserved": true,
+          "result_sha256": "ace38ce46e50b084f2bf898b1ac7a45c532fbd27bb935fd16fdac7114318167f"
+        },
+        {
+          "control": "import_failure",
+          "expected_exit": 1,
+          "actual_exit": 1,
+          "qualified": false,
+          "original_error_preserved": true,
+          "result_sha256": "3285e460c49a92fa35290d0e5944ff3161220074f82e267707163b7c7de072f6"
+        }
+      ],
+      "runner_sha256": "c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2",
+      "FloRA_or_services_executed": false
+    }
+  },
+  "retained_failures": [
+    "Original physical37641323381:1 pass/2 configured timing failures of3 retained",
+    "Original broker intent validator admitted undeclared source and was corrected with discriminators",
+    "First frozen broker running-parent predicate admitted another approved record as preflight; original rejection retained",
+    "Guarded-copy missing-marker diagnosis was faulty; actual constructor/copy control supports original strict predicate; no widening"
+  ],
+  "ordered_validator_diagnosis": [
+    {
+      "step": 1,
+      "finding": "Review found faulty test helpers: undeclared grants, a granted record substituting for preflight, and broad unrelated-error withdrawal oracles. Original source and reproductions are preserved."
+    },
+    {
+      "step": 2,
+      "finding": "The case must prove actual authorized integration and refusal at a reached semantic boundary; fixture generosity or unrelated errors cannot prove the causal prototype works."
+    },
+    {
+      "step": 3,
+      "finding": "Trace actual coordinator stage writes, selected signed-policy apply/permits, issued provider sinks, owned native reads and first execution checks. Runtime responsibilities remain unchanged."
+    },
+    {
+      "step": 4,
+      "finding": "First invalid acceptance is in synthetic proposal membership or test verdict, not a demonstrated runtime custody defect. The copy-marker suspicion was disproved by actual constructor/fenced-copy controls."
+    },
+    {
+      "step": 5,
+      "finding": "The owner broker translates declared scoped intent into exact current signed actions. The withdrawal oracle must distinguish changed current source use from malformed execution input."
+    },
+    {
+      "step": 6,
+      "finding": "Require typed exact preflight/body/parent identity and reached live-policy denial on unchanged valid execution inputs. Never mint missing-parent grants, undo revokes, widen physical-controller ownership or manufacture denial."
+    },
+    {
+      "step": 7,
+      "finding": "Pinned Alice permission scopes/budget/expiry/revoke and no-new-authority delegation support the narrow external synthetic owner. Actual FloRA writer/source contracts define exact stage and refusal identities."
+    },
+    {
+      "step": 8,
+      "finding": "Bounded valid/substitution and actual signed-policy controls plus final source review and exact discovery qualify the test construction. Physical six-attempt/recovery and fresh H/C results still require the single frozen dispatch."
+    }
+  ],
+  "research": [
+    {
+      "source": "ALICE:8ea804aa25c3d1c5f46e9be5810d072ed0fadb4b:docs/PERMISSION_MODEL.md",
+      "mechanism": "Delegated scopes/budget/expiry/revoke; delegation does not create authority."
+    },
+    {
+      "source": "FloRA:src/flora/selected/experiment_coordinator.py",
+      "mechanism": "Exact writer stage ancestry and readiness payload-derived preflight identity."
+    },
+    {
+      "source": "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#onworkflow_dispatchinputsinput_idtype",
+      "mechanism": "Explicit manual choice with isolated matrix jobs."
+    }
+  ],
+  "physical_run": {
+    "status": "ready_for_one_frozen_dispatch",
+    "cases": 3,
+    "pass": null
+  },
+  "performance_acceptance": false,
+  "next_scenario_connections": {
+    "relevant_and_irrelevant_correction": "Extend this same registered harness using pilot caregiving/coffee cases and actual form_experience/admit_proposal/activate_personal_state/judge contracts. Do not let constant fixture state replacement stand in for learned relevance.",
+    "outcome": "decision_outcome.record_outcome_observation -> outcome_revision.register_outcome_revision -> governed candidate -> separate activation -> AFTER judgment; link the independent observation and actual BEFORE decision without sharing native internal audit as raw history.",
+    "source_binding_limit": "Preregistration.register requires actual BEFORE and AFTER original histories/cohort entries upfront. Native pilot later-ingestion and strict control-tail methods are not drop-in compatible. Predeclared fictional originals can test staged mechanics; newly arriving originals need an explicit staged source-binding contract before claiming live observation support.",
+    "mission": "No FloRA mission/result writer-reader runtime is established. Use scoped Alice mission/result contracts only if the selected scenario needs persistent goals; episode mission IDs alone confer no factual authority."
+  },
+  "limits": [
+    "No physical connected result yet",
+    "No learned causal support",
+    "No calibrated speed result",
+    "Relevant/irrelevant corrections and decision-linked outcome remain next connected scenarios",
+    "Necessary mission/result connections, qualified external models, independent assessment and builder transfer remain subsequent requirements"
+  ]
+}

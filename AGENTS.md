@@ -1,11 +1,37 @@
 # Continuing FloRA
 
+## Current continuation — October7: connected functional source prepared
+
+The same actual registered BEFORE/update/AFTER case now composes two actual native
+adapters and the general-memory baseline under one coordinator. Concrete ports
+are frozen before sealing. The positive test requires six successful persisted
+attempts, equal original history/native context, old BEFORE/new AFTER full and old
+ablation checkpoints, exact linked receipts, and fresh-controller passive recovery.
+Two fresh negative cases withdraw actual current H or C after passing controls.
+The synthetic owner uses prior scoped signed intent and exact typed canonical
+proposals; missing ancestors and existing revoke remain refusals. Runtime and old
+tests are unchanged. Review failures and the corrected copy diagnosis are retained.
+
+Offline discovery, actual signed-policy component controls and strict runner
+controls pass; these do not prove physical integration. One reviewed frozen manual
+dispatch is ready: positive/history-withdrawal/context-withdrawal in three separate
+jobs. Finite bounds contain work; no latency scoring or old timing-test rewrite.
+Recover exact run source/artifacts before interpretation and do not duplicate it.
+Personality/MFM and provider outputs here are fictional transport fixtures. No
+learned causal result or full-build completion is claimed. After physical mechanics,
+connect relevant/irrelevant corrections and decision-linked outcome, then necessary
+mission/result links, qualified external models and independent assessment. Builder
+transfer stays separate; calibrated frontier-comparable latency follows function.
+FBM158 public procedure seeds. Mandatory standalone diagonosis applies to any
+failed case. Read docs/evidence/2026-10-07_connected_functional_construction.json.
+
+
 Read `docs/FLORA_CONTEXT.md` first, then the latest verification checkpoint and
 the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Current — October7: owner prioritizes functional FloRA before latency.
+Previous snapshot — October7: owner prioritizes functional FloRA before latency.
 Run37641323381 completed1 pass/2 budget failures of3 on exactbd731095/Alice4f287.
 18.360/29.179s baseline phases exceed10s; native prepare cancels near60s before
 execution. Source/pin/log artifacts verified; later functional assertions unreached.
