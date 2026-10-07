@@ -2,6 +2,8 @@
 
 ## Current continuation — October7: evaluation recalibrated after incomplete construction
 
+One construction-localization run[37704802657](https://github.com/NIne-WIngEd/FloRA/actions/runs/37704802657) is dispatched on exactf22953b8e776863b01518df35b342934c0ef7b73/tree5ab68ff0bee45d26dcb37852e5745741be39e2c1, Python3.12.14/Alice4f287. Source/coverage and raw result are pending. Recover this exact run without redispatch. 
+
 Run37685186902 is recovered:427 exact sources unchanged, exit124 at2700s, no raw functional verdict. First BEFORE capture progresses through fallback assembly and lineage by299s; the remaining2400s are unobserved. An unreached assembly-count assertion was corrected, but no timeout repair occurred. Do not redispatch the full campaign.
 
 Read [evaluation audit](docs/EVALUATION_RECALIBRATION_2026-10-07.md) before choosing work. Separate registered construction, actual coordinator composition and causal learned judgment. Confirmed repeated reconstruction is not an established exclusive physical cause. Direct H/C and same-process recovery checks have narrower scope than coordinator/crash safety. Models remain external; supplied receipts cannot prove FloRA's hypothesis.
