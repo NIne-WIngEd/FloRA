@@ -1,5 +1,35 @@
 # FloRA functional build first
 
+## Current continuation — October7: failed observer, numeric journal prepared
+
+Original run37653864404 still has three incomplete2700s setup stops, with no
+functional assertion verdict. Observation37663262359 on exactd1b4983/Alice4f287
+also finished incompletely: SIGSEGV/exit139 at244.48s,425 unchanged source files.
+Its coherent120s sample is first BEFORE/full capture→context assembly→approved
+state proof read→live capture guard→slot/stage metadata→native reader identities.
+Phase preparation used conservative fallback while native slot metadata was active.
+The second240s dump is truncated/incoherent; do not use it as an application cause.
+Wholeprocess187.79CPU seconds cannot be assigned to the sampled function.
+
+Mandatory diagonosis found a primary-source-supported raw-watchdog frame-lifetime
+hazard. Exactcrash cause is unproved withoutnativebacktrace; original application
+cause and optional preparation refusal are unknown. An upgrade is not a supported
+remedy. Originalpositive/observedpositive use3.12.14 and53 installeddependencies
+match; originalC used3.12.15. Assembly spies count wrapped calls if reached, but
+cannot certify uninstrumented native paths. Do not blame them or widen admission.
+
+One revised positive-only observer uses the existing GIL-held sys._current_frames
+method, fixed code/numeric journal,1s samples and300s separate containment on exact
+Python3.12.14. It preserves original runtime, fixture, strict runner and2700s
+functional protocol. Samples show residency, not callcounts/exclusiveCPU/authority.
+GIL-held nativework may prevent samples. Review controls passed; physical journal
+pending. Recover coverage before any coherent runtime correction. Do not duplicate.
+
+FBM160 validated public procedure seeds. Full functional FloRA precedes latency;
+personality/MFM stay external, no full Alice platform. Relevant/irrelevant correction,
+linked outcome and scenario-needed mission/result links follow shared mechanics.
+Read docs/evidence/2026-10-07_setup_observer_failure_and_journal.json.
+
 The owner prioritizes the complete FloRA causal prototype before latency work.
 Verify its required memory, Experience, state, mission and outcome connections;
 obtain credible evidence for its hypothesis; then optimize toward frontier-level
@@ -85,7 +115,7 @@ The baseline does not use that native/frame path. Do not resume those separate
 latency investigations as the default next task.
 
 
-# Connected functional mechanics protocol — prepared, physical evidence pending
+## Registered mechanics protocol — frozen; first run incomplete
 
 This protocol composes the exact published selected runtime with supplied fictional producer and transport outputs. It proves mechanics only if the reviewed physical tests pass. It supplies no learned behavior, calibrated latency acceptance, hypothesis support, or model readiness evidence. The original 10s/60s contracts and their results remain unchanged.
 
@@ -126,7 +156,7 @@ Positive async attempt allowances total at most 30min, leaving a nominal 15min s
 Local verification uses the cached Linux image with network disabled and source mounts read-only. Syntax/import/discovery has exactly three cases, without inherited/imported TestCase duplication. Actual Ed25519 selected-policy component checks cover valid declared control, original undeclared source refusal, explicit revoke, missing parent, owner withdrawal, typed context/exchange/run proposal refusal, exact approved preflight→running versus context substitution/wrong readiness identity, and actual guarded writer-copy identity. SQL responses in those checks are existing shape-only contract ports, not physical engine evidence. Provider/run/stage predicate probes use isolated supplied rows and do not claim an actual captured provider task/physical run. A pure withdrawal-verdict discriminator rejects unrelated errors; actual current-gate/effect evidence remains physical. The original first freeze and review rejection are preserved under prior-freeze-1. First physical evidence is owned by the root-reviewed frozen dispatch.
 
 
-## Current continuation — October7: shared construction containment failure
+## Historical snapshot — October7: shared construction containment failure
 
 One setup observation run37663262359 was dispatched with observer=setup-stacks on exactd1b4983616027436307fb495f6bc476eff288148/tree1adbaacf25e2b8d28453fe16d327970665b66a08/Alice4f287a488bc908bd04f99255ee01b794bacba50b. [Original positive setup observation](https://github.com/NIne-WIngEd/FloRA/actions/runs/37663262359). At dispatch its stack/source artifacts and interpretation are pending. The separate8min diagnostic window and120s stack timer do not change the original45min functional protocol. An observation stop is incomplete evidence; even a normal completion is not functional or latency qualification. Recover this one run without redispatch.
 

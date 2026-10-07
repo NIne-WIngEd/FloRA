@@ -268,7 +268,7 @@
     "scripts/run_connected_functional_comparison.py": "c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2"
   },
   "diagnostic_run": {
-    "status": "dispatched_observation_artifacts_unrecovered",
+    "status": "completed_signal_failure_incomplete",
     "run_id": 37663262359,
     "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37663262359",
     "source_commit": "d1b4983616027436307fb495f6bc476eff288148",
@@ -286,7 +286,17 @@
     "functional_qualification": false,
     "latency_qualification": false,
     "duplicate_dispatch_forbidden": true,
-    "root_cause": "unestablished"
+    "root_cause": "application cause unestablished; observer raw-watchdog race credible but not proven by a native backtrace",
+    "conclusion": "failure",
+    "process_exit": 139,
+    "signal": 11,
+    "wall_seconds": 244.48,
+    "source_files_verified": 425,
+    "source_before_after_unchanged": true,
+    "first_complete_stack_at_seconds": 120,
+    "second_stack_at_seconds": 240,
+    "second_stack_truncated": true,
+    "original_test_verdict": null
   },
   "research": [
     {
@@ -294,5 +304,6 @@
       "mechanism": "C watchdog snapshots without locals/profile hooks; retain open stderr and cancel timer on normal exit."
     }
   ],
-  "next_action": "Observe exact first unfinished construction; interpret source-bound stacks before any correction. Continue functional FloRA afterward, with personality/MFM external and no full Alice platform."
+  "next_action": "Observe exact first unfinished construction; interpret source-bound stacks before any correction. Continue functional FloRA afterward, with personality/MFM external and no full Alice platform.",
+  "continuation_record": "FloRA:docs/evidence/2026-10-07_setup_observer_failure_and_journal.json"
 }
