@@ -6,7 +6,7 @@ Run37685186902 is recovered:427 exact sources unchanged, exit124 at2700s, no raw
 
 Read [evaluation audit](EVALUATION_RECALIBRATION_2026-10-07.md) before choosing work. Separate registered construction, actual coordinator composition and causal learned judgment. Confirmed repeated reconstruction is not an established exclusive physical cause. Direct H/C and same-process recovery checks have narrower scope than coordinator/crash safety. Models remain external; supplied receipts cannot prove FloRA's hypothesis.
 
-One unchanged registered capture cost control is running; its fictional ports cannot attribute physical failure. Recover that exact control, then validate a cause-discriminating original physical first-capture measurement. No runtime/test/workflow repair, new physical run, full Alice platform or latency target is introduced. FBM163 validated public procedure records; model weights are not built here.
+The unchanged registered control completed:68191 fictional query-port records/295.979s CPU for one capture; exact bindings/cleanup pass. This establishes substantial local work, not physical SQL cost or root cause. One validated construction-localization carrier is set to observe nine300s windows under the original2700s cap, using the unchanged safe sampler. Distinguish archive capture, cold route construction and observed binding/publication; samples alone cannot prove calls/returns or backend cause. Recover that one run before any architecture patch or campaign retry. Runtime/tests/permissions/models stay unchanged; only observer/workflow additions. FBM163 remains the updated procedure record, not learned weights.
 
 ## Historical snapshot — October7: functional claim corrected; intrusive admission probe retired
 

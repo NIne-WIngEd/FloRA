@@ -1,6 +1,6 @@
 {
   "schema": "flora-evaluation-recalibration-v1",
-  "recorded_at_utc": "2026-10-07T23:30:55.082923Z",
+  "recorded_at_utc": "2026-10-07T23:49:35.785179+00:00",
   "original_run": {
     "schema": "flora-functional-recalibration-recovery-v1",
     "run_id": 37685186902,
@@ -103,20 +103,20 @@
   "evaluation_mistake": "Removing an unreached optimization assertion did not justify a full-run retry as a timeout repair.",
   "hypotheses_for_next_physical_diagnostic": [
     {
-      "hypothesis": "Repeated finite current/provenance reconstruction dominates.",
-      "prediction": "Many completed backend reads/replays and reentered guard/proof boundaries, with finite stable stack depth; cost follows reconstruction counts."
+      "hypothesis": "Original archive capture is still unfinished",
+      "prediction": "Owned stack retains phase.capture ancestry, with numeric capture lines distinguishing lineage proof sites; no later completion checkpoint."
     },
     {
-      "hypothesis": "One backend/private operation blocks or repeatedly fails.",
-      "prediction": "One entered operation remains unreturned, completed read counts cease or error evidence identifies the operation."
+      "hypothesis": "Capture returned, cold route construction is unfinished",
+      "prediction": "SelectedPhaseRoute.__init__ ancestry appears after original capture completion/caller advancement, without enclosing phase.capture."
     },
     {
-      "hypothesis": "CPU-bound local verification dominates rather than backend wait.",
-      "prediction": "Backend/replay completions progress little relative to active CPU; full-action residency remains in pure verification. Samples alone do not assign exclusive CPU."
+      "hypothesis": "Route constructed, observed binding or later publication is unfinished",
+      "prediction": "Observed-binding/current-observation ancestry or original publication checkpoint follows route completion; absent completion remains explicitly unknown."
     }
   ],
   "registered_cost_control": {
-    "status": "running",
+    "status": "completed",
     "intent": {
       "schema": "flora-registered-capture-cost-control-intent-v1",
       "hard_process_cap_seconds": 2700,
@@ -137,11 +137,10 @@
     },
     "result": {
       "schema": "flora-registered-capture-cost-control-v1",
-      "stage": "registered_capture_entered",
+      "stage": "probe_completed",
       "evidence_kind": "fictional_row_log_ports",
       "probe": "existing_registered_before_then_untouched_capture",
       "python": "3.12.15 (main, Oct  1 2026, 21:52:41) [GCC 14.2.0]",
-      "source_sha256": "Exact manifest retained in the local source-bound probe receipt; no payload or permission values recorded.",
       "method_replacements": 0,
       "global_profile_or_trace": false,
       "functional_qualification": false,
@@ -153,9 +152,27 @@
       "role_count": 2,
       "setup_wall_seconds": 32.64653153999825,
       "setup_cpu_seconds": 32.502290900000006,
-      "source_manifest_sha256": "b592cac6fe3906642e8f67d8018964144a416371cc4d2aca563dfbc4948cba59"
+      "capture_outer_sql_records": 68191,
+      "capture_wall_seconds": 296.1473282460065,
+      "capture_cpu_seconds": 295.9789791,
+      "exact_binding_checks_passed": true,
+      "cleanup_exception_types": [],
+      "cleanup_passed": true,
+      "completed": true,
+      "outer_sql_record_scope": "one fixture connection; counts overlap nested callers",
+      "limitation": "Different synthetic history and fictional ports; original physical prefix and client graph not reproduced.",
+      "source_manifest_sha256": "b592cac6fe3906642e8f67d8018964144a416371cc4d2aca563dfbc4948cba59",
+      "source_sha256": "Exact190-file manifest retained with the original source-bound control; no private payload or permission values.",
+      "source_manifest_artifact": "probe-source-manifest.json"
     },
-    "process": null
+    "process": {
+      "schema": "flora-registered-capture-cost-control-process-v1",
+      "process_exit": 0,
+      "log_sha256": "5e866d0ad1619854b566b7b1051b42d20c52c2775905f22b720993b8c98d6b5e",
+      "source_files_checked": 190,
+      "functional_qualification": false,
+      "physical_attribution": false
+    }
   },
   "evaluation_gates": [
     "source/evidence",
@@ -170,10 +187,10 @@
     "transfer and host evidence",
     "latency calibration"
   ],
-  "next_action": "Recover the one local cost control; design and validate measurement for unchanged original physical first capture before launch. No full campaign or runtime patch from current incomplete evidence.",
+  "next_action": "Dispatch one validated construction-localization run. Recover its exact artifacts/source and coverage; locate the earliest supported unfinished stage before choosing a coherent architecture correction. No full campaign retry or guessed patch.",
   "runtime_changes": 0,
   "tests_changed": 0,
-  "workflow_changes": 0,
+  "workflow_changes": 1,
   "physical_runs_dispatched": 0,
   "functional_qualification": false,
   "causal_hypothesis_qualification": false,
@@ -186,5 +203,52 @@
     "https://github.com/xiaowu0162/LongMemEval/blob/main/README.md",
     "https://docs.kurrent.io/server/v24.10/features/projections/",
     "https://peps.python.org/pep-0669/"
-  ]
+  ],
+  "construction_localization_protocol": {
+    "status": "validated_candidate_pending_one_dispatch",
+    "observer": "construction-windows",
+    "question": "Which original construction boundary remains unfinished across the previously unobserved2400s?",
+    "carrier": "Unmodified original strict positive case on original calling thread; no early-stop or replaced authority method.",
+    "original_sampler_unchanged": true,
+    "fixed_selectors": 31,
+    "maximum_windows": 9,
+    "window_seconds": 300,
+    "aggregate_seconds": 2700,
+    "sample_interval_seconds": 1,
+    "maximum_samples": 2709,
+    "maximum_journal_bytes": 8388608,
+    "maximum_manifest_bytes": 65536,
+    "resource_cap_seconds": 2700,
+    "kill_grace_seconds": 30,
+    "interpretation": "Wall residency and reached/completed original checkpoints; no call counts, exclusive CPU, backend causation, native admission or learned proof.",
+    "source_guards": "All original427 Python files must match before/after plus one new observer428; fixture/strict runner/original sampler pins remain.",
+    "gaps": "Window switches/owner absence/truncation/errors are explicit; no guaranteed observation of every call or return. Existing close lock/I/O remains bounded by external process containment.",
+    "raw_strict_result_authoritative": true,
+    "functional_qualification": false,
+    "latency_qualification": false,
+    "validation": {
+      "observer_sha256": "ba22275173744dc4a80b6c2faa2a75040606ebde53abf8870df7eff9fc3611db",
+      "workflow_sha256": "9ddfef980c415d51420bcfd563b181d211e1b4feb64a54525e9986d46c0cc771",
+      "short_controls_per_runtime": 9,
+      "control_runtimes": [
+        "3.13.5",
+        "3.12.15 (main, Oct  1 2026, 21:52:41) [GCC 14.2.0]"
+      ],
+      "owner_and_raw_result_and_exception_preservation_controls": true,
+      "duplicate_yaml_keys_rejected": true,
+      "bash_blocks_checked": 66,
+      "routing_controls": 24,
+      "pipeline_exit_controls": 7,
+      "original_jobs_preserved": true,
+      "original_four_source_guards": {
+        "tests/registered_functional_case_fixture.py": "3535944465c3f0b130036752663a3085453ae5262c2e7411a83b0e7f8f69fde2",
+        "tests/integration/test_selected_connected_functional_comparison.py": "156754dccc7a3eb6b7c20d590bd87c49b6bdb1e5dbda6778b54038802ecfa7ae",
+        "scripts/run_connected_functional_comparison.py": "c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2",
+        "scripts/observe_connected_setup_journal.py": "8dac63783d906b85c83ab6a1d2723c9bbbe99c25713d275956a3176491c48663"
+      },
+      "independent_source_review": "Accepted for localization-only protocol; not physical cause or functional qualification.",
+      "unproved": "Physical coverage, overhead and cause remain pending; short synthetic controls are not equivalence or latency evidence."
+    }
+  },
+  "observer_scripts_added": 1
 }
