@@ -1,6 +1,6 @@
 # FloRA evaluation recalibration — October 7
 
-Status: evidence and design audit; no runtime repair or completed pipeline claim.
+Status: completed audit and registered cost control; one validated physical localization protocol. No runtime repair or completed pipeline claim.
 Run [37685186902](https://github.com/NIne-WIngEd/FloRA/actions/runs/37685186902)
 used dbf101cc1452815b6f8fb5d24dd962dff916bf97, Python 3.12.14 and
 Alice contracts 4f287a488bc908bd04f99255ee01b794bacba50b.
@@ -66,6 +66,11 @@ experiment_coordinator 322–339 and 543–591.
   establish an unbounded cycle. Do not call the timeout infinite recursion.
 - Prior actual-class fictional-port capture counted 193342 outer SQL calls and
   five assemblies. This corroborates composition risk, not current physical cost.
+- Current unchanged registered control returned: setup30132 and capture68191
+  recorded accesses to one fictional query port; capture296.147s wall/295.979s CPU.
+  Exact bindings and cleanup pass without database networking or authority method
+  replacement. Nested callers overlap; these are not physical SQL counts or a
+  physical cause. It establishes substantial local work on this different control.
 - Unknown: the latest run's final nonreturn, complete call counts, exclusive
   cost, first native admission refusal and backend-wait share. The first 300
   seconds cannot explain the entire 45-minute stop.
@@ -132,13 +137,15 @@ remove independent checks. Do not implement another local cache from a sample.
 2. **Registered cost control:** untouched existing actual-v2 capture over fictional
    row/log ports. Read its existing connection.calls before/after; no method
    replacement. A return proves only this control; counts expose accumulated work.
-3. **Physical construction discriminator:** original registered prefix and exactly
-   the first original capture, real selected services/representation/permissions.
-   Record capture and each lineage-proof entry/normal return for the entire bounded
-   action, not just its first five minutes. Preserve all assertions and original
-   containment; retain an explicit unfinished operation if the cap is reached.
-   Obtain per-boundary backend/replay counts before assigning cause. Validate
-   measurement noninterference and overhead before launch.
+3. **Physical construction localization:** the unmodified strict positive case is
+   a carrier, not a new qualification campaign. Nine windows reuse the original
+   GIL-held fixed-code sampler across the original2700s resource cap. Distinguish
+   unfinished archive capture, cold route construction and observed binding or
+   later publication using ancestry, numeric lines and original checkpoints.
+   Samples show residency/reachability; a return requires caller advancement or
+   a completion checkpoint. Record window gaps, truncation and observer errors.
+   Sampling cannot measure call counts/exclusive CPU/backend causation. Obtain
+   applicable counts or completion evidence before assigning physical cause.
 4. **Physical composition:** four captures/update seal → one owned read → coordinator
    readiness → one native and one provider attempt. Exact source/context/receipt
    equality and current independent authority must hold at each reached gate.
@@ -161,5 +168,14 @@ exact source, target-reachability evidence and what each result cannot prove.
 If a run cannot distinguish the explanations, do not launch it. If only its
 result remains pending, record the resume condition and end the turn.
 
-Current action: one existing registered cost control only. No new physical
-campaign or architecture correction has been dispatched by this audit.
+Current action: the unchanged registered cost control completed. One reviewed
+construction-localization carrier is ready for dispatch. Its only source changes
+are a thin wrapper around the unchanged sampler and one diagnostic workflow job;
+runtime, fixture, strict tests, permissions, engines and models remain unchanged.
+Limits:31 fixed selectors, nine300s windows,2709 samples,8MiB combined journals,
+64KiB incremental manifest. Original2700s+30s containment remains. The sampler
+does not certify call/return completeness or exclusive cost. The last original
+physical timeout and its missing functional verdict remain authoritative.
+Before interpreting a new result, verify all428 source identities, artifact
+digests and aggregate coverage. Retain any unknown stage; no automatic retry.
+FBM163 remains the same procedure record, updated with completed evidence.

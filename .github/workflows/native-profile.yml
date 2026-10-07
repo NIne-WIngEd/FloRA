@@ -15,6 +15,7 @@ on:
           - setup-stacks
           - setup-journal
           - setup-eligibility
+          - construction-windows
       functional_positive_only:
         description: Run the positive connected case only; full three-case verification remains separate
         type: boolean
@@ -26,7 +27,7 @@ on:
 
 jobs:
   diagnostic-native:
-    if: github.event_name != 'workflow_dispatch' || (inputs.observer != 'contracts' && inputs.observer != 'functional' && inputs.observer != 'setup-stacks' && inputs.observer != 'setup-journal' && inputs.observer != 'setup-eligibility')
+    if: github.event_name != 'workflow_dispatch' || (inputs.observer != 'contracts' && inputs.observer != 'functional' && inputs.observer != 'setup-stacks' && inputs.observer != 'setup-journal' && inputs.observer != 'setup-eligibility' && inputs.observer != 'construction-windows')
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
@@ -713,3 +714,152 @@ jobs:
       - name: Tear down isolated selected services
         if: always()
         run: docker compose -f compose.integration.yml down -v
+  connected-construction-windows:
+    if: github.event_name == 'workflow_dispatch' && inputs.observer == 'construction-windows'
+    name: connected-construction-window-positive
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      PYTHONPATH: alice-reference/src:src:tests:tests/integration
+      KURRENTDB_URI: kurrentdb://127.0.0.1:2113?tls=false
+      XTDB_DSN: postgresql://xtdb@127.0.0.1:5432/xtdb
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout pinned A.L.I.C.E. contracts
+        uses: actions/checkout@v4
+        with:
+          repository: NIne-WIngEd/A.L.I.C.E
+          ref: 4f287a488bc908bd04f99255ee01b794bacba50b
+          path: alice-reference
+          ssh-key: ${{ secrets.ALICE_CONTRACTS_READ_KEY }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Record exact Python runtime
+        run: |
+          python - <<'PY' > connected-construction-python.txt
+          import sys
+          print(sys.version)
+          print('version_info=' + repr(tuple(sys.version_info)))
+          print('gil_enabled=' + repr(not hasattr(sys, '_is_gil_enabled') or sys._is_gil_enabled()))
+          PY
+      - name: Record exact source and declared mechanical protocol
+        run: |
+          git rev-parse HEAD HEAD^{tree} > connected-construction-source-identity.txt
+          git -C alice-reference rev-parse HEAD >> connected-construction-source-identity.txt
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-construction-source-before.txt
+          sha256sum .github/workflows/native-profile.yml >> connected-construction-source-identity.txt
+          cp docs/FUNCTIONAL_BUILD_PRIORITY_2026-10-07.md connected-construction-protocol.md
+          printf 'diagnostic_source_base_commit=71446014a174087329add007d212353e624b86ab\noriginal_incomplete_run_id=37685186902\n' >> connected-construction-source-identity.txt
+          printf '%s\n' \
+            '3535944465c3f0b130036752663a3085453ae5262c2e7411a83b0e7f8f69fde2  tests/registered_functional_case_fixture.py' \
+            '156754dccc7a3eb6b7c20d590bd87c49b6bdb1e5dbda6778b54038802ecfa7ae  tests/integration/test_selected_connected_functional_comparison.py' \
+            'c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2  scripts/run_connected_functional_comparison.py' \
+            '8dac63783d906b85c83ab6a1d2723c9bbbe99c25713d275956a3176491c48663  scripts/observe_connected_setup_journal.py' | sha256sum -c - > connected-construction-original-source-check.txt
+      - name: Install selected integration dependencies
+        run: python -m pip install -e '.[backends,providers,embeddings]'
+      - name: Record selected dependency identity
+        run: python -m pip freeze --all > connected-construction-dependencies.txt
+      - name: Start only this case's selected services
+        run: docker compose -f compose.integration.yml up -d kurrentdb xtdb qdrant
+      - name: Wait for selected services
+        run: |
+          set -euo pipefail
+          for service in 'http://127.0.0.1:2113/health/live' 'http://127.0.0.1:8080/healthz/ready' 'http://127.0.0.1:6333/healthz'; do
+            for attempt in $(seq 1 90); do
+              if curl -fsS "$service" >/dev/null; then break; fi
+              [ "$attempt" -lt 90 ] || exit 1
+              sleep 2
+            done
+          done
+      - name: Observe complete original positive construction without qualification
+        run: |
+          set -uo pipefail
+          set +e
+          timing_available=false
+          timing=()
+          if [ -x /usr/bin/time ]; then
+            timing_available=true
+            timing=(/usr/bin/time -f 'wall_seconds=%e\nuser_cpu_seconds=%U\nsystem_cpu_seconds=%S\ncpu_percent=%P\ncommand_exit=%x' -o connected-construction-time.txt)
+          fi
+          started_seconds=$SECONDS
+          "${timing[@]}" timeout --kill-after=30s 45m python -u scripts/observe_connected_construction_windows.py --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects --select-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --output connected-construction-result.json --journal-directory connected-construction-windows 2>&1 | tee connected-construction-test.log
+          statuses=("${PIPESTATUS[@]}")
+          process_result=${statuses[0]}
+          log_result=${statuses[1]}
+          result=$process_result
+          if [ "$result" -eq 0 ] && [ "$log_result" -ne 0 ]; then result=$log_result; fi
+          shell_wall_seconds=$((SECONDS-started_seconds))
+          set -e
+          outcome=original_runner_nonzero_no_assertion_classification
+          original_test_incomplete=null
+          if [ "$process_result" -eq 124 ]; then
+            outcome=original_hard_cap_reached_test_incomplete
+            original_test_incomplete=true
+          elif [ "$process_result" -eq 137 ]; then
+            outcome=process_killed_test_incomplete_cause_unestablished
+            original_test_incomplete=true
+          elif [ "$process_result" -eq 0 ]; then
+            outcome=original_test_completed_during_observation_no_qualification
+            original_test_incomplete=false
+          fi
+          printf '{"schema":"flora-connected-construction-observation-process-v1","diagnostic_only":true,"process_exit":%s,"log_write_exit":%s,"effective_exit":%s,"hard_process_cap_seconds":2700,"kill_grace_seconds":30,"functional_qualification":false,"latency_qualification":false,"window_cap_seconds":300,"maximum_windows":9,"observation_total_cap_seconds":2700,"sampling_interval_seconds":1,"raw_strict_result_authoritative":true,"shell_wall_seconds":%s,"external_cpu_wall_timing_available":%s,"outcome":"%s","original_test_incomplete":%s}\n' "$process_result" "$log_result" "$result" "$shell_wall_seconds" "$timing_available" "$outcome" "$original_test_incomplete" > connected-construction-process.json
+          exit "$result"
+      - name: Classify a copy while preserving the authoritative raw strict result
+        if: always()
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          path = Path('connected-construction-result.json')
+          if path.exists():
+              raw = path.read_bytes()
+              receipt = json.loads(raw)
+              receipt.update(diagnostic_only=True, functional_qualification=False, latency_qualification=False,
+                             raw_result_path=str(path), raw_result_sha256=hashlib.sha256(raw).hexdigest())
+              Path('connected-construction-classification.json').write_text(
+                  json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Verify final source even after setup or execution failure
+        if: always()
+        run: |
+          set -euo pipefail
+          if [ ! -f connected-construction-source-before.txt ]; then
+            printf 'Initial source capture was not reached.\n' > connected-construction-source-unavailable.txt
+            exit 1
+          fi
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-construction-source-after.txt
+          diff -u connected-construction-source-before.txt connected-construction-source-after.txt
+      - name: Preserve selected backend evidence
+        if: always()
+        run: |
+          docker compose -f compose.integration.yml ps > connected-construction-backend-ps.txt || true
+          docker compose -f compose.integration.yml logs --no-color > connected-construction-backend-logs.txt || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: connected-construction-window-positive
+          path: |
+            connected-construction-source-identity.txt
+            connected-construction-source-before.txt
+            connected-construction-source-after.txt
+            connected-construction-source-unavailable.txt
+            connected-construction-protocol.md
+            connected-construction-python.txt
+            connected-construction-dependencies.txt
+            connected-construction-time.txt
+            connected-construction-windows/**
+            connected-construction-windows/construction-windows.jsonl
+            connected-construction-original-source-check.txt
+            connected-construction-test.log
+            connected-construction-result.json
+            connected-construction-classification.json
+            connected-construction-process.json
+            connected-construction-backend-ps.txt
+            connected-construction-backend-logs.txt
+      - name: Tear down isolated selected services
+        if: always()
+        run: docker compose -f compose.integration.yml down -v
+
