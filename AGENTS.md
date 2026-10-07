@@ -1,6 +1,30 @@
 # Continuing FloRA
 
-## Current continuation — October7: first capture progresses; admission diagnosis
+## Current continuation — October7: functional claim corrected; intrusive admission probe retired
+
+Run37673488169 reached no admission target: only observer.start, exit124 at180s,
+427 exact sources unchanged. It never reached original-inputs registration;
+no actual refusal or functional verdict follows. Original failures are retained.
+A matched fixed local workload measures substantial global-profile overhead;
+this does not attribute all physical slowdown. That probe is retired here.
+
+The functional fixture now permits supported fresh context reconstruction.
+Only the unconditional assembly-count helper/spies and three wrappers change;
+all evidence/context/lineage, chronology, correction, persistence, recovery and
+H/C assertions remain. Admitted native optimization tests remain intact.
+This correction is not a timeout repair or a completed pipeline result.
+
+Next is one complete positive registered functional case, with the original
+2700s resource containment and first300s existing GIL-held numeric sampling.
+Sampling stops independently; the raw strict-runner receipt owns the verdict.
+Positive success alone does not prove fresh H/C withdrawal or full campaign.
+The first admission refusal stays optional, not a new construction prerequisite.
+
+FBM162 public procedure seeds. Keep building functional FloRA before latency.
+Personality/MFM remain external; only scenario-needed mission/result links.
+See docs/evidence/2026-10-07_functional_claim_and_observer_scope.json.
+
+## Historical snapshot — October7: first capture progresses; admission diagnosis
 
 One setup observation run37673488169 was dispatched with observer=setup-eligibility on exact01737cace1ec66cdb129c091a73504a340dc5e8b/tree9fef613dcd4fd57b5dcd45be532abe5b4727a587/Alice4f287a488bc908bd04f99255ee01b794bacba50b. [Original positive setup observation](https://github.com/NIne-WIngEd/FloRA/actions/runs/37673488169). At dispatch its admission/source artifacts and interpretation are pending. The separate180s diagnostic window and finite original-return observer do not change the original45min functional protocol. An observation stop is incomplete evidence; even a normal completion is not functional or latency qualification. Recover this one run without redispatch.
 
