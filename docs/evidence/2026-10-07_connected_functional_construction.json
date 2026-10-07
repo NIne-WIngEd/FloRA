@@ -390,9 +390,20 @@
     }
   ],
   "physical_run": {
-    "status": "ready_for_one_frozen_dispatch",
-    "cases": 3,
-    "pass": null
+    "status": "dispatched_result_pending",
+    "run_id": 37653864404,
+    "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37653864404",
+    "source_commit": "5dd7414b14111a7e68e7db7d55955fada8d38b0f",
+    "source_tree": "7aa3fd3c071e6826a624f7254c335961acb0c2e4",
+    "alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+    "case_jobs": [
+      "positive",
+      "history-withdrawal",
+      "context-withdrawal"
+    ],
+    "pass": null,
+    "latency_qualification": false,
+    "duplicate_dispatch_forbidden": true
   },
   "performance_acceptance": false,
   "next_scenario_connections": {
