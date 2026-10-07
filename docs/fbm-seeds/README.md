@@ -12,12 +12,13 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-07
 
-The corpus now contains **160 validated procedure traces**. This count describes
+The corpus now contains **161 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
 | Record | Observable operation |
 | --- | --- |
+| [First capture admission diagnosis](2026-10-07_phase_capture_admission_diagnosis.jsonl) | Separate functional claims from reuse counts; validate actual progress and locate the first admission refusal before repair. |
 | [Failed observer and numeric journal](2026-10-07_setup_observer_failure_and_journal.jsonl) | Preserve incomplete signal-failed observation, trace coherent capture stack and repair only the measurement mechanism before architecture attribution. |
 | [Completed physical failure and functional priority](2026-10-07_completed_physical_and_functional_priority.jsonl) | Validate1 pass/2 budget failures, audit uncalibrated cutoffs, retain old verdicts and rejoin the owner-authorized connected functional build. |
 | [Copied-consumer observer diagnosis](2026-10-05_terminal_copy_observer_diagnosis.jsonl) | Preserve a failed control whose observer required the original consumer instead of custody's copy; correct only test ancestry binding and retry control/basis denial on unchanged runtime, with no architecture verdict yet. |
@@ -84,3 +85,5 @@ Current October7:158 validated public procedure seeds after connected functional
 October7 current:159 validated public methods; shared physical construction stopped before its oracles. One source-bound observation is the next diagnostic.
 
 October7 current:160 methods; one numeric-journal observation is next, not a runtime repair or qualification.
+
+October7 current:161 methods; admission discriminator pending, no functional/model/latency qualification.

@@ -1,6 +1,35 @@
 # Continuing FloRA
 
-## Current continuation — October7: failed observer, numeric journal prepared
+## Current continuation — October7: first capture progresses; admission diagnosis
+
+Journal37668996027 completed its planned300s stop/exit124 without SIGSEGV.
+426 exact source hashes and artifact digest verify;299 contiguous samples,
+298 owned, no truncation, maximum1.012s gap. The first BEFORE capture progresses
+through fallback context assembly to lineage verification. No judgment/recovery/
+withdrawal assertion or raw functional verdict completed. Original45min failures
+and the prior observer crash remain preserved and distinct.
+
+Fallback never installs the prepared lifetime; subsequent lineage therefore
+prepares context afresh. The unconditional one_assembly test count is an
+optimization prerequisite, not the causal functional claim, and is unreached.
+Its correction must remain separate from any timeout or admission repair.
+The first actual reuse refusal is unknown. SQL/authority work is observed;
+native-reader checks alone do not explain the whole setup. No runtime patch,
+eligibility expansion, guard bypass, backend switch or budget increase follows.
+
+One positive-only first-admission observer is prepared: exact original return
+events, fixed code/role/line/boolean evidence, hook removal after first owned
+map result,180s external containment on Python3.12.14/Alice4f287. None during
+exception unwind is unsupported, never a refusal. Observation overhead cannot
+qualify timing. Original runtime, fixture, runner and2700s protocol remain frozen.
+Recover exact first refusal before a supported architecture correction.
+
+FBM161 validated public procedure seeds. Build full relevant functional FloRA
+before latency; personality/MFM remain external. Only scenario-needed mission/
+result links follow shared causal mechanics. No learned or hypothesis claim.
+Read docs/evidence/2026-10-07_phase_capture_admission_diagnosis.json.
+
+## Historical snapshot — October7: failed observer, numeric journal prepared
 
 One setup observation run37668996027 was dispatched with observer=setup-journal on exact2bf112a4a61ed656b379417ff065b422ac811805/treeb90e2c95dfd8f7eae10905625247301a1a4256e2/Alice4f287a488bc908bd04f99255ee01b794bacba50b. [Original positive setup observation](https://github.com/NIne-WIngEd/FloRA/actions/runs/37668996027). At dispatch its journal/source artifacts and interpretation are pending. The separate300s diagnostic window and1s numeric sampler do not change the original45min functional protocol. An observation stop is incomplete evidence; even a normal completion is not functional or latency qualification. Recover this one run without redispatch.
 
