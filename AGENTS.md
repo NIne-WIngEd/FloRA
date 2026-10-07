@@ -2,6 +2,8 @@
 
 ## Current continuation — October7: connected functional source prepared
 
+Frozen functional run37653864404 is dispatched on exact5dd7414b14111a7e68e7db7d55955fada8d38b0f/tree7aa3fd3c071e6826a624f7254c335961acb0c2e4/Alice4f287. [Run and three focused jobs](https://github.com/NIne-WIngEd/FloRA/actions/runs/37653864404). At dispatch the positive six-attempt/recovery and independent H/C cases are pending. Recover exact source artifacts and first result; do not dispatch a duplicate.
+
 The same actual registered BEFORE/update/AFTER case now composes two actual native
 adapters and the general-memory baseline under one coordinator. Concrete ports
 are frozen before sealing. The positive test requires six successful persisted
