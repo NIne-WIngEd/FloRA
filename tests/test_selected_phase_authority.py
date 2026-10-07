@@ -30,7 +30,8 @@ class FixtureOwner:
 def _phase_pass_calls(operation):
     """Observe native verifier calls without replacing a pinned dependency."""
     calls = {"origins": [], "seals": [], "descriptors": [], "readers": [], "callbacks": []}
-    codes = {selected._Origin.verify.__code__: ("origins", "self"),
+    origin_body = getattr(selected._Origin, "_verify_basis", selected._Origin.verify)
+    codes = {origin_body.__code__: ("origins", "self"),
         selected._verify_origin_seal.__code__: ("seals", "origin"),
         selected._ReaderBinding.verify.__code__: ("readers", "self")}
     callbacks = tuple(selected._CALLBACK_CODES.values())
@@ -41,7 +42,11 @@ def _phase_pass_calls(operation):
         if match is not None:
             key, name = match
             calls[key].append(id(frame.f_locals[name]))
-        if frame.f_code is selected._verify_identity.__code__:
+        if (frame.f_globals is selected.__dict__
+                and frame.f_code.co_name == "verify_origin_seal"):
+            calls["seals"].append(id(frame.f_locals["origin"]))
+        if (frame.f_code is selected._verify_identity.__code__
+                or frame.f_globals is selected.__dict__ and frame.f_code.co_name == "require_identity"):
             value = frame.f_locals["value"]
             if type(value) is selected.SelectedPhaseAuthorityDescriptor:
                 calls["descriptors"].append(id(value))
@@ -121,6 +126,7 @@ class SelectedPhaseAuthorityTest(unittest.TestCase):
         inherited = selected.selected_phase_authority(copied, "permits")
         event = selected.selected_phase_authority(self.runtime.context_policy, "allow_event")
         io = len(self.fixture.f.connection.calls), len(self.fixture.client.reads)
+
         observed = _phase_pass_calls(lambda: self.assertIsNone(
             selected._verify_selected_phase_pair(inherited, event)))
         self.assertEqual(observed["origins"], [id(permission._origin)])
@@ -154,6 +160,128 @@ class SelectedPhaseAuthorityTest(unittest.TestCase):
                 inherited.verify()
         finally:
             event_value.__dict__["event_type"] = previous
+        selected._verify_selected_phase_pair(inherited, event)
+
+    def test_inherited_pair_observes_each_actual_identity_and_function_once_per_pass(self):
+        permission = self.install()
+        copied = copy_native_phase_view(self.runtime.source_policy)
+        inherited = selected.selected_phase_authority(copied, "permits")
+        event = selected.selected_phase_authority(self.runtime.context_policy, "allow_event")
+        io = len(self.fixture.f.connection.calls), len(self.fixture.client.reads)
+        required_functions = {id(descriptor._gate.function)
+            for descriptor in (permission, inherited, event)}
+        required_functions.update(id(function) for function in permission._origin.callbacks)
+        now_cells = dict(zip(permission._origin.callbacks[0].__code__.co_freevars,
+            (cell.cell_contents for cell in permission._origin.callbacks[0].__closure__ or ())))
+        required_functions.add(id(now_cells["phase_binding"]))
+
+        def observe_pass():
+            identities, functions, callbacks = [], [], []
+            def observe(frame, kind, argument):
+                if kind != "call":
+                    return
+                if frame.f_code is selected._identity_seal.__code__:
+                    identities.append(id(frame.f_locals["value"]))
+                elif frame.f_code is selected._FunctionBinding._verify_shallow.__code__:
+                    functions.append(id(frame.f_locals["self"].function))
+                elif (frame.f_globals is selected.__dict__
+                        and frame.f_code.co_name == "observe_function"):
+                    functions.append(id(frame.f_locals["function"]))
+                if frame.f_code in tuple(selected._CALLBACK_CODES.values()):
+                    callbacks.append(frame.f_code.co_name)
+            previous = sys.getprofile()
+            try:
+                sys.setprofile(observe)
+                selected._verify_selected_phase_pair(inherited, event)
+            finally:
+                sys.setprofile(previous)
+            self.assertTrue(identities)
+            self.assertTrue(functions)
+            self.assertEqual(len(identities), len(set(identities)))
+            self.assertEqual(len(functions), len(set(functions)))
+            self.assertTrue(required_functions.issubset(set(functions)))
+            self.assertTrue({id(permission), id(inherited), id(event), id(permission._origin)}
+                .issubset(set(identities)))
+            self.assertEqual(callbacks, [])
+            return set(identities), set(functions)
+
+        first = observe_pass()
+        self.assertEqual(first, observe_pass())
+        self.assertEqual(io, (len(self.fixture.f.connection.calls), len(self.fixture.client.reads)))
+
+    def test_scope_getter_keeps_original_gate_without_native_descriptor(self):
+        effects = []
+        class ScopeOwner(FixtureOwner):
+            @property
+            def scope(owner):
+                effects.append("scope getter")
+                return object.__getattribute__(owner, "__dict__")["scope"]
+
+        self.runtime = ScopeOwner(**vars(self.runtime))
+        stored_scope = vars(self.runtime)["scope"]
+        self.assertIs(self.runtime.scope, stored_scope)
+        self.assertIsNone(self.install())
+        self.assertIsNone(selected.selected_phase_authority(self.runtime.context_policy, "allow_event"))
+        source = self.runtime.sources.lookup(self.history.event_ids[0])
+        before = len(self.fixture.f.connection.calls), len(self.fixture.client.reads)
+        self.assertTrue(self.runtime.source_policy.permits(source, evaluation_purpose("run", "case", "before")))
+        after = len(self.fixture.f.connection.calls), len(self.fixture.client.reads)
+        self.assertGreater(after[0], before[0])
+        self.assertGreater(after[1], before[1])
+        effects.clear()
+        self.assertIs(self.runtime.scope, stored_scope)
+        self.assertEqual(effects, ["scope getter"])
+
+    def test_custom_runtime_metaclass_keeps_original_gate_without_native_descriptor(self):
+        effects = []
+        class OwnerMeta(type):
+            def __getattribute__(owner_class, name):
+                effects.append(name)
+                return type.__getattribute__(owner_class, name)
+        class MetaOwner(FixtureOwner, metaclass=OwnerMeta):
+            pass
+        self.runtime = MetaOwner(**vars(self.runtime))
+        self.assertIsNone(self.install())
+        effects.clear()
+        self.assertIsNone(selected.selected_phase_authority(self.runtime.source_policy, "permits"))
+        self.assertEqual(effects, [])
+        source = self.runtime.sources.lookup(self.history.event_ids[0])
+        self.assertTrue(self.runtime.source_policy.permits(source, evaluation_purpose("run", "case", "before")))
+
+    def test_ordinary_scope_and_installed_gate_replacement_reject_after_issuance(self):
+        permission = self.install()
+        event = selected.selected_phase_authority(self.runtime.context_policy, "allow_event")
+        gate = self.runtime.source_policy.permits
+        for owner, name, value in ((self.runtime, "scope", copy(self.runtime.scope)),
+                (self.runtime.source_policy, "permits", MethodType(gate.__func__, gate.__self__))):
+            previous = vars(owner)[name]
+            try:
+                setattr(owner, name, value)
+                with self.subTest(port=name), self.assertRaises(PermissionError):
+                    selected._verify_selected_phase_pair(permission, event)
+            finally:
+                setattr(owner, name, previous)
+
+    def test_second_registration_origin_expectation_cannot_reuse_first_success(self):
+        permission = self.install()
+        copied = copy_native_phase_view(self.runtime.source_policy)
+        inherited = selected.selected_phase_authority(copied, "permits")
+        event = selected.selected_phase_authority(self.runtime.context_policy, "allow_event")
+        self.assertIs(permission._origin, event._origin)
+        selected._verify_selected_phase_pair(inherited, event)
+        key = id(event._owner), event._name
+        registered = selected._ISSUED[key]
+        identity, readers, functions = registered.origin_seal
+        fields = identity[2]
+        name, cls, saved_id = fields[0]
+        changed = identity[0], identity[1], ((name, cls, saved_id + 1),) + fields[1:]
+        try:
+            selected._ISSUED[key] = replace(registered, origin_seal=(changed, readers, functions))
+            self.assertIs(inherited.verify(), inherited)
+            with self.assertRaises(PermissionError):
+                selected._verify_selected_phase_pair(inherited, event)
+        finally:
+            selected._ISSUED[key] = registered
         selected._verify_selected_phase_pair(inherited, event)
 
     def test_distinct_issued_origins_with_same_history_each_run_their_body(self):
@@ -239,7 +367,8 @@ class SelectedPhaseAuthorityTest(unittest.TestCase):
             function.__code__ = original_code
         def replacement(*args, observed=effects):
             observed.append("verifier")
-        for function in (selected._Origin.verify, selected.SelectedPhaseAuthorityDescriptor.verify):
+        for function in (selected._Origin.verify, selected._Origin._verify_contracts,
+                selected._Origin._verify_basis, selected.SelectedPhaseAuthorityDescriptor.verify):
             original_code = function.__code__
             try:
                 function.__code__ = replacement.__code__
@@ -256,7 +385,8 @@ class SelectedPhaseAuthorityTest(unittest.TestCase):
         effects = []
         def replacement(*args, observed=effects):
             observed.append("replacement")
-        for name in ("_verify_selected_phase_tree", "_verify_selected_phase_pair"):
+        for name in ("_verify_selected_phase_tree", "_verify_selected_phase_pair",
+                "_native_owner_class", "_plain_descriptor", "_capture_reader", "_ordinary_port"):
             original = getattr(selected, name)
             with self.subTest(helper=name), patch.object(selected, name, replacement):
                 with self.assertRaisesRegex(PermissionError, "verifier binding"):

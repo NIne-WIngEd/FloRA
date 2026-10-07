@@ -83,21 +83,37 @@ def _register_binding(binding):
 
 
 def _verify_binding(binding):
-    _verify_owner(binding)
-    if type(binding) is _FunctionBinding:
-        for nested in binding.nested:
-            _verify_binding(nested)
-        for _, value in binding.closure:
-            if type(value) is tuple and all(type(item) is _ReaderBinding for item in value):
-                for reader in value:
-                    _verify_binding(reader)
-        # This walk already checks every nested capture and closure reader.
-        # A recursive function verify here would check descendants again.
-        binding._verify_shallow()
-    elif type(binding) is not _ReaderBinding:
-        raise PermissionError("shared frame captured binding is not native")
-    else:
-        binding.verify()
+    # Native capture graphs can reach the same reader through independent
+    # closure captures. Inspect each exact capture once in this pure call;
+    # distinct captures keep their own registered expectation checks. Strong
+    # references prevent identity reuse. No observation survives this return.
+    checked = {}
+
+    def verify(current):
+        if checked.get(id(current)) is current:
+            return
+        _verify_owner(current)
+        if type(current) is _FunctionBinding:
+            for nested in current.nested:
+                verify(nested)
+            for _, value in current.closure:
+                if type(value) is tuple and all(type(item) is _ReaderBinding for item in value):
+                    for reader in value:
+                        verify(reader)
+            current._verify_shallow()
+        elif type(current) is _ReaderBinding:
+            # Class inspection must stay pure too: a custom metaclass can
+            # execute callbacks during the reader's descriptor lookup.
+            if (type(current.owner_class) is not type
+                    or any(type(base) is not type for base in
+                        type.__getattribute__(current.owner_class, "__mro__"))):
+                raise PermissionError("shared frame reader class inspection is not native")
+            current.verify()
+        else:
+            raise PermissionError("shared frame captured binding is not native")
+        checked[id(current)] = current
+
+    verify(binding)
 
 
 def _native_context_binding(function):

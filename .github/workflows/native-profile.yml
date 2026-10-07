@@ -10,6 +10,7 @@ on:
         options:
           - aggregate
           - stack-samples
+          - contracts
   push:
     paths:
       - scripts/profile_selected_native_boundaries.py
@@ -17,6 +18,7 @@ on:
 
 jobs:
   diagnostic-native:
+    if: github.event_name != 'workflow_dispatch' || inputs.observer != 'contracts'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
@@ -32,6 +34,8 @@ jobs:
           repository: NIne-WIngEd/A.L.I.C.E
           ref: 4f287a488bc908bd04f99255ee01b794bacba50b
           path: alice-reference
+          ssh-key: ${{ secrets.ALICE_CONTRACTS_READ_KEY }}
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -99,5 +103,76 @@ jobs:
           path: selected-native-stack-samples.json
           if-no-files-found: warn
       - name: Tear down selected services
+        if: always()
+        run: docker compose -f compose.integration.yml down -v
+
+  original-physical-contracts:
+    if: github.event_name == 'workflow_dispatch' && inputs.observer == 'contracts'
+    name: original-${{ matrix.shard }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [transport, native-comparison]
+    env:
+      PYTHONPATH: alice-reference/src:src
+      KURRENTDB_URI: kurrentdb://127.0.0.1:2113?tls=false
+      XTDB_DSN: postgresql://xtdb@127.0.0.1:5432/xtdb
+      TEMPORAL_ADDRESS: 127.0.0.1:7233
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout pinned A.L.I.C.E. contracts
+        uses: actions/checkout@v4
+        with:
+          repository: NIne-WIngEd/A.L.I.C.E
+          ref: 4f287a488bc908bd04f99255ee01b794bacba50b
+          path: alice-reference
+          ssh-key: ${{ secrets.ALICE_CONTRACTS_READ_KEY }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Record exact source identity
+        run: |
+          git rev-parse HEAD HEAD^{tree} > binding-source-identity.txt
+          git -C alice-reference rev-parse HEAD >> binding-source-identity.txt
+          sha256sum src/flora/selected/selected_phase_authority.py src/flora/selected/selected_authority_frame.py tests/test_selected_phase_authority.py tests/test_shared_context_bindings.py >> binding-source-identity.txt
+      - name: Install original integration dependencies
+        run: python -m pip install -e '.[backends,providers,embeddings]'
+      - name: Start original selected services
+        run: docker compose -f compose.integration.yml up -d
+      - name: Wait for selected services
+        run: |
+          set -euo pipefail
+          for service in 'http://127.0.0.1:2113/health/live' 'http://127.0.0.1:8080/healthz/ready' 'http://127.0.0.1:6333/healthz'; do
+            for attempt in $(seq 1 90); do
+              if curl -fsS "$service" >/dev/null; then break; fi
+              [ "$attempt" -lt 90 ] || exit 1
+              sleep 2
+            done
+          done
+          for attempt in $(seq 1 90); do
+            if python -c 'import socket; s=socket.create_connection(("127.0.0.1", 4222), timeout=1); s.close()' 2>/dev/null; then break; fi
+            [ "$attempt" -lt 90 ] || exit 1
+            sleep 2
+          done
+          python scripts/temporal_restart_probe.py health --retry-seconds 120
+      - name: Run original uninstrumented physical contracts
+        run: python scripts/run_selected_integration_shard.py --shard '${{ matrix.shard }}'
+      - name: Preserve backend evidence
+        if: always()
+        run: |
+          docker compose -f compose.integration.yml ps > binding-backend-ps.txt || true
+          docker compose -f compose.integration.yml logs --no-color > binding-backend-logs.txt || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: binding-verification-${{ matrix.shard }}
+          path: |
+            binding-source-identity.txt
+            binding-backend-ps.txt
+            binding-backend-logs.txt
+      - name: Tear down isolated selected services
         if: always()
         run: docker compose -f compose.integration.yml down -v
