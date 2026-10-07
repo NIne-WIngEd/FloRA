@@ -1,6 +1,45 @@
 # FloRA verification checkpoint — 2026-10-03
 
-## Current continuation — October7:81 components pass; original physical verification running
+## Current continuation — October7: functional FloRA first; original physical run failed
+
+The owner explicitly prioritizes the complete narrow FloRA causal prototype before
+latency optimization. Build and verify the required memory/Experience/Claim/state,
+judgment and correction/outcome connections; include mission/result links only
+where the actual scenario needs them. Personality/MFM remain external. Credible
+hypothesis support still requires their qualified outputs, a competent baseline,
+held-out interventions and independent assessment; builder transfer stays separate.
+
+Run37641323381 is complete on exactbd731095/treec1ae1bc/Alice4f287 source:
+**1 pass/2 failures of3**. Provider-ledger case passes. Baseline permitted phases
+take18.360/29.179s against10s after the denied zero-provider-call control passes.
+Native phases cancel during prepare at60.081/60.157s against60s. Later functional
+assertions are unreached. Artifact identities and log hashes are recovered.
+81 component passes remain valid; no physical speed or learned result is claimed.
+
+The inherited10s/60s values have no demonstrated calibration. Preserve their
+tests and original results. Stop latency-only profiling/patches and performance
+gates as build prerequisites. A new explicitly declared mechanical protocol uses
+finite operational containment while retaining deadlines, cancellation, owned
+reader cleanup, current independent H/C authority and exact canonical custody.
+Its allowance is not a speed qualification. Calibrate matched performance after
+functional evidence, through a pilot and versioned preregistration; the owner
+retains the later goal of latency close to frontier models.
+
+The next build is the missing same-case comparison: real worker/codec/read/meter/
+writer declarations **before registration**, actual BEFORE/update/AFTER and all
+three supplied adapters through RegisteredExperimentCoordinator. Require six
+positive persisted attempts, equal authorized originals/selected context,
+chronological treatment, exact passive recovery and fresh reached H/C controls.
+Six retained timeout receipts would not prove positive integration. Build source
+is isolated; no full Alice platform or new storage engine is authorized.
+
+FBM157 validated procedure seeds. Mandatory standalone diagonosis applies to every
+failure/root/agent. No duplicate old physical dispatch. Stop when only a required
+result or external producer remains. Read [functional scope and cutoff audit](FUNCTIONAL_BUILD_PRIORITY_2026-10-07.md),
+[connected build plan](superpowers/plans/2026-10-07-connected-functional-comparison.md),
+and [completed evidence](evidence/2026-10-07_completed_physical_and_functional_priority.json).
+
+## Previous snapshot — October7:81 components pass; physical verification then running
 
 The reviewed binding correction is published at `bd7310955817a6f4482f0f46872ec4b94332b062`:
 two runtime files, two tests and the existing optional workflow.39 phase/binding

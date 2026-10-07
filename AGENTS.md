@@ -5,7 +5,23 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Current — October7: mandatory standalone `diagonosis` for every agent/root.
+Current — October7: owner prioritizes functional FloRA before latency.
+Run37641323381 completed1 pass/2 budget failures of3 on exactbd731095/Alice4f287.
+18.360/29.179s baseline phases exceed10s; native prepare cancels near60s before
+execution. Source/pin/log artifacts verified; later functional assertions unreached.
+81 components pass. Original10s/60s values have no demonstrated calibration.
+Preserve old tests/results; stop latency-only work and speed gates as build
+prerequisites. New mechanical protocol must declare finite resource containment
+without bypassing cancellation, current authority or canonical custody.
+Build the missing actual registered two-stage three-arm case with real ports
+frozen before sealing: six positive attempts, equal evidence, chronology, exact
+passive recovery and reached independent H/C controls. External personality/MFM;
+narrow prototype, necessary mission links only. No full Alice platform.
+Mandatory standalone diagonosis for every failure/root/agent. FBM157 procedure
+seeds. Read docs/FUNCTIONAL_BUILD_PRIORITY_2026-10-07.md and the connected plan.
+Future latency targets need matched pilot calibration and preregistration.
+
+Previous snapshot — October7: mandatory standalone `diagonosis` for every agent/root.
 Finite binding correction published atbd7310955817a6f4482f0f46872ec4b94332b062;81 component
 cases pass (39 phase/binding plus42 affected frame/history),414 unchanged hashes
 per group, exact five published paths. Occupied checkout/index preserved.
@@ -135,5 +151,6 @@ linked. Keep private content, credentials and hidden reasoning out of the traces
 
 Record exactly what was changed and tested, with tested commit/source identity.
 Component tests, physical correctness, response latency and learned behavior
-are different evidence. Keep the existing 10,000 ms standalone, 60,000 ms native
-and 60-minute CI limits unless the user explicitly revises the experiment.
+are different evidence. Preserve the historical 10,000 ms standalone and 60,000 ms native tests/results.
+The owner now prioritizes a separate functional protocol with declared finite
+containment; existing timing failures remain failures under their original version.

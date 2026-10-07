@@ -12,12 +12,13 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-07
 
-The corpus now contains **156 validated procedure traces**. This count describes
+The corpus now contains **157 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
 | Record | Observable operation |
 | --- | --- |
+| [Completed physical failure and functional priority](2026-10-07_completed_physical_and_functional_priority.jsonl) | Validate1 pass/2 budget failures, audit uncalibrated cutoffs, retain old verdicts and rejoin the owner-authorized connected functional build. |
 | [Copied-consumer observer diagnosis](2026-10-05_terminal_copy_observer_diagnosis.jsonl) | Preserve a failed control whose observer required the original consumer instead of custody's copy; correct only test ancestry binding and retry control/basis denial on unchanged runtime, with no architecture verdict yet. |
 | [Terminal correction and basis discrimination](2026-10-05_terminal_completion_candidate.jsonl) | Freeze four unverified runtime changes and a strict saved-metadata-port test; dispatch only the same-source control/basis diagnostic before another correction, with broader regressions and physical pipeline pending. |
 | [Completed v2 diagnostic and observation recovery](2026-10-05_completed_v2_terminal_diagnostic.jsonl) | Recover a viable actual-v2 fallback control and reached terminal-denial failure from unchanged logs; preserve the runner's parser-failure verdict separately and proceed to exact terminal revalidation on issued/fallback paths. |
