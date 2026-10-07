@@ -390,7 +390,7 @@
     }
   ],
   "physical_run": {
-    "status": "dispatched_result_pending",
+    "status": "completed_containment_failure",
     "run_id": 37653864404,
     "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37653864404",
     "source_commit": "5dd7414b14111a7e68e7db7d55955fada8d38b0f",
@@ -403,7 +403,14 @@
     ],
     "pass": null,
     "latency_qualification": false,
-    "duplicate_dispatch_forbidden": true
+    "duplicate_dispatch_forbidden": true,
+    "conclusion": "failure",
+    "registered_tests_started": 3,
+    "completed_passes": 0,
+    "completed_assertion_failures": 0,
+    "contained_incomplete_cases": 3,
+    "functional_oracles_reached": false,
+    "source_before_after_unchanged": true
   },
   "performance_acceptance": false,
   "next_scenario_connections": {
@@ -418,5 +425,6 @@
     "No calibrated speed result",
     "Relevant/irrelevant corrections and decision-linked outcome remain next connected scenarios",
     "Necessary mission/result connections, qualified external models, independent assessment and builder transfer remain subsequent requirements"
-  ]
+  ],
+  "continuation_record": "FloRA:docs/evidence/2026-10-07_connected_containment_diagnosis.json"
 }

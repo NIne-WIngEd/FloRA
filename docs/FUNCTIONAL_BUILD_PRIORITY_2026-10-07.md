@@ -124,3 +124,31 @@ Finite operational bounds declared before launch:
 Positive async attempt allowances total at most 30min, leaving a nominal 15min setup/recovery envelope inside the 45min hard cap. Registration/qualification and owner checks perform synchronous actual store work; that work has no independently calibrated duration guarantee. The external hard cap is the total containment. Each fresh negative repeats complete registration, so it has the same setup duration risk and its own hard cap. No internal SIGALRM, remote launch, broad full campaign, dependency installation or spending occurs here.
 
 Local verification uses the cached Linux image with network disabled and source mounts read-only. Syntax/import/discovery has exactly three cases, without inherited/imported TestCase duplication. Actual Ed25519 selected-policy component checks cover valid declared control, original undeclared source refusal, explicit revoke, missing parent, owner withdrawal, typed context/exchange/run proposal refusal, exact approved preflight→running versus context substitution/wrong readiness identity, and actual guarded writer-copy identity. SQL responses in those checks are existing shape-only contract ports, not physical engine evidence. Provider/run/stage predicate probes use isolated supplied rows and do not claim an actual captured provider task/physical run. A pure withdrawal-verdict discriminator rejects unrelated errors; actual current-gate/effect evidence remains physical. The original first freeze and review rejection are preserved under prior-freeze-1. First physical evidence is owned by the root-reviewed frozen dispatch.
+
+
+## Current continuation — October7: shared construction containment failure
+
+Run37653864404 on exact5dd7414/tree7aa3fd3/Alice4f287 is complete:
+three tests started, zero completed passes/assertion verdicts, three incomplete
+cases stopped at2700s. All424 captured source files per job are unchanged and all
+three artifact archive digests match. Each last checkpoint is original-inputs-
+registered at91–107s. Six attempts, passive recovery and H/C withdrawal controls
+are unreached. This establishes no model defect or failed FloRA hypothesis.
+
+Mandatory diagonosis Steps1–3 establish evidence/purpose/shared call path;
+Step4 still needs the first unfinished call. The unknown region starts with
+history grants and archive/port binding. Lineage construction occurs before
+archive.capture enters, followed by capture/context/route publication. Repeated
+guards are source-visible; amplification, recursion and transport blocking remain
+unmeasured hypotheses. No runtime correction or budget increase is authorized by
+this evidence. One external observed original positive case is prepared with an
+8min diagnostic window,120s code-stack dumps and CPU/wall/source artifacts. The
+original45min functional protocol and fixture/strict runner bytes are unchanged.
+Observation is not functional or latency qualification; preserve window-stop as
+incomplete. Locate the actual boundary before repair and verification.
+
+FBM159 public procedure seeds; context/source/index remain isolated. Full functional
+FloRA still precedes latency optimization. Personality/MFM are external; relevant/
+irrelevant correction, linked outcome and only necessary mission/result connections
+remain next after shared mechanics. Read docs/evidence/2026-10-07_connected_containment_diagnosis.json.
+

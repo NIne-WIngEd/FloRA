@@ -1,0 +1,282 @@
+{
+  "schema": "flora-connected-containment-diagnosis-v1",
+  "recorded_at_utc": "2026-10-07T17:57:14.130796+00:00",
+  "original_run": {
+    "schema": "flora-connected-original-failure-verified-evidence-v1",
+    "run_id": 37653864404,
+    "source_commit": "5dd7414b14111a7e68e7db7d55955fada8d38b0f",
+    "cases": [
+      {
+        "case": "connected-functional-verification-context-withdrawal",
+        "archive_sha256": "a1c50673eb540fd98ec20395c3f09efbd525cc618b430f0e328bf83b6adb9c91",
+        "source_files_verified": 424,
+        "source_before_after_identical": true,
+        "process_exit": 124,
+        "result_json_missing": true,
+        "functional_oracles_reached": false
+      },
+      {
+        "case": "connected-functional-verification-positive",
+        "archive_sha256": "c862daa0993705aef899aa72e8e3f82ccac2c1c5f8c720c79222e6b92077d784",
+        "source_files_verified": 424,
+        "source_before_after_identical": true,
+        "process_exit": 124,
+        "result_json_missing": true,
+        "functional_oracles_reached": false
+      },
+      {
+        "case": "connected-functional-verification-history-withdrawal",
+        "archive_sha256": "2c34c2614fa6a8d91fcf0f93c3f270abc2678fd3b2d54be3b015ab95b8f114ae",
+        "source_files_verified": 424,
+        "source_before_after_identical": true,
+        "process_exit": 124,
+        "result_json_missing": true,
+        "functional_oracles_reached": false
+      }
+    ],
+    "registered_tests_started": 3,
+    "test_completed_passes": 0,
+    "test_completed_assertion_failures": 0,
+    "contained_incomplete_cases": 3,
+    "rerun_dispatched": false,
+    "root_cause": "unestablished; last completed shared setup checkpoint only"
+  },
+  "original_artifacts": [
+    {
+      "id": 11500188299,
+      "name": "connected-functional-verification-context-withdrawal",
+      "size_in_bytes": 58312,
+      "digest": "sha256:a1c50673eb540fd98ec20395c3f09efbd525cc618b430f0e328bf83b6adb9c91",
+      "expired": false
+    },
+    {
+      "id": 11499767734,
+      "name": "connected-functional-verification-positive",
+      "size_in_bytes": 58275,
+      "digest": "sha256:c862daa0993705aef899aa72e8e3f82ccac2c1c5f8c720c79222e6b92077d784",
+      "expired": false
+    },
+    {
+      "id": 11499527949,
+      "name": "connected-functional-verification-history-withdrawal",
+      "size_in_bytes": 58339,
+      "digest": "sha256:2c34c2614fa6a8d91fcf0f93c3f270abc2678fd3b2d54be3b015ab95b8f114ae",
+      "expired": false
+    }
+  ],
+  "log_archive_sha256": "ff6f9d2a1e615488dd7f25c33327c923a1fe4d10e0a84374fda1fee446dbc9cb",
+  "last_checkpoint_elapsed_seconds": {
+    "positive": 102.97,
+    "history_withdrawal": 91.214,
+    "context_withdrawal": 106.566
+  },
+  "ordered_diagnosis": [
+    {
+      "step": 1,
+      "status": "complete",
+      "finding": "All three exact tests started after successful services. Artifacts/digests and424 source files per case match. Exit124 accurately records2700s process containment; no traceback/result JSON/unittest assertion verdict. Functional oracles are unreached, so no false behavioral verdict is inferred."
+    },
+    {
+      "step": 2,
+      "status": "complete",
+      "finding": "The case must prove one registered six-attempt path, exact recovery and current H/C refusal. Shared setup incompletion blocks that evidence; it establishes neither model failure nor failed FloRA hypothesis."
+    },
+    {
+      "step": 3,
+      "status": "traced",
+      "finding": "After original-inputs-registered: phase history grants, archive construction/binding, historical ports, lineage constructor, first BEFORE capture, source grants, capture route, observed binding and publication. Lineage constructor evaluates before archive.capture enters. These keep exact historical state and current owner/source authority aligned with Alice."
+    },
+    {
+      "step": 4,
+      "status": "pending_discriminator",
+      "finding": "First unfinished call remains unknown. Repeated authority guards are source-visible; no measured amplification, recursive cause or blocking backend is established. One passive observed original positive case will distinguish grants/binding/lineage/capture/reconstruction/transport."
+    },
+    {
+      "step": 5,
+      "status": "conditional_on_step4",
+      "finding": "Understand the identified responsible boundary before changing it; preserve canonical source authority, scoped owner grants, historical sealing and exact custody. Do not presume the unfinished region is a particular permission or storage defect."
+    },
+    {
+      "step": 6,
+      "status": "no_runtime_correction_yet",
+      "finding": "No runtime fix, timer increase, fixture waiver, engine change or latency-only patch is justified. Prepare only the observation needed by Step4."
+    },
+    {
+      "step": 7,
+      "status": "diagnostic_method_verified",
+      "finding": "Official Python3.12 faulthandler supports timed all-thread code/line stack dumps without authority wrappers. Prefer it over another Python-level sampling thread. Limited stacks/native blocking may show only the current caller. Architectural repair research follows the located cause."
+    },
+    {
+      "step": 8,
+      "status": "observation_prepared_functional_verification_pending",
+      "finding": "Wrapper/YAML/shell/source controls are reviewed offline. A separate8min observation window preserves the unmodified positive case and original45min test protocol. Window-stop is incomplete diagnostic evidence, never a functional or latency pass. Corrected-cause and end-to-end verification remain pending actual diagnosis."
+    }
+  ],
+  "observer_review": {
+    "schema": "flora-connected-setup-observer-independent-review-v1",
+    "approved": true,
+    "source_hashes": {
+      "scripts/observe_connected_setup.py": "4a798b3fb4d80c6449cc450732ff37a6cc83ce06658c64a05d086c708c480d67",
+      ".github/workflows/native-profile.yml": "492a4dbe28a4e814736949112262f86bedfdada7ca1e1457b812adad5f0bf459"
+    },
+    "root_fresh_hash_ast_and_exact_original_functional_block_checks": true,
+    "independent_architecture_review": "alice_architecture: exact source hashes approved; no blocking findings",
+    "offline_controls": {
+      "schema": "flora-connected-setup-observer-offline-controls-v1",
+      "timer_controls": {
+        "schema": "flora-setup-observer-isolated-timer-controls-v1",
+        "python": "3.12.15",
+        "wrapper_sha256": "4a798b3fb4d80c6449cc450732ff37a6cc83ce06658c64a05d086c708c480d67",
+        "selftest_interval_seconds": 0.05,
+        "production_interval_seconds": 120,
+        "controls": [
+          {
+            "control": "blocked_repeated_stacks",
+            "passed": true,
+            "timer_dump_count": 3,
+            "stderr": "Timeout (0:00:00.050000)!\nThread 0x0000fc5b298b44c0 (most recent call first):\n  File \"<string>\", line 7 in isolated_blocked_fixture\n  File \"/observer/scripts/observe_connected_setup.py\", line 14 in observe\n  File \"<string>\", line 9 in <module>\nTimeout (0:00:00.050000)!\nThread 0x0000fc5b298b44c0 (most recent call first):\n  File \"<string>\", line 7 in isolated_blocked_fixture\n  File \"/observer/scripts/observe_connected_setup.py\", line 14 in observe\n  File \"<string>\", line 9 in <module>\nTimeout (0:00:00.050000)!\nThread 0x0000fc5b298b44c0 (most recent call first):\n  File \"<string>\", line 7 in isolated_blocked_fixture\n  File \"/observer/scripts/observe_connected_setup.py\", line 14 in observe\n  File \"<string>\", line 9 in <module>\nTIMER_CANCELLED\n"
+          },
+          {
+            "control": "normal_return_cancelled",
+            "passed": true,
+            "timer_dump_count": 0,
+            "stderr": "TIMER_CANCELLED\n"
+          },
+          {
+            "control": "exception_preserved_cancelled",
+            "passed": true,
+            "timer_dump_count": 0,
+            "stderr": "TIMER_CANCELLED\n"
+          }
+        ],
+        "physical_FloRA_executed": false,
+        "services_started": false,
+        "network": "none",
+        "filesystem": "read-only"
+      },
+      "process_controls": {
+        "schema": "flora-setup-observer-isolated-process-controls-v1",
+        "controls": [
+          {
+            "control": "normal_original_exit_zero_no_qualification",
+            "passed": true,
+            "receipt": {
+              "schema": "flora-connected-setup-observation-process-v1",
+              "diagnostic_only": true,
+              "process_exit": 0,
+              "log_write_exit": 0,
+              "effective_exit": 0,
+              "observation_window_seconds": 480,
+              "kill_grace_seconds": 30,
+              "original_functional_cap_seconds": 2700,
+              "traceback_interval_seconds": 120,
+              "shell_wall_seconds": 0,
+              "external_cpu_wall_timing_available": false,
+              "outcome": "original_test_completed_during_observation_no_qualification",
+              "original_test_incomplete": false,
+              "functional_qualification": false,
+              "latency_qualification": false
+            }
+          },
+          {
+            "control": "observation_window_stop_124",
+            "passed": true,
+            "receipt": {
+              "schema": "flora-connected-setup-observation-process-v1",
+              "diagnostic_only": true,
+              "process_exit": 124,
+              "log_write_exit": 0,
+              "effective_exit": 124,
+              "observation_window_seconds": 0.15,
+              "kill_grace_seconds": 0.1,
+              "original_functional_cap_seconds": 2700,
+              "traceback_interval_seconds": 120,
+              "shell_wall_seconds": 0,
+              "external_cpu_wall_timing_available": false,
+              "outcome": "observation_window_stopped_original_test_incomplete",
+              "original_test_incomplete": true,
+              "functional_qualification": false,
+              "latency_qualification": false
+            }
+          },
+          {
+            "control": "killed_137_cause_unestablished",
+            "passed": true,
+            "receipt": {
+              "schema": "flora-connected-setup-observation-process-v1",
+              "diagnostic_only": true,
+              "process_exit": 137,
+              "log_write_exit": 0,
+              "effective_exit": 137,
+              "observation_window_seconds": 480,
+              "kill_grace_seconds": 30,
+              "original_functional_cap_seconds": 2700,
+              "traceback_interval_seconds": 120,
+              "shell_wall_seconds": 0,
+              "external_cpu_wall_timing_available": false,
+              "outcome": "process_killed_original_test_incomplete_cause_unestablished",
+              "original_test_incomplete": true,
+              "functional_qualification": false,
+              "latency_qualification": false
+            }
+          }
+        ],
+        "scope": "tiny isolated commands replace only the diagnostic command in an in-memory workflow shell body; no FloRA imports or physical services",
+        "external_time_available_in_cached_image": false,
+        "network": "none",
+        "root_and_source_mount": "read-only",
+        "temporary_control_artifacts": "ephemeral tmpfs"
+      },
+      "final_syntax": {
+        "yaml_syntax_passed": true,
+        "all_bash_syntax_steps_passed": 31,
+        "existing_functional_and_contract_jobs_unchanged": true,
+        "diagnostic_jobs": 1,
+        "workflow_sha256": "492a4dbe28a4e814736949112262f86bedfdada7ca1e1457b812adad5f0bf459"
+      },
+      "red_control": {
+        "scope": "unobserved tiny blocked fixture",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "original_output": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nAssertionError: unobserved blocked control produces no timer stacks\n"
+      },
+      "first_candidate_guard_check": {
+        "candidate_sha256": "078da156d3b02f08fc81b2b2402a232517b6d35ba7bf0a4e1fa83990b859b24a",
+        "exit": 1,
+        "original_output": "Traceback (most recent call last):\n  File \"<string>\", line 9, in <module>\nAssertionError: candidate source guards must equal preserved original hashes\n{\n  \"original_source_guards\": {\n    \"tests/registered_functional_case_fixture.py\": true,\n    \"tests/integration/test_selected_connected_functional_comparison.py\": false,\n    \"scripts/run_connected_functional_comparison.py\": true\n  },\n  \"candidate_sha256\": \"078da156d3b02f08fc81b2b2402a232517b6d35ba7bf0a4e1fa83990b859b24a\"\n}\n",
+        "retained_path": "retained-first-candidate.yml",
+        "corrected_cause": "A mistyped literal original test hash in the new workflow source guard; original test and helper bytes were unchanged."
+      },
+      "physical_FloRA_executed": false,
+      "services_started": false
+    },
+    "limits": [
+      "External GNU time execution branch syntax-reviewed only in cached image; physical timing pending.",
+      "Observation is not functional/learning/latency qualification even if selected original test finishes.",
+      "Code stacks may show only a Python caller for native blocking and truncate deep repeated frames."
+    ],
+    "fixture_runtime_or_strict_runner_edits": 0,
+    "physical_run": "not_dispatched"
+  },
+  "source_hashes": {
+    "scripts/observe_connected_setup.py": "4a798b3fb4d80c6449cc450732ff37a6cc83ce06658c64a05d086c708c480d67",
+    ".github/workflows/native-profile.yml": "492a4dbe28a4e814736949112262f86bedfdada7ca1e1457b812adad5f0bf459"
+  },
+  "unchanged_test_sources": {
+    "tests/registered_functional_case_fixture.py": "438281164ad79f9b26ad6157c925a40b7f492db2b8a44f338ea2ef51267cfffe",
+    "tests/integration/test_selected_connected_functional_comparison.py": "156754dccc7a3eb6b7c20d590bd87c49b6bdb1e5dbda6778b54038802ecfa7ae",
+    "scripts/run_connected_functional_comparison.py": "c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2"
+  },
+  "diagnostic_run": {
+    "status": "ready_for_one_dispatch",
+    "functional_qualification": false,
+    "latency_qualification": false
+  },
+  "research": [
+    {
+      "url": "https://docs.python.org/3.12/library/faulthandler.html",
+      "mechanism": "C watchdog snapshots without locals/profile hooks; retain open stderr and cancel timer on normal exit."
+    }
+  ],
+  "next_action": "Observe exact first unfinished construction; interpret source-bound stacks before any correction. Continue functional FloRA afterward, with personality/MFM external and no full Alice platform."
+}

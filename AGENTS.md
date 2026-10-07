@@ -1,6 +1,32 @@
 # Continuing FloRA
 
-## Current continuation — October7: connected functional source prepared
+## Current continuation — October7: shared construction containment failure
+
+Run37653864404 on exact5dd7414/tree7aa3fd3/Alice4f287 is complete:
+three tests started, zero completed passes/assertion verdicts, three incomplete
+cases stopped at2700s. All424 captured source files per job are unchanged and all
+three artifact archive digests match. Each last checkpoint is original-inputs-
+registered at91–107s. Six attempts, passive recovery and H/C withdrawal controls
+are unreached. This establishes no model defect or failed FloRA hypothesis.
+
+Mandatory diagonosis Steps1–3 establish evidence/purpose/shared call path;
+Step4 still needs the first unfinished call. The unknown region starts with
+history grants and archive/port binding. Lineage construction occurs before
+archive.capture enters, followed by capture/context/route publication. Repeated
+guards are source-visible; amplification, recursion and transport blocking remain
+unmeasured hypotheses. No runtime correction or budget increase is authorized by
+this evidence. One external observed original positive case is prepared with an
+8min diagnostic window,120s code-stack dumps and CPU/wall/source artifacts. The
+original45min functional protocol and fixture/strict runner bytes are unchanged.
+Observation is not functional or latency qualification; preserve window-stop as
+incomplete. Locate the actual boundary before repair and verification.
+
+FBM159 public procedure seeds; context/source/index remain isolated. Full functional
+FloRA still precedes latency optimization. Personality/MFM are external; relevant/
+irrelevant correction, linked outcome and only necessary mission/result connections
+remain next after shared mechanics. Read docs/evidence/2026-10-07_connected_containment_diagnosis.json.
+
+## Historical snapshot — October7: connected functional source prepared
 
 Frozen functional run37653864404 is dispatched on exact5dd7414b14111a7e68e7db7d55955fada8d38b0f/tree7aa3fd3c071e6826a624f7254c335961acb0c2e4/Alice4f287. [Run and three focused jobs](https://github.com/NIne-WIngEd/FloRA/actions/runs/37653864404). At dispatch the positive six-attempt/recovery and independent H/C cases are pending. Recover exact source artifacts and first result; do not dispatch a duplicate.
 
