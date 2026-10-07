@@ -5,20 +5,20 @@ the documents for the code being changed. Later direct user instructions take
 precedence over this handoff. Check current repository heads and completed CI
 before treating a pending or historical receipt as current.
 
-Current — October6: mandatory standalone `diagonosis` for every agent/root.
-Measured native pure binding amplification has a reviewed isolated finite graph
-candidate (work/finite-binding-pass-20261006/source):2 runtime files/2 tests plus
-existing optional native-profile workflow contracts mode.39 Linux components
-pass,414 hashes unchanged;42 affected frame/history cases pending in offline
-containerflora-binding-graph-affected-20261006 (fe74a597). Candidate unpublished.
-Recover final receipt/source/log hashes before source publication/physical dispatch.
-Preserve original getter-mutation failure; native ordinary lookup recognition
-keeps unknown getters/meta paths on original live gates. Every independent issued
-expectation remains checked; no public memo/cacheallow or callback/IO crossing.
-Source606 full CI1047 component passes; physical49/2/2 per run. Budgets unchanged.
-FBM155 validated procedure seeds. No physical speedup/learning qualification;
-narrow FloRA/external personality and MFM/connected causal experiment remain.
-Read `docs/evidence/2026-10-06_finite_binding_pass_candidate.json`.
+Current — October7: mandatory standalone `diagonosis` for every agent/root.
+Finite binding correction published atbd7310955817a6f4482f0f46872ec4b94332b062;81 component
+cases pass (39 phase/binding plus42 affected frame/history),414 unchanged hashes
+per group, exact five published paths. Occupied checkout/index preserved.
+Affected900s observation alarm was not established (1050.258s elapsed); functional
+assertions remain valid, no latency/cap or timer-cause claim. No timer patch/replay.
+Original uninstrumented physical run37641323381 on that exact source is pending:
+native-profile contracts mode; transport/native-comparison, profiler skipped,
+unchanged10s/60s response and60m CI budgets, pinned Alice4f287/read key unchanged.
+Recover final source artifact/logs before interpreting it; no duplicate dispatch.
+If sound/pass, resume existing two-stage three-arm/six-attempt coordinator case;
+separate physical fixtures do not prove that connection. External personality/MFM,
+narrow FloRA, fresh independent H/C authority. FBM156 validated procedure seeds.
+Read `docs/evidence/2026-10-07_binding_components_and_physical_verification.json`.
 
 Previous: reviewed origin correction0b790365 is published atbfff869e5193cbccdb1b466c445076376e81f589.
 Linux completes92 corrected cases without skips: real signed-H control/mutation
