@@ -12,7 +12,7 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-05
 
-The corpus now contains **152 validated procedure traces**. This count describes
+The corpus now contains **155 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
@@ -68,3 +68,9 @@ remain linked snapshots; new outcomes do not rewrite an earlier failure or pendi
 - [Temporal restoration fixture diagnosis](2026-10-05_temporal_restoration_fixture_diagnosis.jsonl): validate setup and pinned row contracts, reuse coherent fixtures, retain unaffected evidence.
 
 - [Completed terminal verification and pipeline continuation](2026-10-05_completed_terminal_pipeline_continuation.jsonl):18 source-bound component passes, exact frozen publication, coverage limits and return to ordinary physical CI.
+
+- [Source-bound physical latency diagnosis](2026-10-06_source_bound_latency_diagnosis.jsonl): validate budget claims and unfinished jobs, source-check measured amplification, dispatch one unchanged-runtime stage diagnostic before choosing a correction.
+
+- [Finite pure verification composition](2026-10-06_finite_pure_verification_composition.jsonl): source-bound worker evidence overturns storage speculation; share graph observations while preserving independent expectations and fresh authority.
+
+- [Finite binding pass candidate](2026-10-06_finite_binding_pass_candidate.jsonl): prove alias work before repair, preserve independent expectations and getter/meta fallback, verify callback-free graph bounds before original physical tests.

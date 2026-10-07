@@ -1,6 +1,105 @@
 # FloRA verification checkpoint — 2026-10-03
 
-## Current continuation —18 component passes; connected physical pipeline next
+## Current continuation — October6: reviewed finite binding candidate;39 pass,42 pending
+
+Native diagnostic37482623415 localizes repeated pure seal/binding CPU, not SQL wait
+as dominant observed worker cost. Original fixture still fails; its116 loaded raw
+source hashes/window are verified. Full source606 CI remains1047 PR component
+passes,49/2/2 physical pass/fail/incomplete per run. Valid tests/budgets are unchanged.
+
+Isolated `work/finite-binding-pass-20261006/source` changes only2 runtime files,
+2 tests and the existing optional workflow. Phase passes share exact object/function
+observations while comparing every independent issued expectation. Frame passes
+visit shared capture/reader nodes once. All observations are fresh, internal and
+strongly held only until return; no public memo/cacheallow or callback/IO crossing.
+
+An initial candidate let an accepted scope getter mutate a cached callback; its
+real failure is preserved. Native recognition now requires ordinary scope/gate
+instance ports; getter/custom lookup/meta consumers keep original unissued live
+gates. Owner and every current MRO base are checked before pure reader inspection.
+No silent getter bypass. Independent source review finds no blocker.
+
+39 phase/binding Linux cases pass with no errors/skips and414 hashes unchanged.
+42 affected shared-frame/history cases run in `flora-binding-graph-affected-20261006`
+(containerfe74a597, existing imagebbb524, offline,900s observation cap). The exact
+runtime/test bytes match the completed39-case group. Candidate is not published.
+Recover its final receipt/source/log hashes first; any failure starts standalone
+mandatory `diagonosis`. If sound/all pass, publish only5 selected candidate paths
+using a private index, then dispatch registered `native-profile.yml` once with
+`observer=contracts`: original uninstrumented transport/native-comparison shards,
+same product/60m CI budgets, authorized pinned Alice key, no credential persistence.
+Other dirty checkout work must be preserved. No full campaign or blind retry.
+
+FBM155 validated procedure seeds. Physical latency/learning remain unqualified;
+retained-history cancellations remain separate. External personality/MFM, narrow
+FloRA. Main workflow still needs registered two-stage three-arm/six-attempt causal
+comparison, equal evidence, chronology, live withdrawal and passive recovery.
+Read [candidate evidence](evidence/2026-10-06_finite_binding_pass_candidate.json).
+
+## Previous continuation — October6: native pure verification localized; candidate checks pending
+
+The unchanged-runtime native diagnostic37482623415 completed. Its workflow succeeds
+at collecting evidence; the original fixture still fails. All116 loaded source
+hashes match raw published6063073/Alice4f287 blobs; the owned-worker window is
+complete with no cap/open span/observer error. Windows Git archive CRLF conversion
+was a validation issue corrected through raw object bytes, without runtime edits.
+
+Observed worker120.698s wall/116.979sCPU:19,139 origin seals35.110s exclusive;
+475,155 context binding entries23.072s exclusive;6,504 origin bodies11.870s;
+4,575 SQL executes3.098s. Inclusive times overlap and instrumentation changes
+timing. Repeated pure verification is the supported native amplification candidate;
+baseline whole-fixture query counts do not establish a SQL cause.
+
+Isolated candidate: one fresh internal pure graph pass shares actual observations
+but compares every independent issuance/capture expectation. Strong references
+last only that pass; no public memo/cacheallow or sharing across callback/IO/later
+verification. Keep capture representation, exact helper pins, fresh H/C and final
+metadata barriers. First verify the inherited-pair/shared-reader duplication on
+published code, then mutation/freshness controls and original physical conditions.
+No candidate pass or speedup claimed yet. Retained-history cancellations remain
+unlocalized. Original full CI:1047 PR component passes; each run49/2/2 physical
+pass/fail/incomplete of53. Preserve valid tests and budgets.
+
+FBM154 procedure seeds; external personality/MFM and narrow FloRA scope. Main
+workflow remains the registered two-stage three-arm/six-attempt causal comparison;
+these separate fixtures do not prove it. Stop when only required output remains.
+Read [the measured diagnosis](evidence/2026-10-06_native_binding_graph_diagnosis.json).
+
+## Previous continuation — October6: physical timing failures; native diagnostic running
+
+At6063073 the PR passes1047 component cases across83 modules. All26 job source
+trees and Alice4f287 pins match. Each ordinary run has49 physical passes,2 budget
+failures and2 incomplete cases of53 discovered. Check annotations confirm1h job
+caps, including the push component remainder. Preserve all original logs/verdicts.
+
+Independent test review confirms valid budget gates: baseline allowed BEFORE/
+AFTER returns24–39s against10s after its denied zero-provider-call control. Native
+prepare times out at60s before execute; later custody/recovery/isolation assertions
+are unreached. Existing baseline profiles count44,403 SQL and4,105 Kurrent reads
+over the entire tiny fixture, including setup. This supports amplification as a
+question, not a SQL/backend root cause or a per-response/native timing claim.
+
+One existing bounded native aggregate diagnostic is running:
+[37482623415](https://github.com/NIne-WIngEd/FloRA/actions/runs/37482623415), branch
+`Rayan/flora-native-latency-diagnosis`, head8be7ec46d1acd45be3eba1d90b5a13d307ad19af.
+Runtime/tests/scripts match6063073; only its workflow's Alice checkout uses the
+already-authorized read key without persistence. All product/CI limits remain.
+Original-code owned-worker numeric windows are180s; their timings cannot qualify
+latency. Recover the artifact/source hashes, classify stage/call costs and finish
+mandatory `diagonosis` before choosing any runtime correction. Stop while only
+that result remains; no blind retry or another full campaign is justified.
+
+Static candidates: joint-frame creation plus independent phase H reconstruction,
+four facade/backend guards per private read, and repeated canonical history/grant
+lookups. Retained whole-history routes are a separate path. Research informs
+immutable-proof reuse with fresh authority; no new platform/cached allow is adopted.
+The main remaining capability is one registered two-stage three-arm/six-attempt
+connected causal comparison with equal evidence, chronology, withdrawal and passive
+recovery. Separate existing cases do not prove it. Personality/MFM external; narrow
+FloRA scope. No latency/learning/release pass. FBM153 schema-valid procedure seeds.
+Read [the diagnosis](evidence/2026-10-06_completed_full_ci_latency_diagnosis.json).
+
+## Previous continuation —18 component passes; connected physical pipeline next
 
 The fixture-corrected continuation completed all15 fresh cases in2045.425s.
 All414 mounted sources, runner and15 logs match. Three unchanged prior passes
