@@ -83,3 +83,44 @@ recognition rejects. It keeps live fallback gates; it does not establish a timin
 cause. Repair it only if required for functional completion or later optimization.
 The baseline does not use that native/frame path. Do not resume those separate
 latency investigations as the default next task.
+
+
+# Connected functional mechanics protocol — prepared, physical evidence pending
+
+This protocol composes the exact published selected runtime with supplied fictional producer and transport outputs. It proves mechanics only if the reviewed physical tests pass. It supplies no learned behavior, calibrated latency acceptance, hypothesis support, or model readiness evidence. The original 10s/60s contracts and their results remain unchanged.
+
+The isolated source basis is FloRA bd7310955817a6f4482f0f46872ec4b94332b062 and Alice 4f287a488bc908bd04f99255ee01b794bacba50b. Original file bytes and hashes are recorded before editing. Only two new test/fixture source files are added; all runtime and original tests remain byte-identical.
+
+Setup order: construct actual original/correction/question sources, accepted Claim and approved old personal state; enroll existing artifacts and cohort/recipe; construct actual worker, codec, read factory, meter and writer guard identities/configurations; freeze their concrete manifests into preregistration; capture/seal BEFORE; issue update gate, corrected Claim/state and independently qualified fictional replacement checkpoint; capture full AFTER and same-context ablation using the old checkpoint; finalize the anchor; register exact original histories/question and final route; produce the four already selected, signed native receipts. No sealed manifest is replaced. Actual native inference ports are disabled after these supplied receipts exist. The positive case then composes two real NativeArmAdapters and one real GeneralMemoryArmAdapter under the same actual RegisteredExperimentCoordinator.
+
+The fixture owner first makes explicit initial grants for exact known input/native receipt ancestry. A no-broker control reaches new preflight → running capture and requires refusal before append/dispatch. A separately declared, independently signed synthetic owner intent binds scope, namespace, run, coordinator/final digest, exact native receipts and only enrolled provider tasks. Append notifications are proposals. Typed canonical source/metadata/parent/digest checks precede actual signed policy.apply actions for coordinator capture/read only. Preflight requires the actual supplied-ready payload hash/suffix/metadata/body digest; running requires that exact signed approved coordinator_preflight target, so a granted context/output cannot substitute. Parent rights are not minted; existing deny/revoke, withdrawn/expired intent and exhausted action budget refuse. This is an external fixture owner, not a runtime permission bypass.
+
+Exact IDs, one per separate physical shard:
+
+- test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery
+- test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects
+- test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects
+
+The positive shard requires all six actual persisted attempts to be successful, exact original history/question equality across arms, byte-equivalent full/ablation selected contexts, exact old BEFORE/new AFTER full checkpoint and old ablation checkpoint in both phases, canonical decision/output/context ancestry, two provider captures and four native relays. Passive recovery grants only the persisted run's required parent closure, then opens a fresh connection/log/object/registry/policy/comparison controller. Exact recovered receipts/output/run bytes are compared with dispatch/write entrypoints disabled. Canceled read cleanup must release its owned slots before teardown.
+
+Each negative shard constructs an independent complete registration and four native supplied receipts. It prepares one actual NativeArmAdapter successfully, verifies the unchanged execution-shaped request with pure adapter._check before and after withdrawal, and checks one exact signed current owner action's allow→revoke transition/generation/predecessor/source registration plus !permits. It then checks refused owned-read and first actual adapter.execute boundaries with encoding/worker/append traps. H withdraws original-history evaluation and accepts only the exact traced current-manifest/current-phase-authority PermissionError causes. C uses unchanged context/request and withdraws personal_judgment on actual approved state, independently confirming H remains allowed. One extra actual bounded owned-read/current-phase metadata companion must reach the exact phase predicate/parent-grant denial before C's authorize_context False or adapter ArmStopped('refused') can count. C also retains a separately labeled request-ID/byte-binding tamper assertion. Unrelated ValueError/PermissionError and unattributed ArmStopped fail the test. The negatives do not each execute six paired attempts or call the provider.
+
+Finite operational bounds declared before launch:
+
+| Scope | Value | Containment rationale |
+| --- | ---: | --- |
+| Async attempt | 300000ms | Allows full mechanical selected checks; not a speed criterion. |
+| Owned read operation/session | 240000ms | Must fit within the attempt; bounds a single owned read and retains cancellation ownership. |
+| Writer operation | 240000ms | Must fit within the attempt; existing writer process/socket containment stays active. |
+| Backend query | 30000ms | Bounds each concrete selected database operation inside session/attempt. |
+| Connect | 5s | Finite initial socket connection. |
+| Native reader concurrency | 1 per arm | Retains exclusive slot ownership until physical cleanup. |
+| Fictional relay worker | 5000ms + 80ms terminate grace | Existing child containment for a tiny supplied receipt relay. |
+| Relay input/output/stderr | 65536/4096/4096 bytes | Finite fictional transport envelope. |
+| Relay artifact | 67108864 bytes | Bounds executable/artifact bytes; this is not a RAM claim. |
+| Owner signed actions/intent | 128 actions / 2700s | Exact delegated action budget and expiry. |
+| Each physical shard | 60min job / 45min hard process-group cap + 30s kill grace | Bounds setup, synchronous overrun, recovery and negative controls; external strict runner emits completion status. |
+
+Positive async attempt allowances total at most 30min, leaving a nominal 15min setup/recovery envelope inside the 45min hard cap. Registration/qualification and owner checks perform synchronous actual store work; that work has no independently calibrated duration guarantee. The external hard cap is the total containment. Each fresh negative repeats complete registration, so it has the same setup duration risk and its own hard cap. No internal SIGALRM, remote launch, broad full campaign, dependency installation or spending occurs here.
+
+Local verification uses the cached Linux image with network disabled and source mounts read-only. Syntax/import/discovery has exactly three cases, without inherited/imported TestCase duplication. Actual Ed25519 selected-policy component checks cover valid declared control, original undeclared source refusal, explicit revoke, missing parent, owner withdrawal, typed context/exchange/run proposal refusal, exact approved preflight→running versus context substitution/wrong readiness identity, and actual guarded writer-copy identity. SQL responses in those checks are existing shape-only contract ports, not physical engine evidence. Provider/run/stage predicate probes use isolated supplied rows and do not claim an actual captured provider task/physical run. A pure withdrawal-verdict discriminator rejects unrelated errors; actual current-gate/effect evidence remains physical. The original first freeze and review rejection are preserved under prior-freeze-1. First physical evidence is owned by the root-reviewed frozen dispatch.

@@ -11,6 +11,7 @@ on:
           - aggregate
           - stack-samples
           - contracts
+          - functional
   push:
     paths:
       - scripts/profile_selected_native_boundaries.py
@@ -18,7 +19,7 @@ on:
 
 jobs:
   diagnostic-native:
-    if: github.event_name != 'workflow_dispatch' || inputs.observer != 'contracts'
+    if: github.event_name != 'workflow_dispatch' || (inputs.observer != 'contracts' && inputs.observer != 'functional')
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
@@ -173,6 +174,106 @@ jobs:
             binding-source-identity.txt
             binding-backend-ps.txt
             binding-backend-logs.txt
+      - name: Tear down isolated selected services
+        if: always()
+        run: docker compose -f compose.integration.yml down -v
+
+  connected-functional:
+    if: github.event_name == 'workflow_dispatch' && inputs.observer == 'functional'
+    name: connected-functional-${{ matrix.case }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - case: positive
+            test-id: test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery
+          - case: history-withdrawal
+            test-id: test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects
+          - case: context-withdrawal
+            test-id: test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects
+    env:
+      PYTHONPATH: alice-reference/src:src:tests:tests/integration
+      KURRENTDB_URI: kurrentdb://127.0.0.1:2113?tls=false
+      XTDB_DSN: postgresql://xtdb@127.0.0.1:5432/xtdb
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout pinned A.L.I.C.E. contracts
+        uses: actions/checkout@v4
+        with:
+          repository: NIne-WIngEd/A.L.I.C.E
+          ref: 4f287a488bc908bd04f99255ee01b794bacba50b
+          path: alice-reference
+          ssh-key: ${{ secrets.ALICE_CONTRACTS_READ_KEY }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Record exact source and declared mechanical protocol
+        run: |
+          git rev-parse HEAD HEAD^{tree} > connected-functional-source-identity.txt
+          git -C alice-reference rev-parse HEAD >> connected-functional-source-identity.txt
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-functional-source-before.txt
+          sha256sum .github/workflows/native-profile.yml >> connected-functional-source-identity.txt
+          cp docs/FUNCTIONAL_BUILD_PRIORITY_2026-10-07.md connected-functional-protocol.md
+      - name: Install selected integration dependencies
+        run: python -m pip install -e '.[backends,providers,embeddings]'
+      - name: Start only this case's selected services
+        run: docker compose -f compose.integration.yml up -d kurrentdb xtdb qdrant
+      - name: Wait for selected services
+        run: |
+          set -euo pipefail
+          for service in 'http://127.0.0.1:2113/health/live' 'http://127.0.0.1:8080/healthz/ready' 'http://127.0.0.1:6333/healthz'; do
+            for attempt in $(seq 1 90); do
+              if curl -fsS "$service" >/dev/null; then break; fi
+              [ "$attempt" -lt 90 ] || exit 1
+              sleep 2
+            done
+          done
+      - name: Run the connected mechanical case with hard resource containment
+        run: |
+          set -uo pipefail
+          set +e
+          timeout --kill-after=30s 45m python -u scripts/run_connected_functional_comparison.py --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects --select-test-id '${{ matrix.test-id }}' --output connected-functional-result.json 2>&1 | tee connected-functional-test.log
+          statuses=("${PIPESTATUS[@]}")
+          process_result=${statuses[0]}
+          log_result=${statuses[1]}
+          result=$process_result
+          if [ "$result" -eq 0 ] && [ "$log_result" -ne 0 ]; then result=$log_result; fi
+          set -e
+          printf '{"process_exit":%s,"log_write_exit":%s,"effective_exit":%s,"hard_process_cap_seconds":2700,"kill_grace_seconds":30,"latency_qualification":false}\n' "$process_result" "$log_result" "$result" > connected-functional-process.json
+          exit "$result"
+      - name: Verify final source even after setup or execution failure
+        if: always()
+        run: |
+          set -euo pipefail
+          if [ ! -f connected-functional-source-before.txt ]; then
+            printf 'Initial source capture was not reached.\n' > connected-functional-source-unavailable.txt
+            exit 1
+          fi
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-functional-source-after.txt
+          diff -u connected-functional-source-before.txt connected-functional-source-after.txt
+      - name: Preserve selected backend evidence
+        if: always()
+        run: |
+          docker compose -f compose.integration.yml ps > connected-functional-backend-ps.txt || true
+          docker compose -f compose.integration.yml logs --no-color > connected-functional-backend-logs.txt || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: connected-functional-verification-${{ matrix.case }}
+          path: |
+            connected-functional-source-identity.txt
+            connected-functional-source-before.txt
+            connected-functional-source-after.txt
+            connected-functional-source-unavailable.txt
+            connected-functional-protocol.md
+            connected-functional-test.log
+            connected-functional-result.json
+            connected-functional-process.json
+            connected-functional-backend-ps.txt
+            connected-functional-backend-logs.txt
       - name: Tear down isolated selected services
         if: always()
         run: docker compose -f compose.integration.yml down -v

@@ -1,6 +1,31 @@
 # FloRA verification checkpoint — 2026-10-03
 
-## Current continuation — October7: functional FloRA first; original physical run failed
+## Current continuation — October7: connected functional source prepared
+
+The same actual registered BEFORE/update/AFTER case now composes two actual native
+adapters and the general-memory baseline under one coordinator. Concrete ports
+are frozen before sealing. The positive test requires six successful persisted
+attempts, equal original history/native context, old BEFORE/new AFTER full and old
+ablation checkpoints, exact linked receipts, and fresh-controller passive recovery.
+Two fresh negative cases withdraw actual current H or C after passing controls.
+The synthetic owner uses prior scoped signed intent and exact typed canonical
+proposals; missing ancestors and existing revoke remain refusals. Runtime and old
+tests are unchanged. Review failures and the corrected copy diagnosis are retained.
+
+Offline discovery, actual signed-policy component controls and strict runner
+controls pass; these do not prove physical integration. One reviewed frozen manual
+dispatch is ready: positive/history-withdrawal/context-withdrawal in three separate
+jobs. Finite bounds contain work; no latency scoring or old timing-test rewrite.
+Recover exact run source/artifacts before interpretation and do not duplicate it.
+Personality/MFM and provider outputs here are fictional transport fixtures. No
+learned causal result or full-build completion is claimed. After physical mechanics,
+connect relevant/irrelevant corrections and decision-linked outcome, then necessary
+mission/result links, qualified external models and independent assessment. Builder
+transfer stays separate; calibrated frontier-comparable latency follows function.
+FBM158 public procedure seeds. Mandatory standalone diagonosis applies to any
+failed case. Read docs/evidence/2026-10-07_connected_functional_construction.json.
+
+## Historical snapshot — October7: functional FloRA first; original physical run failed
 
 The owner explicitly prioritizes the complete narrow FloRA causal prototype before
 latency optimization. Build and verify the required memory/Experience/Claim/state,
@@ -505,7 +530,7 @@ Read the [candidate and correction receipt](evidence/2026-10-04_actual_phase_pre
 No new physical CI/model job, full Alice platform or producer training is added.
 Only remaining results should be waited for; do not blindly repeat full runs.
 
-### Current continuation — completed full gates; architecture reassessment
+### Historical snapshot continuation — completed full gates; architecture reassessment
 
 Atc70b9a4e, both ordinary runs37174847735/37174845109 are completed failures.
 All26 logged checkout trees match and Alice4f287a succeeds. Each run passes1003
@@ -567,7 +592,7 @@ corrected pass, physical gain or final-source full-suite result is claimed.
 
 ## Retained earlier checkpoints
 
-### Current continuation — private CI restored; full gates running
+### Historical snapshot continuation — private CI restored; full gates running
 
 The20c612fe ordinary [PR37166535045](https://github.com/NIne-WIngEd/FloRA/actions/runs/37166535045)
 and [push37166532406](https://github.com/NIne-WIngEd/FloRA/actions/runs/37166532406)
@@ -655,7 +680,7 @@ readers and repeats full-H reconstruction within pure metadata predicates. This
 step changes no model, engine, cap, budget, historical recovery or outcome semantics.
 Construction and verification are pending; do not infer a performance improvement.
 
-## Current: narrow owned judgment composition — October 3
+## Historical snapshot: narrow owned judgment composition — October 3
 
 Published serving source `bf494970` and context snapshot `877162da` are [verified against actual Git blobs](evidence/2026-10-03_minimal_judgment_publication.json). [Push37151333895](https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895) and [PR37151335920](https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920) are in progress at capture. They are the existing standard physical/contract gates, automatically triggered once; no new diagnostic was dispatched. Only external results remain. Stop here, then recover exact completed receipts and actual timings before choosing the next bounded change. Context-branch serving files remain historical.
 
@@ -783,7 +808,7 @@ sampler health/coverage before choosing another runtime change. The restart
 exit139 remains a separate unresolved process failure. Older partial/pending
 snapshots below are historical and superseded here.
 
-## Current result: published repair, failed response observation, partial ordinary CI
+## Historical snapshot result: published repair, failed response observation, partial ordinary CI
 
 Runtime **`4b88946f404d7359943b5edb2504a2f0c2e96320`**, tree
 `ab5cdfc37ef6a4187be62cad673e37d58a43e624`, publishes the single context

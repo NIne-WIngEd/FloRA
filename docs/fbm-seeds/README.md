@@ -12,7 +12,7 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-07
 
-The corpus now contains **157 validated procedure traces**. This count describes
+The corpus now contains **158 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
@@ -77,3 +77,5 @@ remain linked snapshots; new outcomes do not rewrite an earlier failure or pendi
 - [Finite binding pass candidate](2026-10-06_finite_binding_pass_candidate.jsonl): prove alias work before repair, preserve independent expectations and getter/meta fallback, verify callback-free graph bounds before original physical tests.
 
 - [Binding components and original physical verification](2026-10-07_binding_components_and_physical_verification.jsonl):81 exact-source functional passes, preserved observation-timer limit, five-path publication and one uninstrumented physical dispatch before reconnecting the causal workflow.
+
+Current October7:158 validated public procedure seeds after connected functional construction. Physical and learned results remain pending.
