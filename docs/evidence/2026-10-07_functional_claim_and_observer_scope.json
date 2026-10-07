@@ -453,14 +453,23 @@
   ],
   "component_controls_status": "seven_original_controls_reached_and_passed_with_initial_selection_errors_preserved",
   "physical_run": {
-    "status": "not_dispatched",
+    "status": "dispatched_raw_result_unrecovered",
     "case": "positive",
     "original_functional_cap_seconds": 2700,
     "sampler_cap_seconds": 300,
     "functional_qualification": false,
-    "latency_qualification": false
+    "latency_qualification": false,
+    "run_id": 37685186902,
+    "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37685186902",
+    "source_commit": "dbf101cc1452815b6f8fb5d24dd962dff916bf97",
+    "source_tree": "ca3b33b54415117574505f9c8452cc9567b07d65",
+    "event": "workflow_dispatch",
+    "functional_positive_only": true,
+    "selected_test_id": "test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery",
+    "python": "3.12.14",
+    "alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b"
   },
-  "next_action": "Execute corrected positive connected mechanics; interpret its actual raw verdict first. If successful, run reached H/C controls and then relevant/irrelevant correction and linked outcome scenarios. Personality/MFM stay external; latency follows credible functional evidence.",
+  "next_action": "Recover and validate this exact positive raw result before further execution. If positive passes, run the complete H/C campaign; if incomplete or failed, use ordered diagnosis. No duplicate or unsupported architecture patch.",
   "component_controls": {
     "original_reached_and_passed": 7,
     "first_harness": {
