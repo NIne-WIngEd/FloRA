@@ -26,6 +26,10 @@ attribute-access shape are read before they are proven callback-free. Existing
 method/code pins do not reject every newly installed accessor. This candidate
 cannot be adopted while that guarantee remains unverified, even if counts fall.
 
+The separate getter probe ended124 at120s before its native-helper control or
+getter oracle; source/probe are unchanged. It neither confirms nor clears the
+admission gap. The three main results stay pending until exact receipts are verified.
+
 Read [candidate diagnosis and verification](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md).
 Recover the three exact local result directories before any code publication or
 physical run: typed-baseline, typed-candidate, candidate-verification under
