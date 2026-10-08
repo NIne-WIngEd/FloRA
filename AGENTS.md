@@ -1,6 +1,34 @@
 # Continuing FloRA
 
-## Current continuation — October7: evaluation recalibrated after incomplete construction
+## Current continuation — October7: complete construction observation recovered
+
+Run [37704802657](https://github.com/NIne-WIngEd/FloRA/actions/runs/37704802657)
+completed with exit 124 at the unchanged 2700 s cap, without a raw strict result.
+All 428 captured sources match exact f22953b8e776863b01518df35b342934c0ef7b73
+and remain unchanged; artifact digest 7f2bbd89baf3893c4ee58340d9487548a13bcca10f7ce22b7a1f1a7024090f60
+verifies. Python 3.12.14/Alice 4f287 remain the recorded runtime/contracts.
+
+Nine windows yield 2688 samples / 2687 owned, no stack truncation or thread caps,
+and gaps below 1.057 s. Eight windows close with zero observer errors; external
+containment explains the ninth missing close. Original-input registration is
+102.892 s; no capture-publication checkpoint or functional oracle follows.
+Initial fallback assembly returns near 297 s; the first full lineage call returns
+before 1519 s. The second native lineage body returns before 2603 s. The final
+sample at 2699.299–2699.300 s is build:760 → first capture:661 → registered lineage:126
+→ fresh preregistration current:533: completion revalidation remains unfinished.
+Cold route construction, observed binding and publication have no sampled entry
+and follow capture return in the source.
+
+This resolves localization, not exclusive cost, query counts, backend causation,
+infinite recursion or the exact instruction at termination. The first optional
+native-reuse refusal remains unknown; it is not a functional prerequisite.
+Preserve the original failures and four evaluation answers. No physical pass,
+H/C campaign, learned result or latency qualification follows. No new run or
+runtime remedy is selected by this reconciliation. Use the completed evidence
+and existing registered control for the next supported construction decision.
+FBM 163 is updated in place; personality/MFM remain external.
+
+## Historical snapshot — October7: localization dispatched after evaluation recalibration
 
 One construction-localization run[37704802657](https://github.com/NIne-WIngEd/FloRA/actions/runs/37704802657) is dispatched on exactf22953b8e776863b01518df35b342934c0ef7b73/tree5ab68ff0bee45d26dcb37852e5745741be39e2c1, Python3.12.14/Alice4f287. Source/coverage and raw result are pending. Recover this exact run without redispatch. 
 

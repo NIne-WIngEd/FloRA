@@ -1,6 +1,6 @@
 # FloRA evaluation recalibration — October 7
 
-Status: completed audit and registered cost control; one validated physical localization protocol. No runtime repair or completed pipeline claim.
+Status: completed audit, registered cost control and recovered full-action localization. Original run 37704802657 still fails containment; no runtime repair or physical functional pass is established.
 Run [37685186902](https://github.com/NIne-WIngEd/FloRA/actions/runs/37685186902)
 used dbf101cc1452815b6f8fb5d24dd962dff916bf97, Python 3.12.14 and
 Alice contracts 4f287a488bc908bd04f99255ee01b794bacba50b.
@@ -60,10 +60,11 @@ experiment_coordinator 322–339 and 543–591.
 ## 4. Locate what is established and unresolved
 
 - Confirmed: repeated context preparation and authority/history work at finite
-  static call sites, corroborated by earlier completed controls. The latest
-  physical run's complete work count/bound remains unknown. Visited-set source
-  walks and metadata barriers do not
-  establish an unbounded cycle. Do not call the timeout infinite recursion.
+  static call sites, corroborated by earlier completed controls. Recovered
+  run 37704802657 progresses through two lineage checks inside its first capture;
+  complete work counts and exclusive cost remain unknown. Visited-set source
+  walks and metadata barriers do not establish an unbounded cycle. Do not call
+  the timeout infinite recursion.
 - Prior actual-class fictional-port capture counted 193342 outer SQL calls and
   five assemblies. This corroborates composition risk, not current physical cost.
 - Current unchanged registered control returned: setup30132 and capture68191
@@ -71,9 +72,17 @@ experiment_coordinator 322–339 and 543–591.
   Exact bindings and cleanup pass without database networking or authority method
   replacement. Nested callers overlap; these are not physical SQL counts or a
   physical cause. It establishes substantial local work on this different control.
-- Unknown: the latest run's final nonreturn, complete call counts, exclusive
-  cost, first native admission refusal and backend-wait share. The first 300
-  seconds cannot explain the entire 45-minute stop.
+- Recovered localization: first fallback assembly returned near 297 s; the first
+  full registered lineage call returned before 1519 s. The second native lineage
+  body returned before 2603 s, then the registered wrapper's completion check was
+  sampled through2699.299–2699.300 s. Last ancestry: build:760 → capture:661 →
+  registered lineage:126 → fresh preregistration current:533. The first BEFORE/full
+  capture had no return/publication checkpoint; later route construction, observed
+  binding and publication have no sampled entry.
+- Unknown: the exact termination instruction, complete call counts, exclusive
+  cost, first optional native admission refusal and backend-wait share. The earlier
+  run 37685186902 still has only first300s coverage; do not retroactively apply
+  run 37704802657's final boundary to that preserved failure.
 - The faulty assertion and global-profile observer are separate defects. Neither
   is evidence that the original runtime timeout is repaired.
 
@@ -90,13 +99,13 @@ experiment_coordinator 322–339 and 543–591.
 
 ## 6. Coherent correction decision
 
-Stop full-case retries until the failure can distinguish a cause. First measure
-the unchanged registered construction; then repair the responsible operation
-and its affected connections. The likely design correction is ownership of
-immutable preparation within an operation and finite fresh boundary observations,
-as already specified in MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md. This is a
-conditional design direction, not a proved physical fix or authorization to
-remove independent checks. Do not implement another local cache from a sample.
+The recovered evidence resolves which construction operation remained sampled:
+the second registered lineage completion check inside the first capture. This
+reconciliation selects no runtime remedy and launches no additional observation
+or campaign. Use the actual source dependency sequence, the existing registered
+control and current authority contracts to review any concrete correction.
+Native reuse remains optional; preserve supported fallback, independent lineage
+expectations, current rights and the original failing condition.
 
 ## 7. Research fit
 
@@ -168,16 +177,30 @@ exact source, target-reachability evidence and what each result cannot prove.
 If a run cannot distinguish the explanations, do not launch it. If only its
 result remains pending, record the resume condition and end the turn.
 
-Current action: the unchanged registered cost control completed. One reviewed
-construction-localization carrier is dispatched; result and coverage pending. Its only source changes
-are a thin wrapper around the unchanged sampler and one diagnostic workflow job;
-runtime, fixture, strict tests, permissions, engines and models remain unchanged.
-Limits:31 fixed selectors, nine300s windows,2709 samples,8MiB combined journals,
-64KiB incremental manifest. Original2700s+30s containment remains. The sampler
-does not certify call/return completeness or exclusive cost. The last original
-physical timeout and its missing functional verdict remain authoritative.
-Before interpreting a new result, verify all428 source identities, artifact
-digests and aggregate coverage. Retain any unknown stage; no automatic retry.
-FBM163 remains the same procedure record, updated with completed evidence.
+Completed recovery: [37704802657](https://github.com/NIne-WIngEd/FloRA/actions/runs/37704802657)
+as completed failure, exit 124 at 2700 s with no raw strict result. The exact original
+source is f22953b8e776863b01518df35b342934c0ef7b73/tree5ab68ff0bee45d26dcb37852e5745741be39e2c1;
+all 428 source identities and the artifact digest verify, with unchanged source
+before/after. Runtime, fixture, strict runner and old sampler bytes match the
+prior functional source; only the wrapper/workflow observation mechanism differs.
+Python 3.12.14 and the installed-dependency receipts match the earlier positive
+run; host conditions and backend timing are not established as identical.
 
-One construction-localization run[37704802657](https://github.com/NIne-WIngEd/FloRA/actions/runs/37704802657) is dispatched on exactf22953b8e776863b01518df35b342934c0ef7b73/tree5ab68ff0bee45d26dcb37852e5745741be39e2c1, Python3.12.14/Alice4f287. Source/coverage and raw result are pending. Recover this exact run without redispatch. No further action is justified until its evidence is available.
+All nine journal windows are present:2688 samples,2687 owned, no depth truncation
+or thread cap,3765990 bytes. Maximum within-window gap1.056704s and cross-window
+gap upper bound1.042980s. Eight completed windows report zero observer errors and
+no byte cap; the externally killed ninth lacks its expected final close.
+The last global sample is bounded2699.299088–2699.300263s. Whole-process CPU is
+2135.44 user +167.70 system seconds,85%; this is not per-stage attribution.
+
+Source/control/journal establish initial assembly and lineage progress, followed
+by registered completion revalidation at phase_snapshots126 under capture:661.
+_finish_lineage_use calls _revalidate_lineage_completion; its fallback calls
+_revalidate_prepared, retaining fresh metadata/permissions and independent owner
+proof. Fresh preregistration _current:533 is not an admission rejection. No cold
+route/observed-binding/publication sample or completed functional verdict follows.
+The observation answers the original archive-capture versus later-route boundary
+question; it does not identify all physical contributors or authorize removing
+checks. Preserve the four answers and replacement evaluation gates above.
+No new runtime remedy, observer procedure or automatic retry is selected here.
+FBM 163 remains the same procedure record, updated with this completed evidence.

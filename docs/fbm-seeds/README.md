@@ -1,4 +1,4 @@
-Current October7 procedure count:162. Latest: purpose-correct functional continuation; retain failed admission probe as target-unreached evidence. No learned builder claim.
+Current October7 procedure count:163. Existing evaluation-recalibration record updated with completed run 37704802657 localization; no new seed, physical pass or learned builder claim.
 
 # FloRA builder seeds
 
@@ -14,7 +14,7 @@ The schema's linked-case boundary also requires concrete eligible inputs, permis
 
 ## Latest construction records — 2026-10-07
 
-The corpus now contains **161 validated procedure traces**. This count describes
+The corpus now contains **163 validated procedure traces**. This count describes
 schema-valid records; it does not certify their claims or training eligibility.
 New material construction, failure and recovery steps continue to be captured here.
 
@@ -91,3 +91,5 @@ October7 current:160 methods; one numeric-journal observation is next, not a run
 October7 current:161 methods; admission discriminator pending, no functional/model/latency qualification.
 
 October7 current:163 validated procedure records. [Evaluation recalibration](2026-10-07_evaluation_recalibration.jsonl) records claim separation, representative composition and prediction-based dispatch gates; no learned FBM or completed pipeline follows.
+
+Run 37704802657 recovery completes the existing [evaluation-recalibration record](2026-10-07_evaluation_recalibration.jsonl): exit 124/2700s, no raw verdict; reliable full-action samples locate the first capture's second registered completion check. Residency is not a complete call count or physical cause. The count remains163; procedure evidence is not admitted training data or learned FBM.
