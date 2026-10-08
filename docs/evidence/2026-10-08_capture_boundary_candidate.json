@@ -1,0 +1,95 @@
+{
+  "schema": "flora-capture-boundary-candidate-evidence-v1",
+  "published_runtime_unchanged": true,
+  "candidate_admitted": false,
+  "physical_runs_dispatched": 0,
+  "original_run": 37704802657,
+  "original_verdict": "124/2700s, no raw result, first capture completion unfinished",
+  "candidate_files": {
+    "src/flora/selected/phase_snapshots.py": "bdfa95c926ac00fd9481820d4aef692c148e8f59f35ed4ca5c4fdf452fd7672d",
+    "src/flora/selected/experiment_preregistration.py": "02b448dfb530ec406fd10814525be3bce2ced0a2830af5d248c04625ebb386c3"
+  },
+  "new_test_sha256": "5c2419f092dceca7549ce87ada782b90dd749bf47a6128228d307ad0aa1c03d1",
+  "unresolved_review": "Runtime owner/accessor shape is not proven callback-free before admission field reads; delegating runtime or newly installed accessor needs a RED control and conservative fallback.",
+  "baseline_source": "abc726e289ef1cfa7ed23dd5f7d12b5439cebd46",
+  "alice_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+  "first_guard_baseline": {
+    "sql": 400,
+    "log_reads": 32,
+    "current_samples": 47,
+    "fences": 9,
+    "slot_frames": 2,
+    "controls_passed": true,
+    "log_sha256": "97fd8fb8aaa8371d8e0cffab55979b2928f4cee66d95367dc082f7e4e0973d97"
+  },
+  "first_guard_preliminary": {
+    "log": "capture-guard-candidate-component.log",
+    "log_sha256": "624b7938832ff650492e940fa0f3fac17ddce6adb85b364f3e0c931b82f45ae3",
+    "loaded_phase_snapshots_sha256": "bdfa95c926ac00fd9481820d4aef692c148e8f59f35ed4ca5c4fdf452fd7672d",
+    "loaded_experiment_preregistration_sha256": "10ba51b275b7ef75c82cdd7a2226a76ec696fe2ebd7e827b832b7df43cf65b2e",
+    "sql": [
+      400,
+      359
+    ],
+    "canonical_replays": [
+      32,
+      24
+    ],
+    "current_samples": [
+      47,
+      15
+    ],
+    "terminal_fences": [
+      9,
+      6
+    ],
+    "slot_frames": [
+      2,
+      1
+    ],
+    "passed": true,
+    "current_source_lifecycle_verification": false
+  },
+  "invalid_probes_preserved": [
+    "capture-guard-red.log:120s incomplete, oracle unreached",
+    "capture-guard-first-boundary-red.log:collector created a later guard through Kurrent before SQL containment",
+    "typed-baseline/preflight-failure.json:Git archive converted LF to CRLF before launch"
+  ],
+  "independent_checks": {
+    "typed-baseline": {
+      "directory": "typed-baseline",
+      "result_pending": true
+    },
+    "typed-candidate": {
+      "directory": "typed-candidate",
+      "result_pending": true
+    },
+    "candidate-verification": {
+      "directory": "candidate-verification",
+      "result_pending": true
+    }
+  },
+  "exact_intents": {
+    "typed-baseline/intent.json": "ecb57c1e5189e55356c5c0727aa6a539a702a25ae5b552be452d5fcde4fe8f6c",
+    "typed-candidate/intent.json": "a334ec0443417e7a8f72cc4b4ec9ac107e5e1ab1f897cb191412f30786e8eb20",
+    "candidate-verification/intent.json": "3347a2d11fa57733db41412091c000ffb77c1a91fcea91d76d3771ba491d53aa"
+  },
+  "external_research": [
+    "https://openfga.dev/docs/interacting/consistency",
+    "https://www.usenix.org/system/files/atc19-pang.pdf"
+  ],
+  "project_research": {
+    "alice_main": "8ea804aa25c3d1c5f46e9be5810d072ed0fadb4b",
+    "frontier": "756bf294f6a93e9ea7dcc12dba932a556d6080e0",
+    "graphify": "a06f61eafd91d04fb7ec7c1de3ab8a9ed7071b15",
+    "comic": "1805a01c73575378246cac8cbbb72cd891e8528e"
+  },
+  "limits": [
+    "Boundary improvement is not full-capture value or exclusive physical cause.",
+    "Final personal gate runs after frame close; no global atomic post-last-callback H/C/control claim.",
+    "Full component captures use the same fixture graph/procedure but separate generated identities/keys/timestamps.",
+    "Concurrent local controls invalidate a controlled wall-time comparison; counts and CPU are diagnostic.",
+    "Models are supplied fixtures, and sentinel boundary cases do not prove complete capture or learning."
+  ],
+  "next_action": "Recover exact three results; validate test/oracle if failed, then assess semantics and capture-wide work before adoption. Stop when only results remain."
+}
