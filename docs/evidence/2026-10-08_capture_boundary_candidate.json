@@ -217,9 +217,15 @@
     "AST mirror explains the first refusal in the same observer-bound controlled graph; it is not an untouched physical owner-map trace or proof that the remainder will admit.",
     "2017 query records/164 stream reads stop at target; no whole-capture cost, exclusive CPU or physical timeout attribution.",
     "Controlled in-memory rows/streams/models remain unchanged; pre-target private history reads are possible and durable recovery is unqualified.",
-    "Fresh owner-connection construction is separate from the old unsafe two-file candidate; native reuse remains optional, not a new functional gate."
+    "Fresh owner-connection construction is separate from the old unsafe two-file candidate; native reuse remains optional, not a new functional gate.",
+    "The uncalibrated2700s job cutoff was mistakenly treated as a full-completion gate after latency was deferred; latest124 is incomplete containment, not semantic failure.",
+    "Native preparation and original borrowing succeeded in this controlled actual graph; admission or cost optimization is not a new functional prerequisite.",
+    "First three registered lineage calls returned; fourth post-intent producer barrier was sampled, but capture return, canonical publication and probe binding/cleanup remain unqualified.",
+    "Eight journals close cleanly; ninth final observer errors/shutdown are unknown after containment. Prefix work/aggregate CPU do not establish total cost, exclusive cause or a speed ranking.",
+    "Prior declared-source verification did not inventory all mounted bytes or establish effective observer bytecode use/equality; no mutation/difference is proved. Successor inventory/exclusion/read-only custody is bound separately.",
+    "Successor keeps the byte-identical capture oracle and same429 sources, with completion-driven action and separately bounded observation; no runtime, permission or whole-coordinator owner-TTL change is adopted."
   ],
-  "next_action": "Await and recover the one reviewed complete actual-capture verification launched at work/phase-handoff-complete-capture-20261008; if incomplete or failed, follow mandatory diagnosis before correction; if complete, review its exact bindings/observer/cleanup/source evidence and then affected freshness verification. Keep the old two-file candidate private and unadopted; its accessor-purity issue remains unresolved. Preserve exact native owner/code/accessor bindings, H/C freshness, all independent proofs and unsupported/custom fallback; optional reuse admission is not the functional goal. The launched verifier uses immediate durable stage checkpoints and the original2700s action cap; native admission is not a pass criterion. No autonomous retry/new job, exclusive timeout-cause claim or physical qualification follows from this observation.",
+  "next_action": "Await and recover the single reviewed completion-driven local Docker capture already launched with the byte-identical d84dc880 oracle and same429 frozen sources; then evaluate its actual return/binding/publication/cleanup result. Keep runtime separate from functional qualification and bounded diagnostic journals separate from the action. No admission or cost-optimization prerequisite, blind authority/TTL change or automatic extra job. Verify affected negative H/C and terminal protection after a completed positive capture; the fresh candidate stays private/unadopted. If incomplete, apply mandatory diagnosis to the reliable result before any new action; no autonomous retries.",
   "admission_getter_probe": {
     "process_exit": 124,
     "classification": "incomplete_at_resource_cap_before_admission_control",
@@ -485,7 +491,7 @@
     }
   },
   "next_capture_verification": {
-    "state": "launched_result_pending",
+    "state": "completed_incomplete_external_containment",
     "directory": "work/phase-handoff-complete-capture-20261008",
     "root_and_independent_byte_review": true,
     "input_review_sha256": "1e1e45d9b96370bb2326937508bb06da22cfd80acb082d7d8aec2373cc538ba8",
@@ -524,15 +530,220 @@
       "Journal residency, aggregate process CPU and fictional query/log recorder counts are distinct observations; transport observers are present in the measured graph."
     ],
     "launch_intent_bound": true,
-    "execution_result_bound": false,
+    "execution_result_bound": true,
     "intent_sha256": "5c16d94ddeb00b9f7a5058487c5defc410a51b48fcce607b5b59e7f04064972c",
     "immutable_cached_image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
     "launch_count_at_binding": 1,
     "remote_job_dispatched": false,
-    "source_manifest_sha256": "f8ddeefedfdad4a4f5182f290553640f385327d098e12c8363e649584443f17d"
+    "source_manifest_sha256": "f8ddeefedfdad4a4f5182f290553640f385327d098e12c8363e649584443f17d",
+    "completed_result": {
+      "state": "completed_incomplete_external_containment",
+      "process_exit": 124,
+      "original_process_cap_seconds": 2700,
+      "termination_grace_seconds": 30,
+      "controller_wall_seconds": 2702.1410000000033,
+      "controller_timeout": false,
+      "classification": "incomplete_external_containment_not_semantic_failure",
+      "hashes": {
+        "process_receipt_sha256": "3217108f15c2c78019213ba8bba81581aab13d5f93103b327b59ef7dd2914311",
+        "independent_audit_sha256": "2bd0ae53054bbf3272c2672792ff5849b751a6f97d58ed4719fe7a6073c5b311",
+        "independent_audit_note_sha256": "af2250f30d1d78f05e75984292156301bd171a3f49f9dfb97dab975ca1ecdb27",
+        "source_manifest_sha256": "f8ddeefedfdad4a4f5182f290553640f385327d098e12c8363e649584443f17d",
+        "authoring_sha256": {
+          "complete_capture_probe.py": "d84dc8808ec5ee3ecf8a77674e580d8977cefda14fbde3b489a222a205e42b33",
+          "controller.py": "244a1f1acc86d569190a190d225226cf60e16b1c6efc7b2e342bed8b537d0968",
+          "flora-manifest.json": "30fd80a8b3a812edc9b12ae4dfd89b25b052b135b2d19ade77b426f3adc13dd0",
+          "owner-connection-review.json": "f8cd37be3461ed851ec5a320402d071e6b120206c0bc89e8c860fffd5d734fe7",
+          "plan.md": "6d477a2073668981761e9c168ee4fe2f5b60986c81bd35474d22fab6e63bf801",
+          "source-manifest.json": "f8ddeefedfdad4a4f5182f290553640f385327d098e12c8363e649584443f17d",
+          "static_observer_review.py": "5b73740281f359809b63f494955d0e3d84af7ad1b57b4cb9a36c437a3c2da0d7"
+        },
+        "artifact_sha256": {
+          "intent.json": "5c16d94ddeb00b9f7a5058487c5defc410a51b48fcce607b5b59e7f04064972c",
+          "progress.jsonl": "543a63a912d1017b11ae1c53c1d32beb3c8ba57855ac56a1c2cdee31e6488d01",
+          "result.json": "d855d5da6cb6204cb822f0dceed57b5b95a3f7e31ee12c4280c5252093456503",
+          "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout.log": "9edb9afaff40f699910716db9b87f8d6234f80ade96d7835c1656aff6683ff15",
+          "work-series/construction-window-01.jsonl": "b6afb2b9174ac16cf6af39f9eb93182e881d9b507542402a5ecd4aa294ae737f",
+          "work-series/construction-window-02.jsonl": "7f801948713c2bf7a0e378afe75de858650ae27691f015b833b02eedeb18dd3a",
+          "work-series/construction-window-03.jsonl": "692aa000dd6ccde4af4744c956e267e30f3c5fbf3630625724a1df989cd01734",
+          "work-series/construction-window-04.jsonl": "13844a7e2efe111a2e28b3b486c10f48b33619ac915574a1809acf90d8dd58c2",
+          "work-series/construction-window-05.jsonl": "385b5c2eda2107fb766513e43a9dcc762b5e8506e5adb5e297c1a985178e9589",
+          "work-series/construction-window-06.jsonl": "6517597464dd70437e0b73b41fc6d907d87bd5f3fdace66c8949fd657dfd3657",
+          "work-series/construction-window-07.jsonl": "cb78c4de91c27c148d3482024657ddf462f8e6a232fb08acc6e987389063d2ef",
+          "work-series/construction-window-08.jsonl": "bbd162975cc0db99f269ec4d04737a887c45809b201e5e99efe0042b94f60a25",
+          "work-series/construction-window-09.jsonl": "9f8069f4ed08a6d8ba18501dad85ca4e42f6b8b8e701b41fb8cffc6111f29015",
+          "work-series/construction-windows.jsonl": "348adb06efc6a0707db5fa6bb3cd4fb39fb9aa42e24842c2a156288a375fea74"
+        }
+      },
+      "source_files_verified_unchanged": 429,
+      "artifact_hashes_verified": 15,
+      "authoring_hashes_verified": 7,
+      "actual_native": true,
+      "actual_map_refused": false,
+      "live_preparation_observed": true,
+      "original_context_preparation_completed": true,
+      "original_borrow_returned": true,
+      "first_three_registered_lineage_calls_returned": true,
+      "fourth_post_intent_lineage_in_progress_at_latest_sample": true,
+      "latest_owned_stack": [
+        {
+          "depth": 11,
+          "line": 455,
+          "tag": "lineage.native"
+        },
+        {
+          "depth": 12,
+          "line": 120,
+          "tag": "lineage.registered"
+        },
+        {
+          "depth": 13,
+          "line": 700,
+          "tag": "phase.capture"
+        },
+        {
+          "depth": 14,
+          "line": 202,
+          "tag": "owner.strict_main"
+        }
+      ],
+      "latest_probe_elapsed_bounds_seconds": [
+        2697.164341,
+        2697.268174
+      ],
+      "latest_supported_operation": "Fourth registered/native lineage check after controlled raw put and intent insertion; latest sample inside post-producer lineage_barrier at judgment_lineage.py:455.",
+      "coverage": {
+        "samples": 2640,
+        "owned_samples": 2639,
+        "completed_windows": 8,
+        "total_windows": 9,
+        "maximum_internal_sample_gap_seconds": 1.684697,
+        "maximum_cross_window_gap_upper_bound_seconds": 1.31073,
+        "journal_bytes": 3945631,
+        "closed_window_errors": 0,
+        "recorded_depth_truncations": 0,
+        "recorded_thread_count_caps": 0,
+        "ninth_window_close_absent": true,
+        "final_ninth_observer_errors_and_shutdown_unqualified": true
+      },
+      "work": {
+        "latest_total_query_records": 721400,
+        "latest_total_stream_reads": 59437,
+        "setup_query_records": 34766,
+        "setup_stream_reads": 2218,
+        "capture_prefix_query_records": 686634,
+        "capture_prefix_stream_reads": 57219,
+        "latest_aggregate_process_cpu_seconds": 2693.2392184,
+        "capture_prefix_cpu_seconds": 2644.484535,
+        "last_checkpoint_cpu_seconds": 407.3677106,
+        "scope": "Censored controlled-port recorder work and aggregate process CPU, including observer overhead; not full cost, physical SQL requests, exclusive CPU or an original/candidate speed ranking.",
+        "continued_work_at_tail": true
+      },
+      "capture_return_checkpoint_reached": false,
+      "probe_binding_assertions_reached": false,
+      "model_invocation_assertion_reached": false,
+      "cleanup_assertions_reached": false,
+      "recorded_traceback_or_assertion_failure": false,
+      "effect_limit": "Source ordering places returned controlled raw put and intent insertion before sampled line700. Effects were not independently inspected after termination; durable backend, complete event/source/custody publication and recovery are not proved.",
+      "qualification": {
+        "component_connection_and_actual_handoff": true,
+        "complete_capture": false,
+        "exact_returned_binding": false,
+        "publication": false,
+        "cleanup": false,
+        "full_strict_functional_case": false,
+        "H_C_withdrawal_campaign": false,
+        "physical": false,
+        "learning": false,
+        "latency": false,
+        "exclusive_timeout_cause": false,
+        "candidate_admitted": false
+      }
+    }
   },
   "handoff_reconciliation_parents": {
     "source": "86c9f88e4a72fb0be075295f72883ecfa03a54f7",
     "context": "fbe57c52327ad486bb70c53355cb57ab103617ba"
+  },
+  "completion_recalibration": {
+    "test_evidence_classification": "incomplete_at_external_containment_not_semantic_failure",
+    "acknowledged_evaluation_mistake": "An uncalibrated45-minute job cutoff was retained as a full functional-completion gate after the owner deferred latency.",
+    "original_protocol_and_result_preserved": true,
+    "functional_criterion": "Original capture return and exact binding/publication/cleanup assertions; elapsed time is reported independently.",
+    "optional_native_admission_is_functional_gate": false,
+    "optimization_or_speed_gate_required": false,
+    "current_candidate_private_and_unadopted": true,
+    "negative_H_C_and_terminal_verification_still_required": true,
+    "whole_coordinator_fixture_owner_TTL_seconds": 2700,
+    "TTL_scope": "Separate later whole-coordinator fixture authority issue; this reconciliation makes no authority/capability/expiry change."
+  },
+  "completion_custody_limit": {
+    "prior_verified_scope": "429 declared source files, authoring and recovered artifact hashes; not every mounted byte or effective observer import.",
+    "prior_nonmanifest_flora_files": 3,
+    "prior_extras": "One shell file and two eligible CPython3.12 observer bytecode files; actual bytecode use and code equality were not established.",
+    "prior_alice_declared_src_files": 225,
+    "prior_alice_unmanifested_resource_files": 702,
+    "prior_source_result_writable_alias": true,
+    "prior_source_mutation_or_bytecode_difference_proven": false,
+    "recovered_progress_evidence_preserved": true,
+    "successor_full_physical_inventory_files": 1131,
+    "successor_alice_physical_files": 927,
+    "successor_extras_preserved_but_excluded": true,
+    "successor_source_result_alias_readonly": true
+  },
+  "completion_driven_successor": {
+    "state": "launched_result_pending",
+    "source_files": 429,
+    "capture_oracle_sha256": "d84dc8808ec5ee3ecf8a77674e580d8977cefda14fbde3b489a222a205e42b33",
+    "capture_oracle_byte_identical": true,
+    "same_source_manifest_sha256": "f8ddeefedfdad4a4f5182f290553640f385327d098e12c8363e649584443f17d",
+    "controlled_ports_and_logical_tests_unchanged": true,
+    "local_docker": true,
+    "completion_driven": true,
+    "qualification_deadline_seconds": null,
+    "diagnostic_journal_bounds_separate_from_action_completion": true,
+    "bounded_progress_observation": true,
+    "later_liveness_is_progress": false,
+    "detailed_stall_discrimination_after_journal_cap": false,
+    "native_admission_required": false,
+    "physical_qualification": false,
+    "learning_qualification": false,
+    "latency_qualification": false,
+    "candidate_admitted": false,
+    "exact_plan_sha256": "4e0291bcf90f8db7802e811be89580f4ace7cfa335dcc25c5c6d17b46b342b9b",
+    "exact_controller_sha256": "d13820d0d49e73c3027f76dafea27f6c1e532bf4924c6348439cf275c12d3a39",
+    "exact_input_review_sha256": "79cf8fcb3cecf6ea55ff24bb6d7630c790994fd866bc597b2e8a8a4c258dc777",
+    "exact_preparation_receipt_sha256": "9a7a9c687d4f35b761c64bd37f8ebf1ac8e24d5f156b4404daa28c295d63ac2c",
+    "exact_inventory_review_sha256": "fca75167d69a6cad654bb70562dd8e04b03c5a160e1abfa3cb96e5e9bb75a9dc",
+    "exact_mount_inventory_sha256": "abea42acead3a263eeff4d43b1233d942cd7d76ec05f1b0712a78fc7538ef3f2",
+    "physical_mount_files_verified": 1131,
+    "cached_image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+    "authoring_sha256": {
+      "complete_capture_probe.py": "d84dc8808ec5ee3ecf8a77674e580d8977cefda14fbde3b489a222a205e42b33",
+      "controller.py": "d13820d0d49e73c3027f76dafea27f6c1e532bf4924c6348439cf275c12d3a39",
+      "flora-manifest.json": "30fd80a8b3a812edc9b12ae4dfd89b25b052b135b2d19ade77b426f3adc13dd0",
+      "mount-inventory.json": "abea42acead3a263eeff4d43b1233d942cd7d76ec05f1b0712a78fc7538ef3f2",
+      "owner-connection-review.json": "f8cd37be3461ed851ec5a320402d071e6b120206c0bc89e8c860fffd5d734fe7",
+      "plan.md": "4e0291bcf90f8db7802e811be89580f4ace7cfa335dcc25c5c6d17b46b342b9b",
+      "source-inventory-review.json": "fca75167d69a6cad654bb70562dd8e04b03c5a160e1abfa3cb96e5e9bb75a9dc",
+      "source-manifest.json": "f8ddeefedfdad4a4f5182f290553640f385327d098e12c8363e649584443f17d",
+      "static_observer_review.py": "5b73740281f359809b63f494955d0e3d84af7ad1b57b4cb9a36c437a3c2da0d7"
+    },
+    "exact_independent_review_sha256": "ea7e22ac2419293a8ce72a57b799be7f63c2831f6ccb4ab5edb670d553c2506c",
+    "exact_intent_sha256": "ec8c58dbbb1d1cd1d717d6ba8a2e7053d0846c87196f83665b2542a4a7d11dcb",
+    "launch_intent_bound": true,
+    "execution_result_bound": false,
+    "launched_once_by_root": true,
+    "started_utc": "2026-10-08T22:29:57.806691",
+    "controller_session": 86786,
+    "container_name": "flora-phase-handoff-completion-20261008",
+    "container_id": "d41230cf52bb80e79df5f794e6c74f906ab37dc4e646ac58b851be596664324e",
+    "running_at_root_launch_check": true,
+    "running_is_progress": false
+  },
+  "completion_reconciliation_parents": {
+    "source": "878f538244b07ab26003ced5d121cc0f7c18b29f",
+    "context": "a110db553df52a2b995d0ea18d60f97fc7ee7971"
   }
 }
