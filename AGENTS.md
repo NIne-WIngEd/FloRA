@@ -1,6 +1,40 @@
 # Continuing FloRA
 
-## Current continuation — October7: complete construction observation recovered
+## Current continuation — October8: bounded capture candidate awaits adoption evidence
+
+The completed physical run37704802657 remains a failure/124 at2700s inside first
+capture completion; no functional assertion or raw strict verdict was reached.
+Recovery and evaluation answers are preserved below. No timeout repair is claimed.
+
+A private two-file candidate composes preregistration/slot observations within
+one exact native capture-guard prefix. Both slot predicates and original H/C
+checks remain; terminal current/canonical verification closes the frame before
+the final personal gate. Private/full-H/write reentry is excluded; custom and
+episode paths retain fallback. It neither removes fallback assembly/proofs nor
+builds Alice's full platform. Personality/MFM remain external.
+
+Reliable same-input first-boundary RED completed with400 query calls/32 log reads,
+two slot frames and all no-effect controls. Preliminary GREEN used one frame,
+359 calls/24 log reads; this modest boundary improvement does not establish
+capture-wide value. A subsequent expiry amendment is in source-bound verification.
+Frozen final candidate02b448df…386c3 + bdfa95c9…7672d, and13 new boundary cases,
+are undergoing affected regression and full native-controller capture controls.
+All are fictional transport component evidence, not physical/causal/latency proof.
+
+Independent review identified an unresolved admission gap: runtime owner and
+attribute-access shape are read before they are proven callback-free. Existing
+method/code pins do not reject every newly installed accessor. This candidate
+cannot be adopted while that guarantee remains unverified, even if counts fall.
+
+Read [candidate diagnosis and verification](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md).
+Recover the three exact local result directories before any code publication or
+physical run: typed-baseline, typed-candidate, candidate-verification under
+work/capture-boundary-correction-20261007. Do not relaunch completed controllers.
+Reject an unadmitted, unsafe or immaterial capture-wide improvement; return to
+the responsible architecture rather than stack fixes. FBM164 is a partial
+procedure record, not admitted training data or learned weights.
+
+## Historical snapshot — October7: complete construction observation recovered
 
 Run [37704802657](https://github.com/NIne-WIngEd/FloRA/actions/runs/37704802657)
 completed with exit 124 at the unchanged 2700 s cap, without a raw strict result.

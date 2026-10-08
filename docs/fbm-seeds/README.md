@@ -1,4 +1,6 @@
-Current October7 procedure count:163. Existing evaluation-recalibration record updated with completed run 37704802657 localization; no new seed, physical pass or learned builder claim.
+Current October8 procedure count:164. New capture-composition method is partial and unadmitted; capture-wide results and runtime/accessor admission remain unresolved.
+
+Historical October7 procedure count:163. Existing evaluation-recalibration record updated with completed run 37704802657 localization; no new seed, physical pass or learned builder claim.
 
 # FloRA builder seeds
 
@@ -93,3 +95,5 @@ October7 current:161 methods; admission discriminator pending, no functional/mod
 October7 current:163 validated procedure records. [Evaluation recalibration](2026-10-07_evaluation_recalibration.jsonl) records claim separation, representative composition and prediction-based dispatch gates; no learned FBM or completed pipeline follows.
 
 Run 37704802657 recovery completes the existing [evaluation-recalibration record](2026-10-07_evaluation_recalibration.jsonl): exit 124/2700s, no raw verdict; reliable full-action samples locate the first capture's second registered completion check. Residency is not a complete call count or physical cause. The count remains163; procedure evidence is not admitted training data or learned FBM.
+
+- FBM164: capture-boundary data composition, test-scope correction and source-bound adoption controls; partial, candidate unadmitted. See [candidate record](2026-10-08_capture_boundary_composition.jsonl).
