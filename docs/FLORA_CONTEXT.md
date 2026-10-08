@@ -1,54 +1,78 @@
 # FloRA continuation context
 
-One reviewed original-source diagnostic is now launched at `work/actual-capture-progress-20261008/`:428 original sources, immutable cached image, 300s container-process budget/5s forced grace/335s outer startup guard. It records stages immediately and samples CPU/work; any contained preparation refusal remains an optional optimization observation. Results are pending. Original2700s physical protocol and runtime stay unchanged; no full physical run or candidate adoption was dispatched.
+The reviewed original-source observation at work/actual-capture-progress-20261008 completed exit0 in66.860s controller wall time under its300s diagnostic budget/5s forced grace/335s startup guard. All428 sources and exact receipt hashes verify. It intentionally contains capture after the original optional preparation decision; this is observational completion, not completed capture, functional success, timeout repair or adoption. Original2700s physical protocol remains unchanged.
 
-## Current continuation - October8: completed local controls remain incomplete
+## Current continuation - October8: original handoff observation completed
 
-Physical37704802657 remains failure124/2700s with no raw strict result or
-functional oracle. Its exact journal still localizes first capture completion
-revalidation; these newer fictional-port controls do not refute that boundary
-or identify an exclusive cause. Original failures and four evaluation answers
-remain below. No new physical run or timeout repair is claimed.
+The reviewed original-source diagnostic completes exit0, controller wall66.860s,
+within its300s budget/5s grace/335s startup guard. All428 original sources
+(203 FloRA/225 Alice), authoring freeze and result/process/progress/journal/log
+hashes verify. This is intentional observation containment, not a completed
+capture or functional pass; original2700s physical protocol stays unchanged.
 
-All three local receipts are now verified exit124 under2700s process containment.
-Baseline203/candidate204 source hashes and all log hashes match. Both typed probes
-save only capture_entered after the same finite setup:34766 query records/2218
-stream reads, one BEFORE source, four slots and two roles, Python3.12.15.
-The probe changes capture_returned only in memory and saves after binding assertions
-and metadata/intent reads; capture itself could have returned before later work.
-No capture-wide counts, exact-binding verdict, cleanup or admission was saved.
+Inside exact original _PhasePreparation._enter, mapped is None and the repeated
+original structural predicate is true. The isolated AST mirror, with copied
+globals and original helpers, agrees: first refusal at_phase_preparation.py:293
+for built-in RegisteredExperimentPreregistration.history_for. The known anchor
+entry169 allows no bound methods. This identifies a conservative owner-connection
+gap in this controlled graph; later admission blockers remain unknown. Optional
+reuse is an optimization, not a functional capability or permission gate.
 
-Affected suite74 cases complete ok:13 capture-guard,6 preregistration-frame,
-23 shared-authority,29 current-context and3 phase-terminal. Its next qualified
-last-source-denial case starts without a verdict;71 cases remain unstarted.
-Standard unittest collection loads146 instances from128 defined methods because
-the callback-owner module imports/inherits18 additional cases. No whole-suite
-pass or assertion failure is observed. Qualified setup includes full capture,
-temporal reads, cold route and context assembly before the intervention; the
-exact unfinished operation is unlocalized.
+The journal has61 samples/60 owned, maximum1.041204s gap, depth126 and30 fixed
+tags; zero errors/truncations/thread caps and normal sampler stop. Cleanup has
+its own flushed progress. The2017 query records/164 stream reads cover capture
+entry to target only, not total capture, physical SQL requests or exclusive CPU.
+Controlled phase rows/canonical streams/model counts remain unchanged; active
+slot/phase frames, issued preparations and views clear; original cleanup passes.
+Transport stops before forwarding the target call. Prior history authentication
+may already have read private bytes. These in-memory controls do not qualify
+durable recovery; operation identity is not completed snapshot binding.
 
-The current frozen first guard completes359 queries/24 replays against original
-400/32, retaining both predicates and expiry controls. This narrow reduction
-does not establish capture-wide value. Overlapping containers and missing capture
-resource/work counts cannot rank improvement or regression. Fictional SQL/Kurrent
-ports retain actual selected controllers and signed producers; supplied outputs
-do not qualify physical mechanics, learned causal use or latency.
+The old two-file metadata candidate remains private and unadopted, including
+its unresolved accessor-purity review. The getter124/120s oracle was unreached.
+All three earlier2700s local controls remain incomplete:74 suite cases ok,
+1 unfinished/71 unstarted of146 loadable versus128 defined. Their delayed saved
+capture-return marker still cannot prove capture itself was unfinished. No
+whole-suite pass, gain/regression ranking or cleanup verdict follows from them.
 
-The two-file runtime candidate remains private and unadopted. Runtime/accessor
-admission purity remains source-reviewed and unresolved; getter124/120s reached
-neither its native-helper control nor getter oracle. Optional preparation reuse
-is not a functional capability gate. Keep H/C checks, fallback, four lineages,
-eight proofs and original caps. Personality/MFM stay external.
+Physical37704802657 remains failure124/2700s, no raw strict result or functional
+oracle. Its original journal completion-revalidation localization remains valid;
+this controlled first-refusal result does not establish its exclusive cause.
+The original failures and four evaluation answers remain below.
 
-The checked Alice frontier intake is08a704210242e22dbc43ea32cb3412cbe6c6e65d;
-main8ea804 and Graphifya06f61 remain unchanged. Current state applicability and
-bounded source provenance fit the existing contracts; research is not runtime
-adoption or a backend/platform change.
+A fresh private owner-connection candidate from the original203-file FloRA baseline
+changes exactly two production files plus one helper-test module. It connects
+history_for as a named anchor edge and pins the definition-time function/code,
+with exact native anchor callback owner restriction. Its original body still
+calls live _current. Preserved RED has seven real-helper cases: six pass and only
+the missing native edge fails. GREEN passes seven. No full factory/capture runs.
+Supplied native fields and controlled current withdrawal cover this connection
+and the tested fallback shapes only, not authenticated records or physical
+permission-row withdrawal. No broad getter-free, all-graph admission, work gain,
+functional/physical/learning/latency or exclusive timeout-cause claim follows.
+The fresh candidate stays private and unadopted, separate from the old guard
+candidate. Preserve full H/C freshness, owner/code/accessor/current dependency
+binding, private verification, independent proofs and unsupported/custom fallback.
+One complete controlled-port capture verifier is root/independently reviewed
+and launched once, result pending at work/phase-handoff-complete-capture-20261008.
+Intent SHA256:5c16d94ddeb00b9f7a5058487c5defc410a51b48fcce607b5b59e7f04064972c;
+input-review1e1e45d9, probed84dc880, controller244a1f1, immutable imagebbb524290.
+All429 source and seven authoring hashes match. Keep2700s cap/30s grace/2760s
+startup guard, nine bounded windows/32 fixed selectors/aggregate8MiB journal.
+One-shot decision/live/borrow observations and immediate durable capture return
+precede exact identity/history/context/metadata/intent checks and original cleanup.
+Native admission is optional. Snapshot validation establishes two-role/receipt
+self-consistency, not independent artifact equality to runtime manifests.
+No complete strict case, H/C campaign, physical/learned/latency or cost-cause
+claim follows; late H/C/terminal verification remains outstanding.
+Await and recover the one reviewed complete actual-capture verification launched at work/phase-handoff-complete-capture-20261008; if incomplete or failed, follow mandatory diagnosis before correction; if complete, review its exact bindings/observer/cleanup/source evidence and then affected freshness verification. Keep the old two-file candidate private and unadopted; its accessor-purity issue remains unresolved. Preserve exact native owner/code/accessor bindings, H/C freshness, all independent proofs and unsupported/custom fallback; optional reuse admission is not the functional goal. The launched verifier uses immediate durable stage checkpoints and the original2700s action cap; native admission is not a pass criterion. No autonomous retry/new job, exclusive timeout-cause claim or physical qualification follows from this observation.
 
+Alice frontier08a704, main8ea804 and Graphifya06f61 remain the checked references.
+Source/revision applicability and bounded provenance are useful research limits,
+not runtime or platform adoption. Personality/MFM remain external; complete
+functional FloRA precedes latency. FBM164 remains the existing partial procedure
+record updated in place, not a new seed, admitted training data or learned weights.
 Read [candidate diagnosis and verification](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md).
-Prepare one bounded improved-observation diagnostic on unchanged original source for root review, with distinct immediate capture-return, binding-read and qualified-setup boundaries. Bind its exact intent, source and observation/resource bounds before dispatch. No automatic full retry, runtime publication, candidate adoption or optional-admission gate program follows from these incomplete controls.
-FBM164 is the existing partial method record updated in place, not a new seed,
-admitted training data or learned weights. Functional construction remains first.
 
 ## Historical snapshot — October7: complete construction observation recovered
 
