@@ -91,5 +91,32 @@
     "Concurrent local controls invalidate a controlled wall-time comparison; counts and CPU are diagnostic.",
     "Models are supplied fixtures, and sentinel boundary cases do not prove complete capture or learning."
   ],
-  "next_action": "Recover exact three results; validate test/oracle if failed, then assess semantics and capture-wide work before adoption. Stop when only results remain."
+  "next_action": "Recover the exact three main receipts before assessing semantics and capture-wide work. The getter timeout supplies no diagnosis of getter behavior; establish a valid accessor control only if the candidate merits retention. No adoption, runtime publication or physical redispatch is authorized by this result.",
+  "admission_getter_probe": {
+    "process_exit": 124,
+    "classification": "incomplete_at_resource_cap_before_admission_control",
+    "last_completed_checkpoint": "anchor-registered",
+    "last_completed_checkpoint_seconds": 45.19,
+    "test_verdict_completed": false,
+    "native_helper_control_reached": false,
+    "getter_red_reached": false,
+    "resource_cap_seconds": 120,
+    "kill_grace_seconds": 30,
+    "frozen_flora_source_file_count": 204,
+    "frozen_flora_source_unchanged": true,
+    "experiment_preregistration_sha256": "02b448dfb530ec406fd10814525be3bce2ced0a2830af5d248c04625ebb386c3",
+    "probe_sha256": "95e3ce1dc7ef214d4f862e391433aba58b500d63458b4a70a339dc074e9e033b",
+    "probe_unchanged": true,
+    "source_before_manifest_sha256": "b4436136de345775551f5d4353dff54e8bce86c4ce8a1cfcc9b50625f10fc7b7",
+    "source_after_manifest_sha256": "b4436136de345775551f5d4353dff54e8bce86c4ce8a1cfcc9b50625f10fc7b7",
+    "full_red_log_sha256": "213402cffc52f8ffffd5055536f3a5143318b527f9f482c5a53b151f02efe26f",
+    "observed_capture_admission": false,
+    "physical_qualification": false,
+    "corrective_code_changes": 0,
+    "remote_jobs_dispatched": 0,
+    "redispatches": 0,
+    "directory": "admission-getter-red",
+    "result_sha256": "16bb991a4bf03aaca80153be8881f160ff96fa67446c1d0b8305dd628cad851b",
+    "interpretation": "Incomplete before native-helper control and getter oracle; no safety or failure verdict, and the source review remains unresolved."
+  }
 }

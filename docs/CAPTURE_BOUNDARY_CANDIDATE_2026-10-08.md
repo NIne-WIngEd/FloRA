@@ -10,6 +10,8 @@
 - **Decision:** results pending. Reject unsafe/unadmitted/immaterial changes; return to architecture if contradicted. Only supported adoption can justify one original physical verification. Do not stack patches or retry for a green status.
 - **Unresolved review:** runtime owner/accessor shape is read before callback-free admission is established. A delegating runtime can expose native C services; newly added accessors are not all covered by method/code pins. No adoption is allowed on the existing controls alone. First establish a precise failing accessor control; use the project's pure field-shape precedent if the candidate otherwise merits retention.
 
+- **Getter probe result:** exit124 at120s before the native-helper control or getter oracle; last completed checkpoint is anchor registration45.190s. All204 frozen sources and the probe are unchanged. This incomplete test neither confirms nor clears the source-reviewed admission gap. Keep the three main controls pending until their receipts are verified; no retry or corrective code follows from this timeout.
+
 Private recovery area: `C:/Users/rayns/Documents/Codex/2026-10-02/we-gonna-continue-n/work/capture-boundary-correction-20261007/`. Read each process receipt and untouched result before any relaunch. Baseline and candidate probe source are byte-identical; their generated fixture identities differ. Runtime candidate remains private, so published source is unchanged.
 
 Remaining build work still includes full physical mechanics, representative coordinator interventions, decision-linked outcome/irrelevant-change evaluation and qualified external models. Functional/credible causal evidence precedes latency calibration.
