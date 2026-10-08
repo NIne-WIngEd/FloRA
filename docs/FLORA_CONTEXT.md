@@ -1,78 +1,30 @@
 # FloRA continuation context
 
-The reviewed original-source observation at work/actual-capture-progress-20261008 completed exit0 in66.860s controller wall time under its300s diagnostic budget/5s forced grace/335s startup guard. All428 sources and exact receipt hashes verify. It intentionally contains capture after the original optional preparation decision; this is observational completion, not completed capture, functional success, timeout repair or adoption. Original2700s physical protocol remains unchanged.
+## Current continuation - October 8: functional completion recalibrated
 
-## Current continuation - October8: original handoff observation completed
+The 45-minute job cutoff was mistakenly retained as a full-completion gate after
+latency was deferred. The latest 124 is incomplete containment, not semantic
+failure; preserve its original conditions and logical tests. Native preparation
+and borrowing succeeded. Three registered lineage checks returned; the fourth
+continued after intent insertion. Capture return, publication and cleanup remain
+unverified. Another admission fix or optimization prerequisite is unsupported.
 
-The reviewed original-source diagnostic completes exit0, controller wall66.860s,
-within its300s budget/5s grace/335s startup guard. All428 original sources
-(203 FloRA/225 Alice), authoring freeze and result/process/progress/journal/log
-hashes verify. This is intentional observation containment, not a completed
-capture or functional pass; original2700s physical protocol stays unchanged.
+One completion-driven local Docker successor is reviewed and launched once with
+the identical capture oracle and sources. Exact intent/controller/input/inventory
+pins are bound; its result remains pending. Keep original
+return/binding/cleanup as the criterion and report runtime separately. Journals
+stay bounded; later liveness alone cannot establish progress or resolve a stall.
+Prior custody omitted mounted resources and eligible observer cache files; the
+successor binds full inventory and read-only source access without changing
+authority or the oracle.
 
-Inside exact original _PhasePreparation._enter, mapped is None and the repeated
-original structural predicate is true. The isolated AST mirror, with copied
-globals and original helpers, agrees: first refusal at_phase_preparation.py:293
-for built-in RegisteredExperimentPreregistration.history_for. The known anchor
-entry169 allows no bound methods. This identifies a conservative owner-connection
-gap in this controlled graph; later admission blockers remain unknown. Optional
-reuse is an optimization, not a functional capability or permission gate.
-
-The journal has61 samples/60 owned, maximum1.041204s gap, depth126 and30 fixed
-tags; zero errors/truncations/thread caps and normal sampler stop. Cleanup has
-its own flushed progress. The2017 query records/164 stream reads cover capture
-entry to target only, not total capture, physical SQL requests or exclusive CPU.
-Controlled phase rows/canonical streams/model counts remain unchanged; active
-slot/phase frames, issued preparations and views clear; original cleanup passes.
-Transport stops before forwarding the target call. Prior history authentication
-may already have read private bytes. These in-memory controls do not qualify
-durable recovery; operation identity is not completed snapshot binding.
-
-The old two-file metadata candidate remains private and unadopted, including
-its unresolved accessor-purity review. The getter124/120s oracle was unreached.
-All three earlier2700s local controls remain incomplete:74 suite cases ok,
-1 unfinished/71 unstarted of146 loadable versus128 defined. Their delayed saved
-capture-return marker still cannot prove capture itself was unfinished. No
-whole-suite pass, gain/regression ranking or cleanup verdict follows from them.
-
-Physical37704802657 remains failure124/2700s, no raw strict result or functional
-oracle. Its original journal completion-revalidation localization remains valid;
-this controlled first-refusal result does not establish its exclusive cause.
-The original failures and four evaluation answers remain below.
-
-A fresh private owner-connection candidate from the original203-file FloRA baseline
-changes exactly two production files plus one helper-test module. It connects
-history_for as a named anchor edge and pins the definition-time function/code,
-with exact native anchor callback owner restriction. Its original body still
-calls live _current. Preserved RED has seven real-helper cases: six pass and only
-the missing native edge fails. GREEN passes seven. No full factory/capture runs.
-Supplied native fields and controlled current withdrawal cover this connection
-and the tested fallback shapes only, not authenticated records or physical
-permission-row withdrawal. No broad getter-free, all-graph admission, work gain,
-functional/physical/learning/latency or exclusive timeout-cause claim follows.
-The fresh candidate stays private and unadopted, separate from the old guard
-candidate. Preserve full H/C freshness, owner/code/accessor/current dependency
-binding, private verification, independent proofs and unsupported/custom fallback.
-One complete controlled-port capture verifier is root/independently reviewed
-and launched once, result pending at work/phase-handoff-complete-capture-20261008.
-Intent SHA256:5c16d94ddeb00b9f7a5058487c5defc410a51b48fcce607b5b59e7f04064972c;
-input-review1e1e45d9, probed84dc880, controller244a1f1, immutable imagebbb524290.
-All429 source and seven authoring hashes match. Keep2700s cap/30s grace/2760s
-startup guard, nine bounded windows/32 fixed selectors/aggregate8MiB journal.
-One-shot decision/live/borrow observations and immediate durable capture return
-precede exact identity/history/context/metadata/intent checks and original cleanup.
-Native admission is optional. Snapshot validation establishes two-role/receipt
-self-consistency, not independent artifact equality to runtime manifests.
-No complete strict case, H/C campaign, physical/learned/latency or cost-cause
-claim follows; late H/C/terminal verification remains outstanding.
-Await and recover the one reviewed complete actual-capture verification launched at work/phase-handoff-complete-capture-20261008; if incomplete or failed, follow mandatory diagnosis before correction; if complete, review its exact bindings/observer/cleanup/source evidence and then affected freshness verification. Keep the old two-file candidate private and unadopted; its accessor-purity issue remains unresolved. Preserve exact native owner/code/accessor bindings, H/C freshness, all independent proofs and unsupported/custom fallback; optional reuse admission is not the functional goal. The launched verifier uses immediate durable stage checkpoints and the original2700s action cap; native admission is not a pass criterion. No autonomous retry/new job, exclusive timeout-cause claim or physical qualification follows from this observation.
-
-Alice frontier08a704, main8ea804 and Graphifya06f61 remain the checked references.
-Source/revision applicability and bounded provenance are useful research limits,
-not runtime or platform adoption. Personality/MFM remain external; complete
-functional FloRA precedes latency. FBM164 remains the existing partial procedure
-record updated in place, not a new seed, admitted training data or learned weights.
-Read [candidate diagnosis and verification](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md).
+Recover that result, then verify affected negative H/C/terminal protection
+and resume the registered BEFORE/correction/AFTER comparison. Whole-coordinator
+owner expiry is a separate later fixture issue. Candidate stays private and
+unadopted; personality/MFM stay external. No physical, learned or latency claim.
+FBM 164 remains partial. Exact evidence and bindings are centralized in the
+[candidate note](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md) and
+[evidence JSON](evidence/2026-10-08_capture_boundary_candidate.json).
 
 ## Historical snapshot — October7: complete construction observation recovered
 
