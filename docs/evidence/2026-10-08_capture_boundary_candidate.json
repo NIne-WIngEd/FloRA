@@ -58,15 +58,127 @@
   "independent_checks": {
     "typed-baseline": {
       "directory": "typed-baseline",
-      "result_pending": true
+      "result_pending": false,
+      "process_exit": 124,
+      "classification": "incomplete_at_configured_process_containment",
+      "process_cap_seconds": 2700,
+      "kill_grace_seconds": 30,
+      "receipt_sha256": "b443326f4ec2abf91323741c1786020181ac66cbbf8c2422b8c69d5a1eeb6563",
+      "log": "typed-capture.log",
+      "log_sha256": "99f86ac525d1d9d52c33490829ad7b21becefdec0d3d5d351358d29352858757",
+      "source_files": 203,
+      "source_manifest_sha256": "f751a17dff8b0c30609c65f89e9da29fb872be136a5e7d9fb8a38f0241178dc9",
+      "source_unchanged": true,
+      "source_hashes_verified": true,
+      "physical_qualification": false,
+      "causal_qualification": false,
+      "latency_qualification": false,
+      "whole_pipeline_qualification": false,
+      "result_sha256": "d728b5cd036dbebb736d12fe7e2fe338bf4f6d207cc284aa634f351618a871d7",
+      "probe_sha256": "d3119f71444d7a54422ef5d73912291b417abac7c61e6ba5bb14cc53643432ae",
+      "last_durable_stage": "capture_entered",
+      "python": "3.12.15 (main, Oct  1 2026, 21:52:41) [GCC 14.2.0]",
+      "history_sources": 1,
+      "declared_slots": 4,
+      "role_count": 2,
+      "setup_query_records": 34766,
+      "setup_log_reads": 2218,
+      "setup_wall_seconds": 62.77321239901357,
+      "setup_cpu_seconds": 62.499421399999996,
+      "capture_return_checkpoint_persisted": false,
+      "capture_return_status": "unknown: return is not saved before postreturn binding reads",
+      "exact_binding_checks_status": "not certified by saved evidence",
+      "cleanup_status": "not certified by saved evidence",
+      "capture_work_counts_status": "absent",
+      "native_capture_scope_admission_status": "unobserved"
     },
     "typed-candidate": {
       "directory": "typed-candidate",
-      "result_pending": true
+      "result_pending": false,
+      "process_exit": 124,
+      "classification": "incomplete_at_configured_process_containment",
+      "process_cap_seconds": 2700,
+      "kill_grace_seconds": 30,
+      "receipt_sha256": "f614bc61ef9c4f7c32d6d70ed80d45ba42f46924bb849f36bd49c988a5154e31",
+      "log": "typed-capture.log",
+      "log_sha256": "4d44f1716a08a805eff6afdf2faf6c9aa4cf970fd6d8091a29c7cd8e2832d934",
+      "source_files": 204,
+      "source_manifest_sha256": "3e989c3344b4617b9983fcb6004cc9294e3de4127355743d00dfaab023f2ae19",
+      "source_unchanged": true,
+      "source_hashes_verified": true,
+      "physical_qualification": false,
+      "causal_qualification": false,
+      "latency_qualification": false,
+      "whole_pipeline_qualification": false,
+      "result_sha256": "4a7241e5525c4621bc359315059fea97733aee3a591e2a89860280816485c51b",
+      "probe_sha256": "d3119f71444d7a54422ef5d73912291b417abac7c61e6ba5bb14cc53643432ae",
+      "last_durable_stage": "capture_entered",
+      "python": "3.12.15 (main, Oct  1 2026, 21:52:41) [GCC 14.2.0]",
+      "history_sources": 1,
+      "declared_slots": 4,
+      "role_count": 2,
+      "setup_query_records": 34766,
+      "setup_log_reads": 2218,
+      "setup_wall_seconds": 58.82406120601809,
+      "setup_cpu_seconds": 58.5556854,
+      "capture_return_checkpoint_persisted": false,
+      "capture_return_status": "unknown: return is not saved before postreturn binding reads",
+      "exact_binding_checks_status": "not certified by saved evidence",
+      "cleanup_status": "not certified by saved evidence",
+      "capture_work_counts_status": "absent",
+      "native_capture_scope_admission_status": "unobserved"
     },
     "candidate-verification": {
       "directory": "candidate-verification",
-      "result_pending": true
+      "result_pending": false,
+      "process_exit": 124,
+      "classification": "incomplete_at_configured_process_containment",
+      "process_cap_seconds": 2700,
+      "kill_grace_seconds": 30,
+      "receipt_sha256": "71ffc2d8c5db8d04266acc843bd77feb82aa81499e2be59e79592c43de2c91e6",
+      "log": "affected-tests.log",
+      "log_sha256": "512020181444f1a8f6a1845695c55eb0227f15d47e261027e8332a8834d38bfa",
+      "source_files": 204,
+      "source_manifest_sha256": "3e989c3344b4617b9983fcb6004cc9294e3de4127355743d00dfaab023f2ae19",
+      "source_unchanged": true,
+      "source_hashes_verified": true,
+      "physical_qualification": false,
+      "causal_qualification": false,
+      "latency_qualification": false,
+      "whole_pipeline_qualification": false,
+      "suite": {
+        "completed_ok": 74,
+        "started_unfinished": 1,
+        "unstarted": 71,
+        "selected_case_instances": 146,
+        "locally_defined_methods": 128,
+        "collection_count_basis": "Source audit of standard unittest module collection: imported base adds 9 and subclass inherits 9.",
+        "completed_ok_by_module": {
+          "test_capture_guard_metadata": 13,
+          "test_preregistration_metadata_frame": 6,
+          "test_shared_authority_frame": 23,
+          "test_current_context_guard": 29,
+          "test_phase_terminal_completion": 3
+        },
+        "unfinished_case": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_04_qualified_last_source_callback_denial_refuses_lineage",
+        "whole_suite_verdict_completed": false,
+        "observed_assertion_failures": 0,
+        "observed_errors": 0,
+        "later_modules_unstarted": [
+          "test_phase_snapshots",
+          "test_phase_callback_owners"
+        ]
+      },
+      "current_first_guard_control": {
+        "completed": true,
+        "sql": 359,
+        "canonical_replays": 24,
+        "current_samples": 15,
+        "terminal_fences": 6,
+        "slot_frames": 1,
+        "claim": "One contained original guard, not full capture."
+      },
+      "unfinished_case_boundary": "No qualified observation emitted. Setup includes full capture, temporal Claim reads, cold capture_route and context assembly; later tested lineage is also possible. Exact unfinished operation and denial intervention reach are unknown."
     }
   },
   "exact_intents": {
@@ -76,22 +188,33 @@
   },
   "external_research": [
     "https://openfga.dev/docs/interacting/consistency",
-    "https://www.usenix.org/system/files/atc19-pang.pdf"
+    "https://www.usenix.org/system/files/atc19-pang.pdf",
+    "https://arxiv.org/html/2610.04838v1"
   ],
   "project_research": {
     "alice_main": "8ea804aa25c3d1c5f46e9be5810d072ed0fadb4b",
-    "frontier": "756bf294f6a93e9ea7dcc12dba932a556d6080e0",
+    "frontier": "08a704210242e22dbc43ea32cb3412cbe6c6e65d",
     "graphify": "a06f61eafd91d04fb7ec7c1de3ab8a9ed7071b15",
-    "comic": "1805a01c73575378246cac8cbbb72cd891e8528e"
+    "comic": "1805a01c73575378246cac8cbbb72cd891e8528e",
+    "oct8_intake": {
+      "path": "docs/research/FRONTIER_WATCH_INTAKE_2026-10-08_EVIDENCE_COMPLETION_AND_STATE_VALIDITY.md",
+      "sha256": "ed659fa90e3f9c57126d71e266f7b9518ff855edb1bd03d98aa422736562f1a4",
+      "applicability": "Current state applicability and bounded source-aligned provenance are consistent with the existing contract; research-only, no runtime adoption."
+    }
   },
   "limits": [
     "Boundary improvement is not full-capture value or exclusive physical cause.",
     "Final personal gate runs after frame close; no global atomic post-last-callback H/C/control claim.",
     "Full component captures use the same fixture graph/procedure but separate generated identities/keys/timestamps.",
     "Concurrent local controls invalidate a controlled wall-time comparison; counts and CPU are diagnostic.",
-    "Models are supplied fixtures, and sentinel boundary cases do not prove complete capture or learning."
+    "Models are supplied fixtures, and sentinel boundary cases do not prove complete capture or learning.",
+    "Both typed results are incomplete; the saved checkpoint includes possible postreturn binding reads, so capture nonreturn is not established.",
+    "No capture-wide query/replay/CPU counts or exact-binding/cleanup verdict were saved; no gain/regression ranking follows.",
+    "Affected suite74 ok/1 unfinished/71 unstarted of146 loadable instances;128 locally defined methods exclude18 imported/inherited instances.",
+    "Unfinished qualified test has capture, temporal reads, cold route and context setup before its intervention; exact localization is unknown.",
+    "Earlier physical37704802657 journal boundary remains source-valid and separate from these fictional-port local controls."
   ],
-  "next_action": "Recover the exact three main receipts before assessing semantics and capture-wide work. The getter timeout supplies no diagnosis of getter behavior; establish a valid accessor control only if the candidate merits retention. No adoption, runtime publication or physical redispatch is authorized by this result.",
+  "next_action": "Recover the single launched original-source observation diagnostic. Verify its exact source, immediate progress stages, work/CPU samples, containment/effect/cleanup controls and original-map/mirror agreement before a correction. An incomplete diagnostic remains incomplete; no blind retry, automatic admission gate, runtime publication or full physical retry follows.",
   "admission_getter_probe": {
     "process_exit": 124,
     "classification": "incomplete_at_resource_cap_before_admission_control",
@@ -118,5 +241,61 @@
     "directory": "admission-getter-red",
     "result_sha256": "16bb991a4bf03aaca80153be8881f160ff96fa67446c1d0b8305dd628cad851b",
     "interpretation": "Incomplete before native-helper control and getter oracle; no safety or failure verdict, and the source review remains unresolved."
+  },
+  "audit_parents": {
+    "source": "fcd90d6617a4ea9b348426e3d996b877672e4fdc",
+    "context": "3ec704d06b687721f0ba944c4e52d25f64f81b70"
+  },
+  "original_source_hashes_verified": 428,
+  "candidate_source_difference": {
+    "changed_runtime_files": [
+      "src/flora/selected/experiment_preregistration.py",
+      "src/flora/selected/phase_snapshots.py"
+    ],
+    "added_test": "tests/test_capture_guard_metadata.py",
+    "removed_files": []
+  },
+  "evidence_validity": {
+    "last_durable_probe_stage": "capture_entered",
+    "delayed_return_save": "Probe69-72 changes memory; durable save85 follows binding assertions and metadata/intent reads74-82.",
+    "unresolved_probe_interval": "archive.capture67-68 through postreturn binding reads and next save85",
+    "capture_return_not_proven_unfinished": true,
+    "binding_or_cleanup_verdict_present": false,
+    "capture_work_counts_present": false,
+    "admission_observed": false,
+    "assertion_failure_established": false,
+    "improvement_or_regression_ranking_established": false,
+    "fixture_method_replacement_label": "No production capture/controller replacements; fixture AST/factory/SQL recorder substitutions remain.",
+    "resource_comparison": "Same offline image/Python and finite procedure; overlapping containers, no CPU pin/limit or capture CPU/memory telemetry in receipts.",
+    "physical_localization_still_valid": true,
+    "exclusive_physical_cause_established": false
+  },
+  "research_transfer_limits": [
+    "MemTrace section3 binds immutable evidence to source/revision and validates current applicability before selective restoration. Coding-domain performance and check/retest costs do not prove FloRA authority or justify production adoption.",
+    "OpenFGA HIGHER_CONSISTENCY skips its cache. Permission answers here cannot be reused across withdrawals; observation sharing still needs exact original H/C checks and terminal freshness.",
+    "October8 intake remains research-only: no new platform, backend, policy or runtime adoption."
+  ],
+  "next_diagnostic": {
+    "source_commit": "abc726e289ef1cfa7ed23dd5f7d12b5439cebd46",
+    "physical_runtime_source": "f22953b8e776863b01518df35b342934c0ef7b73",
+    "alice_contract_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+    "source_files": 428,
+    "diagnostic_budget_seconds": 300,
+    "forced_termination_grace_seconds": 5,
+    "outer_controller_startup_guard_seconds": 335,
+    "original_physical_protocol_cap_seconds": 2700,
+    "physical_protocol_changed": false,
+    "probe_sha256": "60ea12bf30ea4b1669c3c6b85e549b7b99ee0a35e4e2cf1114625f4e55d87a08",
+    "source_manifest_sha256": "1868371ff43e130f45336b586592ef91d0e9c9f2910adcb0db0a8fb8d0547870",
+    "review_receipt_sha256": "392874b1752ad2f4e6b25c12cd116fe5efa7ccdca9c2ab480155a715554a661e",
+    "observer_selector_cap": 32,
+    "cached_docker_image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+    "candidate_admitted": false,
+    "intent_sha256": "56510a22c9c49d419d636f25e122c72083bfe4d638556167b128a236d4b08cca",
+    "recovery_area": "C:/Users/rayns/Documents/Codex/2026-10-02/we-gonna-continue-n/work/actual-capture-progress-20261008",
+    "state_at_binding": "launched_result_pending",
+    "production_method_replacements": 0,
+    "physical_run_dispatched": false,
+    "claim": "Original-source controlled construction observation only; no functional, causal or latency qualification."
   }
 }

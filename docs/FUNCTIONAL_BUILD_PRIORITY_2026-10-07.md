@@ -1,42 +1,54 @@
 # FloRA functional build first
 
-## Current continuation — October8: bounded capture candidate awaits adoption evidence
+One reviewed original-source diagnostic is now launched at `work/actual-capture-progress-20261008/`:428 original sources, immutable cached image, 300s container-process budget/5s forced grace/335s outer startup guard. It records stages immediately and samples CPU/work; any contained preparation refusal remains an optional optimization observation. Results are pending. Original2700s physical protocol and runtime stay unchanged; no full physical run or candidate adoption was dispatched.
 
-The completed physical run37704802657 remains a failure/124 at2700s inside first
-capture completion; no functional assertion or raw strict verdict was reached.
-Recovery and evaluation answers are preserved below. No timeout repair is claimed.
+## Current continuation - October8: completed local controls remain incomplete
 
-A private two-file candidate composes preregistration/slot observations within
-one exact native capture-guard prefix. Both slot predicates and original H/C
-checks remain; terminal current/canonical verification closes the frame before
-the final personal gate. Private/full-H/write reentry is excluded; custom and
-episode paths retain fallback. It neither removes fallback assembly/proofs nor
-builds Alice's full platform. Personality/MFM remain external.
+Physical37704802657 remains failure124/2700s with no raw strict result or
+functional oracle. Its exact journal still localizes first capture completion
+revalidation; these newer fictional-port controls do not refute that boundary
+or identify an exclusive cause. Original failures and four evaluation answers
+remain below. No new physical run or timeout repair is claimed.
 
-Reliable same-input first-boundary RED completed with400 query calls/32 log reads,
-two slot frames and all no-effect controls. Preliminary GREEN used one frame,
-359 calls/24 log reads; this modest boundary improvement does not establish
-capture-wide value. A subsequent expiry amendment is in source-bound verification.
-Frozen final candidate02b448df…386c3 + bdfa95c9…7672d, and13 new boundary cases,
-are undergoing affected regression and full native-controller capture controls.
-All are fictional transport component evidence, not physical/causal/latency proof.
+All three local receipts are now verified exit124 under2700s process containment.
+Baseline203/candidate204 source hashes and all log hashes match. Both typed probes
+save only capture_entered after the same finite setup:34766 query records/2218
+stream reads, one BEFORE source, four slots and two roles, Python3.12.15.
+The probe changes capture_returned only in memory and saves after binding assertions
+and metadata/intent reads; capture itself could have returned before later work.
+No capture-wide counts, exact-binding verdict, cleanup or admission was saved.
 
-Independent review identified an unresolved admission gap: runtime owner and
-attribute-access shape are read before they are proven callback-free. Existing
-method/code pins do not reject every newly installed accessor. This candidate
-cannot be adopted while that guarantee remains unverified, even if counts fall.
+Affected suite74 cases complete ok:13 capture-guard,6 preregistration-frame,
+23 shared-authority,29 current-context and3 phase-terminal. Its next qualified
+last-source-denial case starts without a verdict;71 cases remain unstarted.
+Standard unittest collection loads146 instances from128 defined methods because
+the callback-owner module imports/inherits18 additional cases. No whole-suite
+pass or assertion failure is observed. Qualified setup includes full capture,
+temporal reads, cold route and context assembly before the intervention; the
+exact unfinished operation is unlocalized.
 
-The separate getter probe ended124 at120s before its native-helper control or
-getter oracle; source/probe are unchanged. It neither confirms nor clears the
-admission gap. The three main results stay pending until exact receipts are verified.
+The current frozen first guard completes359 queries/24 replays against original
+400/32, retaining both predicates and expiry controls. This narrow reduction
+does not establish capture-wide value. Overlapping containers and missing capture
+resource/work counts cannot rank improvement or regression. Fictional SQL/Kurrent
+ports retain actual selected controllers and signed producers; supplied outputs
+do not qualify physical mechanics, learned causal use or latency.
+
+The two-file runtime candidate remains private and unadopted. Runtime/accessor
+admission purity remains source-reviewed and unresolved; getter124/120s reached
+neither its native-helper control nor getter oracle. Optional preparation reuse
+is not a functional capability gate. Keep H/C checks, fallback, four lineages,
+eight proofs and original caps. Personality/MFM stay external.
+
+The checked Alice frontier intake is08a704210242e22dbc43ea32cb3412cbe6c6e65d;
+main8ea804 and Graphifya06f61 remain unchanged. Current state applicability and
+bounded source provenance fit the existing contracts; research is not runtime
+adoption or a backend/platform change.
 
 Read [candidate diagnosis and verification](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md).
-Recover the three exact local result directories before any code publication or
-physical run: typed-baseline, typed-candidate, candidate-verification under
-work/capture-boundary-correction-20261007. Do not relaunch completed controllers.
-Reject an unadmitted, unsafe or immaterial capture-wide improvement; return to
-the responsible architecture rather than stack fixes. FBM164 is a partial
-procedure record, not admitted training data or learned weights.
+Prepare one bounded improved-observation diagnostic on unchanged original source for root review, with distinct immediate capture-return, binding-read and qualified-setup boundaries. Bind its exact intent, source and observation/resource bounds before dispatch. No automatic full retry, runtime publication, candidate adoption or optional-admission gate program follows from these incomplete controls.
+FBM164 is the existing partial method record updated in place, not a new seed,
+admitted training data or learned weights. Functional construction remains first.
 
 ## Historical snapshot — October7: complete construction observation recovered
 
