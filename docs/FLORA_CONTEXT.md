@@ -1,28 +1,25 @@
 # FloRA continuation context
 
-## Current continuation - October 9: controlled capture passed; physical workflow in progress
+## Current continuation - October 9: physical run incomplete; deployment transfer pending
 
-The oracle-only successor passes complete controlled capture verification:
-canonical and typed plan, scope/history/producer receipts, metadata/intent,
-empty lifetime registries, unchanged model counts and original cleanup.
-Preserve the earlier faulty comparison failure and every timed stop;
-this pass does not validate their unsaved operands retrospectively.
+All three physical cases were cancelled at GitHub's explicit six-hour resource
+maximum. Both BEFORE captures published in every case; positive also completed
+its seal, probe and qualified update. Construction did not return; final strict,
+coordinator, current H/C withdrawal and cleanup verdicts remain absent. This is
+incomplete evidence, not a functional or causal failure or pass.
 
-The original BEFORE → governed correction → AFTER six-attempt comparison,
-exact passive recovery and separate reached H/C withdrawal controls are now
-[in progress](https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839)
-on native AMD64 with actual selected stores; results remain pending.
-The supported owner connection is staged on the draft source branch, unadopted.
-The outer process cutoff is removed; platform expiry means incomplete evidence.
-Legacy fixture outer values are unenforced metadata. Original inner budgets
-and signed intent remain unchanged and uncalibrated; enrollment already
-excludes construction, with no reset or refresh.
+Four AMD64 vendor archives and all 53 pinned wheels are packaged and verified.
+The single public-payload transfer to a new private Magnolia root is pending;
+root creation succeeded, but remote inventory is unverified. No Slurm job or
+new full functional test has been submitted. A reviewed 30-minute CPU deployment
+preflight awaits the transfer and exact remote inventory. It tests host/backend
+compatibility; its resource boundary cannot qualify FloRA completion or latency.
 
-Personality/MFM remain external. Relevant/irrelevant judgment and decision-linked
-outcome → governed revision remain later capability. No whole-pipeline,
-physical, learned, latency or adoption pass follows. FBM 164 remains partial.
-See [candidate note](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md) and
-[evidence JSON](evidence/2026-10-08_capture_boundary_candidate.json).
+Resume the existing transfer without restaging or redispatch. Preserve original
+three-case assertions, inner budgets and signed authority; broker enrollment
+already follows construction. Models remain external, latency deferred and
+FBM164 partial. Exact custody/status pins: [candidate note](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md)
+and [evidence JSON](evidence/2026-10-08_capture_boundary_candidate.json).
 
 ## Historical snapshot — October7: complete construction observation recovered
 
