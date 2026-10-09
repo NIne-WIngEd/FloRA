@@ -1,5 +1,43 @@
 # FloRA bounded capture candidate
 
+## Current result - October 9: controlled verification passed
+
+The oracle-only successor completes the full controlled capture oracle and original
+cleanup. Production, fixture, authority and timing profile remained identical to
+its reviewed input. Complete canonical plan bytes and the typed consumer roundtrip
+agree; scope/history/producer receipts, metadata/intent, empty lifetime registries
+and unchanged model counts pass. Optional native preparation and borrowing were
+observed; they are not a new capability prerequisite. Exact counts, source and
+artifact pins are centralized in the [evidence JSON](evidence/2026-10-08_capture_boundary_candidate.json).
+
+| Evaluation question | Current answer |
+| --- | --- |
+| What was measured? | One actual native-controller BEFORE capture over controlled fictional SQL/Kurrent ports and signed fictional producers. |
+| What was required/obtained? | Complete logical binding, canonical/typed plan and downstream registry/model/cleanup checks; all pass in the new successor. |
+| What does it mean for FloRA? | The supported owner connection can return a fully checked controlled capture. The original registered connected workflow is the next stage, not another admission or optimization trial. |
+| Is the test valid? | Independent literal/semantic controls justify the whole-record plan predicate; all original downstream checks remain. Earlier unsaved operands and failed results stay preserved. |
+
+The full physical successor was dispatched once and is
+[in progress](https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839),
+with results pending: original registered BEFORE → governed correction → AFTER,
+successful six-attempt positive and exact passive recovery, with separate reached
+H/C controls on native AMD64 and actual selected stores. The published workflow
+removes the outer process cutoff; platform resource expiry is incomplete evidence.
+Legacy fixture outer values are unenforced metadata. Original inner budgets and
+signed owner intent remain explicit, unchanged and uncalibrated; no authority
+reset/refresh or new allowances.
+
+The supported owner connection is staged on the draft source branch for physical
+verification, still unadopted. This pass
+does not establish independent runtime-manifest equality of captured artifact
+records, durable/crash recovery, physical integration, full pipeline, learned
+causal use, a latency gain or an exclusive prior timeout cause. Personality/MFM
+remain external. Relevant/irrelevant intervention and decision-linked outcome →
+governed revision follow the connected mechanical stage; no full Alice platform
+is added. FBM 164 remains the existing partial procedure record.
+
+## Historical snapshot - October 8 and earlier
+
 Latest reviewed capture returns, then the unchanged private probe exits1 at its faulty raw plan comparison. JSON array normalization makes tuple/list equality false even for a correct plan. Cleanup/source custody pass; later independent binding/model checks remain unreached. Preserve this original exception and all earlier stops. The reviewed private oracle-only successor is launched once with its result pending; no production/authority/profile change or functional pass follows.
 
 | Evaluation question | Reconciled answer |

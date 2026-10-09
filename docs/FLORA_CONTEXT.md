@@ -1,28 +1,28 @@
 # FloRA continuation context
 
-## Current continuation - October 8: capture returned; oracle-only successor result pending
+## Current continuation - October 9: controlled capture passed; physical workflow in progress
 
-Completion-driven capture returned; the original probe failed
-its raw plan comparison. Capture stores JSON arrays; the expected Python record
-retains tuples. Independent controls establish this false
-verdict. Cleanup and source custody passed; later metadata/intent, registry and
-model-invariance checks remain unreached. Preserve exit1 and prior timed
-stops; production plan defects and full verification remain unproved.
+The oracle-only successor passes complete controlled capture verification:
+canonical and typed plan, scope/history/producer receipts, metadata/intent,
+empty lifetime registries, unchanged model counts and original cleanup.
+Preserve the earlier faulty comparison failure and every timed stop;
+this pass does not validate their unsaved operands retrospectively.
 
-Reviewed oracle-only successor is launched once with production,
-fixture, authority and profile unchanged. Exact review, intent and custody pins
-are bound; its result remains pending. Liveness is not progress or verification.
-It compares the entire canonical plan and typed roundtrip, retaining downstream
-checks. Recover that one result before further action.
+The original BEFORE → governed correction → AFTER six-attempt comparison,
+exact passive recovery and separate reached H/C withdrawal controls are now
+[in progress](https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839)
+on native AMD64 with actual selected stores; results remain pending.
+The supported owner connection is staged on the draft source branch, unadopted.
+The outer process cutoff is removed; platform expiry means incomplete evidence.
+Legacy fixture outer values are unenforced metadata. Original inner budgets
+and signed intent remain unchanged and uncalibrated; enrollment already
+excludes construction, with no reset or refresh.
 
-After capture verification, complete reached affected H/C/terminal controls and
-the original registered BEFORE/correction/AFTER six-attempt comparison. Its signed
-owner already enrolls after construction; later attempt/read/session/writer
-limits remain separate uncalibrated conditions, with no automatic reset or
-authority refresh. Relevant/irrelevant judgment and decision-linked outcome
-remain later capability. Candidate stays private/unadopted; models stay external.
-FBM 164 remains partial. Evidence and four answers: [candidate note](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md)
-and [evidence JSON](evidence/2026-10-08_capture_boundary_candidate.json).
+Personality/MFM remain external. Relevant/irrelevant judgment and decision-linked
+outcome → governed revision remain later capability. No whole-pipeline,
+physical, learned, latency or adoption pass follows. FBM 164 remains partial.
+See [candidate note](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md) and
+[evidence JSON](evidence/2026-10-08_capture_boundary_candidate.json).
 
 ## Historical snapshot — October7: complete construction observation recovered
 

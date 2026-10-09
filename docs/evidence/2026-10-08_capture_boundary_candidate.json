@@ -1,8 +1,8 @@
 {
   "schema": "flora-capture-boundary-candidate-evidence-v1",
-  "published_runtime_unchanged": true,
+  "published_runtime_unchanged": false,
   "candidate_admitted": false,
-  "physical_runs_dispatched": 0,
+  "physical_runs_dispatched": 1,
   "original_run": 37704802657,
   "original_verdict": "124/2700s, no raw result, first capture completion unfinished",
   "candidate_files": {
@@ -230,7 +230,7 @@
     "Target3.12.15 two positives/18 semantic mutant controls pass without fixture/capture. The reviewed oracle-only successor changes no production source, fixture, authority or timing profile;12 authoring pins/preflight/reviews/one launch intent are bound. Its result remains pending; liveness is not progress or verification.",
     "Whole coordinator broker already enrolls after construction; later300s/240s limits remain uncalibrated and are not removed or automatically reset. No six-attempt/H-C/physical/learned/latency pass."
   ],
-  "next_action": "Await and recover the single reviewed oracle-only completion-driven complete-capture successor already launched, preserving unchanged production/fixture/authority and every original downstream check. Diagnose any new failure before further action. If fully verified, run reached affected H/C/terminal controls and the original registered six-attempt workflow. Its broker already starts after construction;300/240-second inner limits remain separate, uncalibrated conditions. No automatic reset, authority refresh, new timing profile, runtime optimization or model work is selected.",
+  "next_action": "Recover this single in-progress physical all-three-case workflow without redispatch. Validate original six-attempt positive/passive recovery and separately reached H/C controls, exact source/services and original signed inner conditions. Treat platform expiry as incomplete; diagnose any first reached discrepancy before repair. Preserve the controlled complete-capture pass and all earlier failed evidence. Models stay external; relevant/irrelevant intervention and decision-linked outcome/revision follow. No admission/latency optimization prerequisite, intent reset or full Alice platform expansion.",
   "admission_getter_probe": {
     "process_exit": 124,
     "classification": "incomplete_at_resource_cap_before_admission_control",
@@ -947,7 +947,7 @@
     "no_new_profile_or_production_authority_change": true
   },
   "plan_oracle_successor": {
-    "state": "launched_result_pending",
+    "state": "completed_controlled_capture_verified",
     "area": "phase-plan-verification-20261008",
     "scope": "oracle-only complete controlled-port capture verification",
     "unchanged_production_source_files": 429,
@@ -1008,10 +1008,455 @@
       "liveness_is_progress": false
     },
     "launch_intent_bound": true,
-    "execution_result_bound": false
+    "execution_result_bound": true,
+    "state_at_launch": "launched_result_pending",
+    "completed_result": {
+      "classification": "controlled_complete_capture_verified",
+      "process": {
+        "exit": 0,
+        "outcome": "verified",
+        "controller_wall_seconds": 2661.0619999999763,
+        "automatic_process_timeout": null,
+        "explicit_external_cancel": false,
+        "original_exception_type": null,
+        "stderr_empty": true
+      },
+      "hashes": {
+        "result_audit_sha256": "dbf2b92415745b0800089f1008636dace68016f1ad23b04c3b771f072cfc5dbc",
+        "process_receipt_sha256": "eb364a54e2ffe80695952921849b925cef2ade98fb17f9b21eff2e4da2a17651",
+        "result_sha256": "75d7363dc1da7ed0732aaf8c7554fc010feba0a28d775785e4ec0a57271a603f",
+        "source_manifest_sha256": "f8ddeefedfdad4a4f5182f290553640f385327d098e12c8363e649584443f17d",
+        "mount_inventory_sha256": "abea42acead3a263eeff4d43b1233d942cd7d76ec05f1b0712a78fc7538ef3f2"
+      },
+      "artifact_hashes_verified": 16,
+      "authoring_hashes_verified": 12,
+      "declared_source_hashes_verified": 429,
+      "physical_inventory_hashes_verified": 1131,
+      "source_and_inventory_unchanged": true,
+      "reached": {
+        "progress_stages": [
+          "imports_entered",
+          "fixture_imports_entered",
+          "fixture_setup_entered",
+          "fixture_ready",
+          "capture_entered",
+          "actual_preparation_decision_observed",
+          "live_preparation_observed",
+          "completed_borrow_observed",
+          "capture_returned",
+          "before_capture_record_assertions",
+          "before_capture_plan_assertion",
+          "before_archive_metadata_assertion",
+          "before_archive_intent_assertion",
+          "before_active_slot_frame_assertion",
+          "before_phase_preparation_cleanup_assertion",
+          "before_model_invocation_assertion",
+          "exact_capture_binding_verified",
+          "cleanup_entered",
+          "cleanup_returned",
+          "verification_completed"
+        ],
+        "progress_records": 20,
+        "capture_return_elapsed_seconds": 2632.968053788005,
+        "capture_wall_seconds": 2572.3432465720107,
+        "capture_cpu_seconds": 2574.9920554,
+        "capture_query_records": 765811,
+        "capture_log_reads": 63907,
+        "exact_operation_binding_verified": true,
+        "actual_native": true,
+        "actual_map_refused": false,
+        "live_preparation_observed": true,
+        "original_borrow_returned_to_native_consumer": true,
+        "complete_canonical_plan_equal": true,
+        "context_plan_sha256": "f27235c5076ec069ddb7ab4d4faeb522e370cf0138f6d540dc0468fd1450d311",
+        "typed_plan_roundtrip_equal": true,
+        "snapshot_validation_returned": true,
+        "claims_and_states_nonempty": true,
+        "producer_receipt_count": 2,
+        "archive_metadata_and_intent_bound_to_snapshot_and_lineage": true,
+        "active_slot_frame_absent": true,
+        "phase_preparation_registries_empty": true,
+        "model_invocation_counts_unchanged": true,
+        "exact_capture_binding_verified": true,
+        "cleanup_callbacks_completed": true,
+        "cleanup_errors": [],
+        "verification_completed": true,
+        "probe_assertion_lines": "complete_capture_probe.py:213–244, completion279–280"
+      },
+      "observer": {
+        "windows": [
+          {
+            "window": 1,
+            "samples": 296,
+            "owned_samples": 295,
+            "bytes": 415064,
+            "maximum_internal_gap_seconds": 1.0348739999999879,
+            "closed": true,
+            "sampler_stopped": true,
+            "observer_errors": 0,
+            "close_outcome": "window_limit"
+          },
+          {
+            "window": 2,
+            "samples": 296,
+            "owned_samples": 296,
+            "bytes": 438750,
+            "maximum_internal_gap_seconds": 1.5160710000000108,
+            "closed": true,
+            "sampler_stopped": true,
+            "observer_errors": 0,
+            "close_outcome": "window_limit"
+          },
+          {
+            "window": 3,
+            "samples": 283,
+            "owned_samples": 283,
+            "bytes": 427084,
+            "maximum_internal_gap_seconds": 8.869297,
+            "closed": true,
+            "sampler_stopped": true,
+            "observer_errors": 0,
+            "close_outcome": "window_limit"
+          },
+          {
+            "window": 4,
+            "samples": 296,
+            "owned_samples": 296,
+            "bytes": 440310,
+            "maximum_internal_gap_seconds": 1.055644000000001,
+            "closed": true,
+            "sampler_stopped": true,
+            "observer_errors": 0,
+            "close_outcome": "window_limit"
+          },
+          {
+            "window": 5,
+            "samples": 296,
+            "owned_samples": 296,
+            "bytes": 450419,
+            "maximum_internal_gap_seconds": 1.1178900000000027,
+            "closed": true,
+            "sampler_stopped": true,
+            "observer_errors": 0,
+            "close_outcome": "window_limit"
+          },
+          {
+            "window": 6,
+            "samples": 297,
+            "owned_samples": 297,
+            "bytes": 442569,
+            "maximum_internal_gap_seconds": 1.0545860000000005,
+            "closed": true,
+            "sampler_stopped": true,
+            "observer_errors": 0,
+            "close_outcome": "window_limit"
+          },
+          {
+            "window": 7,
+            "samples": 297,
+            "owned_samples": 297,
+            "bytes": 450292,
+            "maximum_internal_gap_seconds": 1.0319900000000075,
+            "closed": true,
+            "sampler_stopped": true,
+            "observer_errors": 0,
+            "close_outcome": "window_limit"
+          },
+          {
+            "window": 8,
+            "samples": 296,
+            "owned_samples": 296,
+            "bytes": 442191,
+            "maximum_internal_gap_seconds": 1.3649340000000052,
+            "closed": true,
+            "sampler_stopped": true,
+            "observer_errors": 0,
+            "close_outcome": "window_limit"
+          },
+          {
+            "window": 9,
+            "samples": 226,
+            "owned_samples": 226,
+            "bytes": 342214,
+            "maximum_internal_gap_seconds": 1.054552000000001,
+            "closed": true,
+            "sampler_stopped": true,
+            "observer_errors": 0,
+            "close_outcome": "return"
+          }
+        ],
+        "total_samples": 2583,
+        "owned_samples": 2582,
+        "maximum_internal_gap_seconds": 8.869297,
+        "journal_bytes": 3848893,
+        "manifest_bytes": 6176,
+        "counters_available_samples": 2524,
+        "counters_unavailable_samples": 59,
+        "maximum_observed_depth": 116,
+        "maximum_reported_threads": 3,
+        "declared_selectors": 32,
+        "resolved_fixed_selectors_excluding_action_owner": 30,
+        "unresolved_fixed_selectors": [
+          "owner.build",
+          "xtdb.bounded_execute"
+        ],
+        "owner_label_binding": "owner.strict_main names local probe.action, not the whole strict runner",
+        "all_windows_closed": true,
+        "errors": 0,
+        "truncations": 0,
+        "thread_caps": 0,
+        "all_samplers_stopped": true,
+        "coordinator_stopped": true,
+        "manifest_action_close": {
+          "all_samplers_stopped": true,
+          "coordinator_stopped": true,
+          "diagnostic_only": true,
+          "elapsed_seconds": 2633.123875,
+          "functional_qualification": false,
+          "journal_bytes": 3848893,
+          "kind": "action_close",
+          "latency_qualification": false,
+          "observation_cap_reached": true,
+          "observer_errors": 0,
+          "outcome": "return",
+          "samples": 2583,
+          "schema": "flora-connected-construction-windows-v1",
+          "time_cap_reached": false,
+          "window_count_cap_reached": true,
+          "windows": 9
+        },
+        "latest_sample": {
+          "available_threads": 3,
+          "counters_available": true,
+          "diagnostic_only": true,
+          "elapsed_seconds": 228.243356,
+          "frames": [
+            {
+              "depth": 7,
+              "line": 442,
+              "tag": "kurrent.replay_committed"
+            },
+            {
+              "depth": 8,
+              "line": 455,
+              "tag": "kurrent.replay"
+            },
+            {
+              "depth": 12,
+              "line": 560,
+              "tag": "phase.personal_gate"
+            },
+            {
+              "depth": 13,
+              "line": 575,
+              "tag": "phase.capture_guard"
+            },
+            {
+              "depth": 14,
+              "line": 712,
+              "tag": "phase.capture"
+            },
+            {
+              "depth": 15,
+              "line": 203,
+              "tag": "owner.strict_main"
+            }
+          ],
+          "functional_qualification": false,
+          "kind": "sample",
+          "latency_qualification": false,
+          "log_reads": 66120,
+          "owned_stack": true,
+          "process_cpu_seconds": 2633.1714951999998,
+          "query_records": 800483,
+          "resolved_fixed_tags": [
+            "context.assemble",
+            "context.log_replay",
+            "context.revalidate",
+            "history.fence",
+            "kurrent.codec_gateway",
+            "kurrent.lookup_committed",
+            "kurrent.replay",
+            "kurrent.replay_committed",
+            "lineage.finish",
+            "lineage.native",
+            "lineage.registered",
+            "owner.strict_main",
+            "phase.capture",
+            "phase.capture_guard",
+            "phase.personal_gate",
+            "phase.slot_capture",
+            "phaseprep.borrow",
+            "phaseprep.check_material",
+            "phaseprep.contracts",
+            "phaseprep.enter",
+            "phaseprep.owner_map",
+            "phaseprep.port_dictionary",
+            "read_binding.verify",
+            "slot.authorize",
+            "slot.authorize_body",
+            "slot.bindings",
+            "slot.capture",
+            "slot.current",
+            "slot.execute",
+            "slot.native_readers",
+            "xtdb.native_execute"
+          ],
+          "sample": 225,
+          "stack_depth": 18,
+          "stack_depth_truncated": false,
+          "thread_count_capped": false,
+          "transport_observer_entries": {
+            "kurrent": 63902,
+            "sql": 765717
+          }
+        },
+        "limits": "Bounded sampled owner-stack localization, not entry/return coverage, call counts, cost attribution or physical backend latency. Maximum internal gap exceeds the nominal1s interval; no continuous coverage claim. Counter availability starts after59 samples; two fixed selectors do not resolve. Sampling stops on action return before outer cleanup. The nine-window diagnostic cap is separate from action completion."
+      },
+      "claim_limits": [
+        "One actual native-controller BEFORE capture over finite fictional SQL/Kurrent ports and signed fictional producers, using private two-file owner-connection candidate; not full registered coordinator flow or physical backend.",
+        "The original typed fixture registers four slots but this probe captures one. Fixture/transport substitutes remain; production_method_replacements=0 is not untouched-fixture or physical integration.",
+        "Complete canonical plan bytes and original typed consumer roundtrip now agree. This new success does not retrospectively prove equality of unsaved operands in the earlier exit1 run; that failure and all prior124 stops remain preserved.",
+        "Snapshot scope/history/context/metadata/intent binding and two-role/receipt self-consistency pass. Captured artifact records are not independently compared with runtime artifact manifests; no durable/crash recovery qualification.",
+        "Observed optional native admission/live preparation/borrow establish these actual connections, not permission withdrawal, every supported representation, learned behavior or a mandatory capability gate.",
+        "Model invocation counts stayed unchanged during this capture. Four precomputed signed judgments and fictional provider/relay output do not prove personality/MFM competence or causal learning.",
+        "No candidate adoption, physical qualification, learning qualification, latency score, exclusive former-timeout cause or matched performance improvement is claimed."
+      ],
+      "original_failed_results_preserved": true,
+      "physical_qualification": false,
+      "full_pipeline_qualification": false,
+      "learning_qualification": false,
+      "latency_qualification": false,
+      "candidate_admitted": false
+    }
   },
   "plan_oracle_reconciliation_parents": {
     "source": "bd344d6d324d9bb0ab172786439c5c94d2c63340",
     "context": "202b955cd166c91a573e3379ecf28eda8d640994"
-  }
+  },
+  "current_state": "controlled_capture_verified_physical_workflow_in_progress",
+  "recorded_at_utc": "2026-10-09T05:28:53.333127+00:00",
+  "historical_guard_candidate_fields": "candidate_files/new_test/unresolved_review and original boundary sections preserve the retired guard-composition stage; they are not the supported history-owner integration candidate.",
+  "connected_workflow_continuation": {
+    "state": "physical_workflow_in_progress_results_pending",
+    "next_stage_plan_sha256": "5126f8208cfa021c21e3d23a682be4698032639a2f76e278c9aefb4c94ad042d",
+    "next_stage_review_sha256": "7845c3e6255d98a1904371257d6385650a58632f25e9bca0b383e53d4ebcaabd",
+    "expected_test_id_count": 3,
+    "positive_attempts_required": 6,
+    "negative_controls": [
+      "fresh_H_withdrawal_after_successful_owned_read",
+      "fresh_C_withdrawal_after_successful_owned_read"
+    ],
+    "positive_oracles": "Equal authorized originals/full-ablation context, chronological before seal/governed correction/after, exact checkpoint selectors and decision/output ancestry, exact passive fresh-reader recovery without dispatch/append.",
+    "physical_stores": [
+      "XTDB 2.1.0",
+      "Kurrent 26.1.1",
+      "Qdrant 1.18.3"
+    ],
+    "execution_architecture": "native_linux_amd64_repository_CI",
+    "platform_resource_containment_seconds": 21600,
+    "platform_expiry_verdict": "incomplete_external_resource_containment",
+    "old_external_process_cap_seconds": 2700,
+    "attempt_budget_ms": 300000,
+    "read_operation_session_writer_budget_ms": 240000,
+    "query_budget_ms": 30000,
+    "connect_seconds": 5,
+    "relay_budget_ms": 5000,
+    "signed_owner_intent_seconds": 2700,
+    "signed_owner_intent_actions": 128,
+    "owner_enrollment": "after_full_build_connect_and_no_broker_preflight",
+    "owner_reset_or_refresh": false,
+    "original_inner_protocol_conditions_unchanged": true,
+    "latency_calibrated": false,
+    "whole_functional_qualification": false,
+    "physical_qualification": false,
+    "models_external": true,
+    "later_capability": "Relevant/irrelevant judgment intervention and decision-linked outcome through governed revision into later judgment.",
+    "supported_owner_connection_candidate": {
+      "state": "staged_on_draft_source_branch_for_physical_verification_not_adopted",
+      "baseline_source_commit": "abc726e289ef1cfa7ed23dd5f7d12b5439cebd46",
+      "alice_contract_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+      "review_sha256": "f8cd37be3461ed851ec5a320402d071e6b120206c0bc89e8c860fffd5d734fe7",
+      "changed_runtime_paths": [
+        "src/flora/selected/_phase_preparation.py",
+        "src/flora/selected/experiment_preregistration.py"
+      ],
+      "added_component_test_paths": 1,
+      "native_admission_required": false,
+      "candidate_admitted": false,
+      "source_publication_commit": "692a5b2d3f7a86b481fc73828607f432b2c29cdf",
+      "source_publication_tree": "d7afe5b50cac3fba2d945e34bb35339c14bc6b98"
+    },
+    "old_external_cap_removed_in_published_workflow": true,
+    "automatic_process_timeout": null,
+    "legacy_fixture_outer_metadata": {
+      "whole_job_seconds": 3600,
+      "hard_process_seconds": 2700,
+      "enforced_in_current_outer_workflow": false
+    },
+    "current_outer_resource_profile": {
+      "automatic_process_timeout": null,
+      "hosted_job_resource_containment_seconds": 21600,
+      "resource_expiry_verdict": "incomplete_external_resource_containment",
+      "latency_qualification": false
+    },
+    "state_before_dispatch_binding": "preparing_not_launched",
+    "publication_and_dispatch_binding": {
+      "state": "source_publication_and_single_exact_dispatch_bound",
+      "source_docs_parent": "692a5b2d3f7a86b481fc73828607f432b2c29cdf",
+      "context_docs_parent": "861fd956ec620c8d2936e71afb91c8b9f519c6a8",
+      "candidate_source_publication_commit": "692a5b2d3f7a86b481fc73828607f432b2c29cdf",
+      "candidate_source_publication_tree": "d7afe5b50cac3fba2d945e34bb35339c14bc6b98",
+      "candidate_code_publication_receipt_sha256": "171d42aa3ac4559c40d961c9756789ff30c76a6d07fc5d9d1291956120c91178",
+      "candidate_code_review_sha256": "a8229b1b794e49324e8c093ccc58d2a751f76faa8cd4d38263b64edb84f881e2",
+      "physical_run_id": 37888185839,
+      "physical_run_url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839",
+      "physical_run_head_sha": "692a5b2d3f7a86b481fc73828607f432b2c29cdf",
+      "workflow_sha256": "aacf5f25b30db411a5476437744acc65604884a463310a9f67e202bffb3a1c55",
+      "event": "workflow_dispatch",
+      "dispatches": 1,
+      "dispatch_command_exit": 0,
+      "dispatch_intent_sha256": "f1cade6f63b9c23ccf5ae862033b685154c7ff510988185344b9023970670523",
+      "dispatch_receipt_sha256": "d1f97d91d5ba9ae531340d7da283b92ec214958931c73be2d7d36b406883466f",
+      "initial_jobs_sha256": "d817ee1b03bfae91261e76d77772b62a91e1570cba07406cdc8a2dbfc02cb3a4",
+      "status_at_initial_receipt": "in_progress",
+      "conclusion_at_initial_receipt": null,
+      "initial_selected_jobs": [
+        {
+          "name": "connected-functional-history-withdrawal",
+          "job_id": 113682833188,
+          "status": "in_progress",
+          "conclusion": null,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839/job/113682833188"
+        },
+        {
+          "name": "connected-functional-positive",
+          "job_id": 113682833431,
+          "status": "in_progress",
+          "conclusion": null,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839/job/113682833431"
+        },
+        {
+          "name": "connected-functional-context-withdrawal",
+          "job_id": 113682833545,
+          "status": "in_progress",
+          "conclusion": null,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839/job/113682833545"
+        }
+      ],
+      "other_jobs_skipped": true,
+      "results_pending": true
+    }
+  },
+  "continuation_reconciliation_parents": {
+    "source": "692a5b2d3f7a86b481fc73828607f432b2c29cdf",
+    "context": "861fd956ec620c8d2936e71afb91c8b9f519c6a8",
+    "source_before_code_publication": "316f0ae1a372420804e70e5958e8f08785360215"
+  },
+  "historical_publication_snapshot": {
+    "source_before_candidate_code_publication": "316f0ae1a372420804e70e5958e8f08785360215",
+    "published_runtime_unchanged": true,
+    "physical_runs_dispatched": 0
+  },
+  "runtime_candidate_publication": "staged_on_draft_source_branch_for_physical_verification_not_adopted"
 }
