@@ -223,9 +223,14 @@
     "First three registered lineage calls returned; fourth post-intent producer barrier was sampled, but capture return, canonical publication and probe binding/cleanup remain unqualified.",
     "Eight journals close cleanly; ninth final observer errors/shutdown are unknown after containment. Prefix work/aggregate CPU do not establish total cost, exclusive cause or a speed ranking.",
     "Prior declared-source verification did not inventory all mounted bytes or establish effective observer bytecode use/equality; no mutation/difference is proved. Successor inventory/exclusion/read-only custody is bound separately.",
-    "Successor keeps the byte-identical capture oracle and same429 sources, with completion-driven action and separately bounded observation; no runtime, permission or whole-coordinator owner-TTL change is adopted."
+    "Successor keeps the byte-identical capture oracle and same429 sources, with completion-driven action and separately bounded observation; no runtime, permission or whole-coordinator owner-TTL change is adopted.",
+    "Latest capture returned; exit1 is the unchanged private probe raw plan assertion, not external containment or production semantic failure.",
+    "Tuple/list representation fault is established independently; the previous unsaved operands do not retrospectively prove semantic equality of every plan field.",
+    "Later metadata/intent/registry/model-invariance/final exact-binding checks remain unreached despite successful original cleanup and observer closure.",
+    "Target3.12.15 two positives/18 semantic mutant controls pass without fixture/capture. The reviewed oracle-only successor changes no production source, fixture, authority or timing profile;12 authoring pins/preflight/reviews/one launch intent are bound. Its result remains pending; liveness is not progress or verification.",
+    "Whole coordinator broker already enrolls after construction; later300s/240s limits remain uncalibrated and are not removed or automatically reset. No six-attempt/H-C/physical/learned/latency pass."
   ],
-  "next_action": "Await and recover the single reviewed completion-driven local Docker capture already launched with the byte-identical d84dc880 oracle and same429 frozen sources; then evaluate its actual return/binding/publication/cleanup result. Keep runtime separate from functional qualification and bounded diagnostic journals separate from the action. No admission or cost-optimization prerequisite, blind authority/TTL change or automatic extra job. Verify affected negative H/C and terminal protection after a completed positive capture; the fresh candidate stays private/unadopted. If incomplete, apply mandatory diagnosis to the reliable result before any new action; no autonomous retries.",
+  "next_action": "Await and recover the single reviewed oracle-only completion-driven complete-capture successor already launched, preserving unchanged production/fixture/authority and every original downstream check. Diagnose any new failure before further action. If fully verified, run reached affected H/C/terminal controls and the original registered six-attempt workflow. Its broker already starts after construction;300/240-second inner limits remain separate, uncalibrated conditions. No automatic reset, authority refresh, new timing profile, runtime optimization or model work is selected.",
   "admission_getter_probe": {
     "process_exit": 124,
     "classification": "incomplete_at_resource_cap_before_admission_control",
@@ -693,7 +698,7 @@
     "successor_source_result_alias_readonly": true
   },
   "completion_driven_successor": {
-    "state": "launched_result_pending",
+    "state": "completed_original_verification_exception",
     "source_files": 429,
     "capture_oracle_sha256": "d84dc8808ec5ee3ecf8a77674e580d8977cefda14fbde3b489a222a205e42b33",
     "capture_oracle_byte_identical": true,
@@ -733,17 +738,280 @@
     "exact_independent_review_sha256": "ea7e22ac2419293a8ce72a57b799be7f63c2831f6ccb4ab5edb670d553c2506c",
     "exact_intent_sha256": "ec8c58dbbb1d1cd1d717d6ba8a2e7053d0846c87196f83665b2542a4a7d11dcb",
     "launch_intent_bound": true,
-    "execution_result_bound": false,
+    "execution_result_bound": true,
     "launched_once_by_root": true,
     "started_utc": "2026-10-08T22:29:57.806691",
     "controller_session": 86786,
     "container_name": "flora-phase-handoff-completion-20261008",
     "container_id": "d41230cf52bb80e79df5f794e6c74f906ab37dc4e646ac58b851be596664324e",
     "running_at_root_launch_check": true,
-    "running_is_progress": false
+    "running_is_progress": false,
+    "completed_result": {
+      "state": "completed_original_post_capture_verification_exception",
+      "process_exit": 1,
+      "original_exception_type": "AssertionError",
+      "original_exception_location": "complete_capture_probe.py:220",
+      "automatic_process_timeout": null,
+      "explicit_external_cancel": false,
+      "controller_wall_seconds": 2489.6089999999967,
+      "capture_returned": true,
+      "capture_return_elapsed_seconds": 2479.3199386959895,
+      "capture_wall_seconds": 2416.9319139340078,
+      "capture_cpu_seconds": 2419.7793325000002,
+      "capture_query_records": 765811,
+      "capture_log_reads": 63907,
+      "native_admission_observed": true,
+      "live_preparation_observed": true,
+      "original_borrow_returned": true,
+      "first_record_assertions_212_219_returned": true,
+      "cleanup_passed": true,
+      "exact_binding_verified": false,
+      "verification_completed": false,
+      "later_checks_unreached": {
+        "probe_claim_state_and_two_receipt_assertion_221": true,
+        "probe_lineage_digest_length_assertion_222": true,
+        "probe_snapshot_validation_223": true,
+        "archive_metadata_assertions_225_227": true,
+        "archive_intent_assertions_229_231": true,
+        "post_capture_slot_and_preparation_registry_assertions_233_235": true,
+        "model_invocation_count_assertion_237": true,
+        "exact_binding_checkpoint_238": true,
+        "verification_completed_272": true,
+        "full_connected_case": true,
+        "negative_H_C_campaign": true
+      },
+      "source_and_physical_inventory_unchanged": true,
+      "declared_source_hashes_verified": 429,
+      "physical_inventory_hashes_verified": 1131,
+      "artifact_hashes_verified": 16,
+      "authoring_hashes_verified": 9,
+      "observer": {
+        "windows": 9,
+        "samples": 2444,
+        "owned_samples": 2443,
+        "errors": 0,
+        "all_windows_closed": true,
+        "all_samplers_stopped": true,
+        "coordinator_stopped": true,
+        "journal_bytes": 3656695,
+        "maximum_internal_sample_gap_seconds": 1.5849119999999957
+      },
+      "hashes": {
+        "process_receipt_sha256": "3c90bb3526f7130cac3b9944df2a73cf7991d381608fb0a01bd6fcf2b193fc02",
+        "authoring_sha256": {
+          "complete_capture_probe.py": "d84dc8808ec5ee3ecf8a77674e580d8977cefda14fbde3b489a222a205e42b33",
+          "controller.py": "d13820d0d49e73c3027f76dafea27f6c1e532bf4924c6348439cf275c12d3a39",
+          "flora-manifest.json": "30fd80a8b3a812edc9b12ae4dfd89b25b052b135b2d19ade77b426f3adc13dd0",
+          "mount-inventory.json": "abea42acead3a263eeff4d43b1233d942cd7d76ec05f1b0712a78fc7538ef3f2",
+          "owner-connection-review.json": "f8cd37be3461ed851ec5a320402d071e6b120206c0bc89e8c860fffd5d734fe7",
+          "plan.md": "4e0291bcf90f8db7802e811be89580f4ace7cfa335dcc25c5c6d17b46b342b9b",
+          "source-inventory-review.json": "fca75167d69a6cad654bb70562dd8e04b03c5a160e1abfa3cb96e5e9bb75a9dc",
+          "source-manifest.json": "f8ddeefedfdad4a4f5182f290553640f385327d098e12c8363e649584443f17d",
+          "static_observer_review.py": "5b73740281f359809b63f494955d0e3d84af7ad1b57b4cb9a36c437a3c2da0d7"
+        },
+        "artifact_sha256": {
+          "heartbeat.json": "fefc298535c73211d59a400fe67313f2a04bf238155ca3e5c970a57863847785",
+          "intent.json": "ec8c58dbbb1d1cd1d717d6ba8a2e7053d0846c87196f83665b2542a4a7d11dcb",
+          "progress.jsonl": "9cf2fb873e908504832101d104438f3218b7b82c1bfabd536073b9f258722ea3",
+          "result.json": "e86135d3e2de37806f40ed926d1a56e81bd19f6033126e5915340b1fb127d38d",
+          "stderr.log": "5044161ef0dcf86ff5201551cea089a648fb3f2301dd60660c00d91ffaba42c8",
+          "stdout.log": "e9d6ff9ef24cbe98120ac89d11862732b47852db7a7e61b5cac05f1e7cbdb84f",
+          "work-series/construction-window-01.jsonl": "2f50c7a0f6e3eca9bdcd3de6592a5318bed3d474f84b2ca998d16a32bb254856",
+          "work-series/construction-window-02.jsonl": "6bd625e35b717503142909f43d810151009146cdf862936bd2462c6372720a93",
+          "work-series/construction-window-03.jsonl": "bb75ef95cea9fc4e22660f393385a3366097441a26908c7afba259c7ef5b8dc6",
+          "work-series/construction-window-04.jsonl": "15d7af5f88a9d4943fef71f232e0eb3bfef3ab82531dba652de73676dbcb3f71",
+          "work-series/construction-window-05.jsonl": "b02594f74a14439a3e173f132999d7d7724046e481961fb1b8b8f7d1acc2411b",
+          "work-series/construction-window-06.jsonl": "1cdd561520f20bb784fff9b9b0e8e01f3dc6b4f0072df52f2edaaaf93306d486",
+          "work-series/construction-window-07.jsonl": "e9839a476833d11eddeb0d439b529d2e438260b1b11bd293aca4bac63e3779d7",
+          "work-series/construction-window-08.jsonl": "2d422d138a753a004ac895070ed6620ca53f8d14c9d5e9723a8c826b43295571",
+          "work-series/construction-window-09.jsonl": "aafd7baa8783f86a581652e9abc0917f1ee112ab9caee8eb0af05765f00314f2",
+          "work-series/construction-windows.jsonl": "348648641aabe9ac74a8d90cac687f310ff89ac4bb916052cceb2dfb5c021085"
+        },
+        "independent_audit_sha256": "716ccb8604713f4944504023fdf0b46be3ddfa415a15f74af85844fc19ef07c8",
+        "independent_audit_note_sha256": "e82e7ea5f721f110d0018b2153b11d9992fad01cf8f727e07cb83bc509400f82",
+        "oracle_review_sha256": "d5b50bfa4a1f787e7f47c4ef91c2b0ea7c3d7994dc1dbe62b9879c6ab4767c39",
+        "oracle_findings_sha256": "ecf74a968b6fbc31f4afef399247d8e49010ab7b6526becfb08c2a39237416fd",
+        "oracle_pure_controls_sha256": "8105a586cb7737b54a257da35c379963ba990bb6319df019a8c7b46663baa394",
+        "serialization_research_sha256": "a4571152ebd6ead449a732ae737ce82680ded2708612cd3f62383cd104f4367f",
+        "workflow_review_sha256": "206a53451c27b50010571c5118c39a0383da16cfcab54d1ca5c1b3a7911af6fa",
+        "target_control_sha256": "344baa7be4d8459f07c8b47d85ec6c69f70e262ee896d50f963f8a64d8661a0d"
+      },
+      "test_validity": "raw_plan_oracle_false_verdict_from_JSON_tuple_list_representation",
+      "actual_returned_plan_semantic_equality_unmeasured": true,
+      "original_exception_and_prior_containment_results_preserved": true,
+      "candidate_admitted": false,
+      "physical_qualification": false,
+      "learning_qualification": false,
+      "latency_qualification": false
+    }
   },
   "completion_reconciliation_parents": {
     "source": "878f538244b07ab26003ced5d121cc0f7c18b29f",
     "context": "a110db553df52a2b995d0ea18d60f97fc7ee7971"
+  },
+  "plan_oracle_diagnosis": {
+    "state": "faulty_probe_comparison_diagnosed",
+    "exact_prior_probe_sha256": "d84dc8808ec5ee3ecf8a77674e580d8977cefda14fbde3b489a222a205e42b33",
+    "production_source_changes": 0,
+    "canonical_codec_changes": 0,
+    "authority_changes": 0,
+    "representation_mismatch_fields": [
+      "exact_claim_ids",
+      "graph_source_event_ids"
+    ],
+    "mechanism": "plan_record preserves tuples; capture _plain JSON roundtrip yields lists; Python raw sequence equality requires the same type.",
+    "existing_consumer_contract": "plan_from_record reconstructs typed tuples/routes, validates and requires whole JSON-normalized record equality; snapshot.plan uses it.",
+    "pure_host_controls": {
+      "python": "3.13.5",
+      "canonical_bytes_and_typed_roundtrip_equal": true,
+      "semantic_mutations": 7,
+      "ordered_sequence_changes": 2,
+      "invalid_or_noncanonical_inputs": 6,
+      "original_fault_reproduced": true,
+      "fixture_or_capture_executed": false
+    },
+    "target_interpreter_controls": {
+      "python": "3.12.15 (main, Oct  1 2026, 21:52:41) [GCC 14.2.0]",
+      "root_reported_process_exit": 0,
+      "positives": 2,
+      "semantic_mutants_rejected": 18,
+      "result_sha256": "344baa7be4d8459f07c8b47d85ec6c69f70e262ee896d50f963f8a64d8661a0d",
+      "candidate_probe_sha256": "d3cbc575152fea1ce346d6352e3ed9ca7280617e7e58d2fa17a565bf65ae6744",
+      "actual_old_and_candidate_predicates": true,
+      "expected_records_hand_derived": true,
+      "original_false_verdict_reproduced": true,
+      "runtime_package_imports": false,
+      "fixture_or_capture_executed": false
+    },
+    "proposed_oracle_only_correction": "Compare complete records using existing canonical JSON bytes and typed snapshot-plan roundtrip; retain every field/order and all downstream checks. Semantic equality of the previous unsaved operands remains unmeasured.",
+    "pins": {
+      "independent_audit_sha256": "716ccb8604713f4944504023fdf0b46be3ddfa415a15f74af85844fc19ef07c8",
+      "independent_audit_note_sha256": "e82e7ea5f721f110d0018b2153b11d9992fad01cf8f727e07cb83bc509400f82",
+      "oracle_review_sha256": "d5b50bfa4a1f787e7f47c4ef91c2b0ea7c3d7994dc1dbe62b9879c6ab4767c39",
+      "oracle_findings_sha256": "ecf74a968b6fbc31f4afef399247d8e49010ab7b6526becfb08c2a39237416fd",
+      "oracle_pure_controls_sha256": "8105a586cb7737b54a257da35c379963ba990bb6319df019a8c7b46663baa394",
+      "serialization_research_sha256": "a4571152ebd6ead449a732ae737ce82680ded2708612cd3f62383cd104f4367f",
+      "workflow_review_sha256": "206a53451c27b50010571c5118c39a0383da16cfcab54d1ca5c1b3a7911af6fa",
+      "target_control_sha256": "344baa7be4d8459f07c8b47d85ec6c69f70e262ee896d50f963f8a64d8661a0d"
+    },
+    "primary_sources": [
+      {
+        "url": "https://docs.python.org/3.12/library/json.html#encoders-and-decoders",
+        "mechanism": "tuple/list encode as arrays; arrays decode as lists"
+      },
+      {
+        "url": "https://docs.python.org/3.12/library/stdtypes.html#common-sequence-operations",
+        "mechanism": "sequence equality includes container type"
+      },
+      {
+        "url": "https://github.com/python/cpython/blob/v3.12.15/Lib/json/encoder.py#L375",
+        "mechanism": "same encoder branch handles list and tuple"
+      },
+      {
+        "url": "https://www.rfc-editor.org/rfc/rfc8785.html#section-3.2.3",
+        "mechanism": "canonical object-key ordering preserves array order",
+        "limit": "Project codec is not claimed RFC8785 compliant; no codec migration"
+      },
+      {
+        "url": "https://docs.python.org/3.12/library/asyncio-task.html#asyncio.wait_for",
+        "mechanism": "timeout cancels the task; cancellation completion can exceed nominal timeout",
+        "limit": "No timing profile or production cancellation change"
+      }
+    ]
+  },
+  "whole_functional_workflow_review": {
+    "review_sha256": "206a53451c27b50010571c5118c39a0383da16cfcab54d1ca5c1b3a7911af6fa",
+    "next_whole_stage": "Original registered BEFORE/correction/AFTER six-attempt coordinator case and separately reached affected H/C/terminal controls.",
+    "positive_oracles": "Six success receipts, equal authorized originals/full-ablation selected context, chronological seals/update, exact old/new/ablation phase selectors, four relays/two provider exchanges, canonical decision/output ancestry and fresh-controller passive recovery.",
+    "owner_intent": {
+      "seconds": 2700,
+      "maximum_signed_actions": 128,
+      "starts_after_build_connect_and_no_broker_preflight": true,
+      "reset_or_automatic_refresh_authorized": false,
+      "inference_disclosure_or_evaluation_grant_authority": false
+    },
+    "existing_inner_bounds": {
+      "attempt_ms": 300000,
+      "read_operation_ms": 240000,
+      "writer_operation_ms": 240000,
+      "read_session_ms": 240000,
+      "backend_query_ms": 30000,
+      "connect_seconds": 5,
+      "relay_wall_ms": 5000
+    },
+    "later_limits_calibrated": false,
+    "outer_completion_removal_alone_removes_inner_gates": false,
+    "per_read_action_session": true,
+    "next_causal_capability": "Relevant correction versus irrelevant-change invariance and a decision-linked outcome through governed revision into later native judgment; existing scenario has no such contrast/outcome and fictional/precomputed outputs.",
+    "models_external": true,
+    "no_new_profile_or_production_authority_change": true
+  },
+  "plan_oracle_successor": {
+    "state": "launched_result_pending",
+    "area": "phase-plan-verification-20261008",
+    "scope": "oracle-only complete controlled-port capture verification",
+    "unchanged_production_source_files": 429,
+    "unchanged_physical_inventory_files": 1131,
+    "production_source_changes": 0,
+    "fixture_changes": 0,
+    "authority_changes": 0,
+    "profile_changes": 0,
+    "intended_change": "Only faulty private probe plan predicate plus immediate digest checkpoint; all downstream assertions retained.",
+    "no_native_admission_requirement": true,
+    "completion_driven": true,
+    "physical_qualification": false,
+    "learning_qualification": false,
+    "latency_qualification": false,
+    "candidate_admitted": false,
+    "exact_plan_sha256": "9ac1f9966c059e348dc220a48c170d108cfb3096de5bd5ad017fc672acad3e2f",
+    "exact_probe_sha256": "d3cbc575152fea1ce346d6352e3ed9ca7280617e7e58d2fa17a565bf65ae6744",
+    "exact_controller_sha256": "3b07a442c0cb694207b4ee81b9f758f47c0da85e3f233389e18e3c75f0a41f19",
+    "exact_input_review_sha256": "23e7655cb66a6e131c16213fe34a2fb2e655d6f1ea9f8eb416d7d73060c347fc",
+    "exact_preparation_receipt_sha256": "0c8b0b52eec3b9f4544e371af27f80ed4a9e6850db11dcf9a518f7a48f9c7f15",
+    "exact_inventory_review_sha256": "28f0ee51ed4d50925ba00a7d80d6df2331027e18a897e22465cc2ced42905842",
+    "exact_mount_inventory_sha256": "abea42acead3a263eeff4d43b1233d942cd7d76ec05f1b0712a78fc7538ef3f2",
+    "cached_image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+    "authoring_sha256": {
+      "complete_capture_probe.py": "d3cbc575152fea1ce346d6352e3ed9ca7280617e7e58d2fa17a565bf65ae6744",
+      "controller.py": "3b07a442c0cb694207b4ee81b9f758f47c0da85e3f233389e18e3c75f0a41f19",
+      "flora-manifest.json": "30fd80a8b3a812edc9b12ae4dfd89b25b052b135b2d19ade77b426f3adc13dd0",
+      "mount-inventory.json": "abea42acead3a263eeff4d43b1233d942cd7d76ec05f1b0712a78fc7538ef3f2",
+      "oracle-green.json": "f83da7f905679196f1c8e94c757aaca1135204cb722e177a7dbce62ed0765aea",
+      "oracle-red.json": "602db6fe1d78c129be3127413a194002f82fc7487828176b6a93b58504ea18f6",
+      "oracle_controls.py": "bb5e86e391c54106429e414defc66e0a7006de28fd0aeffbb9ee81a15b2d64df",
+      "owner-connection-review.json": "f8cd37be3461ed851ec5a320402d071e6b120206c0bc89e8c860fffd5d734fe7",
+      "plan.md": "9ac1f9966c059e348dc220a48c170d108cfb3096de5bd5ad017fc672acad3e2f",
+      "source-inventory-review.json": "28f0ee51ed4d50925ba00a7d80d6df2331027e18a897e22465cc2ced42905842",
+      "source-manifest.json": "f8ddeefedfdad4a4f5182f290553640f385327d098e12c8363e649584443f17d",
+      "static_observer_review.py": "5b73740281f359809b63f494955d0e3d84af7ad1b57b4cb9a36c437a3c2da0d7"
+    },
+    "authoring_hashes_verified": 12,
+    "physical_inventory_hashes_verified": 1131,
+    "root_reported_dry_preflight_exit": 0,
+    "exact_independent_review_sha256": "a44a49eeb13bb585abac967f45e3597b8aea47031673e55428ccb86acdd66877",
+    "exact_root_review_sha256": "382f710b5ba18d089aa4f99b15bad110b90ec67e65723b20dbad583a2c47f765",
+    "exact_intent_sha256": "6d3af1468492a2db1ddcb019c571ca1a1b384fd054ae337863a81f86f3323f8e",
+    "exact_launch_receipt_sha256": "611f3b59a062577bb7c60edd15efdaf79156f6b7b3ccd218077acd13d31b6946",
+    "independent_review_outcome": "no_static_blockers",
+    "root_reported_launches": 1,
+    "launch": {
+      "controller_session_id": 26374,
+      "container_id": "689200ed9886be1d40a31b1f063b776121035a07c22765b9e7df92e1f336fb63",
+      "container_name": "flora-phase-plan-verification-20261008",
+      "started_at_utc": "2026-10-09T03:35:34.365073369Z",
+      "recorded_at_utc": "2026-10-09T03:36:38.6764315+00:00",
+      "running_at_observation": true,
+      "source_mounts_readonly_verified": true,
+      "root_filesystem_readonly_verified": true,
+      "network_none_verified": true,
+      "automatic_completion_timeout": null,
+      "liveness_is_progress": false
+    },
+    "launch_intent_bound": true,
+    "execution_result_bound": false
+  },
+  "plan_oracle_reconciliation_parents": {
+    "source": "bd344d6d324d9bb0ab172786439c5c94d2c63340",
+    "context": "202b955cd166c91a573e3379ecf28eda8d640994"
   }
 }

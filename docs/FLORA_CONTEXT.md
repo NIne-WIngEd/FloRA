@@ -1,30 +1,28 @@
 # FloRA continuation context
 
-## Current continuation - October 8: functional completion recalibrated
+## Current continuation - October 8: capture returned; oracle-only successor result pending
 
-The 45-minute job cutoff was mistakenly retained as a full-completion gate after
-latency was deferred. The latest 124 is incomplete containment, not semantic
-failure; preserve its original conditions and logical tests. Native preparation
-and borrowing succeeded. Three registered lineage checks returned; the fourth
-continued after intent insertion. Capture return, publication and cleanup remain
-unverified. Another admission fix or optimization prerequisite is unsupported.
+Completion-driven capture returned; the original probe failed
+its raw plan comparison. Capture stores JSON arrays; the expected Python record
+retains tuples. Independent controls establish this false
+verdict. Cleanup and source custody passed; later metadata/intent, registry and
+model-invariance checks remain unreached. Preserve exit1 and prior timed
+stops; production plan defects and full verification remain unproved.
 
-One completion-driven local Docker successor is reviewed and launched once with
-the identical capture oracle and sources. Exact intent/controller/input/inventory
-pins are bound; its result remains pending. Keep original
-return/binding/cleanup as the criterion and report runtime separately. Journals
-stay bounded; later liveness alone cannot establish progress or resolve a stall.
-Prior custody omitted mounted resources and eligible observer cache files; the
-successor binds full inventory and read-only source access without changing
-authority or the oracle.
+Reviewed oracle-only successor is launched once with production,
+fixture, authority and profile unchanged. Exact review, intent and custody pins
+are bound; its result remains pending. Liveness is not progress or verification.
+It compares the entire canonical plan and typed roundtrip, retaining downstream
+checks. Recover that one result before further action.
 
-Recover that result, then verify affected negative H/C/terminal protection
-and resume the registered BEFORE/correction/AFTER comparison. Whole-coordinator
-owner expiry is a separate later fixture issue. Candidate stays private and
-unadopted; personality/MFM stay external. No physical, learned or latency claim.
-FBM 164 remains partial. Exact evidence and bindings are centralized in the
-[candidate note](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md) and
-[evidence JSON](evidence/2026-10-08_capture_boundary_candidate.json).
+After capture verification, complete reached affected H/C/terminal controls and
+the original registered BEFORE/correction/AFTER six-attempt comparison. Its signed
+owner already enrolls after construction; later attempt/read/session/writer
+limits remain separate uncalibrated conditions, with no automatic reset or
+authority refresh. Relevant/irrelevant judgment and decision-linked outcome
+remain later capability. Candidate stays private/unadopted; models stay external.
+FBM 164 remains partial. Evidence and four answers: [candidate note](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md)
+and [evidence JSON](evidence/2026-10-08_capture_boundary_candidate.json).
 
 ## Historical snapshot — October7: complete construction observation recovered
 
