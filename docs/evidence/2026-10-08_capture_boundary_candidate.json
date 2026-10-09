@@ -228,9 +228,13 @@
     "Tuple/list representation fault is established independently; the previous unsaved operands do not retrospectively prove semantic equality of every plan field.",
     "Later metadata/intent/registry/model-invariance/final exact-binding checks remain unreached despite successful original cleanup and observer closure.",
     "Target3.12.15 two positives/18 semantic mutant controls pass without fixture/capture. The reviewed oracle-only successor changes no production source, fixture, authority or timing profile;12 authoring pins/preflight/reviews/one launch intent are bound. Its result remains pending; liveness is not progress or verification.",
-    "Whole coordinator broker already enrolls after construction; later300s/240s limits remain uncalibrated and are not removed or automatically reset. No six-attempt/H-C/physical/learned/latency pass."
+    "Whole coordinator broker already enrolls after construction; later300s/240s limits remain uncalibrated and are not removed or automatically reset. No six-attempt/H-C/physical/learned/latency pass.",
+    "Run37888185839 is three incomplete resource-cancelled tests under the explicit hosted6h maximum, not an assertion failure, functional pass/failure or causal verdict.",
+    "Both BEFORE publications and positive qualified update returned; full build, signed broker, coordinator attempts/recovery and actual H/C withdrawals remain downstream. Their authority/expiry semantics were not tested.",
+    "Early299-sample journals cover only the first300s, without close records; six-hour operation, exclusive cost, total CPU and original cleanup are unknown.",
+    "Magnolia CPU/configured wall limits and existing udocker cache do not prove actual selected-backend availability or compatibility. Deployment preflight/decision remains pending and no successor job is launched."
   ],
-  "next_action": "Recover this single in-progress physical all-three-case workflow without redispatch. Validate original six-attempt positive/passive recovery and separately reached H/C controls, exact source/services and original signed inner conditions. Treat platform expiry as incomplete; diagnose any first reached discrepancy before repair. Preserve the controlled complete-capture pass and all earlier failed evidence. Models stay external; relevant/irrelevant intervention and decision-linked outcome/revision follow. No admission/latency optimization prerequisite, intent reset or full Alice platform expansion.",
+  "next_action": "Resume and recover the existing single public-payload transfer; do not restage, retransmit or redispatch from pending state. After successful staging receipt, verify all63 remote files and reviewed launch bytes before root submits at most one short deployment-only CPU compatibility job. Bind its result/cleanup before deciding one unchanged physical three-test execution on suitable longer native placement. Preserve original assertions/inner authority, external models and elapsed-time separation; no architecture optimization or optional-admission prerequisite follows from hosted cancellation.",
   "admission_getter_probe": {
     "process_exit": 124,
     "classification": "incomplete_at_resource_cap_before_admission_control",
@@ -1334,11 +1338,11 @@
     "source": "bd344d6d324d9bb0ab172786439c5c94d2c63340",
     "context": "202b955cd166c91a573e3379ecf28eda8d640994"
   },
-  "current_state": "controlled_capture_verified_physical_workflow_in_progress",
-  "recorded_at_utc": "2026-10-09T05:28:53.333127+00:00",
+  "current_state": "controlled_capture_verified_physical_workflow_incomplete_resource_cancelled",
+  "recorded_at_utc": "2026-10-09T21:48:02.502758+00:00",
   "historical_guard_candidate_fields": "candidate_files/new_test/unresolved_review and original boundary sections preserve the retired guard-composition stage; they are not the supported history-owner integration candidate.",
   "connected_workflow_continuation": {
-    "state": "physical_workflow_in_progress_results_pending",
+    "state": "completed_incomplete_resource_cancelled",
     "next_stage_plan_sha256": "5126f8208cfa021c21e3d23a682be4698032639a2f76e278c9aefb4c94ad042d",
     "next_stage_review_sha256": "7845c3e6255d98a1904371257d6385650a58632f25e9bca0b383e53d4ebcaabd",
     "expected_test_id_count": 3,
@@ -1445,7 +1449,250 @@
         }
       ],
       "other_jobs_skipped": true,
-      "results_pending": true
+      "results_pending": false
+    },
+    "completed_result": {
+      "state": "completed_incomplete_resource_cancelled",
+      "run_id": 37888185839,
+      "run_url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839",
+      "head_sha": "692a5b2d3f7a86b481fc73828607f432b2c29cdf",
+      "conclusion": "cancelled",
+      "cause": "explicit_hosted_job_six_hour_maximum",
+      "incomplete_tests": 3,
+      "observed_assertion_failures": 0,
+      "semantic_pass_or_failure_established": false,
+      "archive_digests_verified": 3,
+      "extracted_files_verified": 33,
+      "source_paths_verified_per_case": 429,
+      "source_unchanged": true,
+      "all_cases_two_before_captures_published": true,
+      "positive_qualified_update_recorded": true,
+      "full_build_returned": false,
+      "coordinator_execution_reached": false,
+      "signed_owner_enrollment_reached": false,
+      "H_C_withdrawal_interventions_reached": false,
+      "exact_final_unfinished_operation_localized": false,
+      "raw_final_strict_result_present": false,
+      "cleanup_completed_verified": false,
+      "physical_qualification": false,
+      "learning_qualification": false,
+      "latency_qualification": false,
+      "candidate_admitted": false,
+      "recovery_receipt_sha256": "c0fc670bfd106ba5a22576828112024ae727e48380095efb2b607d7d4370a805",
+      "artifact_recovery_receipt_sha256": "18159e1978fe246c939b544ed7a3260e07797246fc6989eee973c658eba9728d",
+      "raw_evidence_sha256": {
+        "run.json": "c4339919307cac5d3ec293ea9882cc75a2c821db8fb8949544c4717a42201617",
+        "jobs.json": "1d2140aaa75995d8c9f219cf033fc0ae360889e4d314b88de097472489be52a3",
+        "artifacts.json": "13ed7c9888dbfd38d9677cb433407ef793b947c748c8ffdd0cd02b8c1d967feb",
+        "raw-run.log": "97a4f016c0ed8772c5c8424a26ccb01aace6e7e9481388d7e24e852d33a4cb56"
+      },
+      "archive_sha256": {
+        "connected-functional-verification-positive.zip": "013e26bae4648cb65ec940d92a6d1ff7bdc31cf96f0a7578d0ccb4e9c88f019c",
+        "connected-functional-verification-history-withdrawal.zip": "27468174a7fdb02eba3f0fcfc11e2a25f1053f5245caae1b88a640c9659924cc",
+        "connected-functional-verification-context-withdrawal.zip": "dd26c7870e4bd426f95caba8fa78d36b7c7b7d2e1f9acc9cbbc5b89d22d761c5"
+      },
+      "cases": [
+        {
+          "name": "history-withdrawal",
+          "job_id": 113682833188,
+          "conclusion": "cancelled",
+          "started_at": "2026-10-09T05:21:29Z",
+          "completed_at": "2026-10-09T11:22:06Z",
+          "annotation": "The job has exceeded the maximum execution time of 6h0m0s",
+          "annotation_sha256": "aa2edca500dd22eb02f485bbe72c67d946f080483fb0ed88abef4d97b92e4f31",
+          "source_pre_post_sha256": "12e366cc0a598cda8579fbce6e8f3e8beca3ffa71eb44e0b512d719424972ff0",
+          "source_paths": 429,
+          "source_pre_post_unchanged": true,
+          "completed_markers": [
+            {
+              "marker": "source-and-baseline-setup-complete",
+              "elapsed_seconds": 9.263
+            },
+            {
+              "marker": "cohort-registered",
+              "elapsed_seconds": 19.134
+            },
+            {
+              "marker": "recipe-registered",
+              "elapsed_seconds": 33.869
+            },
+            {
+              "marker": "anchor-registered",
+              "elapsed_seconds": 54.125
+            },
+            {
+              "marker": "original-inputs-registered",
+              "elapsed_seconds": 100.104
+            },
+            {
+              "marker": "before-full-capture-published",
+              "elapsed_seconds": 10039.834
+            },
+            {
+              "marker": "before-ablation-capture-published",
+              "elapsed_seconds": 21057.367
+            }
+          ],
+          "last_completed_marker": {
+            "marker": "before-ablation-capture-published",
+            "elapsed_seconds": 21057.367
+          },
+          "strict_result_present": false,
+          "final_process_receipt_present": false,
+          "final_time_cpu_record_present": false,
+          "journal": {
+            "samples": 299,
+            "owned_samples": 298,
+            "last_sample_seconds": 299.082173,
+            "close_records": 0,
+            "sample_truncations": 0,
+            "sample_thread_caps": 0,
+            "final_observer_shutdown_verified": false
+          }
+        },
+        {
+          "name": "positive",
+          "job_id": 113682833431,
+          "conclusion": "cancelled",
+          "started_at": "2026-10-09T05:21:29Z",
+          "completed_at": "2026-10-09T11:22:10Z",
+          "annotation": "The job has exceeded the maximum execution time of 6h0m0s",
+          "annotation_sha256": "5523c196f5b2d8be73ff20f28d70d5d0e4b6b758b5d462cdd824a7112d246e0b",
+          "source_pre_post_sha256": "12e366cc0a598cda8579fbce6e8f3e8beca3ffa71eb44e0b512d719424972ff0",
+          "source_paths": 429,
+          "source_pre_post_unchanged": true,
+          "completed_markers": [
+            {
+              "marker": "source-and-baseline-setup-complete",
+              "elapsed_seconds": 6.846
+            },
+            {
+              "marker": "cohort-registered",
+              "elapsed_seconds": 13.763
+            },
+            {
+              "marker": "recipe-registered",
+              "elapsed_seconds": 24.364
+            },
+            {
+              "marker": "anchor-registered",
+              "elapsed_seconds": 39.68
+            },
+            {
+              "marker": "original-inputs-registered",
+              "elapsed_seconds": 69.947
+            },
+            {
+              "marker": "before-full-capture-published",
+              "elapsed_seconds": 6446.388
+            },
+            {
+              "marker": "before-ablation-capture-published",
+              "elapsed_seconds": 13026.581
+            },
+            {
+              "marker": "before-seal-committed",
+              "elapsed_seconds": 16572.717
+            },
+            {
+              "marker": "before-probe-complete",
+              "elapsed_seconds": 19916.923
+            },
+            {
+              "marker": "update-gate-committed",
+              "elapsed_seconds": 19922.107
+            },
+            {
+              "marker": "selected-head-replacement-complete",
+              "elapsed_seconds": 19937.522
+            },
+            {
+              "marker": "qualified-update-recorded",
+              "elapsed_seconds": 19944.475
+            }
+          ],
+          "last_completed_marker": {
+            "marker": "qualified-update-recorded",
+            "elapsed_seconds": 19944.475
+          },
+          "strict_result_present": false,
+          "final_process_receipt_present": false,
+          "final_time_cpu_record_present": false,
+          "journal": {
+            "samples": 299,
+            "owned_samples": 298,
+            "last_sample_seconds": 299.090276,
+            "close_records": 0,
+            "sample_truncations": 0,
+            "sample_thread_caps": 0,
+            "final_observer_shutdown_verified": false
+          }
+        },
+        {
+          "name": "context-withdrawal",
+          "job_id": 113682833545,
+          "conclusion": "cancelled",
+          "started_at": "2026-10-09T05:21:29Z",
+          "completed_at": "2026-10-09T11:22:11Z",
+          "annotation": "The job has exceeded the maximum execution time of 6h0m0s",
+          "annotation_sha256": "7bee3dad3ba0f728231174ec2c35e9514307c4494b22fdaf21704c3ff7b496b5",
+          "source_pre_post_sha256": "12e366cc0a598cda8579fbce6e8f3e8beca3ffa71eb44e0b512d719424972ff0",
+          "source_paths": 429,
+          "source_pre_post_unchanged": true,
+          "completed_markers": [
+            {
+              "marker": "source-and-baseline-setup-complete",
+              "elapsed_seconds": 8.92
+            },
+            {
+              "marker": "cohort-registered",
+              "elapsed_seconds": 18.097
+            },
+            {
+              "marker": "recipe-registered",
+              "elapsed_seconds": 32.042
+            },
+            {
+              "marker": "anchor-registered",
+              "elapsed_seconds": 51.072
+            },
+            {
+              "marker": "original-inputs-registered",
+              "elapsed_seconds": 91.727
+            },
+            {
+              "marker": "before-full-capture-published",
+              "elapsed_seconds": 8600.876
+            },
+            {
+              "marker": "before-ablation-capture-published",
+              "elapsed_seconds": 17738.167
+            }
+          ],
+          "last_completed_marker": {
+            "marker": "before-ablation-capture-published",
+            "elapsed_seconds": 17738.167
+          },
+          "strict_result_present": false,
+          "final_process_receipt_present": false,
+          "final_time_cpu_record_present": false,
+          "journal": {
+            "samples": 299,
+            "owned_samples": 298,
+            "last_sample_seconds": 299.068524,
+            "close_records": 0,
+            "sample_truncations": 0,
+            "sample_thread_caps": 0,
+            "final_observer_shutdown_verified": false
+          }
+        }
+      ],
+      "diagnosis_sha256": "4bf30aef92fb049cb93ab2c491b3e504112e3ce795f94c471348eee68b8dbe4b",
+      "source_boundaries": {
+        "positive": "After qualified-update marker at fixture813; control_grants814 and first AFTER helper through bind/capture/route/observed_binding/publish may be unfinished.",
+        "H_C": "After second BEFORE capture-published marker756; postcapture assertions761–763 or seal_before764 may be unfinished before marker765."
+      },
+      "sampling_limit": "Only299 samples/298 owned per case near0–299s of early first capture, no close record; no six-hour stack, total CPU, causal cost or final shutdown/cleanup evidence."
     }
   },
   "continuation_reconciliation_parents": {
@@ -1458,5 +1705,100 @@
     "published_runtime_unchanged": true,
     "physical_runs_dispatched": 0
   },
-  "runtime_candidate_publication": "staged_on_draft_source_branch_for_physical_verification_not_adopted"
+  "runtime_candidate_publication": "staged_on_draft_source_branch_for_physical_verification_not_adopted",
+  "next_execution_placement": {
+    "state": "public_payload_upload_pending_no_job",
+    "execution_target": "Magnolia_native_AMD64_CPU",
+    "purpose": "Allow unchanged physical workflow to complete beyond GitHub hosted resource limit; elapsed time remains separate from functional acceptance.",
+    "root_reported_access_verified": true,
+    "root_reported_cpu_architecture": "AMD64",
+    "root_reported_node_max_time": "UNLIMITED",
+    "root_reported_qos": "normal_without_MaxWall",
+    "root_reported_docker_daemon_available": false,
+    "root_reported_existing_udocker_version": "1.3.17",
+    "root_reported_existing_udocker_mode_cache": "P2",
+    "backend_compatibility_verified": false,
+    "actual_backend_availability_established": false,
+    "allocation_or_backend_health_claim": false,
+    "deployment_preflight_id": null,
+    "deployment_preflight_receipt_sha256": null,
+    "job_launched": false,
+    "launch_intent_sha256": null,
+    "unchanged_original_test_ids_and_assertions": true,
+    "original_inner_budgets_and_permissions_preserved": true,
+    "authority_reset_or_refresh": false,
+    "native_admission_widening": false,
+    "runtime_architecture_patch_selected": false,
+    "models_external": true,
+    "latency_calibration_deferred": true,
+    "jobs_dispatched": 0,
+    "remote_mutations": true,
+    "remote_mutation_scope": "New private public-payload root creation and its single pending upload only; no services or allocation.",
+    "packaging": {
+      "state": "complete_verified_public_payload",
+      "vendor_archives": 4,
+      "vendor_architecture": "AMD64",
+      "image_archive_receipt_ref": "work/connected-result-diagnosis-20261009/deployment-image-archives-verified/archive-receipt.json",
+      "image_archive_receipt_sha256": "1539566aa1cbfe2817a448beb84bc6ca9f650e2c0fb42a7208fee2204304a645",
+      "pinned_distributions": 53,
+      "wheel_archive_members_verified": 55,
+      "wheel_payload_receipt_ref": "work/connected-result-diagnosis-20261009/deployment-wheel-payload-final/receipt.json",
+      "wheel_payload_receipt_sha256": "6337b11e04efe85d51f2c7bd4fa64601784e1517aeb987a28f64659887494c54",
+      "hashed_lock_sha256": "38f184f6b8c1b4e1d436236e2332f9886aea18cddd380495a576b9a1df956f88",
+      "original_pins_changed": false,
+      "flora_runtime_or_vendor_execution": false,
+      "private_source_or_model_payloads": 0,
+      "authoring_failures_preserved": true,
+      "authoring_failure_classification": "Packaging custody/validation faults (version-string convention, receipt field schema, field-name collision, vendored metadata scope), not evidence of FloRA/backend defect.",
+      "packaging_diagnosis_ref": "work/connected-result-diagnosis-20261009/packaging-diagnosis.md",
+      "packaging_diagnosis_sha256": "d9869e25e2416b33f13a461a2384b841ae0b1b187b8c6aa29470307a75b0f97e"
+    },
+    "public_payload_transfer": {
+      "state": "upload_pending",
+      "stage_intent_ref": "work/connected-result-diagnosis-20261009/magnolia-payload-stage/intent.json",
+      "stage_intent_sha256": "78a2c47c59ada9d8c4f6e0db259d57044104d3511bf686bfe9ab5aa68a2ae501",
+      "files": 63,
+      "bytes": 1554780418,
+      "payload_manifest_ref": "work/connected-result-diagnosis-20261009/magnolia-payload-stage/payload-manifest.json",
+      "payload_manifest_sha256": "b8e6da5ecc738f9703f11bb52404b6ead88df9dc3815d9cb9e5893f93f6125e2",
+      "private_root_creation_exit": 0,
+      "create_process_ref": "work/connected-result-diagnosis-20261009/magnolia-payload-stage/create-process.json",
+      "create_process_sha256": "267aefd78a72c9453478263faba0b4430d9c3bd7f3b3f027154ac04225645a88",
+      "upload_session": 42896,
+      "upload_receipt_sha256": null,
+      "remote_inventory_verified": false,
+      "private_source_or_model_payloads": 0,
+      "restart_or_retransmit_authorized": false
+    },
+    "reviewed_deployment_preflight": {
+      "state": "authoring_reviewed_unlaunched",
+      "controller_ref": "work/connected-result-diagnosis-20261009/preflight-review/magnolia_deployment_preflight.py",
+      "controller_sha256": "f0bc3e6fa944eed0694592bd022771eab8fa477b25849d56b223ab2f22f7c7d4",
+      "template_ref": "work/connected-result-diagnosis-20261009/preflight-review/magnolia_deployment_preflight.sbatch.template",
+      "template_sha256": "3e8760ae3210865ce9b6cdd390371cc730076d4accde3740fe013bf2d35b0784",
+      "authoring_review_ref": "work/connected-result-diagnosis-20261009/preflight-review/review-receipt.json",
+      "authoring_review_sha256": "d47413f5caa5a2be095f9eb3c6c8e5e6fb11b9b7312d1c70cfd4e60deb20c958",
+      "launch_carrier_ref": "work/launch_flora_magnolia_preflight_oct9.py",
+      "launch_carrier_sha256": "4b4c9d16a7a761702dfb83874fe1d8966001b9f0850af09e5d2dfd32dc1e154c",
+      "successful_stage_receipt_required": true,
+      "remote_63_file_inventory_before_dispatch_required": true,
+      "resource_wall_seconds": 1800,
+      "nodes": 1,
+      "exclusive": true,
+      "cpus": 20,
+      "whole_node_memory": true,
+      "gpu_requested": false,
+      "controller_execution_deadline_seconds": null,
+      "deployment_only": true,
+      "flora_functional_deadline": false,
+      "functional_or_learning_or_latency_qualification": false,
+      "job_id": null,
+      "dispatch_receipt_sha256": null,
+      "jobs_dispatched": 0
+    }
+  },
+  "resource_cancellation_reconciliation_parents": {
+    "source": "f3e4d647089bfe489ec0cf5ddaa4fe3463b60c98",
+    "context": "05fb1a67f633e3f2b07810d9d7e51429602774c2"
+  }
 }
