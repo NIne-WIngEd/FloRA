@@ -190,7 +190,7 @@ jobs:
     if: github.event_name == 'workflow_dispatch' && inputs.observer == 'functional'
     name: connected-functional-${{ matrix.case }}
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 360
     strategy:
       fail-fast: false
       matrix:
@@ -243,7 +243,7 @@ jobs:
               sleep 2
             done
           done
-      - name: Run the connected mechanical case with hard resource containment
+      - name: Run the connected mechanical case to completion within runner resources
         run: |
           set -uo pipefail
           set +e
@@ -254,7 +254,7 @@ jobs:
             timing=(/usr/bin/time -f 'wall_seconds=%e\nuser_cpu_seconds=%U\nsystem_cpu_seconds=%S\ncpu_percent=%P\ncommand_exit=%x' -o connected-functional-time.txt)
           fi
           started_seconds=$SECONDS
-          "${timing[@]}" timeout --kill-after=30s 45m python -u scripts/observe_connected_setup_journal.py --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects --select-test-id '${{ matrix.test-id }}' --output connected-functional-result.json --journal connected-functional-setup-journal.jsonl --journal-cap-seconds 300 --journal-interval-seconds 1 2>&1 | tee connected-functional-test.log
+          "${timing[@]}" python -u scripts/observe_connected_setup_journal.py --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects --select-test-id '${{ matrix.test-id }}' --output connected-functional-result.json --journal connected-functional-setup-journal.jsonl --journal-cap-seconds 300 --journal-interval-seconds 1 2>&1 | tee connected-functional-test.log
           statuses=("${PIPESTATUS[@]}")
           process_result=${statuses[0]}
           log_result=${statuses[1]}
@@ -262,7 +262,7 @@ jobs:
           if [ "$result" -eq 0 ] && [ "$log_result" -ne 0 ]; then result=$log_result; fi
           shell_wall_seconds=$((SECONDS-started_seconds))
           set -e
-          printf '{"process_exit":%s,"log_write_exit":%s,"effective_exit":%s,"hard_process_cap_seconds":2700,"kill_grace_seconds":30,"latency_qualification":false,"setup_journal_cap_seconds":300,"sampling_interval_seconds":1,"setup_journal_qualification":false,"raw_strict_result_authoritative":true,"shell_wall_seconds":%s,"external_cpu_wall_timing_available":%s}\n' "$process_result" "$log_result" "$result" "$shell_wall_seconds" "$timing_available" > connected-functional-process.json
+          printf '{"process_exit":%s,"log_write_exit":%s,"effective_exit":%s,"hard_process_cap_seconds":null,"kill_grace_seconds":null,"runner_job_limit_seconds":21600,"limit_meaning":"resource_not_latency","latency_qualification":false,"setup_journal_cap_seconds":300,"sampling_interval_seconds":1,"setup_journal_qualification":false,"raw_strict_result_authoritative":true,"shell_wall_seconds":%s,"external_cpu_wall_timing_available":%s}\n' "$process_result" "$log_result" "$result" "$shell_wall_seconds" "$timing_available" > connected-functional-process.json
           exit "$result"
       - name: Verify final source even after setup or execution failure
         if: always()

@@ -1517,6 +1517,7 @@ del _slot_pending, _slot_seen, _slot_function, _slot_name, _slot_value
 # callable replacement is a custom port and cannot redefine native admission.
 _PHASE_NATIVE_ORIGINS = tuple((owner, name, function, function.__code__)
     for owner, name, function in (
+        (RegisteredExperimentPreregistration, "history_for", RegisteredExperimentPreregistration.history_for),
         (PreregisteredHistoryAuthority, "bind_private_guard", PreregisteredHistoryAuthority.bind_private_guard),
         (XTDBExperimentPreregistrationCustody, "recover_control", XTDBExperimentPreregistrationCustody.recover_control),
         (XTDBExperimentPreregistrationCustody, "register_original_inputs", XTDBExperimentPreregistrationCustody.register_original_inputs),

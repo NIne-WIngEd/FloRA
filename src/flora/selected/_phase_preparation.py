@@ -166,7 +166,7 @@ _BOUND_CALLBACK_OWNERS = (
     ("phase_snapshots", "XTDBPhaseSnapshotCustody", "archive", ()),
     ("phase_routes", "SelectedPhaseRoute", "route", ("guard_live", "check_live")),
     ("experiment_preregistration", "XTDBExperimentPreregistrationCustody", "control", ("_current",)),
-    ("experiment_preregistration", "RegisteredExperimentPreregistration", "anchor", ()),
+    ("experiment_preregistration", "RegisteredExperimentPreregistration", "anchor", ("history_for",)),
     ("experiment_preregistration", "RegisteredExperimentFinalBinding", "anchor", ()),
     ("experiment_preregistration", "PreregisteredHistoryAuthority", "history", ()),
     ("personal_artifact_custody", "_SourceAuthorizedObjectReads", "objects", ("_check",)),
@@ -210,6 +210,10 @@ def _bound_callback_role(callback):
         module = sys.modules.get(__package__ + "." + module_name)
         cls = None if module is None else vars(module).get(class_name)
         if cls is not None and cls in type(callback.__self__).__mro__:
+            # Native anchor callbacks connect only their exact canonical owner.
+            # A custom subclass keeps the original uncached preparation path.
+            if role == "anchor" and type(callback.__self__) is not cls:
+                return False
             for name in names:
                 origin = _native_origin(module, class_name, name)
                 if origin is not None and callback.__func__ is origin[1]:
