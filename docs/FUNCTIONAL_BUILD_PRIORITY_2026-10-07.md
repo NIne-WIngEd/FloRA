@@ -1,25 +1,25 @@
 # FloRA functional build first
 
-## Current continuation - October 9: physical run incomplete; deployment transfer pending
+## Current continuation - October 9: deployment incomplete; metadata result pending
 
-All three physical cases were cancelled at GitHub's explicit six-hour resource
-maximum. Both BEFORE captures published in every case; positive also completed
-its seal, probe and qualified update. Construction did not return; final strict,
-coordinator, current H/C withdrawal and cleanup verdicts remain absent. This is
-incomplete evidence, not a functional or causal failure or pass.
+Physical run37888185839 remains incomplete after the hosted six-hour resource
+cancellation. Both BEFORE captures published; positive reached qualified update.
+Full construction, coordinator/current H/C and cleanup verdicts remain absent.
+The controlled capture pass remains valid; candidate adoption is unproved.
 
-Four AMD64 vendor archives and all 53 pinned wheels are packaged and verified.
-The single public-payload transfer to a new private Magnolia root is pending;
-root creation succeeded, but remote inventory is unverified. No Slurm job or
-new full functional test has been submitted. A reviewed 30-minute CPU deployment
-preflight awaits the transfer and exact remote inventory. It tests host/backend
-compatibility; its resource boundary cannot qualify FloRA completion or latency.
+Copied-venv preflight577177 failed at Kurrent readiness after the original-symlink
+negative, Python3.12.14 copied-identity positive, 53 hashed wheels, dependency
+check and imports passed. Three wrappers launched; client checks/FloRA tests were
+unreached. Cleanup/owned ports and borrowed checks passed. Startup cause remains unknown.
 
-Resume the existing transfer without restaging or redispatch. Preserve original
-three-case assertions, inner budgets and signed authority; broker enrollment
-already follows construction. Models remain external, latency deferred and
-FBM164 partial. Exact custody/status pins: [candidate note](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md)
-and [evidence JSON](evidence/2026-10-08_capture_boundary_candidate.json).
+Read-only metadata job577179, Rayan-startup-evidence, is accepted but PENDING(Resources),
+with no assigned node, output or result. It requests the original node and reads
+retained files without server/udocker/product/model execution. Its five-minute
+resource limit measures no latency qualification. Await this result; no redispatch.
+Private source staging is complete; the reporting-reviewed full-workflow carrier
+remains unlaunched. Future labels use Rayan; historical labels stay unchanged.
+Original tests/authority, external models, deferred latency and partial FBM164 remain.
+Exact evidence: [candidate](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md) and [JSON](evidence/2026-10-08_capture_boundary_candidate.json).
 
 ## Historical snapshot — October7: complete construction observation recovered
 
