@@ -1,23 +1,29 @@
 # FloRA bounded capture candidate
 
-## Current result - October 9: physical run incomplete; deployment transfer pending
+## Current result - October 9: deployment incomplete; metadata result pending
 
-[Run37888185839](https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839) completed cancelled in all three
-jobs at the hosted six-hour maximum. Three digests/33 files verify; 429 source paths per case remain unchanged. Both BEFORE captures published; positive also completed seal, probe and qualified update. Final
-strict/process/timing and cleanup records are absent. Controlled capture evidence
-remains valid; the candidate remains unadopted.
+[Run37888185839](https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839)
+remains resource-cancelled with both BEFORE captures and positive qualified update.
+No final functional/causal verdict; controlled capture remains valid, candidate unadopted.
 
 | Evaluation question | Answer |
 | --- | --- |
-| Measured? | Original physical three-case construction. |
-| Required/obtained? | Six attempts/recovery and reached H/C controls; construction progress only. |
-| FloRA implication? | Hosted resource containment leaves functionality and causality unresolved. |
-| Evidence valid? | Cancellation/custody verified; early samples cannot localize six-hour work. |
+| Measured? | Original physical construction and deployment mechanics. |
+| Required/obtained? | Six attempts/H-C verdict; construction and dependency progress only. |
+| FloRA implication? | Connected completion remains unresolved. |
+| Evidence valid? | Custody verified; startup cause unlocalized. |
 
-Four AMD64 vendor archives and 53 pinned wheels are verified. Public-payload transfer is pending after root creation; remote inventory is unverified,
-no job submitted. Reviewed CPU preflight awaits transfer and inventory; it cannot qualify functionality, learning or latency. Preserve authority,
-inner budgets, external models and deferred latency. Resume this transfer without
-restaging. Receipts, authoring failures and limits: [JSON](evidence/2026-10-08_capture_boundary_candidate.json).
+Copied-venv577177 FAILED1:0/5:18 at Kurrent readiness. Original-symlink negative,
+Python3.12.14 copied identity, 53 hashed wheels, dependency check and imports
+passed. Three wrappers launched; client/FloRA probes unreached. Cleanup/owned ports
+and borrowed hashes passed. The filter-creation log establishes no cause.
+
+Read-only retained-metadata job577179, Rayan-startup-evidence, is accepted and
+PENDING(Resources), with no assigned node/output/result. Five minutes/1CPU/512M
+are metadata resources, not latency acceptance; no server/udocker/product/model run.
+Await that result without redispatch. Private source staging completed; reviewed
+reporting carrier remains unlaunched. Preserve original authority, external models,
+deferred latency, partial FBM164 and Rayan future labels. Exact [JSON](evidence/2026-10-08_capture_boundary_candidate.json).
 
 ## Historical snapshot - October 8 and earlier
 
