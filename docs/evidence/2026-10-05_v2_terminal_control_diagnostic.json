@@ -1,0 +1,159 @@
+{
+  "schema": "flora-v2-terminal-diagnostic-dispatch-v1",
+  "recorded_at_utc": "2026-10-05T06:40:18.860749Z",
+  "status": "diagnostic_completed; original_runner_negative_not_validated; recovered_fallback_terminal_gap_reproduced",
+  "runtime_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
+  "runtime_tree": "671942fc74e86bec94e0f8609190f0cbe062bbd3",
+  "alice_contract_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+  "container_name": "flora-phase-terminal-diagnostic-20261005",
+  "container_id": "c9acd7dd71d1c1a923383195e8dc7d505cd0d993a69d449a5eecd526718ebf3f",
+  "image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+  "architecture": "arm64",
+  "network": "none",
+  "deadline_seconds": 1200,
+  "frozen_python_source_files": 414,
+  "all_exported_source_test_files_equal_exact_git_blobs": true,
+  "overlay_sha256": "fb9cb45f14fc060f74eaf6e46cdeb0e86f4656b5c1994fe6480295e559fa5719",
+  "manifest_sha256": "209eeab9d79ce0e0185eb8c250196dd70ab3fbb957c4d53e986161760902fa61",
+  "runner_sha256": "742a9044fb23d2d65607c8b152b45e94c58e905b65873643abf245571652903b",
+  "variants": [
+    "actual-v2 BEFORE capture with unchanged final callback",
+    "fresh actual-v2 BEFORE capture with final callback metadata-H denial"
+  ],
+  "source_finding": "Bound anchor.history_for is not admitted by the existing finite callback map; fallback completion is a no-op without an issued use. The viable control and fresh denial now both observe ACTIVE absent/use0, supporting the bounded fallback terminal-closure explanation.",
+  "interpretation": {
+    "control_fails": "Repair independently identified test setup before architecture diagnosis.",
+    "control_passes_and_denial_reaches_Claim_without_issued_use": "Supported fallback terminal-closure gap reproduced.",
+    "denial_closes_or_issued_use_present": "Reopen the proposed fallback explanation against the observation."
+  },
+  "research_basis": [
+    {
+      "url": "https://www.usenix.org/conference/atc19/presentation/pang",
+      "applicability": "Authorization must respect ACL/content causal order; historical content does not establish current permission."
+    },
+    {
+      "url": "https://openfga.dev/docs/interacting/consistency",
+      "applicability": "Higher consistency skips cached authorization decisions; illustrates separating reuse from current rights."
+    }
+  ],
+  "limits": [
+    "contract fixture with fictional SQL/log/producer bytes",
+    "Claim capture exercised; activated personal-state proof path not exercised",
+    "no physical backend, latency, learning or complete comparison claim",
+    "metadata callback denial is not a signed permission-row revocation",
+    "external systems inform consistency principles, not an adopted platform or our cause"
+  ],
+  "runtime_changed": false,
+  "models_built_or_trained": false,
+  "original_dispatch_status": "running_unchanged_control_first; no_behavior_result_yet",
+  "completed_at_utc": "2026-10-05T06:41:56Z",
+  "recovery_recorded_at_utc": "2026-10-05T06:54:19.515135Z",
+  "planned_observations": [
+    "final callback reached",
+    "active preparation present",
+    "native flag",
+    "exact consumer",
+    "issued use count",
+    "Claim-read entry after callback",
+    "capture return and intent/canonical append assertions"
+  ],
+  "source_verification": {
+    "Python_files": 414,
+    "all_before_after_and_host_hashes_match": true,
+    "published_runtime_changed": false
+  },
+  "original_runner": {
+    "status": "negative_not_validated",
+    "receipt_sha256": "e8e11a045a2ea5e9b647f474bc2c0662d05b51cc6a4037e8731648ba550c9929",
+    "groups_observations": [
+      [],
+      []
+    ],
+    "original_receipt_and_logs_unchanged": true,
+    "total_seconds": 398.028
+  },
+  "recovered_result": {
+    "verdict": "fallback_terminal_gap_reproduced_on_actual_v2_contract_fixture",
+    "groups": [
+      {
+        "label": "unchanged_control",
+        "test": "test_phase_terminal_diagnostic.PhaseTerminalDiagnosticTest.test_01_unchanged_v2_capture_control",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 296.167,
+        "process_seconds": 300.718,
+        "log_sha256": "a81aa6d7cbf7b5bb2033d96d553f1e49ed69352d99befd1859e448b2a4b9643d",
+        "recovered_observation": {
+          "active_preparation": false,
+          "callback_reached": true,
+          "capture_returned": true,
+          "claim_read_entries_after_callback": 2183,
+          "evidence_kind": "contract_fixture",
+          "exact_consumer": null,
+          "exception_class": null,
+          "issued_use_count": 0,
+          "native_preparation": null,
+          "schema": "flora-phase-terminal-diagnostic-v1",
+          "stage": "completed",
+          "variant": "unchanged"
+        }
+      },
+      {
+        "label": "callback_H_denial",
+        "test": "test_phase_terminal_diagnostic.PhaseTerminalDiagnosticTest.test_02_final_slot_history_denial_closes_before_claim_read",
+        "status": "failed",
+        "exit_code": 1,
+        "cases": 1,
+        "seconds": 92.676,
+        "process_seconds": 96.162,
+        "log_sha256": "085602e2f3cdd86622b0d3d3c93b125f0e2938aa95b7849390c66d3536196684",
+        "recovered_observation": {
+          "active_preparation": false,
+          "callback_reached": true,
+          "capture_returned": false,
+          "claim_read_entries_after_callback": 1,
+          "evidence_kind": "contract_fixture",
+          "exact_consumer": null,
+          "exception_class": "_ProtectedClaimRead",
+          "issued_use_count": 0,
+          "native_preparation": null,
+          "schema": "flora-phase-terminal-diagnostic-v1",
+          "stage": "capture",
+          "variant": "withdrawn"
+        }
+      }
+    ],
+    "observation_recovery": "Decode the JSON object following the unittest prefix in each original log line. The runner only tries json.loads on the complete line, leaving observations empty and its derived verdict negative_not_validated.",
+    "same_path_control": "The unchanged actual-v2 callback is reached with ACTIVE absent/use0, completes capture and checks v2/history/preregistration bindings, intent and metadata. The fresh denial variant uses the comparable fixture and same observation ports.",
+    "failure_boundary": "After metadata-H denial at the final wrapper callback, the first Claim-entry observer raises _ProtectedClaimRead before invoking the original Claim reader.",
+    "supported_explanation": "The actual-v2 fallback path lacks terminal current-authority closure after the wrapper final callback; safety must not depend on optimization admission.",
+    "limits": "This establishes a scoped callback-denial/Claim-entry gap. The negative is interrupted before the original Claim read, so its postcapture no-intent/no-metadata/no-append assertions do not execute. No later SQL, decryption, dispatch or append is established.",
+    "issued_path_observed": false,
+    "physical_backend_tested": false,
+    "real_signed_permission_row_revoked": false,
+    "latency_gain": false,
+    "learning_proved": false,
+    "whole_pipeline_pass": false
+  },
+  "prior_conditional_repair_candidate": "Admit only original pinned anchor.history_for; retain exact per-call prepared.revalidate locally through known wrappers and call it after final callbacks on both issued and fallback paths. Clear on exit; retain live H/C and public return contract.",
+  "next_coherent_correction": "Retain the exact per-call prepared terminal revalidation through the known wrapper final callbacks on both issued and fallback paths. Verify controls and reached denial before protected operations; preserve live independent H/C, historical bindings, public return contract and exit cleanup. Resume the connected physical causal pipeline after relevant correction verification.",
+  "assistant_skill_correction": {
+    "active_project_skill_count": 6,
+    "active_project_skills": [
+      "alice-cognitive-integration",
+      "alice-compute-recovery",
+      "alice-native-model-building",
+      "alice-project-context",
+      "alice-research-fbm",
+      "diagonosis"
+    ],
+    "mandatory_standalone_skill": "diagonosis",
+    "global_policy_applies_to": "any chat and every agent, including the main agent",
+    "flora_evidence_debugging": "moved recoverably outside active skill directory",
+    "structural_state_checked": true,
+    "behavioral_skill_qualification": false,
+    "other_active_chats_reloaded": false,
+    "clarification": "The prior six-skill dispatch wording is historical; the active set is five Alice role skills plus the mandatory standalone diagnosis skill."
+  }
+}

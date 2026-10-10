@@ -1,0 +1,603 @@
+{
+  "schema": "flora-actual-phase-consumer-reachability-v1",
+  "recorded_at_utc": "2026-10-04T18:50:50.083454Z",
+  "serving_baseline_commit": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
+  "assessment_docs_head": "f6b433864907ec67079dee22594a29dbd6660bab",
+  "status": "proposed_session_owner_stopped_before_implementation",
+  "source_files": [
+    {
+      "path": "src/flora/selected/native_reads.py",
+      "working_sha256": "e6baad105fef45f1e3c4bc52bbb8f01df61c1a43effe8fe17b42967f0e6b6b2b",
+      "baseline_blob_sha256": "c790c66e76577a2e68b32a4e386ec50bcc5f7c2c8e6b8555fe84ef56407cda3a",
+      "byte_identical_to_baseline": false,
+      "lf_normalized_identical_to_baseline": true,
+      "working_crlf_count": 693
+    },
+    {
+      "path": "src/flora/selected/experiment_runtime.py",
+      "working_sha256": "e18c95757e2566600432e7aeaee1dd72ab22aad08b8ecee597a4c3a96f484c95",
+      "baseline_blob_sha256": "e18c95757e2566600432e7aeaee1dd72ab22aad08b8ecee597a4c3a96f484c95",
+      "byte_identical_to_baseline": true,
+      "lf_normalized_identical_to_baseline": true,
+      "working_crlf_count": 0
+    },
+    {
+      "path": "src/flora/selected/context_guard.py",
+      "working_sha256": "e5e3665edfb3b3faa156d67cb4cfe748436828fc6a90cf02c2ae6c4d52759e67",
+      "baseline_blob_sha256": "e5e3665edfb3b3faa156d67cb4cfe748436828fc6a90cf02c2ae6c4d52759e67",
+      "byte_identical_to_baseline": true,
+      "lf_normalized_identical_to_baseline": true,
+      "working_crlf_count": 0
+    },
+    {
+      "path": "src/flora/selected/selected_context.py",
+      "working_sha256": "c11d75502049966ae1949c2c7f696141b493fd4e7714e799a7ceee1c5d78b243",
+      "baseline_blob_sha256": "c11d75502049966ae1949c2c7f696141b493fd4e7714e799a7ceee1c5d78b243",
+      "byte_identical_to_baseline": true,
+      "lf_normalized_identical_to_baseline": true,
+      "working_crlf_count": 0
+    },
+    {
+      "path": "src/flora/selected/selected_phase_authority.py",
+      "working_sha256": "6589bce9051bcc410282b5aba7fc3259bc0ef57105aeb98966e0fa50aaa9542a",
+      "baseline_blob_sha256": "6589bce9051bcc410282b5aba7fc3259bc0ef57105aeb98966e0fa50aaa9542a",
+      "byte_identical_to_baseline": true,
+      "lf_normalized_identical_to_baseline": true,
+      "working_crlf_count": 0
+    },
+    {
+      "path": "src/flora/selected/selected_authority_frame.py",
+      "working_sha256": "3d5b8b91a8fc3987f686df5563fb62b31ba234bf61974b0932e8ec1ff6d3dbfd",
+      "baseline_blob_sha256": "3d5b8b91a8fc3987f686df5563fb62b31ba234bf61974b0932e8ec1ff6d3dbfd",
+      "byte_identical_to_baseline": true,
+      "lf_normalized_identical_to_baseline": true,
+      "working_crlf_count": 0
+    },
+    {
+      "path": "src/flora/selected/phase_routes.py",
+      "working_sha256": "469a63353e746687e508c98de089a8d1ff6ca80f10c58ffbfbf1be6e7541b1ab",
+      "baseline_blob_sha256": "34aa39d6e604ff999cf1b598617657d97a460b17ee9c4ffeb75a6fd66cbb880d",
+      "byte_identical_to_baseline": false,
+      "lf_normalized_identical_to_baseline": true,
+      "working_crlf_count": 749
+    },
+    {
+      "path": "src/flora/selected/phase_snapshots.py",
+      "working_sha256": "d459463fe2adf83a0ab49ec5f618068fa0f72be5311d60961ea564cc2c42bc7f",
+      "baseline_blob_sha256": "caf029c475821b6f736e7a1b433fb9c601a61064d4cbc99e432bc60981e29a8c",
+      "byte_identical_to_baseline": false,
+      "lf_normalized_identical_to_baseline": true,
+      "working_crlf_count": 854
+    },
+    {
+      "path": "tests/test_native_reads.py",
+      "working_sha256": "ccbfdfe154411f74a70858e4b434a817a210b13afd7bba3db68a35056102c7c4",
+      "baseline_blob_sha256": "79753eee0c52d5d85fa081b8b98787c5ac7fc25e95cac78583616d28025be9bc",
+      "byte_identical_to_baseline": false,
+      "lf_normalized_identical_to_baseline": true,
+      "working_crlf_count": 668
+    },
+    {
+      "path": "tests/test_shared_authority_frame.py",
+      "working_sha256": "9b346a330a0616f16b7e6fe5254e4fd8fa4bf5dae03424b36ba6c39d0d6b92dc",
+      "baseline_blob_sha256": "9b346a330a0616f16b7e6fe5254e4fd8fa4bf5dae03424b36ba6c39d0d6b92dc",
+      "byte_identical_to_baseline": true,
+      "lf_normalized_identical_to_baseline": true,
+      "working_crlf_count": 0
+    },
+    {
+      "path": "tests/integration/test_selected_native_comparison.py",
+      "working_sha256": "a0ef14ebdf486f4edb80901cc5c0f90b0f6b12c33f6c883cb22b0240a19e6698",
+      "baseline_blob_sha256": "60d1d55b635b9b63c7acb18d6a04bb1676f31f3133ac8932e55beef48c473850",
+      "byte_identical_to_baseline": false,
+      "lf_normalized_identical_to_baseline": true,
+      "working_crlf_count": 292
+    }
+  ],
+  "unchanged_source_validation": "zero src/tests Git diff; CRLF working files separately recorded and LF-normalized bytes match original blobs",
+  "observations": [
+    {
+      "path": "src/flora/selected/native_reads.py",
+      "lines": [
+        493,
+        515,
+        533,
+        542
+      ],
+      "finding": "Phase descriptors are installed on session.runtime before resolver constructs and returns a different route.runtime. The session handoff cannot own work already done in that constructor."
+    },
+    {
+      "path": "src/flora/selected/phase_routes.py",
+      "lines": [
+        388,
+        390,
+        415,
+        447
+      ],
+      "finding": "Archive route clones pinned Claim/state services, constructs runtime without selected-domain configuration, and assembles actual historical context before returning."
+    },
+    {
+      "path": "src/flora/selected/experiment_runtime.py",
+      "lines": [
+        410,
+        411,
+        810,
+        824,
+        881
+      ],
+      "finding": "Default domain is whole-stream-current-context-v1; judgment owns its preparation directly. Selected-domain preparation is opt-in."
+    },
+    {
+      "path": "src/flora/selected/selected_context.py",
+      "lines": [
+        249,
+        250
+      ],
+      "finding": "Selected current preparation requires exact current services, so inherited pinned historical readers are unsupported."
+    },
+    {
+      "path": "src/flora/selected/selected_authority_frame.py",
+      "lines": [
+        352,
+        355
+      ],
+      "finding": "Shared frame requires exact unpinned services; changing a domain flag alone cannot qualify historical semantics."
+    },
+    {
+      "path": "src/flora/selected/phase_routes.py",
+      "lines": [
+        41,
+        87,
+        205,
+        238,
+        497
+      ],
+      "finding": "Pinned BEFORE views retain historical occurrence/version/activation proof while present quarantine, removal and source withdrawal win. Before-probe and final-evaluation have distinct actual owners."
+    },
+    {
+      "path": "src/flora/selected/phase_snapshots.py",
+      "lines": [
+        602,
+        732
+      ],
+      "finding": "First capture uses the live runtime; archive recover is a separate explicit operation. Both must reach the actual preparation design; neither can be inferred from a current-head recovery fixture."
+    },
+    {
+      "path": "tests/integration/test_selected_native_comparison.py",
+      "lines": [
+        182,
+        184,
+        188,
+        208
+      ],
+      "finding": "The supplied passive recovery fixture precomputes judgments and enables selected-current configuration through its read hook. It does not run anchored causal chronology."
+    }
+  ],
+  "ruling": "Do not implement a fixture-only session-owner speed fix or widen exact types. Design actual live capture and frozen-phase preparation with explicit restore, exact material identity and fresh current authority; preserve independent probe/final/slot/archive obligations.",
+  "retained_requirements": [
+    "narrow FloRA causal loop",
+    "external personality and MFM",
+    "distinct H/C purposes and independently issued caps",
+    "historical occurrence proof and current withdrawal",
+    "exact assembly-baseline equality across callbacks",
+    "physical and joint current-row terminal fences",
+    "inclusive result verification and writes",
+    "unchanged fixture and CI limits"
+  ],
+  "local_discriminating_assessment": {
+    "completed_at_utc": "2026-10-04T19:03:34.990785Z",
+    "execution": "one local PhaseSnapshotTest fixture invocation with sys.setprofile; no method/callback replacements",
+    "exit_code": 0,
+    "outcomes": {
+      "cold.route_constructor": {
+        "status": "passed"
+      },
+      "open.context": {
+        "status": "passed"
+      },
+      "open.prepare_current_context": {
+        "status": "passed"
+      },
+      "open.prepared_metadata_current": {
+        "status": "passed"
+      },
+      "open.prepared_revalidate": {
+        "status": "passed"
+      }
+    },
+    "exact_frozen_context_receipt_equal": true,
+    "fixture_runtime_shape": {
+      "runtime_class": "PhaseJudgmentRuntime",
+      "claim_class": "PinnedClaimAuthority",
+      "state_class": "PinnedPersonalState",
+      "context_integrity_domain": "whole-stream-current-context-v1",
+      "maximum_context_sources": null,
+      "history_authority_class": "FrozenHistoryAuthority",
+      "preregistration_present": false,
+      "final_authority_present": false
+    },
+    "counts_by_scope": {
+      "setup.fixture": {
+        "sql_outer_execute": 2963,
+        "actual_fixture_replay": 20,
+        "actual_fixture_replay_committed": 4,
+        "pinned_claim_checks": 0,
+        "pinned_state_fetches": 0,
+        "archive_authorizations": 0,
+        "snapshot_restores": 0,
+        "context_assemblies": 0,
+        "context_prepare_calls": 0,
+        "context_lineage_proofs": 0,
+        "inner_private_barriers": 0,
+        "encrypted_object_get": 64,
+        "local_backend_get": 101,
+        "historical_claim_sql": 1
+      },
+      "setup.state_activation": {
+        "sql_outer_execute": 583,
+        "actual_fixture_replay": 19,
+        "actual_fixture_replay_committed": 6,
+        "pinned_claim_checks": 0,
+        "pinned_state_fetches": 0,
+        "archive_authorizations": 0,
+        "snapshot_restores": 0,
+        "context_assemblies": 0,
+        "context_prepare_calls": 0,
+        "context_lineage_proofs": 0,
+        "inner_private_barriers": 0,
+        "encrypted_object_get": 41,
+        "local_backend_get": 65,
+        "historical_claim_sql": 0
+      },
+      "setup.initial_capture": {
+        "sql_outer_execute": 193342,
+        "actual_fixture_replay": 33932,
+        "actual_fixture_replay_committed": 4,
+        "pinned_claim_checks": 0,
+        "pinned_state_fetches": 0,
+        "archive_authorizations": 0,
+        "snapshot_restores": 0,
+        "context_assemblies": 5,
+        "context_prepare_calls": 4,
+        "context_lineage_proofs": 4,
+        "inner_private_barriers": 352,
+        "encrypted_object_get": 182,
+        "local_backend_get": 267,
+        "historical_claim_sql": 0
+      },
+      "cold.route_constructor": {
+        "sql_outer_execute": 20456,
+        "actual_fixture_replay": 849,
+        "actual_fixture_replay_committed": 632,
+        "pinned_claim_checks": 1694,
+        "pinned_state_fetches": 588,
+        "archive_authorizations": 210,
+        "snapshot_restores": 1,
+        "context_assemblies": 2,
+        "context_prepare_calls": 1,
+        "context_lineage_proofs": 1,
+        "inner_private_barriers": 88,
+        "encrypted_object_get": 64,
+        "local_backend_get": 95,
+        "historical_claim_sql": 1694
+      },
+      "open.context": {
+        "sql_outer_execute": 7417,
+        "actual_fixture_replay": 356,
+        "actual_fixture_replay_committed": 471,
+        "pinned_claim_checks": 104,
+        "pinned_state_fetches": 18,
+        "archive_authorizations": 157,
+        "snapshot_restores": 0,
+        "context_assemblies": 1,
+        "context_prepare_calls": 0,
+        "context_lineage_proofs": 0,
+        "inner_private_barriers": 0,
+        "encrypted_object_get": 24,
+        "local_backend_get": 36,
+        "historical_claim_sql": 104
+      },
+      "open.prepare_current_context": {
+        "sql_outer_execute": 15560,
+        "actual_fixture_replay": 761,
+        "actual_fixture_replay_committed": 783,
+        "pinned_claim_checks": 524,
+        "pinned_state_fetches": 312,
+        "archive_authorizations": 261,
+        "snapshot_restores": 0,
+        "context_assemblies": 1,
+        "context_prepare_calls": 1,
+        "context_lineage_proofs": 0,
+        "inner_private_barriers": 88,
+        "encrypted_object_get": 24,
+        "local_backend_get": 36,
+        "historical_claim_sql": 524
+      },
+      "open.prepared_metadata_current": {
+        "sql_outer_execute": 253,
+        "actual_fixture_replay": 9,
+        "actual_fixture_replay_committed": 9,
+        "pinned_claim_checks": 24,
+        "pinned_state_fetches": 6,
+        "archive_authorizations": 3,
+        "snapshot_restores": 0,
+        "context_assemblies": 0,
+        "context_prepare_calls": 0,
+        "context_lineage_proofs": 0,
+        "inner_private_barriers": 0,
+        "encrypted_object_get": 0,
+        "local_backend_get": 0,
+        "historical_claim_sql": 24
+      },
+      "open.prepared_revalidate": {
+        "sql_outer_execute": 1012,
+        "actual_fixture_replay": 37,
+        "actual_fixture_replay_committed": 36,
+        "pinned_claim_checks": 96,
+        "pinned_state_fetches": 24,
+        "archive_authorizations": 12,
+        "snapshot_restores": 0,
+        "context_assemblies": 0,
+        "context_prepare_calls": 0,
+        "context_lineage_proofs": 0,
+        "inner_private_barriers": 0,
+        "encrypted_object_get": 0,
+        "local_backend_get": 0,
+        "historical_claim_sql": 96
+      }
+    },
+    "count_semantics": "SQL is one outer connection execute; replay is actual fictional _RecordedLog. Nested backend/barrier counts can overlap and must not be added. Setup capture is separate from later native responses. No fixture timing or speedup comparison.",
+    "source_identities": [
+      {
+        "path": "src/flora/selected/phase_routes.py",
+        "working_sha256": "469a63353e746687e508c98de089a8d1ff6ca80f10c58ffbfbf1be6e7541b1ab",
+        "baseline_git_blob_sha256": "34aa39d6e604ff999cf1b598617657d97a460b17ee9c4ffeb75a6fd66cbb880d",
+        "byte_identical_to_baseline": false,
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 749
+      },
+      {
+        "path": "src/flora/selected/phase_snapshots.py",
+        "working_sha256": "d459463fe2adf83a0ab49ec5f618068fa0f72be5311d60961ea564cc2c42bc7f",
+        "baseline_git_blob_sha256": "caf029c475821b6f736e7a1b433fb9c601a61064d4cbc99e432bc60981e29a8c",
+        "byte_identical_to_baseline": false,
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 854
+      },
+      {
+        "path": "src/flora/selected/experiment_runtime.py",
+        "working_sha256": "e18c95757e2566600432e7aeaee1dd72ab22aad08b8ecee597a4c3a96f484c95",
+        "baseline_git_blob_sha256": "e18c95757e2566600432e7aeaee1dd72ab22aad08b8ecee597a4c3a96f484c95",
+        "byte_identical_to_baseline": true,
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 0
+      },
+      {
+        "path": "src/flora/selected/native_reads.py",
+        "working_sha256": "e6baad105fef45f1e3c4bc52bbb8f01df61c1a43effe8fe17b42967f0e6b6b2b",
+        "baseline_git_blob_sha256": "c790c66e76577a2e68b32a4e386ec50bcc5f7c2c8e6b8555fe84ef56407cda3a",
+        "byte_identical_to_baseline": false,
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 693
+      },
+      {
+        "path": "src/flora/selected/context_guard.py",
+        "working_sha256": "e5e3665edfb3b3faa156d67cb4cfe748436828fc6a90cf02c2ae6c4d52759e67",
+        "baseline_git_blob_sha256": "e5e3665edfb3b3faa156d67cb4cfe748436828fc6a90cf02c2ae6c4d52759e67",
+        "byte_identical_to_baseline": true,
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 0
+      },
+      {
+        "path": "src/flora/selected/selected_context.py",
+        "working_sha256": "c11d75502049966ae1949c2c7f696141b493fd4e7714e799a7ceee1c5d78b243",
+        "baseline_git_blob_sha256": "c11d75502049966ae1949c2c7f696141b493fd4e7714e799a7ceee1c5d78b243",
+        "byte_identical_to_baseline": true,
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 0
+      },
+      {
+        "path": "src/flora/selected/selected_authority_frame.py",
+        "working_sha256": "3d5b8b91a8fc3987f686df5563fb62b31ba234bf61974b0932e8ec1ff6d3dbfd",
+        "baseline_git_blob_sha256": "3d5b8b91a8fc3987f686df5563fb62b31ba234bf61974b0932e8ec1ff6d3dbfd",
+        "byte_identical_to_baseline": true,
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 0
+      },
+      {
+        "path": "src/flora/selected/selected_phase_authority.py",
+        "working_sha256": "6589bce9051bcc410282b5aba7fc3259bc0ef57105aeb98966e0fa50aaa9542a",
+        "baseline_git_blob_sha256": "6589bce9051bcc410282b5aba7fc3259bc0ef57105aeb98966e0fa50aaa9542a",
+        "byte_identical_to_baseline": true,
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 0
+      },
+      {
+        "path": "src/flora/selected/judgment_lineage.py",
+        "working_sha256": "40ed58d1965f401ebfe483e9f95a140c4995b2a32af3b4f599016257f0818c56",
+        "baseline_git_blob_sha256": "9c19afa50816992382965da7f2476f4268ec81382e6072bfe900daf4595d63b9",
+        "byte_identical_to_baseline": false,
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 513
+      },
+      {
+        "path": "src/flora/selected/personal_artifact_custody.py",
+        "working_sha256": "34d7458190f33da0f3ad38188c980454a849931845f0f1bed728238b3a4882c0",
+        "baseline_git_blob_sha256": "a83906892589b1f4bd7b51cf8acc821ce49998f74f1f6c8557a70937e3243fa9",
+        "byte_identical_to_baseline": false,
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 580
+      },
+      {
+        "path": "tests/test_phase_snapshots.py",
+        "working_sha256": "42ab67067e4e5cffa81dd77bc41afe46beddf3b916bd8c59d0d5948455603ec1",
+        "baseline_git_blob_sha256": "35593c6e657d1ea30995e72066f9963277025c199db18c917b44971083f0000f",
+        "byte_identical_to_baseline": false,
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 601
+      },
+      {
+        "path": "tests/test_selected_judgment_lineage.py",
+        "working_sha256": "b8ac657fe295f75fb50488a7152539e9cb95e7fdab0ed36a73ac2d697e1b65f3",
+        "baseline_git_blob_sha256": "0b62ca8a2c6b62bd0b9ba91c19135852dbbe19ec5563389c41b2f2db214a879d",
+        "byte_identical_to_baseline": false,
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 389
+      },
+      {
+        "path": "src/flora/selected/artifact_registry.py",
+        "working_sha256": "0210091f335e49f3dd19e121a3404da2b17a2e89e95fd8acb25df48e1d62afa4",
+        "baseline_git_blob_sha256": "fcf128a00174638117a3b9f6f04e9a61e926c5113fd1d65ae7cbab34a289d810",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 353
+      },
+      {
+        "path": "src/flora/selected/claims.py",
+        "working_sha256": "7f32c2aa9947e31186a9acd4b0d309594b5204a5c9854bd44a2229d68b4c3a48",
+        "baseline_git_blob_sha256": "191e04d017cba1a3fbc159e96711d592678f17a6142987d546044e3eaee57728",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 441
+      },
+      {
+        "path": "src/flora/selected/context.py",
+        "working_sha256": "8ed0fd875d9239a3aaa6c0a18061a336a3514fef4b7a9fd46cb3f88df9c75ed5",
+        "baseline_git_blob_sha256": "8ed0fd875d9239a3aaa6c0a18061a336a3514fef4b7a9fd46cb3f88df9c75ed5",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 0
+      },
+      {
+        "path": "src/flora/selected/experiment_preregistration.py",
+        "working_sha256": "061d0e3fb1898a6b5fb07e1c8dd8f0287b87b3be7a38d2e7cac21d695181151f",
+        "baseline_git_blob_sha256": "9d2a6b371361d497a9f8c96474348ad6500374a70c9db235e99b8d8ac3f00271",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 1513
+      },
+      {
+        "path": "src/flora/selected/formation_candidates.py",
+        "working_sha256": "e50203215f9913e29c7ec749b887a528c6ae9d6bb9847f1f563b15b32b61fe5b",
+        "baseline_git_blob_sha256": "ec3f3222b0b8156cbf6968d216d97f24578c2a088642fb8b27702a778d9c4f7b",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 386
+      },
+      {
+        "path": "src/flora/selected/formation_context.py",
+        "working_sha256": "7678a1590d553610a0614355d3209536f9a2ec61349d55f15602be809ef54a31",
+        "baseline_git_blob_sha256": "e1a2c4ba3ce9bd1d4212007ca6d15e71e7edd6a0946b4955a7c2610da94bf9fd",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 298
+      },
+      {
+        "path": "src/flora/selected/formation_registry.py",
+        "working_sha256": "4bf8fc78a1a9934b305ac32601779f93c03119a0298627e0d0a354cbfccd6306",
+        "baseline_git_blob_sha256": "ec3282e9f123f9af99713dd3fdc0366ac1a9574c8b6019f9d28d9fc29b06581f",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 369
+      },
+      {
+        "path": "src/flora/selected/governed_development.py",
+        "working_sha256": "081db60de4451b94223defe3bb008b162aae76a280f5ecdfacbb9ff8e1c9d9d9",
+        "baseline_git_blob_sha256": "a93d7585421113780473a4eb50eb18bb74b160eec9e9c057e32816a3b1b17a7b",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 442
+      },
+      {
+        "path": "src/flora/selected/judgment_context.py",
+        "working_sha256": "c90c1040ac2e1e2601192788a129a7a9ec3b6093252f692e2132e19a24a14567",
+        "baseline_git_blob_sha256": "5d21a667fa6d44681ef93ca3de98d989ca28891b9aa0e8efca9c8c56683fae72",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 136
+      },
+      {
+        "path": "src/flora/selected/object_store.py",
+        "working_sha256": "056b015cf20395f3612b67f352ea77bb62f41032d84fc4383eb701890c4b5107",
+        "baseline_git_blob_sha256": "373de1e874c571555d6866b2178865e1b3b736a50660b16f57ea20101fe12073",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 145
+      },
+      {
+        "path": "src/flora/selected/owner_authorization.py",
+        "working_sha256": "930e54dbf920c93e4508c1ea0c5a65a3da9a888492bddd04e970488ca2644f1e",
+        "baseline_git_blob_sha256": "da41c70b31a5e1880fdbc44d4fc49788bb2c78eccd632f74cfa1b5d53ac3f884",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 104
+      },
+      {
+        "path": "src/flora/selected/personal_state.py",
+        "working_sha256": "2dbb40dade24350064c45ee197a966339cefc997a80e2eead5bc05f8285f3a8d",
+        "baseline_git_blob_sha256": "a564a23027ff6af4427320fad478efd14a6461d44b660dad87f3fda06a8da475",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 438
+      },
+      {
+        "path": "src/flora/selected/phase_source_fence.py",
+        "working_sha256": "b0829cf3995179b37a0beaf7bf4d42f0f06833b636d52b3231a13962bbb50015",
+        "baseline_git_blob_sha256": "b0829cf3995179b37a0beaf7bf4d42f0f06833b636d52b3231a13962bbb50015",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 0
+      },
+      {
+        "path": "tests/test_selected_experiment_runtime.py",
+        "working_sha256": "fcc7a025e7d88b70f28ad9713b22f6f8576bda8604f72ac38b3403f5988f7a97",
+        "baseline_git_blob_sha256": "fcc7a025e7d88b70f28ad9713b22f6f8576bda8604f72ac38b3403f5988f7a97",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 0
+      },
+      {
+        "path": "tests/test_selected_formation_candidates.py",
+        "working_sha256": "811a0067fbe8c7ac9beeed5dd9a0eda7a48b6fc8463aa4e3f5e027fdd28cea33",
+        "baseline_git_blob_sha256": "10e802f472c362d1ee49ba1ad0838a2731ecf926866497724a794ef5a35086e6",
+        "lf_normalized_identical_to_baseline": true,
+        "working_crlf_count": 519
+      }
+    ],
+    "raw_working_files_unchanged_before_after": true,
+    "lf_normalized_sources_match_baseline_blobs": true,
+    "source_diff_bytes": 0,
+    "errors": [],
+    "profile_faults": [],
+    "anchored_limit": "Fixture explicitly permits unregistered authority and uses FrozenHistoryAuthority; it cannot establish anchored H/final/slot execution or selected joint-row fencing.",
+    "physical_limit": "No XTDB/Kurrent transport, selected terminal fence, response-budget result or model judgment is exercised.",
+    "inference": "Structural amplification exists in actual phase contracts even when no snapshot is restored. Moving cold archive restoration alone is insufficient. The current native physical read-thread cost and a qualified repair remain unresolved."
+  },
+  "red_green": "Original read-only audit ran no implementation tests; later candidate evidence is in the linked actual-consumer construction receipt.",
+  "physical_run_dispatch": "none",
+  "qualification": "no physical latency improvement or learned result",
+  "research_fit": [
+    "Alice materialized-current and explicit historical-recovery placement remains controlling.",
+    "Graphiti at pinned4f62cfe7 exposes exact edge and separate valid/invalid/created/expired time filters. This supports explicit historical selection as a distinct concern, not reuse of present permissions or replacement of Claim authority."
+  ],
+  "next_construction_decision": "Repair the single bounded actual owner-map/admission boundary after reproduced compatibility failure and read-only missing-controller finding; keep active verification source unchanged.",
+  "actual_consumer_construction": {
+    "dispatched_at_utc": "2026-10-04T19:17:19.716535Z",
+    "docs_base_commit": "9950de577083e5a64d46976c12dd7f53db663d86",
+    "status": "review_rejected_candidate_owner_map_correction_in_isolated_source_copy",
+    "source_backed_decision_sha256": "b1678511d91f4c77916ec61248b194824154a97c9ac695c645cdf9a308ca56b8",
+    "issuers": [
+      "actual live phase capture",
+      "cold SelectedPhaseRoute construction",
+      "fresh route observed_binding"
+    ],
+    "material": "one actually prepared native context per owning operation; exact issuer/runtime/phase/history/content binding and expiry",
+    "consumer": "known actual independent context lineage, with lineage guard before original prepared metadata at every private boundary",
+    "revalidation": "existing owner/episode algorithm uses composite barrier for verifier and nested reads; qualified update wrapper finishes after its last source/exclusion callback",
+    "preserved": [
+      "all lineage proof checkpoints",
+      "opaque/custom original path",
+      "historical occurrence/version/activation/role checks",
+      "fresh H/C rights and caps",
+      "source/ciphertext/plaintext and existing terminal fences",
+      "inclusive proof and writes",
+      "external personality/MFM"
+    ],
+    "not_addressed": [
+      "open preparation already assembles once",
+      "its88 observed initial barriers",
+      "missing finite pinned observation mapping",
+      "physical native read-thread distribution",
+      "physical response budget or learned qualification"
+    ],
+    "physical_run_dispatch": "none",
+    "timing_ruling": "existing inclusive timing unchanged while optional owner clarification is pending",
+    "candidate_receipt": "FloRA:docs/evidence/2026-10-04_actual_phase_prepared_material_candidate.json"
+  }
+}

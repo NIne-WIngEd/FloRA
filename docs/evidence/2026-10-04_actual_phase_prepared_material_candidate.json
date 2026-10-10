@@ -1,0 +1,839 @@
+{
+  "schema": "flora-actual-phase-prepared-material-candidate-v1",
+  "recorded_at_utc": "2026-10-05T04:33:37.025490Z",
+  "status": "reviewed_corrected_source_published; ordinary_full_CI_completed_failed; boundary_diagnosis_pending; connected_three_arm_case_not_verified",
+  "serving_baseline_commit": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
+  "local_docs_base_commit": "9950de577083e5a64d46976c12dd7f53db663d86",
+  "candidate_source_sha256": {
+    "src/flora/selected/_phase_preparation.py": "0b7903651d61d461c0f9d063b3e9b5f59c9762c604648d9bb2b6dab2541880d4",
+    "src/flora/selected/context_guard.py": "73f59092d6dc6ee8983e47c34658efaa709f79ac52ab998703f931d01cc24408",
+    "src/flora/selected/judgment_lineage.py": "69d05ebf2813cc69ac8351c3a17288d0cd6a87e9ede147277ebfcaf407d738f1",
+    "src/flora/selected/phase_routes.py": "dc09f86287f4094f7445f11139a3077eb50aaa6df3694a935c590d06f46d7044",
+    "src/flora/selected/phase_snapshots.py": "1094d96e2ee298773d35cb66ccd27eb0d3ca397cdf175a38542a2ef1097974f9",
+    "tests/test_phase_snapshots.py": "d13487cbec0830cc52768d932c4ee77b3a1b04189865eb407a29f37d4aecb646",
+    "tests/integration/test_selected_experiment_preregistration.py": "c161b526c5279e9af15f930d6fc6a00df62a4f3200a82ba2eeaf6103ecd76f23",
+    "tests/test_phase_callback_owners.py": "46584e6fc38a6d1ab8639db967076918db7c4f863cf8ed42b3a40b37ae1b2e91",
+    "src/flora/selected/comparison_custody.py": "cf9ed22682150730534e6f93c461c942fa33d461db2e97a8e32f149850fe24be",
+    "src/flora/selected/experiment_preregistration.py": "33fc1353629fc21f92d25ba295eea798a4710d7772c1141cffa65e0ae822df5e",
+    "src/flora/selected/personal_artifact_custody.py": "ca1c81d80aec0bedfa554e48f878f09347c92501b541743cb3dbd1df407e1b76",
+    "tests/phase_callback_permissions.py": "a97d2db7ae4f41e659e66bac6492e1d3c040751a7f2373377cec646458809eae"
+  },
+  "scope": "One-operation material reuse in actual capture, cold route construction and fresh observed binding; no full Alice platform or model construction.",
+  "consumer_mapping": {
+    "issuer": "Exact actual operation owner prepares its own native context; no caller-supplied preparation admission.",
+    "consumer": "Known actual native/qualified lineage borrows exact material through private issuance, runtime/consumer/history/phase/plan/thread identity and expiry.",
+    "barrier": "Independent lineage H/controller guard precedes original owner metadata; nested owner/episode and producer qualification reads use the composite.",
+    "post_base": "Qualified update exclusion and preregistered capture slot callbacks finish through composite revalidation.",
+    "compatibility": "Custom/unsupported preparation retains original fresh construction; unrelated standalone calls retain their independent path."
+  },
+  "component_evidence": {
+    "kind": "progressive candidate runs with affected regressions rerun after each correction; not one final-source full-suite pass",
+    "distinct_passed": 75,
+    "modules": {
+      "test_phase_snapshots": 35,
+      "test_current_context_guard": 29,
+      "test_selected_judgment_lineage": 11
+    },
+    "red": {
+      "cases": 2,
+      "seconds": 238.558,
+      "capture_assemblies": "5 != 1",
+      "cold_constructor_assemblies": "2 != 1",
+      "context_and_producer_proofs": "original exact context and eight/two producer snapshot assertions passed before the assembly assertion"
+    },
+    "green_material_counts": {
+      "actual_capture": 1,
+      "cold_constructor": 1,
+      "capture_independent_lineage_checkpoints": 4,
+      "capture_producer_snapshot_proofs": 8,
+      "constructor_producer_snapshot_proofs": 2,
+      "custom_preparation_capture_assemblies": 5
+    },
+    "observed_binding": "Connected to the actual path; assembly1 assertion in the existing physical integration test remains unexecuted.",
+    "discriminating_protection": [
+      "Independent lineage-only H withdrawal during durable owner-proof ciphertext access refuses before AES-GCM, while owner C allows.",
+      "Qualified final-source withdrawal refuses through full composite revalidation.",
+      "Private holder forgery/copy/mutation/cross-thread/expiry refusal.",
+      "Signed AFTER-ablation exclusion, final dispatch refusal, quarantine-before-AEAD and orphan repair/withdrawal protections."
+    ],
+    "repairs": [
+      {
+        "failure": "Opaque nonlocal callback counter rejected by closure-content seal (1 error,76.184s).",
+        "repair": "Allow opaque callback state to evolve; retain identity/code/cell identity and seal native owner/controller closures.",
+        "verification": "Affected capture/holder/nested withdrawal/custom fallback cases pass4/4,563.167s; later issuer refinement separate."
+      },
+      {
+        "failure": "Broad phase run23 pass/1 fail: preinstalled slow custody metadata callback rejected before original head-moved fence.",
+        "repair": "Seal exact issuer entry implementation globally and actual readers/callbacks per operation.",
+        "verification": "Affected orphan-head and holder cases pass2/2,222.969s; remainder10 pass/2 Windows import blocks,1130.933s."
+      }
+    ],
+    "windows_import_block": {
+      "cause": "Existing Unix fcntl dependency in native_worker; no shim or serving portability patch added.",
+      "modules": [
+        "test_native_reads",
+        "test_shared_authority_frame",
+        "test_experiment_preregistration",
+        "test_preregistration_current_guard",
+        "test_preregistration_metadata_frame"
+      ],
+      "phase_router_cases": 2
+    },
+    "compile_and_scoped_diff_check": "pass as reported by implementer",
+    "source_hashes_verified_by_root": true
+  },
+  "pending": {
+    "fresh_source_review": "completed: final D scoped source review has no actionable findings",
+    "linux_components": {
+      "status": "completed_failed_original_candidate",
+      "groups": 6,
+      "container_id": "f9571db2d55914d74513d8d3dcea21fbd135b67c0c01afc5256f05f24c56c8e9",
+      "image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+      "platform": "Linux arm64 / Python3.12.15",
+      "alice_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+      "source": "read-only candidate/Alice mounts; complete runtime/test source manifest recorded before and after",
+      "network": "disabled",
+      "physical_engines_run": false,
+      "deadline_seconds": 3600,
+      "first_completed_group": {
+        "module": "test_native_reads",
+        "tests": 21,
+        "passed": 15,
+        "errors": 6,
+        "unittest_seconds": 32.582,
+        "status": "failed"
+      },
+      "remaining_groups": "All original groups completed; other76 cases pass, no skip/incomplete. Correction verification separately recorded."
+    },
+    "physical_integration": {
+      "status": "completed_failed",
+      "source_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
+      "source_tree": "671942fc74e86bec94e0f8609190f0cbe062bbd3",
+      "runs": [
+        {
+          "event": "pull_request",
+          "run_id": 37263029377,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37263029377",
+          "status": "completed",
+          "conclusion": "failure",
+          "component": {
+            "passed": 1038,
+            "modules": 82,
+            "skips": 0
+          },
+          "physical": {
+            "total_cases": 53,
+            "completed": 53,
+            "passed": 50,
+            "failed": 3,
+            "incomplete": 0
+          }
+        },
+        {
+          "event": "push",
+          "run_id": 37263026076,
+          "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37263026076",
+          "status": "completed",
+          "conclusion": "failure",
+          "component": {
+            "passed": 1038,
+            "modules": 82,
+            "skips": 0
+          },
+          "physical": {
+            "total_cases": 53,
+            "completed": 52,
+            "passed": 49,
+            "failed": 3,
+            "incomplete": 1
+          }
+        }
+      ],
+      "original_logs_verified": 26,
+      "Alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+      "completed_receipt": "docs/evidence/2026-10-05_bfff_completed_run_diagnosis.json",
+      "limits_unchanged": true,
+      "whole_pipeline_acceptance": false,
+      "historical_partial_failure_snapshot": {
+        "status": "partial_not_complete_full_run",
+        "actual_PR_checkout_commit": "39babda0ec51c63a3efc6270a1340d2934efb747",
+        "actual_PR_checkout_tree": "671942fc74e86bec94e0f8609190f0cbe062bbd3",
+        "actual_push_checkout_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
+        "alice_pin_checked_in_all_four_logs": "4f287a488bc908bd04f99255ee01b794bacba50b",
+        "groups": [
+          {
+            "run_id": 37263029377,
+            "job_id": 111614019643,
+            "shard": "native-comparison",
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "unittest_seconds": 200.775,
+            "log_sha256": "801449ce7bdb8dc0ccadbc196e28fe986b639f2872c68a7a57c66635a8fc913f",
+            "attempts": [
+              {
+                "phase": "before",
+                "status": "timeout",
+                "elapsed_ms": 60091
+              },
+              {
+                "phase": "after",
+                "status": "timeout",
+                "elapsed_ms": 60165
+              }
+            ],
+            "failure_class": "native_prepare_timeout_before_worker_execution",
+            "response_budget_ms": 60000
+          },
+          {
+            "run_id": 37263029377,
+            "job_id": 111614019704,
+            "shard": "transport",
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "unittest_seconds": 158.579,
+            "log_sha256": "b267410991be0544acc46eef4942803250b0567c6b0d62efaac60f431b9b2d0c",
+            "attempts": [
+              {
+                "elapsed_ms": 22395,
+                "phase": "before",
+                "status": "budget_exceeded"
+              },
+              {
+                "elapsed_ms": 35784,
+                "phase": "after",
+                "status": "budget_exceeded"
+              }
+            ],
+            "failure_class": "baseline_response_budget_exceeded",
+            "response_budget_ms": 10000
+          },
+          {
+            "run_id": 37263026076,
+            "job_id": 111614010307,
+            "shard": "native-comparison",
+            "tests": 1,
+            "passed": 0,
+            "failed": 1,
+            "unittest_seconds": 161.431,
+            "log_sha256": "cf8d363b2f6c67618359339abaff59d18c502b19189bcb53454edc6011449459",
+            "attempts": [
+              {
+                "phase": "before",
+                "status": "timeout",
+                "elapsed_ms": 60045
+              },
+              {
+                "phase": "after",
+                "status": "timeout",
+                "elapsed_ms": 60097
+              }
+            ],
+            "failure_class": "native_prepare_timeout_before_worker_execution",
+            "response_budget_ms": 60000
+          },
+          {
+            "run_id": 37263026076,
+            "job_id": 111614010371,
+            "shard": "transport",
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "unittest_seconds": 201.737,
+            "log_sha256": "109202d6ccb990da7cd3c1b2f99a648a3195f50393476fae49e5bdd38318f4e0",
+            "attempts": [
+              {
+                "elapsed_ms": 29967,
+                "phase": "before",
+                "status": "budget_exceeded"
+              },
+              {
+                "elapsed_ms": 45636,
+                "phase": "after",
+                "status": "budget_exceeded"
+              }
+            ],
+            "failure_class": "baseline_response_budget_exceeded",
+            "response_budget_ms": 10000
+          }
+        ],
+        "interpretation": "Known physical response failures persist; D component correction is not a demonstrated latency improvement. Native timeout trace is in owned read preparation and does not localize the worker-thread SQL cost. These are different fixture arms, not a fair model speed comparison. Remaining whole-history result is pending; no new run, budget relaxation or runtime patch follows this partial receipt."
+      },
+      "current_interpretation": "Both completed runs retain baseline/native response failures and a reached post-slot H denial followed by Claim-read entry. This identifies a scoped boundary observation, not downstream effects or a proven branch/cause. Push retained route remains incomplete."
+    },
+    "current_linux_components": "completed92_pass_no_skips_on_exact_final_D",
+    "source_publication": "completed_bfff869e5193cbccdb1b466c445076376e81f589"
+  },
+  "unresolved": [
+    "Finite pinned historical/current-authority observation mapping.",
+    "Repeated work in open preparation, which already assembles once.",
+    "Actual physical native worker-thread cost distribution.",
+    "CPU cost of new pure identity/material seals, which is not a measured latency improvement.",
+    "Actual preparation branch and current lineage closure after final-slot denial in the physical capture fixture.",
+    "Comparable unchanged physical-path control and exact oracle scope before causal repair.",
+    "Same-case six-attempt three-arm coordinator execution and passive recovery."
+  ],
+  "budgets": {
+    "baseline_ms": 10000,
+    "native_ms": 60000,
+    "ci_minutes": 60,
+    "independent_proof_and_required_writes": "remain inclusive"
+  },
+  "qualification": "Each completed ordinary run passes1038 component cases/82 modules. Physical PR50/3/0 and push49/3/1 (pass/fail/incomplete), of53. No whole-suite, response-latency, learned-judgment or complete-pipeline qualification; personality/MFM remain external.",
+  "review": {
+    "recorded_at_utc": "2026-10-04T20:56:42.476684Z",
+    "read_only": true,
+    "all_seven_candidate_hashes_verified": true,
+    "verdict": "corrections required before source publication",
+    "findings": [
+      {
+        "priority": 1,
+        "path": "src/flora/selected/_phase_preparation.py",
+        "line": 95,
+        "problem": "Existing native-read capture retains an opaque SimpleNamespace verifier; broad discovery sends it to a shared reader helper that rejects its dictionary descriptor.",
+        "evidence": "Actual test_native_reads21 cases/32.582s:15 pass,6 capture errors; ordinary phase setup replaces the verifier with a durable one and misses this compatibility path.",
+        "ruling": "Map bounded owner eligibility before preparation, support known opaque ports safely or retain original fresh construction. Do not widen shared source_closure globally."
+      },
+      {
+        "priority": 2,
+        "path": "src/flora/selected/_phase_preparation.py",
+        "line": 149,
+        "problem": "Shallow discovery omits custody artifact_permissions/artifact_source_policy and nested durable proof custody connection/methods, despite those owners performing subsequent authorization/proof reads.",
+        "evidence": "Static original accesses in phase_snapshots._sources_now477\u2013484 and personal_artifact_custody.DurableOwnerProofLookup.get566/573; no mutation test result claimed yet.",
+        "ruling": "Map finite known custody/policy/proof/reference/object-wrapper ownership edges and required ports, then test changed-controller refusal before protected effects; avoid arbitrary recursion."
+      }
+    ],
+    "shared_cause": "Internal object scanning is too broad for compatibility and too shallow for semantic ownership.",
+    "declined_to_judge": [
+      "physical acceptance",
+      "latency",
+      "learned behavior",
+      "complete pinned terminal-fence coverage",
+      "full-suite readiness"
+    ]
+  },
+  "correction": {
+    "status": "completed_components_not_accepted; native retained-callback owner finding remains",
+    "isolation": "186 runtime/test files hash-verified into a separate local repair copy; active verification source unchanged",
+    "required_checks": [
+      "Untouched existing opaque-verifier actual capture compatibility.",
+      "Custody artifact permission/source policy mutation refusal.",
+      "Nested durable owner-proof custody connection/method mutation refusal.",
+      "Applicable private holder expiry, legitimate opaque callback state, nested H withdrawal and custom fresh fallback."
+    ],
+    "application_gate": "Apply only reviewed exact two-file delta after correction checks; actual FloRA source remains the original rejected candidate.",
+    "candidate_source_sha256": {
+      "src/flora/selected/_phase_preparation.py": "bed117ffbc19b0d862a59560a16a13ec28b4058f0c758b0c1a6dacbef4b4df7b",
+      "src/flora/selected/context_guard.py": "73f59092d6dc6ee8983e47c34658efaa709f79ac52ab998703f931d01cc24408",
+      "src/flora/selected/judgment_lineage.py": "69d05ebf2813cc69ac8351c3a17288d0cd6a87e9ede147277ebfcaf407d738f1",
+      "src/flora/selected/phase_routes.py": "ac10133a2618eef18d7c7e2c6d77679f9052f3be123017e8187a36263a3261eb",
+      "src/flora/selected/phase_snapshots.py": "8974b5604991b896433082ca8b4ad93f4dafac9c321d504872c960f07b5a7473",
+      "tests/test_phase_snapshots.py": "ddcb7651fe4f01cdec65f4e703863d9ef9233c521b24418c2a12d7628afe4c42",
+      "tests/integration/test_selected_experiment_preregistration.py": "c161b526c5279e9af15f930d6fc6a00df62a4f3200a82ba2eeaf6103ecd76f23"
+    },
+    "delta_files": [
+      "src/flora/selected/_phase_preparation.py",
+      "tests/test_phase_snapshots.py"
+    ],
+    "unchanged_isolated_files": 184,
+    "mechanism": "Finite named service/port ownership graph, including archive policies, proof/reference custody, native object/log wrappers and copied bound-callback owner; representation admission completes before preparation. Known opaque ports preserve live bookkeeping; unsupported representations retain original fresh construction.",
+    "source_backed_rationale": "Original accesses and reproduced dictionary-descriptor failure identify the causal map/admission defect. Reuse Alice material/authority separation and prior Graphify/Graphiti derived-work findings; none authorizes permission caching or a new platform.",
+    "red": {
+      "cases": 1,
+      "errors": 1,
+      "seconds": 5.32,
+      "cause": "Same actual default-verifier dictionary TypeError as the Linux rejection."
+    },
+    "final_windows": {
+      "cases": 5,
+      "passed": 5,
+      "seconds": 173.821,
+      "source": "exact correction manifest"
+    },
+    "progressive_windows": {
+      "distinct_passed": 11,
+      "ruling": "Not a final-source11-case suite; prior receipts and source limits retained."
+    },
+    "linux": {
+      "status": "passed",
+      "container_id": "ebc9c7bb925c20320bb2567eb0baf9e1c0dc76a380af725a9ebdb5b2b4a5f36c",
+      "groups": [
+        "test_native_reads",
+        "test_phase_snapshots"
+      ],
+      "source": "read-only isolated correction plus pinned Alice4f287a; source manifests before/after",
+      "controller_sha256": "d15f64dfc5ab51078aa695c1c5f21449537ece75b4086280062d5c360ada9e2b",
+      "network": "disabled",
+      "deadline_seconds": 3600,
+      "physical_engines_run": false,
+      "cases": 63,
+      "passed": 63,
+      "skipped": 0,
+      "completed_groups": [
+        {
+          "names": [
+            "test_native_reads"
+          ],
+          "command": [
+            "/usr/local/bin/python",
+            "-m",
+            "unittest",
+            "test_native_reads",
+            "-v"
+          ],
+          "exit_code": 0,
+          "status": "passed",
+          "tests": 21,
+          "unittest_seconds": 77.363,
+          "process_seconds": 83.388,
+          "log": "group-1.log"
+        },
+        {
+          "names": [
+            "test_phase_snapshots"
+          ],
+          "command": [
+            "/usr/local/bin/python",
+            "-m",
+            "unittest",
+            "test_phase_snapshots",
+            "-v"
+          ],
+          "exit_code": 0,
+          "status": "passed",
+          "tests": 42,
+          "unittest_seconds": 792.385,
+          "process_seconds": 795.836,
+          "log": "group-2.log"
+        }
+      ],
+      "all_groups_completed": true,
+      "source_files_verified": 411,
+      "sources_unchanged": true,
+      "current_host_source_hashes_match": true,
+      "completed_at_utc": "2026-10-05T00:22:41Z",
+      "total_seconds": 889.568
+    },
+    "fresh_review": {
+      "status": "completed_not_accepted_one_P2_no_new_P1",
+      "source_manifest_verified": true,
+      "finding": "Two actual native copied callbacks retain original controller owners outside the finite map.",
+      "paths": [
+        {
+          "path": "src/flora/selected/phase_snapshots.py",
+          "lines": [
+            605,
+            608,
+            613
+          ],
+          "mechanism": "Capture copies lineage into a consumer, but receipt_for still calls original lineage.phase_receipt_for. The original proof port can change without a mapped binding refusal."
+        },
+        {
+          "path": "src/flora/selected/experiment_preregistration.py",
+          "lines": [
+            212,
+            214,
+            217
+          ],
+          "mechanism": "bind_private_guard copies the authority, but its native check still reads original self.anchor.store._current. The copied authority map does not cover the retained original controller."
+        }
+      ],
+      "evidence_limit": "Source-supported finding; dynamic reproduction not executed by the read-only reviewer.",
+      "accepted_parts": [
+        "Supported opaque namespace binding and pre-preparation unsupported fallback.",
+        "Previously omitted archive policies and durable proof custody owners now mapped.",
+        "Existing independent H-before-owner/nested/full final callback barrier unchanged."
+      ],
+      "ruling": "Define and verify explicit ownership for the known native callback factories; no generic closure recursion or sealing of opaque permission/counter state."
+    }
+  },
+  "completed_original_linux": {
+    "candidate": "original rejected seven-file source",
+    "status": "failed",
+    "completed_at_utc": "2026-10-04T21:04:19Z",
+    "total_seconds": 1185.98,
+    "cases": 82,
+    "passed": 76,
+    "errors": 6,
+    "skipped": 0,
+    "incomplete": 0,
+    "groups": [
+      {
+        "names": [
+          "test_native_reads"
+        ],
+        "tests": 21,
+        "status": "failed",
+        "unittest_seconds": 32.582,
+        "exit_code": 1
+      },
+      {
+        "names": [
+          "test_shared_authority_frame"
+        ],
+        "tests": 23,
+        "status": "passed",
+        "unittest_seconds": 972.208,
+        "exit_code": 0
+      },
+      {
+        "names": [
+          "test_experiment_preregistration"
+        ],
+        "tests": 23,
+        "status": "passed",
+        "unittest_seconds": 35.279,
+        "exit_code": 0
+      },
+      {
+        "names": [
+          "test_preregistration_current_guard"
+        ],
+        "tests": 7,
+        "status": "passed",
+        "unittest_seconds": 2.742,
+        "exit_code": 0
+      },
+      {
+        "names": [
+          "test_preregistration_metadata_frame"
+        ],
+        "tests": 6,
+        "status": "passed",
+        "unittest_seconds": 60.899,
+        "exit_code": 0
+      },
+      {
+        "names": [
+          "test_phase_snapshots.PhaseSnapshotTest.test_router_header_binds_actual_frozen_native_configuration_but_does_not_qualify_missing_archives",
+          "test_phase_snapshots.PhaseSnapshotTest.test_router_refuses_untyped_or_cross_arm_entries_and_nonselected_eval_authority"
+        ],
+        "tests": 2,
+        "status": "passed",
+        "unittest_seconds": 31.503,
+        "exit_code": 0
+      }
+    ],
+    "source_files_before_after": 411,
+    "sources_unchanged": true,
+    "all_current_host_source_hashes_verified": true,
+    "physical_engines_run": false
+  },
+  "native_callback_correction": {
+    "status": "built_isolated_not_accepted; original factory admission and real H fixture need correction",
+    "base_source": "bed117ff/ddcb765 finite-owner candidate; complete63-case Linux components pass, source remains frozen",
+    "snapshot_files_verified": 186,
+    "scope": "Audit the known actual native controller-retaining callback factories once; reproduce original proof-port and original history-anchor mutation, then retain/map exact owners or remove their original-owner dereferences.",
+    "primary_runtime_source": "https://docs.python.org/3.12/library/copy.html",
+    "source_mechanism": "Shallow copying retains member references; functions are returned unchanged even for deep copy. Copying a facade does not establish new callback ownership.",
+    "excluded": [
+      "deep-copy transport/authority",
+      "arbitrary callback-state recursion",
+      "new Alice platform",
+      "personality/MFM training"
+    ],
+    "initial_red": {
+      "port": "original lineage.phase_receipt_for replacement during actual capture",
+      "cases": 1,
+      "failures": 1,
+      "seconds": 21.27,
+      "evidence": "Expected PermissionError was not raised; isolated pre-repair source",
+      "physical_engines_run": false
+    },
+    "registered_history_red": {
+      "status": "unverified; both audited-fixture prior/corrected attempts refused before mutation",
+      "test": "test_phase_callback_owners.PreregisteredCallbackOwnerTest.test_original_history_anchor_replacement_refuses_before_effects",
+      "test_module_sha256": "d95826a75a368f2c3cd6b728f40291ca8ab7a98643effc9b8ddb9b1551fddb28",
+      "network": "disabled",
+      "physical_engines_run": false,
+      "cases": 1,
+      "errors": 1,
+      "seconds": 0.721,
+      "cause": "register_recipe correctly refused an eligible training choice for heldout material; fixture must declare the evaluation role before the ownership diagnostic can execute.",
+      "sources_unchanged": true,
+      "final_test_module_sha256": "d39adcdc35b1b17984aa342724223a322fbde8a7c73449c5604ea9bde522f3bc",
+      "completed_groups": [
+        {
+          "label": "prior_registered_H",
+          "source": "/prior",
+          "tests": 1,
+          "seconds": 3.829,
+          "process_seconds": 9.421,
+          "exit_code": 1,
+          "status": "failed",
+          "log": "prior_registered_H.log"
+        },
+        {
+          "label": "corrected_registered_H",
+          "source": "/candidate",
+          "tests": 1,
+          "seconds": 3.706,
+          "process_seconds": 8.381,
+          "exit_code": 1,
+          "status": "failed",
+          "log": "corrected_registered_H.log"
+        }
+      ],
+      "source_files_before_after_current_matched": 598,
+      "target_mutation_reached": false,
+      "component_group_started": false,
+      "diagnosis": "PreregisteredHistoryAuthority -> SelectedRunEvidencePolicy -> history_fence requires XTDBFormationPermissionPolicy. Public history wrapper catches incompatible fixture TypeError and returnsFalse; archive initial capture then refuses. This is a fixture-plane mismatch, not a reproduced native ownership failure."
+    },
+    "candidate_source_sha256": {
+      "src/flora/selected/_phase_preparation.py": "84309e228a66915acbd74a292cd6ace89ad307609614feab07464b22b2c70093",
+      "src/flora/selected/context_guard.py": "73f59092d6dc6ee8983e47c34658efaa709f79ac52ab998703f931d01cc24408",
+      "src/flora/selected/judgment_lineage.py": "69d05ebf2813cc69ac8351c3a17288d0cd6a87e9ede147277ebfcaf407d738f1",
+      "src/flora/selected/phase_routes.py": "ac10133a2618eef18d7c7e2c6d77679f9052f3be123017e8187a36263a3261eb",
+      "src/flora/selected/phase_snapshots.py": "8974b5604991b896433082ca8b4ad93f4dafac9c321d504872c960f07b5a7473",
+      "tests/test_phase_snapshots.py": "817b59ba9eea12a95b39bb779376be27b816a6e3fbd5406d2637d7a34276dd8a",
+      "tests/integration/test_selected_experiment_preregistration.py": "c161b526c5279e9af15f930d6fc6a00df62a4f3200a82ba2eeaf6103ecd76f23",
+      "tests/test_phase_callback_owners.py": "d39adcdc35b1b17984aa342724223a322fbde8a7c73449c5604ea9bde522f3bc"
+    },
+    "source_delta": {
+      "changed": 2,
+      "added": 1,
+      "unchanged": 184,
+      "current_python_files": 187
+    },
+    "final_windows": {
+      "cases": 10,
+      "passed": 10,
+      "skipped": 0,
+      "seconds": 386.501
+    },
+    "fresh_review": {
+      "status": "rejected",
+      "findings": [
+        {
+          "severity": "P1",
+          "path": "src/flora/selected/_phase_preparation.py",
+          "lines": [
+            181,
+            193
+          ],
+          "cause": "Current factory/body is whitelisted at entry; replacements with extra retained controllers and arbitrary bound functions on listed owners can be admitted instead of original-fresh fallback.",
+          "required": "Preserve original native factory and explicit bound method/code identities before replacement."
+        },
+        {
+          "severity": "P2",
+          "path": "tests/test_phase_callback_owners.py",
+          "line": 41,
+          "cause": "Stand-in control permissions are incompatible with the real H metadata fence. Initial capture refuses before target mutation.",
+          "required": "Real live selected policy/grants on the same source plane, with a successful unmutated control."
+        }
+      ]
+    }
+  },
+  "prototype_build_state": {
+    "full_build_ready_except_personality_mfm": false,
+    "latency_is_only_remaining_problem": false,
+    "implemented": "Evidence/Experience/Claims, governed state, context/judgment ports, decision-outcome-successor linkage, paired comparison/ablation and assessment/control interfaces.",
+    "alice_alignment": "Selected logical contracts and exercised physical planes follow the original Alice/comic map; complete operational correctness remains unqualified.",
+    "synthetic_pipeline_evidence": "Selected physical pilot, correction/outcome/withdrawal and separate native-route fixtures pass at bfff. The two-stage preregistration case fails its early injected post-slot H check before BEFORE capture publication; later update/AFTER/final/four-route portions do not execute. One same-case three-arm comparison remains unverified.",
+    "physical_runs": "bfff PR50/53 pass,3 fail,0 incomplete; push49/53 pass,3 fail,1 incomplete. Each1038 component cases in82 modules pass without skips. Supplied producer outputs, not learned results.",
+    "next_capability_gate": "A complete current-source synthetic causal pipeline through anchored before/update/after/final, native and ablation routes, comparison and reporting must be validated; individual component passes are insufficient.",
+    "part_two": "Limited builder transfer requires qualified Part1; procedure seeds are not a trained builder or accepted transfer result.",
+    "scope_exclusion": "Full Alice mission/workspace/product lifecycle is not a prototype prerequisite."
+  },
+  "factory_origin_correction": {
+    "status": "source_review_clear; Linux92_corrected_pass; applied_exact_source",
+    "base_mapper_sha256": "84309e228a66915acbd74a292cd6ace89ad307609614feab07464b22b2c70093",
+    "copied_python_files": 187,
+    "scope": "Bounded actual phase preparation with original native factory/code and retained owners, plus genuine registered-H fixture. Full Alice platform and personality/MFM remain excluded.",
+    "primary_runtime_source": "https://docs.python.org/3.12/reference/datamodel.html#user-defined-functions",
+    "source_mechanism": "Function code is writable; closure cells retain mutable references; bound methods expose original function/owner. Match preserved native identity/code rather than a currently installed implementation or owner class alone.",
+    "application_gate": "Satisfied: fresh scoped review clear, source-bound Linux control/mutation and relevant components pass, all12 applied source hashes match.",
+    "candidate_source_sha256": {
+      "src/flora/selected/_phase_preparation.py": "0b7903651d61d461c0f9d063b3e9b5f59c9762c604648d9bb2b6dab2541880d4",
+      "src/flora/selected/context_guard.py": "73f59092d6dc6ee8983e47c34658efaa709f79ac52ab998703f931d01cc24408",
+      "src/flora/selected/judgment_lineage.py": "69d05ebf2813cc69ac8351c3a17288d0cd6a87e9ede147277ebfcaf407d738f1",
+      "src/flora/selected/phase_routes.py": "dc09f86287f4094f7445f11139a3077eb50aaa6df3694a935c590d06f46d7044",
+      "src/flora/selected/phase_snapshots.py": "1094d96e2ee298773d35cb66ccd27eb0d3ca397cdf175a38542a2ef1097974f9",
+      "tests/test_phase_snapshots.py": "d13487cbec0830cc52768d932c4ee77b3a1b04189865eb407a29f37d4aecb646",
+      "tests/integration/test_selected_experiment_preregistration.py": "c161b526c5279e9af15f930d6fc6a00df62a4f3200a82ba2eeaf6103ecd76f23",
+      "tests/test_phase_callback_owners.py": "46584e6fc38a6d1ab8639db967076918db7c4f863cf8ed42b3a40b37ae1b2e91",
+      "src/flora/selected/comparison_custody.py": "cf9ed22682150730534e6f93c461c942fa33d461db2e97a8e32f149850fe24be",
+      "src/flora/selected/experiment_preregistration.py": "33fc1353629fc21f92d25ba295eea798a4710d7772c1141cffa65e0ae822df5e",
+      "src/flora/selected/personal_artifact_custody.py": "ca1c81d80aec0bedfa554e48f878f09347c92501b541743cb3dbd1df407e1b76",
+      "tests/phase_callback_permissions.py": "a97d2db7ae4f41e659e66bac6492e1d3c040751a7f2373377cec646458809eae"
+    },
+    "source_delta": {
+      "changed": 8,
+      "added": 1,
+      "unchanged": 179,
+      "current_python_files": 188
+    },
+    "red": {
+      "tests": 2,
+      "failures": 2,
+      "seconds": 9.267,
+      "log": "origin-red.log",
+      "before_runtime_edits": true
+    },
+    "progressive_passes": 14,
+    "final_source_subset": {
+      "tests": [
+        "test_phase_snapshots.PhaseDefaultVerifierTest.test_changed_native_bound_code_keeps_fresh_construction",
+        "test_phase_snapshots.PhaseSnapshotTest.test_actual_capture_prepares_once_preserving_four_independent_proofs",
+        "test_phase_snapshots.PhaseSnapshotTest.test_actual_cold_constructor_prepares_once_preserving_phase_proofs",
+        "test_phase_snapshots.PhaseSnapshotTest.test_actual_operation_rejects_forgery_mutation_cross_thread_and_expiry",
+        "test_phase_snapshots.PhaseSnapshotTest.test_lineage_only_withdrawal_in_nested_owner_ciphertext_blocks_decrypt",
+        "test_phase_snapshots.PhaseSnapshotTest.test_qualified_final_source_callback_is_followed_by_lineage_revalidation"
+      ],
+      "seconds": 307.461,
+      "skips": 0,
+      "all_188_hashes_unchanged": true
+    },
+    "review": {
+      "status": "no_actionable_findings",
+      "source_only": true,
+      "D_files_verified": 188,
+      "C_files_verified": 187,
+      "operational_qualification": false
+    },
+    "linux": {
+      "status": "component_verified",
+      "container_id": "0e1bd9ebdf3319ac4f86e227b0cfe59c05c8dc45a4f352821d46ee931d1ccd73",
+      "image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+      "controller": "run_factory_origin_linux_20261004.py",
+      "network": "disabled",
+      "fixture_files_verified": 112,
+      "sequence": [
+        "prior_B_registered_H_control_and_mutation",
+        "corrected_D_registered_H_control_and_mutation",
+        "corrected_D_native_reads_phase_snapshots_experiment_preregistration"
+      ],
+      "conditions": "Each fixture must first authenticate real H and complete unmutated actual capture. Prior source must reproduce targeted mutation failure; corrected source must pass before later components.",
+      "deadline_seconds": 3600,
+      "physical_engines_run": false,
+      "prior_registered_H": {
+        "status": "genuine_target_reproduced",
+        "tests": 1,
+        "failures": 1,
+        "seconds": 262.875,
+        "unmutated_history_authentication_and_capture_passed": true,
+        "reason": "PermissionError not raised for original H owner replacement",
+        "corrected_D_result": "1pass/172.029s; unchanged authentication/capture control passed before mutation"
+      },
+      "groups": [
+        {
+          "label": "prior_registered_H",
+          "source": "/prior",
+          "tests": 1,
+          "seconds": 262.875,
+          "process_seconds": 267.095,
+          "exit_code": 1,
+          "status": "failed",
+          "log": "prior_registered_H.log"
+        },
+        {
+          "label": "corrected_registered_H",
+          "source": "/candidate",
+          "tests": 1,
+          "seconds": 172.029,
+          "process_seconds": 179.912,
+          "exit_code": 0,
+          "status": "passed",
+          "log": "corrected_registered_H.log"
+        },
+        {
+          "label": "corrected_components",
+          "source": "/candidate",
+          "tests": 91,
+          "seconds": 886.964,
+          "process_seconds": 892.483,
+          "exit_code": 0,
+          "status": "passed",
+          "log": "corrected_components.log"
+        }
+      ],
+      "mounted_sources_verified": 711,
+      "all_sources_match_before_after_and_host": true,
+      "completed_at_utc": "2026-10-05T03:55:21Z",
+      "total_seconds": 1342.851,
+      "corrected_passes": 92,
+      "skips": 0,
+      "log_sha256": {
+        "prior_registered_H": "d99922e1ae39504765e1ac80a7a100980774004ad3b2be13e4b8c942e040f85b",
+        "corrected_registered_H": "56b599535fbb741b942a1d08aa38bb78edb77b7df1a33dfcc4e1cedcaf4ac8bf",
+        "corrected_components": "0bd82132f76968fd5c5eaa288fd7de4ce22414df238253fd67697327e18c6904"
+      }
+    },
+    "preserved_launch_failure": {
+      "path": "factory-origin-linux-verification-20261004",
+      "cause": "Three-file overlay omitted file-relative test dependencies; import failed before any behavioral case.",
+      "runtime_changed": false,
+      "repaired_packaging_only": true
+    },
+    "application": {
+      "status": "published_source_verified",
+      "paths": 12,
+      "all_applied_hashes_match_reviewed_candidate": true,
+      "source_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
+      "source_tree": "671942fc74e86bec94e0f8609190f0cbe062bbd3",
+      "published_source_identity": {
+        "exact_selected_source_files": 12,
+        "full_source_files": 188,
+        "unchanged_files_with_CRLF_only_difference": 157,
+        "all_file_content_matches_after_line_ending_normalization": true,
+        "workflow_unchanged": true
+      }
+    }
+  },
+  "complete_pipeline_boundary_recovery": {
+    "tested_commit": "c70b9a4e3115f7f808ccda2e5bf075649065d35f",
+    "verified_jobs": [
+      {
+        "job_id": 111355236682,
+        "log_sha256": "bd1ffc63dc03c0d5fb28230e18b00025395ccdf44617b82350d5d23019143119",
+        "last_completed_milestone": "original-inputs-registered",
+        "elapsed_seconds": 73.761
+      },
+      {
+        "job_id": 111355229466,
+        "log_sha256": "8f0a28e8c8baab4c13d3cd9161b0370637a64b74b365b7b52dce35b8c4196466",
+        "last_completed_milestone": "original-inputs-registered",
+        "elapsed_seconds": 98.238
+      }
+    ],
+    "next_logged_boundary": "first before-full capture-published",
+    "source_sequence": "Historical bindings -> live archive.capture -> archive metadata -> explicit enrolled grants -> store.publish_capture (historical observation) -> control grants -> capture-published milestone.",
+    "ruling": "No completion milestone occurred before cancellation. The log boundary spans capture/observation/publication and does not isolate one helper latency; do not claim an exact capture cost or whole pipeline acceptance."
+  },
+  "original_candidate_source_sha256": {
+    "src/flora/selected/_phase_preparation.py": "ca6e975869528f431c9dad06b7c18844b6753a9a10cc735839f909d9ed13fea4",
+    "src/flora/selected/context_guard.py": "73f59092d6dc6ee8983e47c34658efaa709f79ac52ab998703f931d01cc24408",
+    "src/flora/selected/judgment_lineage.py": "69d05ebf2813cc69ac8351c3a17288d0cd6a87e9ede147277ebfcaf407d738f1",
+    "src/flora/selected/phase_routes.py": "ac10133a2618eef18d7c7e2c6d77679f9052f3be123017e8187a36263a3261eb",
+    "src/flora/selected/phase_snapshots.py": "8974b5604991b896433082ca8b4ad93f4dafac9c321d504872c960f07b5a7473",
+    "tests/test_phase_snapshots.py": "d0d1db1cffe63eaf4ac6ba55e0577062cc165772c856deb9797d229a614f4423",
+    "tests/integration/test_selected_experiment_preregistration.py": "c161b526c5279e9af15f930d6fc6a00df62a4f3200a82ba2eeaf6103ecd76f23"
+  },
+  "test_design_audit": {
+    "status": "source_and_read_only_discovery_audited",
+    "goal": "docs/EXPERIMENT_GOAL.md",
+    "design_and_failure_interpretation": "docs/EXPERIMENT_COORDINATOR.md#october4-test-purpose-audit-and-next-connected-case",
+    "known_positive_negative_control": "Registered-H unchanged authentication/capture succeeds before original-owner mutation; mutation must fire and no later callback/SQL/ciphertext effect may occur. Prior source genuinely fails target, corrected source passes.",
+    "same_evidence_controls": [
+      "Finalizer compares actual captured context digests, not labels.",
+      "Paired runner gives full and ablation the same selected context; separate contract test asserts equal digests and six attempts."
+    ],
+    "physical_coverage_gap": "Two-stage physical test runs four native routes. Physical coordinator test supplies no adapters and asserts preflight_blocked. Their separate success cannot establish the same registered case executing all six attempts.",
+    "next_bounded_case": "Use the actual two-stage final authority and existing concrete native/general-memory adapter interfaces in RegisteredExperimentCoordinator, with enrolled provider ledger, owned readers, exact independent grants, six persisted attempts and passive recovery. Fictional producers qualify contracts only.",
+    "discovery": {
+      "module": "tests/test_phase_callback_owners.py",
+      "cases": 19,
+      "new_target_cases": 1,
+      "imported_base_cases": 9,
+      "inherited_base_cases": 9,
+      "behavioral_cases_executed_by_audit": 0,
+      "fix": "Isolate one new regression in next test change; preserve current running source and exact control/mutation assertions."
+    },
+    "learned_result": false,
+    "whole_pipeline_acceptance": false,
+    "new_performance_or_permission_shortcut": false,
+    "completed_run_boundary": "Both physical history runs reach the injected denial and Claim.load_current entry. Preserve that bounded observation; no SQL/decrypt/inference/append effect, signed revocation, or issued/fallback attribution follows."
+  },
+  "completion_diagnosis_recorded_at_utc": "2026-10-05T06:24:44.369222Z"
+}

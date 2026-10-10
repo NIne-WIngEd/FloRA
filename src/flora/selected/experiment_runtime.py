@@ -28,7 +28,8 @@ from cognitive_kernel.projection_contracts import ProjectionVersion
 
 from .artifact_registry import ArtifactQualificationVerifier, RuntimeWiringManifest, XTDBModelArtifactRegistry
 from .claims import XTDBClaimAuthority, _dml_placeholder, _record_json, _rows
-from .context import ContextPlan, ContextUsePolicy, LocalContext, assemble_context, record_context_delivery
+from .context import (ContextPlan, ContextUsePolicy, LocalContext, assemble_context,
+                      _record_authenticated_context_delivery)
 from .decision_outcome import RecordedEvent, record_decision
 from .experience import KurrentExperienceLog
 from .formation_admission import (
@@ -866,10 +867,18 @@ class FloRAExperimentRuntime:
             raise ValueError("native judgment requires an exact task input")
         if dispatch_guard is not None and not callable(dispatch_guard):
             raise TypeError("native dispatch qualification guard must be callable")
+        original_policy = self.context_policy
+        def invocation_guard():
+            if self.context_policy is not original_policy:
+                raise PermissionError("judgment context policy owner changed")
+            if authority_guard is not None and authority_guard() is not None:
+                raise PermissionError("independent context authority guard refused")
+            if self.context_policy is not original_policy:
+                raise PermissionError("judgment context policy owner changed during authority callback")
         role = {}
         def qualify(metadata_guard):
             role["resolved"] = self._resolve("personality_judgment", authority_guard=metadata_guard)
-        prepared = self._prepare_current_context(plan, authority_guard=authority_guard,
+        prepared = self._prepare_current_context(plan, authority_guard=invocation_guard,
             before_private_assembly=qualify)
         binding, _ = role["resolved"]
         context = prepared.context
@@ -877,10 +886,13 @@ class FloRAExperimentRuntime:
             raise ValueError("explicit experiment context minimum is not met")
         revalidate = prepared.revalidate
         objects = _AuthorizedRuntimeReads(self.objects, prepared.metadata_current)
-        delivery = record_context_delivery(context=context, claims=self.claims, state=self.state,
-            log=self.log, objects=objects, references=self.references, policy=self.context_policy,
-            approval_verifier=self._guarded_state_verifier(objects), vector=self.vector, graph=self.graph,
-            occurred_at=self.clock(), expected_revision=self._revision(), authority_guard=prepared.metadata_current)
+        # Preparation owns the exact material for this invocation. Delivery
+        # authenticates its cited originals without reconstructing context.
+        # Its full guard follows clock/revision callbacks and precedes append;
+        # nested private reads retain metadata-only guards to avoid recursion.
+        delivery = _record_authenticated_context_delivery(context=context,
+            log=self.log, objects=objects, references=self.references, policy=prepared.policy,
+            occurred_at=self.clock(), expected_revision=self._revision(), authority_guard=revalidate)
         prepared.metadata_current()
         self.private.register(delivery, invocation_id, "context_delivery", revalidate=prepared.metadata_current)
         execution = self._execute(role="personality_judgment", invocation_id=invocation_id, operation="native_judgment",

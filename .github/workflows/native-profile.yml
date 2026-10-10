@@ -2,6 +2,24 @@ name: FloRA optional native worker aggregate diagnostic
 
 on:
   workflow_dispatch:
+    inputs:
+      observer:
+        description: Optional original-code observation method
+        type: choice
+        default: aggregate
+        options:
+          - aggregate
+          - stack-samples
+          - contracts
+          - functional
+          - setup-stacks
+          - setup-journal
+          - setup-eligibility
+          - construction-windows
+      functional_positive_only:
+        description: Run the positive connected case only; full three-case verification remains separate
+        type: boolean
+        default: false
   push:
     paths:
       - scripts/profile_selected_native_boundaries.py
@@ -9,6 +27,7 @@ on:
 
 jobs:
   diagnostic-native:
+    if: github.event_name != 'workflow_dispatch' || (inputs.observer != 'contracts' && inputs.observer != 'functional' && inputs.observer != 'setup-stacks' && inputs.observer != 'setup-journal' && inputs.observer != 'setup-eligibility' && inputs.observer != 'construction-windows')
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
@@ -24,6 +43,8 @@ jobs:
           repository: NIne-WIngEd/A.L.I.C.E
           ref: 4f287a488bc908bd04f99255ee01b794bacba50b
           path: alice-reference
+          ssh-key: ${{ secrets.ALICE_CONTRACTS_READ_KEY }}
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -68,16 +89,777 @@ jobs:
           done
       - name: Wait for persistent Temporal and namespace
         run: python scripts/temporal_restart_probe.py health --retry-seconds 120
-      - name: Observe original owned native workers without qualifying latency
+      - name: Observe owned workers only with separate bounded observation windows
+        if: github.event_name != 'workflow_dispatch' || inputs.observer != 'stack-samples'
         continue-on-error: true
-        run: python scripts/profile_selected_native_boundaries.py --cap-seconds 180 --output selected-native-profile.json
+        run: python scripts/profile_selected_native_boundaries.py --workers-only --cap-seconds 180 --output selected-native-profile.json
+      - name: Sample original owned worker stacks with numeric fixed tags
+        if: github.event_name == 'workflow_dispatch' && inputs.observer == 'stack-samples'
+        continue-on-error: true
+        run: python scripts/profile_selected_native_stacks.py --cap-seconds 180 --interval-seconds 0.05 --output selected-native-stack-samples.json
       - name: Upload aggregate diagnostic only
-        if: always()
+        if: always() && (github.event_name != 'workflow_dispatch' || inputs.observer != 'stack-samples')
         uses: actions/upload-artifact@v4
         with:
           name: selected-native-worker-aggregate-diagnostic
           path: selected-native-profile.json
           if-no-files-found: warn
+      - name: Upload numeric stack samples only
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.observer == 'stack-samples'
+        uses: actions/upload-artifact@v4
+        with:
+          name: selected-native-worker-stack-samples-diagnostic
+          path: selected-native-stack-samples.json
+          if-no-files-found: warn
       - name: Tear down selected services
         if: always()
         run: docker compose -f compose.integration.yml down -v
+
+  original-physical-contracts:
+    if: github.event_name == 'workflow_dispatch' && inputs.observer == 'contracts'
+    name: original-${{ matrix.shard }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [transport, native-comparison]
+    env:
+      PYTHONPATH: alice-reference/src:src
+      KURRENTDB_URI: kurrentdb://127.0.0.1:2113?tls=false
+      XTDB_DSN: postgresql://xtdb@127.0.0.1:5432/xtdb
+      TEMPORAL_ADDRESS: 127.0.0.1:7233
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout pinned A.L.I.C.E. contracts
+        uses: actions/checkout@v4
+        with:
+          repository: NIne-WIngEd/A.L.I.C.E
+          ref: 4f287a488bc908bd04f99255ee01b794bacba50b
+          path: alice-reference
+          ssh-key: ${{ secrets.ALICE_CONTRACTS_READ_KEY }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Record exact source identity
+        run: |
+          git rev-parse HEAD HEAD^{tree} > binding-source-identity.txt
+          git -C alice-reference rev-parse HEAD >> binding-source-identity.txt
+          sha256sum src/flora/selected/selected_phase_authority.py src/flora/selected/selected_authority_frame.py tests/test_selected_phase_authority.py tests/test_shared_context_bindings.py >> binding-source-identity.txt
+      - name: Install original integration dependencies
+        run: python -m pip install -e '.[backends,providers,embeddings]'
+      - name: Start original selected services
+        run: docker compose -f compose.integration.yml up -d
+      - name: Wait for selected services
+        run: |
+          set -euo pipefail
+          for service in 'http://127.0.0.1:2113/health/live' 'http://127.0.0.1:8080/healthz/ready' 'http://127.0.0.1:6333/healthz'; do
+            for attempt in $(seq 1 90); do
+              if curl -fsS "$service" >/dev/null; then break; fi
+              [ "$attempt" -lt 90 ] || exit 1
+              sleep 2
+            done
+          done
+          for attempt in $(seq 1 90); do
+            if python -c 'import socket; s=socket.create_connection(("127.0.0.1", 4222), timeout=1); s.close()' 2>/dev/null; then break; fi
+            [ "$attempt" -lt 90 ] || exit 1
+            sleep 2
+          done
+          python scripts/temporal_restart_probe.py health --retry-seconds 120
+      - name: Run original uninstrumented physical contracts
+        run: python scripts/run_selected_integration_shard.py --shard '${{ matrix.shard }}'
+      - name: Preserve backend evidence
+        if: always()
+        run: |
+          docker compose -f compose.integration.yml ps > binding-backend-ps.txt || true
+          docker compose -f compose.integration.yml logs --no-color > binding-backend-logs.txt || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: binding-verification-${{ matrix.shard }}
+          path: |
+            binding-source-identity.txt
+            binding-backend-ps.txt
+            binding-backend-logs.txt
+      - name: Tear down isolated selected services
+        if: always()
+        run: docker compose -f compose.integration.yml down -v
+
+  connected-functional:
+    if: github.event_name == 'workflow_dispatch' && inputs.observer == 'functional'
+    name: connected-functional-${{ matrix.case }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(inputs.functional_positive_only && '[{"case":"positive","test-id":"test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery"}]' || '[{"case":"positive","test-id":"test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery"},{"case":"history-withdrawal","test-id":"test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects"},{"case":"context-withdrawal","test-id":"test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects"}]') }}
+    env:
+      PYTHONPATH: alice-reference/src:src:tests:tests/integration
+      KURRENTDB_URI: kurrentdb://127.0.0.1:2113?tls=false
+      XTDB_DSN: postgresql://xtdb@127.0.0.1:5432/xtdb
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout pinned A.L.I.C.E. contracts
+        uses: actions/checkout@v4
+        with:
+          repository: NIne-WIngEd/A.L.I.C.E
+          ref: 4f287a488bc908bd04f99255ee01b794bacba50b
+          path: alice-reference
+          ssh-key: ${{ secrets.ALICE_CONTRACTS_READ_KEY }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Record exact Python runtime
+        run: |
+          python - <<'PY' > connected-functional-python.txt
+          import sys
+          print(sys.version)
+          print('version_info=' + repr(tuple(sys.version_info)))
+          print('gil_enabled=' + repr(not hasattr(sys, '_is_gil_enabled') or sys._is_gil_enabled()))
+          PY
+      - name: Record exact source and declared mechanical protocol
+        run: |
+          git rev-parse HEAD HEAD^{tree} > connected-functional-source-identity.txt
+          git -C alice-reference rev-parse HEAD >> connected-functional-source-identity.txt
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-functional-source-before.txt
+          sha256sum .github/workflows/native-profile.yml >> connected-functional-source-identity.txt
+          cp docs/FUNCTIONAL_BUILD_PRIORITY_2026-10-07.md connected-functional-protocol.md
+      - name: Install selected integration dependencies
+        run: python -m pip install -e '.[backends,providers,embeddings]'
+      - name: Record selected dependency identity
+        run: python -m pip freeze --all > connected-functional-dependencies.txt
+      - name: Start only this case's selected services
+        run: docker compose -f compose.integration.yml up -d kurrentdb xtdb qdrant
+      - name: Wait for selected services
+        run: |
+          set -euo pipefail
+          for service in 'http://127.0.0.1:2113/health/live' 'http://127.0.0.1:8080/healthz/ready' 'http://127.0.0.1:6333/healthz'; do
+            for attempt in $(seq 1 90); do
+              if curl -fsS "$service" >/dev/null; then break; fi
+              [ "$attempt" -lt 90 ] || exit 1
+              sleep 2
+            done
+          done
+      - name: Run the connected mechanical case to completion within runner resources
+        run: |
+          set -uo pipefail
+          set +e
+          timing_available=false
+          timing=()
+          if [ -x /usr/bin/time ]; then
+            timing_available=true
+            timing=(/usr/bin/time -f 'wall_seconds=%e\nuser_cpu_seconds=%U\nsystem_cpu_seconds=%S\ncpu_percent=%P\ncommand_exit=%x' -o connected-functional-time.txt)
+          fi
+          started_seconds=$SECONDS
+          "${timing[@]}" python -u scripts/observe_connected_setup_journal.py --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects --select-test-id '${{ matrix.test-id }}' --output connected-functional-result.json --journal connected-functional-setup-journal.jsonl --journal-cap-seconds 300 --journal-interval-seconds 1 2>&1 | tee connected-functional-test.log
+          statuses=("${PIPESTATUS[@]}")
+          process_result=${statuses[0]}
+          log_result=${statuses[1]}
+          result=$process_result
+          if [ "$result" -eq 0 ] && [ "$log_result" -ne 0 ]; then result=$log_result; fi
+          shell_wall_seconds=$((SECONDS-started_seconds))
+          set -e
+          printf '{"process_exit":%s,"log_write_exit":%s,"effective_exit":%s,"hard_process_cap_seconds":null,"kill_grace_seconds":null,"runner_job_limit_seconds":21600,"limit_meaning":"resource_not_latency","latency_qualification":false,"setup_journal_cap_seconds":300,"sampling_interval_seconds":1,"setup_journal_qualification":false,"raw_strict_result_authoritative":true,"shell_wall_seconds":%s,"external_cpu_wall_timing_available":%s}\n' "$process_result" "$log_result" "$result" "$shell_wall_seconds" "$timing_available" > connected-functional-process.json
+          exit "$result"
+      - name: Verify final source even after setup or execution failure
+        if: always()
+        run: |
+          set -euo pipefail
+          if [ ! -f connected-functional-source-before.txt ]; then
+            printf 'Initial source capture was not reached.\n' > connected-functional-source-unavailable.txt
+            exit 1
+          fi
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-functional-source-after.txt
+          diff -u connected-functional-source-before.txt connected-functional-source-after.txt
+      - name: Preserve selected backend evidence
+        if: always()
+        run: |
+          docker compose -f compose.integration.yml ps > connected-functional-backend-ps.txt || true
+          docker compose -f compose.integration.yml logs --no-color > connected-functional-backend-logs.txt || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: connected-functional-verification-${{ matrix.case }}
+          path: |
+            connected-functional-source-identity.txt
+            connected-functional-source-before.txt
+            connected-functional-source-after.txt
+            connected-functional-source-unavailable.txt
+            connected-functional-protocol.md
+            connected-functional-python.txt
+            connected-functional-dependencies.txt
+            connected-functional-time.txt
+            connected-functional-setup-journal.jsonl
+            connected-functional-test.log
+            connected-functional-result.json
+            connected-functional-process.json
+            connected-functional-backend-ps.txt
+            connected-functional-backend-logs.txt
+      - name: Tear down isolated selected services
+        if: always()
+        run: docker compose -f compose.integration.yml down -v
+
+  connected-setup-stacks:
+    if: github.event_name == 'workflow_dispatch' && inputs.observer == 'setup-stacks'
+    name: connected-setup-stacks-positive
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONPATH: alice-reference/src:src:tests:tests/integration
+      KURRENTDB_URI: kurrentdb://127.0.0.1:2113?tls=false
+      XTDB_DSN: postgresql://xtdb@127.0.0.1:5432/xtdb
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout pinned A.L.I.C.E. contracts
+        uses: actions/checkout@v4
+        with:
+          repository: NIne-WIngEd/A.L.I.C.E
+          ref: 4f287a488bc908bd04f99255ee01b794bacba50b
+          path: alice-reference
+          ssh-key: ${{ secrets.ALICE_CONTRACTS_READ_KEY }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Record exact source and declared mechanical protocol
+        run: |
+          set -euo pipefail
+          git rev-parse HEAD HEAD^{tree} > connected-setup-source-identity.txt
+          git -C alice-reference rev-parse HEAD >> connected-setup-source-identity.txt
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-setup-source-before.txt
+          sha256sum .github/workflows/native-profile.yml >> connected-setup-source-identity.txt
+          cp docs/FUNCTIONAL_BUILD_PRIORITY_2026-10-07.md connected-setup-protocol.md
+          printf 'original_failure_source_commit=5dd7414b14111a7e68e7db7d55955fada8d38b0f\n' >> connected-setup-source-identity.txt
+          printf '%s\n' \
+            '438281164ad79f9b26ad6157c925a40b7f492db2b8a44f338ea2ef51267cfffe  tests/registered_functional_case_fixture.py' \
+            '156754dccc7a3eb6b7c20d590bd87c49b6bdb1e5dbda6778b54038802ecfa7ae  tests/integration/test_selected_connected_functional_comparison.py' \
+            'c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2  scripts/run_connected_functional_comparison.py' | sha256sum -c - > connected-setup-original-source-check.txt
+      - name: Install selected integration dependencies
+        run: python -m pip install -e '.[backends,providers,embeddings]'
+      - name: Start only this case's selected services
+        run: docker compose -f compose.integration.yml up -d kurrentdb xtdb qdrant
+      - name: Wait for selected services
+        run: |
+          set -euo pipefail
+          for service in 'http://127.0.0.1:2113/health/live' 'http://127.0.0.1:8080/healthz/ready' 'http://127.0.0.1:6333/healthz'; do
+            for attempt in $(seq 1 90); do
+              if curl -fsS "$service" >/dev/null; then break; fi
+              [ "$attempt" -lt 90 ] || exit 1
+              sleep 2
+            done
+          done
+      - name: Observe original positive setup without qualification
+        run: |
+          set -uo pipefail
+          set +e
+          timing=()
+          timing_available=false
+          if [ -x /usr/bin/time ]; then
+            timing=(/usr/bin/time -f 'wall_seconds=%e\nuser_cpu_seconds=%U\nsystem_cpu_seconds=%S\ncpu_percent=%P\ncommand_exit=%x' -o connected-setup-time.txt)
+            timing_available=true
+          else
+            printf 'External /usr/bin/time unavailable; CPU timing unavailable.\n' > connected-setup-time.txt
+          fi
+          observation_started=$SECONDS
+          "${timing[@]}" timeout --kill-after=30s 8m python -u scripts/observe_connected_setup.py --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects --select-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --output connected-setup-result.json 2>&1 | tee connected-setup-stacks.log
+          statuses=("${PIPESTATUS[@]}")
+          process_result=${statuses[0]}
+          log_result=${statuses[1]}
+          result=$process_result
+          if [ "$result" -eq 0 ] && [ "$log_result" -ne 0 ]; then result=$log_result; fi
+          outcome=original_runner_nonzero_no_assertion_classification
+          original_test_incomplete=null
+          if [ "$process_result" -eq 124 ]; then
+            outcome=observation_window_stopped_original_test_incomplete
+            original_test_incomplete=true
+          elif [ "$process_result" -eq 137 ]; then
+            outcome=process_killed_original_test_incomplete_cause_unestablished
+            original_test_incomplete=true
+          elif [ "$process_result" -eq 0 ]; then
+            outcome=original_test_completed_during_observation_no_qualification
+            original_test_incomplete=false
+          fi
+          shell_wall_seconds=$((SECONDS - observation_started))
+          set -e
+          printf '{"schema":"flora-connected-setup-observation-process-v1","diagnostic_only":true,"process_exit":%s,"log_write_exit":%s,"effective_exit":%s,"observation_window_seconds":480,"kill_grace_seconds":30,"original_functional_cap_seconds":2700,"traceback_interval_seconds":120,"shell_wall_seconds":%s,"external_cpu_wall_timing_available":%s,"outcome":"%s","original_test_incomplete":%s,"functional_qualification":false,"latency_qualification":false}\n' "$process_result" "$log_result" "$result" "$shell_wall_seconds" "$timing_available" "$outcome" "$original_test_incomplete" > connected-setup-process.json
+          exit "$result"
+      - name: Verify final source even after setup or execution failure
+        if: always()
+        run: |
+          set -euo pipefail
+          if [ ! -f connected-setup-source-before.txt ]; then
+            printf 'Initial source capture was not reached.\n' > connected-setup-source-unavailable.txt
+            exit 1
+          fi
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-setup-source-after.txt
+          diff -u connected-setup-source-before.txt connected-setup-source-after.txt
+      - name: Preserve selected backend evidence
+        if: always()
+        run: |
+          docker compose -f compose.integration.yml ps > connected-setup-backend-ps.txt || true
+          docker compose -f compose.integration.yml logs --no-color > connected-setup-backend-logs.txt || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: connected-setup-observation-positive
+          path: |
+            connected-setup-source-identity.txt
+            connected-setup-source-before.txt
+            connected-setup-source-after.txt
+            connected-setup-source-unavailable.txt
+            connected-setup-protocol.md
+            connected-setup-stacks.log
+            connected-setup-time.txt
+            connected-setup-original-source-check.txt
+            connected-setup-result.json
+            connected-setup-process.json
+            connected-setup-backend-ps.txt
+            connected-setup-backend-logs.txt
+      - name: Tear down isolated selected services
+        if: always()
+        run: docker compose -f compose.integration.yml down -v
+  connected-setup-journal:
+    if: github.event_name == 'workflow_dispatch' && inputs.observer == 'setup-journal'
+    name: connected-setup-journal-positive
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONPATH: alice-reference/src:src:tests:tests/integration
+      KURRENTDB_URI: kurrentdb://127.0.0.1:2113?tls=false
+      XTDB_DSN: postgresql://xtdb@127.0.0.1:5432/xtdb
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout pinned A.L.I.C.E. contracts
+        uses: actions/checkout@v4
+        with:
+          repository: NIne-WIngEd/A.L.I.C.E
+          ref: 4f287a488bc908bd04f99255ee01b794bacba50b
+          path: alice-reference
+          ssh-key: ${{ secrets.ALICE_CONTRACTS_READ_KEY }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Record exact Python runtime
+        run: |
+          python -VV > connected-setup-journal-python.txt
+          python -c 'import sys; print("version_info=" + repr(tuple(sys.version_info))); print("gil_enabled=" + str(getattr(sys, "_is_gil_enabled", lambda: True)()))' >> connected-setup-journal-python.txt
+      - name: Record exact source and declared mechanical protocol
+        run: |
+          set -euo pipefail
+          git rev-parse HEAD HEAD^{tree} > connected-setup-journal-source-identity.txt
+          git -C alice-reference rev-parse HEAD >> connected-setup-journal-source-identity.txt
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-setup-journal-source-before.txt
+          sha256sum .github/workflows/native-profile.yml >> connected-setup-journal-source-identity.txt
+          cp docs/FUNCTIONAL_BUILD_PRIORITY_2026-10-07.md connected-setup-journal-protocol.md
+          printf 'original_failure_source_commit=5dd7414b14111a7e68e7db7d55955fada8d38b0f\nobserver_segfault_source_commit=d1b4983616027436307fb495f6bc476eff288148\nreviewed_base_commit=8a559ddd3c722690e9d174809b02a413456f86bc\n' >> connected-setup-journal-source-identity.txt
+          printf '%s\n' \
+            '438281164ad79f9b26ad6157c925a40b7f492db2b8a44f338ea2ef51267cfffe  tests/registered_functional_case_fixture.py' \
+            '156754dccc7a3eb6b7c20d590bd87c49b6bdb1e5dbda6778b54038802ecfa7ae  tests/integration/test_selected_connected_functional_comparison.py' \
+            'c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2  scripts/run_connected_functional_comparison.py' \
+            '4a798b3fb4d80c6449cc450732ff37a6cc83ce06658c64a05d086c708c480d67  scripts/observe_connected_setup.py' | sha256sum -c - > connected-setup-journal-original-source-check.txt
+      - name: Install selected integration dependencies
+        run: python -m pip install -e '.[backends,providers,embeddings]'
+      - name: Record selected dependency identity
+        run: python -m pip freeze > connected-setup-journal-dependencies.txt
+      - name: Start only this case's selected services
+        run: docker compose -f compose.integration.yml up -d kurrentdb xtdb qdrant
+      - name: Wait for selected services
+        run: |
+          set -euo pipefail
+          for service in 'http://127.0.0.1:2113/health/live' 'http://127.0.0.1:8080/healthz/ready' 'http://127.0.0.1:6333/healthz'; do
+            for attempt in $(seq 1 90); do
+              if curl -fsS "$service" >/dev/null; then break; fi
+              [ "$attempt" -lt 90 ] || exit 1
+              sleep 2
+            done
+          done
+      - name: Journal original positive setup without qualification
+        run: |
+          set -uo pipefail
+          set +e
+          timing=()
+          timing_available=false
+          if [ -x /usr/bin/time ]; then
+            timing=(/usr/bin/time -f 'wall_seconds=%e\nuser_cpu_seconds=%U\nsystem_cpu_seconds=%S\ncpu_percent=%P\ncommand_exit=%x' -o connected-setup-journal-time.txt)
+            timing_available=true
+          else
+            printf 'External /usr/bin/time unavailable; CPU timing unavailable.\n' > connected-setup-journal-time.txt
+          fi
+          observation_started=$SECONDS
+          "${timing[@]}" timeout --kill-after=30s 300s python -u scripts/observe_connected_setup_journal.py --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects --select-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --output connected-setup-journal-result.json --journal connected-setup-journal.jsonl --journal-cap-seconds 300 --journal-interval-seconds 1 2>&1 | tee connected-setup-journal.log
+          statuses=("${PIPESTATUS[@]}")
+          process_result=${statuses[0]}
+          log_result=${statuses[1]}
+          result=$process_result
+          if [ "$result" -eq 0 ] && [ "$log_result" -ne 0 ]; then result=$log_result; fi
+          outcome=original_runner_nonzero_no_assertion_classification
+          original_test_incomplete=null
+          if [ "$process_result" -eq 124 ]; then
+            outcome=observation_window_stopped_original_test_incomplete
+            original_test_incomplete=true
+          elif [ "$process_result" -eq 137 ]; then
+            outcome=process_killed_original_test_incomplete_cause_unestablished
+            original_test_incomplete=true
+          elif [ "$process_result" -eq 0 ]; then
+            outcome=original_test_completed_during_observation_no_qualification
+            original_test_incomplete=false
+          fi
+          shell_wall_seconds=$((SECONDS - observation_started))
+          set -e
+          printf '{"schema":"flora-connected-setup-journal-observation-process-v1","diagnostic_only":true,"process_exit":%s,"log_write_exit":%s,"effective_exit":%s,"observation_window_seconds":300,"kill_grace_seconds":30,"original_functional_cap_seconds":2700,"sampling_interval_seconds":1,"shell_wall_seconds":%s,"external_cpu_wall_timing_available":%s,"outcome":"%s","original_test_incomplete":%s,"functional_qualification":false,"latency_qualification":false}\n' "$process_result" "$log_result" "$result" "$shell_wall_seconds" "$timing_available" "$outcome" "$original_test_incomplete" > connected-setup-journal-process.json
+          exit "$result"
+      - name: Classify a copy while preserving the original runner receipt
+        if: always()
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          path = Path('connected-setup-journal-result.json')
+          if path.exists():
+              raw = path.read_bytes()
+              receipt = json.loads(raw)
+              receipt.update(diagnostic_only=True, functional_qualification=False, latency_qualification=False,
+                             raw_result_path=str(path), raw_result_sha256=hashlib.sha256(raw).hexdigest())
+              Path('connected-setup-journal-classification.json').write_text(
+                  json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Verify final source even after setup or execution failure
+        if: always()
+        run: |
+          set -euo pipefail
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-setup-journal-source-after.txt
+          if [ ! -f connected-setup-journal-source-before.txt ]; then
+            printf 'Initial source capture was not reached.\n' > connected-setup-journal-source-unavailable.txt
+            exit 1
+          fi
+          diff -u connected-setup-journal-source-before.txt connected-setup-journal-source-after.txt
+      - name: Preserve selected backend evidence
+        if: always()
+        run: |
+          docker compose -f compose.integration.yml ps > connected-setup-journal-backend-ps.txt || true
+          docker compose -f compose.integration.yml logs --no-color > connected-setup-journal-backend-logs.txt || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: connected-setup-journal-observation-positive
+          path: |
+            connected-setup-journal-source-identity.txt
+            connected-setup-journal-source-before.txt
+            connected-setup-journal-source-after.txt
+            connected-setup-journal-source-unavailable.txt
+            connected-setup-journal-python.txt
+            connected-setup-journal-dependencies.txt
+            connected-setup-journal-protocol.md
+            connected-setup-journal.log
+            connected-setup-journal-time.txt
+            connected-setup-journal-original-source-check.txt
+            connected-setup-journal-result.json
+            connected-setup-journal-classification.json
+            connected-setup-journal.jsonl
+            connected-setup-journal-process.json
+            connected-setup-journal-backend-ps.txt
+            connected-setup-journal-backend-logs.txt
+      - name: Tear down isolated selected services
+        if: always()
+        run: docker compose -f compose.integration.yml down -v
+  connected-phase-eligibility:
+    if: github.event_name == 'workflow_dispatch' && inputs.observer == 'setup-eligibility'
+    name: connected-phase-eligibility-positive
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONPATH: alice-reference/src:src:tests:tests/integration
+      KURRENTDB_URI: kurrentdb://127.0.0.1:2113?tls=false
+      XTDB_DSN: postgresql://xtdb@127.0.0.1:5432/xtdb
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout pinned A.L.I.C.E. contracts
+        uses: actions/checkout@v4
+        with:
+          repository: NIne-WIngEd/A.L.I.C.E
+          ref: 4f287a488bc908bd04f99255ee01b794bacba50b
+          path: alice-reference
+          ssh-key: ${{ secrets.ALICE_CONTRACTS_READ_KEY }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Record exact Python runtime
+        run: |
+          python -VV > connected-phase-eligibility-python.txt
+          python -c 'import sys; print("version_info=" + repr(tuple(sys.version_info))); print("gil_enabled=" + str(getattr(sys, "_is_gil_enabled", lambda: True)()))' >> connected-phase-eligibility-python.txt
+      - name: Record exact source and declared mechanical protocol
+        run: |
+          set -euo pipefail
+          git rev-parse HEAD HEAD^{tree} > connected-phase-eligibility-source-identity.txt
+          git -C alice-reference rev-parse HEAD >> connected-phase-eligibility-source-identity.txt
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-phase-eligibility-source-before.txt
+          sha256sum .github/workflows/native-profile.yml >> connected-phase-eligibility-source-identity.txt
+          cp docs/FUNCTIONAL_BUILD_PRIORITY_2026-10-07.md connected-phase-eligibility-protocol.md
+          printf 'original_failure_source_commit=5dd7414b14111a7e68e7db7d55955fada8d38b0f\nobserver_segfault_source_commit=d1b4983616027436307fb495f6bc476eff288148\nreviewed_base_commit=2bf112a4a61ed656b379417ff065b422ac811805\n' >> connected-phase-eligibility-source-identity.txt
+          printf '%s\n' \
+            '438281164ad79f9b26ad6157c925a40b7f492db2b8a44f338ea2ef51267cfffe  tests/registered_functional_case_fixture.py' \
+            '156754dccc7a3eb6b7c20d590bd87c49b6bdb1e5dbda6778b54038802ecfa7ae  tests/integration/test_selected_connected_functional_comparison.py' \
+            'c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2  scripts/run_connected_functional_comparison.py' \
+            '4a798b3fb4d80c6449cc450732ff37a6cc83ce06658c64a05d086c708c480d67  scripts/observe_connected_setup.py' \
+            '8dac63783d906b85c83ab6a1d2723c9bbbe99c25713d275956a3176491c48663  scripts/observe_connected_setup_journal.py' | sha256sum -c - > connected-phase-eligibility-original-source-check.txt
+      - name: Install selected integration dependencies
+        run: python -m pip install -e '.[backends,providers,embeddings]'
+      - name: Record selected dependency identity
+        run: python -m pip freeze > connected-phase-eligibility-dependencies.txt
+      - name: Start only this case's selected services
+        run: docker compose -f compose.integration.yml up -d kurrentdb xtdb qdrant
+      - name: Wait for selected services
+        run: |
+          set -euo pipefail
+          for service in 'http://127.0.0.1:2113/health/live' 'http://127.0.0.1:8080/healthz/ready' 'http://127.0.0.1:6333/healthz'; do
+            for attempt in $(seq 1 90); do
+              if curl -fsS "$service" >/dev/null; then break; fi
+              [ "$attempt" -lt 90 ] || exit 1
+              sleep 2
+            done
+          done
+      - name: Observe first original preparation admission without qualification
+        run: |
+          set -uo pipefail
+          set +e
+          timing=()
+          timing_available=false
+          if [ -x /usr/bin/time ]; then
+            timing=(/usr/bin/time -f 'wall_seconds=%e\nuser_cpu_seconds=%U\nsystem_cpu_seconds=%S\ncpu_percent=%P\ncommand_exit=%x' -o connected-phase-eligibility-time.txt)
+            timing_available=true
+          else
+            printf 'External /usr/bin/time unavailable; CPU timing unavailable.\n' > connected-phase-eligibility-time.txt
+          fi
+          observation_started=$SECONDS
+          "${timing[@]}" timeout --kill-after=30s 180s python -u scripts/observe_connected_phase_eligibility.py --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects --select-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --output connected-phase-eligibility-result.json --eligibility-journal connected-phase-eligibility.jsonl --eligibility-deadline-seconds 180 2>&1 | tee connected-phase-eligibility.log
+          statuses=("${PIPESTATUS[@]}")
+          process_result=${statuses[0]}
+          log_result=${statuses[1]}
+          result=$process_result
+          if [ "$result" -eq 0 ] && [ "$log_result" -ne 0 ]; then result=$log_result; fi
+          outcome=original_runner_nonzero_no_assertion_classification
+          original_test_incomplete=null
+          if [ "$process_result" -eq 124 ]; then
+            outcome=observation_window_stopped_original_test_incomplete
+            original_test_incomplete=true
+          elif [ "$process_result" -eq 137 ]; then
+            outcome=process_killed_original_test_incomplete_cause_unestablished
+            original_test_incomplete=true
+          elif [ "$process_result" -eq 0 ]; then
+            outcome=original_test_completed_during_observation_no_qualification
+            original_test_incomplete=false
+          fi
+          shell_wall_seconds=$((SECONDS - observation_started))
+          set -e
+          printf '{"schema":"flora-connected-phase-eligibility-observation-process-v1","diagnostic_only":true,"process_exit":%s,"log_write_exit":%s,"effective_exit":%s,"observation_window_seconds":180,"kill_grace_seconds":30,"original_functional_cap_seconds":2700,"observation_mechanism":"current_thread_return_profile","observer_deadline_seconds":180,"shell_wall_seconds":%s,"external_cpu_wall_timing_available":%s,"outcome":"%s","original_test_incomplete":%s,"functional_qualification":false,"latency_qualification":false}\n' "$process_result" "$log_result" "$result" "$shell_wall_seconds" "$timing_available" "$outcome" "$original_test_incomplete" > connected-phase-eligibility-process.json
+          exit "$result"
+      - name: Classify a copy while preserving the original runner receipt
+        if: always()
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          path = Path('connected-phase-eligibility-result.json')
+          if path.exists():
+              raw = path.read_bytes()
+              receipt = json.loads(raw)
+              receipt.update(diagnostic_only=True, functional_qualification=False, latency_qualification=False,
+                             raw_result_path=str(path), raw_result_sha256=hashlib.sha256(raw).hexdigest())
+              Path('connected-phase-eligibility-classification.json').write_text(
+                  json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Verify final source even after setup or execution failure
+        if: always()
+        run: |
+          set -euo pipefail
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-phase-eligibility-source-after.txt
+          if [ ! -f connected-phase-eligibility-source-before.txt ]; then
+            printf 'Initial source capture was not reached.\n' > connected-phase-eligibility-source-unavailable.txt
+            exit 1
+          fi
+          diff -u connected-phase-eligibility-source-before.txt connected-phase-eligibility-source-after.txt
+      - name: Preserve selected backend evidence
+        if: always()
+        run: |
+          docker compose -f compose.integration.yml ps > connected-phase-eligibility-backend-ps.txt || true
+          docker compose -f compose.integration.yml logs --no-color > connected-phase-eligibility-backend-logs.txt || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: connected-phase-eligibility-observation-positive
+          path: |
+            connected-phase-eligibility-source-identity.txt
+            connected-phase-eligibility-source-before.txt
+            connected-phase-eligibility-source-after.txt
+            connected-phase-eligibility-source-unavailable.txt
+            connected-phase-eligibility-python.txt
+            connected-phase-eligibility-dependencies.txt
+            connected-phase-eligibility-protocol.md
+            connected-phase-eligibility.log
+            connected-phase-eligibility-time.txt
+            connected-phase-eligibility-original-source-check.txt
+            connected-phase-eligibility-result.json
+            connected-phase-eligibility-classification.json
+            connected-phase-eligibility.jsonl
+            connected-phase-eligibility-process.json
+            connected-phase-eligibility-backend-ps.txt
+            connected-phase-eligibility-backend-logs.txt
+      - name: Tear down isolated selected services
+        if: always()
+        run: docker compose -f compose.integration.yml down -v
+  connected-construction-windows:
+    if: github.event_name == 'workflow_dispatch' && inputs.observer == 'construction-windows'
+    name: connected-construction-window-positive
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      PYTHONPATH: alice-reference/src:src:tests:tests/integration
+      KURRENTDB_URI: kurrentdb://127.0.0.1:2113?tls=false
+      XTDB_DSN: postgresql://xtdb@127.0.0.1:5432/xtdb
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout pinned A.L.I.C.E. contracts
+        uses: actions/checkout@v4
+        with:
+          repository: NIne-WIngEd/A.L.I.C.E
+          ref: 4f287a488bc908bd04f99255ee01b794bacba50b
+          path: alice-reference
+          ssh-key: ${{ secrets.ALICE_CONTRACTS_READ_KEY }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.14'
+      - name: Record exact Python runtime
+        run: |
+          python - <<'PY' > connected-construction-python.txt
+          import sys
+          print(sys.version)
+          print('version_info=' + repr(tuple(sys.version_info)))
+          print('gil_enabled=' + repr(not hasattr(sys, '_is_gil_enabled') or sys._is_gil_enabled()))
+          PY
+      - name: Record exact source and declared mechanical protocol
+        run: |
+          git rev-parse HEAD HEAD^{tree} > connected-construction-source-identity.txt
+          git -C alice-reference rev-parse HEAD >> connected-construction-source-identity.txt
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-construction-source-before.txt
+          sha256sum .github/workflows/native-profile.yml >> connected-construction-source-identity.txt
+          cp docs/FUNCTIONAL_BUILD_PRIORITY_2026-10-07.md connected-construction-protocol.md
+          printf 'diagnostic_source_base_commit=71446014a174087329add007d212353e624b86ab\noriginal_incomplete_run_id=37685186902\n' >> connected-construction-source-identity.txt
+          printf '%s\n' \
+            '3535944465c3f0b130036752663a3085453ae5262c2e7411a83b0e7f8f69fde2  tests/registered_functional_case_fixture.py' \
+            '156754dccc7a3eb6b7c20d590bd87c49b6bdb1e5dbda6778b54038802ecfa7ae  tests/integration/test_selected_connected_functional_comparison.py' \
+            'c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2  scripts/run_connected_functional_comparison.py' \
+            '8dac63783d906b85c83ab6a1d2723c9bbbe99c25713d275956a3176491c48663  scripts/observe_connected_setup_journal.py' | sha256sum -c - > connected-construction-original-source-check.txt
+      - name: Install selected integration dependencies
+        run: python -m pip install -e '.[backends,providers,embeddings]'
+      - name: Record selected dependency identity
+        run: python -m pip freeze --all > connected-construction-dependencies.txt
+      - name: Start only this case's selected services
+        run: docker compose -f compose.integration.yml up -d kurrentdb xtdb qdrant
+      - name: Wait for selected services
+        run: |
+          set -euo pipefail
+          for service in 'http://127.0.0.1:2113/health/live' 'http://127.0.0.1:8080/healthz/ready' 'http://127.0.0.1:6333/healthz'; do
+            for attempt in $(seq 1 90); do
+              if curl -fsS "$service" >/dev/null; then break; fi
+              [ "$attempt" -lt 90 ] || exit 1
+              sleep 2
+            done
+          done
+      - name: Observe complete original positive construction without qualification
+        run: |
+          set -uo pipefail
+          set +e
+          timing_available=false
+          timing=()
+          if [ -x /usr/bin/time ]; then
+            timing_available=true
+            timing=(/usr/bin/time -f 'wall_seconds=%e\nuser_cpu_seconds=%U\nsystem_cpu_seconds=%S\ncpu_percent=%P\ncommand_exit=%x' -o connected-construction-time.txt)
+          fi
+          started_seconds=$SECONDS
+          "${timing[@]}" timeout --kill-after=30s 45m python -u scripts/observe_connected_construction_windows.py --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects --expected-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects --select-test-id test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery --output connected-construction-result.json --journal-directory connected-construction-windows 2>&1 | tee connected-construction-test.log
+          statuses=("${PIPESTATUS[@]}")
+          process_result=${statuses[0]}
+          log_result=${statuses[1]}
+          result=$process_result
+          if [ "$result" -eq 0 ] && [ "$log_result" -ne 0 ]; then result=$log_result; fi
+          shell_wall_seconds=$((SECONDS-started_seconds))
+          set -e
+          outcome=original_runner_nonzero_no_assertion_classification
+          original_test_incomplete=null
+          if [ "$process_result" -eq 124 ]; then
+            outcome=original_hard_cap_reached_test_incomplete
+            original_test_incomplete=true
+          elif [ "$process_result" -eq 137 ]; then
+            outcome=process_killed_test_incomplete_cause_unestablished
+            original_test_incomplete=true
+          elif [ "$process_result" -eq 0 ]; then
+            outcome=original_test_completed_during_observation_no_qualification
+            original_test_incomplete=false
+          fi
+          printf '{"schema":"flora-connected-construction-observation-process-v1","diagnostic_only":true,"process_exit":%s,"log_write_exit":%s,"effective_exit":%s,"hard_process_cap_seconds":2700,"kill_grace_seconds":30,"functional_qualification":false,"latency_qualification":false,"window_cap_seconds":300,"maximum_windows":9,"observation_total_cap_seconds":2700,"sampling_interval_seconds":1,"raw_strict_result_authoritative":true,"shell_wall_seconds":%s,"external_cpu_wall_timing_available":%s,"outcome":"%s","original_test_incomplete":%s}\n' "$process_result" "$log_result" "$result" "$shell_wall_seconds" "$timing_available" "$outcome" "$original_test_incomplete" > connected-construction-process.json
+          exit "$result"
+      - name: Classify a copy while preserving the authoritative raw strict result
+        if: always()
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          path = Path('connected-construction-result.json')
+          if path.exists():
+              raw = path.read_bytes()
+              receipt = json.loads(raw)
+              receipt.update(diagnostic_only=True, functional_qualification=False, latency_qualification=False,
+                             raw_result_path=str(path), raw_result_sha256=hashlib.sha256(raw).hexdigest())
+              Path('connected-construction-classification.json').write_text(
+                  json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Verify final source even after setup or execution failure
+        if: always()
+        run: |
+          set -euo pipefail
+          if [ ! -f connected-construction-source-before.txt ]; then
+            printf 'Initial source capture was not reached.\n' > connected-construction-source-unavailable.txt
+            exit 1
+          fi
+          find src tests scripts alice-reference/src -type f -name '*.py' -print0 | sort -z | xargs -0 sha256sum > connected-construction-source-after.txt
+          diff -u connected-construction-source-before.txt connected-construction-source-after.txt
+      - name: Preserve selected backend evidence
+        if: always()
+        run: |
+          docker compose -f compose.integration.yml ps > connected-construction-backend-ps.txt || true
+          docker compose -f compose.integration.yml logs --no-color > connected-construction-backend-logs.txt || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: connected-construction-window-positive
+          path: |
+            connected-construction-source-identity.txt
+            connected-construction-source-before.txt
+            connected-construction-source-after.txt
+            connected-construction-source-unavailable.txt
+            connected-construction-protocol.md
+            connected-construction-python.txt
+            connected-construction-dependencies.txt
+            connected-construction-time.txt
+            connected-construction-windows/**
+            connected-construction-windows/construction-windows.jsonl
+            connected-construction-original-source-check.txt
+            connected-construction-test.log
+            connected-construction-result.json
+            connected-construction-classification.json
+            connected-construction-process.json
+            connected-construction-backend-ps.txt
+            connected-construction-backend-logs.txt
+      - name: Tear down isolated selected services
+        if: always()
+        run: docker compose -f compose.integration.yml down -v
+

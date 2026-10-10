@@ -1,0 +1,575 @@
+{
+  "schema": "flora-functional-claim-and-observer-scope-v1",
+  "recorded_at_utc": "2026-10-07T20:47:24.558462+00:00",
+  "original_observation": {
+    "run_id": 37673488169,
+    "source_commit": "01737cace1ec66cdb129c091a73504a340dc5e8b",
+    "source_tree": "9fef613dcd4fd57b5dcd45be532abe5b4727a587",
+    "conclusion": "failure",
+    "artifact_sha256": "bbd5d51678280f150ba57c4c123ab49d1091ed798fd286d2c5737ebca1082f80",
+    "log_archive_sha256": "5d392c903cb52c0cf09102a77295de218e1f31f50a4f2dcd09cb6971f27f324b",
+    "source_files_verified": 427,
+    "source_before_after_identical": true,
+    "process": {
+      "schema": "flora-connected-phase-eligibility-observation-process-v1",
+      "diagnostic_only": true,
+      "process_exit": 124,
+      "log_write_exit": 0,
+      "effective_exit": 124,
+      "observation_window_seconds": 180,
+      "kill_grace_seconds": 30,
+      "original_functional_cap_seconds": 2700,
+      "observation_mechanism": "current_thread_return_profile",
+      "observer_deadline_seconds": 180,
+      "shell_wall_seconds": 180,
+      "external_cpu_wall_timing_available": true,
+      "outcome": "observation_window_stopped_original_test_incomplete",
+      "original_test_incomplete": true,
+      "functional_qualification": false,
+      "latency_qualification": false
+    },
+    "journal_sha256": "e80d2e215d81adc10b7b5e8eb09aace333e1722fb9d909c2727eb770bbcf5582",
+    "journal_records": 1,
+    "original_result_json_exists": false
+  },
+  "test_claim_review": {
+    "schema": "flora-functional-test-claim-correction-v1",
+    "parent_commit": "73a92d52932b696be7cdde37cda4e8926936bc5e",
+    "candidate_path": "files/tests/registered_functional_case_fixture.py",
+    "original_sha256": "438281164ad79f9b26ad6157c925a40b7f492db2b8a44f338ea2ef51267cfffe",
+    "candidate_sha256": "3535944465c3f0b130036752663a3085453ae5262c2e7411a83b0e7f8f69fde2",
+    "patch_sha256": "f7c879c7f5116b62c73fbad1d4eebe4b132e0b23119ff3f8efaf3668a84ed9bc",
+    "exact_replacements": 4,
+    "helper_removed": 1,
+    "calls_unwrapped": 3,
+    "ast_equal_after_only_expected_transformation": true,
+    "outside_changed_interval_byte_identical": true,
+    "original_assertion_calls": 17,
+    "candidate_assertion_calls": 16,
+    "only_removed_assertion": "native.call_count + legacy.call_count == 1",
+    "comparison_custody_patches_retained": true,
+    "untouched_source_hashes": {
+      "tests/test_phase_snapshots.py": {
+        "committed_sha256": "d13487cbec0830cc52768d932c4ee77b3a1b04189865eb407a29f37d4aecb646",
+        "frozen_sha256": "10ca4ae8e274e799c5d940e16ba41887268f4d989d3ff829c83ad72f2ad6e0e7",
+        "frozen_byte_identical": false,
+        "frozen_normalized_newline_text_identical": true,
+        "candidate_written": false,
+        "committed_bytes": 63247,
+        "frozen_bytes": 64326,
+        "committed_crlf": 0,
+        "frozen_crlf": 1079,
+        "committed_lf": 1079,
+        "frozen_lf": 1079
+      },
+      "tests/test_phase_terminal_completion.py": {
+        "committed_sha256": "89f352fd5bc152c71fee45f798bf2d86a0778e21ed8ce26a5a05f43e4500bc72",
+        "frozen_sha256": "7cf7dfeaf250c18f805ac4f4ce69ecb6d69bc6f54dd28183054dd391d7f59fe2",
+        "frozen_byte_identical": false,
+        "frozen_normalized_newline_text_identical": true,
+        "candidate_written": false,
+        "committed_bytes": 40364,
+        "frozen_bytes": 41048,
+        "committed_crlf": 0,
+        "frozen_crlf": 684,
+        "committed_lf": 684,
+        "frozen_lf": 684
+      },
+      "tests/integration/test_selected_connected_functional_comparison.py": {
+        "committed_sha256": "156754dccc7a3eb6b7c20d590bd87c49b6bdb1e5dbda6778b54038802ecfa7ae",
+        "frozen_sha256": "13975d738bc7ea36ebb4653bca631d2e94d6dad21055c9773f4f67445c3e4bc5",
+        "frozen_byte_identical": false,
+        "frozen_normalized_newline_text_identical": true,
+        "candidate_written": false,
+        "committed_bytes": 22750,
+        "frozen_bytes": 23079,
+        "committed_crlf": 0,
+        "frozen_crlf": 329,
+        "committed_lf": 329,
+        "frozen_lf": 329
+      },
+      "scripts/run_connected_functional_comparison.py": {
+        "committed_sha256": "c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2",
+        "frozen_sha256": "2a69e275c0ef27a14c963ef7c699d2065b085747a38015bf2070b42cdf89dab2",
+        "frozen_byte_identical": false,
+        "frozen_normalized_newline_text_identical": true,
+        "candidate_written": false,
+        "committed_bytes": 3810,
+        "frozen_bytes": 3890,
+        "committed_crlf": 0,
+        "frozen_crlf": 80,
+        "committed_lf": 80,
+        "frozen_lf": 80
+      }
+    },
+    "occupied_before": {
+      "head": "9950de577083e5a64d46976c12dd7f53db663d86",
+      "status_sha256": "ed3755153bfafc6c44c0b9a1fddacb21b65a674ba6ddb267cc4b2127390bef85",
+      "index_sha256": "f33bab13aa02df30ca841d3a5b8448402194be83fc72acd83e6a5c33fabe2faf"
+    },
+    "occupied_after": {
+      "head": "9950de577083e5a64d46976c12dd7f53db663d86",
+      "status_sha256": "ed3755153bfafc6c44c0b9a1fddacb21b65a674ba6ddb267cc4b2127390bef85",
+      "index_sha256": "f33bab13aa02df30ca841d3a5b8448402194be83fc72acd83e6a5c33fabe2faf"
+    },
+    "occupied_checkout_and_index_unchanged": true,
+    "runtime_or_workflow_changes": 0,
+    "physical_jobs_started": 0,
+    "functional_qualification": false,
+    "timeout_fix": false,
+    "preserved_initial_verification_failure": {
+      "step": "auxiliary frozen byte comparison before candidate write",
+      "exception": "AssertionError",
+      "cause": "Raw Git LF bytes versus frozen archive CRLF serialization; all comparison-only normalized texts identical; no source bytes rewritten or normalized",
+      "candidate_existed_at_failure": false
+    },
+    "verification_limit": "AST and source preservation verified on local Python3.13. Parent runs original admitted/fallback/withdrawal component controls in cached Linux image. No connected campaign run by this agent.",
+    "diagnosis_path": "diagnosis.md"
+  },
+  "workflow_review": {
+    "schema": "flora-private-functional-workflow-review-v1",
+    "approved_for_root_review": true,
+    "source_commit": "73a92d52932b696be7cdde37cda4e8926936bc5e",
+    "candidate_path": "C:\\Users\\rayns\\Documents\\Codex\\2026-10-02\\we-gonna-continue-n\\work\\functional-claim-workflow-20261007\\files\\.github\\workflows\\native-profile.yml",
+    "candidate_sha256": "1aa120f156c511e588070198999878f77b2377a61e3291104c47171205bc8cfb",
+    "original_sha256": "712bf0ff3a0e362c34fdfb1ad60a40fac85738b8c3d51355e53c6281825e4680",
+    "yaml_passed": true,
+    "bash_syntax_steps_passed": 55,
+    "all_other_workflow_bytes_unchanged": true,
+    "other_jobs_and_source_guards_unchanged": true,
+    "matrix_controls": [
+      {
+        "functional_positive_only": false,
+        "cases": [
+          {
+            "case": "positive",
+            "test-id": "test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery"
+          },
+          {
+            "case": "history-withdrawal",
+            "test-id": "test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_h_withdrawal_after_successful_owned_read_blocks_later_effects"
+          },
+          {
+            "case": "context-withdrawal",
+            "test-id": "test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_fresh_c_withdrawal_after_successful_owned_read_blocks_later_effects"
+          }
+        ]
+      },
+      {
+        "functional_positive_only": true,
+        "cases": [
+          {
+            "case": "positive",
+            "test-id": "test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery"
+          }
+        ]
+      }
+    ],
+    "process_controls": [
+      {
+        "control": "normal_raw_positive",
+        "passed": true,
+        "process": {
+          "process_exit": 0,
+          "log_write_exit": 0,
+          "effective_exit": 0,
+          "hard_process_cap_seconds": 2700,
+          "kill_grace_seconds": 30,
+          "latency_qualification": false,
+          "setup_journal_cap_seconds": 300,
+          "sampling_interval_seconds": 1,
+          "setup_journal_qualification": false,
+          "raw_strict_result_authoritative": true,
+          "shell_wall_seconds": 0,
+          "external_cpu_wall_timing_available": false
+        },
+        "raw_result_byte_identical": true,
+        "raw_result_absent": false,
+        "qualification_not_inferred_from_process_or_raw_alone": true
+      },
+      {
+        "control": "raw_positive_nonzero_infrastructure",
+        "passed": true,
+        "process": {
+          "process_exit": 1,
+          "log_write_exit": 0,
+          "effective_exit": 1,
+          "hard_process_cap_seconds": 2700,
+          "kill_grace_seconds": 30,
+          "latency_qualification": false,
+          "setup_journal_cap_seconds": 300,
+          "sampling_interval_seconds": 1,
+          "setup_journal_qualification": false,
+          "raw_strict_result_authoritative": true,
+          "shell_wall_seconds": 1,
+          "external_cpu_wall_timing_available": false
+        },
+        "raw_result_byte_identical": true,
+        "raw_result_absent": false,
+        "qualification_not_inferred_from_process_or_raw_alone": true
+      },
+      {
+        "control": "contained_no_result_124",
+        "passed": true,
+        "process": {
+          "process_exit": 124,
+          "log_write_exit": 0,
+          "effective_exit": 124,
+          "hard_process_cap_seconds": 2700,
+          "kill_grace_seconds": 30,
+          "latency_qualification": false,
+          "setup_journal_cap_seconds": 300,
+          "sampling_interval_seconds": 1,
+          "setup_journal_qualification": false,
+          "raw_strict_result_authoritative": true,
+          "shell_wall_seconds": 0,
+          "external_cpu_wall_timing_available": false
+        },
+        "raw_result_byte_identical": false,
+        "raw_result_absent": true,
+        "qualification_not_inferred_from_process_or_raw_alone": true
+      },
+      {
+        "control": "signal_status_no_result_139",
+        "passed": true,
+        "process": {
+          "process_exit": 139,
+          "log_write_exit": 0,
+          "effective_exit": 139,
+          "hard_process_cap_seconds": 2700,
+          "kill_grace_seconds": 30,
+          "latency_qualification": false,
+          "setup_journal_cap_seconds": 300,
+          "sampling_interval_seconds": 1,
+          "setup_journal_qualification": false,
+          "raw_strict_result_authoritative": true,
+          "shell_wall_seconds": 0,
+          "external_cpu_wall_timing_available": false
+        },
+        "raw_result_byte_identical": false,
+        "raw_result_absent": true,
+        "qualification_not_inferred_from_process_or_raw_alone": true
+      },
+      {
+        "control": "tee_failure_after_raw_positive",
+        "passed": true,
+        "process": {
+          "process_exit": 0,
+          "log_write_exit": 73,
+          "effective_exit": 73,
+          "hard_process_cap_seconds": 2700,
+          "kill_grace_seconds": 30,
+          "latency_qualification": false,
+          "setup_journal_cap_seconds": 300,
+          "sampling_interval_seconds": 1,
+          "setup_journal_qualification": false,
+          "raw_strict_result_authoritative": true,
+          "shell_wall_seconds": 1,
+          "external_cpu_wall_timing_available": false
+        },
+        "raw_result_byte_identical": true,
+        "raw_result_absent": false,
+        "qualification_not_inferred_from_process_or_raw_alone": true
+      }
+    ],
+    "original_wrapper_sha256": "8dac63783d906b85c83ab6a1d2723c9bbbe99c25713d275956a3176491c48663",
+    "wrapper_or_strict_runner_edited": false,
+    "journal_cap_is_not_action_cap": true,
+    "normal_wrapper_return_preserves_strict_return_and_raw_json": true,
+    "prior_sampler_independence_control_reused": true,
+    "prior_control_receipt": "C:\\Users\\rayns\\Documents\\Codex\\2026-10-02\\we-gonna-continue-n\\work\\connected-setup-journal-20261007\\offline-controls.json",
+    "local_verifier_correction": "Prior receipt has per-control passed flags, not a top-level passed field; original faulty checker retained.",
+    "current_controls_python": "3.13.5",
+    "current_controls_platform": "Windows/Git Bash",
+    "prior_journal_controls_python": "3.12.15",
+    "physical_python_pinned": "3.12.14",
+    "jobs_dispatched": false,
+    "services_started": false,
+    "published": false,
+    "physical_functional_claim": false,
+    "limits": [
+      "Local shell status controls simulate exits124/139; they do not replay physical timeout or signal.",
+      "Original journal I/O failures may stop setup or override exit; retained infrastructure failure, no fail-open change.",
+      "No missing result or nonzero job/process is reinterpreted as a functional pass.",
+      "Positive-only completion does not establish H/C withdrawal or the full three-case campaign.",
+      "The test-claim correction is not a timeout repair, latency qualification or cap increase."
+    ]
+  },
+  "local_observer_measurement": {
+    "schema": "flora-admission-observer-private-overhead-v1",
+    "diagnostic_only": true,
+    "functional_qualification": false,
+    "latency_qualification": false,
+    "passed_digest_and_hook_controls": true,
+    "runtime": "3.12.15 (main, Oct  1 2026, 21:52:41) [GCC 14.2.0]",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-aarch64-with-glibc2.41",
+    "iterations": 4000,
+    "fixed_result_digest": "8abad3408b6d8d50d8e5d94ec04e951813d030db5eb556cca3c9efbda893b31a",
+    "source_hashes": {
+      "observer": "b56529a77fa36cb9a49deff89201c2178eb64f61595cefe8eb91fbfe47c7dc17",
+      "original_alice_canonical": "d3f78be7e367bd8a3115b75e8d05d3f5fa5b177a32b44dea6e01f8375adf2ae8",
+      "benchmark": "399625f02ca4ceeeeb6633ff8dbb34179b8f841ed1aa0973037d06a6502df33d"
+    },
+    "runs": [
+      {
+        "mode": "uninstrumented",
+        "wall_seconds": 0.07563716999720782,
+        "process_cpu_seconds": 0.07563170000000002,
+        "digest": "8abad3408b6d8d50d8e5d94ec04e951813d030db5eb556cca3c9efbda893b31a"
+      },
+      {
+        "mode": "exact_existing_observer",
+        "wall_seconds": 0.9757340220094193,
+        "process_cpu_seconds": 0.9352307,
+        "digest": "8abad3408b6d8d50d8e5d94ec04e951813d030db5eb556cca3c9efbda893b31a",
+        "journal_tags": [
+          "observer.start",
+          "observer.close"
+        ],
+        "selectors_resolved": false,
+        "journal_sha256": "3c9bd8085aeebcc21117e0650068cffbd171d8c1ca1ee231b2a8f7f497256024"
+      },
+      {
+        "mode": "exact_existing_observer",
+        "wall_seconds": 1.1553973790141754,
+        "process_cpu_seconds": 1.1245691000000002,
+        "digest": "8abad3408b6d8d50d8e5d94ec04e951813d030db5eb556cca3c9efbda893b31a",
+        "journal_tags": [
+          "observer.start",
+          "observer.close"
+        ],
+        "selectors_resolved": false,
+        "journal_sha256": "3c9bd8085aeebcc21117e0650068cffbd171d8c1ca1ee231b2a8f7f497256024"
+      },
+      {
+        "mode": "uninstrumented",
+        "wall_seconds": 0.08014408600865863,
+        "process_cpu_seconds": 0.08013760000000003,
+        "digest": "8abad3408b6d8d50d8e5d94ec04e951813d030db5eb556cca3c9efbda893b31a"
+      },
+      {
+        "mode": "uninstrumented",
+        "wall_seconds": 0.07606180899892934,
+        "process_cpu_seconds": 0.0760588000000002,
+        "digest": "8abad3408b6d8d50d8e5d94ec04e951813d030db5eb556cca3c9efbda893b31a"
+      },
+      {
+        "mode": "exact_existing_observer",
+        "wall_seconds": 0.950222669984214,
+        "process_cpu_seconds": 0.9431417,
+        "digest": "8abad3408b6d8d50d8e5d94ec04e951813d030db5eb556cca3c9efbda893b31a",
+        "journal_tags": [
+          "observer.start",
+          "observer.close"
+        ],
+        "selectors_resolved": false,
+        "journal_sha256": "3c9bd8085aeebcc21117e0650068cffbd171d8c1ca1ee231b2a8f7f497256024"
+      }
+    ],
+    "median_wall_seconds": {
+      "uninstrumented": 0.07606180899892934,
+      "exact_existing_observer": 0.9757340220094193
+    },
+    "median_cpu_seconds": {
+      "uninstrumented": 0.0760588000000002,
+      "exact_existing_observer": 0.9431417
+    },
+    "observed_wall_ratio": 12.828172703901297,
+    "observed_cpu_ratio": 12.400165398349664,
+    "dispatch": {
+      "counts": {
+        "call": 184001,
+        "return_": 184001,
+        "c_call": 236002,
+        "c_return": 236002,
+        "c_exception": 0,
+        "registration_call": 4000,
+        "canonical_sha256_call": 4000
+      },
+      "digest": "8abad3408b6d8d50d8e5d94ec04e951813d030db5eb556cca3c9efbda893b31a",
+      "timing_qualification": false,
+      "proxy_excluded_from_matched_timing": true
+    },
+    "hash_lookup": [
+      {
+        "key_type": "code",
+        "lookups": 40000,
+        "wall_seconds": 0.052716126025188714,
+        "process_cpu_seconds": 0.052717800000000814
+      },
+      {
+        "key_type": "integer_identity",
+        "lookups": 40000,
+        "wall_seconds": 0.0012732750037685037,
+        "process_cpu_seconds": 0.001273600000000208
+      },
+      {
+        "key_type": "integer_identity",
+        "lookups": 40000,
+        "wall_seconds": 0.0012540739844553173,
+        "process_cpu_seconds": 0.0012534999999997964
+      },
+      {
+        "key_type": "code",
+        "lookups": 40000,
+        "wall_seconds": 0.02852769198943861,
+        "process_cpu_seconds": 0.02853059999999985
+      }
+    ],
+    "limits": [
+      "No physical setup or backend reads were executed.",
+      "CPython 3.12.15 cached ARM64 runtime differs from physical 3.12.14 runner.",
+      "Ratios are fixed-work local measurements, not thresholds or product qualification.",
+      "Hash lookup isolation does not attribute a fraction of physical run time."
+    ]
+  },
+  "ordered_diagnosis": [
+    "1. Original admission probe reached no target; only start is evidence. Preserve its failure and all older incomplete runs. Existing successful five-assembly fallback independently contradicts unconditional exact-one.",
+    "2. FloRA tests connected governed evidence/state/artifact correction, exact full/ablation/baseline custody, recovery and independent current H/C withdrawal. Fictional producers prove mechanics only; assembly count is a different optimization claim.",
+    "3. Trace supported fallback through fresh context reconstruction and independent lineage verification. Native preparation safely reuses material within its exact issuer/consumer lifetime; it is optional and cannot grant authority.",
+    "4. Locate the faulty helper738-744 and three wrappers748-758. The original timeout never reached the assertion. Exact global profile dispatched over unrelated preregistration; matched fixed workload proves local overhead, not complete physical attribution.",
+    "5. Preserve exact context, code/ports, selected evidence, chronology, correction parents, persistent results, passive recovery and live permission checks. Retain admitted native count tests; neither first admission nor low latency becomes a functional prerequisite.",
+    "6. Remove only the unconditional helper/spies and three wrappers. Retire global profiling from this path. No runtime change, engine switch, authority bypass, learned producer work, new platform or cap increase.",
+    "7. Check Alice governed personal-development/comic responsibility and relevant frontier admissibility/execution-evidence notes. CPython3.12.14 profile dispatch and structural code_hash explain pretarget work; code-local monitoring is a future option, not new required work.",
+    "8. Verify exact candidate AST/unchanged bytes and original fallback/native/terminal controls. Then one complete positive registered functional case under unchanged2700s containment with the existing first300s journal only. Preserve raw strict verdict; positive alone does not qualify full H/C campaign, learning or latency."
+  ],
+  "research": [
+    {
+      "url": "https://github.com/python/cpython/blob/v3.12.14/Python/legacy_tracing.c#L352",
+      "transfer": "Filtering after global profile dispatch cannot eliminate unrelated callbacks."
+    },
+    {
+      "url": "https://github.com/python/cpython/blob/v3.12.14/Objects/codeobject.c#L1761",
+      "transfer": "Structural CodeType hashing adds per-event work; no physical time fraction inferred."
+    },
+    {
+      "url": "https://peps.python.org/pep-0669/",
+      "transfer": "Code-local events could limit future observation, but no replacement observer is built."
+    },
+    {
+      "reference": "A.L.I.C.E@756bf294f6a93e9ea7dcc12dba932a556d6080e0:docs/research/FRONTIER_WATCH_INTAKE_2026-10-07_ADMISSIBILITY_EXECUTION_EVIDENCE_PERSONAL_SCALING.md",
+      "transfer": "Relevance is not authority; missing execution evidence remains unresolved."
+    }
+  ],
+  "component_controls_status": "seven_original_controls_reached_and_passed_with_initial_selection_errors_preserved",
+  "physical_run": {
+    "status": "completed_contained_setup_no_functional_verdict",
+    "case": "positive",
+    "original_functional_cap_seconds": 2700,
+    "sampler_cap_seconds": 300,
+    "functional_qualification": false,
+    "latency_qualification": false,
+    "run_id": 37685186902,
+    "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37685186902",
+    "source_commit": "dbf101cc1452815b6f8fb5d24dd962dff916bf97",
+    "source_tree": "ca3b33b54415117574505f9c8452cc9567b07d65",
+    "event": "workflow_dispatch",
+    "functional_positive_only": true,
+    "selected_test_id": "test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery",
+    "python": "3.12.14",
+    "alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+    "conclusion": "failure",
+    "verified_recovery": {
+      "schema": "flora-functional-recalibration-recovery-v1",
+      "run_id": 37685186902,
+      "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37685186902",
+      "source_commit": "dbf101cc1452815b6f8fb5d24dd962dff916bf97",
+      "source_tree": "ca3b33b54415117574505f9c8452cc9567b07d65",
+      "conclusion": "failure",
+      "artifact_metadata": {
+        "id": 11513211429,
+        "node_id": "MDg6QXJ0aWZhY3QxMTUxMzIxMTQyOQ==",
+        "name": "connected-functional-verification-positive",
+        "size_in_bytes": 73035,
+        "url": "https://api.github.com/repos/NIne-WIngEd/FloRA/actions/artifacts/11513211429",
+        "archive_download_url": "https://api.github.com/repos/NIne-WIngEd/FloRA/actions/artifacts/11513211429/zip",
+        "expired": false,
+        "digest": "sha256:793feccb852686a1159ce86475b5f76d7d20b452b7df64a3159dc564759f85f6",
+        "created_at": "2026-10-07T21:37:32Z",
+        "updated_at": "2026-10-07T21:37:32Z",
+        "expires_at": "2027-01-05T20:51:28Z",
+        "workflow_run": {
+          "id": 37685186902,
+          "repository_id": 1393950425,
+          "head_repository_id": 1393950425,
+          "head_branch": "codex/flora-shared-source-caps",
+          "head_sha": "dbf101cc1452815b6f8fb5d24dd962dff916bf97"
+        }
+      },
+      "artifact_sha256": "793feccb852686a1159ce86475b5f76d7d20b452b7df64a3159dc564759f85f6",
+      "log_archive_sha256": "6e5e3a9037ff12369548baab03b6030d28ba5131e565c228172c94e6be5badbf",
+      "source_files_verified": 427,
+      "source_before_after_identical": true,
+      "process": {
+        "process_exit": 124,
+        "log_write_exit": 0,
+        "effective_exit": 124,
+        "hard_process_cap_seconds": 2700,
+        "kill_grace_seconds": 30,
+        "latency_qualification": false,
+        "setup_journal_cap_seconds": 300,
+        "sampling_interval_seconds": 1,
+        "setup_journal_qualification": false,
+        "raw_strict_result_authoritative": true,
+        "shell_wall_seconds": 2700,
+        "external_cpu_wall_timing_available": true
+      },
+      "journal_records": 300,
+      "journal_sha256": "9977d849940ff8e8e46164f1395c9b37fd32f95bce05190a1efb94368418fde1",
+      "raw_result_exists": false,
+      "raw_result": null,
+      "original_log_sha256": "ba2594b3eb82aacf87cc35899d5c5885d7d33565f753c82a705d822e276348d4",
+      "files": {
+        "artifacts.json": "8a11fdbe1f2cbbc4d25b4970d6884add5fddce825cc74a670882222d626f2dd3",
+        "jobs.json": "a475d23c92fba248566f6af270facfe8c890dc0d466b5ece26432590d9a684d8",
+        "original-artifact.zip": "793feccb852686a1159ce86475b5f76d7d20b452b7df64a3159dc564759f85f6",
+        "original-logs.zip": "6e5e3a9037ff12369548baab03b6030d28ba5131e565c228172c94e6be5badbf",
+        "run.json": "49c9c85e114abfae78c471c6d37bae6f7d1a3554e1ff3432960a82d8ba29258d",
+        "artifacts/connected-functional-backend-logs.txt": "c30e1218af10e6485db0e0646a6d727493b96f2abc556a79bbac976755a6cd7a",
+        "artifacts/connected-functional-backend-ps.txt": "4ca20233f041d5c0ed4199d85b516527b44cba1f22ea0c947aeca43f6decd0ab",
+        "artifacts/connected-functional-dependencies.txt": "9c662b8a79942832b7df36a5c76cd5b7259601d38af956f2cac9aab2e1340859",
+        "artifacts/connected-functional-process.json": "675c9dd6a852fc32649445d9044ff8fb0370e391cfaa9151d3827d15adb53bc1",
+        "artifacts/connected-functional-protocol.md": "4a32774ca3a36097f94c0d316e5f5402d2a08c65c8101b9296650a91e95e76cc",
+        "artifacts/connected-functional-python.txt": "52fb5da09e34fb9e6a6358018ae48c54f7140c14edac1d09c775a03d31c915a8",
+        "artifacts/connected-functional-setup-journal.jsonl": "9977d849940ff8e8e46164f1395c9b37fd32f95bce05190a1efb94368418fde1",
+        "artifacts/connected-functional-source-after.txt": "158cdc36245e586d2b573806cc326961435cabb64df76750e878bb3e2019b6e3",
+        "artifacts/connected-functional-source-before.txt": "158cdc36245e586d2b573806cc326961435cabb64df76750e878bb3e2019b6e3",
+        "artifacts/connected-functional-source-identity.txt": "bba46a5082630fa2d64316bf6317a7b645b83dfa4364642bb0d89fdb42926d43",
+        "artifacts/connected-functional-test.log": "ba2594b3eb82aacf87cc35899d5c5885d7d33565f753c82a705d822e276348d4",
+        "artifacts/connected-functional-time.txt": "670ee2566615aa875994be36f79aa69b2a83746818ee97382247a66809bf01a3",
+        "logs/4_connected-functional-positive.txt": "392bc3772831a5485a76b7c4b8b28639dc66afc247c53566d8b1dafe69ee696f",
+        "logs/connected-functional-positive/system.txt": "38092fd95293b731c88ee3356baf6224a033392442e3c7723c970dd9a1634614"
+      },
+      "rerun_dispatched": false,
+      "functional_qualification": false,
+      "latency_qualification": false
+    }
+  },
+  "next_action": "Recover the one local cost control; design and validate measurement for unchanged original physical first capture before launch. No full campaign or runtime patch from current incomplete evidence.",
+  "component_controls": {
+    "original_reached_and_passed": 7,
+    "first_harness": {
+      "selected": 7,
+      "actual_controls_passed": 4,
+      "invalid_class_identifiers": 3,
+      "process_exit": 1,
+      "original_log_sha256": "a7d8aff567fed72e19e06bc75d9b9a7c9a1c36b8696f440bc95b0db2b9a0d5f6",
+      "original_result_preserved": true
+    },
+    "corrected_identifiers": {
+      "original_controls_passed": 3,
+      "process_exit": 0,
+      "test_ids": [
+        "test_phase_snapshots.PhaseSnapshotTest.test_actual_capture_prepares_once_preserving_four_independent_proofs",
+        "test_phase_snapshots.PhaseSnapshotTest.test_actual_cold_constructor_prepares_once_preserving_phase_proofs",
+        "test_phase_snapshots.PhaseSnapshotTest.test_custom_preparation_retains_fresh_standalone_lineage_path"
+      ],
+      "log_sha256": "6d911f4a2746286e88bdf9f59a1b05e5de125aa43d14d043acd3fb5367214809",
+      "unrelated_passes_not_repeated": true
+    },
+    "runtime": "cached ARM64 Linux CPython3.12.15",
+    "exact_raw_source_manifest_sha256": "de09d12840c88e3de1e01489a6bdad897f3f7ee7e3c763424074da01e48ac5d4",
+    "integration_or_latency_qualification": false
+  },
+  "evaluation_recalibration": "docs/evidence/2026-10-07_evaluation_recalibration.json"
+}
