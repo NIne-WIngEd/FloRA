@@ -1,5 +1,57 @@
 # FloRA continuation context
 
+## Terminal full-positive checkpoint - October 11: job 577258 failed before the strict test
+
+The terminal scheduler observation at `2026-10-11T23:18:18.162542+00:00` reports `FAILED` on
+`himem006`, TimeLimit `UNLIMITED`. Independent audit rehashes all 71 retained
+raw text artifacts (978,836 bytes). The full carrier stopped in preflight:
+Kurrent exhausted the unchanged 90-attempt `/health/live` readiness window,
+all with connection refused while its wrapper stayed live. Clients, the strict
+process, its oracle and the post-registration observer never started. The
+wrapper's missing-strict-file refusal is downstream of that earlier failure.
+
+All 1,457 source files and the 429 approved execution Python files match their
+before/after identities. Native 42-source imports, the exact private ABI6 mapping,
+guest exclusion, selected PRoot, pinned inputs and owned live cleanup verify.
+These passes establish their own boundaries; the six-attempt mechanics remain
+unqualified. Historical deployment-only job 577257 remains qualified for its
+exact run. Equal normalized startup commands across the two jobs do not explain
+the different readiness result. No timing, environment, heap, syscall or deadlock
+cause is established. The last vendor event, `Creating streamExistenceFilter.dat`,
+does not identify the blocked method.
+
+Next: prepare reviewed LIVE startup observation that can distinguish progress
+and the responsible operation before any configuration correction. Preserve the
+original readiness, owner, fixture and engine contracts. H/C await successful
+positive preparation and terminal mechanics. External MFM/PE semantics and the
+governed outcome/revision/activation/fresh-judgment loop remain unfinished; Gemma
+stays external and latency deferred. Same 164 existing records; this procedure
+seed remains partial and unadmitted. The dated initial RUNNING observation is
+preserved below as historical acceptance, followed by the published history.
+
+
+## Full positive continuation - October 11: original case accepted as job 577258
+
+One unchanged full positive mechanics case was accepted once on the qualified
+Magnolia route. Its single scheduler observation at `2026-10-11T23:13:04.983115+00:00` reports
+`RUNNING`, node `himem006`, TimeLimit `UNLIMITED`; CPU-only/ownership checks pass.
+Original strict result, six-attempt mechanics, source-after and cleanup remain pending.
+
+The bounded post-registration observer is measurement only: it observes the
+post-input/pre-BEFORE-publication interval, including post-return route checks,
+without substituting for the original strict oracle or altering fixture behavior.
+Owner authority begins after setup; signed2700s/128-action and original operation
+contracts remain. Unlimited outer time does not extend them. Archive inventory is
+1,457 files/826 total Python, including Alice;429 is the approved execution subset.
+
+The qualified55s deployment-only prerequisite and this full case have different
+scope; no speed ratio, learning, causal benefit or calibrated latency follows.
+Recover this exact job before choosing a cause or successor. H/C follow positive
+terminal evidence with successful preparation before mutation. External full MFM/PE
+semantics and governed outcome/revision/activation/later judgment remain next.
+Gemma stays external and latency deferred. Same164 records; this seed stays partial/unadmitted.
+
+
 ## Deployment checkpoint - October 11: 577257 qualifies this exact runtime placement
 
 Deployment-only job577257 completed on native `himem006`, ExitCode0:0 and TimeLimit
