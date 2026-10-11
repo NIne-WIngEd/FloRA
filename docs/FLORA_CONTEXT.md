@@ -1,5 +1,33 @@
 # FloRA continuation context
 
+## Fable claim audit - October 11: sufficient design, unfinished integration
+
+Yes: full planned PE + full planned MFM + scoped FloRA infrastructure are sufficient
+to complete FloRA for comparison; no extra learned updater/conversation model is required.
+Current completion is not established. Candidate qualification is separate from full role scope.
+Fable's claim is correction/outcome-driven later native judgment with evidence, compared with
+directly personalized IT Gemma. That challenger is built externally; FloRA needs its adapter/
+matched protocol. The existing general-memory baseline remains a useful control.
+
+MFM proposes scoped semantic values/corrections/outcomes with evidence/time/uncertainty;
+gates and projections accept/materialize them. Full PE consumes personal state and produces
+native IDP/judgment plus expressive intent. Scoped host/relationship/self state does not
+automatically require separate models. Current gates accept externally supplied revisions.
+Remaining: accepted MFM semantics -> approved projection/active state -> actual PE context/
+consumer -> decision-linked outcome/correction -> governed revision -> later native judgment.
+Confirm this owner producer/consumer bridge; complete it without inventing another model.
+
+Pinned Kaggle runtime/clients, copied Python3.12.14, cleanup and consumed input/tool hashes
+passed; the unavailable server-version field still leaves the original qualified gate false.
+Next: original three unchanged mechanics cases, then the real semantic loop/minimal causal pilot.
+Mechanics/precomputed relay passes are not claim proof. Match history/cutoffs/evidence/
+corrections/outcomes/alternatives and format;
+retain native IDP through a faithful common expression interface if prose is scored. Report
+resources and same-evidence ablations; PT-vs-IT results do not alone isolate architecture.
+FBM cross-host autobuild and latency are separate. Detailed immutable lineage is in the
+existing partial FBM record; all prior checkpoint bytes/facts remain preserved below.
+
+
 ## Current continuation - October 11: input custody passed; one deployment notebook running
 
 The requested-private dataset creation and both successful uploads are preserved,

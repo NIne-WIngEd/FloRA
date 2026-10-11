@@ -1,5 +1,15 @@
 # FloRA functional build first
 
+## Next construction - October 11
+
+See the [Fable claim audit](FLORA_CONTEXT.md): full PE/MFM plus scoped infrastructure suffice;
+their actual semantic loop remains unfinished, and the Gemma challenger is built externally.
+Pinned runtime/clients passed; next run the original three unchanged mechanics cases.
+Then connect accepted MFM semantics -> approved active state -> real PE judgment -> linked
+decision/outcome -> governed revision -> later judgment, with matched comparison/causal controls.
+No extra model or full Alice platform; external model building and latency remain separate.
+
+
 ## Current continuation - October 11: input custody passed; one deployment notebook running
 
 The requested-private dataset creation and both successful uploads are preserved,
