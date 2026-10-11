@@ -1,5 +1,23 @@
 # FloRA functional build first
 
+## Next construction - October 11: recover the three accepted original cases
+
+Original positive/H/C whole mechanics notebooks are accepted once each:
+`138146053/v1`,
+`138146069/v1`,
+`138146088/v1`.
+Recover their actual original strict results, cleanup and unchanged-source evidence.
+One status observation each found all three RUNNING at08:39Z; strict final results are pending.
+Exact source/private CPU/input-identity readbacks passed; mounted hashes and server
+attachment-version proof are separate. Mechanics and all model/causal results remain pending.
+
+Then follow the [semantic-loop continuation](FLORA_CONTEXT.md): external full MFM
+semantics -> approved active state -> actual PE judgment -> linked decision outcome
+-> independently approved revision -> activated state -> fresh native judgment,
+with relevant/irrelevant outcome and withheld-approval controls. No extra model/full
+Alice build; personalized Gemma is built externally, and latency stays deferred.
+
+
 ## Next construction - October 11
 
 See the [Fable claim audit](FLORA_CONTEXT.md): full PE/MFM plus scoped infrastructure suffice;
