@@ -1085,7 +1085,7 @@
         "cleanup_callbacks_completed": true,
         "cleanup_errors": [],
         "verification_completed": true,
-        "probe_assertion_lines": "complete_capture_probe.py:213–244, completion279–280"
+        "probe_assertion_lines": "complete_capture_probe.py:213\u2013244, completion279\u2013280"
       },
       "observer": {
         "windows": [
@@ -1338,8 +1338,8 @@
     "source": "bd344d6d324d9bb0ab172786439c5c94d2c63340",
     "context": "202b955cd166c91a573e3379ecf28eda8d640994"
   },
-  "current_state": "original_workflow_incomplete_Kaggle_bounded_capability_COMPLETE_host_JSON_recovered_backend_route_preparing",
-  "recorded_at_utc": "2026-10-11T06:25:39.936245+00:00",
+  "current_state": "original_workflow_incomplete_Kaggle_public_deployment_carrier_reviewed_input_creation_ACK_pending",
+  "recorded_at_utc": "2026-10-11T07:01:11.161403+00:00",
   "historical_guard_candidate_fields": "candidate_files/new_test/unresolved_review and original boundary sections preserve the retired guard-composition stage; they are not the supported history-owner integration candidate.",
   "connected_workflow_continuation": {
     "state": "completed_incomplete_resource_cancelled",
@@ -1690,9 +1690,9 @@
       "diagnosis_sha256": "4bf30aef92fb049cb93ab2c491b3e504112e3ce795f94c471348eee68b8dbe4b",
       "source_boundaries": {
         "positive": "After qualified-update marker at fixture813; control_grants814 and first AFTER helper through bind/capture/route/observed_binding/publish may be unfinished.",
-        "H_C": "After second BEFORE capture-published marker756; postcapture assertions761–763 or seal_before764 may be unfinished before marker765."
+        "H_C": "After second BEFORE capture-published marker756; postcapture assertions761\u2013763 or seal_before764 may be unfinished before marker765."
       },
-      "sampling_limit": "Only299 samples/298 owned per case near0–299s of early first capture, no close record; no six-hour stack, total CPU, causal cost or final shutdown/cleanup evidence."
+      "sampling_limit": "Only299 samples/298 owned per case near0\u2013299s of early first capture, no close record; no six-hour stack, total CPU, causal cost or final shutdown/cleanup evidence."
     }
   },
   "continuation_reconciliation_parents": {
@@ -2565,7 +2565,173 @@
       "session_state": "COMPLETE",
       "private_CPU_source_and_privacy_verified": true,
       "capability_result_JSON_recovered": true,
-      "backend_route_state": "preparing_same_pinned_three_backends_53_dependencies_client_probe_no_dispatch_binding_yet"
+      "backend_route_state": "one_private_dataset_creation_upload_intent_started_ACK_pending_no_deployment_job",
+      "public_backend_deployment": {
+        "state": "one_private_dataset_creation_upload_intent_started_ACK_pending_no_deployment_job",
+        "requested_dataset_ref": "mkrayanyan/rayan-fl-ds-54865ba24c6b8de1eae71ed3d17b21b2",
+        "requested_dataset_private": true,
+        "requested_dataset_version": 1,
+        "input_payload": "public vendor/runtime only; no private Alice/FloRA source or models",
+        "original_public_payload_files": 63,
+        "package_regular_files": 69,
+        "hashed_wheels": 53,
+        "native_AMD64_archives": 4,
+        "exact_required_guest_python": "3.12.14",
+        "host_controller_python_observed": "3.13.15",
+        "udocker_source_version": "1.3.17",
+        "englib_version": "1.2.11",
+        "execution_mode": "P2",
+        "global_allow_root": true,
+        "selected_proot": "proot-x86_64-4_8_0",
+        "selected_proot_sha256": "a9a3161b733b7114c87fd81e0d50381b5ec2cccad7f2b981257a834b8220cc34",
+        "guest_venv": "copied isolated venv; exact version/executable/prefix/base-prefix and binary SHA required",
+        "Magnolia_original_symlink_negative_required_on_Kaggle": false,
+        "autoinstall": false,
+        "installinfo": [],
+        "credentials_environment_forwarded": false,
+        "original_backend_configs_pins_health_clients_unchanged": true,
+        "readiness_observation": "every reached attempt retains HTTP status/error/time and owned wrapper return; sequential later gates may be unmeasured",
+        "readiness_expiry_verdict": "incomplete deployment evidence, not semantic FloRA or latency failure",
+        "inner_process_deadline_seconds": null,
+        "provider_resource_duration_qualified": false,
+        "precleanup_observations_best_effort": true,
+        "observation_errors_disqualify_completion": true,
+        "owned_process_group_cleanup_required": true,
+        "input_integrity_before_after_required": true,
+        "original_FloRA_tests_invoked": 0,
+        "models_invoked": 0,
+        "personality_MFM_external": true,
+        "latency_deferred": true,
+        "backend_clients_qualified": false,
+        "whole_functional_qualification": false,
+        "causal_qualification": false,
+        "candidate_admitted": false,
+        "authoring_controls": 25,
+        "local_archive_stream_files_verified": 69,
+        "proof_bindings": {
+          "preparation": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-preparation/preparation-receipt.json",
+            "sha256": "90300411f7984852f710420e861876b6efadb1d2b1c01ea48516ca732d0b1386"
+          },
+          "bootstrap": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-preparation/rayan_fl_dp_bootstrap.py",
+            "sha256": "2e2436b56d5a2f6a51793188bc085bd33934c6942eafc078807e565c31cd2c40"
+          },
+          "runtime": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-preparation/kaggle_deployment_preflight.py",
+            "sha256": "bafd796a34fd49be7a35f7c7ea520704c699ee4d5436d4290022f931b756f8bb"
+          },
+          "wrapper": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-preparation/udocker_host_entry.py",
+            "sha256": "8fc368f4298707dbffac9c6fa5fca2996db6016d6028f68b8ba5ee7cbbc6c774"
+          },
+          "bundle": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-preparation/upload/rayan_fl_dp_bundle.bin",
+            "sha256": "a31c38db252a700dda5a3307cb918fc34ae24eedc19e22eb42c4eea58766885c",
+            "bytes": 839756841
+          },
+          "inventory": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-preparation/upload/bundle-inventory.json",
+            "sha256": "d78f9c736f8cadf1ea5097bf4c2424f0378fcac29414151e5accf8cfb466dde6"
+          },
+          "runtime_independent_review": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-preparation/independent-deployment-review.json",
+            "sha256": "69975775045671a55210cfca9fa171850966772daf1ef6cd37b0ffd5a928f496"
+          },
+          "local_controls": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-preparation/local-control-receipt.json",
+            "sha256": "d65d26ead55a7f0d14b66e85b5a490075e9bdde503ea58681ab3157054a7d0b9"
+          },
+          "sdk_preparation": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/frozen-001/preparation.json",
+            "sha256": "18cfb7f5f03792b504cb530625dba46f6d8ec1640a34549181382d1a58ec45c3"
+          },
+          "sdk_controller": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/kaggle_deployment_submission.py",
+            "sha256": "6e996c2e80e147988d1c5d6eb9c12d29fa9b0a93dc6edccbff39d2740d3bf24b"
+          },
+          "sdk_root_review": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/root-review-001.json",
+            "sha256": "2913f2d820bbc035c88895dd16a5d8e7a3fc6328a9fd67a2df1cc4a551a934fd"
+          },
+          "sdk_offline_controls": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/offline-controls-003/receipt.json",
+            "sha256": "20cd9870e06d1666a780199db2b400485e13f7317c3ec539b29a2c986f638438"
+          }
+        },
+        "local_failure_diagnoses": {
+          "recorder_timing": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-preparation/diagnosis-health-bookkeeping.md",
+            "sha256": "aee5266b932e307e9da1de9221a3452273f13b2592914a63ccd61db92743e254"
+          },
+          "cleanup_observer": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-preparation/diagnosis-cleanup-observer.md",
+            "sha256": "44dd3dec2edf811ba4f143dcbf3e528a4f5395b6b2b8f893e1b496b2f5a87ccc"
+          },
+          "windows_fake_control": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-preparation/diagnosis-local-windows-control.md",
+            "sha256": "54d81317d79752749def9cc1fb1d7e0039890e6efc3eb35b2e6cd2a98a13efd2"
+          },
+          "archive_transport": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-preparation/diagnosis-provider-archive-name.md",
+            "sha256": "e5c8367351e65f24ba9090f4323797417210baf562d5f1ddb912b2c48403622e"
+          },
+          "SDK_ACK_status": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/diagnosis-ack-status.md",
+            "sha256": "f5ae4ae1939a4542b0712db6a67fc0e374d107db519e7b0acaa6682d6f6b074f"
+          }
+        },
+        "authoring_evidence_scope": "local controls and reviews; not actual provider acceptance or backend execution",
+        "dataset_creation_ACK_observed": false,
+        "actual_dataset_ready": false,
+        "actual_dataset_private_verified": false,
+        "actual_v1_files_verified": false,
+        "deployment_notebook_SaveKernel_calls": 0,
+        "deployment_job_accepted": false,
+        "opaque_bundle_name": "rayan_fl_dp_bundle.bin",
+        "opaque_format": "gzip-tar",
+        "recognized_archive_preprocessing_not_requested": true,
+        "provider_raw_retention_observed": false,
+        "next_action": "Recover one dataset effect; require ready/private/exact v1 names/sizes then one reviewed private CPU deployment/client job",
+        "pending_transfer_observation": {
+          "observed_at_utc": "2026-10-11T07:01:11.161403+00:00",
+          "creation_intent_started_at_utc": "2026-10-11T06:54:07.618184+00:00",
+          "immutable_intent": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-create-001/intent.json",
+            "sha256": "430aa8653b86a6d71dc47fb0c1ba042391178f09ba32c64cc3412217c51a51f4"
+          },
+          "inventory_upload": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-create-001/blob-upload-1.json",
+            "sha256": "f1392975f866e0b3c38906b1c2f74a16c9bb711f11fefbe15f35b4b56bd9cded"
+          },
+          "inventory_upload_HTTP_status": 200,
+          "large_blob_upload_intent": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-create-001/event-004-intent.json",
+            "sha256": "67c3c689c1b683a639324c45b746bc21718e259222c67967f0c9c112525f88ee"
+          },
+          "large_blob_bytes": 839756841,
+          "large_blob_response_file_present": false,
+          "CreateDataset_ACK_observed": false,
+          "deployment_notebook_accepted": false,
+          "scope": "Local durable event files for the one root-authorized action; no repeated provider call"
+        },
+        "SDK_ACK_status_controls": {
+          "original": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/ack-status-original-001/receipt.json",
+            "sha256": "d90b92b0fcbeec1a475b702f6c6e49b519d8e2a5363572eff29c78348ec6d0ed"
+          },
+          "corrected": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/ack-status-corrected-002/receipt.json",
+            "sha256": "d31b489e78535f8548d1a9e489bbf5713e021449f16d2b11e68e751f20fff813"
+          },
+          "mock_only": true,
+          "meaning": "Preserved original false acceptance of status error; corrected exact local carrier rejects it before readback; no actual ACK claimed"
+        },
+        "documentation_encoding_diagnosis": {
+          "ref": "work/kaggle-fallback-20261011/docs-deployment-stage/diagnosis-historical-tail-encoding.md",
+          "sha256": "8ac32dca7bd8fbbe50017484c94c405a8d07d3163d7bf2aa5eab0fa19284acf1"
+        }
+      }
     }
   },
   "resource_cancellation_reconciliation_parents": {
@@ -2575,5 +2741,9 @@
   "Kaggle_reconciliation_parents": {
     "source": "3d9df321cb2c706392d7ba55872c74dbb22477b0",
     "context": "c054b900a7005e8a8203c81e720628e958397141"
+  },
+  "Kaggle_deployment_reconciliation_parents": {
+    "source": "1aa5d921ba29f71894a81389565da174f8b99836",
+    "context": "19b7821da67e113776a6d07532f4ad75cd26eac8"
   }
 }

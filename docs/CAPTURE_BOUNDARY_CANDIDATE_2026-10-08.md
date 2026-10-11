@@ -1,28 +1,45 @@
 # FloRA bounded capture candidate
 
-## Current result - October 11: Kaggle capability facts recovered
+## Current result - October 11: pinned Kaggle deployment carrier reviewed; input creation pending
 
-[Physical run 37888185839](https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839)
-remains incomplete; controlled capture valid, candidate unadopted.
+The completed capability notebook remains host evidence only. The reviewed carrier
+preserves Python 3.12.14/copied isolated venv, all53 hashed wheels, four native AMD64
+images, original Kurrent/XTDB/Qdrant configs/health/client probe, and private P2
+execution through pinned udocker1.3.17/englib1.2.11. The host-specific Magnolia
+symlink-negative premise is inapplicable here. No personality/MFM work is added.
+
+All69 packaged files/hash/mode/size checks and25 local carrier controls pass.
+Recorder timing and cleanup-observer defects, a Windows-only fake-control fault,
+and SDK ACK/status bookkeeping faults are preserved and diagnosed. Local controls
+do not prove provider acceptance or backend compatibility. Every reached readiness
+attempt preserves status/error/time/process return; expiry is incomplete evidence.
+Later sequential health/client gates remain unmeasured if Kurrent expires.
+
+As of 2026-10-11T07:01:11.161403+00:00, the 26,234-byte inventory upload has HTTP200;
+the 839,756,841-byte runtime upload has its durable start event but no saved
+response. Immutable creation intent starts 2026-10-11T06:54:07.618184+00:00.
+No CreateDataset acknowledgement or deployment CPU notebook is recorded.
+
+One requested-private public-runtime input creation/upload intent is in progress
+for mkrayanyan/rayan-fl-ds-54865ba24c6b8de1eae71ed3d17b21b2. No CreateDataset ACK
+or deployment CPU job is recorded yet. The opaque .bin bundle retains gzip-tar
+bytes; actual private/ready/v1 filename/size and mounted SHA gates remain required.
+No private Alice/FloRA source or models are in this package; no backend has run.
+
+Next: recover this one effect, qualify unchanged backend clients, then the original
+three correction/recovery/withdrawal mechanics cases, then matched relevant versus
+irrelevant memory interventions and decision-linked outcome/revision/later judgment.
+Keep models external, latency deferred, signed permissions/inner limits intact,
+rayan_fl labels, candidate unadopted and existing partial corpus164. Exact bindings:
+[candidate](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md) and
+[JSON](evidence/2026-10-08_capture_boundary_candidate.json).
 
 | Evaluation question | Answer |
 | --- | --- |
-| Measured? | Exact completed private CPU notebook and bounded host facts. |
-| Required/obtained? | Original three-case verdict; capability observation obtained. |
-| FloRA implication? | Backend/client and connected completion remain unresolved. |
-| Evidence valid? | Exact v1 source/privacy/result hashes; no duplicate creation. |
-
-Notebook ID 138129663/version 1 is COMPLETE. JSON observes x86_64/four CPUs/30 GiB
-cgroup memory, Python 3.13.15/UID 0, owned TRACEME return 0, no Docker/PRoot/socket,
-and exact pinned manifest HTTP 200 without layer/backend execution. Output-only
-recovery sent no account credentials; original collector/ref/list faults remain.
-Host /usr/local/bin/python exists, excluding an assumed Magnolia symlink-negative
-premise here. These facts do not qualify required Python/dependencies/clients.
-
-Next: same pinned backend/client checks, original three correction/recovery/withdrawal
-cases, then causal intervention/outcomes with external models. Preserve authority,
-deferred latency, rayan_fl names and partial FBM corpus 164. No full-case/baseline/
-learning/latency/adoption claim. Exact [JSON](evidence/2026-10-08_capture_boundary_candidate.json).
+| Measured? | Exact local package custody and carrier/SDK authoring controls; input creation/upload intent started. |
+| Required/obtained? | Pinned backend clients then original three-case verdict; no provider creation ACK or deployment job yet. |
+| FloRA implication? | Original physical result remains incomplete; this prepares a supported placement without changing architecture/tests. |
+| Evidence valid? | Exact executable/package reviews and preserved recorder/cleanup/control failures; remote acceptance/readiness still unknown. |
 
 ## Historical snapshot - October 8 and earlier
 

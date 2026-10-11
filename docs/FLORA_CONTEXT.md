@@ -1,25 +1,37 @@
 # FloRA continuation context
 
-## Current continuation - October 11: Kaggle capability facts recovered
+## Current continuation - October 11: pinned Kaggle deployment carrier reviewed; input creation pending
 
-Notebook ID 138129663/version 1 is COMPLETE. Exact source/private CPU/internet/empty
-inputs are verified. The recovered JSON records x86_64, four CPUs and 30 GiB cgroup
-memory, host Python 3.13.15 and UID 0. Its owned-child TRACEME control returned 0;
-no Docker, PRoot or Docker socket was available. The exact pinned public manifest
-returned HTTP 200; layers/backend execution were not attempted.
+The completed capability notebook remains host evidence only. The reviewed carrier
+preserves Python 3.12.14/copied isolated venv, all53 hashed wheels, four native AMD64
+images, original Kurrent/XTDB/Qdrant configs/health/client probe, and private P2
+execution through pinned udocker1.3.17/englib1.2.11. The host-specific Magnolia
+symlink-negative premise is inapplicable here. No personality/MFM work is added.
 
-Output-only recovery reused this completed effect without another creation and
-sent no account credentials to the provider-returned output origin. Original
-collector/ref/list faults remain preserved. The host /usr/local/bin/python exists;
-the Magnolia symlink-negative premise does not transfer. These facts do not qualify
-Python 3.12.14, the 53 dependencies or backend clients.
+All69 packaged files/hash/mode/size checks and25 local carrier controls pass.
+Recorder timing and cleanup-observer defects, a Windows-only fake-control fault,
+and SDK ACK/status bookkeeping faults are preserved and diagnosed. Local controls
+do not prove provider acceptance or backend compatibility. Every reached readiness
+attempt preserves status/error/time/process return; expiry is incomplete evidence.
+Later sequential health/client gates remain unmeasured if Kurrent expires.
 
-Original physical run 37888185839 remains incomplete; controlled capture is valid,
-candidate unadopted and Magnolia startup cause unknown. Next: prepare same pinned
-backend/client checks, then all three original correction/recovery/withdrawal cases,
-then causal memory intervention/decision-linked outcomes with external models.
-Preserve authority/tests, deferred latency, rayan_fl names and partial corpus 164.
-Exact [candidate](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md) and
+As of 2026-10-11T07:01:11.161403+00:00, the 26,234-byte inventory upload has HTTP200;
+the 839,756,841-byte runtime upload has its durable start event but no saved
+response. Immutable creation intent starts 2026-10-11T06:54:07.618184+00:00.
+No CreateDataset acknowledgement or deployment CPU notebook is recorded.
+
+One requested-private public-runtime input creation/upload intent is in progress
+for mkrayanyan/rayan-fl-ds-54865ba24c6b8de1eae71ed3d17b21b2. No CreateDataset ACK
+or deployment CPU job is recorded yet. The opaque .bin bundle retains gzip-tar
+bytes; actual private/ready/v1 filename/size and mounted SHA gates remain required.
+No private Alice/FloRA source or models are in this package; no backend has run.
+
+Next: recover this one effect, qualify unchanged backend clients, then the original
+three correction/recovery/withdrawal mechanics cases, then matched relevant versus
+irrelevant memory interventions and decision-linked outcome/revision/later judgment.
+Keep models external, latency deferred, signed permissions/inner limits intact,
+rayan_fl labels, candidate unadopted and existing partial corpus164. Exact bindings:
+[candidate](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md) and
 [JSON](evidence/2026-10-08_capture_boundary_candidate.json).
 
 ## Historical snapshot — October7: complete construction observation recovered
