@@ -1,38 +1,36 @@
 # FloRA verification checkpoint — 2026-10-03
 
-## Current continuation - October 11: pinned Kaggle deployment carrier reviewed; input creation pending
+## Current continuation - October 11: input custody passed; one deployment notebook running
 
-The completed capability notebook remains host evidence only. The reviewed carrier
-preserves Python 3.12.14/copied isolated venv, all53 hashed wheels, four native AMD64
-images, original Kurrent/XTDB/Qdrant configs/health/client probe, and private P2
-execution through pinned udocker1.3.17/englib1.2.11. The host-specific Magnolia
-symlink-negative premise is inapplicable here. No personality/MFM work is added.
+The requested-private dataset creation and both successful uploads are preserved,
+including the initial GetDataset403 with cause unconfirmed. Source-backed read-only
+recovery passed for owned dataset12506682/version1: private=true, explicit READY,
+canonical license other, provenance marker and exactly two file names/sizes
+(inventory26,234B; runtime839,756,841B). Mounted content hashes remain unmeasured.
+The original optional-URL/display-license collector failures remain recorded;
+the SDK .files compatibility alias was not a defect.
 
-All69 packaged files/hash/mode/size checks and25 local carrier controls pass.
-Recorder timing and cleanup-observer defects, a Windows-only fake-control fault,
-and SDK ACK/status bookkeeping faults are preserved and diagnosed. Local controls
-do not prove provider acceptance or backend compatibility. Every reached readiness
-attempt preserves status/error/time/process return; expiry is incomplete evidence.
-Later sequential health/client gates remain unmeasured if Kurrent expires.
+One unchanged frozen SaveKernel accepted private CPU notebook138138423/version1.
+Its exact source, privacy/CPU/internet and empty other inputs read back correctly.
+GetKernel projects the single bare owned dataset reference, so the original exact
+/1-input predicate remains false: attachment version is unproved, not shown wrong.
+Five real-SDK controls reproduce this projection and the false combined gate.
+Typed metadata has no separate attachment-version field; the raw GetKernel body
+was not retained, so unknown extra wire fields remain unruled out.
 
-As of 2026-10-11T07:01:11.161403+00:00, the 26,234-byte inventory upload has HTTP200;
-the 839,756,841-byte runtime upload has its durable start event but no saved
-response. Immutable creation intent starts 2026-10-11T06:54:07.618184+00:00.
-No CreateDataset acknowledgement or deployment CPU notebook is recorded.
+The original observer ran once: both reads returned HTTP200 and its decoded SDK
+status was RUNNING with no failure message as of07:34:40.643961Z. No raw status body,
+terminal output, mounted hashes or backend/client result is available. Preserve the
+existing terminal output gate; do not recreate the input or notebook, change the
+controller, or turn metadata projection limits into a backend/FloRA failure.
 
-One requested-private public-runtime input creation/upload intent is in progress
-for mkrayanyan/rayan-fl-ds-54865ba24c6b8de1eae71ed3d17b21b2. No CreateDataset ACK
-or deployment CPU job is recorded yet. The opaque .bin bundle retains gzip-tar
-bytes; actual private/ready/v1 filename/size and mounted SHA gates remain required.
-No private Alice/FloRA source or models are in this package; no backend has run.
-
-Next: recover this one effect, qualify unchanged backend clients, then the original
-three correction/recovery/withdrawal mechanics cases, then matched relevant versus
-irrelevant memory interventions and decision-linked outcome/revision/later judgment.
-Keep models external, latency deferred, signed permissions/inner limits intact,
-rayan_fl labels, candidate unadopted and existing partial corpus164. Exact bindings:
-[candidate](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md) and
-[JSON](evidence/2026-10-08_capture_boundary_candidate.json).
+Resume this accepted job when terminal evidence is available. The runtime remains
+Python3.12.14/copied venv,53hashed wheels,four AMD64 images,original configs/health/
+synthetic clients and P2. After a real client pass, run the original three connected
+mechanics cases and a minimal matched relevant/irrelevant-memory pilot with linked
+decision outcomes, governed revision and later judgment. Personality/MFM remain
+external; latency stays deferred. The candidate and164-record corpus remain partial
+and unadopted. Exact [JSON](evidence/2026-10-08_capture_boundary_candidate.json).
 
 ## Historical snapshot — October7: complete construction observation recovered
 
