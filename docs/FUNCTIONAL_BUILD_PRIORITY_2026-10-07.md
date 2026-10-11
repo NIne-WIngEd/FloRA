@@ -1,5 +1,39 @@
 # FloRA functional build first
 
+## Next construction - October 11: diagnose job 577258 startup with LIVE evidence
+
+Job 577258 is terminal `FAILED` on `himem006`, TimeLimit `UNLIMITED`, observed
+at `2026-10-11T23:18:18.162542+00:00`. It failed Kurrent's unchanged 90-attempt startup
+readiness window before clients, the strict process/oracle or its observer.
+This is a prerequisite failure; no original mechanics assertion was executed.
+Independent custody covers 71 raw text artifacts (978,836 bytes), exact source
+before/after identity, native controls, pinned inputs and owned live cleanup.
+
+The qualified 577257 deployment and equal normalized startup commands do not
+prove the present cause. Observe live operation frames and per-thread progress
+before choosing a correction; retain the original configuration and bounds.
+Then recover a valid full positive before H/C. Actual MFM/PE semantic content,
+governed outcome/revision/activation/fresh judgment, external Gemma and deferred
+latency remain separate next work. Same 164 records; this partial procedure seed
+is unadmitted. Preserve the initial RUNNING observation below as dated history.
+
+
+## Next construction - October 11: recover original positive job 577258
+
+One accepted full positive case is `RUNNING` on `himem006`, TimeLimit `UNLIMITED`,
+as of `2026-10-11T23:13:04.983115+00:00`. Recover its unchanged original strict oracle, six attempts,
+source-after and owned cleanup; observer completion cannot supply a pass.
+The source audit confirms valid original tests and owner construction after setup:
+archive1,457 files/826 total Python;429 approved execution subset. Preserve signed
+owner/operation bounds despite unlimited outer time. H/C need positive terminal
+evidence and reached successful controls before mutation.
+
+This full case remains unqualified. Historical deployment55s proves the separate
+runtime prerequisite only. External MFM/PE and governed outcome/revision/later
+judgment, separate Gemma and deferred latency remain next. Same164 existing records;
+this procedure-only seed stays partial/unadmitted.
+
+
 ## Next construction - October 11: full positive mechanics on qualified deployment placement
 
 Independent terminal audit verifies job577257's matched native correction and the
