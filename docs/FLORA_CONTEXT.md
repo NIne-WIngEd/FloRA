@@ -1,25 +1,26 @@
 # FloRA continuation context
 
-## Current continuation - October 9: deployment incomplete; metadata result pending
+## Current continuation - October 11: Kaggle capability facts recovered
 
-Physical run37888185839 remains incomplete after the hosted six-hour resource
-cancellation. Both BEFORE captures published; positive reached qualified update.
-Full construction, coordinator/current H/C and cleanup verdicts remain absent.
-The controlled capture pass remains valid; candidate adoption is unproved.
+Notebook ID 138129663/version 1 is COMPLETE. Exact source/private CPU/internet/empty
+inputs are verified. The recovered JSON records x86_64, four CPUs and 30 GiB cgroup
+memory, host Python 3.13.15 and UID 0. Its owned-child TRACEME control returned 0;
+no Docker, PRoot or Docker socket was available. The exact pinned public manifest
+returned HTTP 200; layers/backend execution were not attempted.
 
-Copied-venv preflight577177 failed at Kurrent readiness after the original-symlink
-negative, Python3.12.14 copied-identity positive, 53 hashed wheels, dependency
-check and imports passed. Three wrappers launched; client checks/FloRA tests were
-unreached. Cleanup/owned ports and borrowed checks passed. Startup cause remains unknown.
+Output-only recovery reused this completed effect without another creation and
+sent no account credentials to the provider-returned output origin. Original
+collector/ref/list faults remain preserved. The host /usr/local/bin/python exists;
+the Magnolia symlink-negative premise does not transfer. These facts do not qualify
+Python 3.12.14, the 53 dependencies or backend clients.
 
-Read-only metadata job577179, Rayan-startup-evidence, is accepted but PENDING(Resources),
-with no assigned node, output or result. It requests the original node and reads
-retained files without server/udocker/product/model execution. Its five-minute
-resource limit measures no latency qualification. Await this result; no redispatch.
-Private source staging is complete; the reporting-reviewed full-workflow carrier
-remains unlaunched. Future labels use Rayan; historical labels stay unchanged.
-Original tests/authority, external models, deferred latency and partial FBM164 remain.
-Exact evidence: [candidate](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md) and [JSON](evidence/2026-10-08_capture_boundary_candidate.json).
+Original physical run 37888185839 remains incomplete; controlled capture is valid,
+candidate unadopted and Magnolia startup cause unknown. Next: prepare same pinned
+backend/client checks, then all three original correction/recovery/withdrawal cases,
+then causal memory intervention/decision-linked outcomes with external models.
+Preserve authority/tests, deferred latency, rayan_fl names and partial corpus 164.
+Exact [candidate](CAPTURE_BOUNDARY_CANDIDATE_2026-10-08.md) and
+[JSON](evidence/2026-10-08_capture_boundary_candidate.json).
 
 ## Historical snapshot — October7: complete construction observation recovered
 

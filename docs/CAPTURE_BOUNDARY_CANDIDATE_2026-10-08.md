@@ -1,29 +1,28 @@
 # FloRA bounded capture candidate
 
-## Current result - October 9: deployment incomplete; metadata result pending
+## Current result - October 11: Kaggle capability facts recovered
 
-[Run37888185839](https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839)
-remains resource-cancelled with both BEFORE captures and positive qualified update.
-No final functional/causal verdict; controlled capture remains valid, candidate unadopted.
+[Physical run 37888185839](https://github.com/NIne-WIngEd/FloRA/actions/runs/37888185839)
+remains incomplete; controlled capture valid, candidate unadopted.
 
 | Evaluation question | Answer |
 | --- | --- |
-| Measured? | Original physical construction and deployment mechanics. |
-| Required/obtained? | Six attempts/H-C verdict; construction and dependency progress only. |
-| FloRA implication? | Connected completion remains unresolved. |
-| Evidence valid? | Custody verified; startup cause unlocalized. |
+| Measured? | Exact completed private CPU notebook and bounded host facts. |
+| Required/obtained? | Original three-case verdict; capability observation obtained. |
+| FloRA implication? | Backend/client and connected completion remain unresolved. |
+| Evidence valid? | Exact v1 source/privacy/result hashes; no duplicate creation. |
 
-Copied-venv577177 FAILED1:0/5:18 at Kurrent readiness. Original-symlink negative,
-Python3.12.14 copied identity, 53 hashed wheels, dependency check and imports
-passed. Three wrappers launched; client/FloRA probes unreached. Cleanup/owned ports
-and borrowed hashes passed. The filter-creation log establishes no cause.
+Notebook ID 138129663/version 1 is COMPLETE. JSON observes x86_64/four CPUs/30 GiB
+cgroup memory, Python 3.13.15/UID 0, owned TRACEME return 0, no Docker/PRoot/socket,
+and exact pinned manifest HTTP 200 without layer/backend execution. Output-only
+recovery sent no account credentials; original collector/ref/list faults remain.
+Host /usr/local/bin/python exists, excluding an assumed Magnolia symlink-negative
+premise here. These facts do not qualify required Python/dependencies/clients.
 
-Read-only retained-metadata job577179, Rayan-startup-evidence, is accepted and
-PENDING(Resources), with no assigned node/output/result. Five minutes/1CPU/512M
-are metadata resources, not latency acceptance; no server/udocker/product/model run.
-Await that result without redispatch. Private source staging completed; reviewed
-reporting carrier remains unlaunched. Preserve original authority, external models,
-deferred latency, partial FBM164 and Rayan future labels. Exact [JSON](evidence/2026-10-08_capture_boundary_candidate.json).
+Next: same pinned backend/client checks, original three correction/recovery/withdrawal
+cases, then causal intervention/outcomes with external models. Preserve authority,
+deferred latency, rayan_fl names and partial FBM corpus 164. No full-case/baseline/
+learning/latency/adoption claim. Exact [JSON](evidence/2026-10-08_capture_boundary_candidate.json).
 
 ## Historical snapshot - October 8 and earlier
 
