@@ -1,5 +1,44 @@
 # FloRA functional build first
 
+## Next construction - October 11: full positive mechanics on qualified deployment placement
+
+Independent terminal audit verifies job577257's matched native correction and the
+unchanged deployment-only clients/cleanup/integrity contract on `himem006`; failed
+577256 remains preserved. The54.961s deployment task differs from the canceled12h
+original whole Kaggle cases; it establishes no full mechanics completion or latency gain.
+
+Launch the unchanged full positive case with observation of the post-registration,
+pre-BEFORE-publication gap and post-return route/publication path. Keep original
+strict oracle, authority/source/cleanup and inner budgets intact. Run H/C after
+the positive reaches the required behavior. Original mechanics and learned/causal
+claims remain unqualified; subsequent full external MFM/PE and governed outcome,
+revision/activation/later judgment remain next. Gemma stays external, latency deferred.
+Same164 existing records; this seed is still partial/procedure-only/unadmitted.
+
+
+## Next construction - October 11: recover modern deployment-only preflight `577257`
+
+Preserve failed job 577256: actual modern allocation passed, then host ctypes lacked ABI6
+before any guest/backend/FloRA execution. Ordered diagnosis supports the separately
+reviewed genuine host-only file. Matched allocated original/corrected import and
+mapping/guest-exclusion proof remain separate from deployment qualification.
+
+One accepted job requests native `himem006`, 8 CPUs/32G/exclusive normal QOS in
+`himem`. The single scheduler observation is `RUNNING` on `himem006`, TimeLimit
+`UNLIMITED`, at `2026-10-11T22:33:06.639676+00:00`. Allocation identity is observed; allocated runtime/backend compatibility remains pending. Recover its actual
+hermetic runtime/readiness/vendor/client, cleanup and integrity results before
+full cases. No new FloRA case, product-runtime change or model invocation follows
+from this deployment-only job.
+
+Frozen positive late-backend supplement002 supports activity/shutdown only; it
+does not locate the unfinished fixture operation or prove continuous health.
+Stats exceeded the unchanged 8 MiB bound and their body remained unread. Preserve
+original missing strict/cleanup/source-after evidence and reach the post-input,
+pre-BEFORE-publication interval before repair. External full MFM/PE integration,
+governed outcome/revision/later judgment and the separate Gemma challenger remain
+next; latency stays deferred. Same 164 existing records; this procedure-only seed remains partial.
+
+
 ## Next construction - October 11: resolve placement and reach the unfinished interval
 
 The three original private positive/H/C notebooks are provider-cancelled at 43,200s.

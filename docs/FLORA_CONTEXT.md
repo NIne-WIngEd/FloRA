@@ -1,5 +1,80 @@
 # FloRA continuation context
 
+## Deployment checkpoint - October 11: 577257 qualifies this exact runtime placement
+
+Deployment-only job577257 completed on native `himem006`, ExitCode0:0 and TimeLimit
+`UNLIMITED`. Independent audit verifies12 selected raw artifacts/102,692 bytes and
+14 frozen source pins. On the same allocation, the original native import failed
+for missing ABI6; corrected ctypes/all42 tagged imports passed, mapped only the
+exact private ABI6 file, excluded unbound caches and proved host-library guest exclusion.
+Failed577256 and its ordered host-dependency diagnosis remain preserved below.
+
+The unchanged deployment contract passed copied guest Python3.12.14,53 offline
+wheels,4 pinned images, original vendor/P2/readiness and actual synthetic clients.
+Owned cleanup and input/source/library/carrier integrity passed with no cleanup
+errors. This establishes this allocation's native prerequisite and deployment
+compatibility. Custody covers12 selected main reports/streams; separate per-command
+client logs/process-status/vendor snapshots were not independently recovered.
+Crash/durable recovery, concurrent production and broader Alice/Fable remain unqualified.
+
+54.961s covers deployment-only work. The canceled12h Kaggle jobs ran different
+original whole mechanics cases; these results establish no speed ratio, calibrated
+latency or full-workflow completion. Original full strict mechanics, reached H/C
+boundaries, semantic judgment and learning remain unqualified.
+
+Next run the unchanged full positive mechanics case on this qualified placement
+with observation that reaches the original post-input/pre-BEFORE-publication gap,
+including post-return route/publication checks. Preserve strict oracle, authority,
+source and cleanup checks; run H/C after the positive reaches the required behavior.
+Then connect external full MFM/PE semantics and governed outcome/revision/activation/
+later native judgment. Gemma stays external and latency deferred. Same164 existing
+records; this procedure-only seed stays partial/unadmitted. Frozen late supplement002
+still proves activity/shutdown only; oversized stats stayed unread under unchanged8 MiB.
+
+
+## Placement continuation - October 11: preserve failed job 577256 and record successor 577257
+
+Failed deployment-only job 577256 passed actual native `himem006`, kernel 5.14 and
+host Python 3.11.5 allocation checks, then `_ctypes` could not load `libffi.so.6` before
+UMain/showconf dispatch. No image, PRoot, guest, backend or FloRA ran. Independent
+audit verifies 8 raw artifacts/14,937 bytes, 12 staged pins, 42 tagged sources and host
+pins; owned cleanup/input integrity passed for the returned wrapper only.
+Earlier stdlib controls omitted ctypes. The frozen eight-step diagnosis supports
+one genuine byte-pinned ABI6 host file. Login's 42-module import pass is candidate
+evidence, not allocated correction proof. Preserve matched original/corrected
+allocated controls, private mapped-file proof and guest exclusion in this successor.
+
+Successor `577257` was accepted once after exact input, staged-byte and shell checks.
+It requests native x86_64 `himem006`, 8 CPUs, 32G and exclusive normal-QOS placement
+in `himem`, with no scheduler wall limit. The single scheduler snapshot at
+`2026-10-11T22:33:06.639676+00:00` reports `RUNNING`, node `himem006` and TimeLimit `UNLIMITED`;
+CPU-only/ownership checks pass. Allocation identity is observed; allocated runtime/backend compatibility remains pending.
+This preflight runs the approved runtime/readiness/vendor/client
+and cleanup checks; it does not launch a FloRA strict case or invoke a model.
+Product runtime and original authority/budget gates are unchanged. Resolve actual
+Kurrent readiness and complete cleanup/source integrity before any full-case step.
+The preserved peer control caught overlapping launcher template tokens before any
+real staging/submission; its correction concerns launcher mechanics only.
+The successor's isolated sibling-import failure was also retained before physical
+submission. Its verified-byte loader preserves isolation/cache boundaries; local
+entrypoint controls do not establish allocated native compatibility.
+
+Frozen positive supplement002 retains six additional complete files/824,493 bytes.
+Kurrent logs late internal activity; all three services record late shutdown.
+These logs identify neither the unfinished fixture operation nor uninterrupted
+health or successful clients during the gap. The 12,781,816-byte stats body exceeded
+the unchanged 8 MiB collection bound and was not read; the main vendor log remains
+unattempted. Shutdown logs do not establish completed controller cleanup.
+
+Original Kaggle positive/H/C strict results and final source-after evidence remain
+absent. Reach the original interval after inputs registration and before first
+BEFORE capture publication, including post-return route/publication checks, before
+selecting a cause. Then continue the external full-MFM/full-PE semantic and linked
+outcome -> approved revision -> activation -> later native judgment loop, with
+relevant/irrelevant and withheld-approval controls. The same 164 existing records
+remain; this procedure-only seed stays partial/unadmitted. Gemma stays external and latency deferred.
+
+
 ## Terminal checkpoint - October 11: three original cases stopped by the provider
 
 Positive/H/C notebooks `138146053/v1`, `138146069/v1` and `138146088/v1`
