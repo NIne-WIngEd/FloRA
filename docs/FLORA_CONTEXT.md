@@ -1,5 +1,37 @@
 # FloRA continuation context
 
+## Current continuation - October 11: three original whole mechanics cases accepted
+
+The recovered `138138423/v1` runtime passed pinned Python3.12.14/backend/client,
+cleanup and exact consumed-content review. One fresh private capsule dataset
+`12508383/v1` is READY with exact two-file custody;
+the existing runtime dataset12506682/v1 is reused.
+
+- positive: notebook `138146053/v1`.
+- history-withdrawal: notebook `138146069/v1`.
+- context-withdrawal: notebook `138146088/v1`.
+
+Each notebook was saved once. Exact source, private CPU/internet settings, two
+input identities and empty other inputs read back correctly. Server attachment
+version proof remains unavailable; mounted runtime/capsule hash checks are still
+required. Each runs one complete unchanged original strict case with independent
+stores, original internal budgets and no controller inner deadline or auto-rerun.
+One status observation per job found all three RUNNING at08:39Z; no terminal output
+was recovered. Source-only carrier/evidence/SDK controls passed58/13/18 cases.
+The original root-review schema-join failure and ordered diagnosis are preserved.
+Actual strict results, cleanup and before/after source hashes remain pending.
+Preserve these accepted jobs; terminal status or a relay is not the strict oracle.
+
+After all three original mechanics cases pass, connect external full MFM semantics
+to approved active state and the actual PE consumer, then decision-linked outcome
+to independently approved revision, activation and a fresh later native judgment.
+Relevant/irrelevant outcome and withheld-approval controls remain required. These
+supplied-judgment cases do not prove learned/causal behavior or latency. Full Alice,
+extra model construction and the separately built personalized Gemma challenger
+remain outside this chat; latency is deferred. The same164-record FBM corpus and
+capture-boundary procedure candidate remain partial and unadopted.
+
+
 ## Fable claim audit - October 11: sufficient design, unfinished integration
 
 Yes: full planned PE + full planned MFM + scoped FloRA infrastructure are sufficient
