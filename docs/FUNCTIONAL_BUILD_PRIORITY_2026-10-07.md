@@ -1,5 +1,35 @@
 # FloRA functional build first
 
+## Next construction - October 11: resolve placement and reach the unfinished interval
+
+The three original private positive/H/C notebooks are provider-cancelled at 43,200s.
+Preserve their earlier RUNNING records as history. Recovery verifies 34 raw artifacts,
+mounted 69+7 files and 1,457 source-before/429 Python rows against approved bytes.
+Final original strict result/process, source-after and completed cleanup are missing;
+mechanics, reached H/C controls, semantics and latency remain unqualified.
+
+The last original-input checkpoints are 745.268/524.393/566.792s. Locate the first
+unfinished original operation before BEFORE capture publication, including
+post-return route/publication checks. Existing 300s journals stop during
+preregistration; `resolved_fixed_tags` is selector inventory, not observed frames.
+No confirmed recursive, SQL or replay cause supports a correction.
+
+First prepare one deployment-only preflight of the approved exact hermetic carrier
+on an allocated modern native x86_64 Magnolia node. Keep readiness/vendor gates
+unchanged and resolve Kurrent startup before full cases. Magnolia's node policy
+is MaxTime UNLIMITED/DefaultTime 5h with no normal-QOS
+MaxWall; it does not promise a suitable allocation. Local ARM64 Docker has 7.543 GiB
+and needs emulation for the exact amd64 package. Keep host readiness, diagnostic
+reachability and original strict acceptance separate; avoid another blind 12h run.
+
+Then resume the scoped external full-MFM/full-PE semantic revision loop and matched
+comparison. Keep original authority/cleanup/source checks, relevant/irrelevant
+outcome and withheld-approval controls. No full Alice build, extra model, seed
+admission or latency claim; the same 164 procedure records remain.
+
+Private recovery provenance: `work/connected-placement-20261009/kaggle-fallback-20261011/full-case-submission/root-terminal-review.json`, SHA256 `72572ed676aa57183a86433773de7f5d36d2a938075b8aff9481acd605016cab`. The terminal-stage review receipt binds this report, all three recovery receipts and the two private placement audits.
+
+
 ## Next construction - October 11: recover the three accepted original cases
 
 Original positive/H/C whole mechanics notebooks are accepted once each:
