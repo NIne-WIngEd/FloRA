@@ -1,5 +1,46 @@
 # FloRA continuation context
 
+## Terminal checkpoint - October 11: three original cases stopped by the provider
+
+Positive/H/C notebooks `138146053/v1`, `138146069/v1` and `138146088/v1`
+are now `CANCEL_ACKNOWLEDGED`; the provider stopped them at its 43,200-second
+execution ceiling. The 08:39Z RUNNING observations below remain dated history.
+This continuation dispatched no run and changed no runtime or authority.
+
+The bounded recovery preserves 34 selected artifacts with exact raw-byte custody.
+All 1,457 source-before rows and 429 declared Python files match the approved
+package; mounted 69 runtime plus 7 private capsule files and deployment/client
+checks passed. Original strict result/process files, final source-after evidence
+and completed cleanup are absent. Six-attempt mechanics and reached H/C controls
+remain unproved; no semantic/model failure or learned/causal/latency pass follows.
+
+Last original-input checkpoints are 745.268s positive, 524.393s H and 566.792s C.
+The unfinished interval is after that checkpoint and before first BEFORE capture
+publication. It includes setup, capture and post-return route/publication checks;
+capture nonreturn is not established. The 300-second journals cover preregistration
+setup only. `resolved_fixed_tags` lists available selectors; actual frames never
+reach capture/slot/personal-gate. Repeated authority work and transport blocking
+remain hypotheses; the first responsible unfinished operation is unknown.
+
+Next prepare one deployment-only preflight of the approved exact hermetic carrier
+on an allocated modern native x86_64 Magnolia node, with unchanged readiness/vendor
+gates, before full cases. Diagnose this original-source interval with evidence that
+reaches it, retaining the strict oracle and all authority/source checks.
+Magnolia's live node partition reports MaxTime UNLIMITED,
+DefaultTime 5h and normal QOS without MaxWall; actual allocation and the unresolved
+Kurrent startup gate still govern suitability. Local Docker is ARM64 with 7.543 GiB;
+the exact approved amd64 package needs emulation and unproved compatibility/capacity.
+Another blind 12-hour submission or a lease increase is not a diagnosis.
+
+After mechanics, complete the external full-MFM/full-PE semantic and decision-linked
+outcome/revision/activation/later-judgment bridge with relevant/irrelevant and
+withheld-approval controls. Full Alice and extra model construction remain outside
+this slice; the personalized Gemma challenger stays external and latency deferred.
+Same 164-record corpus; the existing procedure-only seed stays partial/unadmitted.
+
+Private recovery provenance: `work/connected-placement-20261009/kaggle-fallback-20261011/full-case-submission/root-terminal-review.json`, SHA256 `72572ed676aa57183a86433773de7f5d36d2a938075b8aff9481acd605016cab`. The terminal-stage review receipt binds this report, all three recovery receipts and the two private placement audits.
+
+
 ## Current continuation - October 11: three original whole mechanics cases accepted
 
 The recovered `138138423/v1` runtime passed pinned Python3.12.14/backend/client,
