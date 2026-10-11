@@ -1338,8 +1338,8 @@
     "source": "bd344d6d324d9bb0ab172786439c5c94d2c63340",
     "context": "202b955cd166c91a573e3379ecf28eda8d640994"
   },
-  "current_state": "original_workflow_incomplete_Kaggle_public_deployment_carrier_reviewed_input_creation_ACK_pending",
-  "recorded_at_utc": "2026-10-11T07:01:11.161403+00:00",
+  "current_state": "original_workflow_incomplete_Kaggle_input_custody_pass_single_kernel_RUNNING_version_readback_unproved",
+  "recorded_at_utc": "2026-10-11T07:34:40.643961+00:00",
   "historical_guard_candidate_fields": "candidate_files/new_test/unresolved_review and original boundary sections preserve the retired guard-composition stage; they are not the supported history-owner integration candidate.",
   "connected_workflow_continuation": {
     "state": "completed_incomplete_resource_cancelled",
@@ -2565,7 +2565,7 @@
       "session_state": "COMPLETE",
       "private_CPU_source_and_privacy_verified": true,
       "capability_result_JSON_recovered": true,
-      "backend_route_state": "one_private_dataset_creation_upload_intent_started_ACK_pending_no_deployment_job",
+      "backend_route_state": "private_version1_dataset_file_shape_verified_one_deployment_kernel_RUNNING_attachment_version_readback_unproved",
       "public_backend_deployment": {
         "state": "one_private_dataset_creation_upload_intent_started_ACK_pending_no_deployment_job",
         "requested_dataset_ref": "mkrayanyan/rayan-fl-ds-54865ba24c6b8de1eae71ed3d17b21b2",
@@ -2730,6 +2730,168 @@
         "documentation_encoding_diagnosis": {
           "ref": "work/kaggle-fallback-20261011/docs-deployment-stage/diagnosis-historical-tail-encoding.md",
           "sha256": "8ac32dca7bd8fbbe50017484c94c405a8d07d3163d7bf2aa5eab0fa19284acf1"
+        },
+        "acknowledged_input_result": {
+          "state": "private_version1_dataset_file_shape_verified_one_deployment_kernel_RUNNING_attachment_version_readback_unproved",
+          "accepted_dataset_ref": "mkrayanyan/rayan-fl-ds-54865ba24c6b8de1eae71ed3d17b21b2",
+          "provider_raw_ref": "/datasets/mkrayanyan/rayan-fl-ds-54865ba24c6b8de1eae71ed3d17b21b2",
+          "provider_url": "https://www.kaggle.com/datasets/mkrayanyan/rayan-fl-ds-54865ba24c6b8de1eae71ed3d17b21b2",
+          "requested_private": true,
+          "actual_private_verified": true,
+          "actual_ready_verified": true,
+          "actual_v1_files_verified": true,
+          "exact_blob_uploads_HTTP200": 2,
+          "CreateDataset_attempts": 1,
+          "CreateDataset_HTTP_status": 200,
+          "CreateDataset_ACK_status": "Ok",
+          "CreateDataset_ACK_error_empty": true,
+          "CreateDataset_ACK_captured_at_utc": "2026-10-11T07:03:32.522255+00:00",
+          "raw_ACK_bytes": 185,
+          "raw_ACK_body_sha256": "7b6183b24ff07de40c695c2c2c23f946cdac9727633e6333c00015634e295f0d",
+          "process_return": 1,
+          "receipt_finished_at_utc": "2026-10-11T07:03:32.649724+00:00",
+          "GetDataset_HTTP_status": 200,
+          "readback_cause": "Initial403 cause unconfirmed; later GetDataset200. Original URL/display-license collector defects are source-backed; notebook bare dataset reference leaves attachment version unproved, not disproved.",
+          "deployment_notebook_SaveKernel_calls": 1,
+          "backend_starts": null,
+          "original_FloRA_tests_invoked": 0,
+          "models_invoked": 0,
+          "dataset_recreation_forbidden": true,
+          "automatic_retry": false,
+          "read_only_recovery_required": true,
+          "backend_client_qualification": false,
+          "functional_qualification": false,
+          "causal_qualification": false,
+          "latency_qualification": false,
+          "receipt": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-create-001/receipt.json",
+            "sha256": "e8f5e2cebc1ca591c9b9d9ed609e76e1207f5b9d9b40d386d4879441e16aae91"
+          },
+          "raw_ACK": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-create-001/CreateDataset-ack.json",
+            "sha256": "dac5a50699c86b7aea939d4cd5899da3c90c2148509b45f515e9b96fe47f3d97"
+          },
+          "decoded_ACK": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-create-001/dataset-create-decoded-ack.json",
+            "sha256": "5e600fe1f21eb19bc18cc8cc2973e4b418c38f1b36d2e918bc3d2988e09f251d"
+          },
+          "blob_uploads": [
+            {
+              "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-create-001/blob-upload-1.json",
+              "sha256": "f1392975f866e0b3c38906b1c2f74a16c9bb711f11fefbe15f35b4b56bd9cded"
+            },
+            {
+              "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-create-001/blob-upload-2.json",
+              "sha256": "ece34412a10ce8851a993434aa978d3befb21b197113ce4cb730b8879212be7e"
+            }
+          ],
+          "next_action": "Resume the existing accepted kernel when its terminal result is available using the original unchanged observer/output gates; preserve unproved dataset-version readback. Mounted content hashes are a separate proof. Then unchanged backend clients, original three mechanics cases, and minimal causal memory/outcome pilot; no recreation, model work or latency tuning",
+          "actual_private_observed": true,
+          "initial_GetDataset_HTTP_status": 403,
+          "current_GetDataset_HTTP_status": 200,
+          "initial_403_cause": "unconfirmed; later read succeeded without proving the initial cause",
+          "provider_READY": {
+            "status": "READY",
+            "HTTP_status": 200,
+            "raw_status_field_present": true,
+            "raw_bytes": 18,
+            "captured_at_utc": "2026-10-11T07:13:48.679940+00:00",
+            "receipt": {
+              "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-status-recovery-001/receipt.json",
+              "sha256": "97ba31d72173656aa578d6b46d9625db3e1784372abdd66f2e99205a20140acb"
+            },
+            "response": {
+              "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-status-recovery-001/GetDatasetStatus-response.json",
+              "sha256": "b64a4d613f33bd3d8005564749d8290f4a68be14dad7dc7b5db937df0476b187"
+            }
+          },
+          "current_typed_metadata": {
+            "observed": {
+              "id": 12506682,
+              "ref": "mkrayanyan/rayan-fl-ds-54865ba24c6b8de1eae71ed3d17b21b2",
+              "url": "",
+              "is_private": true,
+              "current_version_number": 1,
+              "license_name": "Other (specified in description)",
+              "total_bytes": 839783075
+            },
+            "receipt": {
+              "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-observe-001/receipt.json",
+              "sha256": "8d2a4346b1b3861aa879689cd0c3610e80bbb8df97f042b9f8e1a9f233c5e6f8"
+            },
+            "metadata": {
+              "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-observe-001/dataset-metadata-observation.json",
+              "sha256": "647cc4fb3e6c0e9d17d845c139b031832031ac1a781ce32885294b0b6ad2b2f4"
+            }
+          },
+          "metadata_collector_outcome": "Original optional URL/display-license assumptions diagnosed and preserved; read-only custody adapter joined accepted ACK/saved metadata/READY with actual canonical metadata and explicit v1 file inventory",
+          "process_return_scope": "Historical creation controller only; exit1 after initial403",
+          "dataset_custody": {
+            "receipt": {
+              "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/dataset-custody-recovery-001/receipt.json",
+              "sha256": "d70cb3a566fe82bcb94dab8a4e3e09b2f5081973c1ed87486dd3949d33f1153b"
+            },
+            "dataset_id": 12506682,
+            "accepted_ref": "mkrayanyan/rayan-fl-ds-54865ba24c6b8de1eae71ed3d17b21b2",
+            "private": true,
+            "dataset_version": 1,
+            "canonical_license": "other",
+            "provenance_marker_verified": true,
+            "exact_file_names_sizes": {
+              "bundle-inventory.json": 26234,
+              "rayan_fl_dp_bundle.bin": 839756841
+            },
+            "mounted_payload_hashes_verified": false,
+            "finished_at_utc": "2026-10-11T07:32:15.551688+00:00"
+          },
+          "dataset_contract_diagnosis": {
+            "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/diagnosis-dataset-custody.md",
+            "sha256": "d9939d70608821d9d4ae10340d4e80fe121e43db792e33d00b769829aa0aa72f"
+          },
+          "files_alias_is_not_a_confirmed_defect": true,
+          "accepted_deployment_kernel": {
+            "id": 138138423,
+            "version": 1,
+            "reference": "mkrayanyan/rayan-fl-dp-54865ba24c6b8de1eae71ed3d17b21b2",
+            "receipt": {
+              "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/kernel-launch-001/receipt.json",
+              "sha256": "855cfbeeaca5e1c7bc2051194146442794da0c7ef8a70fc20d6e22b92a2d7ef1"
+            },
+            "source_matches": true,
+            "private_CPU_internet": true,
+            "other_inputs_empty": true,
+            "requested_dataset_input": "mkrayanyan/rayan-fl-ds-54865ba24c6b8de1eae71ed3d17b21b2/1",
+            "observed_dataset_input": "mkrayanyan/rayan-fl-ds-54865ba24c6b8de1eae71ed3d17b21b2",
+            "exact_dataset_v1_input_predicate": false,
+            "version_binding_proved": false,
+            "combined_readback_gate": false,
+            "raw_GetKernel_body_available": false,
+            "unknown_extra_wire_fields_ruled_out": false,
+            "input_projection_diagnosis": {
+              "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/diagnosis-kernel-input-version.md",
+              "sha256": "068d36190378c5047424dc75295e6fc4da34e0cbff44da11df747258a3d59569"
+            },
+            "five_real_SDK_projection_controls": {
+              "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/kernel-input-projection-controls-001/receipt.json",
+              "sha256": "e21bde43ee49a8274b6c1625077f9a87fd6281aab7c66ae90bbda5872479c9e7"
+            },
+            "controller_unchanged": true,
+            "terminal_output_gate_unchanged": true
+          },
+          "single_kernel_observation": {
+            "receipt": {
+              "ref": "work/connected-placement-20261009/kaggle-fallback-20261011/deployment-submission/kernel-observe-001/receipt.json",
+              "sha256": "53152bc6c5556d4810194aee0d3251d304dfa39a79a78a95cedb2df51a846bbb"
+            },
+            "status": "RUNNING",
+            "no_failure_message_observed": true,
+            "status_source": "decoded official SDK projection; raw status body not retained",
+            "as_of_utc": "2026-10-11T07:34:40.643961+00:00",
+            "output_list_calls": 0,
+            "output_download_calls": 0,
+            "terminal_result_recovered": false
+          },
+          "backend_execution_observation": "Unknown until the accepted kernel result/logs are recovered; RUNNING alone proves no backend stage"
         }
       }
     }
@@ -2745,5 +2907,9 @@
   "Kaggle_deployment_reconciliation_parents": {
     "source": "1aa5d921ba29f71894a81389565da174f8b99836",
     "context": "19b7821da67e113776a6d07532f4ad75cd26eac8"
+  },
+  "Kaggle_input_result_reconciliation_parents": {
+    "source": "7a655382dd0df6c41e2e795b515f3733a990c1ed",
+    "context": "d6c7858fb1a8fe279471e56b76024f3967764216"
   }
 }
