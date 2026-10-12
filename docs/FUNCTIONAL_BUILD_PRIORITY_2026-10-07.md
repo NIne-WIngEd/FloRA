@@ -1,5 +1,42 @@
 # FloRA functional build first
 
+## Next construction - October 11: recover original full positive 577260
+
+Job 577259 failed in startup preflight before its strict test. Its terminal
+recovery preserves 60 raw files, exact 1,457-file source identity and owned
+cleanup; native Kurrent cause remains unproved. Preserve failed 577258 and both
+dated acceptance histories. The unpublished initial 577259 checkpoint stays frozen.
+
+Successor 577260 was accepted once and initially observed `RUNNING` on `himem006`,
+label `rayan_fl`, TimeLimit `UNLIMITED`, at `2026-10-12T00:49:06.2446327Z`.
+The carrier now waits for original vendor health, owned process exit or cancellation;
+the latest 90 health checks remain in result JSON and every check in full stdout.
+This removes a bootstrap cutoff outside capability assertions, consistent with
+unrestricted outer runtime and deferred latency. It does not prove a startup fix.
+
+Recover the original positive strict result, source-after and cleanup. Canonical
+runner, vendor health, source/tests and owner/operation bounds remain unchanged.
+No observer, diagnostic/native-control program or outer placement controller is
+added; the canceled diagnostic path was never submitted. H/C and actual MFM/PE
+semantic outcome/revision/fresh-judgment work remain subsequent construction.
+Same 164 records; this partial procedure seed is unadmitted. Mechanics, learning,
+causal benefit and latency remain unqualified.
+
+
+## Next construction - October 11: recover direct original full case 577259
+
+Job 577259 was accepted once and initially observed `RUNNING` on `himem006`,
+TimeLimit `UNLIMITED`, at `2026-10-12T00:24:28.4187557Z`. The unchanged positive case
+uses the canonical strict runner directly with necessary pinned offline setup.
+No observer, diagnostic/native-control program or outer placement controller is
+added. Recover its original strict result, source-after and owned cleanup; acceptance
+and RUNNING do not qualify mechanics, semantics, learning, causal benefit or latency.
+
+The user canceled the unsubmitted diagnostic path. No added observer/control job
+was launched. Preserve 577258's preflight failure and historical evidence. Same
+164 records; this partial procedure seed remains unadmitted.
+
+
 ## Next construction - October 11: diagnose job 577258 startup with LIVE evidence
 
 Job 577258 is terminal `FAILED` on `himem006`, TimeLimit `UNLIMITED`, observed
