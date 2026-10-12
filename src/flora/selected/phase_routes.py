@@ -283,15 +283,29 @@ class _QualifiedUpdateProof:
     """Actual anchored context plus the arm's independently verified update."""
     def context_lineage(self, **kwargs):
         self._phase_source_gate()
-        actual = super().context_lineage(**kwargs)
-        self._phase_source_gate()
-        verified = verify_update_policy(runtime=self.runtime,
-            snapshot_record=self._phase_record, receipt=self._phase_update_receipt,
-            authority_guard=self._phase_source_gate)
-        if verified != self._phase_record["verified_update_exclusion"]:
-            raise PermissionError("actual producer update-exclusion authority changed")
-        self._phase_source_gate()
-        return actual
+        lineage_completion = []
+        try:
+            actual = super().context_lineage(**kwargs)
+            from ._phase_preparation import (_lineage_completion_record,
+                _lineage_metadata_barrier, _finish_lineage_use)
+            lineage_record = _lineage_completion_record(self, lineage_completion)
+            lineage_check = lineage_record[1]
+            metadata_current = _lineage_metadata_barrier(self, lineage_record)
+            self._phase_source_gate()
+            def update_guard():
+                metadata_current()
+                self._phase_source_gate()
+                metadata_current()
+            verified = verify_update_policy(runtime=self.runtime,
+                snapshot_record=self._phase_record, receipt=self._phase_update_receipt,
+                authority_guard=update_guard)
+            if verified != self._phase_record["verified_update_exclusion"]:
+                raise PermissionError("actual producer update-exclusion authority changed")
+            self._phase_source_gate()
+            _finish_lineage_use(self, lineage_completion, lineage_check, lineage_record)
+            return actual
+        finally:
+            lineage_completion.clear()
 
 
 class _QualifiedCapturePhaseLineage(_QualifiedUpdateProof, PreregisteredPhaseCaptureLineageVerifier):
@@ -444,17 +458,19 @@ class SelectedPhaseRoute:
                 lineage._preregistered_capture = r
         update_receipt = None if r["update_receipt_base64"] is None else base64.b64decode(r["update_receipt_base64"], validate=True)
         lineage._phase_record, lineage._phase_update_receipt, lineage._phase_source_gate = r, update_receipt, source_gate
-        context = runtime._context(snapshot.plan)
-        actual = lineage.context_lineage(case_id=r["case_id"], phase=r["phase"], history=history, context=context)
-        if (canonical_sha256(actual.record()) != r["context_lineage_sha256"]
-                or context.receipt_record() != r["context_receipt"]):
-            raise ValueError("actual pinned context/producer proof differs from captured phase")
         self.custody, self.snapshot, self.history, self.history_authority = custody, snapshot, history, history_authority
-        self._captured_metadata = captured_metadata
-        self._source_gate = source_gate
-        self.runtime, self.lineage = runtime, lineage
-        self.final_authority = final_authority
-        self.check_live()
+        self._captured_metadata, self._source_gate = captured_metadata, source_gate
+        self.runtime, self.lineage, self.final_authority = runtime, lineage, final_authority
+        from ._phase_preparation import _phase_preparation
+        with _phase_preparation(issuer=self, kind="restore", runtime=runtime, consumer=lineage,
+                plan=snapshot.plan, history=history, case_id=r["case_id"], phase=r["phase"],
+                identity=(custody.run_id, snapshot_id, r["arm"], snapshot.snapshot_sha256), guard=self.guard_live) as operation:
+            context = operation.context
+            actual = lineage.context_lineage(case_id=r["case_id"], phase=r["phase"], history=history, context=context)
+            if (canonical_sha256(actual.record()) != r["context_lineage_sha256"]
+                    or context.receipt_record() != r["context_receipt"]):
+                raise ValueError("actual pinned context/producer proof differs from captured phase")
+            self.check_live()
 
     def check_live(self):
         # The constructor authenticated the immutable body and actual selected
@@ -473,25 +489,34 @@ class SelectedPhaseRoute:
         from ..comparison_run import _context_bytes
         import hashlib
         self.check_live()
-        context = self.runtime._context(self.snapshot.plan, authority_guard=self.guard_live)
-        lineage = self.lineage.context_lineage(case_id=self.snapshot.record["case_id"], phase=self.snapshot.record["phase"],
-            history=self.history, context=context, authority_guard=self.guard_live)
-        binding, manifest = self.runtime._resolve("personality_judgment", authority_guard=self.guard_live)
-        artifacts = MappingProxyType({role: self.runtime._resolve(role, authority_guard=self.guard_live)[1]
-            for role in ("memory_formation", "personality_judgment")})
-        metadata = self.custody.metadata(self.snapshot.snapshot_id)
-        if (lineage.lineage_sha256 != self.snapshot.record["context_lineage_sha256"]
-                or context.receipt_record() != self.snapshot.record["context_receipt"]
-                or metadata != self._captured_metadata):
-            raise PermissionError("observed actual phase binding changed")
-        value = ObservedPhaseBinding(self.custody.run_id, self.custody.preregistration_sha256,
-            self.snapshot.snapshot_id, self.snapshot.snapshot_sha256, metadata["event_id"], metadata["event_sha256"],
-            metadata["case_id"], metadata["phase"], metadata["arm"], self.snapshot.plan,
-            hashlib.sha256(_context_bytes(context)).hexdigest(), lineage.lineage_sha256,
-            binding.adapter.adapter_id, manifest.checkpoint_sha256, manifest.manifest_sha256, artifacts)
-        value.record()
-        self.check_live()
-        return value
+        from ._phase_preparation import _phase_preparation
+        r = self.snapshot.record
+        with _phase_preparation(issuer=self, kind="observe", runtime=self.runtime, consumer=self.lineage,
+                plan=self.snapshot.plan, history=self.history, case_id=r["case_id"], phase=r["phase"],
+                identity=(self.custody.run_id, self.snapshot.snapshot_id, r["arm"], self.snapshot.snapshot_sha256),
+                guard=self.guard_live) as operation:
+            context = operation.context
+            lineage = self.lineage.context_lineage(case_id=self.snapshot.record["case_id"], phase=self.snapshot.record["phase"],
+                history=self.history, context=context, authority_guard=self.guard_live)
+            from ._phase_preparation import _current_lineage_use
+            use = _current_lineage_use(self.lineage)
+            barrier = self.guard_live if use is None else use.metadata_current
+            binding, manifest = self.runtime._resolve("personality_judgment", authority_guard=barrier)
+            artifacts = MappingProxyType({role: self.runtime._resolve(role, authority_guard=barrier)[1]
+                for role in ("memory_formation", "personality_judgment")})
+            metadata = self.custody.metadata(self.snapshot.snapshot_id)
+            if (lineage.lineage_sha256 != self.snapshot.record["context_lineage_sha256"]
+                    or context.receipt_record() != self.snapshot.record["context_receipt"]
+                    or metadata != self._captured_metadata):
+                raise PermissionError("observed actual phase binding changed")
+            value = ObservedPhaseBinding(self.custody.run_id, self.custody.preregistration_sha256,
+                self.snapshot.snapshot_id, self.snapshot.snapshot_sha256, metadata["event_id"], metadata["event_sha256"],
+                metadata["case_id"], metadata["phase"], metadata["arm"], self.snapshot.plan,
+                hashlib.sha256(_context_bytes(context)).hexdigest(), lineage.lineage_sha256,
+                binding.adapter.adapter_id, manifest.checkpoint_sha256, manifest.manifest_sha256, artifacts)
+            value.record()
+            self.check_live()
+            return value
 
 
 class SelectedBeforeProbeRoute(SelectedPhaseRoute):
@@ -747,3 +772,15 @@ class SelectedPhaseLineageRouter:
             authority_guard=route.guard_live)
         route.check_live()
         return actual.qualified_output
+
+
+# Definition-time origins for the private actual-phase owner map. A later
+# callable replacement is a custom port and cannot redefine native admission.
+_PHASE_NATIVE_ORIGINS = tuple((owner, name, function, function.__code__)
+    for owner, name, function in (
+        (SelectedPhaseRoute, "__init__", SelectedPhaseRoute.__init__),
+        (None, "derive_preregistered_ablation_runtime", derive_preregistered_ablation_runtime),
+        (SelectedPhaseRoute, "guard_live", SelectedPhaseRoute.guard_live),
+        (SelectedPhaseRoute, "check_live", SelectedPhaseRoute.check_live),
+        (_QualifiedUpdateProof, "context_lineage", _QualifiedUpdateProof.context_lineage),
+    ))

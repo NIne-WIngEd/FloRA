@@ -1511,3 +1511,15 @@ while _slot_pending:
                     if inspect.isfunction(_slot_member) and _slot_member.__module__.startswith(("flora.", "cognitive_kernel.")):
                         _slot_pending.append(_slot_member)
 del _slot_pending, _slot_seen, _slot_function, _slot_name, _slot_value
+
+
+# Definition-time origins for the private actual-phase owner map. A later
+# callable replacement is a custom port and cannot redefine native admission.
+_PHASE_NATIVE_ORIGINS = tuple((owner, name, function, function.__code__)
+    for owner, name, function in (
+        (RegisteredExperimentPreregistration, "history_for", RegisteredExperimentPreregistration.history_for),
+        (PreregisteredHistoryAuthority, "bind_private_guard", PreregisteredHistoryAuthority.bind_private_guard),
+        (XTDBExperimentPreregistrationCustody, "recover_control", XTDBExperimentPreregistrationCustody.recover_control),
+        (XTDBExperimentPreregistrationCustody, "register_original_inputs", XTDBExperimentPreregistrationCustody.register_original_inputs),
+        (XTDBExperimentPreregistrationCustody, "_current", XTDBExperimentPreregistrationCustody._current),
+    ))

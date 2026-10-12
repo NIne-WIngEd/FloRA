@@ -1,0 +1,1205 @@
+{
+  "schema": "flora-native-binding-graph-diagnosis-v1",
+  "recorded_at_utc": "2026-10-06T15:15:06.425493Z",
+  "status": "measured_pure_verification_amplification; correction_discriminator_in_progress",
+  "runtime_source": "6063073a13b391b19acaacff8c5f0f082c5df7b1",
+  "alice_contract_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+  "run_id": 37482623415,
+  "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37482623415",
+  "workflow_conclusion": "success",
+  "fixture_diagnostic_status": "failed",
+  "fixture_outcomes": {
+    "capped": 0,
+    "errors": 0,
+    "expected_failures": 0,
+    "failures": 1,
+    "passed": 0,
+    "skipped": 0,
+    "tests": 1,
+    "unexpected_successes": 0
+  },
+  "qualification": false,
+  "source_validation": {
+    "schema": "flora-native-diagnostic-source-validation-v1",
+    "run_id": 37482623415,
+    "head": "8be7ec46d1acd45be3eba1d90b5a13d307ad19af",
+    "runtime_source": "6063073a13b391b19acaacff8c5f0f082c5df7b1",
+    "alice_contract_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+    "artifact_sha256": "c51949519f197b1054e06520c733195c72169b752a26545aaa5b8d40ae79b9ff",
+    "log_sha256": "90414223c4481f9a7fa2c307d95ec6c01ac14f0335cb524251ca6307dc930cf4",
+    "verified_loaded_modules": {
+      "cognitive_kernel.adjudication_contracts": {
+        "path": "src/cognitive_kernel/adjudication_contracts.py",
+        "sha256": "59e245fe81247ed937d3240157051bc342a2f72c321f434d8afb46bf5f1dfe1e",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.attention": {
+        "path": "src/cognitive_kernel/attention.py",
+        "sha256": "2fc6c3138ac327c7995589691d49d2d702a6e59a91a25821f578ce894c1ca0f0",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.attention_policy": {
+        "path": "src/cognitive_kernel/attention_policy.py",
+        "sha256": "4ed9093bec3ecd0b3bb4dedff02d841472dadd33e06aef38940b2ee592f3fe0e",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.authority": {
+        "path": "src/cognitive_kernel/authority.py",
+        "sha256": "5479cd69a42181f0c1657d1dbeb26f3fa238821d86d996edded079aac76b8604",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.bounded_serving_prototype": {
+        "path": "src/cognitive_kernel/bounded_serving_prototype.py",
+        "sha256": "09cd11bfee9b2cf4bb2475e099a07d91c45fc1eecd93c094f81bf315d363229d",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.canonical": {
+        "path": "src/cognitive_kernel/canonical.py",
+        "sha256": "d3f78be7e367bd8a3115b75e8d05d3f5fa5b177a32b44dea6e01f8375adf2ae8",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.claim_authority_prototype": {
+        "path": "src/cognitive_kernel/claim_authority_prototype.py",
+        "sha256": "c688b138d499e78cdf70e700e48f282c31564aaf529934fe2ab529702a8025f0",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.claim_contracts": {
+        "path": "src/cognitive_kernel/claim_contracts.py",
+        "sha256": "d5535175cbd361c2a00f8b4d59cc05d169af80cb63d94dd50e9d1483cdcd4e75",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.contracts": {
+        "path": "src/cognitive_kernel/contracts.py",
+        "sha256": "3cb7a5f228816056bb335bae206c88a69d08dc7c809833dc267c9027e9454e3a",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.curation_contracts": {
+        "path": "src/cognitive_kernel/curation_contracts.py",
+        "sha256": "463fab732f4a6796835d4a7a8aa69a37377bf1e26acf5809300d905ebba8cd5e",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.deletion_contracts": {
+        "path": "src/cognitive_kernel/deletion_contracts.py",
+        "sha256": "df30438dae8c663cedb12074b92da6b48a6219abf845010cf0a9287ea6635290",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.deletion_prototype": {
+        "path": "src/cognitive_kernel/deletion_prototype.py",
+        "sha256": "a757187280fe0952cbb2f7e014588a40f33eee64074e86303e1730ae1756acd4",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.durable_workflow_prototype": {
+        "path": "src/cognitive_kernel/durable_workflow_prototype.py",
+        "sha256": "7094a3342f017d37e44a40f9e2fd42786ffefffeefb615f6b19f82d0857dc346",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.experience": {
+        "path": "src/cognitive_kernel/experience.py",
+        "sha256": "07fa74978ce555256f9eaeb4c0ab812aa674fda5fd5efcff912367e965baf15c",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.formation_context_planner": {
+        "path": "src/cognitive_kernel/formation_context_planner.py",
+        "sha256": "0441994076c1f867f86d2e78e0d3ff9350ab85e53fa4df2b4679244b713f2cd0",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.formation_contracts": {
+        "path": "src/cognitive_kernel/formation_contracts.py",
+        "sha256": "4130c59b61cc2aa119ef8658af57639d9185a7727ecf461508b655724e55cb8a",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.formation_retrieval": {
+        "path": "src/cognitive_kernel/formation_retrieval.py",
+        "sha256": "f5b9aba868fb01225bf30683c99e8da3cbc47331e9416291849f126360025b7e",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.formation_sources": {
+        "path": "src/cognitive_kernel/formation_sources.py",
+        "sha256": "415cb8b13fbd9fcd4fce9478df913dc470f1529222714903ffc55c5b4e0a202a",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.guest": {
+        "path": "src/cognitive_kernel/guest.py",
+        "sha256": "4ffe563d0c68cea1a4bded009bd7fb744467d5d5896ece1890c51204764a973c",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.interaction_policy": {
+        "path": "src/cognitive_kernel/interaction_policy.py",
+        "sha256": "88e67fd8def614ca520297aca2b573926d4fe0ae2e487d10dc196a1fe9de0b0c",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.ledger": {
+        "path": "src/cognitive_kernel/ledger.py",
+        "sha256": "5a77cc9d142fbe0692b1f023f4610b03ebdc12bdf1ae69559ae03c88c203d06d",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.ledger_policy": {
+        "path": "src/cognitive_kernel/ledger_policy.py",
+        "sha256": "eccbe0b71215597617b5d14d191ef675209926972f6ee25846a84ceb881483c1",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.ledger_store": {
+        "path": "src/cognitive_kernel/ledger_store.py",
+        "sha256": "d36f710f13e9b2ab2e309f3a5e429185a0e14319859704fbc9f0d329a780111a",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.lifecycle": {
+        "path": "src/cognitive_kernel/lifecycle.py",
+        "sha256": "9da069d7aa34b0a797a4443f6ba97d413f472d784a9fb017899a45ad9ca1a431",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.lifecycle_policy": {
+        "path": "src/cognitive_kernel/lifecycle_policy.py",
+        "sha256": "37434734aba96d2de82b60759292c606ec94cbcaf6d48eb281d50c12a11fb9e3",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.lifecycle_store": {
+        "path": "src/cognitive_kernel/lifecycle_store.py",
+        "sha256": "8550b7266e5ab526a4cdca53243d7fc4c4f3b7352c65bc7f692287d90d0b46cc",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.m2_closeout": {
+        "path": "src/cognitive_kernel/m2_closeout.py",
+        "sha256": "4a185b5d85d1545802e3e2414ce740699bbd56c0a6bd0fc8ae79d0f529ab15b6",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.memory_contracts": {
+        "path": "src/cognitive_kernel/memory_contracts.py",
+        "sha256": "b533c8a83e41ea22ae7b761f70c8859ec1d867c072f2c1e23eea26947a367e86",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.mission": {
+        "path": "src/cognitive_kernel/mission.py",
+        "sha256": "e4bba264405ef192f5dc3150b21e7dd9d2d2e9b9206b2f54dd648606bac1e5a7",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.mission_policy": {
+        "path": "src/cognitive_kernel/mission_policy.py",
+        "sha256": "bf38e476fb8cc904ab36973323e11226ce5e008b5312b80da6e60a1f42c696be",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.payload_store": {
+        "path": "src/cognitive_kernel/payload_store.py",
+        "sha256": "ace7660bcb4be6273402141c4b392014d5398a7dd9b056338014450d49e14524",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.phase2_shadow_adapter": {
+        "path": "src/cognitive_kernel/phase2_shadow_adapter.py",
+        "sha256": "1ed3e555ac50a80f56d622d0d7552eece7b14f50e99cb9144a8b85f738e2b675",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.policy": {
+        "path": "src/cognitive_kernel/policy.py",
+        "sha256": "f47fdb975241c5fd9820afec3906f7582fbb5ce363464b22c33c9a153413929b",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.projection_contracts": {
+        "path": "src/cognitive_kernel/projection_contracts.py",
+        "sha256": "92026b96625dc91ec9779e70343ffe3cf187a94336f59200270704790537fd77",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.projection_prototype": {
+        "path": "src/cognitive_kernel/projection_prototype.py",
+        "sha256": "19391a1a3b7a3a3d9a46947769f2f70267406a2997459f2a05b634e196e7d3c9",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.raw_buffer": {
+        "path": "src/cognitive_kernel/raw_buffer.py",
+        "sha256": "5631c42a3ef0570aa08ca9b006b4698a3272c069206a8863583e03b5c5c301ed",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.raw_buffer_policy": {
+        "path": "src/cognitive_kernel/raw_buffer_policy.py",
+        "sha256": "7edef26aec1c340ce2966d648890f31cc274fc79577108f735626362bf46c3dc",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.release": {
+        "path": "src/cognitive_kernel/release.py",
+        "sha256": "39c654ed93317b11b714090837af88193f62d290a06356e47f8a7900a7987013",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.release_policy": {
+        "path": "src/cognitive_kernel/release_policy.py",
+        "sha256": "b73c2417fca05e5d2556f5c6c6584b5a6ab684c4902e652c505868e772e0a8e6",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.results": {
+        "path": "src/cognitive_kernel/results.py",
+        "sha256": "dac1ba0ecdbac5e53c6cea4fa6b31d7571121f3d3cb3e7be16276e2f0e238624",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.routing": {
+        "path": "src/cognitive_kernel/routing.py",
+        "sha256": "8c48b2e8ef37dcbd71ca1bd000590105a421643534ba970517cea0b6fb8d3c9f",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.serving_contracts": {
+        "path": "src/cognitive_kernel/serving_contracts.py",
+        "sha256": "2cfd732c0ca9d07dbfb4298f78eadeb56bd5af1b618610b909f0cbd1afd6c6cc",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.shadow_adjudication_prototype": {
+        "path": "src/cognitive_kernel/shadow_adjudication_prototype.py",
+        "sha256": "68c11fe998f0ee6226441df1b75dd745ef32960ade5a2fbfbc917213029db999",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.shadow_migration_contracts": {
+        "path": "src/cognitive_kernel/shadow_migration_contracts.py",
+        "sha256": "bb9a43f13144cf7a47a6d448063612a3793a16fa6f05dd22bc8460f97b2bccd4",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.shadow_migration_stage_c_e": {
+        "path": "src/cognitive_kernel/shadow_migration_stage_c_e.py",
+        "sha256": "1b18645403fbc80509b1bcae8376c8e04cd3f0b92b043c2668f11ea1cc980c07",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.shadow_migration_stage_c_e_evaluation": {
+        "path": "src/cognitive_kernel/shadow_migration_stage_c_e_evaluation.py",
+        "sha256": "ae26ed605cba806ea54dafdf15e46f376a5667151a22315d5ce87c8a59cd2561",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.shadow_migration_stage_d": {
+        "path": "src/cognitive_kernel/shadow_migration_stage_d.py",
+        "sha256": "991fa58799fa7cbcb3873703676d9efdfa224f58b438707c5f26573ccc7e6b42",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.shadow_migration_stage_f_g": {
+        "path": "src/cognitive_kernel/shadow_migration_stage_f_g.py",
+        "sha256": "c0233a60dcf08fb31f3498c0085d82b7162b31e875f705b40e9bb0b3ac4a9d5b",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.shadow_migration_stage_f_g_evaluation": {
+        "path": "src/cognitive_kernel/shadow_migration_stage_f_g_evaluation.py",
+        "sha256": "5accde1e30b4094b697b64494b8e10c2be5f7b9566062ef5f9915f11b3fd360d",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.shadow_migration_stage_f_g_persistent": {
+        "path": "src/cognitive_kernel/shadow_migration_stage_f_g_persistent.py",
+        "sha256": "799cb10f575c9d032dd29f3b396fc8065505dd8f93a4635c379dba1470b084fc",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.shadow_migration_stage_f_g_persistent_evaluation": {
+        "path": "src/cognitive_kernel/shadow_migration_stage_f_g_persistent_evaluation.py",
+        "sha256": "3bc9a4a65a0895779791d681a8b845d1df71ab85223d2863cee983a122de83ea",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.speaker": {
+        "path": "src/cognitive_kernel/speaker.py",
+        "sha256": "bf342d5fa2980d3c1b6cfa32ad8a30f8ba289b6605048b7cfd9ea0ea6bdaba80",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.tier_transition": {
+        "path": "src/cognitive_kernel/tier_transition.py",
+        "sha256": "3e46f2b87f172a9acfed605b5082a35df62018bd08e9abcb8f599f1fa0fdd698",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.tier_transition_policy": {
+        "path": "src/cognitive_kernel/tier_transition_policy.py",
+        "sha256": "0c6ecac4fa843f9e851abe7e64a26c8fa47f6edb2d2fc742b4652aa2ae20776c",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.tier_transition_store": {
+        "path": "src/cognitive_kernel/tier_transition_store.py",
+        "sha256": "f42c972fd244a4ba8e6e02085d8853bc77f24b49096ae43dbd46b3863524ceda",
+        "repository": "Alice"
+      },
+      "cognitive_kernel.workspace": {
+        "path": "src/cognitive_kernel/workspace.py",
+        "sha256": "980ae3680c489a00b48ad518c30647a3720f8ddbe76664a0346622a921686d8d",
+        "repository": "Alice"
+      },
+      "flora.comparison_run": {
+        "path": "src/flora/comparison_run.py",
+        "sha256": "a4fcee755a0b5bb72a58d67d4c2c6744c3c3a518bf4746f6f9252ec50577ce3f",
+        "repository": "FloRA"
+      },
+      "flora.evaluation_protocol": {
+        "path": "src/flora/evaluation_protocol.py",
+        "sha256": "462b6180d7a732738c4a849a12d394f00bd7a995489a3ec8f2d479d038ecbe0f",
+        "repository": "FloRA"
+      },
+      "flora.selected": {
+        "path": "src/flora/selected/__init__.py",
+        "sha256": "b1068b7e21a7cdae7d928b081abf8d7cb45ccf7a143f0dda10b3397cebf9e477",
+        "repository": "FloRA"
+      },
+      "flora.selected.artifact_registry": {
+        "path": "src/flora/selected/artifact_registry.py",
+        "sha256": "fcf128a00174638117a3b9f6f04e9a61e926c5113fd1d65ae7cbab34a289d810",
+        "repository": "FloRA"
+      },
+      "flora.selected.authenticated_history": {
+        "path": "src/flora/selected/authenticated_history.py",
+        "sha256": "097615b65c63dd58bc48661ff17f0236294df0a52b1c3ef7e3b5ab0da5011bd5",
+        "repository": "FloRA"
+      },
+      "flora.selected.authority_binding": {
+        "path": "src/flora/selected/authority_binding.py",
+        "sha256": "a816f8cd62d63c4467f07f3c8879c92a5d48b2352c74f164ed23c8d6a350059a",
+        "repository": "FloRA"
+      },
+      "flora.selected.bounded_xtdb_reads": {
+        "path": "src/flora/selected/bounded_xtdb_reads.py",
+        "sha256": "3f3bbf52a4703d0b8694091b7b191dbd0a15f657ae21092c9f0019d88d09b418",
+        "repository": "FloRA"
+      },
+      "flora.selected.claim_controller": {
+        "path": "src/flora/selected/claim_controller.py",
+        "sha256": "e1589f7d9c4616380017c41ce406395064d4e502ffb99cc2ea1f16be948d684b",
+        "repository": "FloRA"
+      },
+      "flora.selected.claims": {
+        "path": "src/flora/selected/claims.py",
+        "sha256": "191e04d017cba1a3fbc159e96711d592678f17a6142987d546044e3eaee57728",
+        "repository": "FloRA"
+      },
+      "flora.selected.comparison_custody": {
+        "path": "src/flora/selected/comparison_custody.py",
+        "sha256": "cf9ed22682150730534e6f93c461c942fa33d461db2e97a8e32f149850fe24be",
+        "repository": "FloRA"
+      },
+      "flora.selected.context": {
+        "path": "src/flora/selected/context.py",
+        "sha256": "8ed0fd875d9239a3aaa6c0a18061a336a3514fef4b7a9fd46cb3f88df9c75ed5",
+        "repository": "FloRA"
+      },
+      "flora.selected.context_guard": {
+        "path": "src/flora/selected/context_guard.py",
+        "sha256": "259036dfb654f840fa874838460e023c7d6e4bbb0c750918303e65b14c51603e",
+        "repository": "FloRA"
+      },
+      "flora.selected.decision_outcome": {
+        "path": "src/flora/selected/decision_outcome.py",
+        "sha256": "2f2246a26b178c0e2800ec0ac0ba3fb517ba471de6cd4e65db7fd665236d16fd",
+        "repository": "FloRA"
+      },
+      "flora.selected.development_sources": {
+        "path": "src/flora/selected/development_sources.py",
+        "sha256": "a0ab962e0df33b1eabd115fcecf587c01393d989d38428bf9df78e5d8feca226",
+        "repository": "FloRA"
+      },
+      "flora.selected.episodes": {
+        "path": "src/flora/selected/episodes.py",
+        "sha256": "4fb601c9a881c9ea6e7b4d4c3b276d5184957486de4e1f6c5c7174a41bc88ebf",
+        "repository": "FloRA"
+      },
+      "flora.selected.experience": {
+        "path": "src/flora/selected/experience.py",
+        "sha256": "61b1e81b343ae5fef98175108d97db620770dd9aa04e6b591c3eae6ef0087f9a",
+        "repository": "FloRA"
+      },
+      "flora.selected.experiment_runtime": {
+        "path": "src/flora/selected/experiment_runtime.py",
+        "sha256": "e18c95757e2566600432e7aeaee1dd72ab22aad08b8ecee597a4c3a96f484c95",
+        "repository": "FloRA"
+      },
+      "flora.selected.formation_admission": {
+        "path": "src/flora/selected/formation_admission.py",
+        "sha256": "2608f5681b97b596cd02d5747a2f516a8e80d461eb138f9a109ef998ece2bb10",
+        "repository": "FloRA"
+      },
+      "flora.selected.formation_candidates": {
+        "path": "src/flora/selected/formation_candidates.py",
+        "sha256": "ec3f3222b0b8156cbf6968d216d97f24578c2a088642fb8b27702a778d9c4f7b",
+        "repository": "FloRA"
+      },
+      "flora.selected.formation_context": {
+        "path": "src/flora/selected/formation_context.py",
+        "sha256": "e1a2c4ba3ce9bd1d4212007ca6d15e71e7edd6a0946b4955a7c2610da94bf9fd",
+        "repository": "FloRA"
+      },
+      "flora.selected.formation_policy": {
+        "path": "src/flora/selected/formation_policy.py",
+        "sha256": "b8b088256d5ef3f55f310181fd207559c0dd978ec90ceb4ee129e527a2214278",
+        "repository": "FloRA"
+      },
+      "flora.selected.formation_registry": {
+        "path": "src/flora/selected/formation_registry.py",
+        "sha256": "ec3282e9f123f9af99713dd3fdc0366ac1a9574c8b6019f9d28d9fc29b06581f",
+        "repository": "FloRA"
+      },
+      "flora.selected.governed_development": {
+        "path": "src/flora/selected/governed_development.py",
+        "sha256": "a93d7585421113780473a4eb50eb18bb74b160eec9e9c057e32816a3b1b17a7b",
+        "repository": "FloRA"
+      },
+      "flora.selected.governed_episodes": {
+        "path": "src/flora/selected/governed_episodes.py",
+        "sha256": "0965b0d76ff0c5f0e7ff7dce8ecaa1cf5464d5c2eae885dc7611abb0d6eb8b69",
+        "repository": "FloRA"
+      },
+      "flora.selected.graph_recollection": {
+        "path": "src/flora/selected/graph_recollection.py",
+        "sha256": "647130ac6ac9a202714ceb03d8145325c417e2e70a1499fc293a933b150e4d36",
+        "repository": "FloRA"
+      },
+      "flora.selected.history_fence": {
+        "path": "src/flora/selected/history_fence.py",
+        "sha256": "73fea72846ea94ea2cdcc7088e52a19e3dbce6c62a02668724410d65cd25b0b9",
+        "repository": "FloRA"
+      },
+      "flora.selected.judgment_context": {
+        "path": "src/flora/selected/judgment_context.py",
+        "sha256": "5d21a667fa6d44681ef93ca3de98d989ca28891b9aa0e8efca9c8c56683fae72",
+        "repository": "FloRA"
+      },
+      "flora.selected.judgment_lineage": {
+        "path": "src/flora/selected/judgment_lineage.py",
+        "sha256": "04de657e4a2f98abadce80a9330a29fb4d1572bd1c67a5b206f093bc216e5a09",
+        "repository": "FloRA"
+      },
+      "flora.selected.native_arm": {
+        "path": "src/flora/selected/native_arm.py",
+        "sha256": "4bb71bdad32d8ffc8ce6f1f57454631cc70224a4263fc34dce35f636b513dd21",
+        "repository": "FloRA"
+      },
+      "flora.selected.native_phase_gate": {
+        "path": "src/flora/selected/native_phase_gate.py",
+        "sha256": "3893586557c9005b263b761d2e4f80b3e4d7697e10a92d700ed1676bca10e908",
+        "repository": "FloRA"
+      },
+      "flora.selected.native_reads": {
+        "path": "src/flora/selected/native_reads.py",
+        "sha256": "c790c66e76577a2e68b32a4e386ec50bcc5f7c2c8e6b8555fe84ef56407cda3a",
+        "repository": "FloRA"
+      },
+      "flora.selected.native_worker": {
+        "path": "src/flora/selected/native_worker.py",
+        "sha256": "83b76e8c63398b90b1d4c6e2e6ff5290862b5d8670c77c2ac351cb73cc3138bb",
+        "repository": "FloRA"
+      },
+      "flora.selected.native_writer_guard": {
+        "path": "src/flora/selected/native_writer_guard.py",
+        "sha256": "281020690c0203dad6697207f4919b89518eafbadadf18b31d120cdc7223fb8a",
+        "repository": "FloRA"
+      },
+      "flora.selected.object_store": {
+        "path": "src/flora/selected/object_store.py",
+        "sha256": "373de1e874c571555d6866b2178865e1b3b736a50660b16f57ea20101fe12073",
+        "repository": "FloRA"
+      },
+      "flora.selected.outcome_revision": {
+        "path": "src/flora/selected/outcome_revision.py",
+        "sha256": "9ae5148abdbad19d4c31f78683f81978a4d7387bb666c5428d8e980f30256cc2",
+        "repository": "FloRA"
+      },
+      "flora.selected.owner_authorization": {
+        "path": "src/flora/selected/owner_authorization.py",
+        "sha256": "da41c70b31a5e1880fdbc44d4fc49788bb2c78eccd632f74cfa1b5d53ac3f884",
+        "repository": "FloRA"
+      },
+      "flora.selected.personal_artifact_custody": {
+        "path": "src/flora/selected/personal_artifact_custody.py",
+        "sha256": "ca1c81d80aec0bedfa554e48f878f09347c92501b541743cb3dbd1df407e1b76",
+        "repository": "FloRA"
+      },
+      "flora.selected.personal_state": {
+        "path": "src/flora/selected/personal_state.py",
+        "sha256": "a564a23027ff6af4427320fad478efd14a6461d44b660dad87f3fda06a8da475",
+        "repository": "FloRA"
+      },
+      "flora.selected.phase_routes": {
+        "path": "src/flora/selected/phase_routes.py",
+        "sha256": "ad6e858dc51b242c0b9a9f20d198a1662194b3652e1391cc54451672f8ba01b3",
+        "repository": "FloRA"
+      },
+      "flora.selected.phase_snapshots": {
+        "path": "src/flora/selected/phase_snapshots.py",
+        "sha256": "87103b4390931d0d50524de1693cde2e27ebdc3d54333ab78e931ef46081a079",
+        "repository": "FloRA"
+      },
+      "flora.selected.phase_source_fence": {
+        "path": "src/flora/selected/phase_source_fence.py",
+        "sha256": "b0829cf3995179b37a0beaf7bf4d42f0f06833b636d52b3231a13962bbb50015",
+        "repository": "FloRA"
+      },
+      "flora.selected.revocation": {
+        "path": "src/flora/selected/revocation.py",
+        "sha256": "345f75c57a43b8f268348fdae57eb28ccd85980d034a783cca4eac7d7547efe8",
+        "repository": "FloRA"
+      },
+      "flora.selected.selected_authority_frame": {
+        "path": "src/flora/selected/selected_authority_frame.py",
+        "sha256": "3d5b8b91a8fc3987f686df5563fb62b31ba234bf61974b0932e8ec1ff6d3dbfd",
+        "repository": "FloRA"
+      },
+      "flora.selected.selected_context": {
+        "path": "src/flora/selected/selected_context.py",
+        "sha256": "c11d75502049966ae1949c2c7f696141b493fd4e7714e799a7ceee1c5d78b243",
+        "repository": "FloRA"
+      },
+      "flora.selected.selected_context_fence": {
+        "path": "src/flora/selected/selected_context_fence.py",
+        "sha256": "556826540bfac77979f696e49b8eb2406315a710d21bc2d68fdc983027ed668a",
+        "repository": "FloRA"
+      },
+      "flora.selected.selected_history_contribution": {
+        "path": "src/flora/selected/selected_history_contribution.py",
+        "sha256": "12aa389e4b33bd0aa98b5c3d2b7c6435d225386020de38c45ac6b1182894be9b",
+        "repository": "FloRA"
+      },
+      "flora.selected.selected_history_fence": {
+        "path": "src/flora/selected/selected_history_fence.py",
+        "sha256": "40d599f96d8e495d0cfa6cc4b1007a11efe3a4a58d2d2edb1fcefee921ece2b1",
+        "repository": "FloRA"
+      },
+      "flora.selected.selected_phase_authority": {
+        "path": "src/flora/selected/selected_phase_authority.py",
+        "sha256": "6589bce9051bcc410282b5aba7fc3259bc0ef57105aeb98966e0fa50aaa9542a",
+        "repository": "FloRA"
+      },
+      "flora.selected.source_closure": {
+        "path": "src/flora/selected/source_closure.py",
+        "sha256": "641b5eed5d11b1a656bb5ce024820807f6764fa7aabba3b397674f8019b7dcdd",
+        "repository": "FloRA"
+      },
+      "flora.selected.source_native": {
+        "path": "src/flora/selected/source_native.py",
+        "sha256": "24e1fe5596442cf4c3d46460fee12429578e08b17bb8d2d53efe2251c144470b",
+        "repository": "FloRA"
+      },
+      "flora.selected.vector_recollection": {
+        "path": "src/flora/selected/vector_recollection.py",
+        "sha256": "b7f8a338d79ebfbbe746ab56caed82d37f9819353305a7ae0a4f428877ffa34a",
+        "repository": "FloRA"
+      },
+      "flora_native_comparison_backend_fixture": {
+        "path": "tests/integration/test_selected_runtime_bridge.py",
+        "sha256": "bb76abe24ace38c4dca4cdda1933f4a70f1fb38c114a5e343b8dfb9c2d26b6d7",
+        "repository": "FloRA"
+      },
+      "flora_native_comparison_phase_fixture": {
+        "path": "tests/test_selected_judgment_lineage.py",
+        "sha256": "0b62ca8a2c6b62bd0b9ba91c19135852dbbe19ec5563389c41b2f2db214a879d",
+        "repository": "FloRA"
+      },
+      "flora_native_comparison_process_fixture": {
+        "path": "tests/native_contract_fixture.py",
+        "sha256": "c1bc8ab278587602196a7ba8d4b2c886ea6c9400bd196c5c6669f1ce28d2b918",
+        "repository": "FloRA"
+      },
+      "native_diagnostic_script": {
+        "path": "scripts/profile_selected_native_boundaries.py",
+        "sha256": "56e3000009353d1ca96e89a39a15a87bb5110ea757281cad49256cdf33ba31fe",
+        "repository": "FloRA"
+      },
+      "shared_transport_diagnostic": {
+        "path": "scripts/profile_selected_transport_boundaries.py",
+        "sha256": "4be23d3f2eb874647ee0cc9b23744664043df26935bb127b6cd07b537761617d",
+        "repository": "FloRA"
+      },
+      "test_selected_formation_admission": {
+        "path": "tests/test_selected_formation_admission.py",
+        "sha256": "88727ebaec247ae61ecb20940aea899d2c46834f9f3ce79ca1035cecf2e6a07d",
+        "repository": "FloRA"
+      },
+      "test_selected_formation_candidates": {
+        "path": "tests/test_selected_formation_candidates.py",
+        "sha256": "10e802f472c362d1ee49ba1ad0838a2731ecf926866497724a794ef5a35086e6",
+        "repository": "FloRA"
+      },
+      "test_selected_formation_registry": {
+        "path": "tests/test_selected_formation_registry.py",
+        "sha256": "c496f44077144999dc73f6962570377eb17e989286561346771458b0d17037d6",
+        "repository": "FloRA"
+      },
+      "test_selected_native_comparison": {
+        "path": "tests/integration/test_selected_native_comparison.py",
+        "sha256": "60d1d55b635b9b63c7acb18d6a04bb1676f31f3133ac8932e55beef48c473850",
+        "repository": "FloRA"
+      }
+    },
+    "source_hashes_unchanged": true,
+    "checkouts_verified": true,
+    "complete_numeric_coverage_within_window": true,
+    "diagnostic_status": "failed",
+    "qualification": false,
+    "product_budgets_changed": false
+  },
+  "aggregate": {
+    "active_observed_rpcs_at_close": 0,
+    "active_owned_work_at_close": 0,
+    "cap_deferred_parent_entries": 0,
+    "classified_owned_work_entries": 6,
+    "elapsed_seconds": 172.607616806,
+    "first_owned_entry_offset_seconds": 51.705665283,
+    "future_hook_changed": false,
+    "observer_errors": 0,
+    "open_tagged_spans_at_close": 0,
+    "overshoot_seconds": null,
+    "parent": null,
+    "parent_hook_changed": false,
+    "retained_worker_ledgers": 1,
+    "stopped_before_parent_rpc": false,
+    "worker_ledger_overflow": 0,
+    "workers": [
+      {
+        "active_observed_rpcs_at_cap": 0,
+        "active_owned_work_at_cap": 0,
+        "cap_crossing_elapsed_seconds": null,
+        "first_owned_entry_offset_seconds": 51.705665283,
+        "functions": [
+          {
+            "calls": 494,
+            "exclusive_thread_cpu_seconds": 0.425202458,
+            "exclusive_wall_seconds": 0.869927737,
+            "return_events": 494,
+            "tag": "rpc.kurrent_get_stream",
+            "thread_cpu_seconds": 0.425202458,
+            "wall_minus_thread_cpu_seconds": 0.444725279,
+            "wall_seconds": 0.869927737
+          },
+          {
+            "calls": 4575,
+            "exclusive_thread_cpu_seconds": 0.662342402,
+            "exclusive_wall_seconds": 3.098032562,
+            "return_events": 4575,
+            "tag": "rpc.psycopg_execute",
+            "thread_cpu_seconds": 0.662342402,
+            "wall_minus_thread_cpu_seconds": 2.43569016,
+            "wall_seconds": 3.098032562
+          },
+          {
+            "calls": 4575,
+            "exclusive_thread_cpu_seconds": 0.037432463,
+            "exclusive_wall_seconds": 0.038930481,
+            "return_events": 4575,
+            "tag": "rpc.psycopg_fetchall",
+            "thread_cpu_seconds": 0.037432463,
+            "wall_minus_thread_cpu_seconds": 0.001498018,
+            "wall_seconds": 0.038930481
+          },
+          {
+            "calls": 62,
+            "exclusive_thread_cpu_seconds": 0.033306389,
+            "exclusive_wall_seconds": 0.03335804,
+            "return_events": 62,
+            "tag": "experience.replay_committed",
+            "thread_cpu_seconds": 0.283613785,
+            "wall_minus_thread_cpu_seconds": 0.197197956,
+            "wall_seconds": 0.480811741
+          },
+          {
+            "calls": 0,
+            "exclusive_thread_cpu_seconds": 0.0,
+            "exclusive_wall_seconds": 0.0,
+            "return_events": 0,
+            "tag": "experience.decode_event",
+            "thread_cpu_seconds": 0.0,
+            "wall_minus_thread_cpu_seconds": 0.0,
+            "wall_seconds": 0.0
+          },
+          {
+            "calls": 494,
+            "exclusive_thread_cpu_seconds": 0.035870769,
+            "exclusive_wall_seconds": 0.035958747,
+            "return_events": 494,
+            "tag": "experience.native_gateway",
+            "thread_cpu_seconds": 0.234492868,
+            "wall_minus_thread_cpu_seconds": 8.5773e-05,
+            "wall_seconds": 0.234578641
+          },
+          {
+            "calls": 494,
+            "exclusive_thread_cpu_seconds": 0.198622099,
+            "exclusive_wall_seconds": 0.198619894,
+            "return_events": 494,
+            "tag": "experience.native_contracts",
+            "thread_cpu_seconds": 0.198622099,
+            "wall_minus_thread_cpu_seconds": 0.0,
+            "wall_seconds": 0.198619894
+          },
+          {
+            "calls": 2974,
+            "exclusive_thread_cpu_seconds": 0.03075981,
+            "exclusive_wall_seconds": 0.030819089,
+            "return_events": 2974,
+            "tag": "experience.restore_envelope",
+            "thread_cpu_seconds": 0.03075981,
+            "wall_minus_thread_cpu_seconds": 5.9279e-05,
+            "wall_seconds": 0.030819089
+          },
+          {
+            "calls": 0,
+            "exclusive_thread_cpu_seconds": 0.0,
+            "exclusive_wall_seconds": 0.0,
+            "return_events": 0,
+            "tag": "history.verify_metadata",
+            "thread_cpu_seconds": 0.0,
+            "wall_minus_thread_cpu_seconds": 0.0,
+            "wall_seconds": 0.0
+          },
+          {
+            "calls": 0,
+            "exclusive_thread_cpu_seconds": 0.0,
+            "exclusive_wall_seconds": 0.0,
+            "return_events": 0,
+            "tag": "history.verify_external_metadata",
+            "thread_cpu_seconds": 0.0,
+            "wall_minus_thread_cpu_seconds": 0.0,
+            "wall_seconds": 0.0
+          },
+          {
+            "calls": 104,
+            "exclusive_thread_cpu_seconds": 0.186956793,
+            "exclusive_wall_seconds": 0.190994203,
+            "return_events": 104,
+            "tag": "source.prime_rows",
+            "thread_cpu_seconds": 3.101756753,
+            "wall_minus_thread_cpu_seconds": 0.166261013,
+            "wall_seconds": 3.268017766
+          },
+          {
+            "calls": 0,
+            "exclusive_thread_cpu_seconds": 0.0,
+            "exclusive_wall_seconds": 0.0,
+            "return_events": 0,
+            "tag": "source.final_rows",
+            "thread_cpu_seconds": 0.0,
+            "wall_minus_thread_cpu_seconds": 0.0,
+            "wall_seconds": 0.0
+          },
+          {
+            "calls": 2183,
+            "exclusive_thread_cpu_seconds": 0.718946164,
+            "exclusive_wall_seconds": 0.779484837,
+            "return_events": 2183,
+            "tag": "registry.fetch",
+            "thread_cpu_seconds": 1.034424107,
+            "wall_minus_thread_cpu_seconds": 0.893046618,
+            "wall_seconds": 1.927470725
+          },
+          {
+            "calls": 61,
+            "exclusive_thread_cpu_seconds": 0.029508318,
+            "exclusive_wall_seconds": 0.031843538,
+            "return_events": 61,
+            "tag": "comparison.metadata",
+            "thread_cpu_seconds": 0.052079829,
+            "wall_minus_thread_cpu_seconds": 0.063495006,
+            "wall_seconds": 0.115574835
+          },
+          {
+            "calls": 2525,
+            "exclusive_thread_cpu_seconds": 1.656903526,
+            "exclusive_wall_seconds": 1.678570897,
+            "return_events": 2525,
+            "tag": "permissions.current_action",
+            "thread_cpu_seconds": 6.214052891,
+            "wall_minus_thread_cpu_seconds": 0.642414239,
+            "wall_seconds": 6.85646713
+          },
+          {
+            "calls": 6538,
+            "exclusive_thread_cpu_seconds": 2.19758946,
+            "exclusive_wall_seconds": 2.228965314,
+            "return_events": 6538,
+            "tag": "permissions.stored_action",
+            "thread_cpu_seconds": 3.578405187,
+            "wall_minus_thread_cpu_seconds": 0.405937136,
+            "wall_seconds": 3.984342323
+          },
+          {
+            "calls": 651,
+            "exclusive_thread_cpu_seconds": 1.256387124,
+            "exclusive_wall_seconds": 1.259811954,
+            "return_events": 651,
+            "tag": "permissions.permits",
+            "thread_cpu_seconds": 3.999980032,
+            "wall_minus_thread_cpu_seconds": 0.912715286,
+            "wall_seconds": 4.912695318
+          },
+          {
+            "calls": 0,
+            "exclusive_thread_cpu_seconds": 0.0,
+            "exclusive_wall_seconds": 0.0,
+            "return_events": 0,
+            "tag": "fixture.original_native_case",
+            "thread_cpu_seconds": 0.0,
+            "wall_minus_thread_cpu_seconds": 0.0,
+            "wall_seconds": 0.0
+          },
+          {
+            "calls": 2,
+            "exclusive_thread_cpu_seconds": 0.000404473,
+            "exclusive_wall_seconds": 0.000404201,
+            "return_events": 2,
+            "tag": "native.phase_session",
+            "thread_cpu_seconds": 0.411623691,
+            "wall_minus_thread_cpu_seconds": 0.160416472,
+            "wall_seconds": 0.572040163
+          },
+          {
+            "calls": 2,
+            "exclusive_thread_cpu_seconds": 0.139134561,
+            "exclusive_wall_seconds": 0.142581683,
+            "return_events": 2,
+            "tag": "native.install_phase_source_gate",
+            "thread_cpu_seconds": 0.401888731,
+            "wall_minus_thread_cpu_seconds": 0.153396252,
+            "wall_seconds": 0.555284983
+          },
+          {
+            "calls": 2,
+            "exclusive_thread_cpu_seconds": 0.018305712,
+            "exclusive_wall_seconds": 0.018820487,
+            "return_events": 2,
+            "tag": "runtime.context",
+            "thread_cpu_seconds": 116.301556498,
+            "wall_minus_thread_cpu_seconds": 3.181276566,
+            "wall_seconds": 119.482833064
+          },
+          {
+            "calls": 2,
+            "exclusive_thread_cpu_seconds": 0.65804857,
+            "exclusive_wall_seconds": 0.6684719,
+            "return_events": 2,
+            "tag": "context.assemble",
+            "thread_cpu_seconds": 94.169175789,
+            "wall_minus_thread_cpu_seconds": 2.202868719,
+            "wall_seconds": 96.372044508
+          },
+          {
+            "calls": 0,
+            "exclusive_thread_cpu_seconds": 0.0,
+            "exclusive_wall_seconds": 0.0,
+            "return_events": 0,
+            "tag": "lineage.authorize_context",
+            "thread_cpu_seconds": 0.0,
+            "wall_minus_thread_cpu_seconds": 0.0,
+            "wall_seconds": 0.0
+          },
+          {
+            "calls": 0,
+            "exclusive_thread_cpu_seconds": 0.0,
+            "exclusive_wall_seconds": 0.0,
+            "return_events": 0,
+            "tag": "lineage.context",
+            "thread_cpu_seconds": 0.0,
+            "wall_minus_thread_cpu_seconds": 0.0,
+            "wall_seconds": 0.0
+          },
+          {
+            "calls": 2,
+            "exclusive_thread_cpu_seconds": 0.16521525,
+            "exclusive_wall_seconds": 0.167322095,
+            "return_events": 2,
+            "tag": "context.prepare_current",
+            "thread_cpu_seconds": 115.993570374,
+            "wall_minus_thread_cpu_seconds": 3.108250471,
+            "wall_seconds": 119.101820845
+          },
+          {
+            "calls": 0,
+            "exclusive_thread_cpu_seconds": 0.0,
+            "exclusive_wall_seconds": 0.0,
+            "return_events": 0,
+            "tag": "context.metadata_current",
+            "thread_cpu_seconds": 0.0,
+            "wall_minus_thread_cpu_seconds": 0.0,
+            "wall_seconds": 0.0
+          },
+          {
+            "calls": 274,
+            "exclusive_thread_cpu_seconds": 0.002790564,
+            "exclusive_wall_seconds": 0.002826695,
+            "return_events": 274,
+            "tag": "phase.descriptor_verify",
+            "thread_cpu_seconds": 1.71796732,
+            "wall_minus_thread_cpu_seconds": 0.007580133,
+            "wall_seconds": 1.725547453
+          },
+          {
+            "calls": 6502,
+            "exclusive_thread_cpu_seconds": 3.846154597,
+            "exclusive_wall_seconds": 3.861934642,
+            "return_events": 6502,
+            "tag": "phase.descriptor_tree_verify",
+            "thread_cpu_seconds": 58.012638962,
+            "wall_minus_thread_cpu_seconds": 0.218355104,
+            "wall_seconds": 58.230994066
+          },
+          {
+            "calls": 39091,
+            "exclusive_thread_cpu_seconds": 3.799537217,
+            "exclusive_wall_seconds": 3.81154903,
+            "return_events": 39091,
+            "tag": "phase.descriptor_contracts",
+            "thread_cpu_seconds": 3.799537217,
+            "wall_minus_thread_cpu_seconds": 0.012011813,
+            "wall_seconds": 3.81154903
+          },
+          {
+            "calls": 19139,
+            "exclusive_thread_cpu_seconds": 34.979596267,
+            "exclusive_wall_seconds": 35.110233554,
+            "return_events": 19139,
+            "tag": "phase.origin_seal_verify",
+            "thread_cpu_seconds": 34.979596267,
+            "wall_minus_thread_cpu_seconds": 0.130637287,
+            "wall_seconds": 35.110233554
+          },
+          {
+            "calls": 6504,
+            "exclusive_thread_cpu_seconds": 11.826745631,
+            "exclusive_wall_seconds": 11.870072658,
+            "return_events": 6504,
+            "tag": "phase.origin_verify",
+            "thread_cpu_seconds": 13.577469347,
+            "wall_minus_thread_cpu_seconds": 0.049938157,
+            "wall_seconds": 13.627407504
+          },
+          {
+            "calls": 221600,
+            "exclusive_thread_cpu_seconds": 6.301801939,
+            "exclusive_wall_seconds": 6.328122147,
+            "return_events": 221600,
+            "tag": "phase.function_binding_verify",
+            "thread_cpu_seconds": 16.372698776,
+            "wall_minus_thread_cpu_seconds": 0.06923877,
+            "wall_seconds": 16.441937546
+          },
+          {
+            "calls": 26,
+            "exclusive_thread_cpu_seconds": 0.001303029,
+            "exclusive_wall_seconds": 0.001297476,
+            "return_events": 26,
+            "tag": "shared.frame.create",
+            "thread_cpu_seconds": 34.473722868,
+            "wall_minus_thread_cpu_seconds": 0.466159021,
+            "wall_seconds": 34.939881889
+          },
+          {
+            "calls": 475155,
+            "exclusive_thread_cpu_seconds": 22.994306605,
+            "exclusive_wall_seconds": 23.072053325,
+            "return_events": 475155,
+            "tag": "shared.frame.context_binding_verify",
+            "thread_cpu_seconds": 50.104934041,
+            "wall_minus_thread_cpu_seconds": 0.16914815,
+            "wall_seconds": 50.274082191
+          },
+          {
+            "calls": 19422,
+            "exclusive_thread_cpu_seconds": 2.47425568,
+            "exclusive_wall_seconds": 2.484114569,
+            "return_events": 19422,
+            "tag": "shared.frame.contracts",
+            "thread_cpu_seconds": 4.368938075,
+            "wall_minus_thread_cpu_seconds": 0.01628963,
+            "wall_seconds": 4.385227705
+          },
+          {
+            "calls": 26,
+            "exclusive_thread_cpu_seconds": 0.429138272,
+            "exclusive_wall_seconds": 0.43057541,
+            "return_events": 26,
+            "tag": "shared.frame.initialize",
+            "thread_cpu_seconds": 33.863051527,
+            "wall_minus_thread_cpu_seconds": 0.464305498,
+            "wall_seconds": 34.327357025
+          },
+          {
+            "calls": 10750,
+            "exclusive_thread_cpu_seconds": 6.302932086,
+            "exclusive_wall_seconds": 6.325261958,
+            "return_events": 10750,
+            "tag": "shared.frame.base_bindings",
+            "thread_cpu_seconds": 87.532314904,
+            "wall_minus_thread_cpu_seconds": 0.318322947,
+            "wall_seconds": 87.850637851
+          },
+          {
+            "calls": 2261,
+            "exclusive_thread_cpu_seconds": 7.55537631,
+            "exclusive_wall_seconds": 7.582821815,
+            "return_events": 2261,
+            "tag": "shared.frame.binding",
+            "thread_cpu_seconds": 42.346397946,
+            "wall_minus_thread_cpu_seconds": 0.151234584,
+            "wall_seconds": 42.49763253
+          },
+          {
+            "calls": 23,
+            "exclusive_thread_cpu_seconds": 0.161341447,
+            "exclusive_wall_seconds": 0.162555214,
+            "return_events": 23,
+            "tag": "shared.frame.finish",
+            "thread_cpu_seconds": 13.1318322,
+            "wall_minus_thread_cpu_seconds": 1.356677951,
+            "wall_seconds": 14.488510151
+          },
+          {
+            "calls": 52,
+            "exclusive_thread_cpu_seconds": 0.477679167,
+            "exclusive_wall_seconds": 0.47932412,
+            "return_events": 52,
+            "tag": "shared.frame.physical_closure",
+            "thread_cpu_seconds": 7.940500713,
+            "wall_minus_thread_cpu_seconds": 0.123255767,
+            "wall_seconds": 8.06375648
+          },
+          {
+            "calls": 22,
+            "exclusive_thread_cpu_seconds": 0.303324921,
+            "exclusive_wall_seconds": 0.304171178,
+            "return_events": 22,
+            "tag": "shared.frame.physical_reobserve",
+            "thread_cpu_seconds": 3.317000835,
+            "wall_minus_thread_cpu_seconds": 0.101811942,
+            "wall_seconds": 3.418812777
+          },
+          {
+            "calls": 26,
+            "exclusive_thread_cpu_seconds": 0.711585584,
+            "exclusive_wall_seconds": 0.71438351,
+            "return_events": 26,
+            "tag": "shared.history.initialize",
+            "thread_cpu_seconds": 14.723831006,
+            "wall_minus_thread_cpu_seconds": 0.298507577,
+            "wall_seconds": 15.022338583
+          },
+          {
+            "calls": 281,
+            "exclusive_thread_cpu_seconds": 2.484434105,
+            "exclusive_wall_seconds": 2.493078857,
+            "return_events": 281,
+            "tag": "shared.history.permissions",
+            "thread_cpu_seconds": 20.507542999,
+            "wall_minus_thread_cpu_seconds": 0.080653055,
+            "wall_seconds": 20.588196054
+          },
+          {
+            "calls": 233,
+            "exclusive_thread_cpu_seconds": 0.939181169,
+            "exclusive_wall_seconds": 0.942762979,
+            "return_events": 233,
+            "tag": "shared.history.member",
+            "thread_cpu_seconds": 7.662372253,
+            "wall_minus_thread_cpu_seconds": 0.028051915,
+            "wall_seconds": 7.690424168
+          },
+          {
+            "calls": 22,
+            "exclusive_thread_cpu_seconds": 0.236398501,
+            "exclusive_wall_seconds": 0.237439496,
+            "return_events": 22,
+            "tag": "shared.history.manifest_reobserve",
+            "thread_cpu_seconds": 1.223954292,
+            "wall_minus_thread_cpu_seconds": 0.052397833,
+            "wall_seconds": 1.276352125
+          },
+          {
+            "calls": 6,
+            "exclusive_thread_cpu_seconds": 0.017012547,
+            "exclusive_wall_seconds": 0.02206087,
+            "return_events": 6,
+            "tag": "native.owned_work",
+            "thread_cpu_seconds": 116.979006104,
+            "wall_minus_thread_cpu_seconds": 3.422060064,
+            "wall_seconds": 120.401066168
+          },
+          {
+            "calls": 2,
+            "exclusive_thread_cpu_seconds": 6.2936e-05,
+            "exclusive_wall_seconds": 6.518e-05,
+            "return_events": 2,
+            "tag": "native.prepare_context",
+            "thread_cpu_seconds": 116.942518259,
+            "wall_minus_thread_cpu_seconds": 3.402713859,
+            "wall_seconds": 120.345232118
+          },
+          {
+            "calls": 0,
+            "exclusive_thread_cpu_seconds": 0.0,
+            "exclusive_wall_seconds": 0.0,
+            "return_events": 0,
+            "tag": "native.authorize_context",
+            "thread_cpu_seconds": 0.0,
+            "wall_minus_thread_cpu_seconds": 0.0,
+            "wall_seconds": 0.0
+          },
+          {
+            "calls": 53,
+            "exclusive_thread_cpu_seconds": 2.683111189,
+            "exclusive_wall_seconds": 2.691443826,
+            "return_events": 53,
+            "tag": "native.fixture_guard",
+            "thread_cpu_seconds": 5.97070098,
+            "wall_minus_thread_cpu_seconds": 1.686202222,
+            "wall_seconds": 7.656903202
+          },
+          {
+            "calls": 0,
+            "exclusive_thread_cpu_seconds": 0.0,
+            "exclusive_wall_seconds": 0.0,
+            "return_events": 0,
+            "tag": "native.phase_now",
+            "thread_cpu_seconds": 0.0,
+            "wall_minus_thread_cpu_seconds": 0.0,
+            "wall_seconds": 0.0
+          }
+        ],
+        "observation_cap_reached": false,
+        "observation_cap_seconds": 180.0,
+        "open_tagged_spans_at_cap": 0,
+        "stack_overflow": 0,
+        "window_thread_cpu_seconds": 116.979414143,
+        "window_wall_seconds": 120.698121778
+      }
+    ]
+  },
+  "artifact_sha256": "c51949519f197b1054e06520c733195c72169b752a26545aaa5b8d40ae79b9ff",
+  "diagnosis_steps": [
+    {
+      "step": 1,
+      "evidence": "Both original timing tests remain valid. The diagnostic workflow success only means artifact collection completed; its original native fixture still failed. All116 loaded raw Git blob hashes, two exact checkouts, unchanged before/after code and complete numeric owned-worker window are verified. No cap, open span, hook change, observer error or active owned work remains. Return events include exception unwinds. Parent setup is unobserved. Git archive on Windows converted LF to CRLF; raw cat-file corrected that validator, not runtime."
+    },
+    {
+      "step": 2,
+      "claim": "FloRA must deliver authorized originals to external judgment ports inside fixed response budgets, preserving lineage/current permissions. These fictional model fixtures establish infrastructure behavior only, not learned causal judgment."
+    },
+    {
+      "step": 3,
+      "path": "Native prepare -> current context preparation -> shared frame and descriptor/context binding guards. Issued gates share an exact physical origin; inherited descriptors preserve separate owner and parent registrations."
+    },
+    {
+      "step": 4,
+      "observation": "Owned worker120.698s wall/116.979sCPU:19,139 origin-seal entries35.110s exclusive;475,155 context-binding entries23.072s exclusive;6,504 origin-body entries11.870s exclusive;4,575 SQL executes3.098s exclusive. Instrumentation changes timing; actual reached-entry amplification supports repeated pure graph work, not SQL transport as dominant measured native cause."
+    },
+    {
+      "step": 5,
+      "responsibility": "Independent issuance seals reject descriptor/capture/owner replacements before callbacks. Pure callback bindings protect code/cell/global identity, not authority answers. Origin basis preserves retained originals/scope; live H/C and terminal metadata checks remain separate and fresh."
+    },
+    {
+      "step": 6,
+      "correction": "One fresh internal pure graph pass: observe each exact object/function once, compare every independent captured/registered expectation, hold objects strongly, discard all observations on return. Phase descriptor and frame binding passes remain separate. Keep capture representation, helper/class pins, public APIs and every callback/IO/live-authority boundary."
+    },
+    {
+      "step": 7,
+      "research": "Alice current materialization and immutable-evidence standards permit sharing derived inspection, not cached allow or merged logical custody. Current frontier-watch3aedd37 retains originals/independent roots and adds no infrastructure prerequisite. CPython pass-local identity tables and strong object retention inspire finite graph traversal only; Graphiti query/candidate deduplication is derived-work inspiration, never an authorization guarantee."
+    },
+    {
+      "step": 8,
+      "verification": "Before implementation, reproduce duplicate actual object/reader observations in real inherited-pair and shared-closure fixtures on published source. Then verify one observation per pure pass, every independent expectation, later mutation, repeated-call freshness, zero captured callback/IO effects and affected live-authority regressions. Finally rerun original uninstrumented physical conditions; component cardinality cannot establish latency."
+    }
+  ],
+  "research_refs": [
+    "docs/LATENCY_ARCHITECTURE_RECALIBRATION_2026-10-01.md",
+    "docs/fbm-seeds/2026-10-03_single_fresh_context_binding_walk.jsonl",
+    "https://github.com/python/cpython/blob/v3.12.10/Lib/copy.py#L109",
+    "https://github.com/getzep/graphiti/blob/4f62cfe7a2d519e55bfdf2dc4a2fd06649dc00b3/graphiti_core/search/search.py",
+    "https://github.com/NIne-WIngEd/A.L.I.C.E/blob/8ea804aa25c3d1c5f46e9be5810d072ed0fadb4b/docs/MEMORY_PERFORMANCE_AND_RELIABILITY_STANDARD.md",
+    "https://github.com/NIne-WIngEd/A.L.I.C.E/tree/3aedd37d7612427905b46db06c91ef1622ee29c1/docs/research"
+  ],
+  "superseded_hypothesis": "Earlier static H reconstruction/SQL hypotheses did not distinguish the dominant observed native CPU. Preserve them as unselected historical alternatives; do not patch them from the baseline whole-fixture counts.",
+  "limits": [
+    "No runtime correction or latency gain verified yet.",
+    "Numeric observer timings cannot qualify uninstrumented response latency.",
+    "Separate baseline/native fixtures cannot establish comparative superiority.",
+    "Retained whole-history cancellation is a different unlocalized path.",
+    "Personality/MFM remain external; no full Alice memory/mission/experience infrastructure.",
+    "Connected registered two-stage three-arm/six-attempt causal comparison remains outstanding."
+  ],
+  "next_action": "Finish red/green cause discriminator and affected authority regressions on isolated raw-source candidate; review then run original uninstrumented physical condition without relaxed budgets."
+}

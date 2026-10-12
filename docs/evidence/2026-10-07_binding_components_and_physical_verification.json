@@ -1,0 +1,164 @@
+{
+  "schema": "flora-binding-components-and-original-physical-dispatch-v1",
+  "recorded_at_utc": "2026-10-07T15:02:27.868207Z",
+  "status": "81_component_passes;exact_source_published;original_physical_run_pending",
+  "source_publication": {
+    "schema": "flora-component-qualified-binding-publication-v1",
+    "parent": "ad8ac0b07a59a1e45d6984e52efc4afc0bc9a596",
+    "branch": "codex/flora-shared-source-caps",
+    "commit": "bd7310955817a6f4482f0f46872ec4b94332b062",
+    "tree": "c1ae1bc48219729a8630107cb80426a6cb4f995a",
+    "paths": {
+      "src/flora/selected/selected_phase_authority.py": "6d0e7abbc25d69620b8778cfc8610745c7bf636d9b90ecd25d61a98e0d000b65",
+      "src/flora/selected/selected_authority_frame.py": "431fb8ef19d1f9c164562493d00809dde64cdbcb3a70e34d7a00aa949f1d1d91",
+      "tests/test_selected_phase_authority.py": "a1fca5076df3ff5509d6d1fa675dc1cf90d311e56f9c4a41cf530f80d9a8ba10",
+      "tests/test_shared_context_bindings.py": "732cc7c79ae1a6dc787d4f6ae874b480f7ae014dba83d4648b9ff7b87c31ae7b",
+      ".github/workflows/native-profile.yml": "2561ee36319edc7a34b56e4ce37ff04d8d8d66ae6af8d464f95cfb9abb8e893a"
+    },
+    "component_groups": [
+      {
+        "label": "green",
+        "tests": 39,
+        "source_files": 414,
+        "receipt_sha256": "9d84cd1d046e1a8fd880f2b52f75025483b9ef3052d833a84e9f7f591d1539af",
+        "log_sha256": "9c12aed903c5fbaebcca887a0b322564d50d4707eafa903ead4ca708337bcdd1",
+        "elapsed_seconds": 17.961162715000683,
+        "exit_code": 0,
+        "observation_cap_seconds": 900,
+        "completed_within_observation_cap": true,
+        "observation_cap_enforcement_qualified": false
+      },
+      {
+        "label": "affected",
+        "tests": 42,
+        "source_files": 414,
+        "receipt_sha256": "2bf64b487cd828cd1738e0e1e33bd46cb187eaa306cb2c416706d9d8bb55a390",
+        "log_sha256": "71e95bfb1665e5d69ce6b1b222e85cf1551a39f1152f2f2d2214c2451cc5d2a7",
+        "elapsed_seconds": 1050.2579210680124,
+        "exit_code": 0,
+        "observation_cap_seconds": 900,
+        "completed_within_observation_cap": false,
+        "observation_cap_enforcement_qualified": false
+      }
+    ],
+    "component_cases": 81,
+    "source_files_per_group": 414,
+    "occupied_checkout_and_index_unchanged": true,
+    "physical_verification_pending": true,
+    "product_budgets_changed": false,
+    "remote_updated": true,
+    "observation_cap_limit": "The affected process finishes after1050.258s despite its900s alarm. Functional assertions and source hashes complete; no host cap/performance qualification is inferred. No source alarm/handler mutation was found; cause of cap overrun remains unestablished."
+  },
+  "alice_contract_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+  "prior_evidence": [
+    "docs/evidence/2026-10-06_finite_binding_pass_candidate.json",
+    "docs/evidence/2026-10-06_native_binding_graph_diagnosis.json",
+    "docs/evidence/2026-10-06_completed_full_ci_latency_diagnosis.json"
+  ],
+  "physical_run": {
+    "id": 37641323381,
+    "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37641323381",
+    "head_sha": "bd7310955817a6f4482f0f46872ec4b94332b062",
+    "event": "workflow_dispatch",
+    "branch": "codex/flora-shared-source-caps",
+    "workflow_id": 371719770,
+    "observer": "contracts",
+    "status_at_launch": "queued",
+    "created_at": "2026-10-07T14:59:41Z",
+    "instrumented": false,
+    "job_plan": [
+      {
+        "id": 112860775721,
+        "name": "original-native-comparison",
+        "status_at_launch": "queued",
+        "conclusion_at_launch": null
+      },
+      {
+        "id": 112860775780,
+        "name": "original-transport",
+        "status_at_launch": "in_progress",
+        "conclusion_at_launch": null
+      },
+      {
+        "id": 112860777514,
+        "name": "diagnostic-native",
+        "status_at_launch": "completed",
+        "conclusion_at_launch": "skipped"
+      }
+    ],
+    "original_runner": "scripts/run_selected_integration_shard.py",
+    "shards": [
+      "transport",
+      "native-comparison"
+    ],
+    "unchanged_budgets": {
+      "standalone_response_ms": 10000,
+      "native_response_ms": 60000,
+      "job_minutes": 60
+    },
+    "source_artifact": "binding-source-identity.txt",
+    "dispatch_count": 1,
+    "claim": "Original physical conditions after a measured pure-binding correction; no diagnostic observer."
+  },
+  "affected_component_timer_diagnosis": [
+    {
+      "step": 1,
+      "evidence": "42 individual assertions pass, no failures/errors/skips; final unittest OK and container exit0/noOOM. All414 frozen sources match the manifest and reviewed candidate. Elapsed1050.258s exceeds the intended900s observation alarm; cap enforcement is not established."
+    },
+    {
+      "step": 2,
+      "claim": "These are functional contracts for affected frame/history connections. The alarm is a host observation safeguard, not the original physical response budget. No latency or cap-enforcement result follows."
+    },
+    {
+      "step": 3,
+      "path": "Frozen runner arms SIGALRM before loading the two test classes. Original native physical deadline uses asyncio.timeout on unchanged60000ms inputs; original response/CI budgets are not modified."
+    },
+    {
+      "step": 4,
+      "cause": "Alarm overrun cause remains unestablished: no recorded handler/remaining-alarm state at completion. Read-only source/dependency inspection found no signal manipulation or _SignalBudget in mounted414 sources; import-only inspection kept default SIGALRM/armed alarm."
+    },
+    {
+      "step": 5,
+      "responsibility": "Harness cap bounds observation; test assertions establish functional behavior. They are separate responsibilities. Do not infer a product latency defect from this host timer limitation."
+    },
+    {
+      "step": 6,
+      "decision": "No runtime correction or speculative replay justified. Preserve the timer limitation and completed functional assertions; advance to original uninstrumented physical tests."
+    },
+    {
+      "step": 7,
+      "research": "Reuse source-bound binding diagnosis, Alice requirements/FBM and primary pass-local identity mechanisms already reviewed. No new store, cached authorization or timer workaround is adopted."
+    },
+    {
+      "step": 8,
+      "verification": "Root rechecks81 final assertions/source manifests/log hashes/container exits before publishing only five exact paths. Independent read-only timer review finds no concrete reason to withhold original physical verification. Cap/performance qualification remains excluded."
+    }
+  ],
+  "review": {
+    "runtime_blocking_findings": 0,
+    "original_workflow_blocking_findings": 0,
+    "component_verdict_independently_checked": true,
+    "timer_cap_qualified": false
+  },
+  "publication_receipt_sha256": "b56a1ebff6aaace62444401f6df7ee80facd9a59cdfb01768fdf817d25755d31",
+  "dispatch_intent_sha256": "5d463d4f1af09185cf792a95d40183a0a3c081bc38751a9b5a5aaf0bbdadc783",
+  "run_metadata_at_launch_sha256": "9da232d19f117f215ddf4ad5451f78bc06a78470de76b9bc39c6162dffb46e58",
+  "main_workflow": {
+    "goal": "One registered two-stage history through two NativeArmAdapter ports and GeneralMemoryArmAdapter; six persisted attempts.",
+    "acceptance": [
+      "BEFORE immutable originals; correction after seal; AFTER full changed heads and ablation original checkpoint",
+      "Equal authorized original history/task; full/ablation actual selected context equality",
+      "Current independent H/C withdrawal and tampering refusal after passing control",
+      "Passive exact recovery without new inference/provider dispatch or replayed writes"
+    ],
+    "next_after_physical_support": "Build the existing connected case described in docs/EXPERIMENT_COORDINATOR.md; do not substitute separate fixture passes for this connection."
+  },
+  "limits": [
+    "81 functional component cases do not establish physical latency, connected pipeline or learned judgment.",
+    "Original49 physical passes/two budget failures/two incomplete cases per run remain preserved source606 evidence.",
+    "Retained whole-history cancellations remain a separate unlocalized path.",
+    "No full Alice memory/mission/experience platform; personality/MFM remain external.",
+    "156 schema-valid procedure seeds are not trained weights or eligible linked learning cases."
+  ],
+  "next_action": "Recover run37641323381 final logs, exact source artifact/tree/pin and original test assertions. For any failure use mandatory diagonosis in order. If sound and passed, rejoin the connected six-attempt workflow. Stop when only this required result remains."
+}

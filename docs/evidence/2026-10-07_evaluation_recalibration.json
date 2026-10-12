@@ -1,0 +1,720 @@
+{
+  "schema": "flora-evaluation-recalibration-v1",
+  "recorded_at_utc": "2026-10-07T23:49:35.785179+00:00",
+  "original_run": {
+    "schema": "flora-functional-recalibration-recovery-v1",
+    "run_id": 37685186902,
+    "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37685186902",
+    "source_commit": "dbf101cc1452815b6f8fb5d24dd962dff916bf97",
+    "source_tree": "ca3b33b54415117574505f9c8452cc9567b07d65",
+    "conclusion": "failure",
+    "artifact_metadata": {
+      "id": 11513211429,
+      "node_id": "MDg6QXJ0aWZhY3QxMTUxMzIxMTQyOQ==",
+      "name": "connected-functional-verification-positive",
+      "size_in_bytes": 73035,
+      "url": "https://api.github.com/repos/NIne-WIngEd/FloRA/actions/artifacts/11513211429",
+      "archive_download_url": "https://api.github.com/repos/NIne-WIngEd/FloRA/actions/artifacts/11513211429/zip",
+      "expired": false,
+      "digest": "sha256:793feccb852686a1159ce86475b5f76d7d20b452b7df64a3159dc564759f85f6",
+      "created_at": "2026-10-07T21:37:32Z",
+      "updated_at": "2026-10-07T21:37:32Z",
+      "expires_at": "2027-01-05T20:51:28Z",
+      "workflow_run": {
+        "id": 37685186902,
+        "repository_id": 1393950425,
+        "head_repository_id": 1393950425,
+        "head_branch": "codex/flora-shared-source-caps",
+        "head_sha": "dbf101cc1452815b6f8fb5d24dd962dff916bf97"
+      }
+    },
+    "artifact_sha256": "793feccb852686a1159ce86475b5f76d7d20b452b7df64a3159dc564759f85f6",
+    "log_archive_sha256": "6e5e3a9037ff12369548baab03b6030d28ba5131e565c228172c94e6be5badbf",
+    "source_files_verified": 427,
+    "source_before_after_identical": true,
+    "process": {
+      "process_exit": 124,
+      "log_write_exit": 0,
+      "effective_exit": 124,
+      "hard_process_cap_seconds": 2700,
+      "kill_grace_seconds": 30,
+      "latency_qualification": false,
+      "setup_journal_cap_seconds": 300,
+      "sampling_interval_seconds": 1,
+      "setup_journal_qualification": false,
+      "raw_strict_result_authoritative": true,
+      "shell_wall_seconds": 2700,
+      "external_cpu_wall_timing_available": true
+    },
+    "journal_records": 300,
+    "journal_sha256": "9977d849940ff8e8e46164f1395c9b37fd32f95bce05190a1efb94368418fde1",
+    "raw_result_exists": false,
+    "raw_result": null,
+    "original_log_sha256": "ba2594b3eb82aacf87cc35899d5c5885d7d33565f753c82a705d822e276348d4",
+    "files": {
+      "artifacts.json": "8a11fdbe1f2cbbc4d25b4970d6884add5fddce825cc74a670882222d626f2dd3",
+      "jobs.json": "a475d23c92fba248566f6af270facfe8c890dc0d466b5ece26432590d9a684d8",
+      "original-artifact.zip": "793feccb852686a1159ce86475b5f76d7d20b452b7df64a3159dc564759f85f6",
+      "original-logs.zip": "6e5e3a9037ff12369548baab03b6030d28ba5131e565c228172c94e6be5badbf",
+      "run.json": "49c9c85e114abfae78c471c6d37bae6f7d1a3554e1ff3432960a82d8ba29258d",
+      "artifacts/connected-functional-backend-logs.txt": "c30e1218af10e6485db0e0646a6d727493b96f2abc556a79bbac976755a6cd7a",
+      "artifacts/connected-functional-backend-ps.txt": "4ca20233f041d5c0ed4199d85b516527b44cba1f22ea0c947aeca43f6decd0ab",
+      "artifacts/connected-functional-dependencies.txt": "9c662b8a79942832b7df36a5c76cd5b7259601d38af956f2cac9aab2e1340859",
+      "artifacts/connected-functional-process.json": "675c9dd6a852fc32649445d9044ff8fb0370e391cfaa9151d3827d15adb53bc1",
+      "artifacts/connected-functional-protocol.md": "4a32774ca3a36097f94c0d316e5f5402d2a08c65c8101b9296650a91e95e76cc",
+      "artifacts/connected-functional-python.txt": "52fb5da09e34fb9e6a6358018ae48c54f7140c14edac1d09c775a03d31c915a8",
+      "artifacts/connected-functional-setup-journal.jsonl": "9977d849940ff8e8e46164f1395c9b37fd32f95bce05190a1efb94368418fde1",
+      "artifacts/connected-functional-source-after.txt": "158cdc36245e586d2b573806cc326961435cabb64df76750e878bb3e2019b6e3",
+      "artifacts/connected-functional-source-before.txt": "158cdc36245e586d2b573806cc326961435cabb64df76750e878bb3e2019b6e3",
+      "artifacts/connected-functional-source-identity.txt": "bba46a5082630fa2d64316bf6317a7b645b83dfa4364642bb0d89fdb42926d43",
+      "artifacts/connected-functional-test.log": "ba2594b3eb82aacf87cc35899d5c5885d7d33565f753c82a705d822e276348d4",
+      "artifacts/connected-functional-time.txt": "670ee2566615aa875994be36f79aa69b2a83746818ee97382247a66809bf01a3",
+      "logs/4_connected-functional-positive.txt": "392bc3772831a5485a76b7c4b8b28639dc66afc247c53566d8b1dafe69ee696f",
+      "logs/connected-functional-positive/system.txt": "38092fd95293b731c88ee3356baf6224a033392442e3c7723c970dd9a1634614"
+    },
+    "rerun_dispatched": false,
+    "functional_qualification": false,
+    "latency_qualification": false
+  },
+  "audit_report": "docs/EVALUATION_RECALIBRATION_2026-10-07.md",
+  "test_validity": "Accurate resource-containment status; functional assertions unreached.",
+  "four_answers": {
+    "measurement": "One synthetic preregistered three-arm/two-phase mechanical custody comparison, direct current H/C refusal and fresh-controller recovery.",
+    "required_result": "Exactly six successful persisted attempts, equal histories/context, intended artifact routing, exact canonical ancestry and passive recovery; separate signed withdrawal/no-later-effect controls.",
+    "project_meaning": "Necessary comparison scaffold only; not causal learned judgment, irrelevant stability, outcome learning, competent baseline, transfer or host benefit.",
+    "evaluation_change": "Separate construction, composition and causal gates; do not retry a full campaign without a cause-discriminating prediction and reached representative control."
+  },
+  "confirmed_architecture": [
+    "Fallback one initial plus four lineage preparations; five assemblies and eight independent phase proofs are supported.",
+    "Four live guard entries per protected object get; capture guard repeats two slot checks, two C checks and one H check.",
+    "Registered H surrounds underlying authorization with current observations; canonical/dependency work repeats.",
+    "Coordinator adds four-route qualification and preparation/execution fences."
+  ],
+  "coverage_gaps": [
+    "Both H/C cases bypass coordinator composition.",
+    "Same-process recovery does not exercise crash or interrupted reconciliation.",
+    "Raw correction exists before BEFORE; only selected-history exclusion and head-update chronology are checked.",
+    "Native judgments precomputed and relayed; provider output fictional/constant.",
+    "No relevant/irrelevant behavioral contrast, decision-linked outcome or qualified baseline/model proof."
+  ],
+  "failure_location": "Recovered run37704802657 final sample localizes first BEFORE/full archive.capture at second full lineage check phase_snapshots661, registered wrapper completion revalidation126, fresh preregistration _current533. First capture has no return/publication checkpoint. Exact instruction at external termination is unknown.",
+  "exact_physical_root_cause": "unestablished",
+  "architecture_amplification": "confirmed source structure; exclusive physical contribution unestablished",
+  "evaluation_mistake": "Removing an unreached optimization assertion did not justify a full-run retry as a timeout repair.",
+  "hypotheses_for_next_physical_diagnostic": [
+    {
+      "hypothesis": "Original archive capture is still unfinished",
+      "prediction": "Owned stack retains phase.capture ancestry, with numeric capture lines distinguishing lineage proof sites; no later completion checkpoint."
+    },
+    {
+      "hypothesis": "Capture returned, cold route construction is unfinished",
+      "prediction": "SelectedPhaseRoute.__init__ ancestry appears after original capture completion/caller advancement, without enclosing phase.capture."
+    },
+    {
+      "hypothesis": "Route constructed, observed binding or later publication is unfinished",
+      "prediction": "Observed-binding/current-observation ancestry or original publication checkpoint follows route completion; absent completion remains explicitly unknown."
+    }
+  ],
+  "registered_cost_control": {
+    "status": "completed",
+    "intent": {
+      "schema": "flora-registered-capture-cost-control-intent-v1",
+      "hard_process_cap_seconds": 2700,
+      "containment_reason": "Reuse original functional resource cap; no response-time target.",
+      "original_run": 37685186902,
+      "runtime_unchanged": true,
+      "authority_methods_unchanged": true,
+      "source_files": 190,
+      "probe_sha256": "5d04a66453b1e4a3b0c73df34a5ebddcef8d81cdaa6f3353e6f225da0cae42ee",
+      "hypotheses": [
+        "finite nested validation work is visible on current registered graph",
+        "unmodified registered controller can return on fictional ports"
+      ],
+      "limits": [
+        "Different history and fictional ports cannot attribute original physical timeout.",
+        "No physical campaign, causal model qualification or latency verdict."
+      ]
+    },
+    "result": {
+      "schema": "flora-registered-capture-cost-control-v1",
+      "stage": "probe_completed",
+      "evidence_kind": "fictional_row_log_ports",
+      "probe": "existing_registered_before_then_untouched_capture",
+      "python": "3.12.15 (main, Oct  1 2026, 21:52:41) [GCC 14.2.0]",
+      "method_replacements": 0,
+      "global_profile_or_trace": false,
+      "functional_qualification": false,
+      "physical_attribution": false,
+      "latency_qualification": false,
+      "setup_outer_sql_records": 30132,
+      "history_sources": 2,
+      "declared_slots": 4,
+      "role_count": 2,
+      "setup_wall_seconds": 32.64653153999825,
+      "setup_cpu_seconds": 32.502290900000006,
+      "capture_outer_sql_records": 68191,
+      "capture_wall_seconds": 296.1473282460065,
+      "capture_cpu_seconds": 295.9789791,
+      "exact_binding_checks_passed": true,
+      "cleanup_exception_types": [],
+      "cleanup_passed": true,
+      "completed": true,
+      "outer_sql_record_scope": "one fixture connection; counts overlap nested callers",
+      "limitation": "Different synthetic history and fictional ports; original physical prefix and client graph not reproduced.",
+      "source_manifest_sha256": "b592cac6fe3906642e8f67d8018964144a416371cc4d2aca563dfbc4948cba59",
+      "source_sha256": "Exact190-file manifest retained with the original source-bound control; no private payload or permission values.",
+      "source_manifest_artifact": "probe-source-manifest.json"
+    },
+    "process": {
+      "schema": "flora-registered-capture-cost-control-process-v1",
+      "process_exit": 0,
+      "log_sha256": "5e866d0ad1619854b566b7b1051b42d20c52c2775905f22b720993b8c98d6b5e",
+      "source_files_checked": 190,
+      "functional_qualification": false,
+      "physical_attribution": false
+    }
+  },
+  "evaluation_gates": [
+    "source/evidence",
+    "registered cost control",
+    "original physical first capture",
+    "four-capture chronology",
+    "owned read",
+    "coordinator and one native/provider attempt",
+    "composed independent H/C withdrawal",
+    "full six-attempt mechanics",
+    "qualified external-model causal correction/outcome comparison",
+    "transfer and host evidence",
+    "latency calibration"
+  ],
+  "next_action": "Prepare and review a bounded capture-composition candidate for the supported first-capture path; implementation and verification are pending. Preserve the original failing condition, supported fallback, independent lineage expectations and current authority. No new diagnostic dispatch, guessed cause, cap change, admission widening or physical qualification is selected by this evidence reconciliation.",
+  "runtime_changes": 0,
+  "tests_changed": 0,
+  "workflow_changes": 1,
+  "physical_runs_dispatched": 1,
+  "functional_qualification": false,
+  "causal_hypothesis_qualification": false,
+  "latency_qualification": false,
+  "research_sources": [
+    "Alice contracts4f287 and governed current-serving standard",
+    "Alice frontier-watch756bf294f6a93e9ea7dcc12dba932a556d6080e0",
+    "Alice Graphify contexta06f61eafd91d04fb7ec7c1de3ab8a9ed7071b15",
+    "https://github.com/getzep/graphiti",
+    "https://github.com/xiaowu0162/LongMemEval/blob/main/README.md",
+    "https://docs.kurrent.io/server/v24.10/features/projections/",
+    "https://peps.python.org/pep-0669/"
+  ],
+  "construction_localization_protocol": {
+    "status": "completed_failure_original_hard_cap",
+    "observer": "construction-windows",
+    "question": "Which original construction boundary remains unfinished across the previously unobserved2400s?",
+    "carrier": "Unmodified original strict positive case on original calling thread; no early-stop or replaced authority method.",
+    "original_sampler_unchanged": true,
+    "fixed_selectors": 31,
+    "maximum_windows": 9,
+    "window_seconds": 300,
+    "aggregate_seconds": 2700,
+    "sample_interval_seconds": 1,
+    "maximum_samples": 2709,
+    "maximum_journal_bytes": 8388608,
+    "maximum_manifest_bytes": 65536,
+    "resource_cap_seconds": 2700,
+    "kill_grace_seconds": 30,
+    "interpretation": "Wall residency and reached/completed original checkpoints; no call counts, exclusive CPU, backend causation, native admission or learned proof.",
+    "source_guards": "All original427 Python files must match before/after plus one new observer428; fixture/strict runner/original sampler pins remain.",
+    "gaps": "Window switches/owner absence/truncation/errors are explicit; no guaranteed observation of every call or return. Existing close lock/I/O remains bounded by external process containment.",
+    "raw_strict_result_authoritative": true,
+    "functional_qualification": false,
+    "latency_qualification": false,
+    "validation": {
+      "observer_sha256": "ba22275173744dc4a80b6c2faa2a75040606ebde53abf8870df7eff9fc3611db",
+      "workflow_sha256": "9ddfef980c415d51420bcfd563b181d211e1b4feb64a54525e9986d46c0cc771",
+      "short_controls_per_runtime": 9,
+      "control_runtimes": [
+        "3.13.5",
+        "3.12.15 (main, Oct  1 2026, 21:52:41) [GCC 14.2.0]"
+      ],
+      "owner_and_raw_result_and_exception_preservation_controls": true,
+      "duplicate_yaml_keys_rejected": true,
+      "bash_blocks_checked": 66,
+      "routing_controls": 24,
+      "pipeline_exit_controls": 7,
+      "original_jobs_preserved": true,
+      "original_four_source_guards": {
+        "tests/registered_functional_case_fixture.py": "3535944465c3f0b130036752663a3085453ae5262c2e7411a83b0e7f8f69fde2",
+        "tests/integration/test_selected_connected_functional_comparison.py": "156754dccc7a3eb6b7c20d590bd87c49b6bdb1e5dbda6778b54038802ecfa7ae",
+        "scripts/run_connected_functional_comparison.py": "c76fcb4cd9fd84830e8018d277ba1c730f27c3ce5c5092faabb0a2e54bfcd9b2",
+        "scripts/observe_connected_setup_journal.py": "8dac63783d906b85c83ab6a1d2723c9bbbe99c25713d275956a3176491c48663"
+      },
+      "independent_source_review": "Accepted for localization-only protocol; not physical cause or functional qualification.",
+      "unproved": "Physical coverage is recovered; exact termination instruction, observer overhead, exclusive stage cost, complete call/query counts, backend causation and first optional native preparation refusal remain unproved. Short controls and residency samples do not qualify functional equivalence, learning or latency."
+    },
+    "dispatch": {
+      "schema": "flora-construction-localization-dispatch-v1",
+      "requested_at_utc": "2026-10-07T23:53:34.659761+00:00",
+      "source_commit": "f22953b8e776863b01518df35b342934c0ef7b73",
+      "source_tree": "5ab68ff0bee45d26dcb37852e5745741be39e2c1",
+      "branch": "codex/flora-shared-source-caps",
+      "workflow_id": 371719770,
+      "observer": "construction-windows",
+      "previous_run_ids": [
+        37685186902,
+        37673488169,
+        37668996027,
+        37663262359,
+        37653864404,
+        37641323381,
+        37482623415,
+        37141011069,
+        37139200958,
+        37109188927,
+        37072026458
+      ],
+      "duplicate_dispatch_forbidden": true,
+      "hard_process_cap_seconds": 2700,
+      "kill_grace_seconds": 30,
+      "maximum_windows": 9,
+      "window_cap_seconds": 300,
+      "total_observation_seconds": 2700,
+      "diagnostic_only": true,
+      "functional_qualification": false,
+      "causal_qualification": false,
+      "latency_qualification": false,
+      "selected_test_id": "test_selected_connected_functional_comparison.SelectedConnectedFunctionalComparisonTest.test_registered_six_positive_attempts_and_exact_passive_recovery",
+      "question": "Localize supported unfinished archive capture versus cold route versus observed binding/publication across original resource window.",
+      "no_call_count_or_exclusive_cpu_or_backend_cause_claim": true,
+      "run_id": 37704802657,
+      "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37704802657",
+      "event": "workflow_dispatch",
+      "status": "queued",
+      "conclusion": null,
+      "head_sha_verified": "f22953b8e776863b01518df35b342934c0ef7b73",
+      "dispatch_command_exit": 0
+    },
+    "localization_status": "completed_supported_boundary_localization",
+    "recovery_receipt": {
+      "schema": "flora-construction-windows-recovery-v1",
+      "run_id": 37704802657,
+      "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37704802657",
+      "source_commit": "f22953b8e776863b01518df35b342934c0ef7b73",
+      "source_tree": "5ab68ff0bee45d26dcb37852e5745741be39e2c1",
+      "conclusion": "failure",
+      "artifact_metadata": {
+        "id": 11520548926,
+        "node_id": "MDg6QXJ0aWZhY3QxMTUyMDU0ODkyNg==",
+        "name": "connected-construction-window-positive",
+        "size_in_bytes": 177047,
+        "url": "https://api.github.com/repos/NIne-WIngEd/FloRA/actions/artifacts/11520548926",
+        "archive_download_url": "https://api.github.com/repos/NIne-WIngEd/FloRA/actions/artifacts/11520548926/zip",
+        "expired": false,
+        "digest": "sha256:7f2bbd89baf3893c4ee58340d9487548a13bcca10f7ce22b7a1f1a7024090f60",
+        "created_at": "2026-10-08T00:39:45Z",
+        "updated_at": "2026-10-08T00:39:45Z",
+        "expires_at": "2027-01-05T23:53:37Z",
+        "workflow_run": {
+          "id": 37704802657,
+          "repository_id": 1393950425,
+          "head_repository_id": 1393950425,
+          "head_branch": "codex/flora-shared-source-caps",
+          "head_sha": "f22953b8e776863b01518df35b342934c0ef7b73"
+        }
+      },
+      "artifact_sha256": "7f2bbd89baf3893c4ee58340d9487548a13bcca10f7ce22b7a1f1a7024090f60",
+      "log_archive_sha256": "e3e71fa08a5b85c92f31e302c66200d5edecd7c1c1d29c95cb091ae7a82287c5",
+      "source_files_verified": 428,
+      "source_before_after_identical": true,
+      "process": {
+        "schema": "flora-connected-construction-observation-process-v1",
+        "diagnostic_only": true,
+        "process_exit": 124,
+        "log_write_exit": 0,
+        "effective_exit": 124,
+        "hard_process_cap_seconds": 2700,
+        "kill_grace_seconds": 30,
+        "functional_qualification": false,
+        "latency_qualification": false,
+        "window_cap_seconds": 300,
+        "maximum_windows": 9,
+        "observation_total_cap_seconds": 2700,
+        "sampling_interval_seconds": 1,
+        "raw_strict_result_authoritative": true,
+        "shell_wall_seconds": 2700,
+        "external_cpu_wall_timing_available": true,
+        "outcome": "original_hard_cap_reached_test_incomplete",
+        "original_test_incomplete": true
+      },
+      "observation_window_count": 9,
+      "journal_total_bytes": 3765990,
+      "manifest_sha256": "c33858cc8cdce5d99a513a5912d8074fd16153eef3494ce42d06bb870c9b590f",
+      "raw_result_exists": false,
+      "raw_result": null,
+      "original_log_sha256": "39318ad214284d6c603e1fc50811ee9f26b14c3c63e681e8aec4462b6349564d",
+      "files": {
+        "artifacts.json": "147709c970937dfa2814e12704b9f58ec2aad4dd9f1de14c4db8eed381f79ae6",
+        "jobs.json": "d7f790fecaf88351564d057ededf71e52ffc3a5836d977e0f85d304260227c8e",
+        "original-artifact.zip": "7f2bbd89baf3893c4ee58340d9487548a13bcca10f7ce22b7a1f1a7024090f60",
+        "original-logs.zip": "e3e71fa08a5b85c92f31e302c66200d5edecd7c1c1d29c95cb091ae7a82287c5",
+        "run.json": "b67438e28055e61a8dae013d35e5fd299a6e6603f7f35fa584696dac58210d8f",
+        "artifacts/connected-construction-backend-logs.txt": "215dc24248b7b8dc9a075478f962cc00f9191ea03360af26099b0f918ea06a41",
+        "artifacts/connected-construction-backend-ps.txt": "4ca20233f041d5c0ed4199d85b516527b44cba1f22ea0c947aeca43f6decd0ab",
+        "artifacts/connected-construction-dependencies.txt": "9c662b8a79942832b7df36a5c76cd5b7259601d38af956f2cac9aab2e1340859",
+        "artifacts/connected-construction-original-source-check.txt": "9ab27a0329cc5ca9692bff504fd8194a5623036d89f8ec4aa8f8ca5e14d2902e",
+        "artifacts/connected-construction-process.json": "f216c2acfb00cad6f55b0d74ead68b76de7f076ad0dab4070200bdabba6ccf90",
+        "artifacts/connected-construction-protocol.md": "789e0c9ad5dd67a2ab56e497faf73f12ca2f4211bea449103deca04f175b4af4",
+        "artifacts/connected-construction-python.txt": "52fb5da09e34fb9e6a6358018ae48c54f7140c14edac1d09c775a03d31c915a8",
+        "artifacts/connected-construction-source-after.txt": "b449dc286fe03f50b0d5189b824277b3f6c3d9601e289044197131700a496ee2",
+        "artifacts/connected-construction-source-before.txt": "b449dc286fe03f50b0d5189b824277b3f6c3d9601e289044197131700a496ee2",
+        "artifacts/connected-construction-source-identity.txt": "585ea99e07da0b4cd7cb50fa54342f5c6c29f90c617a5fd5a3d4980c612abcac",
+        "artifacts/connected-construction-test.log": "39318ad214284d6c603e1fc50811ee9f26b14c3c63e681e8aec4462b6349564d",
+        "artifacts/connected-construction-time.txt": "d72996b0130bb22114ec08dc96f2cf861ea6ee620456a2c13de1c30ee89a1b98",
+        "logs/3_connected-construction-window-positive.txt": "be6b7819b31f7f38584aa87cd796e1026c5810985f4c99d70a47073901b2c2e3",
+        "artifacts/connected-construction-windows/construction-window-01.jsonl": "cf42d4a582867cee37a320c4cc4ad753427368e85a5cb6db1522085f8eec5a98",
+        "artifacts/connected-construction-windows/construction-window-02.jsonl": "4ca463038de323af0d5ac94d223f346ce7676e3007d9046d49a484765de4bf6f",
+        "artifacts/connected-construction-windows/construction-window-03.jsonl": "867f759415809c08040308238d50478cd95583bf88d814fc42c01d771f2ab79e",
+        "artifacts/connected-construction-windows/construction-window-04.jsonl": "902d121d19f9026e143bb21c8e2aacacd190d0300bf7cb5ba23022e68aa54328",
+        "artifacts/connected-construction-windows/construction-window-05.jsonl": "f34b2285dc363ff608bfd8462c3828604eb3a7cbb21f7eca21074e7417a7ab17",
+        "artifacts/connected-construction-windows/construction-window-06.jsonl": "770d15dfe4b5ecc595110488e56a139ff201b9eb8efb331e2e04090cf84fc1ff",
+        "artifacts/connected-construction-windows/construction-window-07.jsonl": "8fad18682a283a0538dcbaf43143a778b31fad05599c583ceab4c6911c576383",
+        "artifacts/connected-construction-windows/construction-window-08.jsonl": "7f7d6aa46d0496e801cc191c0a42b7caf924513e08ef970a96dece47a8ac4d12",
+        "artifacts/connected-construction-windows/construction-window-09.jsonl": "c94aa8d47135a77a4752dc3ce59d91970d1b3675753c9d830ab8677d7f3dfcfd",
+        "artifacts/connected-construction-windows/construction-windows.jsonl": "c33858cc8cdce5d99a513a5912d8074fd16153eef3494ce42d06bb870c9b590f",
+        "logs/connected-construction-window-positive/10_Wait for selected services.txt": "32fcbbe3dc0bcee84cc2b889bc97185e84ccb3daab67050dd0797929d030de91",
+        "logs/connected-construction-window-positive/11_Observe complete original positive construction without qualification.txt": "2a463522eb39267b187e95bacba37bc817d34cc58026af86aa3a2a8705c17c85",
+        "logs/connected-construction-window-positive/12_Classify a copy while preserving the authoritative raw strict result.txt": "eccad49b3dac68b950fac9752057aebdfe7e963516215a5bd428f8dcdaa725fe",
+        "logs/connected-construction-window-positive/13_Verify final source even after setup or execution failure.txt": "2a06d7f9355c7afb7ade2623407f461359fe412e83078587f624a64777bdc3ea",
+        "logs/connected-construction-window-positive/14_Preserve selected backend evidence.txt": "ff536df91fcb636e3361b934a93976fe2eb05e1ba5ac121b4e6e7519df5c294f",
+        "logs/connected-construction-window-positive/15_Run actions_upload-artifact@v4.txt": "dbeff440e98be08c1c47cb46829b664cc5a6e2dd4cf132f8ce311060157bb08d",
+        "logs/connected-construction-window-positive/16_Tear down isolated selected services.txt": "270bc862ada321d37b2d276e91e7ca102e00156cd1424e115eff8c3f18a0dd77",
+        "logs/connected-construction-window-positive/1_Set up job.txt": "b6994fdd09d947fd3ad5bde47cd651bebfcaa5a55f3e56c491990c011750cf60",
+        "logs/connected-construction-window-positive/2_Run actions_checkout@v4.txt": "6db26b014e21ac5e5521497251bd7ec96a57deb559e7950b26a1f89b9218905a",
+        "logs/connected-construction-window-positive/31_Post Checkout pinned A.L.I.C.E. contracts.txt": "98e0a2def322f5426f473d225b42c3b6f435eed2e9ce8b6681de95cd9248ff5d",
+        "logs/connected-construction-window-positive/32_Post Run actions_checkout@v4.txt": "2de616878e93389352ff55ea28873afccd3e790134ed3e2b781d22ae4a25053b",
+        "logs/connected-construction-window-positive/33_Complete job.txt": "2b42ae4698c38bf74295003bc3abde7a413b8a5b8e9e1cb086b0c8899179b887",
+        "logs/connected-construction-window-positive/3_Checkout pinned A.L.I.C.E. contracts.txt": "f8393bb0c27ea1035ffeb0ebb73788f8ab6a72eb4a14ba7a2d3bae84ac725d1f",
+        "logs/connected-construction-window-positive/4_Run actions_setup-python@v5.txt": "e268678ff7126c4d7358dc3ddaa70dd99c2a78557748fe5f8ff0a4ef2a21a082",
+        "logs/connected-construction-window-positive/5_Record exact Python runtime.txt": "e3948cb31b34ce148b777d863df3dd578dd7e9f2746b61a5d9e6816e48210e1b",
+        "logs/connected-construction-window-positive/6_Record exact source and declared mechanical protocol.txt": "a2279e155cac6c7db3e244f43ddd606edfe986f3f8ea5a798dec1e4d31b9c1e0",
+        "logs/connected-construction-window-positive/7_Install selected integration dependencies.txt": "fd1c319f9bcaa1050ebdacf5590c19c9320de0739324900737aa1adcd0dd5c6b",
+        "logs/connected-construction-window-positive/8_Record selected dependency identity.txt": "49cce9c79a5020b4989da40f1dcfac57855d430b84fa0ee778a63e1c537305b8",
+        "logs/connected-construction-window-positive/9_Start only this case's selected services.txt": "2404fa409b996ac4338c5052632dfd8f1b3f23f10babcd5ddcb92f1eaf246d68",
+        "logs/connected-construction-window-positive/system.txt": "31cb692f9e106781ea324db1630900edab325d2d34c4e9f3f0717a08568311bc"
+      },
+      "rerun_dispatched": false,
+      "functional_qualification": false,
+      "causal_qualification": false,
+      "latency_qualification": false
+    },
+    "recovery_receipt_sha256": "fe55b68a415079e3b7a63cd059bb6fe8d5351db2a4be4959b2f05956716f06d0",
+    "journal_analysis_sha256": "d67114bab71b19616b45ff2d4787cd4639193a2d14139d9eddace041f9139927",
+    "journal_analysis": {
+      "total_samples": 2688,
+      "owned_samples": 2687,
+      "depth_truncations": 0,
+      "thread_count_caps": 0,
+      "maximum_stack_depth": 73,
+      "journal_bytes": 3765990,
+      "coverage_limits": {
+        "completed_windows": 8,
+        "incomplete_terminal_window": 9,
+        "terminal_close_absent_expected_under_external_cap": true,
+        "completed_window_observer_errors": 0,
+        "byte_cap_reached": false,
+        "cross_window_sampling_gaps": [
+          {
+            "after_window": 1,
+            "gap_seconds_bounds": [
+              1.031179,
+              1.04298
+            ]
+          },
+          {
+            "after_window": 2,
+            "gap_seconds_bounds": [
+              1.011205,
+              1.02334
+            ]
+          },
+          {
+            "after_window": 3,
+            "gap_seconds_bounds": [
+              1.005891,
+              1.00783
+            ]
+          },
+          {
+            "after_window": 4,
+            "gap_seconds_bounds": [
+              1.005412,
+              1.007406
+            ]
+          },
+          {
+            "after_window": 5,
+            "gap_seconds_bounds": [
+              1.000689,
+              1.002931
+            ]
+          },
+          {
+            "after_window": 6,
+            "gap_seconds_bounds": [
+              1.00064,
+              1.003141
+            ]
+          },
+          {
+            "after_window": 7,
+            "gap_seconds_bounds": [
+              1.005988,
+              1.008471
+            ]
+          },
+          {
+            "after_window": 8,
+            "gap_seconds_bounds": [
+              1.000562,
+              1.002904
+            ]
+          }
+        ],
+        "max_local_sample_gap_seconds": 1.0567039999999963,
+        "last_sample_global_seconds_bounds": [
+          2699.299088,
+          2699.300263
+        ],
+        "samples_are_not_continuous_trace": true
+      },
+      "supported_localization": {
+        "enclosing_operation": "First before/flora_full archive.capture; helper called from build line 760",
+        "last_observed_suboperation": "Second full capturing.context_lineage call at phase_snapshots.py:661; registered wrapper at line 126 performing _finish_lineage_use; fresh preregistration _current branch at line 533",
+        "second_native_lineage_body_returned": true,
+        "first_capture_return_observed": false,
+        "route_construct_samples": 0,
+        "route_observed_binding_samples": 0,
+        "final_sample_phase_capture_line": 661,
+        "final_sample_preregistered_lineage_line": 126,
+        "final_sample_current_line": 533
+      },
+      "resolved_boundary_predictions": [
+        {
+          "boundary": "initial fallback context assembly",
+          "resolved": "returned before capture first lineage call; first capture:625 sample global upper 297.145 s"
+        },
+        {
+          "boundary": "first full registered lineage call at capture:625",
+          "resolved": "returned before second call at capture:661; first second-call sample global upper 1518.955 s"
+        },
+        {
+          "boundary": "second NativeJudgmentLineageVerifier body",
+          "resolved": "returned before registered wrapper line 126; final registered completion check remained resident at final sample"
+        },
+        {
+          "boundary": "cold capture_route, observed_binding, publish_capture",
+          "resolved": "no sampled entry; fixture orders each after capture return, while all late owner frames remain at first capture call"
+        }
+      ],
+      "static_dependency_sequence": [
+        {
+          "path": "tests/registered_functional_case_fixture.py",
+          "line": 760,
+          "fact": "first before slot calls helper; helper archive.capture at 741 precedes capture_route 749, observed_binding 751, publish_capture 754"
+        },
+        {
+          "path": "src/flora/selected/phase_snapshots.py",
+          "line": 661,
+          "fact": "second full lineage equality check precedes snapshot body, phase object write, intent and commit"
+        },
+        {
+          "path": "src/flora/selected/phase_snapshots.py",
+          "line": 126,
+          "fact": "Native body at 120 has returned; slot authorization at 124 has returned; _finish_lineage_use is running before return actual at 127"
+        },
+        {
+          "path": "src/flora/selected/_phase_preparation.py",
+          "line": 800,
+          "fact": "_finish_lineage_use calls _revalidate_lineage_completion; fallback branch at 774 uses _revalidate_prepared with exact original completion record"
+        },
+        {
+          "path": "src/flora/selected/context_guard.py",
+          "line": 719,
+          "fact": "fallback completion rechecks metadata/current permissions, full replay 725, current independent owner proof 729, terminal metadata 743"
+        },
+        {
+          "path": "src/flora/selected/experiment_preregistration.py",
+          "line": 533,
+          "fact": "fresh _current_observations branch invokes _check_current; this is not an admission refusal"
+        }
+      ],
+      "unresolved": [
+        "Exact instruction at process termination after the final sample",
+        "Exclusive CPU time by stage, physical query count, backend latency or observer overhead",
+        "Whether finite nested validation fan-out accounts for the entire physical cap",
+        "First optional native-preparation admission refusal; sampler has no return-value evidence",
+        "Later route construction, publication, remaining captures, connected comparison, recovery and withdrawal assertions"
+      ],
+      "causation_boundary": "Repeated complete lineage and fallback completion verification is source-confirmed, and successive stages progress in physical samples. Journal residency does not prove infinite recursion, deadlock, repeated call counts, a backend fault or the precise timeout cause. Process CPU 85% is aggregate evidence only.",
+      "functional_goal_boundary": "A sound containment result preserves incomplete original functional construction; no positive, H/C, full campaign, learning, behavioral competency or latency qualification follows.",
+      "windows": [
+        {
+          "window": 1,
+          "samples": 299,
+          "owned": 298,
+          "global_start_bounds": [
+            0.0,
+            0.000668
+          ],
+          "first_global_upper": 0.0008759999999999999,
+          "last_global_upper": 299.151472,
+          "max_local_gap": 1.0159049999999894,
+          "sha256": "cf42d4a582867cee37a320c4cc4ad753427368e85a5cb6db1522085f8eec5a98"
+        },
+        {
+          "window": 2,
+          "samples": 299,
+          "owned": 299,
+          "global_start_bounds": [
+            300.176922,
+            300.188055
+          ],
+          "first_global_upper": 300.193784,
+          "last_global_upper": 599.652234,
+          "max_local_gap": 1.016001999999986,
+          "sha256": "4ca463038de323af0d5ac94d223f346ce7676e3007d9046d49a484765de4bf6f"
+        },
+        {
+          "window": 3,
+          "samples": 299,
+          "owned": 299,
+          "global_start_bounds": [
+            600.662714,
+            600.663716
+          ],
+          "first_global_upper": 600.664441,
+          "last_global_upper": 900.1043099999999,
+          "max_local_gap": 1.0567039999999963,
+          "sha256": "867f759415809c08040308238d50478cd95583bf88d814fc42c01d771f2ab79e"
+        },
+        {
+          "window": 4,
+          "samples": 299,
+          "owned": 299,
+          "global_start_bounds": [
+            901.109517,
+            901.110454
+          ],
+          "first_global_upper": 901.111138,
+          "last_global_upper": 1200.426437,
+          "max_local_gap": 1.0343850000000145,
+          "sha256": "902d121d19f9026e143bb21c8e2aacacd190d0300bf7cb5ba23022e68aa54328"
+        },
+        {
+          "window": 5,
+          "samples": 299,
+          "owned": 299,
+          "global_start_bounds": [
+            1201.431131,
+            1201.432188
+          ],
+          "first_global_upper": 1201.432906,
+          "last_global_upper": 1500.871819,
+          "max_local_gap": 1.0542559999999952,
+          "sha256": "f34b2285dc363ff608bfd8462c3828604eb3a7cbb21f7eca21074e7417a7ab17"
+        },
+        {
+          "window": 6,
+          "samples": 299,
+          "owned": 299,
+          "global_start_bounds": [
+            1501.871816,
+            1501.873001
+          ],
+          "first_global_upper": 1501.873693,
+          "last_global_upper": 1801.225479,
+          "max_local_gap": 1.0159289999999714,
+          "sha256": "770d15dfe4b5ecc595110488e56a139ff201b9eb8efb331e2e04090cf84fc1ff"
+        },
+        {
+          "window": 7,
+          "samples": 299,
+          "owned": 299,
+          "global_start_bounds": [
+            1802.225243,
+            1802.226559
+          ],
+          "first_global_upper": 1802.227435,
+          "last_global_upper": 2101.569951,
+          "max_local_gap": 1.0159829999999985,
+          "sha256": "8fad18682a283a0538dcbaf43143a778b31fad05599c583ceab4c6911c576383"
+        },
+        {
+          "window": 8,
+          "samples": 299,
+          "owned": 299,
+          "global_start_bounds": [
+            2102.575268,
+            2102.576435
+          ],
+          "first_global_upper": 2102.5771059999997,
+          "last_global_upper": 2401.870703,
+          "max_local_gap": 1.0158780000000007,
+          "sha256": "7f7d6aa46d0496e801cc191c0a42b7caf924513e08ef970a96dece47a8ac4d12"
+        },
+        {
+          "window": 9,
+          "samples": 296,
+          "owned": 296,
+          "global_start_bounds": [
+            2402.870608,
+            2402.871783
+          ],
+          "first_global_upper": 2402.87244,
+          "last_global_upper": 2699.300263,
+          "max_local_gap": 1.0158610000000294,
+          "sha256": "c94aa8d47135a77a4752dc3ce59d91970d1b3675753c9d830ab8677d7f3dfcfd"
+        }
+      ]
+    },
+    "observations": [
+      "Original-input registration completed at102.892s; no capture-publication checkpoint or post-build functional assertion completed.",
+      "Initial fallback assembly returned before first lineage call near297s; first full registered lineage returned before second call near1519s.",
+      "Second NativeJudgmentLineageVerifier body returned before registered completion validation near2603s.",
+      "Final sample2699.299088–2699.300263s is build760 -> first capture661 -> registered lineage126 -> fresh preregistration current533.",
+      "_finish_lineage_use calls _revalidate_lineage_completion; fallback _revalidate_prepared retains live metadata/source permissions and independent current owner proof.",
+      "Cold route construction and observed binding have zero sampled entries; source orders route/observed binding/publication after capture return.",
+      "Eight completed windows report zero observer errors; ninth missing close is expected under external process termination. No raw strict result exists."
+    ],
+    "limits": [
+      "Final sampled residency does not identify the exact instruction at process termination.",
+      "Samples are not call counts or exclusive CPU/query/backend cost; whole-process85% CPU is aggregate only.",
+      "Finite nested validation and repeated complete lineage are source-confirmed; their entire physical timeout contribution is unestablished.",
+      "First optional native reuse admission refusal is unknown and is not a functional capability prerequisite.",
+      "No positive mechanics, independent H/C campaign, full pipeline, causal learning, behavioral or latency qualification follows.",
+      "The earlier run37685186902 remains separately preserved with only first300s observation; current final-boundary evidence is not applied retroactively."
+    ]
+  },
+  "observer_scripts_added": 1,
+  "failure_location_at_prior_run": "First capture observed through initial fallback assembly and lineage by299s; no evidence localizes remaining2400s.",
+  "construction_boundary_predictions_reconciled": [
+    {
+      "boundary": "initial fallback context assembly",
+      "resolved": "returned before capture first lineage call; first capture:625 sample global upper 297.145 s"
+    },
+    {
+      "boundary": "first full registered lineage call at capture:625",
+      "resolved": "returned before second call at capture:661; first second-call sample global upper 1518.955 s"
+    },
+    {
+      "boundary": "second NativeJudgmentLineageVerifier body",
+      "resolved": "returned before registered wrapper line 126; final registered completion check remained resident at final sample"
+    },
+    {
+      "boundary": "cold capture_route, observed_binding, publish_capture",
+      "resolved": "no sampled entry; fixture orders each after capture return, while all late owner frames remain at first capture call"
+    }
+  ],
+  "evidence_reconciled_at_utc": "2026-10-08T01:13:52.598330+00:00",
+  "reconciliation_parents": {
+    "source": "8b8f38c8ffc7afedc3fabd8020d95ffea83578c0",
+    "context": "1ca671263fe16dbf55c5bbb7f2afcc03ba4013c3"
+  }
+}

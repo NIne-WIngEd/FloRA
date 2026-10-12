@@ -1,0 +1,442 @@
+{
+  "schema": "flora-completed-run-diagnosis-v1",
+  "recorded_at_utc": "2026-10-05T06:24:44.369222Z",
+  "status": "completed_runs_failed; scoped_failure_observed; cause_and_test_branch_diagnosis_pending",
+  "source": {
+    "runtime_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
+    "tree": "671942fc74e86bec94e0f8609190f0cbe062bbd3",
+    "PR_checkout_commit": "39babda0ec51c63a3efc6270a1340d2934efb747",
+    "PR_checkout_has_runtime_tree": true,
+    "alice_contract_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+    "original_logs_verified": 26,
+    "all_original_log_hashes_match": true,
+    "all_logged_FloRA_and_Alice_pins_match": true
+  },
+  "runs": [
+    {
+      "event": "pull_request",
+      "run_id": 37263029377,
+      "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37263029377",
+      "status": "completed",
+      "conclusion": "failure",
+      "checkout_commit": "39babda0ec51c63a3efc6270a1340d2934efb747",
+      "component": {
+        "passed": 1038,
+        "modules": 82,
+        "skips": 0
+      },
+      "physical": {
+        "total_cases": 53,
+        "completed": 53,
+        "passed": 50,
+        "failed": 3,
+        "incomplete": 0
+      },
+      "jobs": [
+        {
+          "job_id": 111614019424,
+          "name": "contracts",
+          "conclusion": "success",
+          "completed_cases": 1038,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "18970285f6a1be19237275fb7953108edbbdfcd9aafefd40567829fd15e62598"
+        },
+        {
+          "job_id": 111614019637,
+          "name": "integration-history-routes-native",
+          "conclusion": "success",
+          "completed_cases": 1,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "12961ce58885a4713b169b3c97b599257ca85872d20bf0da794e49beb88a3468"
+        },
+        {
+          "job_id": 111614019643,
+          "name": "integration-native-comparison",
+          "conclusion": "failure",
+          "completed_cases": 1,
+          "failures_or_errors": 1,
+          "skips": 0,
+          "log_sha256": "801449ce7bdb8dc0ccadbc196e28fe986b639f2872c68a7a57c66635a8fc913f"
+        },
+        {
+          "job_id": 111614019698,
+          "name": "integration-core",
+          "conclusion": "success",
+          "completed_cases": 38,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "a34a228da0b999ce93b6225cb916f32a6e3216ebaf8bb16fa564ff556a0a38eb"
+        },
+        {
+          "job_id": 111614019704,
+          "name": "integration-transport",
+          "conclusion": "failure",
+          "completed_cases": 2,
+          "failures_or_errors": 1,
+          "skips": 0,
+          "log_sha256": "b267410991be0544acc46eef4942803250b0567c6b0d62efaac60f431b9b2d0c"
+        },
+        {
+          "job_id": 111614019708,
+          "name": "integration-native-pilot-withdrawal",
+          "conclusion": "success",
+          "completed_cases": 1,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "9a7b93348ddde4c16330d0c5db1786cfbcbfbd99506e9d79713f4cd428d2bd41"
+        },
+        {
+          "job_id": 111614019716,
+          "name": "integration-native-pilot-before-tail",
+          "conclusion": "success",
+          "completed_cases": 1,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "c8b377eae1b68f2d57d107e8165932e991bcfd6553660fda1962f65bf8f0a003"
+        },
+        {
+          "job_id": 111614019730,
+          "name": "integration-lineage",
+          "conclusion": "success",
+          "completed_cases": 2,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "ca4355ac0a125959e82a739348851db9d5ef910a30322318a13a72662ef66443"
+        },
+        {
+          "job_id": 111614019737,
+          "name": "integration-native-pilot-outcome-audit",
+          "conclusion": "success",
+          "completed_cases": 1,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "49dd984353d5ac5498fce4224966a7081d81630c25242160467af2afeb9c872e"
+        },
+        {
+          "job_id": 111614019751,
+          "name": "integration-readers",
+          "conclusion": "success",
+          "completed_cases": 2,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "339517c78f6b588dc00b6bcf466254fc3cf064bd050a733b3c85ff81009c9cbd"
+        },
+        {
+          "job_id": 111614019753,
+          "name": "integration-history-routes-retained",
+          "conclusion": "success",
+          "completed_cases": 1,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "28255cd7759d1017d67db4669f7f29b90eac1b5dc4734a0fc85037100c3553e9"
+        },
+        {
+          "job_id": 111614019795,
+          "name": "integration-history",
+          "conclusion": "failure",
+          "completed_cases": 2,
+          "failures_or_errors": 1,
+          "skips": 0,
+          "log_sha256": "17f722c94229d00a2c166d947ab8a96019467799f769d0e10b889494c62556c7"
+        },
+        {
+          "job_id": 111614019828,
+          "name": "integration-native-pilot-typed-phase",
+          "conclusion": "success",
+          "completed_cases": 1,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "8f426a6ee79495003d86b5441c9da5a6c2bf0fb9153084bc3822602589115f7c"
+        }
+      ]
+    },
+    {
+      "event": "push",
+      "run_id": 37263026076,
+      "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37263026076",
+      "status": "completed",
+      "conclusion": "failure",
+      "checkout_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
+      "component": {
+        "passed": 1038,
+        "modules": 82,
+        "skips": 0
+      },
+      "physical": {
+        "total_cases": 53,
+        "completed": 52,
+        "passed": 49,
+        "failed": 3,
+        "incomplete": 1
+      },
+      "jobs": [
+        {
+          "job_id": 111614010062,
+          "name": "contracts",
+          "conclusion": "success",
+          "completed_cases": 1038,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "1acd2d9cba6f19dfecf54f263d1e5e5504fe850908fc90d0dae554a7815c216a"
+        },
+        {
+          "job_id": 111614010250,
+          "name": "integration-history-routes-native",
+          "conclusion": "success",
+          "completed_cases": 1,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "9fff8de2ca1c3136e1b1f28a872557ca66a611bf100c64579627d41e70016f6e"
+        },
+        {
+          "job_id": 111614010291,
+          "name": "integration-native-pilot-typed-phase",
+          "conclusion": "success",
+          "completed_cases": 1,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "f54b8152ee541f79afc925ae5ebb4a0073a193aaab9a624d376457a996d9b1f0"
+        },
+        {
+          "job_id": 111614010292,
+          "name": "integration-native-pilot-before-tail",
+          "conclusion": "success",
+          "completed_cases": 1,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "c1697ed96aa71f6f06e15e26f8cd21b7d6054c683adf1dbd40d47791bedfe2d5"
+        },
+        {
+          "job_id": 111614010307,
+          "name": "integration-native-comparison",
+          "conclusion": "failure",
+          "completed_cases": 1,
+          "failures_or_errors": 1,
+          "skips": 0,
+          "log_sha256": "cf8d363b2f6c67618359339abaff59d18c502b19189bcb53454edc6011449459"
+        },
+        {
+          "job_id": 111614010317,
+          "name": "integration-native-pilot-withdrawal",
+          "conclusion": "success",
+          "completed_cases": 1,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "93a1a18b9a35dd371a0ff123224d553982a1be4d5dc5c4ea48c9546219575b2d"
+        },
+        {
+          "job_id": 111614010320,
+          "name": "integration-lineage",
+          "conclusion": "success",
+          "completed_cases": 2,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "c8d0c698c8aa17a18a956afe57d0e5a7cd525ad594931fea54ccfca4fed22b92"
+        },
+        {
+          "job_id": 111614010347,
+          "name": "integration-history-routes-retained",
+          "conclusion": "cancelled",
+          "completed_cases": 0,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "edd7e5011dc89217e24be54e7e5a433dd65630bb5c620b1361f6f8ee614f902d"
+        },
+        {
+          "job_id": 111614010351,
+          "name": "integration-readers",
+          "conclusion": "success",
+          "completed_cases": 2,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "2fe7caa83615403476201ce0af7bfefe474dbd21a4987a95ca56bb25e266eccb"
+        },
+        {
+          "job_id": 111614010358,
+          "name": "integration-core",
+          "conclusion": "success",
+          "completed_cases": 38,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "75739cfe3ce2cad837251ca14aadb2c511ef54f35aa9f1a07570e56f9853dd76"
+        },
+        {
+          "job_id": 111614010371,
+          "name": "integration-transport",
+          "conclusion": "failure",
+          "completed_cases": 2,
+          "failures_or_errors": 1,
+          "skips": 0,
+          "log_sha256": "109202d6ccb990da7cd3c1b2f99a648a3195f50393476fae49e5bdd38318f4e0"
+        },
+        {
+          "job_id": 111614010388,
+          "name": "integration-native-pilot-outcome-audit",
+          "conclusion": "success",
+          "completed_cases": 1,
+          "failures_or_errors": 0,
+          "skips": 0,
+          "log_sha256": "5e3154e7d5b16af67a2d1f5659f7f172973c53b2dc862603e1122d1c52370699"
+        },
+        {
+          "job_id": 111614010404,
+          "name": "integration-history",
+          "conclusion": "failure",
+          "completed_cases": 2,
+          "failures_or_errors": 1,
+          "skips": 0,
+          "log_sha256": "add35f0c280f64306362f876b47878a76b3d830168b547a82ed8eb545c3690d5"
+        }
+      ]
+    }
+  ],
+  "response_failures": [
+    {
+      "run_id": 37263029377,
+      "job_id": 111614019643,
+      "shard": "native-comparison",
+      "tests": 1,
+      "passed": 0,
+      "failed": 1,
+      "log_sha256": "801449ce7bdb8dc0ccadbc196e28fe986b639f2872c68a7a57c66635a8fc913f",
+      "attempts": [
+        {
+          "phase": "before",
+          "status": "timeout",
+          "elapsed_ms": 60091
+        },
+        {
+          "phase": "after",
+          "status": "timeout",
+          "elapsed_ms": 60165
+        }
+      ],
+      "failure_class": "native_prepare_timeout_before_worker_execution",
+      "response_budget_ms": 60000
+    },
+    {
+      "run_id": 37263029377,
+      "job_id": 111614019704,
+      "shard": "transport",
+      "tests": 2,
+      "passed": 1,
+      "failed": 1,
+      "log_sha256": "b267410991be0544acc46eef4942803250b0567c6b0d62efaac60f431b9b2d0c",
+      "attempts": [
+        {
+          "elapsed_ms": 22395,
+          "phase": "before",
+          "status": "budget_exceeded"
+        },
+        {
+          "elapsed_ms": 35784,
+          "phase": "after",
+          "status": "budget_exceeded"
+        }
+      ],
+      "failure_class": "baseline_response_budget_exceeded",
+      "response_budget_ms": 10000
+    },
+    {
+      "run_id": 37263026076,
+      "job_id": 111614010307,
+      "shard": "native-comparison",
+      "tests": 1,
+      "passed": 0,
+      "failed": 1,
+      "log_sha256": "cf8d363b2f6c67618359339abaff59d18c502b19189bcb53454edc6011449459",
+      "attempts": [
+        {
+          "phase": "before",
+          "status": "timeout",
+          "elapsed_ms": 60045
+        },
+        {
+          "phase": "after",
+          "status": "timeout",
+          "elapsed_ms": 60097
+        }
+      ],
+      "failure_class": "native_prepare_timeout_before_worker_execution",
+      "response_budget_ms": 60000
+    },
+    {
+      "run_id": 37263026076,
+      "job_id": 111614010371,
+      "shard": "transport",
+      "tests": 2,
+      "passed": 1,
+      "failed": 1,
+      "log_sha256": "109202d6ccb990da7cd3c1b2f99a648a3195f50393476fae49e5bdd38318f4e0",
+      "attempts": [
+        {
+          "elapsed_ms": 29967,
+          "phase": "before",
+          "status": "budget_exceeded"
+        },
+        {
+          "elapsed_ms": 45636,
+          "phase": "after",
+          "status": "budget_exceeded"
+        }
+      ],
+      "failure_class": "baseline_response_budget_exceeded",
+      "response_budget_ms": 10000
+    }
+  ],
+  "history_failure": {
+    "test": "test_anchor_before_seal_actual_head_update_after_capture_final_seal_and_four_routes",
+    "runs": [
+      {
+        "run_id": 37263029377,
+        "job_id": 111614019795,
+        "log_sha256": "17f722c94229d00a2c166d947ab8a96019467799f769d0e10b889494c62556c7",
+        "original_inputs_registered_seconds": 86.67,
+        "case_elapsed_seconds": 1228.871
+      },
+      {
+        "run_id": 37263026076,
+        "job_id": 111614010404,
+        "log_sha256": "add35f0c280f64306362f876b47878a76b3d830168b547a82ed8eb545c3690d5",
+        "original_inputs_registered_seconds": 101.93,
+        "case_elapsed_seconds": 1433.177
+      }
+    ],
+    "last_completed_milestone": "original-inputs-registered",
+    "reached_boundary": "Injected final-slot held-history denial is reached, followed by the next runtime Claim.load_current entry at phase_snapshots.py:622.",
+    "failure": "Expected PermissionError before that entry; the fixture raises AssertionError at the entry instead.",
+    "observed_scope": "Attempted continuation to Claim-read entry only; no subsequent SQL, decryption, model dispatch or append is established.",
+    "authority_variant": "Mock held-history predicate denial; not evidence of actual signed-owner revocation.",
+    "before_capture_published": false,
+    "later_before_update_after_final_and_four_routes": "Not executed in this case after the early assertion.",
+    "timing_limit": "Whole-case elapsed time includes setup and checks; it does not isolate capture or any helper.",
+    "actual_preparation_branch": "unresolved; do not attribute to issued or fallback paths before diagnostic",
+    "cause": "unresolved"
+  },
+  "test_assessment": {
+    "valid_scoped_observation": "Both original physical logs reach the injected condition and attempted Claim-read continuation. Preserve this observation while auditing the oracle and actual branch.",
+    "remaining_validity_check": "A comparable unchanged control and the exact issued/fallback preparation branch must be established by the bounded diagnostic before causal repair.",
+    "coverage_gap": "The coordinator case passes blocked preflight with missing adapters. Separate route/component passes do not verify one same-case six-attempt three-arm comparison.",
+    "duplicate_discovery": "Callback-owner module reports19 cases, of which18 repeat imported/inherited fixtures and1 is the new target; completed case totals are not distinct capability counts.",
+    "cross_arm_comparison": "Baseline and native timing fixtures use different budgets/work and supplied outputs. They are not a fair paired quality/speed comparison.",
+    "learned_result": false
+  },
+  "qualification": {
+    "whole_physical_suite_pass": false,
+    "complete_synthetic_pipeline_accepted": false,
+    "latency_gain": false,
+    "learned_judgment": false,
+    "full_build_ready_except_models": false
+  },
+  "unchanged_constraints": {
+    "baseline_response_budget_ms": 10000,
+    "native_response_budget_ms": 60000,
+    "CI_limit_minutes": 60,
+    "live_independent_H_C_authority": true,
+    "personality_and_MFM_external": true,
+    "full_Alice_platform_required": false
+  },
+  "next_step": "Use a bounded source-bound diagnostic with unchanged control to locate the actual capture branch and trace final-slot -> current lineage revalidation -> Claim-read entry. Choose a coherent correction after understanding the responsible guarantees; then verify the failing condition and affected connected path."
+}

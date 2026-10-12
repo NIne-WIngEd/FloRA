@@ -270,6 +270,161 @@ class SelectedExperimentRuntimeTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "durable input/output"):
             self._accept(changed)
 
+    def test_one_owned_context_reaches_judgment_without_a_live_mfm_binding(self):
+        self._admit_artifact("memory_formation")
+        personality = self._admit_artifact("personality_judgment")
+        accepted = self._accept(self._form())
+        del self.runtime.bindings["memory_formation"]
+        plan = ContextPlan("one-owned-judgment", "personal_judgment",
+            exact_claim_ids=(accepted.claim_id,), minimum_claims=1)
+        from flora.selected.context import assemble_context
+        with patch("flora.selected.context_guard.assemble_context", wraps=assemble_context) as preparation, \
+                patch("flora.selected.context.assemble_context", wraps=assemble_context) as reconstruction:
+            judged = self.runtime.judge(plan=plan, task=b"same supplied task", invocation_id="one-owned-judgment")
+        self.assertEqual(preparation.call_count + reconstruction.call_count, 1,
+                         "delivery reconstructed the invocation's authenticated current material")
+        self.assertEqual(len(personality.invocations), 1)
+        expected_frame = self.codec.judgment_frame(context=judged.context, task=b"same supplied task")
+        self.assertEqual(personality.invocations[0].payload, expected_frame)
+        self.assertEqual(json.loads(self.objects.get(judged.delivery.raw)), judged.context.receipt_record())
+        self.assertEqual(judged.decision.event.parent_event_ids, tuple(dict.fromkeys((
+            judged.execution.output_record.event.event_id, judged.delivery.event.event_id,
+            *judged.context.source_event_ids))))
+
+    def test_withdrawal_after_preparation_stops_delivery_and_producer(self):
+        self._admit_artifact("memory_formation")
+        personality = self._admit_artifact("personality_judgment")
+        accepted = self._accept(self._form())
+        plan = ContextPlan("withdraw-prepared-delivery", "personal_judgment",
+            exact_claim_ids=(accepted.claim_id,), minimum_claims=1)
+        clock = self.runtime.clock
+        def withdraw_at_delivery():
+            self.permitted[0] = False
+            return clock()
+        self.runtime.clock = withdraw_at_delivery
+        count = len(self.log.replay())
+        with self.assertRaises(PermissionError):
+            self.runtime.judge(plan=plan, task=b"same supplied task", invocation_id="withdraw-prepared-delivery")
+        self.assertEqual(len(self.log.replay()), count)
+        self.assertEqual(personality.invocations, [])
+
+    def test_standalone_delivery_still_reconstructs_and_rejects_supplied_material(self):
+        from flora.selected.context import assemble_context, record_context_delivery
+        self._admit_artifact("memory_formation")
+        accepted = self._accept(self._form())
+        context = self.runtime._context(ContextPlan("standalone-delivery", "personal_judgment",
+            exact_claim_ids=(accepted.claim_id,), minimum_claims=1))
+        inputs = dict(log=self.log, objects=self.objects, references=self.runtime.references,
+            claims=self.authority, state=self.state, policy=self.context_policy,
+            approval_verifier=self.runtime.state_approval_verifier)
+        with patch("flora.selected.context.assemble_context", wraps=assemble_context) as reconstruction:
+            delivered = record_context_delivery(context=context, occurred_at=self.runtime.clock(),
+                expected_revision=len(self.log.replay()) - 1, **inputs)
+        self.assertEqual(reconstruction.call_count, 1)
+        self.assertEqual(json.loads(self.objects.get(delivered.raw)), context.receipt_record())
+        changed = replace(context, items=(replace(context.items[0], content=b"supplied changed material"),))
+        count = len(self.log.replay())
+        with self.assertRaisesRegex(ValueError, "context changed before delivery"):
+            record_context_delivery(context=changed, occurred_at=self.runtime.clock(),
+                expected_revision=count - 1, **inputs)
+        self.assertEqual(len(self.log.replay()), count)
+
+    def test_withdrawal_during_personality_call_never_accepts_output_or_decision(self):
+        self._admit_artifact("memory_formation")
+        personality = self._admit_artifact("personality_judgment")
+        accepted = self._accept(self._form())
+        plan = ContextPlan("withdraw-personality-result", "personal_judgment",
+            exact_claim_ids=(accepted.claim_id,), minimum_claims=1)
+        before_ids = {event.event_id for event in self.log.replay()}
+        personality.callback = lambda: self.permitted.__setitem__(0, False)
+        with self.assertRaises(PermissionError):
+            self.runtime.judge(plan=plan, task=b"same supplied task", invocation_id="withdraw-personality-result")
+        new_events = [event for event in self.log.replay() if event.event_id not in before_ids]
+        self.assertEqual(len(personality.invocations), 1)
+        self.assertTrue(any(event.event_type == "context_delivery" for event in new_events))
+        self.assertFalse(any(event.event_type in {"qualified_model_output", "decision"} for event in new_events))
+
+    def test_owner_proof_withdrawal_at_delivery_clock_appends_nothing(self):
+        from cryptography.hazmat.primitives.serialization import Encoding, PublicFormat
+        from cognitive_kernel.contracts import ProvenanceReference
+        from cognitive_kernel.experience import ExperienceEvent
+        from test_governed_development import GovernedDevelopmentContractTest, _SQLCalls
+        from flora.selected.context import StateRoute
+        from flora.selected.formation_context import register_experience_source
+        from flora.selected.personal_state import activation_request
+        from flora.selected.owner_authorization import (
+            Ed25519OwnerActionVerifier, OwnerActionProof, owner_action_message,
+        )
+        personality = self._admit_artifact("personality_judgment")
+        # The admission recorder lacks the state CAS statements. Use the
+        # existing state recorder; this case is not selected-engine evidence.
+        self.state.connection = _SQLCalls()
+        source = self.log.replay()[0]
+        state_fixture = GovernedDevelopmentContractTest()
+        state_fixture.scope, state_fixture.namespace, state_fixture.objects = self.scope, self.namespace, self.objects
+        state_fixture.source_one, state_fixture.references = source, {}
+        version, content = state_fixture.version(1, produced_at="2026-09-29T12:10:00Z")
+        self.private.record(artifact_id="fixture-owner-projection", kind="projection",
+            contract=version.metadata_record(), attachments=(("content", content),),
+            parent_event_ids=(source.event_id,), log=self.log, objects=self.objects,
+            occurred_at="2026-09-29T12:12:00Z", expected_revision=len(self.log.replay()) - 1)
+        inputs = dict(claims=self.authority, log=self.log, objects=self.objects, references=self.runtime.references)
+        self.state.put_candidate(version, content=content, expected_previous_version_id=None, **inputs)
+        raw = self.objects.put(activation_request(version.metadata_record(), expected_active_version_id=None))
+        approval = ExperienceEvent.create(event_type="state_activation_approval", scope=self.scope,
+            occurred_at="2026-09-29T12:15:00Z", content_digest=raw.plaintext_sha256,
+            provenance=ProvenanceReference.create(provenance_type="derived_inference",
+                source_reference_ids=(source.event_id,), derivation_activity_id="fixture-owner-activation",
+                responsible_component="fictional-owner-fixture"), retention_class="ordinary_experience",
+            storage_tier="raw_buffer", payload_reference=raw.object_id)
+        self.log.append(approval, expected_revision=len(self.log.replay()) - 1)
+        register_experience_source(event_id=approval.event_id, raw=raw, registry=self.registry,
+            log=self.log, objects=self.objects, role="derived_inference", modality="text")
+        key = Ed25519PrivateKey.generate()
+        proofs = {approval.event_id: OwnerActionProof(action="state_activation", event_id=approval.event_id,
+            event_sha256=approval.event_sha256, signature_base64=base64.b64encode(
+                key.sign(owner_action_message(approval, "state_activation"))).decode())}
+        verifier = Ed25519OwnerActionVerifier(scope=self.scope,
+            owner_public_key=key.public_key().public_bytes(Encoding.Raw, PublicFormat.Raw), proofs=proofs)
+        self.state.activate(**state_fixture.identity(), approval_event_id=approval.event_id,
+            expected_active_version_id=None, verifier=verifier, **inputs)
+        self.runtime.state_approval_verifier = verifier
+        clock = self.runtime.clock
+        def withdraw_at_delivery():
+            proofs.clear()
+            return clock()
+        self.runtime.clock = withdraw_at_delivery
+        count = len(self.log.replay())
+        with self.assertRaises(PermissionError):
+            self.runtime.judge(plan=ContextPlan("withdraw-owner-at-delivery", "personal_judgment",
+                state_routes=(StateRoute(**state_fixture.identity()),)), task=b"supplied task",
+                invocation_id="withdraw-owner-at-delivery")
+        self.assertEqual(len(self.log.replay()), count, "withdrawn owner proof allowed a canonical delivery")
+        self.assertEqual(personality.invocations, [])
+
+    def test_policy_owner_replacement_during_qualification_stops_judgment(self):
+        self._admit_artifact("memory_formation")
+        personality = self._admit_artifact("personality_judgment")
+        accepted = self._accept(self._form())
+        class DenyPolicy(RegisteredJudgmentContextPolicy):
+            def allow_event(self, event_id, purpose):
+                return False
+        deny = DenyPolicy(claims=self.authority, state=self.state, log=self.log,
+            registry=self.registry, permissions=self.source_policy)
+        verify = self.qualifier.verify
+        def replace_policy(**fields):
+            result = verify(**fields)
+            self.runtime.context_policy = deny
+            return result
+        self.qualifier.verify = replace_policy
+        count = len(self.log.replay())
+        with self.assertRaises(PermissionError):
+            self.runtime.judge(plan=ContextPlan("replace-policy-during-qualification", "personal_judgment",
+                exact_claim_ids=(accepted.claim_id,), minimum_claims=1), task=b"supplied task",
+                invocation_id="replace-policy-during-qualification")
+        self.assertEqual(len(self.log.replay()), count)
+        self.assertEqual(personality.invocations, [])
+
     def test_denied_judgment_opens_no_private_qualification_or_source_bytes(self):
         self._admit_artifact("memory_formation")
         self._admit_artifact("personality_judgment")

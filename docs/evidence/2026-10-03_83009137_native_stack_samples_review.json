@@ -1,0 +1,137 @@
+{
+  "recorded_at_utc": "2026-10-03T17:30:15.917053Z",
+  "run_id": 37139200958,
+  "job_id": 111249936520,
+  "published_source": "83009137a5f795a6b3d6cf56f3a5261656fa1fd3",
+  "runtime_source": "4b88946f404d7359943b5edb2504a2f0c2e96320",
+  "collection": "success",
+  "fixture_status": "failed",
+  "observation_status": "sampled",
+  "outcome_counts": {
+    "capped": 0,
+    "errors": 0,
+    "expected_failures": 0,
+    "failures": 1,
+    "passed": 0,
+    "skipped": 0,
+    "tests": 1,
+    "unexpected_successes": 0
+  },
+  "source_counts": {
+    "before": 116,
+    "after": 117,
+    "flora": 61,
+    "alice": 56
+  },
+  "artifact_archive_sha256": "f585f7024c479a145685f95411ffb2c4c3ba3b3300827917ecbe2f0a8e78360a",
+  "artifact_json_sha256": "10c9ff2fe5f11e8d68b0f08c85ac09e7301edfd168cf44d9c646ea0941b7d415",
+  "worker_samples": 2236,
+  "worker_count": 1,
+  "first_to_last_sample_seconds": 120.42464688199999,
+  "sampler_health": {
+    "observer_errors": 0,
+    "sampler_stopped": true,
+    "stack_depth_truncations": 0,
+    "thread_scan_truncations": 0,
+    "worker_limit_discarded_samples": 0
+  },
+  "worker_observation_capped": false,
+  "deepest_tag_counts_sum": 2236,
+  "top_deepest_tags": [
+    {
+      "tag": "rpc.psycopg_execute",
+      "samples": 639,
+      "fraction_of_owned_samples": 0.28577817531305905
+    },
+    {
+      "tag": "registry.fetch",
+      "samples": 347,
+      "fraction_of_owned_samples": 0.15518783542039355
+    },
+    {
+      "tag": "rpc.kurrent_get_stream",
+      "samples": 153,
+      "fraction_of_owned_samples": 0.0684257602862254
+    },
+    {
+      "tag": "phase.origin_seal_verify",
+      "samples": 144,
+      "fraction_of_owned_samples": 0.06440071556350627
+    },
+    {
+      "tag": "shared.frame.context_binding_verify",
+      "samples": 135,
+      "fraction_of_owned_samples": 0.06037567084078712
+    },
+    {
+      "tag": "permissions.stored_action",
+      "samples": 118,
+      "fraction_of_owned_samples": 0.052772808586762074
+    },
+    {
+      "tag": "permissions.current_action",
+      "samples": 102,
+      "fraction_of_owned_samples": 0.04561717352415027
+    },
+    {
+      "tag": "context.assemble",
+      "samples": 89,
+      "fraction_of_owned_samples": 0.03980322003577817
+    },
+    {
+      "tag": "phase.origin_verify",
+      "samples": 69,
+      "fraction_of_owned_samples": 0.030858676207513418
+    },
+    {
+      "tag": "shared.frame.binding",
+      "samples": 52,
+      "fraction_of_owned_samples": 0.023255813953488372
+    },
+    {
+      "tag": "native.phase_now",
+      "samples": 48,
+      "fraction_of_owned_samples": 0.02146690518783542
+    },
+    {
+      "tag": "shared.frame.base_bindings",
+      "samples": 44,
+      "fraction_of_owned_samples": 0.01967799642218247
+    },
+    {
+      "tag": "shared.history.permissions",
+      "samples": 41,
+      "fraction_of_owned_samples": 0.018336314847942754
+    },
+    {
+      "tag": "source.prime_rows",
+      "samples": 39,
+      "fraction_of_owned_samples": 0.01744186046511628
+    },
+    {
+      "tag": "phase.descriptor_contracts",
+      "samples": 29,
+      "fraction_of_owned_samples": 0.0129695885509839
+    }
+  ],
+  "observation": "Storage-facing calls are prominent:639 psycopg-execute and153 Kurrent-stream samples;347 additional samples have registry-fetch as their deepest fixed tag. Registry-fetch includes untargeted descendants and cannot all be labelled I/O.",
+  "decision": "Defer further origin-seal tuning. Distinguish full H authentication, current H metadata checks and C preparation/barrier reads using one bounded nearest-code-scope/deepest-tag matrix before changing the serving contract.",
+  "unresolved": "Marginal inclusive counters do not identify intersections or assign physical-read samples to their H/C caller. No exact job/call counts, CPU duration or speedup follow from these samples.",
+  "alice_alignment": "Use the existing narrow finite H/C/Claim/state/source slice. Preserve separate history/current-context purposes and source caps, independent callbacks and joint terminal observations. Materialized current serving and explicit full authentication/reconstruction remain separate roles; do not build the complete mission or memory platform.",
+  "next_discriminating_result": "A healthy source-verified matrix must sum to owned samples and show which fixed scope encloses storage-facing samples. Choose a change tied to that scope; reject a scope diagnosis if coverage is missing, capped or source-mismatched.",
+  "qualification": false,
+  "learned_behavior_run": false,
+  "performance_improvement_claimed": false,
+  "limits": [
+    "Owned identity is a sampled original-code ancestor, not exact job entry/lifecycle counts.",
+    "Observation window begins at each thread identifier first sampled owned frame and never resets.",
+    "Thread identifiers can be reused; distinct thread lifetimes and short jobs may be missed.",
+    "Fixed-interval wall samples are biased by GIL scheduling, native calls and thread activity.",
+    "Snapshots can be stale before inspection; no CPU, exact durations or call counts are inferred.",
+    "Deepest fixed tag includes untargeted descendants; inclusive tags overlap and cannot be summed.",
+    "Parent/setup attribution is unobserved; polling itself adds unmeasured diagnostic overhead.",
+    "No call/trace hooks, delegates or response/CI deadlines are changed.",
+    "Only fixed labels, numeric aggregates and source digests are saved; frames/locals/payloads are transient.",
+    "Closing/capping observation does not stop, cancel or wait for owned worker completion."
+  ]
+}

@@ -578,3 +578,11 @@ class DurableOwnerProofLookup:
         if original is None or verifier._verify(original, proof.action) is not True:
             raise ValueError("durable owner proof lost its exact event/signature binding")
         return proof
+
+
+# Definition-time origins for the private actual-phase owner map. A later
+# callable replacement is a custom port and cannot redefine native admission.
+_PHASE_NATIVE_ORIGINS = tuple((owner, name, function, function.__code__)
+    for owner, name, function in (
+        (_SourceAuthorizedObjectReads, "_check", _SourceAuthorizedObjectReads._check),
+    ))

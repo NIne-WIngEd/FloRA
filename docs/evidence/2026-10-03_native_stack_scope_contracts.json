@@ -1,0 +1,71 @@
+{
+  "recorded_at_utc": "2026-10-03T17:32:45.418153Z",
+  "operation": "bounded_scope_attribution_for_existing_original_code_sampler",
+  "base_head": "94fab4bc5592c4b01fa4bcd1a83093ff32aba463",
+  "runtime_source": "4b88946f404d7359943b5edb2504a2f0c2e96320",
+  "source_sha256": {
+    "scripts/profile_selected_native_stacks.py": "3a35438d8a8ed28c647ecbcd6aa2567b1e6c0b16b8def34bbdfb32e3fc2d2c9e",
+    "tests/test_native_stack_sampler.py": "1919eddfc66a694d641fe157d8bf5a47ef8cd51aaeb6a3f55c2a344ff3ff4341"
+  },
+  "unchanged_runtime_and_aggregate_sha256": {
+    "src/flora/selected/selected_phase_authority.py": "6589bce9051bcc410282b5aba7fc3259bc0ef57105aeb98966e0fa50aaa9542a",
+    "src/flora/selected/selected_authority_frame.py": "599d996805c8c197a3bdd102df3fc5fb6d8500f12a613c81565c903ec76947d6",
+    "tests/test_shared_context_bindings.py": "07c9b08ec27b745a74292226ce92fd694a213d05e21e69cc6a976820391bbea2",
+    "tests/test_selected_phase_authority.py": "fba8e8b69d9b05e858a0fbcf3d9ff8ad9769225149425e50acbad4d567b55e11",
+    "tests/test_shared_phase_authority.py": "f473f346e8bc5686d03da12bae4fc253a10feef05c9ee766978c2e02552d69b4",
+    "tests/test_shared_authority_frame.py": "6adaae62780b1fabda5e9e39c041d8849797206f4433822c807de57683300552",
+    "scripts/profile_selected_native_boundaries.py": "56e3000009353d1ca96e89a39a15a87bb5110ea757281cad49256cdf33ba31fe",
+    "tests/test_native_boundary_profiler.py": "131f3488c0164e771a8f2d24a33a2198695499f0c23efd69bd72765f7394797e"
+  },
+  "unchanged_workflow_published_sha256": "6bb8dc7fee4287044730a93bab2f51146242bcc0a0213771fa7aec0abd6f6a93",
+  "native_image_sha256": "bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+  "red": {
+    "new_tests": 4,
+    "errors_including_subtests": 7,
+    "cause": "missing scopes capability"
+  },
+  "initial_full_check": {
+    "tests": 48,
+    "seconds": 50.214,
+    "errors": 3,
+    "cause": "controlled CLI mocks omitted native_scopes and imported actual project modules",
+    "timeout_changed": false
+  },
+  "repair": "Supply an exact controlled owned-code scope in the controlled CLI harness; separately verify the actual original-fixture inventory.",
+  "final_green": {
+    "tests": 48,
+    "sampler_tests": 16,
+    "aggregate_observer_tests": 32,
+    "seconds": 13.684,
+    "exit_code": 0
+  },
+  "actual_inventory": {
+    "fixed_targets": 50,
+    "fixed_scopes": 8,
+    "imports_original_fixture": true,
+    "services_or_fixture_not_run": true
+  },
+  "review": {
+    "critical": 0,
+    "important": 0,
+    "minor": 0,
+    "read_only": true,
+    "result": "no actionable findings including harness correction"
+  },
+  "limits": {
+    "maximum_scopes": 8,
+    "maximum_targets": 96,
+    "maximum_worker_rows": 32,
+    "maximum_stack_depth": 256,
+    "interval_seconds": 0.05,
+    "worker_cap_seconds": 180,
+    "response_budget_ms": 60000,
+    "ci_timeout_minutes": 60
+  },
+  "scope_rule": "Nearest retained exact-code ancestor at or below original owned work; one fixed deepest-tag count per accepted sample.",
+  "privacy": "Fixed numeric matrix only; no ordered stack paths, raw frames, locals, queries, source IDs or private logs.",
+  "qualification": false,
+  "learned_behavior_run": false,
+  "physical_result": "unobserved",
+  "performance_improvement_claimed": false
+}

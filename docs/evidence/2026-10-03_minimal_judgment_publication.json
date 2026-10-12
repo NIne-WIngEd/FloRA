@@ -1,0 +1,48 @@
+{
+  "schema": "flora-minimal-judgment-publication-v1",
+  "timestamp_utc": "2026-10-03T20:25:43.945016Z",
+  "serving_commit": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+  "serving_tree": "3d610d883eb6e419a6293dffe86b022a98b6e8f2",
+  "context_commit": "877162da87f43e47fc8a328f26d0a6c4579b9659",
+  "context_tree": "0d3e56fff231e0ccee8e107ff67896984b6a603c",
+  "source_sha256": {
+    "src/flora/selected/context.py": "8ed0fd875d9239a3aaa6c0a18061a336a3514fef4b7a9fd46cb3f88df9c75ed5",
+    "src/flora/selected/experiment_runtime.py": "e18c95757e2566600432e7aeaee1dd72ab22aad08b8ecee597a4c3a96f484c95",
+    "tests/test_selected_experiment_runtime.py": "fcc7a025e7d88b70f28ad9713b22f6f8576bda8604f72ac38b3403f5988f7a97"
+  },
+  "shared_doc_sha256": {
+    "AGENTS.md": "8a548ec5b72f665721d2f1ee6509b4bc1a0c3a3b0a3caead7acf56041d226cb1",
+    "docs/FLORA_CONTEXT.md": "38816caff4802761ba15024c70a9ca906b81e7346cf9de0f84f00f76ebfeaba6",
+    "docs/VERIFICATION_CHECKPOINT_2026-10-03.md": "f3bc1f4d47558a77f7627f00697b26f6a92ff3fd56a4af03e61e0e8c9f0df729",
+    "docs/LATENCY_ARCHITECTURE_RECALIBRATION_2026-10-01.md": "9289fc9b3fae479c389a1eb337228df9f4f640b3d48b257a86e1825e33d347fa",
+    "docs/MINIMAL_JUDGMENT_INVOCATION_2026-10-03.md": "b47c96a4dd26ed2d309dc6fae37ad19584d653d09637db3321ee3796283a4976",
+    "docs/fbm-seeds/README.md": "bf57d3fb27a8d244ac4365d97ec0c1164185dfdec4bbeee63e2b65477336cdb8",
+    "docs/fbm-seeds/2026-10-03_minimal_owned_judgment_composition.jsonl": "1a1633ec66ba96c409f2f1640f9a4d20fca31babb1a29a6f6a192c9b2951db8e",
+    "docs/evidence/2026-10-03_minimal_judgment_composition.json": "b6044b5ec777f3a8f2ea076ac98a53d9b77e699892245c68feabc0728b4a8414"
+  },
+  "verification": "Actual fetched Git blobs match all3 tested LF source hashes and local exact bytes. All8 shared docs equal dev/context/local bytes.14 H/phase/recovery/outcome/comparison surfaces remain byte-identical to9705aec7. Context runtime remains historical and unchanged.",
+  "ordinary_runs": [
+    {
+      "id": 37151333895,
+      "event": "push",
+      "head_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+      "status_at_capture": "in_progress",
+      "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151333895"
+    },
+    {
+      "id": 37151335920,
+      "event": "pull_request",
+      "head_sha": "bf49497011c0edacc49b5c749c21ac4d1539716b",
+      "status_at_capture": "in_progress",
+      "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37151335920"
+    }
+  ],
+  "dispatch": "Existing ordinary workflow automatically triggered by one serving publication; no manual diagnostic or duplicate dispatch. Subsequent documentation-only publication uses skip-ci.",
+  "component_cases": 27,
+  "fbm_procedure_count": 124,
+  "physical_qualified": false,
+  "latency_qualified": false,
+  "learned_qualified": false,
+  "release_qualified": false,
+  "next": "Stop when only these external gates remain. Recover completed exact job/checkout/source identities, case totals/incomplete cases and actual BEFORE/AFTER timings before selecting further work. This foreground composition leaves H and passive recovery algorithms unchanged; do not blindly patch another hotspot."
+}

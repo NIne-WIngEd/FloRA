@@ -115,10 +115,18 @@ class PreregisteredPhaseCaptureLineageVerifier:
         history = kwargs["history"]
         self.preregistration.authorize_slot_use(snapshot_id=self.snapshot_id, case_id=kwargs["case_id"],
             phase=kwargs["phase"], arm=self.arm, history=history, plan=kwargs["context"].plan)
-        actual = NativeJudgmentLineageVerifier.context_lineage(self, **kwargs)
-        self.preregistration.authorize_slot_use(snapshot_id=self.snapshot_id, case_id=kwargs["case_id"],
-            phase=kwargs["phase"], arm=self.arm, history=history, plan=kwargs["context"].plan)
-        return actual
+        lineage_completion = []
+        try:
+            actual = NativeJudgmentLineageVerifier.context_lineage(self, **kwargs)
+            from ._phase_preparation import _lineage_completion_record, _finish_lineage_use
+            lineage_record = _lineage_completion_record(self, lineage_completion)
+            lineage_check = lineage_record[1]
+            self.preregistration.authorize_slot_use(snapshot_id=self.snapshot_id, case_id=kwargs["case_id"],
+                phase=kwargs["phase"], arm=self.arm, history=history, plan=kwargs["context"].plan)
+            _finish_lineage_use(self, lineage_completion, lineage_check, lineage_record)
+            return actual
+        finally:
+            lineage_completion.clear()
 
     def authorize_context(self, **kwargs):
         raise PermissionError("preregistration capture cannot authorize native evaluation")
@@ -599,7 +607,6 @@ class XTDBPhaseSnapshotCustody:
                     personality_binding=ablation_personality_binding, authority_guard=capture_guard)
         elif ablation_personality_binding is not None:
             raise PermissionError("retained before role is only allowed for preregistered after ablation")
-        context = capture_runtime._context(plan, authority_guard=capture_guard)
         receipts = {}
         capturing = copy(lineage)
         capturing.runtime, capturing.history_authority = capture_runtime, history_authority
@@ -610,96 +617,101 @@ class XTDBPhaseSnapshotCustody:
             receipts[request.request_sha256] = value
             return value
         capturing.phase_receipt_for = receipt_for
-        actual = capturing.context_lineage(case_id=case_id, phase=phase, history=history, context=context, authority_guard=capture_guard)
-        claim_records = []
-        for binding in actual.claims:
-            current = self.runtime.claims.load_current(binding.claim_id)
-            version = self.runtime.claims.load_version(binding.version_id)
-            relations = [self.runtime.claims.load_evidence_relation(row[0]) for row in binding.evidence_relations]
-            if current["projection_sha256"] != binding.current_projection_sha256 or version["version_sha256"] != binding.version_sha256:
-                raise ValueError("Claim changed during phase capture")
-            claim_records.append({"claim_id": binding.claim_id, "projection": current, "version": version, "relations": relations})
-        states = []
-        for binding in actual.personal_state:
-            head = self.runtime.state._fetch(_ACTIVE, self.runtime.state._head_id(binding.subject_type, binding.subject_id, binding.projection_id))
-            row = self.runtime.state._fetch(_VERSIONS, self.runtime.state._version_id(binding.version_id), all_valid=True)
-            receipt = self.runtime.state._history(binding.projection_id, binding.version_id)
-            if head is None or row is None or head["version_id"] != binding.version_id or receipt["record_sha256"] != binding.activation_receipt_sha256:
-                raise ValueError("personal-state activation changed during phase capture")
-            states.append({"route": {"subject_type": binding.subject_type, "subject_id": binding.subject_id, "projection_id": binding.projection_id},
-                "head": {key: head[key] for key in ("_id", "scope_digest", "subject_type", "subject_id", "projection_id", "version_id", "projection_sha256", "activation_generation", "approval_event_id", "approval_event_sha256", "expected_active_version_id")},
-                "version": json.loads(str(row["record_json"])), "activation": receipt})
-        episodes = []
-        for binding in actual.episodes:
-            accepted, publication, request, _, record = self.runtime.state.episodes.current_lineage(binding.episode_id,
-                claims=self.runtime.claims, log=self.runtime.log)
-            if record["record_sha256"] != binding.publication_record_sha256:
-                raise ValueError("episode publication changed during phase capture")
-            episodes.append({"episode_id": binding.episode_id, "thread_id": publication.thread_id,
-                "head": self.runtime.state.episodes._head(publication.thread_id), "publication": record})
-        artifacts = []
-        for manifest in actual.artifacts:
-            registry = capture_runtime.artifacts
-            head = registry._fetch(artifacts_module._CURRENT, registry._key("role", manifest.role))
-            admission = registry._fetch(artifacts_module._ADMISSIONS, registry._key("artifact", manifest.artifact_id))
-            if head is None or admission is None or admission["record_sha256"] != head["admission_sha256"]:
-                raise ValueError("artifact changed during phase capture")
-            qualification = registry._fetch(artifacts_module._QUALIFICATIONS, registry._key("qualification", admission["qualification_id"]))
-            artifacts.append({"role": manifest.role, "head": head, "admission": admission, "qualification": qualification})
-        if capturing.context_lineage(case_id=case_id, phase=phase, history=history, context=context, authority_guard=capture_guard) != actual:
-            raise ValueError("phase authority changed during capture")
-        parents = tuple(sorted(set(history.event_ids) | set(context.source_event_ids)))
-        self._sources_now(parents)
-        entries = self.runtime.log.replay_committed()
-        body = _plain({"schema": self._schema("flora-selected-phase-snapshot"), "scope": self.scope.metadata_record(),
-            "authority_namespace_id": self.authority_namespace_id, "run_id": self.run_id, "snapshot_id": snapshot_id,
-            "case_id": case_id, "phase": phase, "arm": arm, **self.identity_record(),
-            "history_sha256": history.digest(), "original_event_ids": sorted(history.event_ids), "source_event_ids": list(parents),
-            "context_plan": plan_record(plan), "context_receipt": context.receipt_record(),
-            "context_lineage": actual.record(), "context_lineage_sha256": actual.lineage_sha256,
-            "claims": claim_records, "states": states, "episodes": episodes, "artifacts": artifacts,
-            "update_policy": update_policy.record(), "update_receipt_base64": None if update_receipt is None else base64.b64encode(update_receipt).decode(),
-            "producer_receipts": [{"request_sha256": key, "receipt_base64": base64.b64encode(value).decode()} for key, value in sorted(receipts.items())],
-            "capture_stream_position": entries[-1].stream_position, "captured_at": normalize_timestamp(self.clock())})
-        if self.preregistration is not None:
-            body["capture_slot_authority"] = _plain(slot_authority)
-        verified_update = verify_update_policy(runtime=capture_runtime, snapshot_record=body, receipt=update_receipt,
-            authority_guard=capture_guard)
-        body["verified_update_exclusion"] = verified_update
-        if capturing.context_lineage(case_id=case_id, phase=phase, history=history, context=context, authority_guard=capture_guard) != actual:
-            raise PermissionError("phase permission changed during update-exclusion verification")
-        snapshot = SelectedPhaseSnapshot(body)
-        snapshot.validate()
-        content = canonical_json_bytes(body)
-        def write_gate():
+        from ._phase_preparation import _phase_preparation
+        with _phase_preparation(issuer=self, kind="capture", runtime=capture_runtime, consumer=capturing,
+                plan=plan, history=history, case_id=case_id, phase=phase,
+                identity=(self.run_id, snapshot_id, arm), guard=capture_guard) as operation:
+            context = operation.context
+            actual = capturing.context_lineage(case_id=case_id, phase=phase, history=history, context=context, authority_guard=capture_guard)
+            claim_records = []
+            for binding in actual.claims:
+                current = self.runtime.claims.load_current(binding.claim_id)
+                version = self.runtime.claims.load_version(binding.version_id)
+                relations = [self.runtime.claims.load_evidence_relation(row[0]) for row in binding.evidence_relations]
+                if current["projection_sha256"] != binding.current_projection_sha256 or version["version_sha256"] != binding.version_sha256:
+                    raise ValueError("Claim changed during phase capture")
+                claim_records.append({"claim_id": binding.claim_id, "projection": current, "version": version, "relations": relations})
+            states = []
+            for binding in actual.personal_state:
+                head = self.runtime.state._fetch(_ACTIVE, self.runtime.state._head_id(binding.subject_type, binding.subject_id, binding.projection_id))
+                row = self.runtime.state._fetch(_VERSIONS, self.runtime.state._version_id(binding.version_id), all_valid=True)
+                receipt = self.runtime.state._history(binding.projection_id, binding.version_id)
+                if head is None or row is None or head["version_id"] != binding.version_id or receipt["record_sha256"] != binding.activation_receipt_sha256:
+                    raise ValueError("personal-state activation changed during phase capture")
+                states.append({"route": {"subject_type": binding.subject_type, "subject_id": binding.subject_id, "projection_id": binding.projection_id},
+                    "head": {key: head[key] for key in ("_id", "scope_digest", "subject_type", "subject_id", "projection_id", "version_id", "projection_sha256", "activation_generation", "approval_event_id", "approval_event_sha256", "expected_active_version_id")},
+                    "version": json.loads(str(row["record_json"])), "activation": receipt})
+            episodes = []
+            for binding in actual.episodes:
+                accepted, publication, request, _, record = self.runtime.state.episodes.current_lineage(binding.episode_id,
+                    claims=self.runtime.claims, log=self.runtime.log)
+                if record["record_sha256"] != binding.publication_record_sha256:
+                    raise ValueError("episode publication changed during phase capture")
+                episodes.append({"episode_id": binding.episode_id, "thread_id": publication.thread_id,
+                    "head": self.runtime.state.episodes._head(publication.thread_id), "publication": record})
+            artifacts = []
+            for manifest in actual.artifacts:
+                registry = capture_runtime.artifacts
+                head = registry._fetch(artifacts_module._CURRENT, registry._key("role", manifest.role))
+                admission = registry._fetch(artifacts_module._ADMISSIONS, registry._key("artifact", manifest.artifact_id))
+                if head is None or admission is None or admission["record_sha256"] != head["admission_sha256"]:
+                    raise ValueError("artifact changed during phase capture")
+                qualification = registry._fetch(artifacts_module._QUALIFICATIONS, registry._key("qualification", admission["qualification_id"]))
+                artifacts.append({"role": manifest.role, "head": head, "admission": admission, "qualification": qualification})
+            if capturing.context_lineage(case_id=case_id, phase=phase, history=history, context=context, authority_guard=capture_guard) != actual:
+                raise ValueError("phase authority changed during capture")
+            parents = tuple(sorted(set(history.event_ids) | set(context.source_event_ids)))
+            self._sources_now(parents)
+            entries = self.runtime.log.replay_committed()
+            body = _plain({"schema": self._schema("flora-selected-phase-snapshot"), "scope": self.scope.metadata_record(),
+                "authority_namespace_id": self.authority_namespace_id, "run_id": self.run_id, "snapshot_id": snapshot_id,
+                "case_id": case_id, "phase": phase, "arm": arm, **self.identity_record(),
+                "history_sha256": history.digest(), "original_event_ids": sorted(history.event_ids), "source_event_ids": list(parents),
+                "context_plan": plan_record(plan), "context_receipt": context.receipt_record(),
+                "context_lineage": actual.record(), "context_lineage_sha256": actual.lineage_sha256,
+                "claims": claim_records, "states": states, "episodes": episodes, "artifacts": artifacts,
+                "update_policy": update_policy.record(), "update_receipt_base64": None if update_receipt is None else base64.b64encode(update_receipt).decode(),
+                "producer_receipts": [{"request_sha256": key, "receipt_base64": base64.b64encode(value).decode()} for key, value in sorted(receipts.items())],
+                "capture_stream_position": entries[-1].stream_position, "captured_at": normalize_timestamp(self.clock())})
+            if self.preregistration is not None:
+                body["capture_slot_authority"] = _plain(slot_authority)
+            verified_update = verify_update_policy(runtime=capture_runtime, snapshot_record=body, receipt=update_receipt,
+                authority_guard=capture_guard)
+            body["verified_update_exclusion"] = verified_update
+            if capturing.context_lineage(case_id=case_id, phase=phase, history=history, context=context, authority_guard=capture_guard) != actual:
+                raise PermissionError("phase permission changed during update-exclusion verification")
+            snapshot = SelectedPhaseSnapshot(body)
+            snapshot.validate()
+            content = canonical_json_bytes(body)
+            def write_gate():
+                capture_guard()
+                self._sources_now(parents)
+                return True
+            guarded = PhaseAuthorizedObjectReads(self.runtime.objects, write_gate)
+            raw = guarded.put(content)
+            intent = {"schema": self._schema("flora-selected-phase-capture-intent"), "scope": self.scope.metadata_record(),
+                "authority_namespace_id": self.authority_namespace_id, "run_id": self.run_id, "snapshot_id": snapshot_id,
+                **self.identity_record(), "snapshot_sha256": raw.plaintext_sha256, "object_id": raw.object_id,
+                "object_size": raw.size, "claim_ids": sorted(item["claim_id"] for item in claim_records),
+                **{name: body[name] for name in ("source_event_ids", "case_id", "phase", "arm", "history_sha256", "captured_at", "capture_stream_position", "context_lineage_sha256")},
+                "context_plan_sha256": canonical_sha256(body["context_plan"])}
+            intent["record_sha256"] = canonical_sha256(intent)
+            self._insert(_INTENTS, intent)
+            if capturing.context_lineage(case_id=case_id, phase=phase, history=history, context=context, authority_guard=capture_guard) != actual:
+                raise PermissionError("phase authority changed after durable capture intent")
+            self._sources_now(parents)
+            event = self._event_for_intent(intent)
+            expected_revision = len(self.runtime.log.replay()) - 1
             capture_guard()
             self._sources_now(parents)
-            return True
-        guarded = PhaseAuthorizedObjectReads(self.runtime.objects, write_gate)
-        raw = guarded.put(content)
-        intent = {"schema": self._schema("flora-selected-phase-capture-intent"), "scope": self.scope.metadata_record(),
-            "authority_namespace_id": self.authority_namespace_id, "run_id": self.run_id, "snapshot_id": snapshot_id,
-            **self.identity_record(), "snapshot_sha256": raw.plaintext_sha256, "object_id": raw.object_id,
-            "object_size": raw.size, "claim_ids": sorted(item["claim_id"] for item in claim_records),
-            **{name: body[name] for name in ("source_event_ids", "case_id", "phase", "arm", "history_sha256", "captured_at", "capture_stream_position", "context_lineage_sha256")},
-            "context_plan_sha256": canonical_sha256(body["context_plan"])}
-        intent["record_sha256"] = canonical_sha256(intent)
-        self._insert(_INTENTS, intent)
-        if capturing.context_lineage(case_id=case_id, phase=phase, history=history, context=context, authority_guard=capture_guard) != actual:
-            raise PermissionError("phase authority changed after durable capture intent")
-        self._sources_now(parents)
-        event = self._event_for_intent(intent)
-        expected_revision = len(self.runtime.log.replay()) - 1
-        capture_guard()
-        self._sources_now(parents)
-        self.runtime.log.append(event, expected_revision=expected_revision)
-        source = register_experience_source(event_id=event.event_id, raw=raw, registry=self.runtime.sources,
-            log=self.runtime.log, objects=guarded, role="derived_inference", modality="structured")
-        record = self._custody_record(intent, event, source)
-        self._insert(_TABLE, record)
-        capture_guard()
-        self._sources_now(parents)
-        return snapshot
+            self.runtime.log.append(event, expected_revision=expected_revision)
+            source = register_experience_source(event_id=event.event_id, raw=raw, registry=self.runtime.sources,
+                log=self.runtime.log, objects=guarded, role="derived_inference", modality="structured")
+            record = self._custody_record(intent, event, source)
+            self._insert(_TABLE, record)
+            capture_guard()
+            self._sources_now(parents)
+            return snapshot
 
     def _phase_metadata_gate(self, snapshot_id, expected):
         if self.metadata(snapshot_id) != expected:
@@ -852,3 +864,13 @@ class _CanonicalOrphanPhaseCustody(XTDBPhaseSnapshotCustody):
         if snapshot_id != self._orphan_record["snapshot_id"]:
             raise PermissionError("phase index repair cannot resolve another capture")
         return self._verify_metadata(snapshot_id, self._orphan_record)
+
+
+# Definition-time origins for the private actual-phase owner map. A later
+# callable replacement is a custom port and cannot redefine native admission.
+_PHASE_NATIVE_ORIGINS = tuple((owner, name, function, function.__code__)
+    for owner, name, function in (
+        (XTDBPhaseSnapshotCustody, "capture", XTDBPhaseSnapshotCustody.capture),
+        (XTDBPhaseSnapshotCustody, "authorize", XTDBPhaseSnapshotCustody.authorize),
+        (PreregisteredPhaseCaptureLineageVerifier, "context_lineage", PreregisteredPhaseCaptureLineageVerifier.context_lineage),
+    ))

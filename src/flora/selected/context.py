@@ -316,6 +316,28 @@ def record_context_delivery(
     )
     if fresh.receipt_record() != context.receipt_record():
         raise ValueError("context changed before delivery")
+    return _record_authenticated_context_delivery(context=context, log=log, objects=objects,
+        references=references, policy=policy, occurred_at=occurred_at,
+        expected_revision=expected_revision, authority_guard=authority_guard)
+
+
+def _record_authenticated_context_delivery(
+    *, context: LocalContext, log: KurrentExperienceLog,
+    objects: EncryptedObjectPlane, references: Mapping[str, RawObjectReference],
+    policy: ContextUsePolicy, occurred_at: str, expected_revision: int,
+    authority_guard: Callable[[], None] | None,
+) -> RecordedEvent:
+    """Record material authenticated by the owning invocation's preparation.
+
+    This private composition port issues no prepared-context proof. The runtime
+    must revalidate its actual preparation before calling it. The public delivery
+    API above still reconstructs supplied contexts. Both paths retain exact
+    original authentication, current source checks and the pre-append guard.
+    """
+    if log.scope != objects.scope:
+        raise ValueError("context delivery crosses host scope")
+    if authority_guard is not None:
+        authority_guard()
     replayed = log.replay()
     if len(replayed) - 1 != expected_revision:
         raise ValueError("stale expected Experience revision")

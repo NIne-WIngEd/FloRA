@@ -1,0 +1,549 @@
+{
+  "schema": "flora-completed-terminal-component-verification-v1",
+  "recorded_at_utc": "2026-10-05T23:32:58.547128Z",
+  "status": "18_unique_component_cases_passed; connected_physical_pipeline_next",
+  "mandatory_method": "Standalone diagonosis eight steps, including root and all agents",
+  "source_publication": {
+    "schema": "flora-terminal-source-publication-v1",
+    "parent": "314097e54639c6139a5f6170a7c1647fdc66818b",
+    "commit": "24a72db58f530619143322c29e36ecbec0b052a5",
+    "tree": "7e960c7b8a13e2cbc45a29bb016542d8b932e7e5",
+    "baseline_commit": "bfff869e5193cbccdb1b466c445076376e81f589",
+    "alice_contract_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+    "changed_paths": [
+      "src/flora/selected/_phase_preparation.py",
+      "src/flora/selected/context_guard.py",
+      "src/flora/selected/judgment_lineage.py",
+      "src/flora/selected/phase_routes.py",
+      "src/flora/selected/phase_snapshots.py",
+      "tests/test_phase_terminal_completion.py"
+    ],
+    "verified_frozen_flora_files": 189,
+    "source_sha256": {
+      "src/flora/selected/_phase_preparation.py": "2b03562bf9528bae49776e232a2f359e6376aca0f4b241742dcb174709ca31db",
+      "src/flora/selected/context_guard.py": "259036dfb654f840fa874838460e023c7d6e4bbb0c750918303e65b14c51603e",
+      "src/flora/selected/judgment_lineage.py": "04de657e4a2f98abadce80a9330a29fb4d1572bd1c67a5b206f093bc216e5a09",
+      "src/flora/selected/phase_snapshots.py": "87103b4390931d0d50524de1693cde2e27ebdc3d54333ab78e931ef46081a079",
+      "src/flora/selected/phase_routes.py": "ad6e858dc51b242c0b9a9f20d198a1662194b3652e1391cc54451672f8ba01b3",
+      "tests/test_phase_terminal_completion.py": "89f352fd5bc152c71fee45f798bf2d86a0778e21ed8ce26a5a05f43e4500bc72"
+    },
+    "occupied_checkout_index_unchanged": true,
+    "workflow_budgets_unchanged": true,
+    "remote_refs_updated": false
+  },
+  "claim": "Reuse finite prepared historical evidence without allowing callback mutation, expired call state, or withdrawn independent history/personal permissions to authorize the next protected operation.",
+  "project_meaning": "FloRA needs bounded historical custody and current authority for an accurate matched causal comparison. This preserves Alice semantics within the prototype; it neither builds the full entity platform nor the external personality/MFM.",
+  "completed_run": {
+    "container": "flora-temporal-fixture-final-recovery-20261005",
+    "image_id": "sha256:bbb524290db6a69edc7479eec6ee6a2d2b9946d5c0be0af86eb948575b5379e2",
+    "alice_contract_commit": "4f287a488bc908bd04f99255ee01b794bacba50b",
+    "started_at_utc": "2026-10-05T15:56:55Z",
+    "completed_at_utc": "2026-10-05T16:31:01Z",
+    "total_seconds": 2045.425,
+    "manifest_sha256": "db6093feb37969fbf642f01d588b4c2998578f66e0e269a71c9baa55a8ecc0a5",
+    "receipt_sha256": "77ba777bdbc1fd963ebead05cb37398b02770f5aac34e50db40bf5960ad2ad61",
+    "runner_sha256": "7c2339115653717e95d432dfd1aff411afed4378c472c64524439698066ed36a",
+    "mounted_source_files": 414,
+    "all_mounted_source_hashes_verified": true,
+    "all_15_log_hashes_verified": true,
+    "sources_unchanged": true,
+    "network": "none",
+    "physical_engines_run": false,
+    "fresh_cases": [
+      {
+        "label": "fallback_metadata_port_mutation",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_06_saved_fallback_metadata_port_mutation_cannot_bypass_history_denial",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 102.269,
+        "process_seconds": 108.444,
+        "log": "fallback_metadata_port_mutation.log",
+        "log_sha256": "221047baca28e0c03c99084d033aa520b62b317e655b78669f97181200a88635",
+        "observations": [
+          {
+            "active_preparation": false,
+            "callback_reached": true,
+            "capture_copy_observed": true,
+            "claim_read_entries_after_callback": 0,
+            "consumer_is_original": false,
+            "consumer_provenance": "actual_custody_capture_copy",
+            "custody_history_authority_exact": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "exact_slot": true,
+            "issued_use_count": 0,
+            "metadata_port_mutation_reached": true,
+            "native_preparation": null,
+            "schema": "flora-phase-terminal-completion-v1",
+            "shared_history_anchor_and_permissions": true,
+            "shared_preregistration": true,
+            "shared_runtime": true,
+            "variant": "fallback-metadata-port-denial"
+          }
+        ]
+      },
+      {
+        "label": "qualified_final_H_denial",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_04_qualified_last_source_callback_denial_refuses_lineage",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 522.553,
+        "process_seconds": 526.783,
+        "log": "qualified_final_H_denial.log",
+        "log_sha256": "a4c60f85d5f5b5077ea8bf0988a107b25bb74d1a607d8fd25170ededa69367a0",
+        "observations": [
+          {
+            "active_preparation": false,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "schema": "flora-phase-terminal-completion-v1",
+            "update_policy_verified": true,
+            "variant": "qualified-source-control"
+          },
+          {
+            "active_preparation": false,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "schema": "flora-phase-terminal-completion-v1",
+            "update_policy_verified": true,
+            "variant": "qualified-source-denial"
+          }
+        ]
+      },
+      {
+        "label": "nested_publication_tampering",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_05_inner_callback_cannot_publish_foreign_outer_completion",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 524.435,
+        "process_seconds": 528.782,
+        "log": "nested_publication_tampering.log",
+        "log_sha256": "5cb7d9814d748a4c7e269cbfeafc51f61ab9fef714ffa9233fe6d06dc8eb01d5",
+        "observations": [
+          {
+            "active_preparation": false,
+            "both_collectors_cleared": true,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "outer_count_before_intervention": 0,
+            "schema": "flora-phase-terminal-completion-v1",
+            "variant": "nested-publication-control"
+          },
+          {
+            "active_preparation": false,
+            "both_collectors_cleared": true,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "foreign_outer_installed": true,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "outer_count_before_intervention": 0,
+            "schema": "flora-phase-terminal-completion-v1",
+            "variant": "foreign-outer-completion"
+          }
+        ]
+      },
+      {
+        "label": "07_early_phase_receipt_cannot_bless_changed_fallback_metadata_port",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_07_early_phase_receipt_cannot_bless_changed_fallback_metadata_port",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 66.701,
+        "process_seconds": 71.819,
+        "log": "07_early_phase_receipt_cannot_bless_changed_fallback_metadata_port.log",
+        "log_sha256": "ebb79fc3d3754a25fce4afcaf645468b39ae70deca04daca6018c13c439cf863",
+        "observations": [
+          {
+            "active_preparation": false,
+            "basis_captured_before_callback": true,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "phase_receipt_calls": 2,
+            "schema": "flora-phase-terminal-completion-v1",
+            "variant": "early-metadata-port-control"
+          },
+          {
+            "active_preparation": false,
+            "basis_captured_before_callback": true,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "issued_use_count": 0,
+            "metadata_port_mutation_reached": true,
+            "native_preparation": null,
+            "phase_receipt_calls": 1,
+            "schema": "flora-phase-terminal-completion-v1",
+            "variant": "early-metadata-port-tamper"
+          }
+        ]
+      },
+      {
+        "label": "08_inner_collector_cannot_replace_pinned_record_with_same_check",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_08_inner_collector_cannot_replace_pinned_record_with_same_check",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 537.107,
+        "process_seconds": 542.648,
+        "log": "08_inner_collector_cannot_replace_pinned_record_with_same_check.log",
+        "log_sha256": "6ba3ad116b4d355545a916fd9f4aec9ba6ce2f2f6e7102a5e573768e5d85976f",
+        "observations": [
+          {
+            "active_preparation": false,
+            "both_collectors_cleared": true,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "original_record_pinned": true,
+            "schema": "flora-phase-terminal-completion-v1",
+            "variant": "same-check-reader-control"
+          },
+          {
+            "active_preparation": false,
+            "both_collectors_cleared": true,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "original_record_pinned": true,
+            "replacement_readers_empty": true,
+            "same_check_preserved": true,
+            "schema": "flora-phase-terminal-completion-v1",
+            "variant": "same-check-empty-readers"
+          }
+        ]
+      },
+      {
+        "label": "09_saved_native_barriers_expire_when_original_call_returns",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_09_saved_native_barriers_expire_when_original_call_returns",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 53.644,
+        "process_seconds": 58.6,
+        "log": "09_saved_native_barriers_expire_when_original_call_returns.log",
+        "log_sha256": "1068bfc2a4fccb180155f87ed880983f2be9723bc6118145a256d8b7546b7e37",
+        "observations": [
+          {
+            "active_preparation": false,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "expired_barriers_refused": true,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "saved_barriers_thread": 272638548276416,
+            "schema": "flora-phase-terminal-completion-v1",
+            "variant": "returned-native-barriers"
+          }
+        ]
+      },
+      {
+        "label": "issued_original_control",
+        "test": "test_phase_snapshots.PhaseDefaultVerifierTest.test_untouched_simple_namespace_verifier_uses_actual_capture",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 5.252,
+        "process_seconds": 9.917,
+        "log": "issued_original_control.log",
+        "log_sha256": "1f340706bcf73dd6026940f5359f78471db05900e403aaa1f842b456953fbb5c",
+        "observations": []
+      },
+      {
+        "label": "issued_live_port_and_one_assembly",
+        "test": "test_phase_snapshots.PhaseDefaultVerifierTest.test_simple_namespace_keeps_opaque_state_but_seals_approval_port",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 5.088,
+        "process_seconds": 9.456,
+        "log": "issued_live_port_and_one_assembly.log",
+        "log_sha256": "47c06e9bfdcaa3965c5ea7a166277b28f6a2af2e9a551e45c382c30fe797ec52",
+        "observations": []
+      },
+      {
+        "label": "unsupported_fallback_control",
+        "test": "test_phase_snapshots.PhaseDefaultVerifierTest.test_unsupported_mapped_representation_falls_back_before_preparation",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 2.502,
+        "process_seconds": 6.742,
+        "log": "unsupported_fallback_control.log",
+        "log_sha256": "c02f65fb974430343625df9b24ce2c7428e3e3271d40fb39d42efe4c4a282750",
+        "observations": []
+      },
+      {
+        "label": "replaced_factory_fallback",
+        "test": "test_phase_snapshots.PhaseDefaultVerifierTest.test_replaced_native_callback_factory_keeps_fresh_construction",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 2.441,
+        "process_seconds": 7.183,
+        "log": "replaced_factory_fallback.log",
+        "log_sha256": "bf577064b4b5274653f7c242d65ef80351cc8c811963d45b1890f984fff01c34",
+        "observations": []
+      },
+      {
+        "label": "unknown_bound_fallback",
+        "test": "test_phase_snapshots.PhaseDefaultVerifierTest.test_unknown_bound_function_on_native_owner_keeps_fresh_construction",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 2.627,
+        "process_seconds": 9.557,
+        "log": "unknown_bound_fallback.log",
+        "log_sha256": "6bcaa9ffc6d074d4edb3fc761829e6ad95a8e6a592039f666403ab58074f5874",
+        "observations": []
+      },
+      {
+        "label": "issued_lifetime_boundaries",
+        "test": "test_phase_snapshots.PhaseSnapshotTest.test_actual_operation_rejects_forgery_mutation_cross_thread_and_expiry",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 33.687,
+        "process_seconds": 38.485,
+        "log": "issued_lifetime_boundaries.log",
+        "log_sha256": "5a534dd198fcc6f8e8ba1559001acae0632f8bf749b8b329de2d3c562d16eceb",
+        "observations": []
+      },
+      {
+        "label": "existing_after_ablation_proof",
+        "test": "test_phase_snapshots.PhaseSnapshotTest.test_signed_fixture_update_exclusion_binds_actual_after_ablation_and_rechecks_denial",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 66.94,
+        "process_seconds": 72.177,
+        "log": "existing_after_ablation_proof.log",
+        "log_sha256": "17fe460b30364d69b978f49d41956f6144d563e1106b80aaab5b689c97a5f211",
+        "observations": []
+      },
+      {
+        "label": "temporal_old_projection_preserved",
+        "test": "test_phase_snapshots.PhaseSnapshotTest.test_head_replacement_uses_pinned_actual_historical_claim_projection",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 21.881,
+        "process_seconds": 28.185,
+        "log": "temporal_old_projection_preserved.log",
+        "log_sha256": "7c3899ea0c43b34d8c84911ee2405cf177a314e5bb1d7831b94098f91d26ea11",
+        "observations": []
+      },
+      {
+        "label": "invented_history_refused",
+        "test": "test_phase_snapshots.PhaseSnapshotTest.test_cached_manifest_cannot_invent_a_historical_projection",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 19.126,
+        "process_seconds": 23.548,
+        "log": "invented_history_refused.log",
+        "log_sha256": "0d6f43c36eec092264e828123a5516b13de8b0925e62863308071d0bd8dd3cfc",
+        "observations": []
+      }
+    ],
+    "carried_cases": [
+      {
+        "label": "actual_v2_control",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_01_unchanged_actual_v2_capture_control",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 297.38,
+        "process_seconds": 301.627,
+        "log": "actual_v2_control.log",
+        "log_sha256": "fa26083d1aa13295c2820d6e5a05af5de1dfcb24351e00fdf4eeebfc80023b81",
+        "observations": [
+          {
+            "active_preparation": false,
+            "callback_reached": true,
+            "capture_copy_observed": true,
+            "claim_read_entries_after_callback": 2471,
+            "consumer_is_original": false,
+            "consumer_provenance": "actual_custody_capture_copy",
+            "custody_history_authority_exact": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "exact_slot": true,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "schema": "flora-phase-terminal-completion-v1",
+            "shared_history_anchor_and_permissions": true,
+            "shared_preregistration": true,
+            "shared_runtime": true,
+            "variant": "unchanged-capture"
+          }
+        ]
+      },
+      {
+        "label": "original_terminal_H_denial",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_02_final_slot_history_denial_closes_before_claim_entry",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 94.023,
+        "process_seconds": 98.079,
+        "log": "original_terminal_H_denial.log",
+        "log_sha256": "bd8dfd8c901216beda042b8813e3ab1154b23a2fd54f13f3b0dd28d1cb3f1d7f",
+        "observations": [
+          {
+            "active_preparation": false,
+            "callback_reached": true,
+            "capture_copy_observed": true,
+            "claim_read_entries_after_callback": 0,
+            "consumer_is_original": false,
+            "consumer_provenance": "actual_custody_capture_copy",
+            "custody_history_authority_exact": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "exact_slot": true,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "schema": "flora-phase-terminal-completion-v1",
+            "shared_history_anchor_and_permissions": true,
+            "shared_preregistration": true,
+            "shared_runtime": true,
+            "variant": "terminal-history-denial"
+          }
+        ]
+      },
+      {
+        "label": "independent_C_denial",
+        "test": "test_phase_terminal_completion.PhaseTerminalCompletionTest.test_03_standalone_final_slot_context_withdrawal_refuses_lineage",
+        "status": "passed",
+        "exit_code": 0,
+        "cases": 1,
+        "seconds": 60.575,
+        "process_seconds": 64.616,
+        "log": "independent_C_denial.log",
+        "log_sha256": "6f6c763543c0f356a7e6749956621923e6663d3029c5a8b20650ea8217fbe48e",
+        "observations": [
+          {
+            "active_preparation": false,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "schema": "flora-phase-terminal-completion-v1",
+            "variant": "standalone-context-control"
+          },
+          {
+            "active_preparation": false,
+            "callback_reached": true,
+            "evidence_kind": "contract_fixture",
+            "exact_consumer": null,
+            "issued_use_count": 0,
+            "native_preparation": null,
+            "schema": "flora-phase-terminal-completion-v1",
+            "variant": "standalone-context-denial"
+          }
+        ]
+      }
+    ],
+    "carried_receipt_sha256": "13611990acc16a18f7b3b6f2538ab9bee4e5536b258df134d926944f1406cbb4",
+    "carried_log_hashes_verified": true,
+    "carried_evidence_basis": "Identical runtime and unchanged case01\u201303 bodies/common helpers verified by AST; only qualified helper and module import changed for the fixture continuation."
+  },
+  "verified_correction": {
+    "runtime_paths": [
+      "src/flora/selected/_phase_preparation.py",
+      "src/flora/selected/context_guard.py",
+      "src/flora/selected/judgment_lineage.py",
+      "src/flora/selected/phase_routes.py",
+      "src/flora/selected/phase_snapshots.py"
+    ],
+    "mechanism": "Capture the finite original prepared readers before callbacks. Preserve the original live check and immutable record identity across nested metadata/source and terminal boundaries. Require original native/wrapper frames to remain current-stack ancestors; clear collectors finally. Keep issued lineage unchanged.",
+    "original_failure": "Reached saved metadata-port mutation plus history denial now refuses before the next Claim-read entry; entry count0 on the actual custody capture copy.",
+    "affected_connections": [
+      "qualified source callbacks",
+      "nested completion collectors",
+      "call lifetime",
+      "issued/default and unsupported fallback",
+      "historical projection occurrence",
+      "existing AFTER-ablation proof and current denial"
+    ]
+  },
+  "fixture_correction": {
+    "path": "tests/test_phase_terminal_completion.py",
+    "mechanism": "Existing coherent PhaseSQL supplies explicitly projected temporal keys and historical rows; shared canonical controllers and prior custody are rebound before registration. Assert row shape and captured occurrence before restore.",
+    "production_missing_temporal_defaults_added": false
+  },
+  "research_refs": [
+    "docs/evidence/2026-10-05_finite_lineage_basis_diagnosis.json",
+    "docs/evidence/2026-10-05_temporal_restoration_fixture_diagnosis.json"
+  ],
+  "raw_manifest_caveat": "Inherited observer_only_retry/correction ancestry fields describe earlier attempts. This completed continuation changes only the temporal fixture relative to the prior five-file runtime candidate. Raw manifests and failures are preserved, not rewritten.",
+  "verification_review": "Independent evidence and frozen source review found no blocking issue; publication scope is five runtime files plus one test, all189 FloRA frozen files match the source commit, workflows/budgets unchanged.",
+  "limits": [
+    "Component fixtures do not qualify the complete physical backend pipeline or real temporal interval behavior.",
+    "Direct metadata substitution during actual AFTER-ablation proof I/O is still not injected; the existing AFTER proof/live-denial case passed.",
+    "BEFORE/full update-policy return has no nested proof-I/O branch; no such coverage claimed.",
+    "No latency improvement, learned behavior, FBM training eligibility, or release claim.",
+    "Personality and MFM remain external; no full Alice memory/experience/mission platform."
+  ],
+  "next_action": "Publish exact frozen source and completed context/FBM, then ordinary full component/physical CI under unchanged limits. Recover exact run/source/Alice pins, inspect reached claims and timings, and use mandatory diagnosis on any new failure. Stop once only the run result remains.",
+  "publication_corpus_diagnosis": {
+    "schema": "flora-context-corpus-publication-diagnosis-v1",
+    "original_failure": "prepare_terminal_completed_docs_oct5.py line50 AssertionError:151; no refs pushed",
+    "steps": [
+      {
+        "step": 1,
+        "evidence": "Committed development tree has152 valid traces; context tree has151. The local validator has152. The committed-tree validator is accurate."
+      },
+      {
+        "step": 2,
+        "claim": "Both recovery branches must preserve the same procedure corpus for future construction context. This says nothing about runtime behavior or FBM training."
+      },
+      {
+        "step": 3,
+        "path": "Private-index publication reads each branch parent then adds selected handoff paths; branch ancestry differs."
+      },
+      {
+        "step": 4,
+        "cause": "Context parent lacks the already-published reviewed-phase-correction-rejoin-pipeline trace. Development parent includes it."
+      },
+      {
+        "step": 5,
+        "purpose": "Context branch preserves reusable procedure evidence without changing runtime. Branch-specific completeness must be checked against intended corpus."
+      },
+      {
+        "step": 6,
+        "correction": "Copy the single missing public record byte-for-byte from the verified development record to the context publication; retain152 expected count and source/workflow limits."
+      },
+      {
+        "step": 7,
+        "basis": "Existing FBM README and validator require unique complete schema-valid traces and distinguish these from admitted learning cases. Compare branch trees and original record hashes instead of weakening count. Copied record SHA2568e83eab24b76ecd23712fa31bb61111abacc3fd35f97af8b0d8fd83a461177ad matches published development and local bytes."
+      },
+      {
+        "step": 8,
+        "verification": "Rebuild both isolated commits; require152 validated traces in each, exact selected content, seven development/eight context docs changes, zero source/workflow change and occupied index unchanged."
+      }
+    ]
+  }
+}

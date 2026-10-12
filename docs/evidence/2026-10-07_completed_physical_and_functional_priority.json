@@ -1,0 +1,150 @@
+{
+  "schema": "flora-completed-physical-and-functional-priority-v1",
+  "recorded_at_utc": "2026-10-07T15:34:22.449921+00:00",
+  "source": {
+    "commit": "bd7310955817a6f4482f0f46872ec4b94332b062",
+    "tree": "c1ae1bc48219729a8630107cb80426a6cb4f995a",
+    "alice_contract_pin": "4f287a488bc908bd04f99255ee01b794bacba50b",
+    "artifacts": [
+      {
+        "artifact": "binding-verification-native-comparison",
+        "artifact_id": 11493030347,
+        "artifact_digest": "sha256:3b52c6b9dc1a83a33b7a57332b26f1d196c19ba839c940469a17046cf81b88b3",
+        "source_file_sha256": "cc5e7bc010fe3325ed6361c3fc1fd77854039e611d837e3cc53539d5d7462341",
+        "source_identity_match": true
+      },
+      {
+        "artifact": "binding-verification-transport",
+        "artifact_id": 11492122260,
+        "artifact_digest": "sha256:4174a1ecb6726088c6aa9b4a217add155ad29f1ea52985b9dc58d474e7a1c0b3",
+        "source_file_sha256": "cc5e7bc010fe3325ed6361c3fc1fd77854039e611d837e3cc53539d5d7462341",
+        "source_identity_match": true
+      }
+    ],
+    "logs": {
+      "original-native-comparison.log": "c974f8f79a2a9543e254a1916e6e83ceb28ceeeaf863693cfb41a05e45e28c3f",
+      "original-transport.log": "427c746b9cdfffb239ad514b601895f31e82fd67c42326cde123d2f884b971b9"
+    }
+  },
+  "physical_result": {
+    "run_id": 37641323381,
+    "url": "https://github.com/NIne-WIngEd/FloRA/actions/runs/37641323381",
+    "conclusion": "failure",
+    "discovered_cases": 3,
+    "pass": 1,
+    "fail": 2,
+    "transport": {
+      "provider_ledger_case": "pass",
+      "comparator_case": "fail",
+      "denied_zero_provider_call_control": "pass",
+      "allowed_phase_elapsed_ms": [
+        18360,
+        29179
+      ],
+      "response_allowance_ms": 10000,
+      "later_recovery_and_withdrawal_assertions": "unreached"
+    },
+    "native_comparison": {
+      "case": "fail",
+      "phase_elapsed_ms": [
+        60081,
+        60157
+      ],
+      "response_allowance_ms": 60000,
+      "first_failure": "prepare_context owned selected read timeout",
+      "execution_custody_and_recovery_assertions": "unreached"
+    },
+    "setup_oracle_defect_observed": false,
+    "original_verdict_preserved": true,
+    "rerun_dispatched": false
+  },
+  "ordered_diagnosis": [
+    {
+      "step": 1,
+      "finding": "Source/pin artifacts and log hashes match. Setup completes. Budget oracles accurately enforce their configured values, but later functional assertions are unreached."
+    },
+    {
+      "step": 2,
+      "finding": "These separate fictional plumbing fixtures do not prove a connected causal comparison or learned judgment. Their inherited limits have no demonstrated product or scientific calibration."
+    },
+    {
+      "step": 3,
+      "finding": "Baseline uses Qdrant memory, disclosure/provider custody and recorder. Native uses historical preparation and owned selected reads. They are distinct paths and unlike workloads."
+    },
+    {
+      "step": 4,
+      "finding": "Baseline first fails elapsed allowance after permitted execution; native first cancels during prepare before execution. No unprofiled stage-level timing cause is established."
+    },
+    {
+      "step": 5,
+      "finding": "Current authority, exact historical state, bounded reader ownership, disclosure and canonical custody serve necessary guarantees. Do not remove them or import the full Alice platform."
+    },
+    {
+      "step": 6,
+      "finding": "Owner explicitly changes development priority: complete functional FloRA first, then latency. Preserve historical failures; create a distinct bounded mechanical protocol. No speculative latency runtime correction."
+    },
+    {
+      "step": 7,
+      "finding": "Primary Mem0, Zep and pinned LongMemEval-V2 methods distinguish workloads and timing boundaries. They do not supply a universal10s/60s cutoff. Frozen FloRA goal calls for a pilot and preregistration."
+    },
+    {
+      "step": 8,
+      "finding": "Build the missing registered two-stage three-arm case with real ports frozen before sealing, six positive attempts, exact passive recovery and reached authority controls. Qualified external models and independent evaluation remain later requirements."
+    }
+  ],
+  "cutoff_audit": {
+    "comparator_10000ms_introduced_at": "b087eef3120c245f584d99a17e65d22cf3756154",
+    "native_fixture_60000ms_introduced_at": "6a7fa3901a15a7244b4b2a3f39bad16cf8cc579a",
+    "empirical_calibration_found": false,
+    "native_read_manifest_60000ms_is": "passive-read allowance, distinct from response protocol",
+    "ci_60_minutes_is": "job/resource containment",
+    "future_performance_target": "owner requests latency close to frontier models after functional evidence; numerical SLO remains uncalibrated"
+  },
+  "retained_static_finding": {
+    "dependency": "kurrentdbclient1.3.3",
+    "selected_client_metaclass": "ABCMeta",
+    "optional_pure_frame_recognition": "rejects metaclass and retains original unissued live fallback",
+    "limits": "Static reachability issue, not an observed timing cause; latency-only admission repair paused.",
+    "baseline_uses_native_frame_path": false
+  },
+  "owner_scope": {
+    "functional_first": true,
+    "latency_optimization_paused": true,
+    "full_alice_platform_requested": false,
+    "personality_and_mfm_built_elsewhere": true,
+    "preserve_resource_cancellation_and_current_authority": true,
+    "builder_transfer_is_distinct_required_result": true
+  },
+  "component_evidence_retained": {
+    "passes": 81,
+    "source_hashes_per_group": 414,
+    "affected_alarm_enforcement_qualified": false,
+    "performance_claim": false
+  },
+  "next_connection": "Same actual registered BEFORE/update/AFTER through concrete two-native and general-memory ports; six positive persisted attempts, equal evidence, passive recovery and fresh reached H/C controls.",
+  "mechanical_protocol_status": "Proposed finite operational values must be frozen before execution; these are containment, not speed qualification.",
+  "research": [
+    {
+      "url": "https://arxiv.org/html/2504.19413v1",
+      "use": "Separate search/total response timing and median/tail latency."
+    },
+    {
+      "url": "https://arxiv.org/html/2501.13956v1",
+      "use": "Model/context/workload-dependent response measurements."
+    },
+    {
+      "url": "https://xiaowu0162.github.io/longmemeval-v2/",
+      "use": "Accuracy-latency frontier, not one universal deadline."
+    },
+    {
+      "url": "https://github.com/xiaowu0162/LongMemEval-V2/blob/2cc8c540bdb87fe6761629b585e727e1c4704520/evaluation/harness.py#L530",
+      "use": "Explicit query/post-query/build timing boundaries; FloRA must still account for required authority/custody."
+    }
+  ],
+  "limits": [
+    "No connected physical pass yet",
+    "No calibrated latency result",
+    "No learned hypothesis support",
+    "No builder transfer or real-host result"
+  ]
+}

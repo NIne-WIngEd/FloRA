@@ -11,7 +11,9 @@ import hashlib
 import json
 from pathlib import Path
 import time
+import sys
 import unittest
+from unittest.mock import patch
 import psycopg
 
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
@@ -241,17 +243,67 @@ class SelectedPreregisteredPhaseRoutesTest(unittest.TestCase):
                 history_for=anchor.history_for,
                 phase_receipt_for=lambda request: support._lf.fictional_phase_receipt(request, f.qualification_key))
         captured, bindings = {}, {}
+        def refuse_post_slot_withdrawal(slot):
+            # The actual preregistered capture override has a callback after
+            # base lineage. Its composite must close before capture reads the
+            # next Claim, not merely at the next proof checkpoint.
+            allowed, fired = [True], []
+            class WithdrawableHistory(type(authority)):
+                def authorize_history_metadata(inner, **kwargs):
+                    return allowed[0] and super().authorize_history_metadata(**kwargs)
+            independent = object.__new__(WithdrawableHistory)
+            independent.__dict__.update(authority.__dict__)
+            actual_lineage = lineage(slot)
+            actual_lineage.history_authority = independent
+            slot_use, claim_read = anchor.authorize_slot_use, f.runtime.claims.load_current
+            def final_slot(**kwargs):
+                value = slot_use(**kwargs)
+                frame = sys._getframe(1)
+                while frame is not None:
+                    if (frame.f_code is PreregisteredPhaseCaptureLineageVerifier.context_lineage.__code__
+                            and "actual" in frame.f_locals):
+                        allowed[0] = False
+                        fired.append(True)
+                        break
+                    frame = frame.f_back
+                return value
+            def next_claim(*args, **kwargs):
+                if fired:
+                    raise AssertionError("capture continued after its final slot withdrew lineage H")
+                return claim_read(*args, **kwargs)
+            with patch.object(anchor, "authorize_slot_use", final_slot), \
+                 patch.object(f.runtime.claims, "load_current", next_claim):
+                with self.assertRaisesRegex(PermissionError, "phase history authority changed"):
+                    archive.capture(snapshot_id=slot.snapshot_id, case_id=slot.case_id, phase=slot.phase,
+                        arm=slot.arm, plan=context_plan, lineage=actual_lineage,
+                        history=histories[(slot.case_id, slot.phase)])
+            self.assertTrue(fired)
+            self.assertIsNone(archive.intent(slot.snapshot_id))
+        def one_assembly(action):
+            from flora.selected import context_guard, experiment_runtime
+            with patch.object(context_guard, "assemble_context", wraps=context_guard.assemble_context) as native, \
+                 patch.object(experiment_runtime, "assemble_context", wraps=experiment_runtime.assemble_context) as legacy:
+                value = action()
+                self.assertEqual(native.call_count + legacy.call_count, 1)
+                return value
         def capture(slot, *, ports, **kwargs):
             store.bind_historical_bindings(snapshot_id=slot.snapshot_id, bindings=ports)
             bindings[slot.snapshot_id] = ports
-            snapshot = archive.capture(snapshot_id=slot.snapshot_id, case_id=slot.case_id,
+            if slot.phase == "before" and slot.arm == "flora_full":
+                refuse_post_slot_withdrawal(slot)
+            snapshot = one_assembly(lambda: archive.capture(snapshot_id=slot.snapshot_id, case_id=slot.case_id,
                 phase=slot.phase, arm=slot.arm, plan=context_plan, lineage=lineage(slot),
-                history=histories[(slot.case_id, slot.phase)], **kwargs)
+                history=histories[(slot.case_id, slot.phase)], **kwargs))
             captured[(slot.phase, slot.arm)] = snapshot
             event_id = archive.metadata(slot.snapshot_id)["event_id"]
             f._judgment_permission(f.registry.lookup(event_id))
             for operation in ("capture", "read"):
                 self.grant(event_id, preregistration_purpose(run_id, operation))
+            route = one_assembly(lambda: archive.capture_route(snapshot_id=slot.snapshot_id,
+                history_authority=authority, historical_bindings=ports))
+            observed = one_assembly(route.observed_binding)
+            self.assertEqual(observed.context_lineage_sha256, snapshot.record["context_lineage_sha256"])
+            self.assertEqual(route.snapshot.record["context_receipt"], snapshot.record["context_receipt"])
             store.publish_capture(snapshot_id=slot.snapshot_id)
             self.control_grants(store)
             completed(phase_labels[(slot.phase, slot.arm)] + "-capture-published")

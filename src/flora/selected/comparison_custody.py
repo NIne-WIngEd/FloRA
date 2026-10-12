@@ -1020,3 +1020,11 @@ class SelectedRunEvidencePolicy:
                     and self.permissions.permits(self.custody.registry.lookup(artifact.event_id), "comparison_review")):
                 return True
         return False
+
+
+# Definition-time origins for the private actual-phase owner map. A later
+# callable replacement is a custom port and cannot redefine native admission.
+_PHASE_NATIVE_ORIGINS = tuple((owner, name, function, function.__code__)
+    for owner, name, function in (
+        (XTDBComparisonCustody, "_read_authorized", XTDBComparisonCustody._read_authorized),
+    ))
