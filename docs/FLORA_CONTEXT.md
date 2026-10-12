@@ -1,5 +1,58 @@
 # FloRA continuation context
 
+## Original full case continuation - October 11: 577259 failed; 577260 initially RUNNING
+
+Direct original positive job 577259 is terminal `FAILED`, observed at
+`2026-10-12T00:45:47.0808993Z`. It exhausted the carrier's 90-attempt Kurrent
+startup readiness window in preflight; the original strict test never started.
+Recovery retains 60 raw files, verifies all 1,457 source files before/after and
+owned cleanup. Preserve that failure, the earlier failed 577258 and the dated
+initial RUNNING record below. The native Kurrent startup cause remains unproved.
+
+The bootstrap cutoff was a carrier waiting policy outside the capability
+assertions. It conflicted with the user's unrestricted outer runtime and deferred
+latency qualification. Successor 577260 was accepted once; one scheduler observation
+at `2026-10-12T00:49:06.2446327Z` reports `RUNNING` on `himem006`, label `rayan_fl`,
+TimeLimit `UNLIMITED`, CPU-only. It waits until the original vendor health succeeds,
+the owned backend process exits or the run is canceled. Result JSON retains the
+latest 90 health checks; full original stdout retains every check. This corrects
+the waiting policy and establishes no native startup cause or capability pass.
+
+The canonical strict runner, original vendor health criteria, source/tests,
+owner authority and operation bounds remain unchanged; necessary pinned offline
+udocker setup and private host ABI6 remain. No observer, diagnostic/native-control
+program or outer placement controller is added. The user canceled the diagnostic
+path before submission; it was never launched, and zero added observer/control
+jobs were submitted for these direct continuations.
+
+Recover exact job 577260's original strict result, source-after and cleanup before
+judging mechanics. H/C follow reached positive behavior and terminal evidence.
+Actual MFM/PE semantics, governed outcome/revision/activation/fresh judgment,
+external Gemma and calibrated latency remain unfinished. Same 164 existing records;
+this procedure-only seed stays partial and unadmitted.
+
+
+## Full original case continuation - October 11: direct job 577259 initially RUNNING
+
+Original positive FloRA case 577259 was accepted once. One scheduler observation
+at `2026-10-12T00:24:28.4187557Z` reports `RUNNING` on `himem006`, label `rayan_fl`,
+TimeLimit `UNLIMITED`, CPU-only. This is initial status; strict results, mechanics,
+source-after and owned cleanup remain pending.
+
+The case calls the canonical `scripts/run_connected_functional_comparison.py`
+directly with unchanged source/tests. It has no setup/post-registration observer,
+diagnostic program, native-control program or outer placement controller. Necessary
+pinned offline runtime/container setup, the existing udocker configuration entrypoint
+and private host ABI6 remain. Original owner and operation bounds remain in force.
+
+The user canceled the diagnostic path before submission; it was never launched.
+No added observer/control job was submitted for this continuation. Preserve failed
+577258 and all earlier receipts below. Recover this exact full case before drawing
+a verdict. Actual MFM/PE semantics and governed outcome/revision/fresh judgment,
+external Gemma and calibrated latency remain unfinished. Same 164 existing records;
+this procedure-only seed stays partial and unadmitted.
+
+
 ## Terminal full-positive checkpoint - October 11: job 577258 failed before the strict test
 
 The terminal scheduler observation at `2026-10-11T23:18:18.162542+00:00` reports `FAILED` on
