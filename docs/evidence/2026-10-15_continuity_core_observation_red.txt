@@ -1,0 +1,37 @@
+test_actor_ack_is_not_completion_and_unknown_effect_is_not_retried (test_continuity_kernel.KernelTests.test_actor_ack_is_not_completion_and_unknown_effect_is_not_retried) ... ok
+test_exact_independent_activation_and_full_native_packet (test_continuity_kernel.KernelTests.test_exact_independent_activation_and_full_native_packet) ... ok
+test_expiration_rejects_crossing_but_time_within_interval_is_valid (test_continuity_kernel.KernelTests.test_expiration_rejects_crossing_but_time_within_interval_is_valid) ... ok
+test_failed_activation_leaves_no_claim_approval_or_head (test_continuity_kernel.KernelTests.test_failed_activation_leaves_no_claim_approval_or_head) ... ok
+test_inference_has_no_native_handles_and_rechecks_authority (test_continuity_kernel.KernelTests.test_inference_has_no_native_handles_and_rechecks_authority) ... ok
+test_new_evidence_during_inference_prevents_publication (test_continuity_kernel.KernelTests.test_new_evidence_during_inference_prevents_publication) ... ok
+test_observation_is_bound_to_exact_action_and_goal_criterion (test_continuity_kernel.KernelTests.test_observation_is_bound_to_exact_action_and_goal_criterion) ... ERROR
+test_old_sample_with_future_event_time_cannot_certify_later_action (test_continuity_kernel.KernelTests.test_old_sample_with_future_event_time_cannot_certify_later_action) ... FAIL
+test_revocation_before_dispatch_blocks_effect (test_continuity_kernel.KernelTests.test_revocation_before_dispatch_blocks_effect) ... ok
+test_time_boundary_blocks_approval_and_dispatch_without_any_write (test_continuity_kernel.KernelTests.test_time_boundary_blocks_approval_and_dispatch_without_any_write) ... ok
+test_unseen_contradiction_invalidates_proposed_revision (test_continuity_kernel.KernelTests.test_unseen_contradiction_invalidates_proposed_revision) ... ok
+test_valid_time_boundary_during_inference_invalidates_read_basis (test_continuity_kernel.KernelTests.test_valid_time_boundary_during_inference_invalidates_read_basis) ... ok
+test_withdrawal_covers_offered_content_omitted_from_model_citations (test_continuity_kernel.KernelTests.test_withdrawal_covers_offered_content_omitted_from_model_citations) ... ok
+test_withdrawal_invalidates_descendants_and_rejects_old_restore (test_continuity_kernel.KernelTests.test_withdrawal_invalidates_descendants_and_rejects_old_restore) ... ok
+
+======================================================================
+ERROR: test_observation_is_bound_to_exact_action_and_goal_criterion (test_continuity_kernel.KernelTests.test_observation_is_bound_to_exact_action_and_goal_criterion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/flora/tests/test_continuity_kernel.py", line 250, in test_observation_is_bound_to_exact_action_and_goal_criterion
+    sample = self.store.capture("sample-first", "reader", "world", b'{"submitted":true}',
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ContinuityStore.capture() got an unexpected keyword argument 'observes_action'
+
+======================================================================
+FAIL: test_old_sample_with_future_event_time_cannot_certify_later_action (test_continuity_kernel.KernelTests.test_old_sample_with_future_event_time_cannot_certify_later_action)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/flora/tests/test_continuity_kernel.py", line 237, in test_old_sample_with_future_event_time_cannot_certify_later_action
+    with self.assertRaisesRegex(ValueError, "observation|bound|dispatch"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.284s
+
+FAILED (failures=1, errors=1)

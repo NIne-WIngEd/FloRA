@@ -154,7 +154,7 @@ class NativeTests(unittest.TestCase):
 
     def test_real_process_death_before_and_after_commit(self):
         self.db.close()
-        src = str(Path(__file__).resolve().parents[1] / "src")
+        src = str(Path(__file__).resolve().parents[2] / "src")
         for commit in (False, True):
             code = (
                 "import os,sys; sys.path.insert(0,sys.argv[1]); "

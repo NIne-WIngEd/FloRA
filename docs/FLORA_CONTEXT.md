@@ -1,5 +1,29 @@
 # FloRA continuation context
 
+## October 15: connected continuity mechanics verified
+
+The actual redesign now connects evidence, external proposal/judgment ports,
+independent approval, competing missions, authorized action, independently
+observed outcomes, scoped host/self revision and fresh-process judgment.
+One transaction owns accepted state, linked history and pending work. This is
+more than replacing database adapters; old runtime and provider jobs are preserved.
+
+35 tests passed on pinned native RocksDB 11.8.1 in local Linux ARM64 Docker.
+Three review failures (uncited exposure, time-only staleness, observation/action
+binding) were reproduced and corrected using diagonosis. See
+`docs/CONTINUITY_KERNEL.md` for the exact scope, evidence, trust boundary and gaps.
+Models in the connected episode are content-reading synthetic doubles. No learned
+result, latency qualification, old-runtime cutover or Alice ratification follows.
+
+Next is actual PE/MFM integration, preserving their native input/features/output
+and scoped semantics. The latest inspected producer chats still have model work
+pending. This kernel's envelopes are not native adapters. Keep model building in
+those chats; do not invent another model or turn a receipt into semantic evidence.
+The full-scan bounded slice does not qualify Qdrant/Ladybug discovery or cleanup,
+NATS delivery, Temporal reconciliation, physical erasure or complete object restore.
+FBM167 records the construction/diagnosis method as partial, procedure-only and
+unadmitted. Previous build-pending entries below are historical.
+
 ## October 15 continuation: native foundation verified, semantic construction next
 
 Pinned native build completed; all nine native/configuration tests passed.
