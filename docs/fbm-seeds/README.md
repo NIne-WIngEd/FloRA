@@ -1,3 +1,5 @@
+Current October15 procedure count:166. Hypothesis review and shared-core storage/responsibility records are partial, procedure-only and unadmitted. SQLite candidate is superseded by owner direction; actual RocksDB native tests await the dependency build. No connected/learned result or latency improvement follows.
+
 Current October8 procedure count:164. New capture-composition method is partial and unadmitted; capture-wide results and runtime/accessor admission remain unresolved.
 
 Historical October7 procedure count:163. Existing evaluation-recalibration record updated with completed run 37704802657 localization; no new seed, physical pass or learned builder claim.
