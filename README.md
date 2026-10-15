@@ -1,5 +1,10 @@
 # FloRA
 
+**FBM direction — October 15, 2026:** [Roles and objectives](docs/FBM_ROLES_AND_OBJECTIVES.md)
+separate current construction capture, required later builder transfer and optional
+maintenance. This documentation merge does not merge the continuity successor's
+runtime or qualify PE, MFM, learned behavior or builder transfer.
+
 An experiment for one Fable claim: after a host corrects a relevant belief or preference and a decision has an outcome, does Fable's later **native judgment** change for the right reason, while keeping its evidence trail? The experiment will compare that behavior with a strong general model plus memory, using the same available history and response budget. Then a small builder must reproduce the capability for another isolated host.
 
 The [frozen experiment goal](docs/EXPERIMENT_GOAL.md) defines the product comparison, mechanism ablation, cross-host builder test, and evidence rules. Numerical acceptance thresholds will be preregistered before the final evaluation.
