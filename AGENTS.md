@@ -1,5 +1,17 @@
 # Continuing FloRA
 
+## Current — October 15: owner-approved continuity successor
+
+Read `docs/FLORA_CONTEXT.md` and `docs/CONTINUITY_STORAGE_DECISION.md` first.
+Latest owner instructions supersede earlier physical-engine restrictions:
+SQLite rejected; same RocksDB TransactionDB foundation for proposed Alice core
+and bounded FloRA slice. Keep graph/vector/object and exercised ingress/workflow
+responsibilities. Never treat one canonical authority as one engine doing all jobs.
+PE/MFM remain external. Mandatory diagonosis for every failure, root and agents.
+Native CFFI interface is drafted; actual library build/test result pending. No
+connected or learned pass yet. Preserve old source/tests/Magnolia job unchanged.
+Continue `docs/superpowers/plans/2026-10-15-continuity-core.md` in isolated source.
+
 ## Current continuation — October8: bounded capture candidate awaits adoption evidence
 
 The completed physical run37704802657 remains a failure/124 at2700s inside first

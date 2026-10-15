@@ -1,5 +1,57 @@
 # FloRA continuation context
 
+## October 15 continuation: native foundation verified, semantic construction next
+
+Pinned native build completed; all nine native/configuration tests passed.
+This is substrate evidence only. Semantic history, independent approval, linked
+mission/outcome revision and subsequent judgment remain to implement in this
+worktree. The older build-pending status below is historical.
+
+## Current continuation — October 15: shared core selected; native build pending
+
+The owner approved the continuity-kernel hypothesis and then rejected SQLite as
+the shared Alice/FloRA storage target. FloRA must exercise the same proposed
+foundation intended for Alice. Do not assume success on a disposable engine
+transfers to another. Do not collapse specialist responsibilities into one KV
+database. The current decision is [shared storage and responsibility map](CONTINUITY_STORAGE_DECISION.md).
+
+Selected implementation target: RocksDB TransactionDB 11.8.1, WriteCommitted,
+synchronous WAL commits, explicit tracked generation/predecessor checks. It
+consolidates canonical Experience and accepted temporal state, not graph/vector
+search, raw objects, messaging or durable workflow execution. Retain objects,
+Qdrant, Ladybug and the exercised NATS/Temporal/PostgreSQL modules. Temporal owns
+real derived-index cleanup as well as its separate restart probe. Valkey and
+NebulaGraph were full-Alice options, not implemented FloRA databases.
+
+New isolated source branch: `Rayan/flora-continuity-core`, from `7beca501`.
+The occupied `work/FloRA` checkout remains unchanged. The abandoned SQLite
+candidate is retained on `Rayan/flora-sqlite-reference` at `dae5766`: eight
+storage/object component cases passed, but no connected loop or learned result
+was established. Its unimplemented transition-test specification is not a pass.
+
+Native dependency build is running locally in Docker Linux ARM64, image target
+`flora-continuity-native:rocksdb-11.8.1`; no Magnolia/Kaggle job was launched or
+polled. Source commit `abeebd9630f11bd08c28b7bd43c7bdfc62050654`, archive SHA256
+`25dee0decb85ea9a3c8a706b8b627fd67f218e35efae59e23997a4234db32198`.
+The CFFI interface and nine tests are drafted. Six original pre-implementation
+RED cases reached missing-module assertions only. Native review found and
+corrected unbounded timeout conversion and constructor resource cleanup; a
+stale-generation race was added because the initial snapshot test did not
+prove it. One host configuration case now passes; eight real-native cases
+(including injected constructor failures) still await the build. No native pass,
+connected mechanics, latency gain or learned qualification is claimed.
+
+Next: recover the native build result; run the nine tests on the pinned actual
+library without alternate-engine/missing-library skips. Diagnose any failure
+before correction. Then implement semantic history, bitemporal state, authority,
+formation/outbox and the full mixed-outcome episode in the
+[implementation plan](superpowers/plans/2026-10-15-continuity-core.md).
+PE/MFM stay external. No old runtime cutover or Alice ratification has occurred.
+
+FBM has one new compact partial procedure record for responsibility conservation
+and the rejected SQLite choice. The prior hypothesis record is preserved. These
+are construction methods, not admitted training data or proof of learned behavior.
+
 ## Original full case continuation - October 11: 577259 failed; 577260 initially RUNNING
 
 Direct original positive job 577259 is terminal `FAILED`, observed at
