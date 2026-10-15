@@ -28,33 +28,43 @@
 
 ### Task 1: Native transaction substrate
 
-Files: `src/flora/continuity/native.py`, `tests/test_continuity_native.py`, `config/continuity-native.Dockerfile`.
+Files: `src/flora/continuity/native.py`, `tests/continuity/test_continuity_native.py`, `config/continuity-native.Dockerfile`.
 
 Interfaces: `RocksDB(path, lock_timeout_ms=1000)`; `db.transaction()` with `get(key, tracked=True)`, `put(key,value)`, `delete(key)`, `scan(prefix)`, explicit `commit`; `db.snapshot()` with `get/scan`; `db.checkpoint(path)`; checked `close`. Values are bytes. Transaction/snapshot scopes release handles deterministically. No raw base DB write handle is public.
 
-- [ ] Add and run tests: binary values, atomic multi-key rollback/reopen, tracked missing-key conflict, stable snapshot, close-with-live-handle refusal, process death before/after commit, checkpoint reopen.
-- [ ] Build pinned native library and implement only the needed official C API surface.
-- [ ] Run actual Linux ARM64 tests without mocks or missing-library skips; diagnose failures in order.
-- [ ] Review/commit result with exact source/library identities and limitations.
+- [x] Add and run tests: binary values, atomic multi-key rollback/reopen, tracked missing-key conflict, stable snapshot, close-with-live-handle refusal, process death before/after commit, checkpoint reopen.
+- [x] Build pinned native library and implement only the needed official C API surface.
+- [x] Run actual Linux ARM64 tests without mocks or missing-library skips; diagnose failures in order.
+- [x] Review/commit result with exact source/library identities and limitations.
 
 ### Task 2: Semantic authority
 
-Files: `src/flora/continuity/contracts.py`, `store.py`, `kernel.py`; `tests/test_continuity_store.py`, `test_continuity_kernel.py`.
+Files: `src/flora/continuity/contracts.py`, `store.py`, `kernel.py`; `tests/continuity/test_continuity_store.py`, `test_continuity_kernel.py`.
 
 Interfaces: actual evidence capture + formation outbox; bitemporal accepted records; typed links and current heads; consistent `ReadView` with content and generations; outside-transaction `FormationPort`/`JudgmentPort`; exact independent activation; current-authority action intent/dispatch/outcome; lifecycle propagation and restore fence.
 
-- [ ] Test declared semantics before implementation; original valid/recorded-time and permission cases are the contract, not a latest-value approximation.
-- [ ] Implement on native tracked generation reads, preserving typed values and full external packets.
-- [ ] Verify competing successor/new-evidence races, duplicate request equality, atomic mixed-subject activation, no self-approval, source withdrawal and restore.
-- [ ] Connect source staging/outbox and projection coverage. Retain specialists; no undeclared query capability reduction.
+- [x] Test the bounded valid/recorded-time and permission semantics before implementation.
+- [x] Implement native tracked generation reads, typed records and complete supplied JSON envelopes. Actual native model-schema adapters remain below.
+- [x] Verify stale proposals/new-evidence races, duplicate request equality, atomic mixed-subject activation, no self-approval, source withdrawal and stale database-restore refusal.
+- [x] Connect authenticated source staging/outbox and explicit complete-scan coverage for this bounded slice.
+- [ ] Connect retained specialist projection consumers with watermarks, hydration and cleanup when the experiment exercises discovery. Current complete scans do not qualify specialist behavior.
+- [ ] Implement durable external lifecycle-floor custody and coordinated object restore before claiming complete lifecycle-safe backup/recovery.
 
 ### Task 3: Connected mechanical episode and external handoff
 
-Files: `tests/test_continuity_episode.py`, `docs/CONTINUITY_KERNEL.md`, context and new compact FBM seed.
+Files: `tests/continuity/test_continuity_episode.py`, `docs/CONTINUITY_KERNEL.md`, context and new compact FBM seed.
 
-- [ ] Actual content → computed synthetic formation/judgment → real synthetic environment change → independent mixed outcome → governed host/self revisions → new judgment after process restart.
-- [ ] Include coherent alternative consequences, irrelevant evidence, withheld approval, false actor success, duplicate source roots, projection lag and uncertain external effects. Exact-data source baseline remains competent.
-- [ ] Review entire slice; run affected unchanged specialist tests where exercised; preserve exclusions.
-- [ ] Record mechanics only. Qualified PE/MFM integration and held-out behavioral comparisons remain required; do not build those models here.
+- [x] Actual content → computed synthetic formation/judgment → real synthetic environment change → independent mixed outcome → governed host/self revisions → new judgment after process restart.
+- [x] Coherent alternative consequences, irrelevant evidence, withheld approval, false actor success, approved no-op and uncertain external effects. Exact outcome remains available when a revision is withheld.
+- [ ] Qualify duplicate-root corroboration and selective-retrieval lag with the actual consumers. Preserved source-root labels and a complete scan alone do not prove these behavioral/discovery claims.
+- [x] Review the entire implemented slice. Reproduce and diagnose three semantic gaps; verify corrections on the actual native engine. Existing object storage is exercised; no unchanged vector/graph/transport/workflow path is newly qualified.
+- [x] Record mechanics only in context/FBM167. Final dedicated suite: 35 passing tests.
+- [ ] Connect real PE/MFM input/features/output and typed-state conversion with actual artifacts; preserve full native meaning and unresolved results. Do not build those models here.
+- [ ] Finish and execute the competent equal-evidence/flat-relation and held-out behavioral comparisons before claiming B or P.
 
-Test command inside native image with repo read-only: `python -m unittest discover -s tests -p 'test_continuity*.py' -v`. Private test stores use container temporary directories, not the checkout.
+Test command inside native image with repo and pinned Alice contracts read-only:
+`python -B -m unittest discover -s tests/continuity -p 'test_*.py' -v`.
+Private test stores use container temporary directories, not the checkout. These
+physical tests are explicitly separate from the top-level legacy component CI;
+they have no missing-library skip or fallback engine. See `docs/CONTINUITY_KERNEL.md`
+for the measured result, deployment pins, remaining obligations and model handoff.
