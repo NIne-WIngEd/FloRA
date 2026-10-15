@@ -1,5 +1,35 @@
 # FloRA continuation context
 
+## Architecture review requested - October 15, 2026
+
+The owner has reopened Alice's backbone design from the comic and behavioral
+requirements. [The proposed Alice continuity kernel](research/backbone-2026-10-15/ALICE_BACKBONE_HYPOTHESIS.md)
+and its requirements, implementation and primary-research audits are saved for
+review. This is an unratified hypothesis, not an adopted backend replacement.
+It preserves typed evidence/claims, subject separation, current authority,
+mission/decision/outcome lineage and correction/deletion semantics while
+proposing one coherent local commit boundary and goal-specific decision episodes.
+Passive observations and autobiographical episodes remain first-class.
+
+The actual outcome/revision/activation/fresh-judgment path and external MFM/PE
+integration remain incomplete. No runtime, model, test, dependency or job was
+changed by this review. The user reports Magnolia is still running; this turn
+made no new provider observation. Preserve the original pending job and all
+failures below; wait for the owner's completion notice before resuming it.
+Do not use a bootstrap failure as evidence against cognitive architecture.
+
+Next design step: owner review of the concrete hypothesis, then its explicit
+versioned narrow FloRA prototype if accepted. Test mechanical continuity,
+outcome-sensitive judgment and the separate personalized-Gemma comparison as
+different claims. Use equal-information/compute controls and preserve the
+existing implementation as a reference. Latency optimization remains deferred.
+Personality/MFM construction stays in other chats; no full Alice build here.
+
+One new compact procedure-only FBM seed records this design review. The corpus
+contains 165 schema-valid records; research and trace validation do not establish
+implementation, learned behavior, model admission or full Alice ratification.
+
+
 ## Original full case continuation - October 11: 577259 failed; 577260 initially RUNNING
 
 Direct original positive job 577259 is terminal `FAILED`, observed at

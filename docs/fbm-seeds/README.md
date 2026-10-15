@@ -97,3 +97,8 @@ October7 current:163 validated procedure records. [Evaluation recalibration](202
 Run 37704802657 recovery completes the existing [evaluation-recalibration record](2026-10-07_evaluation_recalibration.jsonl): exit 124/2700s, no raw verdict; reliable full-action samples locate the first capture's second registered completion check. Residency is not a complete call count or physical cause. The count remains163; procedure evidence is not admitted training data or learned FBM.
 
 - FBM164: capture-boundary data composition, test-scope correction and source-bound adoption controls; partial, candidate unadmitted. See [candidate record](2026-10-08_capture_boundary_composition.jsonl).
+
+
+## October 15 architecture hypothesis review
+
+165 schema-valid procedure records. The new [backbone review](2026-10-15_backbone_hypothesis_review.jsonl) is partial, procedure-only and unadmitted. It records an unratified design and falsification plan; no runtime, model, job or learned result changed. Earlier records remain unchanged.
