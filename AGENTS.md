@@ -1,5 +1,13 @@
 # Continuing FloRA
 
+## October 15: FBM role and objective register
+
+Read docs/FBM_ROLES_AND_OBJECTIVES.md. Alice's full FBM responsibilities are linked
+there; FloRA keeps current method capture, required later builder transfer and
+optional maintenance separate. Do not omit the frozen goal's isolated-host builder
+test when reporting completion. Actual PE/MFM integration and behavioral evidence
+come first. FBM170 is procedure-only; no runtime or weight change occurred.
+
 ## October 15: optional maintenance remains outside current FloRA
 
 Read docs/research/backbone-2026-10-15/FBM_CONTINUING_MAINTENANCE_ASSESSMENT.md.

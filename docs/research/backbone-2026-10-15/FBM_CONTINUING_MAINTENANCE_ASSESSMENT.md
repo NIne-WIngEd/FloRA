@@ -1,6 +1,8 @@
 # Continuing FBM or a dedicated backbone handler?
 
 Reviewed October 15, 2026. **Assessment only; no new runtime, model or FloRA prerequisite.**
+The subsequent owner-requested [role register](../../FBM_ROLES_AND_OBJECTIVES.md)
+records Alice's continuing FBM assignment and FloRA's bounded objectives.
 The owner proposed optional backbone maintenance and asked to compare a separate
 handler with FBM continuing after the initial build. Recommendation: use a
 governed FBM maintenance role first; require measured benefit before splitting
