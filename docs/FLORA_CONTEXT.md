@@ -1,5 +1,14 @@
 # FloRA continuation context
 
+## October 15: explicit FBM objectives in both repositories
+
+Read [FloRA's FBM roles](FBM_ROLES_AND_OBJECTIVES.md) and its pinned Alice register
+for 16 full-system objectives and seven bounded FloRA applications. Current
+capture/reproducible construction, required later isolated-host builder transfer,
+and optional offline maintenance are distinct. The original transfer obligation
+remains after actual PE/MFM integration and behavioral qualification. No full
+FBM model or maintenance runtime has been added. FBM170 is a procedure-only record.
+
 ## October 15: optional continuing maintenance assessed
 
 The owner asked to compare a dedicated backbone handler with FBM continuing after

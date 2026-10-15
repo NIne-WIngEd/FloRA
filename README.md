@@ -1,6 +1,13 @@
 # FloRA
 
-**Current scope — 2026-10-05:** FloRA is a narrow prototype, not the complete
+**Current direction — October 15, 2026:** See the [continuation context](docs/FLORA_CONTEXT.md)
+and [continuity kernel](docs/CONTINUITY_KERNEL.md) for the approved successor and
+its evidence limits. [FBM roles and objectives](docs/FBM_ROLES_AND_OBJECTIVES.md)
+separates current method capture, required later builder transfer and optional
+maintenance. Actual PE/MFM integration, behavioral qualification and builder
+transfer remain unfinished; no maintenance model is added.
+
+**Historical checkpoint for the original runtime — 2026-10-05:** FloRA is a narrow prototype, not the complete
 Alice/Fable memory, experience or mission platform. Build only what its selected
 experiment needs, preserving Alice's contracts and chosen engines for those
 parts. Start a continuation with [the context record](docs/FLORA_CONTEXT.md)

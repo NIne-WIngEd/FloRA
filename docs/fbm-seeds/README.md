@@ -1,4 +1,6 @@
-Current October15 procedure count:169. Optional dedicated-handler versus continuing-FBM assessment, checked against current Alice sources and primary research. No maintenance runtime, model or experiment was added. See [FBM169](2026-10-15_continuing_maintenance_assessment.jsonl).
+Current October15 procedure count:170. [Explicit FloRA FBM objectives](../FBM_ROLES_AND_OBJECTIVES.md) map current construction capture, required later builder transfer and optional maintenance to Alice's full register. See [FBM170](2026-10-15_roles_and_objectives.jsonl). This is documentation and procedure capture, not learned builder evidence.
+
+Historical October15 procedure count:169. Optional dedicated-handler versus continuing-FBM assessment, checked against current Alice sources and primary research. No maintenance runtime, model or experiment was added. See [FBM169](2026-10-15_continuing_maintenance_assessment.jsonl).
 
 Historical October15 procedure count:168. Native adapter construction, diagnosed authority/lifecycle gaps and equal-evidence comparison preparation: 63 actual-engine/native-contract mechanics passes. No learned or full optimized-consumer qualification. See [FBM168](2026-10-15_native_adapter_construction.jsonl).
 
