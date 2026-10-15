@@ -1,5 +1,13 @@
 # Continuing FloRA
 
+## October 15: optional maintenance remains outside current FloRA
+
+Read docs/research/backbone-2026-10-15/FBM_CONTINUING_MAINTENANCE_ASSESSMENT.md.
+Continuing governed FBM repair is already a planned responsibility; a dedicated
+handler model remains an optional, unproven specialization. No implementation
+was added. Keep the next work at external PE/MFM integration, then independent
+behavioral qualification. FBM169 is procedure-only, not learned repair evidence.
+
 ## October 15: native adapters and matched comparison preparation
 
 The previous stop at unfinished weights was premature. Existing upstream interfaces

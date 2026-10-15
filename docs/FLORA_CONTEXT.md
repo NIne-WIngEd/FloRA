@@ -1,5 +1,16 @@
 # FloRA continuation context
 
+## October 15: optional continuing maintenance assessed
+
+The owner asked to compare a dedicated backbone handler with FBM continuing after
+build. Current Alice sources explicitly retain governed FBM updates and assign
+memory-fabric assembly plus failure localization/repair. Prefer that existing role;
+a separate model needs demonstrated benefit. See
+[the comparison and limits](research/backbone-2026-10-15/FBM_CONTINUING_MAINTENANCE_ASSESSMENT.md).
+Assessment only: no runtime, model, background job or new FloRA prerequisite.
+FBM169 captures the method as partial/procedure-only/unadmitted. Actual external
+PE/MFM artifacts and behavioral qualification remain the next work.
+
 ## October 15: native adapters and matched comparison preparation
 
 The previous stop at unfinished weights was premature. Existing upstream interfaces
