@@ -266,9 +266,14 @@ class ContinuityStore:
         return self._write(operation_id, "owner", {"owner"}, ["revoke", actor], apply)
 
     def capture(self, operation_id, actor, subject, content, *, event_at, source_root=None,
-                observes_action=None):
+                observes_action=None, native_policy=None):
         event_at = require_time(event_at)
+        if native_policy is not None:
+            from .formation import validate_source_policy
+            native_policy = validate_source_policy(native_policy, subject)
         request = ["capture", subject, content, event_at, source_root, observes_action]
+        if native_policy is not None:
+            request += ["native-policy-v1", native_policy]
         found, result = self.replay(operation_id, actor, {"owner", "observer"}, request)
         if found:
             return result
@@ -276,6 +281,10 @@ class ContinuityStore:
         reference = self._objects.put(content)
         def apply(tx):
             links = ()
+            if native_policy and (native_policy["role"] in {
+                    "authenticated_owner_statement", "owner_attested_source_person"}
+                    or native_policy["identity_core_allowed"]):
+                self._authorize(tx.native, actor, {"owner"})
             if observes_action is not None:
                 self._authorize(tx.native, actor, {"observer"})
                 action = tx.record(observes_action)
@@ -288,10 +297,43 @@ class ContinuityStore:
             identity = tx.append("evidence", subject, {"object_id": reference.object_id,
                 "sha256": reference.plaintext_sha256, "size": reference.size,
                 "source_actor": actor, "source_root": source_root or reference.object_id,
-                "observes_action": observes_action}, event_at=event_at, links=links)
+                "observes_action": observes_action, "native_policy": native_policy}, event_at=event_at, links=links)
             tx.pending(identity, "formation", identity)
             return identity
         return self._write(operation_id, actor, {"owner", "observer"}, request, apply)
+
+    def capture_native(self, operation_id, actor, subject, content, *, event_at, policy,
+                       source_root=None, observes_action=None):
+        return self.capture(operation_id, actor, subject, content, event_at=event_at,
+            source_root=source_root, observes_action=observes_action, native_policy=policy)
+
+    def register_native_target(self, operation_id, kind, subject, *, support):
+        if kind not in {"entity", "scene", "workspace"} or not support:
+            raise ValueError("explicit supported target kind and evidence required")
+        def apply(tx):
+            return tx.append("target", subject, {"target_kind": kind},
+                             links=tuple(("supports", r) for r in support))
+        return self._write(operation_id, "owner", {"owner"},
+            ["native_target", kind, subject, support], apply)
+
+    def bind_native_subject(self, operation_id, domain, subject_ref, *, support):
+        """Explicit owner enrollment, never inferred from a host-instance ID."""
+        from cognitive_kernel.canonical import require_identifier
+        if domain not in {"host", "self", "relationship", "source_person"} or not support:
+            raise ValueError("explicit personal domain and supporting evidence required")
+        if require_identifier(subject_ref, "subject_ref") != subject_ref:
+            raise ValueError("canonical native subject required")
+        def apply(tx):
+            key = self._key_for("native_subject", domain)
+            if tx.get(key):
+                raise ValueError("native subject already enrolled; no implicit reassignment")
+            identity = tx.append("target", domain, {"target_kind": "entity",
+                "subject_ref": subject_ref, "domain_binding": True},
+                links=tuple(("supports", r) for r in support))
+            tx.put(key, {"record": identity, "subject_ref": subject_ref})
+            return identity
+        return self._write(operation_id, "owner", {"owner"},
+            ["bind_native_subject", domain, subject_ref, support], apply)
 
     def pending(self, actor):
         with self._db.snapshot() as reader:
@@ -353,7 +395,8 @@ class ContinuityStore:
         with self._db.snapshot() as reader:
             self._authorize(reader, actor, roles[purpose])
             meta = self._get(reader, "meta")
-            records = tuple(r for r in self._records(reader)
+            all_records = self._records(reader)
+            records = tuple(r for r in all_records
                             if r.status in {"active", "historical"} and r.kind != "commit")
             evidence = {}
             for record in records:
@@ -376,7 +419,10 @@ class ContinuityStore:
             boundaries = [time for r in records if r.kind == "claim"
                           for time in (r.value["valid_from"], r.value.get("valid_to"))
                           if time is not None and time > stamp]
-            view = replace(view, valid_at=stamp, valid_until=min(boundaries, default=None))
+            from .semantic import root_ancestry
+            ancestry = root_ancestry(all_records)
+            view = replace(view, valid_at=stamp, valid_until=min(boundaries, default=None),
+                           source_roots={r.id: ancestry[r.id] for r in records})
             return replace(view, seal=self._view_signature(view))
 
     @property

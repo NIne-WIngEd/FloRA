@@ -1,10 +1,11 @@
 """Narrow continuity envelopes; these are not substitutes for PE/MFM schemas."""
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Any, Protocol
 
 SUBJECTS = frozenset({"source_person", "host", "relationship", "self", "mission", "world"})
 KINDS = frozenset({"evidence", "mission", "proposal", "claim", "judgment", "action",
-                   "outcome", "approval", "activation", "withdrawal", "commit", "ack"})
+                   "outcome", "approval", "activation", "withdrawal", "commit", "ack",
+                   "memory", "formation_decision", "target"})
 
 
 @dataclass(frozen=True)
@@ -36,6 +37,7 @@ class ReadView:
     coverage: str = "complete-authoritative-scan"
     valid_at: str = ""
     valid_until: str | None = None
+    source_roots: dict[str, tuple[str, ...]] = field(default_factory=dict)
 
     def state(self, subject: str, slot: str) -> Record | None:
         identity = self.heads.get(f"{subject}:{slot}")

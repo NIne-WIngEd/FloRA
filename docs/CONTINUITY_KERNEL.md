@@ -73,7 +73,7 @@ state machine does not replace Temporal's workflow/reconciliation responsibiliti
 No old Kurrent physical positions have been migrated. No SQL-backed canonical
 authority is used by this candidate.
 
-## Verification and its limits
+## Earlier core verification and its limits
 
 **35 tests passed** on the actual native RocksDB 11.8.1 library, local Linux ARM64
 Docker, with networking disabled and source/contract mounts read-only:
@@ -117,7 +117,7 @@ Run inside the prepared image, with this checkout at `/flora` and the retained
 Alice `4f287a488bc908bd04f99255ee01b794bacba50b` source at `/alice`:
 
 ```sh
-python -B -m unittest discover -s tests/continuity -p 'test_*.py' -v
+python -B -m unittest discover -s tests/continuity -p 'test_continuity*.py' -v
 ```
 
 The optional `continuity` dependency supplies CFFI. The pinned native build is in
@@ -125,34 +125,112 @@ The optional `continuity` dependency supplies CFFI. The pinned native build is i
 archive are required. This is a local development build, not portable release
 packaging or a new GitHub CI qualification. Runtime duration is not a latency gate.
 
-## Next integration boundary
+## Native adapters and current verification
 
-`FormationPort` and `JudgmentPort` are transport envelopes, not substitutes for
-the native model schemas. Merely putting a native packet under `native_output`
-does not preserve its meaning in active state. Real adapters remain to connect.
+The weight-independent integration is now implemented; stopping earlier solely
+because model training was unfinished was premature.
 
-Read-only producer inspection on October 15 found:
+- `NativeFormationPort` builds actual MFM1.6 context, opens exact evidence bytes,
+  validates the full native output, and resolves current subject/governance
+  references. A trusted external runtime returns native output; optional
+  `NativeFormationResult` declares newly allocated local uncertainty names.
+- `capture_native` preserves explicit source role, subject, modality and sensitivity.
+  `bind_native_subject` independently enrolls a domain's subject; storage scope IDs
+  are not silently treated as people. `register_native_target` handles actual
+  entity/scene/workspace targets; missions are already typed records.
+- `form_native` stages the exact candidate. `accept_native` independently accepts
+  typed memories and abstain/defer/retain-raw dispositions. Optional state bindings
+  must match the enrolled subject and predecessor. Native proposal content remains
+  intact. Request memories do not execute deletion/revocation commands.
+- Local proposal/value/uncertainty references retain a resolved accepted-bundle
+  namespace, including forward references and cycles. This bounded implementation
+  withdraws the entire accepted bundle atomically if any member or its namespace
+  becomes unavailable; related claims also become unavailable. This deliberately
+  over-invalidates rather than claiming fine-grained independent retention.
+- `NativePersonalityPort` builds a real native document from original content,
+  provenance/time descriptions, current state and registered relation meanings.
+  Pointer IDs stay in native metadata. Source-person identity authority is explicit;
+  host/relationship/self context does not silently acquire it. Relation concepts
+  follow PE's separate authority views; no evaluator-derived causal links are added.
+- An external feature producer supplies real `ProducedFrame` and closed-session
+  receipts; the external consumer owns optimized checkpoint admission. A temporary
+  forward hook retains the full tensor packet from that same call, alongside the
+  native downstream codec. The response/document/features/session digests must
+  match. No second inference or model modification is used.
+- Full audit custody remains encrypted in storage. A versioned semantic projection
+  exposes evidence, typed decisions, uncertainty and relationships without feeding
+  tensor archives or feature receipts back as model prose. Source ancestry travels
+  through hidden proposal/approval history; overlapping roots are conservatively
+  grouped by both adapters. This is not an independence or confidence estimator.
+- Native question/candidate/label/representation configuration is snapshotted and
+  bound into the operation receipt. Legacy capture retries retain their original
+  fingerprint when no native policy is supplied.
 
-- PE at `247612ea38bce6711e91fe0bf7192a16549697f7` requires a validated
-  `CognitiveFrameDocument`, actual `ProducedFrame`, closed feature session and
-  checkpoint lineage. `DecisionConsumer.respond` returns expressive decisions
-  and construction receipts, but only a digest of the complete native tensor
-  packet. Full packet custody must be supplied by the integration route; no hash
-  or selected response can stand in for the native judgment. Its chat still
-  reports the cumulative N1/N2 result pending and full capability unqualified.
-- MFM at `2b0e8e936b357fe71eaf5b09dbe3302e49f474f6` retains the 1.5 base and
-  additive 1.6 proposal semantics: anchors, subject, time, epistemic status,
-  dispositions and other typed values. Its existing P2 bridge explicitly rejects
-  richer semantics and is not a reusable complete FloRA adapter. The model chat
-  reports full-source export/training still in progress.
+**63 tests passed** in the final dedicated physical suite with pinned RocksDB11.8.1
+and CPU PyTorch2.10.0, network disabled and source mounts read-only. Evidence:
+[full output](evidence/2026-10-15_native_adapter_tests.txt) and
+[ordered diagnoses](evidence/2026-10-15_native_adapter_diagnosis.md).
+FBM168 records the reusable method, original failures and limits as a partial,
+procedure-only seed. It is not admitted training data or learned FBM capability.
 
-Next: bind the actual producer artifacts and current source/feature/output
-contracts to this kernel; validate semantic conversion against those artifacts.
-Preserve unsupported/unknown output as unresolved rather than invent a state
-update. Keep PE/MFM development in their chats. An unqualified artifact may support
-explicitly labeled integration construction; it cannot support a qualification claim.
+Coverage comprises the previous 35 native/store/kernel/episode tests plus 28 native
+adapter/comparison tests. The native connected episode executes an actual synthetic
+world action, independently measures project success and research failure, accepts
+separate host/self proposals, reopens storage and runs native PE tensor mechanics
+again. Source-person evidence stays unchanged. The previous synthetic episode also
+tests fresh-process continuity and coherent alternative outcomes.
 
-Then finish the exact-evidence/flat-relation controls and held-out behavioral
-protocol before B (backbone contribution) and P (separate personalized-Gemma
-comparison). Add specialist retrieval only for scenarios that exercise discovery,
-with coverage and cleanup verified. The 35 passes do not make full FloRA complete.
+PE positives use the real upstream model/feature/document/output mechanics with
+untrained tensors, a content-reading feature fixture and a fixture response shell.
+Actual `DecisionConsumer.respond` negatives test corrupted feature/session refusal;
+the valid control reaches its real artifact-admission boundary. **Successful
+optimized consumer admission/inference has not been exercised.** MFM outputs are
+explicit content-reading fixtures through real native schemas and authority gates.
+No trained judgment, outcome-sensitive learning, latency, B or P pass follows.
+
+### Reproduce the physical profile
+
+`config/continuity-adapters.Dockerfile` extends the existing pinned native image
+with CPU PyTorch. Exact contract archives, native pin and inspected image ID are in
+`config/continuity-adapter-pins.json`. This is a separate explicit profile; the
+legacy Alice dependency pin and old runtime remain unchanged.
+
+Read-only mounts in the network-disabled container:
+
+- This checkout at `/flora`.
+- PE source archive at `/pe`, commit `247612ea38bce6711e91fe0bf7192a16549697f7`.
+- MFM source archive at `/mfm`, commit `2b0e8e936b357fe71eaf5b09dbe3302e49f474f6`.
+
+Run `python -B -m unittest discover -s tests/continuity -p 'test_*.py' -v`.
+The image sets the source import paths. Stores and synthetic worlds live in private
+container temporary directories. No missing-library skip or replacement engine is
+used. This is local physical verification, not the old GitHub CI matrix or a portable
+consumer release.
+
+### Comparison preparation and remaining boundary
+
+`matched_documents` provides B's structured/flat inputs with identical source,
+concept, candidate, label and relation meaning. Only native graph edges differ.
+`backbone_case` freezes both documents, the same model identity, independent rubric
+digest and call budget. `comparison_case` separately freezes P's common evidence
+and the distinct FloRA/Gemma model identities. The challenger remains a separate
+system. `compare_results` rejects missing/duplicate arms, changed inputs/models,
+wrong rubrics, invalid scores and budget mismatches; unresolved pairs remain in the
+denominator. It produces descriptive counts, never a qualification verdict.
+
+This does not execute the challenger or authenticate external evaluator assertions.
+Actual consumption, matching of full prior histories/training resources, independent
+scoring and calibrated held-out effect estimates remain obligations of the experiment.
+The [approved protocol](research/backbone-2026-10-15/ALICE_BACKBONE_HYPOTHESIS.md)
+requires coherent alternative worlds, irrelevant controls, blinded evaluation,
+held-out scenario families and pilot-calibrated thresholds before sealed B/P runs.
+
+The next meaningful integration requires external PE optimized checkpoint/feature
+artifacts and the finished MFM native runtime/export, then their actual admission
+and inference. Neither model is trained or replaced here. Test full native outcomes
+and unresolved cases first; then pilot/freeze the held-out evaluation and run B/P.
+Additional selective indexes, transport/workflow services or a conversation model
+are not needed merely to run the bounded local episode. Their unexercised full-Alice
+responsibilities remain explicitly unqualified, as do complete erasure/backup,
+multimodal development, scalability and consumer packaging. Latency work remains
+deferred under the owner's instruction.

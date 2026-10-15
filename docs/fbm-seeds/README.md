@@ -1,4 +1,6 @@
-Current October15 procedure count:167. The new continuity record covers 35 real-native mechanical passes and three diagnosed review failures. Real PE/MFM integration and behavioral qualification remain incomplete. All new records are partial, procedure-only and unadmitted.
+Current October15 procedure count:168. Native adapter construction, diagnosed authority/lifecycle gaps and equal-evidence comparison preparation: 63 actual-engine/native-contract mechanics passes. No learned or full optimized-consumer qualification. See [FBM168](2026-10-15_native_adapter_construction.jsonl).
+
+Historical October15 procedure count:167. The new continuity record covers 35 real-native mechanical passes and three diagnosed review failures. Real PE/MFM integration and behavioral qualification remain incomplete. All new records are partial, procedure-only and unadmitted.
 
 Historical October15 procedure count:166. Hypothesis review and shared-core storage/responsibility records are partial, procedure-only and unadmitted. SQLite candidate is superseded by owner direction; actual RocksDB native tests await the dependency build. No connected/learned result or latency improvement follows.
 

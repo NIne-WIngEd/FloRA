@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-15T18:10:20.044356+00:00",
+  "source_contracts": {
+    "pe": {
+      "commit": "247612ea38bce6711e91fe0bf7192a16549697f7",
+      "archive_sha256": "a0d84c5c043177f396e1c1d0315337cb98c4b005bc8b0f77f75a3ea72b5fb7a1",
+      "container_mount": "/pe"
+    },
+    "mfm": {
+      "commit": "2b0e8e936b357fe71eaf5b09dbe3302e49f474f6",
+      "archive_sha256": "47fc78c5e0ed563e24359dc33d3a76d4105a6b91a181bed25b86f2073f015e4a",
+      "container_mount": "/mfm"
+    }
+  },
+  "rocksdb_commit": "abeebd9630f11bd08c28b7bd43c7bdfc62050654",
+  "rocksdb_version": "11.8.1",
+  "torch": "2.10.0+cpu",
+  "image": "flora-continuity-adapters:20261015",
+  "image_id": "sha256:07a404bd616a9f3eee4103450ff83b3647e8f97bbb4780f9ad30bb983583f6b9",
+  "model_weights_qualified": false
+}

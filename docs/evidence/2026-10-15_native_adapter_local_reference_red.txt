@@ -1,0 +1,20 @@
+test_actual_upstream_consumer_rejects_corrupt_inputs_before_admission (test_native_rich.NativeRichTests.test_actual_upstream_consumer_rejects_corrupt_inputs_before_admission) ... ok
+test_dispositions_and_deletion_requests_do_not_execute_commands (test_native_rich.NativeRichTests.test_dispositions_and_deletion_requests_do_not_execute_commands) ... ok
+test_episode_relationship_mission_workspace_and_day_interval (test_native_rich.NativeRichTests.test_episode_relationship_mission_workspace_and_day_interval) ... ok
+test_local_bundle_references_survive_without_becoming_global_ids (test_native_rich.NativeRichTests.test_local_bundle_references_survive_without_becoming_global_ids) ... ok
+test_other_registered_person_cannot_become_the_enrolled_host (test_native_rich.NativeRichTests.test_other_registered_person_cannot_become_the_enrolled_host) ... ok
+test_unknown_subject_and_dangling_targets_cannot_become_state (test_native_rich.NativeRichTests.test_unknown_subject_and_dangling_targets_cannot_become_state) ... ok
+test_withdrawal_closes_forward_and_cyclic_local_bundle_meaning (test_native_rich.NativeRichTests.test_withdrawal_closes_forward_and_cyclic_local_bundle_meaning) ... FAIL
+
+======================================================================
+FAIL: test_withdrawal_closes_forward_and_cyclic_local_bundle_meaning (test_native_rich.NativeRichTests.test_withdrawal_closes_forward_and_cyclic_local_bundle_meaning)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/flora/tests/continuity/test_native_rich.py", line 165, in test_withdrawal_closes_forward_and_cyclic_local_bundle_meaning
+    self.assertTrue(set(memories)<=set(affected))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.967s
+
+FAILED (failures=1)
