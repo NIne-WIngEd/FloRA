@@ -1,5 +1,35 @@
 # FloRA continuation context
 
+## October 15: native adapters and matched comparison preparation
+
+The previous stop at unfinished weights was premature. Existing upstream interfaces
+allowed further construction without changing PE or MFM. The bounded core now has
+native MFM1.6 intake, independent typed-memory acceptance, explicit subject binding,
+native PE content/feature/output custody and repeated connected judgment.
+
+63 dedicated tests passed on real RocksDB plus pinned upstream contracts and
+untrained PE tensor mechanics. The connected native episode preserves mixed goal
+outcomes, separate host/self state and the source-person anchor after reopening.
+Actual optimized PE consumer execution and actual MFM inference still need external
+artifacts. A fixture response shell is not full consumer admission.
+
+Read docs/CONTINUITY_KERNEL.md for exact interfaces, source pins and limits.
+Semantic input is separate from full audit custody. Registered source ancestry is
+conservative; native bundles have atomic withdrawal including local reference
+cycles. B structured/flat inputs retain identical relation meaning; P keeps the
+personalized Gemma challenger separate. Both analyses freeze model/input identities
+and count unresolved results, without inferring hypothesis qualification.
+
+FBM168 is seeded and schema-validated, partial/procedure-only/unadmitted. Preserve
+the original failure records and the old runtime/jobs. No model training, provider
+campaign, latency gate, product cutover or full Alice ratification occurred.
+Next: supply actual external model runtime/checkpoint/feature artifacts, exercise
+their complete consumer admission, then pilot and freeze the independent held-out
+B/P protocol before behavioral claims. No additional model is required merely to
+complete this bounded prototype.
+
+Published implementation: e7e63c48b8a3f2e668e6bb28c7d6fac9d4c5299e on Rayan/flora-continuity-core.
+
 ## October 15: connected continuity mechanics verified
 
 The actual redesign now connects evidence, external proposal/judgment ports,

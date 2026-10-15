@@ -1,0 +1,31 @@
+test_actual_upstream_consumer_rejects_corrupt_inputs_before_admission (test_native_rich.NativeRichTests.test_actual_upstream_consumer_rejects_corrupt_inputs_before_admission) ... ok
+test_dispositions_and_deletion_requests_do_not_execute_commands (test_native_rich.NativeRichTests.test_dispositions_and_deletion_requests_do_not_execute_commands) ... ok
+test_episode_relationship_mission_workspace_and_day_interval (test_native_rich.NativeRichTests.test_episode_relationship_mission_workspace_and_day_interval) ... ok
+test_local_bundle_references_survive_without_becoming_global_ids (test_native_rich.NativeRichTests.test_local_bundle_references_survive_without_becoming_global_ids) ... ok
+test_other_registered_person_cannot_become_the_enrolled_host (test_native_rich.NativeRichTests.test_other_registered_person_cannot_become_the_enrolled_host) ... ok
+test_unknown_subject_and_dangling_targets_cannot_become_state (test_native_rich.NativeRichTests.test_unknown_subject_and_dangling_targets_cannot_become_state) ... ok
+test_withdrawal_closes_forward_and_cyclic_local_bundle_meaning (test_native_rich.NativeRichTests.test_withdrawal_closes_forward_and_cyclic_local_bundle_meaning) ... ERROR
+
+======================================================================
+ERROR: test_withdrawal_closes_forward_and_cyclic_local_bundle_meaning (test_native_rich.NativeRichTests.test_withdrawal_closes_forward_and_cyclic_local_bundle_meaning)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/flora/tests/continuity/test_native_rich.py", line 170, in test_withdrawal_closes_forward_and_cyclic_local_bundle_meaning
+    self.kernel.withdraw("withdraw-original-after-bundle",source)
+  File "/flora/src/flora/continuity/kernel.py", line 393, in withdraw
+    return self.store._write(operation_id, "owner", {"owner"}, ["withdraw", source], apply)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/flora/src/flora/continuity/store.py", line 238, in _write
+    result = apply(tx)
+             ^^^^^^^^^
+  File "/flora/src/flora/continuity/kernel.py", line 370, in apply
+    record=tx.record(identity,candidate=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/flora/src/flora/continuity/store.py", line 64, in record
+    raise ValueError("record is not currently eligible")
+ValueError: record is not currently eligible
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.548s
+
+FAILED (errors=1)

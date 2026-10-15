@@ -1,0 +1,80 @@
+test_complete_native_packet_from_same_call_is_persisted (test_native_boundaries.NativeBoundaryTests.test_complete_native_packet_from_same_call_is_persisted) ... ok
+test_derived_sources_share_conservative_native_family (test_native_boundaries.NativeBoundaryTests.test_derived_sources_share_conservative_native_family) ... FAIL
+test_document_preserves_host_identity_and_original_content (test_native_boundaries.NativeBoundaryTests.test_document_preserves_host_identity_and_original_content) ... ok
+test_legacy_capture_receipt_still_replays (test_native_boundaries.NativeBoundaryTests.test_legacy_capture_receipt_still_replays) ... ERROR
+test_native_provenance_and_event_times_reach_semantic_features (test_native_boundaries.NativeBoundaryTests.test_native_provenance_and_event_times_reach_semantic_features) ... FAIL
+test_repeated_judgment_keeps_custody_out_of_semantic_inputs (test_native_boundaries.NativeBoundaryTests.test_repeated_judgment_keeps_custody_out_of_semantic_inputs) ... ERROR
+test_revocation_during_real_native_forward_prevents_publication (test_native_boundaries.NativeBoundaryTests.test_revocation_during_real_native_forward_prevents_publication) ... ok
+test_same_operation_changed_native_request_is_refused (test_native_boundaries.NativeBoundaryTests.test_same_operation_changed_native_request_is_refused) ... FAIL
+test_wrong_packet_or_extra_forward_never_commits_judgment (test_native_boundaries.NativeBoundaryTests.test_wrong_packet_or_extra_forward_never_commits_judgment) ... ok
+test_complete_native_packet_from_same_call_is_persisted (test_native_personality.NativePersonalityTests.test_complete_native_packet_from_same_call_is_persisted) ... ok
+test_document_preserves_host_identity_and_original_content (test_native_personality.NativePersonalityTests.test_document_preserves_host_identity_and_original_content) ... ok
+test_revocation_during_real_native_forward_prevents_publication (test_native_personality.NativePersonalityTests.test_revocation_during_real_native_forward_prevents_publication) ... ok
+test_wrong_packet_or_extra_forward_never_commits_judgment (test_native_personality.NativePersonalityTests.test_wrong_packet_or_extra_forward_never_commits_judgment) ... ok
+
+======================================================================
+ERROR: test_legacy_capture_receipt_still_replays (test_native_boundaries.NativeBoundaryTests.test_legacy_capture_receipt_still_replays)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/flora/tests/continuity/test_native_boundaries.py", line 80, in test_legacy_capture_receipt_still_replays
+    self.assertEqual(self.store.capture("baseline-capture","owner","host",b"old",event_at=T0),identity)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/flora/src/flora/continuity/store.py", line 275, in capture
+    found, result = self.replay(operation_id, actor, {"owner", "observer"}, request)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/flora/src/flora/continuity/store.py", line 218, in replay
+    raise ValueError("idempotency identity reused with different request")
+ValueError: idempotency identity reused with different request
+
+======================================================================
+ERROR: test_repeated_judgment_keeps_custody_out_of_semantic_inputs (test_native_boundaries.NativeBoundaryTests.test_repeated_judgment_keeps_custody_out_of_semantic_inputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/flora/tests/continuity/test_native_boundaries.py", line 17, in test_repeated_judgment_keeps_custody_out_of_semantic_inputs
+    second=self.kernel.judge("second","personality",port)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/flora/src/flora/continuity/kernel.py", line 128, in judge
+    packet = self._packet(port.judge(view), port.model_ref)
+                          ^^^^^^^^^^^^^^^^
+  File "/flora/src/flora/continuity/personality.py", line 89, in judge
+    produced=producer.produce(document)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pe/src/alice_personality/identity/feature_producer.py", line 182, in produce
+    encoded = {text: self._tokenize(text) for entries in texts.values() for _, text in entries}
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/pe/src/alice_personality/identity/feature_producer.py", line 144, in _tokenize
+    raise IdentityError("complete semantic input exceeds source capacity; truncation is forbidden")
+alice_personality.identity.contracts.IdentityError: complete semantic input exceeds source capacity; truncation is forbidden
+
+======================================================================
+FAIL: test_derived_sources_share_conservative_native_family (test_native_boundaries.NativeBoundaryTests.test_derived_sources_share_conservative_native_family)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/flora/tests/continuity/test_native_boundaries.py", line 67, in test_derived_sources_share_conservative_native_family
+    self.assertEqual(families[source],families[memories[0]])
+AssertionError: 'one-original' != '584bf7c5e6a04bd4a668402898321e8d'
+- one-original
++ 584bf7c5e6a04bd4a668402898321e8d
+
+
+======================================================================
+FAIL: test_native_provenance_and_event_times_reach_semantic_features (test_native_boundaries.NativeBoundaryTests.test_native_provenance_and_event_times_reach_semantic_features)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/flora/tests/continuity/test_native_boundaries.py", line 37, in test_native_provenance_and_event_times_reach_semantic_features
+    self.assertIn(role,source.text)
+AssertionError: 'authenticated_owner_statement' not found in 'Project needs four hours.'
+
+======================================================================
+FAIL: test_same_operation_changed_native_request_is_refused (test_native_boundaries.NativeBoundaryTests.test_same_operation_changed_native_request_is_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/flora/tests/continuity/test_native_boundaries.py", line 51, in test_same_operation_changed_native_request_is_refused
+    with self.assertRaisesRegex(ValueError,"idempotency"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 13 tests in 3.971s
+
+FAILED (failures=3, errors=2)

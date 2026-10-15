@@ -1,8 +1,10 @@
-Current October15 procedure count:167. The new continuity record covers 35 real-native mechanical passes and three diagnosed review failures. Real PE/MFM integration and behavioral qualification remain incomplete. All new records are partial, procedure-only and unadmitted.
+Current October15 procedure count:168. Native adapter construction, diagnosed authority/lifecycle gaps and equal-evidence comparison preparation: 63 actual-engine/native-contract mechanics passes. No learned or full optimized-consumer qualification. See [FBM168](2026-10-15_native_adapter_construction.jsonl).
+
+Historical October15 procedure count:167. The new continuity record covers 35 real-native mechanical passes and three diagnosed review failures. Real PE/MFM integration and behavioral qualification remain incomplete. All new records are partial, procedure-only and unadmitted.
 
 Historical October15 procedure count:166. Hypothesis review and shared-core storage/responsibility records are partial, procedure-only and unadmitted. SQLite candidate is superseded by owner direction; actual RocksDB native tests await the dependency build. No connected/learned result or latency improvement follows.
 
-Current October8 procedure count:164. New capture-composition method is partial and unadmitted; capture-wide results and runtime/accessor admission remain unresolved.
+Historical October8 procedure count:164. New capture-composition method is partial and unadmitted; capture-wide results and runtime/accessor admission remain unresolved.
 
 Historical October7 procedure count:163. Existing evaluation-recalibration record updated with completed run 37704802657 localization; no new seed, physical pass or learned builder claim.
 
@@ -101,8 +103,3 @@ October7 current:163 validated procedure records. [Evaluation recalibration](202
 Run 37704802657 recovery completes the existing [evaluation-recalibration record](2026-10-07_evaluation_recalibration.jsonl): exit 124/2700s, no raw verdict; reliable full-action samples locate the first capture's second registered completion check. Residency is not a complete call count or physical cause. The count remains163; procedure evidence is not admitted training data or learned FBM.
 
 - FBM164: capture-boundary data composition, test-scope correction and source-bound adoption controls; partial, candidate unadmitted. See [candidate record](2026-10-08_capture_boundary_composition.jsonl).
-
-
-## October 15 architecture hypothesis review
-
-165 schema-valid procedure records. The new [backbone review](2026-10-15_backbone_hypothesis_review.jsonl) is partial, procedure-only and unadmitted. It records an unratified design and falsification plan; no runtime, model, job or learned result changed. Earlier records remain unchanged.

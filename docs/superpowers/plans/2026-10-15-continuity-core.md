@@ -68,3 +68,32 @@ Private test stores use container temporary directories, not the checkout. These
 physical tests are explicitly separate from the top-level legacy component CI;
 they have no missing-library skip or fallback engine. See `docs/CONTINUITY_KERNEL.md`
 for the measured result, deployment pins, remaining obligations and model handoff.
+
+### Task 4: Native adapters before trained weights (owner continuation)
+
+The owner explicitly requested finishing weight-independent backbone/adapter work.
+Prior stopping at incomplete artifacts was premature: producer codecs already exist.
+Continue the approved design inline; do not train or modify PE/MFM.
+
+- [x] Separate native MFM memory acceptance from personal state activation. Carry
+  exact 1.6 proposals, abstain/defer/retain-raw dispositions, source roles, sensitivity,
+  subject, anchors, time and registered targets. Accept an exact native proposal
+  independently; optional owner-reviewed state bindings retain full typed content.
+- [x] Build PE documents from eligible content with explicit source-person versus
+  host/relationship/self authority. Preserve native feature/session binding and
+  collect the exact full packet from the same consumer call, without a second forward.
+- [x] Add equal-evidence structured/flat comparison inputs, duplicate-root accounting
+  and executable matched-result analysis; do not invent learned answers or thresholds.
+- [x] Verify actual upstream schemas and tensor mechanics on CPU plus real native
+  storage, including abstention, stale inputs, withdrawal, corrupted bindings and
+  source-authority negatives. No training or synthetic behavioral qualification.
+- [x] Fresh review, context/FBM update, then reassess remaining necessary prototype
+  work. Vector/graph services are required only when discovery is exercised; full
+  Alice delivery/restore/product packaging are not prerequisites for this local slice.
+
+Contract test pins: PE247612ea38bce6711e91fe0bf7192a16549697f7 and
+MFM2b0e8e936b357fe71eaf5b09dbe3302e49f474f6, read-only snapshots. Tests use
+their real code. Production adapters require those modules explicitly; legacy
+runtime dependency pins are not silently changed. Model artifacts remain external.
+
+Task4 closure:63 physical tests passed; FBM168 seeded. Actual optimized checkpoint/runtime admission and held-out B/P execution remain incomplete, despite weight-independent adapters and result binding being implemented. New typed relation concepts preserve the PE source-view restrictions. Accepted native bundles use conservative atomic withdrawal to preserve local-reference lifetime. Original tests/failures remain retained.
